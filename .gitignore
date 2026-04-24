@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor backups / temp
+*~
+*.swp
+*.bak
+*.tmp
+~$*
+
+# 참고 PDF — 실제 타사 제출 사업계획서 (기밀성 고려로 원격 저장소에서 기본 제외)
+# 포함이 필요하면 이 줄을 주석 처리하거나 개별 파일을 `git add -f <파일>` 로 강제 추가.
+*.pdf
