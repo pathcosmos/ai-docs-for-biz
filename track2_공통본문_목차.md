@@ -97,7 +97,7 @@
   - ISO/IEC 42001(AI 경영시스템) · ISO/IEC 23894(AI 리스크) 등 국제 AI 거버넌스 표준의 요구 항목.
   - 자동차 부품사의 IATF 16949 변경관리(Change Management) · 추적성 요구와 모델 버전·리니지 관리의 대응.
   - 중대재해처벌법 하 안전 관련 AI(예: SCN-SAF-01) 의 판정 근거 보존 의무.
-  - 대기업(포스코·현대차·LG·삼성) 공급망 편입 시 요구되는 AI 품질관리 조항(모델 카드·데이터 시트 제출).
+  - 대기업(철강·자동차·전자 업종 원청) 공급망 편입 시 요구되는 AI 품질관리 조항(모델 카드·데이터 시트 제출).
 - **삽화·도식 후보**: 규제 요구 항목 ↔ MLOps 구성요소 매핑 표, 모델 카드 샘플 1페이지.
 - **고객사별 가변 여부**: 업종별 교체 — 자동차 부품(IATF), 조선·항공(AS9100), 의료(ISO 13485).
 - **[관련 시나리오: SCN-MLO-02, SCN-SAF-01, SCN-SAF-02, SCN-SAF-03]**
@@ -256,7 +256,7 @@
     - 레지스트리·실험 추적: **MLflow**, Weights & Biases, Neptune.
     - 피쳐 스토어: **Feast**, Tecton(상용), Hopsworks.
     - 오케스트레이션: **Airflow**, **Kubeflow Pipelines**, Prefect, Dagster.
-    - 서빙: **BentoML**, **Seldon Core**, KServe, Triton Inference Server, NVIDIA Triton.
+    - 서빙: **BentoML**, **Seldon Core**, KServe, **NVIDIA Triton Inference Server**.
     - 모니터링: **Evidently**, Fiddler, Arize, WhyLabs, **Prometheus + Grafana** (인프라).
     - 컨테이너·k8s: Docker, Kubernetes, k3s(엣지).
   - 고객사 여건별 권장 조합(대기업/중견/중소 각 1 템플릿).
