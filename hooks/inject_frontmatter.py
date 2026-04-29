@@ -96,7 +96,12 @@ def derive_tags(slug_path: str) -> list[str]:
 
 def on_page_markdown(markdown: str, page, config, files):  # noqa: ARG001
     """MkDocs 훅 — 각 페이지의 markdown 을 변환."""
-    # 이미 Front matter 가 있으면 스킵
+    # MkDocs 가 frontmatter 를 이미 page.meta 로 추출한 페이지는 skip.
+    # (mkdocs 는 frontmatter 처리 후 markdown 에서 `---` 를 stripping → markdown.startswith("---") 검사가 fail.
+    #  page.meta.title 검사로 frontmatter 존재 여부 정확 판정.)
+    if page.meta and (page.meta.get("title") or page.meta.get("description")):
+        return markdown
+    # markdown 이 `---` 로 시작하는 경우도 안전장치로 유지
     if markdown.lstrip().startswith("---"):
         return markdown
 
