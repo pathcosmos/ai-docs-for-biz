@@ -44,7 +44,7 @@
 
 ### 삽화 (Mermaid)
 
-![베테랑 [수치 (다이어그램 2)](../assets/diagrams/track3-top5/diagram-2.svg)
+![베테랑 수치 (다이어그램 2)](../assets/diagrams/track3-top5/diagram-2.svg)
 ---
 
 ## 4.2 RAG 기준 아키텍처 — 5 계층 (BLK-T3-4.2)

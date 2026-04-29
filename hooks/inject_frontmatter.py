@@ -95,14 +95,14 @@ def derive_tags(slug_path: str) -> list[str]:
 
 
 def on_page_markdown(markdown: str, page, config, files):  # noqa: ARG001
-    """MkDocs 훅 — 각 페이지의 markdown 을 변환."""
-    # MkDocs 가 frontmatter 를 이미 page.meta 로 추출한 페이지는 skip.
-    # (mkdocs 는 frontmatter 처리 후 markdown 에서 `---` 를 stripping → markdown.startswith("---") 검사가 fail.
-    #  page.meta.title 검사로 frontmatter 존재 여부 정확 판정.)
+    """MkDocs 훅 — page.meta 직접 set (markdown 변경 0).
+
+    [E12-Fix-2] markdown 에 frontmatter prepend 하던 기존 설계는 mkdocs 의 frontmatter
+    파싱이 source 로드 시점에만 작동하므로 hook 이 추가한 frontmatter 는 raw 텍스트로
+    렌더링되는 결함. → page.meta 에 직접 set 하여 markdown 본문 변경 0.
+    """
+    # 이미 frontmatter 가 있는 페이지는 skip
     if page.meta and (page.meta.get("title") or page.meta.get("description")):
-        return markdown
-    # markdown 이 `---` 로 시작하는 경우도 안전장치로 유지
-    if markdown.lstrip().startswith("---"):
         return markdown
 
     title = extract_title(markdown) or page.file.src_path
@@ -110,18 +110,17 @@ def on_page_markdown(markdown: str, page, config, files):  # noqa: ARG001
     slug_path = page.file.src_path
     tags = derive_tags(slug_path)
 
-    fm_lines = ["---"]
-    # YAML 멀티라인 안전을 위해 따옴표 escape
-    safe_title = title.replace('"', '\\"')
-    fm_lines.append(f'title: "{safe_title}"')
-    if description:
-        safe_desc = description.replace('"', '\\"')
-        fm_lines.append(f'description: "{safe_desc}"')
-    if tags:
-        fm_lines.append("tags:")
-        for t in tags:
-            fm_lines.append(f"  - {t}")
-    fm_lines.append("---")
-    fm_lines.append("")
+    # page.meta 직접 set (markdown 변경 안 함 — raw 노출 0 보장)
+    if page.meta is None:
+        page.meta = {}
+    if not page.meta.get("title"):
+        page.meta["title"] = title
+    if description and not page.meta.get("description"):
+        page.meta["description"] = description
+    if tags and not page.meta.get("tags"):
+        page.meta["tags"] = tags
+    # page.title 도 set (mkdocs 가 navigation·OG 에 사용)
+    if hasattr(page, "title") and not page.title:
+        page.title = title
 
-    return "\n".join(fm_lines) + markdown
+    return markdown  # markdown 본문 변경 없음

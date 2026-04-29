@@ -23,7 +23,7 @@
 
 ### 삽화 (Mermaid)
 
-![베테랑 숙련공 [수치 (다이어그램 1)](../assets/diagrams/track1-top5/diagram-1.svg)
+![베테랑 숙련공 수치 (다이어그램 1)](../assets/diagrams/track1-top5/diagram-1.svg)
 ---
 
 ## 3.2 데이터 단절 및 비정형·이미지 기반 관리의 한계 (BLK-T1-3.2)

@@ -170,7 +170,7 @@
 
 ### 삽화 (Mermaid)
 
-![CMMS 워크오더 자유 텍스트 [수치 (다이어그램 2)](../assets/diagrams/detail-phase2/diagram-2.svg)
+![CMMS 워크오더 자유 텍스트 수치 (다이어그램 2)](../assets/diagrams/detail-phase2/diagram-2.svg)
 ![sequenceDiagram (다이어그램 8)](../assets/diagrams/detail-phase2/diagram-8.svg)
 ---
 

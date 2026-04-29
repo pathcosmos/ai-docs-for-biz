@@ -905,25 +905,41 @@
   margin-left: 0.4em;
 }
 
-/* SVG 세로형 대비 — max-width 480px (760px 본문 컬럼 내 좌우 여백 확보) */
-.md-typeset figure svg.zoomable,
-.md-typeset figure img.zoomable,
+/* [E12-Fix-3] SVG 크기 확대 (사용자 호소 "이미지가 작아 알아보기 어려움")
+   세로형 SVG (600×800) 와 mmdc SVG 모두 본문 폭에 가깝게 표시 */
+.md-typeset figure svg,
+.md-typeset figure img,
+.md-typeset .md-content figure svg.zoomable,
+.md-typeset .md-content figure img.zoomable,
 .md-typeset .hero-svg-wrap svg,
-.md-typeset .hero-svg-wrap img {
-  max-width: 480px;
-  max-height: 640px;
+.md-typeset .hero-svg-wrap img,
+.md-typeset img[src$=".svg"] {
+  max-width: 100%;       /* 본문 폭 모두 채움 */
   width: auto;
   height: auto;
-  margin: 1.5em auto;
+  margin: 2em auto;
   display: block;
   object-fit: contain;
 }
 
-/* hero SVG 만 더 큰 크기 허용 (홈·index 페이지) */
+/* 세로형 SVG 만 별도 max-width 허용 (너무 길어지지 않도록) */
+.md-typeset figure img[src*="/svg/"],
+.md-typeset img[src*="/svg/"]:not([src*="/diagrams/"]) {
+  max-width: 720px;     /* 세로형 600×800 + 여백 */
+  max-height: 900px;
+}
+
+/* mmdc 변환 다이어그램 (가로형 위주) — 본문 폭 모두 채움 */
+.md-typeset img[src*="/diagrams/"] {
+  max-width: 100%;
+  max-height: none;
+}
+
+/* hero SVG (홈) — 본문 폭 절반 정도 */
 .md-content article:has(.home-cta) figure svg,
 .md-content article:has(.home-cta) figure img {
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 700px;
+  max-height: 700px;
 }
 
 /* 모바일 — TOC 양쪽 비활성 시 본문 폭 정상 */
@@ -1318,11 +1334,11 @@
 
 /* === 세로형 레이아웃 정리 =========================================== */
 :root {
-  --md-grid: 60rem;
+  --md-grid: 76rem;       /* [E12-Fix-3] 60rem → 76rem (~1216px) — 사용자 "본문 폭 좁음" 호소 */
 }
 
 .md-grid {
-  max-width: 60rem;
+  max-width: 76rem;
 }
 
 /* === 페이지 진입 애니메이션 ========================================== */
