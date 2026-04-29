@@ -103,6 +103,9 @@ plugins:
 hooks:
   - hooks/inject_frontmatter.py
   - hooks/slug_rewrite.py
+  - hooks/highlight_placeholders.py   # [고객사]·[수치]·[공정] 등 플레이스홀더 시각 강조
+  - hooks/linkify_sources.py          # > [출처: 파일명 §섹션] 자동 링크화 (274 인용)
+  - hooks/inject_toc.py               # 300 줄 이상 페이지 상단에 'TOC 빠른 진입' 박스 자동
 
 extra_css:
   - stylesheets/extra.css
