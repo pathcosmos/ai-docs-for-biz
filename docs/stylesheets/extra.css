@@ -401,3 +401,43 @@
 .md-typeset figure:hover::after {
   opacity: 1;
 }
+
+/* =============================================================================
+   D3 Cross-reference 그래프 (graph.md 페이지)
+   ============================================================================= */
+
+#crossref-graph .crossref-graph-svg {
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+
+.crossref-stats {
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  font-family: var(--md-text-font);
+}
+
+.crossref-legend {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.75rem;
+}
+
+.crossref-legend .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.crossref-legend .legend-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}

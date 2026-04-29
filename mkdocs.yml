@@ -106,15 +106,18 @@ hooks:
   - hooks/highlight_placeholders.py   # [고객사]·[수치]·[공정] 등 플레이스홀더 시각 강조
   - hooks/linkify_sources.py          # > [출처: 파일명 §섹션] 자동 링크화 (274 인용)
   - hooks/inject_toc.py               # 300 줄 이상 페이지 상단에 'TOC 빠른 진입' 박스 자동
+  - hooks/build_crossref.py           # 274 인용 → docs/data/crossref.json (D3 그래프 입력)
 
 extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+  - https://d3js.org/d3.v7.min.js
   - javascripts/mermaid-init.js
   - javascripts/copy-block.js   # 헤더·표·blockquote 단위 Copy 버튼 (paste-ready)
   - javascripts/lightbox.js     # 이미지·SVG 클릭 → 확대 + 다운로드 (고해상도)
+  - javascripts/graph.js        # D3 force-directed cross-reference 그래프 (graph.md)
 
 # =============================================================================
 # Navigation — 사이드바 친화 라벨링 (Phase E9 Stage 2 보강, 사용자 피드백 #2 대응)

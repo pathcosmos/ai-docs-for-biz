@@ -7,7 +7,9 @@ hide:
 
 # Cross-reference 인터랙티브 그래프
 
-> 본 페이지는 **Stage 3** 에서 D3.js force-directed 그래프로 활성화 예정입니다. 현재는 placeholder.
+본 페이지는 워크스페이스의 자산 cross-reference 망을 D3 force-directed 그래프로 시각화합니다. 노드 = 자산 1, 엣지 = `> [출처: 파일명]` 표기. 노드 클릭 시 해당 페이지로 이동, 드래그로 위치 조정 가능.
+
+<div id="crossref-graph" style="width:100%; min-height:660px; border:1px solid var(--md-default-fg-color--lightest); border-radius:0.4rem; padding:0.5rem; background:var(--md-default-bg-color);"></div>
 
 ## 진행 예정
 
