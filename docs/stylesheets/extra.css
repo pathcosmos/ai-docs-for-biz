@@ -566,3 +566,86 @@
     opacity: 0.55;
   }
 }
+
+/* =============================================================================
+   Phase E10-2 — 홈 redesign + 3 giant button (사용자 여정 진입)
+   ============================================================================= */
+
+/* 홈 페이지 — H1 가운데 정렬 + 부드러운 강조 */
+.md-content article > h1:first-of-type {
+  text-align: center;
+  border-left: none;
+  border-bottom: 3px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5em;
+  font-size: 2.4em;
+  font-weight: 800;
+}
+
+/* 홈 hero figure 가운데 정렬 + 약한 그림자 */
+.md-content article > p > .md-typeset__svg,
+.md-content article > figure:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em auto 2em;
+}
+
+/* 3 giant button (홈) — 카드 형태 강조 */
+.md-typeset .grid.cards > ul > li:has(.md-button) {
+  text-align: center;
+  padding-block: 1.5em;
+  border-radius: 0.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:has(.md-button):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(63, 81, 181, 0.15);
+}
+
+.md-typeset .md-button {
+  margin-top: 0.5em;
+  font-weight: 700;
+}
+
+.md-typeset .md-button.md-button--primary {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+.md-typeset .md-button.md-button--primary:hover {
+  background: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  transform: translateX(2px);
+}
+
+/* accent-text — 아이콘 강조 색상 */
+.accent-text {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* 홈 통계 그리드 — 2열 정렬 */
+.md-content article > .grid:not(.cards) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6em 1.5em;
+  margin: 1.5em 0;
+  padding: 1em;
+  background: var(--md-code-bg-color);
+  border-radius: 0.4rem;
+  font-size: 0.9em;
+}
+
+.md-content article > .grid:not(.cards) p {
+  margin: 0;
+}
+
+.md-content article > .grid:not(.cards) code {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--md-primary-fg-color);
+  background: transparent;
+  padding: 0;
+  margin-right: 0.3em;
+}
