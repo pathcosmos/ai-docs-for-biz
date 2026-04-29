@@ -222,19 +222,7 @@
    - 각 단계별 산출물·OEM 측 담당 (SQE·QA Manager) 을 병기.
    - Mermaid `gantt` 또는 `flowchart LR` 형태.
 
-   ```mermaid
-   flowchart LR
-       A["Δt-90<br/>변경 영향 평가서<br/>신규 FMEA 초안"] --> B["Δt-30<br/>PPAP 문서 패키지<br/>FMEA·SPC·MSA·런 양산"]
-       B --> C["Δt-7<br/>PSW 승인 수령<br/>OEM SQE 검증"]
-       C --> D["Δt=0<br/>양산 적용 개시"]
-       D --> E["Δt+30<br/>SQA 평가 반영"]
-       style A fill:#FFE4B5
-       style B fill:#FFE4B5
-       style C fill:#90EE90
-       style D fill:#90EE90
-       style E fill:#87CEEB
-   ```
-
+   ![Δt-90 변경 영향 평가서 신규 FMEA 초안 (다이어그램 1)](../assets/diagrams/oem-supply/diagram-1.svg)
 2. **FIG-OEM-2 IATF 16949 핵심 8 절 ↔ AI 시스템 매핑** (블록 B·D 보조 배치)
    - IATF 16949 8 절 (Context · Leadership · Planning · Support · Operation · Performance Eval · Improvement · 자동차 부속서) 을 좌측, AI 시스템 모듈 (데이터 수집·모델링·운영·MLOps·거버넌스) 을 우측에 배치, 정합 라인으로 연결.
    - 매트릭스 형태 (8 행 × 5 열).

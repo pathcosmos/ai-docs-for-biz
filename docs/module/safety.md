@@ -158,21 +158,7 @@
 
 Mermaid 스니펫 예시 (FIG-SAF-3 알람 에스컬레이션):
 
-```
-sequenceDiagram
-  participant CAM as CCTV/웨어러블
-  participant AI as 안전 AI 엔진
-  participant OPS as 현장 근무자
-  participant MGR as 관리감독자
-  participant SM as 안전관리책임자
-  participant CEO as 경영책임자
-  CAM->>AI: 이벤트 (보호구 미착용 등)
-  AI->>OPS: 즉시 경보 + 가이드
-  AI-->>MGR: 미해소 [수치]초 경과 시 승격
-  MGR-->>SM: 재발·고심각 시 승격
-  SM-->>CEO: 중대 리스크 요약 리포트
-```
-
+![수치 (다이어그램 1)](../assets/diagrams/safety/diagram-1.svg)
 ---
 
 ## 5. 유지보수 지침

@@ -369,19 +369,7 @@
   - 출력 정보 설계: 추천 공정 경로 / 조건 범위 / 참조 유사 오더 / 예상 수율·품질
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[주문·사양 입력<br/>재질/치수/형상] --> B[피쳐 인코딩<br/>임베딩]
-    B --> C[벡터 유사도 검색<br/>Top-N 후보]
-    D[(과거 이력 KB<br/>사양·설정·결과)] --> C
-    C --> E[규칙 검증<br/>물리·설비 제약]
-    E --> F[LLM 요약·근거<br/>Citation 포함]
-    F --> G[추천 UI<br/>Top-N 레시피]
-    G --> H[숙련자 HITL<br/>승인·수정]
-    H --> I[신규 사례 자동 편입<br/>데이터 플라이휠]
-    I --> D
-  ```
-
+  ![주문·사양 입력 재질/치수/형상 (다이어그램 1)](../assets/diagrams/pkg2-cold-rolled/diagram-1.svg)
 - **주의·선행조건**: 과거 이력의 구조화(재질 · 치수 · 공정 파라미터 · 품질 결과 일관 스키마) 선행. 자유 텍스트 주석은 OCR·정제 후 편입. 숙련자 검수 루프(5.3 HITL) 와 필수 결합.
 
 > [출처: track1_5.2_AI엔진_변형카드.md §5.2-a — 본문 그대로 인용]
@@ -398,17 +386,7 @@
   - 피드포워드 출력: HMI 경보 + 조작 변수 제안값 (텐션·속도·온도 등)
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[PLC/Historian<br/>10~100Hz 태그] --> B[Edge 스트림 버퍼<br/>NTP 동기]
-    B --> C[슬라이딩 윈도우 피쳐<br/>통계·재질 메타]
-    C --> D[예측 모델<br/>1D-CNN/LSTM/Transformer]
-    D --> E[이탈 판정<br/>σ 임계·추세]
-    E --> F[HMI 경보 + 조작변수 제안<br/>텐션·속도·온도]
-    E --> G[드리프트 모니터링<br/>PSI/KS]
-    G --> H[재학습 트리거<br/>Track 2 SCN-MLO-01]
-  ```
-
+  ![PLC/Historian 10~100Hz 태그 (다이어그램 2)](../assets/diagrams/pkg2-cold-rolled/diagram-2.svg)
 - **주의·선행조건**: PLC 태그 표준화·시간 동기(NTP), 목표 품질 실측 라벨 확보, 추론 지연 요구 확정. Track 2 드리프트 탐지(SCN-MLO-01) 와 결합 필수.
 
 > [출처: track1_5.2_AI엔진_변형카드.md §5.2-b — 본문 그대로 인용]
@@ -425,19 +403,7 @@
   - CMMS 연동: 임계 초과 시 워크오더 자동 생성, 부품·예비재고 연계
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart TD
-    A[진동·전류·AE 센서<br/>≥1kHz 수집] --> B[Edge DAQ<br/>고주파 버퍼]
-    B --> C[특징 추출<br/>FFT/Envelope/Cepstrum]
-    C --> D[이상탐지 모델<br/>Autoencoder/iForest]
-    D --> E{이상 판정<br/>건전성 지수}
-    E -->|정상| F[건전성 트렌드 누적]
-    E -->|이상| G[RUL 추정<br/>Survival/LSTM]
-    G --> H[CMMS 워크오더<br/>자동 생성]
-    H --> I[정비 결과 라벨<br/>피드백 학습]
-    I --> D
-  ```
-
+  ![진동·전류·AE 센서 ≥1kHz 수집 (다이어그램 3)](../assets/diagrams/pkg2-cold-rolled/diagram-3.svg)
 - **주의·선행조건**: 진동·전류 고주파 수집 인프라 (≥ 1 kHz 권장), 기계별 고장 모드 도메인 지식, CMMS 자유 텍스트 정제·표준화.
 
 > [출처: track1_5.2_AI엔진_변형카드.md §5.2-d — 본문 그대로 인용]
@@ -453,18 +419,7 @@
   - 추천·제어 인터페이스: 오픈루프(작업자 승인) 또는 클로즈드루프(DCS 연동) — 본 사업 1 단계는 오픈루프, 후속 단계에서 클로즈드루프 검토
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[관측<br/>PLC/MES 상태] --> B[환경 모델<br/>물리+데이터 하이브리드]
-    B --> C[최적화 엔진<br/>BO/RL/MILP]
-    C --> D[안전 레이어<br/>제약 검증]
-    D --> E[추천·제어<br/>오픈루프 → 클로즈드]
-    E --> F[DCS/HMI<br/>작업자 승인]
-    F --> G[KPI 측정<br/>수율·에너지·사이클]
-    G --> H[챔피언·챌린저<br/>A/B 비교]
-    H --> B
-  ```
-
+  ![관측 PLC/MES 상태 (다이어그램 4)](../assets/diagrams/pkg2-cold-rolled/diagram-4.svg)
 - **주의·선행조건**: RL 채택 시 시뮬레이터·디지털트윈 선행 필수. 안전 PLC 연동·책임 귀속 정의는 클로즈드루프 단계에서. Track 2 챔피언·챌린저(SCN-MLO-01) 결합 필수.
 - **[고객사] 적용 양상**: BAF 코일 적재 패턴 (적재 위치·인접 코일 재질 조합) 과 승온 곡선의 결합 최적화로 동일 강종 내 기계적 성질 편차 [%] 감축, 사이클 타임 [%] 단축, 에너지 원단위 [%] 절감을 1 차 목표로 설정한다.
 
@@ -482,23 +437,7 @@
   - 권한·보안: 문서 접근권한 동기화, 민감 정보 마스킹, 외부 LLM 여부에 따른 온프레미스 · 하이브리드 라우팅
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[문서 소스<br/>SOP/도면/CMMS/MSDS] --> B[파서·OCR<br/>PDF/HWP/DWG]
-    B --> C[청킹·임베딩<br/>멀티뷰]
-    C --> D[벡터스토어<br/>Pinecone/Weaviate]
-    E[사용자 질의<br/>현장 HMI/태블릿] --> F[하이브리드 검색<br/>Dense+BM25+메타]
-    D --> F
-    F --> G[Re-ranker]
-    G --> H{민감도 라우팅}
-    H -->|민감| I[온프레 sLM<br/>EXAONE/HyperCLOVA]
-    H -->|일반| J[외부 LLM API<br/>GPT/Claude]
-    I --> K[응답 + Citation<br/>근거 강제]
-    J --> K
-    K --> L[피드백·감사 로그<br/>문서 보강 루프]
-    L --> C
-  ```
-
+  ![문서 소스 SOP/도면/CMMS/MSDS (다이어그램 5)](../assets/diagrams/pkg2-cold-rolled/diagram-5.svg)
 - **주의·선행조건**: 문서 디지털화·표준화가 가장 큰 선행 작업. 민감도 평가 후 외부 LLM 사용 가능 여부 사전 결정. HRM · AD 권한과의 연동 필요.
 
 > [출처: track1_5.2_AI엔진_변형카드.md §5.2-f — 본문 그대로 인용]

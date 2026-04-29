@@ -42,10 +42,20 @@ with open(SLUG_MAP_FILE, encoding="utf-8") as f:
 # Reverse slug map: { "pkg/pkg2-cold-rolled.md": "사업계획서_패키지2_..." }
 REVERSE_SLUG = {v: k for k, v in SLUG_MAP.items()}
 
-# Mermaid 블록 정규식 — ```mermaid ... ``` (multiline)
+# Mermaid 블록 정규식 — 3 패턴 통합 (Phase E14-A 보강)
+# 1. ```mermaid ... ```  (top-level)
+# 2. {indent}```mermaid ... ```  (들여쓰기 — list item content 안)
+# 3. {indent}``` + mermaid syntax 시작 (bare fence — flowchart·graph·sequenceDiagram 등)
 MERMAID_RE = re.compile(
-    r"^```mermaid\s*\n(.*?)\n```\s*$",
+    # Pattern 1+2 통합: 들여쓰기 0 또는 N 모두 매치
+    r"^([ \t]*)```mermaid\s*\n(.*?)\n[ \t]*```\s*$",
     re.MULTILINE | re.DOTALL,
+)
+
+# Bare fence + mermaid syntax 시작 (flowchart·graph·sequenceDiagram·gantt·stateDiagram 등)
+MERMAID_BARE_RE = re.compile(
+    r"^([ \t]*)```\s*\n((?:flowchart |graph |sequenceDiagram|gantt|stateDiagram|classDiagram|gitGraph|erDiagram|pie|journey)[\s\S]*?)\n[ \t]*```\s*$",
+    re.MULTILINE,
 )
 
 
@@ -277,9 +287,22 @@ def process_file(md_path: Path, dry_run: bool = False) -> dict:
         return {"file": str(md_path), "blocks": 0, "ok": 0, "failed": []}
 
     content = md_path.read_text(encoding="utf-8")
-    matches = list(MERMAID_RE.finditer(content))
 
-    if not matches:
+    # [E14-A] 3 패턴 통합 매치: 들여쓰기 mermaid + bare fence
+    matches_named = list(MERMAID_RE.finditer(content))    # group: (indent, code)
+    matches_bare = list(MERMAID_BARE_RE.finditer(content))  # group: (indent, code)
+
+    # 두 정규식 매치 결합 (위치 기준 정렬)
+    all_matches = []
+    for m in matches_named:
+        all_matches.append({"start": m.start(), "end": m.end(), "indent": m.group(1), "code": m.group(2), "match": m})
+    for m in matches_bare:
+        # named 와 중복 회피
+        if not any(am["start"] == m.start() for am in all_matches):
+            all_matches.append({"start": m.start(), "end": m.end(), "indent": m.group(1), "code": m.group(2), "match": m})
+    all_matches.sort(key=lambda x: x["start"])
+
+    if not all_matches:
         return {"file": str(md_path), "blocks": 0, "ok": 0, "failed": []}
 
     slug = slug_for_file(md_path)
@@ -290,9 +313,10 @@ def process_file(md_path: Path, dry_run: bool = False) -> dict:
 
     # 역순으로 교체 (인덱스 변동 방지)
     new_content = content
-    for idx, m in enumerate(reversed(matches), start=1):
-        n = len(matches) - idx + 1  # 정방향 번호
-        mermaid_code = m.group(1)
+    for idx, am in enumerate(reversed(all_matches), start=1):
+        n = len(all_matches) - idx + 1  # 정방향 번호
+        mermaid_code = am["code"]
+        indent = am["indent"]
         svg_path = diagram_dir / f"diagram-{n}.svg"
         rel_path = relative_svg_path(md_path, slug, n)
         caption = extract_caption(mermaid_code)
@@ -306,9 +330,9 @@ def process_file(md_path: Path, dry_run: bool = False) -> dict:
             failed.append({"n": n, "error": err[:200], "code_first_line": mermaid_code.split("\n")[0]})
             continue
 
-        # 마크다운 교체
-        replacement = f'![{caption} (다이어그램 {n})]({rel_path})'
-        new_content = new_content[:m.start()] + replacement + new_content[m.end():]
+        # 마크다운 교체 (들여쓰기 보존 — list item content 안 mermaid 대응)
+        replacement = f'{indent}![{caption} (다이어그램 {n})]({rel_path})'
+        new_content = new_content[:am["start"]] + replacement + new_content[am["end"]:]
         ok_count += 1
 
     if not dry_run and ok_count > 0:
@@ -317,7 +341,7 @@ def process_file(md_path: Path, dry_run: bool = False) -> dict:
     return {
         "file": str(md_path.name),
         "slug": slug,
-        "blocks": len(matches),
+        "blocks": len(all_matches),
         "ok": ok_count,
         "failed": failed,
     }
@@ -328,9 +352,19 @@ def main():
     targets = []
 
     # Root 의 mermaid 함유 .md (slug_map 에 있는 것만)
+    # [E14-A] mermaid 검출 키워드 — 명시적 ```mermaid 또는 bare fence + flowchart 등 syntax
+    def has_mermaid(text: str) -> bool:
+        if "```mermaid" in text:
+            return True
+        # bare fence + mermaid syntax 시작 (flowchart·graph·sequenceDiagram 등)
+        return bool(re.search(
+            r"^[ \t]*```\s*\n[ \t]*(?:flowchart |graph |sequenceDiagram|gantt|stateDiagram|classDiagram|gitGraph|erDiagram|pie|journey)",
+            text, re.MULTILINE
+        ))
+
     for md_name in SLUG_MAP.keys():
         md_path = ROOT / md_name
-        if md_path.exists() and "```mermaid" in md_path.read_text(encoding="utf-8"):
+        if md_path.exists() and has_mermaid(md_path.read_text(encoding="utf-8")):
             targets.append(md_path)
 
     # docs/ 직접 작성 파일 (slug_map 에 없음)
@@ -339,7 +373,7 @@ def main():
         "docs/index.md", "docs/graph.md", "docs/filter.md",
     ]:
         p = ROOT / direct
-        if p.exists() and "```mermaid" in p.read_text(encoding="utf-8"):
+        if p.exists() and has_mermaid(p.read_text(encoding="utf-8")):
             targets.append(p)
 
     print(f"[convert_mermaid] 대상 파일: {len(targets)}")

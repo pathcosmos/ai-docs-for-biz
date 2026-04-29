@@ -1666,3 +1666,43 @@
 }
 
 /* =========================== Phase E12-D 끝 ============================== */
+
+/* =============================================================================
+   Phase E14-B — SCN ID 자동 hyperlink 시각 (사용자 "낯선 ID 표 친화" 호소)
+   ============================================================================= */
+
+a.scn-link {
+  color: var(--color-indigo-600, #4F46E5);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-indigo-400, #818CF8);
+  padding: 0 1px;
+  transition: color 0.15s var(--ease-out, ease), border-bottom-color 0.15s var(--ease-out, ease), background 0.15s;
+  white-space: nowrap;
+}
+
+a.scn-link:hover {
+  color: var(--color-indigo-700, #4338CA);
+  border-bottom-color: var(--color-indigo-600, #4F46E5);
+  background: var(--color-indigo-50, rgba(99, 102, 241, 0.06));
+  border-radius: 3px;
+}
+
+a.scn-link:focus-visible {
+  outline: 2px solid var(--color-indigo-500, #6366F1);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* 다크 모드 호환 */
+[data-md-color-scheme="slate"] a.scn-link {
+  color: var(--color-indigo-300, #A5B4FC);
+  border-bottom-color: var(--color-indigo-400, #818CF8);
+}
+
+[data-md-color-scheme="slate"] a.scn-link:hover {
+  color: var(--color-indigo-200, #C7D2FE);
+  background: rgba(99, 102, 241, 0.16);
+}
+
+/* =========================== Phase E14-B 끝 ============================== */

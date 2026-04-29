@@ -45,19 +45,7 @@
 - **삽화·도식 후보**: 엔진 내부 모듈 다이어그램(검색 → 추천 → 검증 → 출력), 주문서 입력 → 유사 사례 Top-N → 추천 레시피 UI 목업, 근거 문서 인용 표시 예시.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart LR
-    A[주문·사양 입력<br/>재질/치수/형상] --> B[피쳐 인코딩<br/>임베딩]
-    B --> C[벡터 유사도 검색<br/>Top-N 후보]
-    D[(과거 이력 KB<br/>사양·설정·결과)] --> C
-    C --> E[규칙 검증<br/>물리·설비 제약]
-    E --> F[LLM 요약·근거<br/>Citation 포함]
-    F --> G[추천 UI<br/>Top-N 레시피]
-    G --> H[숙련자 HITL<br/>승인·수정]
-    H --> I[신규 사례 자동 편입<br/>데이터 플라이휠]
-    I --> D
-  ```
-
+  ![주문·사양 입력 재질/치수/형상 (다이어그램 1)](../assets/diagrams/track1-engine-cards/diagram-1.svg)
 - **주의·선행조건**: 과거 이력의 구조화(재질 · 치수 · 공정 파라미터 · 품질 결과 일관 스키마) 선행. 자유 텍스트 주석은 OCR·정제 후 편입. 숙련자 검수 루프(5.3 HITL) 와 필수 결합.
 - **고객사별 가변 여부**: 업종별 교체 — 철강(레시피 추천) vs 단조·절단(설정 추천) vs 공구·금형(재생 노하우).
 
@@ -82,17 +70,7 @@
 - **삽화·도식 후보**: 스트림 파이프라인(Edge → Historian → Inference → HMI), 실시간 예측 vs 실측 오버레이, 스탠드·설비별 기여도 SHAP 바차트, 조기 경보 타임라인.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart LR
-    A[PLC/Historian<br/>10~100Hz 태그] --> B[Edge 스트림 버퍼<br/>NTP 동기]
-    B --> C[슬라이딩 윈도우 피쳐<br/>통계·재질 메타]
-    C --> D[예측 모델<br/>1D-CNN/LSTM/Transformer]
-    D --> E[이탈 판정<br/>σ 임계·추세]
-    E --> F[HMI 경보 + 조작변수 제안<br/>텐션·속도·온도]
-    E --> G[드리프트 모니터링<br/>PSI/KS]
-    G --> H[재학습 트리거<br/>Track 2 SCN-MLO-01]
-  ```
-
+  ![PLC/Historian 10~100Hz 태그 (다이어그램 2)](../assets/diagrams/track1-engine-cards/diagram-2.svg)
 - **주의·선행조건**: PLC 태그 표준화·시간 동기(NTP), 목표 품질 실측 라벨 확보, 추론 지연 요구 확정. Track 2 드리프트 탐지(SCN-MLO-01) 와 결합 필수.
 - **고객사별 가변 여부**: 업종·공정별 교체 — 센서 종류 · 예측 대상 · 판정 임계 모두 다름.
 
@@ -117,18 +95,7 @@
 - **삽화·도식 후보**: 비전 시스템 설치도(카메라·조명·이송 구조), 결함 유형 갤러리(정상 / 의심 / 불량 샘플), 세그멘테이션 오버레이, Confusion Matrix, 등급별 후처리 플로우.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart LR
-    A[카메라<br/>라인스캔/3D 구조광] --> C[전처리<br/>왜곡 보정·정규화]
-    B[조명<br/>균일 조도] --> C
-    C --> D[비전 모델<br/>분류/검출/세그/Pose]
-    D --> E[결함 등급 매핑<br/>설계 허용치 대비]
-    E --> F[이벤트 트리거<br/>라인 분기·정지]
-    F --> G[CMMS/MES 연동<br/>처분 기록]
-    G --> H[라벨링 피드백<br/>Active Learning]
-    H --> D
-  ```
-
+  ![카메라 라인스캔/3D 구조광 (다이어그램 3)](../assets/diagrams/track1-engine-cards/diagram-3.svg)
 - **주의·선행조건**: 조명·이송 속도 고정이 핵심 (조명 변동은 모델 재학습 원인 1위). 개인정보 리스크 높은 시나리오(CCTV·작업자 촬영) 는 노사 합의·마스킹 선행.
 - **고객사별 가변 여부**: 업종·설비별 교체 + 신규 결함 클래스는 고객사 생산 품목별 커스텀.
 
@@ -152,19 +119,7 @@
 - **삽화·도식 후보**: 예지보전 아키텍처(센서 → 엣지 → TSDB → 모델 → CMMS), 진동 스펙트로그램, RUL 곡선, 건전성 지수 트렌드, 알람 에스컬레이션 플로우.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart TD
-    A[진동·전류·AE 센서<br/>≥1kHz 수집] --> B[Edge DAQ<br/>고주파 버퍼]
-    B --> C[특징 추출<br/>FFT/Envelope/Cepstrum]
-    C --> D[이상탐지 모델<br/>Autoencoder/iForest]
-    D --> E{이상 판정<br/>건전성 지수}
-    E -->|정상| F[건전성 트렌드 누적]
-    E -->|이상| G[RUL 추정<br/>Survival/LSTM]
-    G --> H[CMMS 워크오더<br/>자동 생성]
-    H --> I[정비 결과 라벨<br/>피드백 학습]
-    I --> D
-  ```
-
+  ![진동·전류·AE 센서 ≥1kHz 수집 (다이어그램 4)](../assets/diagrams/track1-engine-cards/diagram-4.svg)
 - **주의·선행조건**: 진동·전류 고주파 수집 인프라 (≥ 1 kHz 권장), 기계별 고장 모드 도메인 지식, CMMS 자유 텍스트 정제·표준화.
 - **고객사별 가변 여부**: 설비 종류별 교체 (회전기 · 왕복동 · 유압 · 전동 등).
 
@@ -187,20 +142,7 @@
 - **삽화·도식 후보**: 최적화 루프 다이어그램 (관측 → 추정 → 최적화 → 실행 → 피드백), 제안 vs 현행 조작 프로파일 비교, 시뮬레이터 UI 스케치, 파레토 전선 그래프.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart LR
-    A[관측<br/>PLC/MES 상태] --> B[환경 모델<br/>물리+데이터 하이브리드]
-    B --> C[최적화 알고리즘<br/>BO/RL/MILP]
-    C --> D[안전 레이어<br/>제약 검증·Safe RL]
-    D --> E{루프 선택}
-    E -->|오픈루프| F[작업자 승인<br/>HMI 제안]
-    E -->|클로즈드| G[DCS 자동 제어]
-    F --> H[실행·KPI 측정<br/>수율·에너지]
-    G --> H
-    H --> I[챔피언·챌린저 비교<br/>Track 2 SCN-MLO-01]
-    I --> B
-  ```
-
+  ![관측 PLC/MES 상태 (다이어그램 5)](../assets/diagrams/track1-engine-cards/diagram-5.svg)
 - **주의·선행조건**: RL은 반드시 시뮬레이터 또는 오프라인 안전 평가 체계 선행. 제어 통합 시 책임·법적 이슈 및 안전 PLC 연동 필요. Track 2(MLOps) 의 챔피언·챌린저(SCN-MLO-01) 와 필수 결합.
 - **고객사별 가변 여부**: 공정·목적 함수별 전면 교체. 오픈 / 클로즈드 루프 선택은 고객사 수용성에 따라 분기.
 
@@ -224,23 +166,7 @@
 - **삽화·도식 후보**: RAG 파이프라인 (수집 · 임베딩 · 검색 · 생성 · 감사), 대화 UI 목업, 인용 표시 예시, 권한·보안 아키텍처.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart LR
-    A[문서 소스<br/>SOP/도면/CMMS/MSDS] --> B[파서·OCR<br/>PDF/HWP/DWG]
-    B --> C[청킹·임베딩<br/>멀티뷰]
-    C --> D[벡터스토어<br/>Pinecone/Weaviate]
-    E[사용자 질의<br/>현장 HMI/태블릿] --> F[하이브리드 검색<br/>Dense+BM25+메타]
-    D --> F
-    F --> G[Re-ranker]
-    G --> H{민감도 라우팅}
-    H -->|민감| I[온프레 sLM<br/>EXAONE/HyperCLOVA]
-    H -->|일반| J[외부 LLM API<br/>GPT/Claude]
-    I --> K[응답 + Citation<br/>근거 강제]
-    J --> K
-    K --> L[피드백·감사 로그<br/>문서 보강 루프]
-    L --> C
-  ```
-
+  ![문서 소스 SOP/도면/CMMS/MSDS (다이어그램 6)](../assets/diagrams/track1-engine-cards/diagram-6.svg)
 - **주의·선행조건**: 문서 디지털화·표준화가 가장 큰 선행 작업. 민감도 평가 후 외부 LLM 사용 가능 여부 사전 결정. HRM · AD 권한과의 연동 필요.
 - **고객사별 가변 여부**: 공통 템플릿 + 문서 소스 · 권한 구성만 교체. LLM 모델 선택은 고객사 보안 정책에 따라 교체.
 
@@ -265,22 +191,7 @@
 - **삽화·도식 후보**: 형상 임베딩 파이프라인 (도면 → 메쉬·포인트 → 임베딩 → 벡터스토어), 5.2-f·5.2-g 병기 검색 결과 비교 UI 목업, B-Rep 그래프 임베딩 개념도, CAD 비교 잔차 시각화.
 - **삽화 (Mermaid 초안)**:
 
-  ```mermaid
-  flowchart LR
-    A[CAD 도면<br/>DWG/STEP/IFC] --> B[파서<br/>OpenCASCADE/ODA]
-    B --> C[형상 표현<br/>메쉬/포인트/B-Rep]
-    C --> D[형상 임베딩<br/>PointNet++/MeshCNN/GraphSAGE]
-    D --> E[형상 벡터스토어<br/>+ 메타 필터]
-    F[질의 도면 또는 사양<br/>+ 텍스트 키워드] --> G{라우팅<br/>형상 vs 텍스트}
-    G -->|형상| E
-    G -->|텍스트| H[5.2-f 텍스트 RAG]
-    E --> I[형상 유사 Top-N]
-    H --> J[텍스트 유사 Top-N]
-    I --> K[병합·재정렬<br/>형상·텍스트 가중]
-    J --> K
-    K --> L[추천 도면·부품<br/>+ Citation·형상 잔차]
-  ```
-
+  ![CAD 도면 DWG/STEP/IFC (다이어그램 7)](../assets/diagrams/track1-engine-cards/diagram-7.svg)
 - **주의·선행조건**: CAD 라이브러리 라이선스 (특히 DWG·STEP) 확보 필요. 형상 임베딩 모델은 도메인 사전학습 데이터 (ABC dataset, ShapeNet 등) 로 초기화 후 사내 도면으로 파인튜닝 권장. 도면의 IP·영업비밀 민감도가 5.2-f 보다 높음 — 외부 임베딩 API 사용은 정밀 도면에 부적합.
 - **고객사별 가변 여부**: 도메인별 교체 — 정밀가공 (부품 형상), 단조·절단 (제품 외곽), 건축·플랜트 (IFC). 형상 임베딩 모델·파인튜닝 데이터셋이 도메인별로 상이.
 

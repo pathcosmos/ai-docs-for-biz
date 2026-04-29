@@ -370,17 +370,7 @@
   - 피드포워드 출력: 작업자 모바일 알람 + 공구 교체 권고
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[CNC 컨트롤러<br/>1~10Hz 태그] --> B[OPC-UA 게이트웨이<br/>NTP 동기]
-    B --> C[클라우드 TSDB<br/>슬라이딩 윈도우 피쳐]
-    C --> D[예측 모델<br/>LSTM + XGBoost Stacking]
-    D --> E[마모 단계 분류<br/>+ 파손 임박 조기경보]
-    E --> F[작업자 모바일 알람<br/>+ 공구 교체 권고]
-    E --> G[드리프트 모니터링<br/>PSI/KS]
-    G --> H[재학습 트리거<br/>Track 2 압축 모드]
-  ```
-
+  ![CNC 컨트롤러 1~10Hz 태그 (다이어그램 1)](../assets/diagrams/pkg5-precision/diagram-1.svg)
 - **주의·선행조건**: CNC 컨트롤러 OPC-UA 표준화·시간 동기 (NTP), 공구 교체 이력 라벨 확보, 추론 지연 요구 확정. Track 2 드리프트 탐지 (압축 모드) 와 결합 필수.
 
 > [출처: `track1_5.2_AI엔진_변형카드.md` §5.2-b — 본문 그대로 인용 + MET-01 적용 1 문장 부가]
@@ -397,19 +387,7 @@
   - 클라우드 배포: 클라우드 GPU 서빙, 검사실 PC 인터페이스
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[3D 스캐너<br/>포인트클라우드] --> C[클라우드 적재·정합<br/>CAD 도면 매칭]
-    B[CMM 측정 결과] --> C
-    D[CAD 설계 도면] --> C
-    C --> E[비전 모델<br/>EfficientNet + PointNet+ICP]
-    E --> F[치수 편차 자동 산출<br/>설계 허용치 대비]
-    F --> G[합격·재검사·불량 분류<br/>이벤트 트리거]
-    G --> H[ERP 검사 결과 적재<br/>처분 기록]
-    H --> I[검사원 검토 라벨링<br/>Active Learning · 클라우드]
-    I --> E
-  ```
-
+  ![3D 스캐너 포인트클라우드 (다이어그램 2)](../assets/diagrams/pkg5-precision/diagram-2.svg)
 - **주의·선행조건**: 3D 스캔 환경 표준화, CAD 도면 디지털 자산 확보, 클라우드 라벨링 외주 협의. 본 사업은 부분 도입 (라벨링 외주 대량 동반은 후속) — 18 개월 표준 패키지 5 의 전수검사 확장은 후속 단계로 위임.
 - **SaaS 모드 차별 양상**: Phase E1 의 온프레미스 GPU 모드 대비 클라우드 라벨링 도구 (예: Labelbox·Roboflow) + 클라우드 GPU (P100·V100) 활용으로 1 차 학습 비용을 분기별 종량제로 변동비화한다.
 
@@ -443,23 +421,7 @@
   - 권한·보안: 고객사·부품군별 접근권한 동기화, 영업비밀 도면 마스킹, 외부 LLM 여부에 따른 온프레미스 · 클라우드 라우팅
 - **삽화 (Mermaid)**:
 
-  ```mermaid
-  flowchart LR
-    A[CAD 도면 + CAM 프로그램<br/>+ 작업표준 + 공구 매뉴얼] --> B[파서·OCR + 형상 추출<br/>DWG/STEP/PDF]
-    B --> C[청킹 + 멀티뷰 임베딩<br/>텍스트 메타 + 형상]
-    C --> D[클라우드 벡터스토어<br/>Pinecone/Weaviate]
-    E[현장 태블릿·검사실 PC<br/>자연어 질의] --> F[하이브리드 검색<br/>Dense+BM25+형상유사도+메타]
-    D --> F
-    F --> G[Re-ranker]
-    G --> H{민감도 라우팅}
-    H -->|민감 도면| I[온프레 sLM]
-    H -->|일반| J[클라우드 LLM API]
-    I --> K[응답 + 도면 Citation<br/>해당 형상 영역 표시]
-    J --> K
-    K --> L[피드백·감사 로그<br/>도면 보강 루프]
-    L --> C
-  ```
-
+  ![CAD 도면 + CAM 프로그램 + 작업표준 + 공구 매뉴얼 (다이어그램 3)](../assets/diagrams/pkg5-precision/diagram-3.svg)
 - **주의·선행조건**: CAD 도면 디지털 자산화·고객사 권한 분류 표준화. DWG/STEP 형상 임베딩 모델은 본 사업의 도전적 영역으로 외부 자문 결합 권장. 클라우드 LLM API 사용 시 도면 영업비밀 마스킹 게이트 필수.
 
 > [출처: `track1_5.2_AI엔진_변형카드.md` §5.2-f — 본문 그대로 인용 + LLM-04 도면 형상 임베딩·CAD 적용 양상 보완]

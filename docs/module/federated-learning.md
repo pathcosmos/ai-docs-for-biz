@@ -198,27 +198,7 @@
 
 Mermaid 예시 (FIG-FL-1 골격):
 
-```
-flowchart LR
-  subgraph 참여사A[참여사 A 경계]
-    DA[로컬 데이터] --> LA[로컬 학습 클라이언트]
-  end
-  subgraph 참여사B[참여사 B 경계]
-    DB[로컬 데이터] --> LB[로컬 학습 클라이언트]
-  end
-  subgraph 참여사N[참여사 N 경계]
-    DN[로컬 데이터] --> LN[로컬 학습 클라이언트]
-  end
-  LA -- 가중치 업데이트+DP --> AGG[중앙 집계 서버
-  Secure Aggregation]
-  LB -- 가중치 업데이트+DP --> AGG
-  LN -- 가중치 업데이트+DP --> AGG
-  AGG --> GM[글로벌 모델]
-  GM -- 배포 --> LA
-  GM -- 배포 --> LB
-  GM -- 배포 --> LN
-```
-
+![참여사 A 경계 (다이어그램 1)](../assets/diagrams/federated-learning/diagram-1.svg)
 ---
 
 ## 6. 유지보수 지침
