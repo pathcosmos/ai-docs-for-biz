@@ -9,10 +9,11 @@ Thumbs.db
 *.tmp
 ~$*
 
-# 참고 PDF — 사내 git 서버(DKpia Yona) 추가 후 정책 전환 (2026-04-27, 엔트리 #16):
-# 사내 서버는 외부 GitHub 와 신뢰 수준이 다르므로 참고 PDF 도 포함한다.
-# 외부 노출이 필요한 경우(예: GitHub 만 사용) 아래 줄의 주석을 해제할 것.
-# *.pdf
+# 참고 PDF — 외부 GitHub public 전환 (2026-04-29, 엔트리 #39):
+# 6 PDF 는 타 회사 IP (저작권·기밀) 로 외부 공개 부적합.
+# git filter-repo 로 history 에서 일괄 제거 + 본 .gitignore 로 재포함 차단.
+# working tree 에는 보존 (참고 자료용 — git 추적 외).
+*.pdf
 
 # === HTML 문서화 (Phase E9) ===
 # Python 가상환경
