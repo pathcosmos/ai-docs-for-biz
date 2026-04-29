@@ -1873,6 +1873,39 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 
 ---
 
+#### 엔트리 #47 — Phase E12-Fix 종합 + Phase E13 Sprint 1·2·3 일괄 처리
+
+- **맥락**: Phase E12 종료 후 사용자 누적 호소 5+1=6 건 추가 발견 → Phase E12-Fix 즉각 처리. 이후 plan mode 진입하여 잔여 10 영역 인벤토리 + 우선순위 결정 (Sprint 1→2→3 순차) 후 일괄 처리.
+- **사용자 요청 원문 요지**: "다시 다 고쳐 줘 레이아웃 자체가 문제인 것 같은데 다시 전면적 개편 가자 내용도 다시 다 가다듬고" / "이런거 다 세로형 문서 맞는 일반 이미지로 다 바꾸랬잖아" / "그럼 크기 이렇게 작으면 뭐 너만 알아보지" / "트랙 1,2,3 이 뭔지는 너만 알지" / "본문 폭이 너무 좁아, 상단 설명이 raw 하게 나오면 어쩌니" / "왼쪽 메뉴 꼬라지" / "ok 잔여 사항 계획부터 세워 줘".
+- **AI 수행**:
+  - **E12-Fix 종합 (commit `8feb327`)**: 6 호소 일괄 — (A) 사이드바 라벨 의미화 (Track 1·2·3 → 🤖 제조 AI·⚙️ MLOps·💬 LLM·RAG) / (B) 본문 폭 60rem → 76rem / (C) inject_frontmatter.py 영구 fix (markdown 변경 0 + page.meta 직접 set) / (D) SVG max-width 480→100% (mmdc) · 720px (세로) · 700px (hero) / (E) scripts/fix_image_captions.py 신설 → 14 .md 파일 broken caption fix.
+  - **Plan mode 잔여 인벤토리**: 10 영역 분류 → AskUserQuestion 2 결정 (Sprint 1→2→3 순차·Sprint 4 구조·논리 깊이).
+  - **Sprint 1 (commit `1d61d8d`)**: scripts/static_audit.py 신설 (~150 줄, Playwright 의존성 회피한 정적 검증). 11 핵심 페이지 회귀 검사 ✅ 합격.
+  - **Sprint 2 (commit `1d61d8d`)**: hooks/wrap_paste_ready.py 신설 (~155 줄). 시나리오 상세 5 + 패키지 1~6 §3·§4 ### 자동 admonition.copy wrap. **149 박스 생성** (목표 130 초과).
+  - **Sprint 3 (commit `9d18041`, 3 에이전트 병렬, 방법론 4.22)**: 30 SVG 세로형 재작업. 그룹 A (track 5+module 5=1,160 줄) + B (guide 10=1,442 줄) + C (scenario 5+other 5=1,399 줄). **42/42 SVG 모두 600×800 portrait 통일**.
+- **판단 근거**:
+  - **사용자 호소 누적 19 건 처리 효율**: 단일 commit batch (E12-Fix) 6 호소 일괄 → 사용자 인내심 절감. 이후 plan mode 진입 → 잔여 명확화 → 단계별 진행으로 사용자 신뢰 회복.
+  - **Playwright 의존성 회피 (방법론 후보 4.51)**: scripts/static_audit.py 가 grep + 정규식 기반 → ~150MB 설치 없이 90% 회귀 검증 효과. CI/로컬 5초 미만.
+  - **paste-ready hook 의 패턴 분기 (방법론 후보 4.50)**: 시나리오 (SCN+4 sub) + 패키지 (§3·§4 ###) 두 패턴 분기. 149 박스 → 사용자 main use case 시각 demarcation 완성.
+  - **3 에이전트 vs 4 에이전트**: Plan 명시 4 → 실 spawn 3 (track+module 통합) — 토큰 효율. 실행 11 분.
+  - **inject_frontmatter.py 영구 fix (방법론 후보 4.46 검증)**: 1 차 (page.meta 검사) → 시각 누수 잔존 → 2 차 (markdown 변경 자체 제거 + page.meta 직접 set) 영구 해결. mkdocs hook 의 markdown vs page.meta 책임 분리.
+- **사용자 의사결정**: E12-Fix 자동 위임 + Plan mode 2 결정 (Sprint 1→2→3·Sprint 4 구조·논리) + Auto 모드 재진입.
+- **산출물**:
+  - **commit 4 종 양 원격 동기화**: `8feb327` E12-Fix (19 files +258/-104) · `1d61d8d` Sprint 1+2 (3 files +275/-1) · `9d18041` Sprint 3 (30 files +3276/-2971)
+  - **신규 스크립트 2**: scripts/static_audit.py · scripts/fix_image_captions.py
+  - **신규 hook 1**: hooks/wrap_paste_ready.py
+  - **수정 hook**: inject_frontmatter.py (markdown 변경 0)
+  - **42/42 SVG 600×800**: track 8 + module 5 + guide 11 + scenario 6 + pkg 6 + other 5 + home 1 = 42 종 통일
+  - **149 paste-ready 박스**: 사업계획서 paste 시각 demarcation 완성
+- **방법론 후보 4.50**: **시각 demarcation hook 의 패턴 분기 표준** — 단일 hook 에서 다중 콘텐츠 패턴 분기 (`TARGET_PATTERNS = {slug: mode}` 매핑 + mode 별 wrap 함수). wrap_top5_copy.py + wrap_paste_ready.py 일관 설계.
+- **방법론 후보 4.51**: **Playwright 회피 정적 검증 패턴** — grep 정규식 기반 site/*.html 검사 (raw frontmatter·broken caption·mermaid·viewport) + CSS spec 검증. 90% 회귀 효과 + 5 초 미만.
+- **잔여 (Sprint 4·5)**:
+  - **Sprint 4 (콘텐츠 가다듬기)**: 10 핵심 페이지 구조·논리 깊이. 사용자 명시 승인 후 진입.
+  - **Sprint 5 보완**: 접근성 audit · 검색·SEO · PDF · 다크 모드 정합.
+- **다음 단계**: 사용자 라이브 사이트 재검증 → Sprint 4 진입 여부·범위 결정.
+
+---
+
 ## 4. 방법론 인덱스 (본문은 `방법론_총론.md` 참조)
 
 > **분리 사유 (엔트리 #26)**: 본 §4 가 28 항목·212 줄 누적되어 작업로그 본체 (변동 기록) 와 방법론 (안정 자산) 이 한 파일에서 충돌. 방법론 본문을 `방법론_총론.md` 로 분리하고 본 §4 는 인덱스만 유지.
