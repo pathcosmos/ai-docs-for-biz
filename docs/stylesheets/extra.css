@@ -932,3 +932,721 @@
     display: none;
   }
 }
+
+/* =============================================================================
+   Phase E12-A — 현대적 SaaS 디자인 시스템 (Linear · Vercel · Stripe 톤)
+   ----------------------------------------------------------------------------
+   사용자 피드백 — 기본 Material 톤 (딥블루+틸+앰버) → Indigo·Violet·Pink 그라데이션,
+   slate neutral, glassmorphism, 정교 다층 shadow, 한국어 본문 가독성 우선.
+   기존 Phase E10·E11 hooks selector (--active, .lightbox-, .placeholder-tag,
+   .admonition.copy, .meta-marker, .home-cta, .home-giant-btn, .reading-time-badge)
+   는 1 줄도 변경 안 함 (보존). 이하 ~500 줄은 끝에 적층.
+   ============================================================================= */
+
+:root {
+  /* === Indigo · Violet primary scale === */
+  --color-indigo-50:  #EEF2FF;
+  --color-indigo-100: #E0E7FF;
+  --color-indigo-200: #C7D2FE;
+  --color-indigo-400: #818CF8;
+  --color-indigo-500: #6366F1;
+  --color-indigo-600: #4F46E5;
+  --color-indigo-700: #4338CA;
+  --color-indigo-800: #3730A3;
+  --color-indigo-900: #312E81;
+
+  --color-violet-500: #8B5CF6;
+  --color-pink-500:   #EC4899;
+  --color-cyan-500:   #06B6D4;
+
+  /* === Slate (neutral) === */
+  --color-slate-50:   #F8FAFC;
+  --color-slate-100:  #F1F5F9;
+  --color-slate-200:  #E2E8F0;
+  --color-slate-300:  #CBD5E1;
+  --color-slate-400:  #94A3B8;
+  --color-slate-500:  #64748B;
+  --color-slate-600:  #475569;
+  --color-slate-700:  #334155;
+  --color-slate-800:  #1E293B;
+  --color-slate-900:  #0F172A;
+  --color-slate-950:  #020617;
+
+  /* === Accent === */
+  --color-emerald-500: #10B981;
+  --color-amber-500:   #F59E0B;
+  --color-rose-500:    #F43F5E;
+
+  /* === Brand gradients === */
+  --grad-brand:      linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  --grad-brand-soft: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(236,72,153,0.04) 100%);
+  --grad-cool:       linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+  --grad-warm:       linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
+
+  /* === Shadows (정교 다층) === */
+  --shadow-xs: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08), 0 2px 4px -2px rgba(15,23,42,0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15,23,42,0.10), 0 4px 6px -4px rgba(15,23,42,0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(15,23,42,0.12), 0 8px 10px -6px rgba(15,23,42,0.08);
+  --shadow-glow-indigo: 0 0 0 1px rgba(99,102,241,0.16), 0 8px 24px -4px rgba(99,102,241,0.32);
+
+  /* === Radius === */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* === Spacing === */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+
+  /* === Typography scale === */
+  --font-size-xs:   0.78rem;
+  --font-size-sm:   0.87rem;
+  --font-size-base: 1rem;
+  --font-size-lg:   1.13rem;
+  --font-size-xl:   1.31rem;
+  --font-size-2xl:  1.69rem;
+  --font-size-3xl:  2.13rem;
+  --font-size-4xl:  2.75rem;
+
+  /* === Easing === */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* === MkDocs Material 토큰 override (라이트) ============================ */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        var(--color-indigo-600);
+  --md-primary-fg-color--light: var(--color-indigo-400);
+  --md-primary-fg-color--dark:  var(--color-indigo-800);
+  --md-accent-fg-color:         var(--color-violet-500);
+  --md-accent-fg-color--transparent: rgba(139, 92, 246, 0.1);
+  --md-typeset-a-color:         var(--color-indigo-600);
+}
+
+/* === 본문 typography 계층 — H1~H3 + 단락 ============================== */
+.md-typeset h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--color-slate-900);
+  margin: 0 0 0.6em;
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.md-typeset h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+  color: var(--color-slate-900);
+  margin: 1.8em 0 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid transparent;
+  border-image: var(--grad-brand) 1;
+  border-image-slice: 1;
+}
+
+.md-typeset h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.3;
+  color: var(--color-slate-800);
+  margin: 1.6em 0 0.6em;
+}
+
+.md-typeset h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-slate-700);
+  margin: 1.4em 0 0.5em;
+}
+
+.md-typeset p {
+  font-size: var(--font-size-lg);
+  line-height: 1.75;
+  color: var(--color-slate-700);
+  margin: 0 0 1em;
+}
+
+.md-typeset p + p {
+  margin-top: 1.4em;
+}
+
+.md-typeset h2 + p { margin-top: 0.6em; }
+.md-typeset h3 + p { margin-top: 0.4em; }
+.md-typeset table + p,
+.md-typeset p + table { margin-top: 1.5em; }
+.md-typeset figure { margin: 2em auto; }
+
+/* === blockquote — glassmorphism + gradient bar ======================== */
+.md-typeset blockquote {
+  position: relative;
+  background: rgba(99, 102, 241, 0.04);
+  border-left: 3px solid transparent;
+  border-image: var(--grad-brand) 1;
+  border-image-slice: 1;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 0.85em 1.1em;
+  margin: 1em 0;
+  color: var(--color-slate-700);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-xs);
+}
+
+/* nested 인용 (출처 표기) — 더 흐린 톤 + subtle gradient bar */
+.md-typeset blockquote blockquote {
+  background: rgba(139, 92, 246, 0.05);
+  border-left-width: 2px;
+  font-size: 0.95em;
+  color: var(--color-slate-600);
+}
+
+/* === 표 — rounded + gradient header ================================== */
+.md-typeset table:not([class]) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-slate-200);
+  font-size: 0.9em;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--grad-brand);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  padding: 0.75em 1em;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.7em 1em;
+  border-top: 1px solid var(--color-slate-100);
+  color: var(--color-slate-700);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background: var(--color-slate-50);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background: rgba(99, 102, 241, 0.04);
+}
+
+/* === 카드 그리드 — hover 강화 ========================================= */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  padding: var(--space-lg);
+  transition:
+    transform 250ms var(--ease-out),
+    box-shadow 250ms var(--ease-out),
+    border-color 250ms var(--ease-out);
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-indigo-400);
+}
+
+/* === admonition — glassmorphism + gradient left bar =================== */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  border-left: 4px solid transparent;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-image: var(--grad-cool) 1;
+  border-image-slice: 1;
+  border-left-width: 4px;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-image: linear-gradient(135deg, #10B981 0%, #06B6D4 100%) 1;
+  border-image-slice: 1;
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-image: var(--grad-warm) 1;
+  border-image-slice: 1;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-image: linear-gradient(135deg, #F43F5E 0%, #EC4899 100%) 1;
+  border-image-slice: 1;
+}
+
+/* copy admonition (E10·E11 hook 의존성 보존 + 보강) */
+.md-typeset .admonition.copy {
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #F59E0B 0%, #F43F5E 100%) 1;
+  border-image-slice: 1;
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.06) 0%,
+    rgba(244, 63, 94, 0.04) 100%);
+}
+
+/* === Hover · focus 14 종 ============================================== */
+
+/* 본문 링크 — gradient underline grow */
+.md-typeset a:not(.md-button):not(.md-nav__link) {
+  color: var(--color-indigo-600);
+  text-decoration: none;
+  background-image: var(--grad-brand);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 200ms var(--ease-out), color 200ms var(--ease-out);
+}
+
+.md-typeset a:not(.md-button):not(.md-nav__link):hover {
+  color: var(--color-indigo-700);
+  background-size: 100% 2px;
+}
+
+/* 사이드바 active — gradient subtle + 좌측 gradient border (E10 hook 보존) */
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.10) 0%,
+    rgba(139, 92, 246, 0.04) 60%,
+    transparent 100%);
+  font-weight: 700;
+}
+
+/* inline code — slate-100 + indigo-700 */
+.md-typeset code {
+  background: var(--color-slate-100);
+  color: var(--color-indigo-700);
+  border-radius: var(--radius-sm);
+  padding: 0.1em 0.4em;
+  font-size: 0.92em;
+  font-weight: 500;
+  border: 1px solid var(--color-slate-200);
+}
+
+.md-typeset pre code {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+}
+
+.md-typeset pre {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* md-button — primary indigo gradient */
+.md-typeset .md-button {
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  transition: all 200ms var(--ease-out);
+  border: 1px solid var(--color-slate-200);
+}
+
+.md-typeset .md-button--primary {
+  background: var(--grad-brand);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-indigo);
+  color: #fff;
+}
+
+.md-typeset .md-button:not(.md-button--primary):hover {
+  border-color: var(--color-indigo-400);
+  background: rgba(99, 102, 241, 0.04);
+  color: var(--color-indigo-700);
+}
+
+/* 헤더 (md-header) — 살짝 glass */
+.md-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-xs);
+  color: var(--color-slate-900);
+}
+
+[data-md-color-scheme="default"] .md-header {
+  color: var(--color-slate-900);
+}
+
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-search__input {
+  color: var(--color-slate-900);
+}
+
+[data-md-color-scheme="default"] .md-search__input::placeholder {
+  color: var(--color-slate-500);
+}
+
+/* === 세로형 레이아웃 정리 =========================================== */
+:root {
+  --md-grid: 60rem;
+}
+
+.md-grid {
+  max-width: 60rem;
+}
+
+/* === 페이지 진입 애니메이션 ========================================== */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardStaggerIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes admonitionSlideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.md-content article {
+  animation: pageFadeIn 400ms var(--ease-out);
+}
+
+.md-typeset .grid.cards > ul > li {
+  animation: cardStaggerIn 450ms var(--ease-out) both;
+}
+
+.md-typeset .grid.cards > ul > li:nth-child(2) { animation-delay: 60ms; }
+.md-typeset .grid.cards > ul > li:nth-child(3) { animation-delay: 120ms; }
+.md-typeset .grid.cards > ul > li:nth-child(4) { animation-delay: 180ms; }
+.md-typeset .grid.cards > ul > li:nth-child(5) { animation-delay: 240ms; }
+.md-typeset .grid.cards > ul > li:nth-child(6) { animation-delay: 300ms; }
+
+.md-typeset .admonition,
+.md-typeset details {
+  animation: admonitionSlideIn 350ms var(--ease-out) both;
+}
+
+/* hero gradient (홈·index 의 home-cta 영역) — 부드러운 shift */
+.md-content article:has(.home-cta) h1 {
+  background: var(--grad-brand);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    pageFadeIn 400ms var(--ease-out),
+    heroGradientShift 8s linear infinite;
+}
+
+/* prefers-reduced-motion — 모션 비활성 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === 다크 모드 (slate-based) ========================================== */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:        var(--color-slate-950);
+  --md-default-bg-color--light: var(--color-slate-900);
+  --md-default-fg-color:        var(--color-slate-100);
+  --md-default-fg-color--light: var(--color-slate-300);
+  --md-default-fg-color--lighter: var(--color-slate-400);
+  --md-default-fg-color--lightest: var(--color-slate-700);
+
+  --md-primary-fg-color:        var(--color-indigo-500);
+  --md-primary-fg-color--light: var(--color-indigo-400);
+  --md-primary-fg-color--dark:  var(--color-indigo-700);
+  --md-accent-fg-color:         var(--color-violet-500);
+  --md-typeset-a-color:         var(--color-indigo-400);
+
+  --md-code-bg-color:           var(--color-slate-800);
+  --md-code-fg-color:           var(--color-slate-100);
+
+  /* 다크 그림자 — rgba(0,0,0,0.5) 기반 */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.40), 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.50), 0 2px 4px -2px rgba(0,0,0,0.40);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.55), 0 4px 6px -4px rgba(0,0,0,0.45);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.60), 0 8px 10px -6px rgba(0,0,0,0.50);
+  --shadow-glow-indigo: 0 0 0 1px rgba(99,102,241,0.32), 0 8px 24px -4px rgba(99,102,241,0.45);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--color-slate-50);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: var(--color-slate-100);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--color-slate-200);
+}
+
+[data-md-color-scheme="slate"] .md-typeset p {
+  color: var(--color-slate-300);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  background: rgba(99, 102, 241, 0.10);
+  color: var(--color-slate-200);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote blockquote {
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--color-slate-400);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  background: var(--color-slate-900);
+  border-top-color: var(--color-slate-800);
+  color: var(--color-slate-200);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
+  background: var(--color-slate-800);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover td {
+  background: rgba(99, 102, 241, 0.12);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+  background: var(--color-slate-900);
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--color-indigo-400);
+  background: var(--color-slate-800);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: var(--color-slate-800);
+  color: var(--color-indigo-200);
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(2, 6, 23, 0.85);
+  color: var(--color-slate-100);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:not(.md-button):not(.md-nav__link) {
+  color: var(--color-indigo-400);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:not(.md-button):not(.md-nav__link):hover {
+  color: var(--color-indigo-200);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.20) 0%,
+    rgba(139, 92, 246, 0.08) 60%,
+    transparent 100%);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.copy {
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.10) 0%,
+    rgba(244, 63, 94, 0.06) 100%);
+}
+
+/* =========================== Phase E12-A 끝 ============================== */
+
+/* =============================================================================
+   Phase E12-D — 사이드바 콘텐츠 그룹 정리 (사용자 "왼쪽 메뉴 꼬라지" 호소)
+   문제: 콘텐츠 그룹 안 25 항목 일괄 노출 + 간격 넓음 + 시각 위계 약함
+   해결: 항목 간격 축소·sub-그룹 헤더 시각 차별·active 그룹만 강조 펼침
+   ============================================================================= */
+
+/* 좌측 사이드바 — 항목 간격 압축 (현재 너무 넓음) */
+.md-nav__item {
+  padding: 0;
+}
+
+.md-nav__list .md-nav__list .md-nav__item {
+  margin: 0;
+}
+
+/* 사이드바 항목 link — 간격 축소·폰트 약간 줄임 */
+.md-sidebar--primary .md-nav__link {
+  padding: 0.32em 0.6em;
+  margin: 0.05em 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  border-radius: 6px;
+  transition: background 0.18s var(--ease-out, ease), color 0.18s var(--ease-out, ease);
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  background: var(--color-indigo-50, rgba(99, 102, 241, 0.06));
+  color: var(--color-indigo-700, #4338CA);
+}
+
+/* sub-그룹 헤더 (🔧 기술 트랙·📦 통합 파일럿·🎯 시나리오·모듈) — 시각 위계 명확화 */
+.md-nav--lifted .md-nav .md-nav .md-nav__title,
+.md-nav--lifted label.md-nav__link.md-nav__container {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--color-slate-700, #334155);
+  text-transform: none;
+  letter-spacing: -0.005em;
+  padding: 0.55em 0.6em 0.3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.04) 0%,
+    transparent 80%);
+  border-left: 2px solid var(--color-indigo-200, #C7D2FE);
+  border-radius: 0 6px 6px 0;
+  letter-spacing: -0.005em;
+}
+
+/* 1 그룹 헤더 (🚀 시작·📦 콘텐츠·📋 운영·참고·📌 메타) — 더 강한 시각 강조 */
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--color-indigo-700, #4338CA);
+  padding: 0.7em 0.6em 0.35em;
+  margin-top: 0.6em;
+  letter-spacing: -0.012em;
+  border-left: 3px solid var(--color-indigo-500, #6366F1);
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.08) 0%,
+    transparent 60%);
+  border-radius: 0 8px 8px 0;
+}
+
+/* sub-그룹 안 항목 들여쓰기 정리 (단일 단계만 들여쓰기, 다중 단계 회피) */
+.md-nav--lifted .md-nav .md-nav .md-nav .md-nav__link {
+  padding-left: 1em;
+  font-size: 0.81rem;
+  color: var(--color-slate-700, #334155);
+}
+
+/* 활성 항목 — 더 명확한 강조 (Phase E11-1 의 단순 좌측 보더 → gradient + glow) */
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.16) 0%,
+    rgba(139, 92, 246, 0.06) 60%,
+    transparent 100%);
+  color: var(--color-indigo-700, #4338CA);
+  border-left: 3px solid var(--color-indigo-500, #6366F1);
+  font-weight: 700;
+  padding-left: calc(0.6em - 3px);
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 2px rgba(99, 102, 241, 0.08);
+}
+
+/* 비활성 sub-그룹 — 항목 시각 약화 (active 그룹만 부각) */
+.md-nav--lifted > .md-nav__list > .md-nav__item--section:not(:has(.md-nav__link--active))
+  > nav.md-nav > .md-nav__list .md-nav__link {
+  color: var(--color-slate-600, #475569);
+}
+
+/* 사이드바 전체 좌·우 padding 축소 (1 화면에 더 많은 항목) */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-slate-300, #CBD5E1) transparent;
+}
+
+.md-sidebar--primary .md-sidebar__inner {
+  padding: 0.6rem 0.4rem;
+}
+
+/* sub-그룹 사이 separator (시각 분리) */
+.md-nav--lifted .md-nav__item--section + .md-nav__item--section {
+  margin-top: 0.4em;
+  padding-top: 0.4em;
+  border-top: 1px dashed var(--color-slate-200, #E2E8F0);
+}
+
+/* 다크 모드 호환 */
+[data-md-color-scheme="slate"] .md-nav--lifted > .md-nav__list > .md-nav__item--section > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--lifted > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  color: var(--color-indigo-400, #818CF8);
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.18) 0%,
+    transparent 60%);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link {
+  color: var(--color-slate-300, #CBD5E1);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link:hover {
+  background: rgba(99, 102, 241, 0.16);
+  color: var(--color-indigo-200, #C7D2FE);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.28) 0%,
+    rgba(139, 92, 246, 0.10) 60%,
+    transparent 100%);
+  color: var(--color-indigo-200, #C7D2FE);
+}
+
+/* =========================== Phase E12-D 끝 ============================== */

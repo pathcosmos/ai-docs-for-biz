@@ -6,16 +6,17 @@
 
   <defs>
     <linearGradient id="t1-header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/>
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="t1-step" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1976D2"/><stop offset="100%" stop-color="#64B5F6"/>
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="t1-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFB300"/><stop offset="100%" stop-color="#F57F17"/>
+      <stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
-    <filter id="t1-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    <filter id="t1-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -24,7 +25,7 @@
     </style>
   </defs>
 
-  <rect width="600" height="800" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
   <!-- 상단 헤더 (~100px) -->
   <rect width="600" height="100" fill="url(#t1-header)"/>
@@ -34,90 +35,90 @@
 
   <!-- Step 1 -->
   <g transform="translate(40, 120)" filter="url(#t1-shadow)">
-    <rect width="520" height="100" rx="8" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
     <circle cx="34" cy="34" r="20" fill="url(#t1-step)"/>
     <text x="34" y="40" text-anchor="middle" class="ko" font-size="18" fill="white">1</text>
-    <text x="68" y="30" class="ko" font-size="14" fill="#1565C0">데이터 수집</text>
-    <text x="68" y="48" class="ko-r" font-size="10" fill="#37474F">시계열 센서 · MES · SCADA · PLC · 비전 이미지</text>
-    <text x="68" y="74" class="ko-r" font-size="9" fill="#78909C">압연·열처리·인발·표면처리 공정 변수 10 종 이상 동시 수집</text>
-    <text x="68" y="90" class="ko-r" font-size="9" fill="#78909C">정형·반정형·비정형 통합 (§4.3)</text>
+    <text x="68" y="30" class="ko" font-size="14" fill="#6366F1">데이터 수집</text>
+    <text x="68" y="48" class="ko-r" font-size="10" fill="#475569">시계열 센서 · MES · SCADA · PLC · 비전 이미지</text>
+    <text x="68" y="74" class="ko-r" font-size="9" fill="#64748B">압연·열처리·인발·표면처리 공정 변수 10 종 이상 동시 수집</text>
+    <text x="68" y="90" class="ko-r" font-size="9" fill="#64748B">정형·반정형·비정형 통합 (§4.3)</text>
   </g>
 
-  <path d="M 300 224 L 300 234 M 290 230 L 300 240 L 310 230" stroke="#1565C0" stroke-width="2" fill="none"/>
+  <path d="M 300 224 L 300 234 M 290 230 L 300 240 L 310 230" stroke="#6366F1" stroke-width="2" fill="none"/>
 
   <!-- Step 2 -->
   <g transform="translate(40, 244)" filter="url(#t1-shadow)">
-    <rect width="520" height="100" rx="8" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
     <circle cx="34" cy="34" r="20" fill="url(#t1-step)"/>
     <text x="34" y="40" text-anchor="middle" class="ko" font-size="18" fill="white">2</text>
-    <text x="68" y="30" class="ko" font-size="14" fill="#1565C0">피쳐 엔지니어링</text>
-    <text x="68" y="48" class="ko-r" font-size="10" fill="#37474F">물리 기반 + 통계 + 도메인 지식 결합</text>
-    <text x="68" y="74" class="ko-r" font-size="9" fill="#78909C">슬라이딩 윈도우·푸리에 변환·롤링 통계·결측 보간</text>
-    <text x="68" y="90" class="ko-r" font-size="9" fill="#78909C">베테랑 암묵지 → 공식화 (§4.4)</text>
+    <text x="68" y="30" class="ko" font-size="14" fill="#6366F1">피쳐 엔지니어링</text>
+    <text x="68" y="48" class="ko-r" font-size="10" fill="#475569">물리 기반 + 통계 + 도메인 지식 결합</text>
+    <text x="68" y="74" class="ko-r" font-size="9" fill="#64748B">슬라이딩 윈도우·푸리에 변환·롤링 통계·결측 보간</text>
+    <text x="68" y="90" class="ko-r" font-size="9" fill="#64748B">베테랑 암묵지 → 공식화 (§4.4)</text>
   </g>
 
-  <path d="M 300 348 L 300 358 M 290 354 L 300 364 L 310 354" stroke="#1565C0" stroke-width="2" fill="none"/>
+  <path d="M 300 348 L 300 358 M 290 354 L 300 364 L 310 354" stroke="#6366F1" stroke-width="2" fill="none"/>
 
   <!-- Step 3 -->
   <g transform="translate(40, 368)" filter="url(#t1-shadow)">
-    <rect width="520" height="100" rx="8" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
     <circle cx="34" cy="34" r="20" fill="url(#t1-step)"/>
     <text x="34" y="40" text-anchor="middle" class="ko" font-size="18" fill="white">3</text>
-    <text x="68" y="30" class="ko" font-size="14" fill="#1565C0">모델 · 앙상블</text>
-    <text x="68" y="48" class="ko-r" font-size="10" fill="#37474F">LSTM · Transformer · XGBoost · 이상탐지 · 앙상블</text>
-    <text x="68" y="74" class="ko-r" font-size="9" fill="#78909C">시계열·비전·예지보전·자동보정 — 5.2 AI 엔진 카드 6 종</text>
-    <text x="68" y="90" class="ko-r" font-size="9" fill="#78909C">알고리즘 선정 기준 · HITL 검증 (§4.5 / §5.3)</text>
+    <text x="68" y="30" class="ko" font-size="14" fill="#6366F1">모델 · 앙상블</text>
+    <text x="68" y="48" class="ko-r" font-size="10" fill="#475569">LSTM · Transformer · XGBoost · 이상탐지 · 앙상블</text>
+    <text x="68" y="74" class="ko-r" font-size="9" fill="#64748B">시계열·비전·예지보전·자동보정 — 5.2 AI 엔진 카드 6 종</text>
+    <text x="68" y="90" class="ko-r" font-size="9" fill="#64748B">알고리즘 선정 기준 · HITL 검증 (§4.5 / §5.3)</text>
   </g>
 
-  <path d="M 300 472 L 300 482 M 290 478 L 300 488 L 310 478" stroke="#1565C0" stroke-width="2" fill="none"/>
+  <path d="M 300 472 L 300 482 M 290 478 L 300 488 L 310 478" stroke="#6366F1" stroke-width="2" fill="none"/>
 
   <!-- Step 4 -->
   <g transform="translate(40, 492)" filter="url(#t1-shadow)">
-    <rect width="520" height="100" rx="8" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
     <circle cx="34" cy="34" r="20" fill="url(#t1-step)"/>
     <text x="34" y="40" text-anchor="middle" class="ko" font-size="18" fill="white">4</text>
-    <text x="68" y="30" class="ko" font-size="14" fill="#1565C0">현장 적용</text>
-    <text x="68" y="48" class="ko-r" font-size="10" fill="#37474F">MES · ERP · SCADA · PLC 연동 · 엣지 추론</text>
-    <text x="68" y="74" class="ko-r" font-size="9" fill="#78909C">대시보드·HMI 통합 · 알람 자동 보정 폐쇄 루프</text>
-    <text x="68" y="90" class="ko-r" font-size="9" fill="#78909C">단계별 마일스톤 · 현장 안정화 (§5.4 / §5.5)</text>
+    <text x="68" y="30" class="ko" font-size="14" fill="#6366F1">현장 적용</text>
+    <text x="68" y="48" class="ko-r" font-size="10" fill="#475569">MES · ERP · SCADA · PLC 연동 · 엣지 추론</text>
+    <text x="68" y="74" class="ko-r" font-size="9" fill="#64748B">대시보드·HMI 통합 · 알람 자동 보정 폐쇄 루프</text>
+    <text x="68" y="90" class="ko-r" font-size="9" fill="#64748B">단계별 마일스톤 · 현장 안정화 (§5.4 / §5.5)</text>
   </g>
 
-  <path d="M 300 596 L 300 606 M 290 602 L 300 612 L 310 602" stroke="#1565C0" stroke-width="2" fill="none"/>
+  <path d="M 300 596 L 300 606 M 290 602 L 300 612 L 310 602" stroke="#6366F1" stroke-width="2" fill="none"/>
 
   <!-- Step 5 -->
   <g transform="translate(40, 616)" filter="url(#t1-shadow)">
-    <rect width="520" height="80" rx="8" fill="white" stroke="#F57F17" stroke-width="1.5"/>
+    <rect width="520" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="1.5"/>
     <circle cx="34" cy="30" r="20" fill="url(#t1-accent)"/>
-    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="#1A237E">5</text>
-    <text x="68" y="26" class="ko" font-size="14" fill="#E65100">운영 · 환류 (→ Track 2)</text>
-    <text x="68" y="44" class="ko-r" font-size="10" fill="#37474F">정량 KPI 측정 · AS-IS vs TO-BE · 중장기 로드맵 연계</text>
-    <text x="68" y="62" class="ko-r" font-size="9" fill="#78909C">MLOps 교량 (§7.1) · LLM·RAG 지식자산화 (§7.2)</text>
+    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="#0F172A">5</text>
+    <text x="68" y="26" class="ko" font-size="14" fill="#D97706">운영 · 환류 (→ Track 2)</text>
+    <text x="68" y="44" class="ko-r" font-size="10" fill="#475569">정량 KPI 측정 · AS-IS vs TO-BE · 중장기 로드맵 연계</text>
+    <text x="68" y="62" class="ko-r" font-size="9" fill="#64748B">MLOps 교량 (§7.1) · LLM·RAG 지식자산화 (§7.2)</text>
   </g>
 
   <!-- 하단 cross-reference 블록 ID 인덱스 -->
   <g transform="translate(30, 712)" filter="url(#t1-shadow)">
-    <rect width="540" height="76" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
-    <text x="14" y="20" class="ko" font-size="11" fill="#1565C0">핵심 블록 ID 인덱스 · 5.2 AI 엔진 카드 패턴</text>
+    <rect width="540" height="76" rx="8" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#6366F1">핵심 블록 ID 인덱스 · 5.2 AI 엔진 카드 패턴</text>
     <g transform="translate(14, 32)">
       <rect x="0" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="46" y="13" text-anchor="middle" class="ko" font-size="9" fill="#1565C0">BLK-T1-3.1</text>
-      <text x="46" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">암묵지 리스크</text>
+      <text x="46" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6366F1">BLK-T1-3.1</text>
+      <text x="46" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">암묵지 리스크</text>
 
       <rect x="100" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="146" y="13" text-anchor="middle" class="ko" font-size="9" fill="#1565C0">BLK-T1-3.2</text>
-      <text x="146" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">데이터 단절</text>
+      <text x="146" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6366F1">BLK-T1-3.2</text>
+      <text x="146" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">데이터 단절</text>
 
       <rect x="200" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="246" y="13" text-anchor="middle" class="ko" font-size="9" fill="#1565C0">BLK-T1-4.4</text>
-      <text x="246" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">피쳐 엔지니어링</text>
+      <text x="246" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6366F1">BLK-T1-4.4</text>
+      <text x="246" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">피쳐 엔지니어링</text>
 
       <rect x="300" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="346" y="13" text-anchor="middle" class="ko" font-size="9" fill="#1565C0">BLK-T1-4.5</text>
-      <text x="346" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">모델 선정</text>
+      <text x="346" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6366F1">BLK-T1-4.5</text>
+      <text x="346" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">모델 선정</text>
 
       <rect x="400" y="0" width="100" height="32" rx="4" fill="white"/>
-      <text x="450" y="13" text-anchor="middle" class="ko" font-size="9" fill="#1565C0">BLK-T1-4.6</text>
-      <text x="450" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">E2E 파이프라인</text>
+      <text x="450" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6366F1">BLK-T1-4.6</text>
+      <text x="450" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">E2E 파이프라인</text>
     </g>
   </g>
 </svg>

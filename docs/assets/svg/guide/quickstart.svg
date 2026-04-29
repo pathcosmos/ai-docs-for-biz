@@ -6,20 +6,21 @@
   <desc>새 [고객사] 사업계획서 1 부 작성을 위한 5 단계 표준 워크플로 (사업 성격 식별 → 패키지 매칭 → 블록 paste → 플레이스홀더 치환 → 자체평가) 와 5 분 안내·6 패키지 라인업·블록 모음 cross-reference 를 세로형으로 시각화한 운영 가이드 인포그래픽.</desc>
 
   <defs>
-    <linearGradient id="qs-header" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1565C0"/>
-      <stop offset="100%" stop-color="#0D47A1"/>
+    <linearGradient id="qs-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="qs-step" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFB300"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
     <linearGradient id="qs-final" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#42A5F5"/>
-      <stop offset="100%" stop-color="#1565C0"/>
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
-    <filter id="qs-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    <filter id="qs-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -28,30 +29,30 @@
     </style>
   </defs>
 
-  <rect width="600" height="800" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
   <!-- 헤더 (100px) -->
   <rect width="600" height="100" fill="url(#qs-header)"/>
   <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">Quickstart 가이드</text>
   <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">5-MINUTE WORKFLOW</text>
-  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FFEB3B">새 [고객사] 사업계획서 1 부 작성 표준 5 단계</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">새 [고객사] 사업계획서 1 부 작성 표준 5 단계</text>
 
   <!-- 중앙 세로 타임라인 라인 -->
-  <line x1="80" y1="140" x2="80" y2="600" stroke="#1565C0" stroke-width="3" stroke-dasharray="6 4" opacity="0.4"/>
+  <line x1="80" y1="140" x2="80" y2="600" stroke="#6366F1" stroke-width="3" stroke-dasharray="6 4" opacity="0.4"/>
 
   <!-- Step 1 (120~210) -->
   <g transform="translate(40, 120)">
     <circle cx="40" cy="40" r="28" fill="url(#qs-step)" filter="url(#qs-shadow)"/>
     <text x="40" y="48" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">1</text>
     <g transform="translate(95, 0)" filter="url(#qs-shadow)">
-      <rect width="425" height="80" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <rect width="425" height="26" rx="10" fill="#1565C0"/>
-      <rect y="20" width="425" height="6" fill="#1565C0"/>
+      <rect width="425" height="80" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
       <text x="14" y="18" class="ko" font-size="13" fill="white">사업 성격 식별</text>
       <text x="410" y="18" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.85)">5 ITEMS</text>
-      <text x="14" y="44" class="ko-r" font-size="11" fill="#37474F">5 항목 입력 양식</text>
-      <text x="14" y="60" class="ko-r" font-size="9" fill="#78909C">고객사·업종·규모 / 지원사업 / 기간 / 양식 PDF / 핵심 시나리오 영역</text>
-      <text x="14" y="74" class="ko-r" font-size="9" fill="#1565C0">→ 운영_모드_Quickstart.md §1 · CLAUDE.md 통독</text>
+      <text x="14" y="44" class="ko-r" font-size="11" fill="#475569">5 항목 입력 양식</text>
+      <text x="14" y="60" class="ko-r" font-size="9" fill="#64748B">고객사·업종·규모 / 지원사업 / 기간 / 양식 PDF / 핵심 시나리오 영역</text>
+      <text x="14" y="74" class="ko-r" font-size="9" fill="#6366F1">→ 운영_모드_Quickstart.md §1 · CLAUDE.md 통독</text>
     </g>
   </g>
 
@@ -60,14 +61,14 @@
     <circle cx="40" cy="40" r="28" fill="url(#qs-step)" filter="url(#qs-shadow)"/>
     <text x="40" y="48" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">2</text>
     <g transform="translate(95, 0)" filter="url(#qs-shadow)">
-      <rect width="425" height="80" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <rect width="425" height="26" rx="10" fill="#1565C0"/>
-      <rect y="20" width="425" height="6" fill="#1565C0"/>
+      <rect width="425" height="80" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
       <text x="14" y="18" class="ko" font-size="13" fill="white">패키지 매칭</text>
       <text x="410" y="18" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.85)">6 PKG</text>
-      <text x="14" y="44" class="ko-r" font-size="11" fill="#37474F">6 패키지 1:1 또는 복합 매핑</text>
-      <text x="14" y="60" class="ko-r" font-size="9" fill="#78909C">P1 대기업철강 / P2 중견냉연 / P3 특수강관 / P4 고무 / P5 정밀가공 / P6 유틸ESG</text>
-      <text x="14" y="74" class="ko-r" font-size="9" fill="#1565C0">→ 시나리오_카탈로그.md §부록 B · 사업계획서_조립_가이드.md §3</text>
+      <text x="14" y="44" class="ko-r" font-size="11" fill="#475569">6 패키지 1:1 또는 복합 매핑</text>
+      <text x="14" y="60" class="ko-r" font-size="9" fill="#64748B">P1 대기업철강 / P2 중견냉연 / P3 특수강관 / P4 고무 / P5 정밀가공 / P6 유틸ESG</text>
+      <text x="14" y="74" class="ko-r" font-size="9" fill="#6366F1">→ 시나리오_카탈로그.md §부록 B · 사업계획서_조립_가이드.md §3</text>
     </g>
   </g>
 
@@ -76,14 +77,14 @@
     <circle cx="40" cy="40" r="28" fill="url(#qs-step)" filter="url(#qs-shadow)"/>
     <text x="40" y="48" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">3</text>
     <g transform="translate(95, 0)" filter="url(#qs-shadow)">
-      <rect width="425" height="80" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <rect width="425" height="26" rx="10" fill="#1565C0"/>
-      <rect y="20" width="425" height="6" fill="#1565C0"/>
+      <rect width="425" height="80" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
       <text x="14" y="18" class="ko" font-size="13" fill="white">블록 paste</text>
       <text x="410" y="18" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.85)">15 BLOCKS</text>
-      <text x="14" y="44" class="ko-r" font-size="11" fill="#37474F">Track 1·2·3 본문 Top5 블록 paste-ready</text>
-      <text x="14" y="60" class="ko-r" font-size="9" fill="#78909C">BLK-T1 5 블록 + BLK-T2 5 블록 + BLK-T3 5 블록 + 운영가이드 11 + 모듈 5</text>
-      <text x="14" y="74" class="ko-r" font-size="9" fill="#1565C0">→ track[1·2·3]_본문_공통Top5.md · 5.2 AI 엔진 변형카드 6 종</text>
+      <text x="14" y="44" class="ko-r" font-size="11" fill="#475569">Track 1·2·3 본문 Top5 블록 paste-ready</text>
+      <text x="14" y="60" class="ko-r" font-size="9" fill="#64748B">BLK-T1 5 블록 + BLK-T2 5 블록 + BLK-T3 5 블록 + 운영가이드 11 + 모듈 5</text>
+      <text x="14" y="74" class="ko-r" font-size="9" fill="#6366F1">→ track[1·2·3]_본문_공통Top5.md · 5.2 AI 엔진 변형카드 6 종</text>
     </g>
   </g>
 
@@ -92,14 +93,14 @@
     <circle cx="40" cy="40" r="28" fill="url(#qs-step)" filter="url(#qs-shadow)"/>
     <text x="40" y="48" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">4</text>
     <g transform="translate(95, 0)" filter="url(#qs-shadow)">
-      <rect width="425" height="80" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <rect width="425" height="26" rx="10" fill="#1565C0"/>
-      <rect y="20" width="425" height="6" fill="#1565C0"/>
+      <rect width="425" height="80" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
       <text x="14" y="18" class="ko" font-size="13" fill="white">플레이스홀더 치환</text>
       <text x="410" y="18" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.85)">5 SLOTS</text>
-      <text x="14" y="44" class="ko-r" font-size="11" fill="#37474F">5 변경 지점 일괄 치환</text>
-      <text x="14" y="60" class="ko-r" font-size="9" fill="#78909C">[고객사] · [공정] · [수치] · [기간] · [%] + KPI 7 컬럼 + 단계 간트 + 5 비목 예산</text>
-      <text x="14" y="74" class="ko-r" font-size="9" fill="#1565C0">→ 신규 작성 비율 25~40% (방법론 4.34 한국어 압축)</text>
+      <text x="14" y="44" class="ko-r" font-size="11" fill="#475569">5 변경 지점 일괄 치환</text>
+      <text x="14" y="60" class="ko-r" font-size="9" fill="#64748B">[고객사] · [공정] · [수치] · [기간] · [%] + KPI 7 컬럼 + 단계 간트 + 5 비목 예산</text>
+      <text x="14" y="74" class="ko-r" font-size="9" fill="#6366F1">→ 신규 작성 비율 25~40% (방법론 4.34 한국어 압축)</text>
     </g>
   </g>
 
@@ -108,14 +109,14 @@
     <circle cx="40" cy="40" r="28" fill="url(#qs-step)" filter="url(#qs-shadow)"/>
     <text x="40" y="48" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">5</text>
     <g transform="translate(95, 0)" filter="url(#qs-shadow)">
-      <rect width="425" height="80" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <rect width="425" height="26" rx="10" fill="#1565C0"/>
-      <rect y="20" width="425" height="6" fill="#1565C0"/>
+      <rect width="425" height="80" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
       <text x="14" y="18" class="ko" font-size="13" fill="white">자체평가</text>
       <text x="410" y="18" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.85)">6 ITEMS</text>
-      <text x="14" y="44" class="ko-r" font-size="11" fill="#37474F">6 항목 자체평가 양식</text>
-      <text x="14" y="60" class="ko-r" font-size="9" fill="#78909C">자산 활용도 / 갭 발견 / 부정합 인용 / 신규 § 평가 / 신규 비율 / 일관성 점수</text>
-      <text x="14" y="74" class="ko-r" font-size="9" fill="#1565C0">→ 사업계획서_조립_가이드.md §1 step 7 + 작업로그 #N 추가</text>
+      <text x="14" y="44" class="ko-r" font-size="11" fill="#475569">6 항목 자체평가 양식</text>
+      <text x="14" y="60" class="ko-r" font-size="9" fill="#64748B">자산 활용도 / 갭 발견 / 부정합 인용 / 신규 § 평가 / 신규 비율 / 일관성 점수</text>
+      <text x="14" y="74" class="ko-r" font-size="9" fill="#6366F1">→ 사업계획서_조립_가이드.md §1 step 7 + 작업로그 #N 추가</text>
     </g>
   </g>
 
@@ -124,18 +125,18 @@
     <rect width="520" height="60" rx="10" fill="url(#qs-final)"/>
     <text x="20" y="26" class="ko" font-size="14" fill="white">5 분 재진입 가능 — 다른 세션·다른 작업자</text>
     <text x="20" y="46" class="ko-r" font-size="10" fill="rgba(255,255,255,0.9)">Quickstart 1 페이지 + CLAUDE.md + 작업로그 §2.7·§5 통독만으로 워크플로 시작</text>
-    <text x="500" y="36" text-anchor="end" class="ko" font-size="20" fill="#FFEB3B" font-weight="900">5 min</text>
+    <text x="500" y="36" text-anchor="end" class="ko" font-size="20" fill="#FDE68A" font-weight="900">5 min</text>
   </g>
 
   <!-- cross-reference 박스 -->
   <g transform="translate(40, 685)">
-    <rect width="520" height="100" rx="8" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
-    <text x="14" y="20" class="ko" font-size="11" fill="#E65100">cross-reference · 6 패키지 비교 + 블록 모음 + 가이드·모듈</text>
-    <g font-size="9" class="ko-r" fill="#37474F">
+    <rect width="520" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#D97706">cross-reference · 6 패키지 비교 + 블록 모음 + 가이드·모듈</text>
+    <g font-size="9" class="ko-r" fill="#475569">
       <text x="14" y="38">▸ 패키지 — P1 (773 줄·9) · P2 (128KB·6) · P3 (476 줄·4) · P4 (178KB·5) · P5 (129KB·6) · P6 (857 줄·5)</text>
       <text x="14" y="54">▸ 블록 — Track 1·2·3 Top5 (BLK-T1·T2·T3 5+5+5) + 5.2 AI 엔진 변형카드 6 종</text>
       <text x="14" y="70">▸ 가이드 11 / 모듈 5 — KPI·재무·외부검증·RAG·sLM·조립·TRL·위험 / CBAM·중대재해·연합학습·OEM·SaaS</text>
-      <text x="14" y="88" fill="#1565C0" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
+      <text x="14" y="88" fill="#6366F1" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
     </g>
   </g>
 </svg>

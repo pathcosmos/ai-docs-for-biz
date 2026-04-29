@@ -6,13 +6,14 @@
 
   <defs>
     <linearGradient id="t2-header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/>
+      <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
     <linearGradient id="t2-mod" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#6A1B9A"/><stop offset="100%" stop-color="#AB47BC"/>
+      <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
-    <filter id="t2-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    <filter id="t2-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -21,7 +22,7 @@
     </style>
   </defs>
 
-  <rect width="600" height="800" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
   <!-- 상단 헤더 -->
   <rect width="600" height="100" fill="url(#t2-header)"/>
@@ -31,90 +32,90 @@
 
   <!-- 7 모듈 인벤토리 (2 열 그리드) -->
   <g transform="translate(30, 120)">
-    <text x="0" y="0" class="ko" font-size="13" fill="#4A148C">7 핵심 구성요소 인벤토리</text>
+    <text x="0" y="0" class="ko" font-size="13" fill="#6D28D9">7 핵심 구성요소 인벤토리</text>
 
     <g transform="translate(0, 14)" filter="url(#t2-shadow)">
-      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="0" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="20" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">1</text>
-      <text x="50" y="24" class="ko" font-size="12" fill="#4A148C">모델 레지스트리</text>
-      <text x="50" y="42" class="ko-r" font-size="9" fill="#37474F">버전·아티팩트 관리 · MLflow</text>
+      <text x="50" y="24" class="ko" font-size="12" fill="#6D28D9">모델 레지스트리</text>
+      <text x="50" y="42" class="ko-r" font-size="9" fill="#475569">버전·아티팩트 관리 · MLflow</text>
 
-      <rect x="275" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="275" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="275" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="295" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">2</text>
-      <text x="325" y="24" class="ko" font-size="12" fill="#4A148C">피쳐 스토어</text>
-      <text x="325" y="42" class="ko-r" font-size="9" fill="#37474F">Online/Offline 일관성 · Feast</text>
+      <text x="325" y="24" class="ko" font-size="12" fill="#6D28D9">피쳐 스토어</text>
+      <text x="325" y="42" class="ko-r" font-size="9" fill="#475569">Online/Offline 일관성 · Feast</text>
     </g>
 
     <g transform="translate(0, 84)" filter="url(#t2-shadow)">
-      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="0" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="20" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">3</text>
-      <text x="50" y="24" class="ko" font-size="12" fill="#4A148C">학습 파이프라인</text>
-      <text x="50" y="42" class="ko-r" font-size="9" fill="#37474F">Airflow · Kubeflow · 오케스트레이션</text>
+      <text x="50" y="24" class="ko" font-size="12" fill="#6D28D9">학습 파이프라인</text>
+      <text x="50" y="42" class="ko-r" font-size="9" fill="#475569">Airflow · Kubeflow · 오케스트레이션</text>
 
-      <rect x="275" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="275" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="275" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="295" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">4</text>
-      <text x="325" y="24" class="ko" font-size="12" fill="#4A148C">추론 서빙</text>
-      <text x="325" y="42" class="ko-r" font-size="9" fill="#37474F">엣지·서버 이원 · 카나리·섀도우</text>
+      <text x="325" y="24" class="ko" font-size="12" fill="#6D28D9">추론 서빙</text>
+      <text x="325" y="42" class="ko-r" font-size="9" fill="#475569">엣지·서버 이원 · 카나리·섀도우</text>
     </g>
 
     <g transform="translate(0, 154)" filter="url(#t2-shadow)">
-      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="0" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="20" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">5</text>
-      <text x="50" y="24" class="ko" font-size="12" fill="#4A148C">모니터링·드리프트</text>
-      <text x="50" y="42" class="ko-r" font-size="9" fill="#37474F">Evidently · Prometheus · Grafana</text>
+      <text x="50" y="24" class="ko" font-size="12" fill="#6D28D9">모니터링·드리프트</text>
+      <text x="50" y="42" class="ko-r" font-size="9" fill="#475569">Evidently · Prometheus · Grafana</text>
 
-      <rect x="275" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="275" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="275" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="295" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">6</text>
-      <text x="325" y="24" class="ko" font-size="12" fill="#4A148C">현장 피드백</text>
-      <text x="325" y="42" class="ko-r" font-size="9" fill="#37474F">HITL · 라벨 재주입 파이프라인</text>
+      <text x="325" y="24" class="ko" font-size="12" fill="#6D28D9">현장 피드백</text>
+      <text x="325" y="42" class="ko-r" font-size="9" fill="#475569">HITL · 라벨 재주입 파이프라인</text>
     </g>
 
     <g transform="translate(137, 224)" filter="url(#t2-shadow)">
-      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="265" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
       <rect x="0" y="0" width="40" height="60" rx="8" fill="url(#t2-mod)"/>
       <text x="20" y="38" text-anchor="middle" class="ko" font-size="18" fill="white">7</text>
-      <text x="50" y="24" class="ko" font-size="12" fill="#4A148C">거버넌스</text>
-      <text x="50" y="42" class="ko-r" font-size="9" fill="#37474F">권한·감사·리니지·모델 카드</text>
+      <text x="50" y="24" class="ko" font-size="12" fill="#6D28D9">거버넌스</text>
+      <text x="50" y="42" class="ko-r" font-size="9" fill="#475569">권한·감사·리니지·모델 카드</text>
     </g>
   </g>
 
   <!-- 폐쇄 루프 -->
   <g transform="translate(30, 460)">
-    <text x="270" y="0" text-anchor="middle" class="ko" font-size="13" fill="#4A148C">지속 개선 폐쇄 루프 — 재학습 트리거 5 축</text>
+    <text x="270" y="0" text-anchor="middle" class="ko" font-size="13" fill="#6D28D9">지속 개선 폐쇄 루프 — 재학습 트리거 5 축</text>
 
     <g transform="translate(0, 14)" filter="url(#t2-shadow)">
-      <rect x="0" y="0" width="540" height="180" rx="8" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="540" height="180" rx="8" fill="#F5F3FF" stroke="#E2E8F0" stroke-width="1.5"/>
 
       <circle cx="270" cy="90" r="42" fill="url(#t2-mod)"/>
       <text x="270" y="86" text-anchor="middle" class="ko" font-size="11" fill="white">재학습</text>
       <text x="270" y="102" text-anchor="middle" class="ko" font-size="11" fill="white">트리거</text>
 
-      <g class="ko" font-size="10" fill="#4A148C">
-        <circle cx="80" cy="40" r="22" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+      <g class="ko" font-size="10" fill="#6D28D9">
+        <circle cx="80" cy="40" r="22" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
         <text x="80" y="44" text-anchor="middle">시간</text>
 
-        <circle cx="80" cy="140" r="22" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+        <circle cx="80" cy="140" r="22" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
         <text x="80" y="138" text-anchor="middle" font-size="9">데이터</text>
         <text x="80" y="150" text-anchor="middle" font-size="9">드리프트</text>
 
-        <circle cx="270" cy="160" r="22" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+        <circle cx="270" cy="160" r="22" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
         <text x="270" y="164" text-anchor="middle">성능</text>
 
-        <circle cx="460" cy="140" r="22" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+        <circle cx="460" cy="140" r="22" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
         <text x="460" y="144" text-anchor="middle">피드백</text>
 
-        <circle cx="460" cy="40" r="22" fill="white" stroke="#6A1B9A" stroke-width="1.5"/>
+        <circle cx="460" cy="40" r="22" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
         <text x="460" y="38" text-anchor="middle" font-size="9">외생</text>
         <text x="460" y="50" text-anchor="middle" font-size="9">이벤트</text>
       </g>
 
-      <g stroke="#6A1B9A" stroke-width="1.5" fill="none" opacity="0.6">
+      <g stroke="#E2E8F0" stroke-width="1.5" fill="none" opacity="0.6">
         <path d="M 100 52 L 230 80"/>
         <path d="M 100 128 L 230 100"/>
         <path d="M 270 138 L 270 132"/>
@@ -122,34 +123,34 @@
         <path d="M 440 52 L 310 80"/>
       </g>
 
-      <text x="270" y="172" text-anchor="middle" class="ko-r" font-size="9" fill="#6A1B9A">90 일 → 30 일 단축 · 챔피언·챌린저 검증</text>
+      <text x="270" y="172" text-anchor="middle" class="ko-r" font-size="9" fill="#8B5CF6">90 일 → 30 일 단축 · 챔피언·챌린저 검증</text>
     </g>
   </g>
 
   <!-- 하단 cross-reference 블록 ID -->
   <g transform="translate(30, 712)" filter="url(#t2-shadow)">
-    <rect width="540" height="76" rx="8" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="1"/>
-    <text x="14" y="20" class="ko" font-size="11" fill="#6A1B9A">핵심 블록 ID 인덱스 · MLOps 참조 아키텍처</text>
+    <rect width="540" height="76" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#8B5CF6">핵심 블록 ID 인덱스 · MLOps 참조 아키텍처</text>
     <g transform="translate(14, 32)">
       <rect x="0" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="46" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6A1B9A">BLK-T2-3.2</text>
-      <text x="46" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">모니터링 부재</text>
+      <text x="46" y="13" text-anchor="middle" class="ko" font-size="9" fill="#8B5CF6">BLK-T2-3.2</text>
+      <text x="46" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">모니터링 부재</text>
 
       <rect x="100" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="146" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6A1B9A">BLK-T2-4.2</text>
-      <text x="146" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">7 구성요소</text>
+      <text x="146" y="13" text-anchor="middle" class="ko" font-size="9" fill="#8B5CF6">BLK-T2-4.2</text>
+      <text x="146" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">7 구성요소</text>
 
       <rect x="200" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="246" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6A1B9A">BLK-T2-4.4</text>
-      <text x="246" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">참조 아키텍처</text>
+      <text x="246" y="13" text-anchor="middle" class="ko" font-size="9" fill="#8B5CF6">BLK-T2-4.4</text>
+      <text x="246" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">참조 아키텍처</text>
 
       <rect x="300" y="0" width="92" height="32" rx="4" fill="white"/>
-      <text x="346" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6A1B9A">BLK-T2-5.5</text>
-      <text x="346" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">드리프트 탐지</text>
+      <text x="346" y="13" text-anchor="middle" class="ko" font-size="9" fill="#8B5CF6">BLK-T2-5.5</text>
+      <text x="346" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">드리프트 탐지</text>
 
       <rect x="400" y="0" width="100" height="32" rx="4" fill="white"/>
-      <text x="450" y="13" text-anchor="middle" class="ko" font-size="9" fill="#6A1B9A">BLK-T2-6.1</text>
-      <text x="450" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">개선 포인트</text>
+      <text x="450" y="13" text-anchor="middle" class="ko" font-size="9" fill="#8B5CF6">BLK-T2-6.1</text>
+      <text x="450" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#475569">개선 포인트</text>
     </g>
   </g>
 </svg>

@@ -6,19 +6,20 @@
   <desc>SCN-STL-07 인발·필거밀 공정설계 LLM + STL-08 밀시트 OCR + STL-11 UT 자동판정 + LLM-01 SOP RAG 의 4 시나리오를 RAG 5 계층 (수집·임베딩·검색·생성·감사) 위에 운영하여 베테랑 암묵지를 9 개월에 자산화하는 디지털 경남 특수강관 통합 파일럿 인포그래픽.</desc>
   <defs>
     <linearGradient id="pkg3-header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#004D40"/>
-      <stop offset="100%" stop-color="#00897B"/>
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
     </linearGradient>
     <linearGradient id="pkg3-rag" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#26A69A"/>
-      <stop offset="100%" stop-color="#00695C"/>
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0F766E"/>
     </linearGradient>
     <linearGradient id="pkg3-scn" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00897B"/>
-      <stop offset="100%" stop-color="#4DB6AC"/>
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#5EEAD4"/>
     </linearGradient>
-    <filter id="pkg3-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    <filter id="pkg3-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -32,64 +33,64 @@
   <text x="30" y="60" class="ko" fill="white" font-size="20">패키지 3 — 특수강관 RAG</text>
   <text x="30" y="82" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="12">디지털 경남 · 9 개월 · 베테랑 암묵지 → 형식지 자산화</text>
   <g transform="translate(30, 118)">
-    <text x="0" y="14" class="ko" fill="#004D40" font-size="12">4 시나리오 (좌) ↔ RAG 5 계층 (우) 양축 결합</text>
+    <text x="0" y="14" class="ko" fill="#0F766E" font-size="12">4 시나리오 (좌) ↔ RAG 5 계층 (우) 양축 결합</text>
   </g>
   <g transform="translate(30, 138)">
     <g filter="url(#pkg3-shadow)">
-      <rect width="270" height="62" rx="8" fill="white" stroke="#80CBC4" stroke-width="1"/>
+      <rect width="270" height="62" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
       <rect width="6" height="62" rx="3" fill="url(#pkg3-scn)"/>
-      <text x="18" y="20" class="ko" fill="#004D40" font-size="11">SCN-STL-07 (주력)</text>
-      <text x="18" y="36" class="ko-r" fill="#37474F" font-size="10">인발·필거밀 공정설계 LLM</text>
-      <text x="18" y="52" class="ko-r" fill="#78909C" font-size="9">신규 주문 30 분~2h → 분 단위 · 5.2-a + 5.2-f</text>
+      <text x="18" y="20" class="ko" fill="#0F766E" font-size="11">SCN-STL-07 (주력)</text>
+      <text x="18" y="36" class="ko-r" fill="#475569" font-size="10">인발·필거밀 공정설계 LLM</text>
+      <text x="18" y="52" class="ko-r" fill="#64748B" font-size="9">신규 주문 30 분~2h → 분 단위 · 5.2-a + 5.2-f</text>
     </g>
     <g transform="translate(0, 76)" filter="url(#pkg3-shadow)">
-      <rect width="270" height="62" rx="8" fill="white" stroke="#80CBC4" stroke-width="1"/>
+      <rect width="270" height="62" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
       <rect width="6" height="62" rx="3" fill="url(#pkg3-scn)"/>
-      <text x="18" y="20" class="ko" fill="#004D40" font-size="11">SCN-STL-08</text>
-      <text x="18" y="36" class="ko-r" fill="#37474F" font-size="10">Mill Sheet OCR·디지털화</text>
-      <text x="18" y="52" class="ko-r" fill="#78909C" font-size="9">공급사 4~6 양식 PDF/이미지 → 정형 5.2-c</text>
+      <text x="18" y="20" class="ko" fill="#0F766E" font-size="11">SCN-STL-08</text>
+      <text x="18" y="36" class="ko-r" fill="#475569" font-size="10">Mill Sheet OCR·디지털화</text>
+      <text x="18" y="52" class="ko-r" fill="#64748B" font-size="9">공급사 4~6 양식 PDF/이미지 → 정형 5.2-c</text>
     </g>
     <g transform="translate(0, 152)" filter="url(#pkg3-shadow)">
-      <rect width="270" height="62" rx="8" fill="white" stroke="#80CBC4" stroke-width="1"/>
+      <rect width="270" height="62" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
       <rect width="6" height="62" rx="3" fill="url(#pkg3-scn)"/>
-      <text x="18" y="20" class="ko" fill="#004D40" font-size="11">SCN-STL-11</text>
-      <text x="18" y="36" class="ko-r" fill="#37474F" font-size="10">UT 신호 자동판정</text>
-      <text x="18" y="52" class="ko-r" fill="#78909C" font-size="9">A-scan 1D-CNN/Transformer · 검사원 편차 [%]</text>
+      <text x="18" y="20" class="ko" fill="#0F766E" font-size="11">SCN-STL-11</text>
+      <text x="18" y="36" class="ko-r" fill="#475569" font-size="10">UT 신호 자동판정</text>
+      <text x="18" y="52" class="ko-r" fill="#64748B" font-size="9">A-scan 1D-CNN/Transformer · 검사원 편차 [%]</text>
     </g>
     <g transform="translate(0, 228)" filter="url(#pkg3-shadow)">
-      <rect width="270" height="62" rx="8" fill="white" stroke="#80CBC4" stroke-width="1"/>
+      <rect width="270" height="62" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
       <rect width="6" height="62" rx="3" fill="url(#pkg3-scn)"/>
-      <text x="18" y="20" class="ko" fill="#004D40" font-size="11">SCN-LLM-01</text>
-      <text x="18" y="36" class="ko-r" fill="#37474F" font-size="10">SOP RAG 질의·생성</text>
-      <text x="18" y="52" class="ko-r" fill="#78909C" font-size="9">HWP·PDF 청킹·임베딩 · 한국 sLM (EXAONE)</text>
+      <text x="18" y="20" class="ko" fill="#0F766E" font-size="11">SCN-LLM-01</text>
+      <text x="18" y="36" class="ko-r" fill="#475569" font-size="10">SOP RAG 질의·생성</text>
+      <text x="18" y="52" class="ko-r" fill="#64748B" font-size="9">HWP·PDF 청킹·임베딩 · 한국 sLM (EXAONE)</text>
     </g>
   </g>
   <g transform="translate(330, 138)">
-    <line x1="120" y1="20" x2="120" y2="280" stroke="#80CBC4" stroke-width="2" stroke-dasharray="4 3"/>
+    <line x1="120" y1="20" x2="120" y2="280" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="4 3"/>
     <g filter="url(#pkg3-shadow)">
       <rect width="240" height="50" rx="8" fill="url(#pkg3-rag)"/>
       <text x="14" y="20" class="ko" fill="white" font-size="11">① 수집 · Ingest</text>
       <text x="14" y="38" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="9">공정설계서·Mill Sheet·UT·SOP·CAD</text>
     </g>
-    <text x="120" y="68" text-anchor="middle" fill="#00695C" font-size="14">↓</text>
+    <text x="120" y="68" text-anchor="middle" fill="#0D9488" font-size="14">↓</text>
     <g transform="translate(0, 76)" filter="url(#pkg3-shadow)">
       <rect width="240" height="50" rx="8" fill="url(#pkg3-rag)"/>
       <text x="14" y="20" class="ko" fill="white" font-size="11">② 임베딩 · Embed</text>
       <text x="14" y="38" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="9">한국어 sLM 파인튜닝 + 청킹 4 전략</text>
     </g>
-    <text x="120" y="144" text-anchor="middle" fill="#00695C" font-size="14">↓</text>
+    <text x="120" y="144" text-anchor="middle" fill="#0D9488" font-size="14">↓</text>
     <g transform="translate(0, 152)" filter="url(#pkg3-shadow)">
       <rect width="240" height="50" rx="8" fill="url(#pkg3-rag)"/>
       <text x="14" y="20" class="ko" fill="white" font-size="11">③ 검색 · Retrieve</text>
       <text x="14" y="38" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="9">하이브리드 (벡터 + BM25) Top-N · 메타 필터</text>
     </g>
-    <text x="120" y="220" text-anchor="middle" fill="#00695C" font-size="14">↓</text>
+    <text x="120" y="220" text-anchor="middle" fill="#0D9488" font-size="14">↓</text>
     <g transform="translate(0, 228)" filter="url(#pkg3-shadow)">
       <rect width="240" height="50" rx="8" fill="url(#pkg3-rag)"/>
       <text x="14" y="20" class="ko" fill="white" font-size="11">④ 생성 · Generate</text>
       <text x="14" y="38" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="9">Citation 강제 + Reject 옵션 + 베테랑 검수</text>
     </g>
-    <text x="120" y="296" text-anchor="middle" fill="#00695C" font-size="14">↓</text>
+    <text x="120" y="296" text-anchor="middle" fill="#0D9488" font-size="14">↓</text>
     <g transform="translate(0, 304)" filter="url(#pkg3-shadow)">
       <rect width="240" height="50" rx="8" fill="url(#pkg3-rag)"/>
       <text x="14" y="20" class="ko" fill="white" font-size="11">⑤ 감사 · Audit</text>
@@ -97,60 +98,60 @@
     </g>
   </g>
   <g transform="translate(165, 386)">
-    <text text-anchor="middle" fill="#00695C" font-size="11" class="ko-r">4 시나리오 → RAG 5 계층 공유 인프라</text>
+    <text text-anchor="middle" fill="#0D9488" font-size="11" class="ko-r">4 시나리오 → RAG 5 계층 공유 인프라</text>
   </g>
   <g transform="translate(30, 408)">
-    <text x="0" y="14" class="ko" fill="#004D40" font-size="12">TO-BE 3 단계 진화 (M1~M9)</text>
+    <text x="0" y="14" class="ko" fill="#0F766E" font-size="12">TO-BE 3 단계 진화 (M1~M9)</text>
   </g>
   <g transform="translate(30, 428)" filter="url(#pkg3-shadow)">
-    <rect width="540" height="64" rx="8" fill="white" stroke="#80CBC4" stroke-width="1"/>
+    <rect width="540" height="64" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <g transform="translate(14, 14)">
-      <rect width="166" height="40" rx="6" fill="#B2DFDB"/>
-      <text x="83" y="18" text-anchor="middle" class="ko" fill="#004D40" font-size="10">① 지식 추출</text>
-      <text x="83" y="32" text-anchor="middle" class="ko-r" fill="#00695C" font-size="9">M1~M3 · 인터뷰·디지털화</text>
+      <rect width="166" height="40" rx="6" fill="#CCFBF1"/>
+      <text x="83" y="18" text-anchor="middle" class="ko" fill="#0F766E" font-size="10">① 지식 추출</text>
+      <text x="83" y="32" text-anchor="middle" class="ko-r" fill="#0D9488" font-size="9">M1~M3 · 인터뷰·디지털화</text>
     </g>
     <g transform="translate(186, 14)">
-      <rect width="166" height="40" rx="6" fill="#80CBC4"/>
-      <text x="83" y="18" text-anchor="middle" class="ko" fill="#004D40" font-size="10">② 지식 모델링</text>
-      <text x="83" y="32" text-anchor="middle" class="ko-r" fill="#004D40" font-size="9">M4~M7 · Vector·임베딩·파인튜닝</text>
+      <rect width="166" height="40" rx="6" fill="#5EEAD4"/>
+      <text x="83" y="18" text-anchor="middle" class="ko" fill="#0F766E" font-size="10">② 지식 모델링</text>
+      <text x="83" y="32" text-anchor="middle" class="ko-r" fill="#0F766E" font-size="9">M4~M7 · Vector·임베딩·파인튜닝</text>
     </g>
     <g transform="translate(358, 14)">
-      <rect width="166" height="40" rx="6" fill="#4DB6AC"/>
+      <rect width="166" height="40" rx="6" fill="#14B8A6"/>
       <text x="83" y="18" text-anchor="middle" class="ko" fill="white" font-size="10">③ 지능형 어시스턴트</text>
       <text x="83" y="32" text-anchor="middle" class="ko-r" fill="white" font-size="9">M8~M9 · 초안·검수·MES 연계</text>
     </g>
   </g>
   <g transform="translate(30, 510)" filter="url(#pkg3-shadow)">
-    <rect width="540" height="60" rx="8" fill="#E0F2F1" stroke="#4DB6AC" stroke-width="1"/>
-    <text x="16" y="22" class="ko" fill="#004D40" font-size="11">핵심 명분 — 베테랑 [수치] 명 의존도 [%] + 신규 주문 [수치] 만 조합</text>
-    <text x="16" y="40" class="ko-r" fill="#37474F" font-size="10">→ 9 개월 내 신입·중간 숙련자의 단독 의사결정 가능 영역 [%] 확대</text>
-    <text x="16" y="54" class="ko-r" fill="#78909C" font-size="9">+ 영업 견적 회신 속도·일관성 → OEM SQA 평가 변별 요소 강화</text>
+    <rect width="540" height="60" rx="8" fill="#F0FDFA" stroke="#14B8A6" stroke-width="1"/>
+    <text x="16" y="22" class="ko" fill="#0F766E" font-size="11">핵심 명분 — 베테랑 [수치] 명 의존도 [%] + 신규 주문 [수치] 만 조합</text>
+    <text x="16" y="40" class="ko-r" fill="#475569" font-size="10">→ 9 개월 내 신입·중간 숙련자의 단독 의사결정 가능 영역 [%] 확대</text>
+    <text x="16" y="54" class="ko-r" fill="#64748B" font-size="9">+ 영업 견적 회신 속도·일관성 → OEM SQA 평가 변별 요소 강화</text>
   </g>
   <g transform="translate(30, 588)">
-    <rect width="540" height="200" rx="8" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="1"/>
-    <text x="16" y="22" class="ko" fill="#004D40" font-size="11">시나리오 ID + 5.2 카드 + RAG 인프라 가이드 cross-ref</text>
-    <g transform="translate(16, 36)" class="ko-r" font-size="10" fill="#37474F">
-      <text y="0" class="ko" fill="#004D40">시나리오 4</text>
+    <rect width="540" height="200" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="16" y="22" class="ko" fill="#0F766E" font-size="11">시나리오 ID + 5.2 카드 + RAG 인프라 가이드 cross-ref</text>
+    <g transform="translate(16, 36)" class="ko-r" font-size="10" fill="#475569">
+      <text y="0" class="ko" fill="#0F766E">시나리오 4</text>
       <text y="16">STL-07 · STL-08 · STL-11</text>
       <text y="30">+ LLM-01 (SOP RAG)</text>
-      <text x="200" y="0" class="ko" fill="#004D40">5.2 카드 결합</text>
+      <text x="200" y="0" class="ko" fill="#0F766E">5.2 카드 결합</text>
       <text x="200" y="16">a 유사 사례 + c 비전·신호</text>
       <text x="200" y="30">+ f LLM·RAG (옵션 g 형상)</text>
-      <text x="380" y="0" class="ko" fill="#004D40">cross-ref 가이드</text>
+      <text x="380" y="0" class="ko" fill="#0F766E">cross-ref 가이드</text>
       <text x="380" y="16">가이드_RAG_인프라_운영.md</text>
       <text x="380" y="30">가이드_도메인_지식추출.md</text>
     </g>
-    <g transform="translate(16, 102)" class="ko-r" font-size="9" fill="#37474F">
-      <text y="0" class="ko" fill="#004D40" font-size="10">데이터 비대칭</text>
+    <g transform="translate(16, 102)" class="ko-r" font-size="9" fill="#475569">
+      <text y="0" class="ko" fill="#0F766E" font-size="10">데이터 비대칭</text>
       <text y="14">정형 30% + 비정형 70%</text>
       <text y="26">→ RAG 인프라 도입 직접 근거</text>
-      <text x="200" y="0" class="ko" fill="#004D40" font-size="10">한국 sLM 1 차 후보</text>
+      <text x="200" y="0" class="ko" fill="#0F766E" font-size="10">한국 sLM 1 차 후보</text>
       <text x="200" y="14">EXAONE / HyperCLOVA X</text>
       <text x="200" y="26">외부 API 일반 질의 한정</text>
-      <text x="380" y="0" class="ko" fill="#004D40" font-size="10">사업 분류·기간</text>
+      <text x="380" y="0" class="ko" fill="#0F766E" font-size="10">사업 분류·기간</text>
       <text x="380" y="14">2026 디지털 기업 in 경남</text>
       <text x="380" y="26">9 개월 (Phase 1: 6 / Phase 2: 3)</text>
     </g>
-    <text x="16" y="186" class="ko-r" fill="#78909C" font-size="8">출처: 사업계획서_패키지3_특수강관_파일럿.md §0·1·2·3·4 + 가이드_한국_sLM_활용.md §1·2</text>
+    <text x="16" y="186" class="ko-r" fill="#64748B" font-size="8">출처: 사업계획서_패키지3_특수강관_파일럿.md §0·1·2·3·4 + 가이드_한국_sLM_활용.md §1·2</text>
   </g>
 </svg>

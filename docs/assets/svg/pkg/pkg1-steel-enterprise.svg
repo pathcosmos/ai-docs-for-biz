@@ -6,23 +6,24 @@
   <desc>1단계 (9M·역량 분석·컨설팅) → 2단계 1년차 (12M·상공정·STL-01·03 + MLO-01·02 + UTL-01) → 2단계 2년차 (12~14M·하공정·STL-09·10 + LLM-02 + SAF-02 CBAM 횡전개) 의 위→아래 3 단계 흐름과 9 시나리오 분포·핵심 5.2 카드 5 종 매핑을 viewBox 600×800 세로형으로 재구성한 인포그래픽.</desc>
   <defs>
     <linearGradient id="pkg1-header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0D47A1"/>
-      <stop offset="100%" stop-color="#1565C0"/>
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
     <linearGradient id="pkg1-phase1" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1565C0"/>
-      <stop offset="100%" stop-color="#42A5F5"/>
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="pkg1-phase2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1976D2"/>
-      <stop offset="100%" stop-color="#64B5F6"/>
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="pkg1-phase3" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0277BD"/>
-      <stop offset="100%" stop-color="#4FC3F7"/>
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#A5B4FC"/>
     </linearGradient>
-    <filter id="pkg1-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    <filter id="pkg1-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -36,93 +37,93 @@
   <text x="30" y="60" class="ko" fill="white" font-size="20">패키지 1 — 대기업 철강 다년 R&amp;D</text>
   <text x="30" y="82" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="12">33 개월 · 9 시나리오 · 5.2 카드 b·c·d·e·f 결합</text>
   <g transform="translate(30, 122)" filter="url(#pkg1-shadow)">
-    <rect width="540" height="160" rx="10" fill="white" stroke="#BBDEFB" stroke-width="1"/>
+    <rect width="540" height="160" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="540" height="36" rx="10" fill="url(#pkg1-phase1)"/>
     <rect y="26" width="540" height="10" fill="url(#pkg1-phase1)"/>
     <text x="20" y="24" class="ko" fill="white" font-size="14">1단계 1년차 · 9 개월 — 기반 구축</text>
     <text x="440" y="24" class="en" fill="rgba(255,255,255,0.85)" font-size="10">TRL 4</text>
-    <text x="20" y="62" class="ko" fill="#0D47A1" font-size="12">컨설팅 위탁 + DX 추진전략 수립</text>
-    <g transform="translate(20, 78)" class="ko-r" fill="#37474F" font-size="10">
+    <text x="20" y="62" class="ko" fill="#4338CA" font-size="12">컨설팅 위탁 + DX 추진전략 수립</text>
+    <g transform="translate(20, 78)" class="ko-r" fill="#475569" font-size="10">
       <text y="0">• 외부 컨설팅 — 환경 분석·DX 추진 매트릭스</text>
       <text y="16">• 9 시나리오 매핑 + 정부지원 99% 컨설팅비 표준</text>
       <text y="32">• 산출: 컨설팅 보고서 1식 + 전략·로드맵 확정</text>
     </g>
     <g transform="translate(360, 64)">
-      <rect width="160" height="80" rx="6" fill="#E3F2FD"/>
-      <text x="80" y="22" text-anchor="middle" class="ko" fill="#0D47A1" font-size="10">5 시나리오 (예비)</text>
-      <text x="80" y="42" text-anchor="middle" class="ko-r" fill="#1565C0" font-size="9">STL-01 · 03 · 09 · 10</text>
-      <text x="80" y="58" text-anchor="middle" class="ko-r" fill="#1565C0" font-size="9">+ UTL-01 (전기로 에너지)</text>
-      <text x="80" y="72" text-anchor="middle" class="ko-r" fill="#78909C" font-size="8">정성 산출 한정 · KPI 미적용</text>
+      <rect width="160" height="80" rx="6" fill="#EEF2FF"/>
+      <text x="80" y="22" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">5 시나리오 (예비)</text>
+      <text x="80" y="42" text-anchor="middle" class="ko-r" fill="#6366F1" font-size="9">STL-01 · 03 · 09 · 10</text>
+      <text x="80" y="58" text-anchor="middle" class="ko-r" fill="#6366F1" font-size="9">+ UTL-01 (전기로 에너지)</text>
+      <text x="80" y="72" text-anchor="middle" class="ko-r" fill="#64748B" font-size="8">정성 산출 한정 · KPI 미적용</text>
     </g>
   </g>
   <g transform="translate(295, 286)">
-    <path d="M 5 0 L 5 18 M 0 12 L 5 18 L 10 12" stroke="#1565C0" stroke-width="2" fill="none"/>
+    <path d="M 5 0 L 5 18 M 0 12 L 5 18 L 10 12" stroke="#6366F1" stroke-width="2" fill="none"/>
   </g>
   <g transform="translate(30, 310)" filter="url(#pkg1-shadow)">
-    <rect width="540" height="170" rx="10" fill="white" stroke="#90CAF9" stroke-width="1"/>
+    <rect width="540" height="170" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="540" height="36" rx="10" fill="url(#pkg1-phase2)"/>
     <rect y="26" width="540" height="10" fill="url(#pkg1-phase2)"/>
     <text x="20" y="24" class="ko" fill="white" font-size="14">2단계 1년차 · 12 개월 — 확장 + MLOps 정착</text>
     <text x="440" y="24" class="en" fill="rgba(255,255,255,0.85)" font-size="10">TRL 5~6</text>
-    <text x="20" y="62" class="ko" fill="#0D47A1" font-size="12">상공정 데이터 수집 + 시작품 + 거버넌스</text>
-    <g transform="translate(20, 78)" class="ko-r" fill="#37474F" font-size="10">
+    <text x="20" y="62" class="ko" fill="#4338CA" font-size="12">상공정 데이터 수집 + 시작품 + 거버넌스</text>
+    <g transform="translate(20, 78)" class="ko-r" fill="#475569" font-size="10">
       <text y="0">• PLC·HMI·OPC-UA 통합 + Tag 통합 [수치] 개</text>
       <text y="16">• MES·ERP 연동 + 데이터 사전 표준화</text>
       <text y="32">• MLOps 3 단 거버넌스 운영 + 외부 검증</text>
     </g>
     <g transform="translate(340, 60)">
-      <rect width="180" height="98" rx="6" fill="#E3F2FD"/>
-      <text x="90" y="20" text-anchor="middle" class="ko" fill="#0D47A1" font-size="10">상공정 4 시나리오</text>
-      <g transform="translate(10, 30)" class="ko-r" font-size="9" fill="#1565C0">
+      <rect width="180" height="98" rx="6" fill="#EEF2FF"/>
+      <text x="90" y="20" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">상공정 4 시나리오</text>
+      <g transform="translate(10, 30)" class="ko-r" font-size="9" fill="#6366F1">
         <text y="0">• STL-01 연속주조 비전 (5.2-c)</text>
         <text y="14">• STL-03 압연 두께 예측 (5.2-b)</text>
         <text y="28">• MLO-01 드리프트·재학습 (5.2-e)</text>
         <text y="42">• MLO-02 3 단 거버넌스 (5.2-e)</text>
-        <text y="58" fill="#01579B">+ UTL-01 전기로 에너지 (5.2-d)</text>
+        <text y="58" fill="#4338CA">+ UTL-01 전기로 에너지 (5.2-d)</text>
       </g>
     </g>
   </g>
   <g transform="translate(295, 484)">
-    <path d="M 5 0 L 5 18 M 0 12 L 5 18 L 10 12" stroke="#1565C0" stroke-width="2" fill="none"/>
+    <path d="M 5 0 L 5 18 M 0 12 L 5 18 L 10 12" stroke="#6366F1" stroke-width="2" fill="none"/>
   </g>
   <g transform="translate(30, 508)" filter="url(#pkg1-shadow)">
-    <rect width="540" height="170" rx="10" fill="white" stroke="#64B5F6" stroke-width="1"/>
+    <rect width="540" height="170" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="540" height="36" rx="10" fill="url(#pkg1-phase3)"/>
     <rect y="26" width="540" height="10" fill="url(#pkg1-phase3)"/>
     <text x="20" y="24" class="ko" fill="white" font-size="14">2단계 2년차 · 12~14 개월 — 자체 운영 + 연합학습</text>
     <text x="440" y="24" class="en" fill="rgba(255,255,255,0.85)" font-size="10">TRL 7~8</text>
-    <text x="20" y="62" class="ko" fill="#01579B" font-size="12">하공정 횡전개 + LLM·RAG + CBAM 사업화</text>
-    <g transform="translate(20, 78)" class="ko-r" fill="#37474F" font-size="10">
+    <text x="20" y="62" class="ko" fill="#4338CA" font-size="12">하공정 횡전개 + LLM·RAG + CBAM 사업화</text>
+    <g transform="translate(20, 78)" class="ko-r" fill="#475569" font-size="10">
       <text y="0">• AI 활용 시스템 [%] 운영 + 통합 관제 표준화</text>
       <text y="16">• KPI 7 종 실측 + S/W 저작권·특허·라이선스</text>
       <text y="32">• 연합학습 결합 + 다공장 교차 학습 시연</text>
     </g>
     <g transform="translate(340, 60)">
-      <rect width="180" height="98" rx="6" fill="#E1F5FE"/>
-      <text x="90" y="20" text-anchor="middle" class="ko" fill="#01579B" font-size="10">하공정 + 횡전개 4 시나리오</text>
-      <g transform="translate(10, 30)" class="ko-r" font-size="9" fill="#0277BD">
+      <rect width="180" height="98" rx="6" fill="#E0E7FF"/>
+      <text x="90" y="20" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">하공정 + 횡전개 4 시나리오</text>
+      <g transform="translate(10, 30)" class="ko-r" font-size="9" fill="#4F46E5">
         <text y="0">• STL-09 후판 후공정 (5.2-c)</text>
         <text y="14">• STL-10 봉형강 후공정 (5.2-b·c)</text>
         <text y="28">• LLM-02 도메인 sLM 작업지시 (5.2-f)</text>
-        <text y="42" fill="#E65100">• SAF-02 CBAM·EU 수출</text>
-        <text y="58" fill="#78909C">  → 모듈_CBAM_대응 7 블록 결합</text>
+        <text y="42" fill="#D97706">• SAF-02 CBAM·EU 수출</text>
+        <text y="58" fill="#64748B">  → 모듈_CBAM_대응 7 블록 결합</text>
       </g>
     </g>
   </g>
   <g transform="translate(30, 690)">
-    <rect width="540" height="92" rx="8" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="1"/>
-    <text x="16" y="22" class="ko" fill="#263238" font-size="11">시나리오 ID 9 종 + 핵심 5.2 카드 + cross-reference</text>
-    <g transform="translate(16, 36)" class="ko-r" font-size="9" fill="#37474F">
-      <text y="0" fill="#0D47A1" font-weight="700">시나리오 9</text>
+    <rect width="540" height="92" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="16" y="22" class="ko" fill="#0F172A" font-size="11">시나리오 ID 9 종 + 핵심 5.2 카드 + cross-reference</text>
+    <g transform="translate(16, 36)" class="ko-r" font-size="9" fill="#475569">
+      <text y="0" fill="#4338CA" font-weight="700">시나리오 9</text>
       <text y="14">STL-01·03·09·10 + UTL-01</text>
       <text y="26">+ MLO-01·02 + LLM-02 + SAF-02</text>
-      <text x="200" y="0" fill="#0D47A1" font-weight="700">5.2 카드 5 종</text>
+      <text x="200" y="0" fill="#4338CA" font-weight="700">5.2 카드 5 종</text>
       <text x="200" y="14">b 시계열 · c 비전 · d 이상탐지</text>
       <text x="200" y="26">e MLOps · f LLM·RAG</text>
-      <text x="380" y="0" fill="#E65100" font-weight="700">CBAM 트리거</text>
+      <text x="380" y="0" fill="#D97706" font-weight="700">CBAM 트리거</text>
       <text x="380" y="14">EU 수출 적합률 70→95%</text>
       <text x="380" y="26">모듈_CBAM_대응 §1·2·3</text>
     </g>
-    <text x="16" y="82" class="ko-r" fill="#78909C" font-size="8">출처: 사업계획서_패키지1_대기업철강_파일럿.md §1·2·3 + 양식검증_DX촉진_R&amp;D.md v2.8 (67 쪽)</text>
+    <text x="16" y="82" class="ko-r" fill="#64748B" font-size="8">출처: 사업계획서_패키지1_대기업철강_파일럿.md §1·2·3 + 양식검증_DX촉진_R&amp;D.md v2.8 (67 쪽)</text>
   </g>
 </svg>

@@ -6,16 +6,18 @@
   <desc>40 종 제조 AI 시나리오를 7 도메인 (철강 STL · 금속 MET · 고무 RUB · 유틸 UTL · MLOps MLO · LLM·RAG LLM · 안전 SAF) 으로 분류하고, 도메인별 시나리오 수와 우선 도입 Top5 · 5 결합 패키지 매핑을 세로형으로 시각화한 카탈로그 인포그래픽.</desc>
 
   <defs>
-    <linearGradient id="cat-header" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1565C0"/>
-      <stop offset="100%" stop-color="#0D47A1"/>
+    <linearGradient id="cat-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
     </linearGradient>
     <linearGradient id="cat-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFB300"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
-    <filter id="cat-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    <filter id="cat-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -24,107 +26,107 @@
     </style>
   </defs>
 
-  <rect width="600" height="800" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
   <!-- 헤더 (100px) -->
   <rect width="600" height="100" fill="url(#cat-header)"/>
   <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">시나리오 카탈로그</text>
   <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">40 SCENARIOS · 7 DOMAINS</text>
-  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FFEB3B">독립 재사용 모듈 · 업종·규모·성숙도별 조합 가능</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">독립 재사용 모듈 · 업종·규모·성숙도별 조합 가능</text>
 
   <!-- 중간 영역: 7 도메인 카드 (110~580) -->
   <!-- 7 도메인 카드 -->
   <g filter="url(#cat-shadow)">
     <!-- STL -->
     <g transform="translate(40, 120)">
-      <rect width="520" height="62" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <rect width="100" height="62" rx="10" fill="#1565C0"/><rect x="90" width="10" height="62" fill="#1565C0"/>
+      <rect width="520" height="62" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="100" height="62" rx="10" fill="#6366F1"/><rect x="90" width="10" height="62" fill="#6366F1"/>
       <text x="50" y="28" text-anchor="middle" class="en" font-size="13" fill="white">SCN-STL</text>
       <text x="50" y="50" text-anchor="middle" class="ko" font-size="26" fill="white" font-weight="900">12</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#0D47A1">철강·제강</text>
-      <text x="115" y="40" class="ko-r" font-size="10" fill="#37474F">연주 · 압연 · 열처리 · 표면처리 · 비파괴검사</text>
-      <text x="115" y="55" class="ko-r" font-size="9" fill="#1976D2">STL-01 연주 / 03 열연 / 09 예지보전 / 10 표면 비전 ★Top4</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#4338CA">철강·제강</text>
+      <text x="115" y="40" class="ko-r" font-size="10" fill="#475569">연주 · 압연 · 열처리 · 표면처리 · 비파괴검사</text>
+      <text x="115" y="55" class="ko-r" font-size="9" fill="#6366F1">STL-01 연주 / 03 열연 / 09 예지보전 / 10 표면 비전 ★Top4</text>
     </g>
     <!-- MET -->
     <g transform="translate(40, 192)">
-      <rect width="520" height="58" rx="10" fill="white" stroke="#00695C" stroke-width="2"/>
-      <rect width="100" height="58" rx="10" fill="#00695C"/><rect x="90" width="10" height="58" fill="#00695C"/>
+      <rect width="520" height="58" rx="10" fill="white" stroke="#0EA5E9" stroke-width="2"/>
+      <rect width="100" height="58" rx="10" fill="#0EA5E9"/><rect x="90" width="10" height="58" fill="#0EA5E9"/>
       <text x="50" y="26" text-anchor="middle" class="en" font-size="13" fill="white">SCN-MET</text>
       <text x="50" y="48" text-anchor="middle" class="ko" font-size="24" fill="white" font-weight="900">7</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#004D40">금속·정밀가공</text>
-      <text x="115" y="38" class="ko-r" font-size="10" fill="#37474F">CNC · 도금 · 단조 · 용접 · 조립</text>
-      <text x="115" y="52" class="ko-r" font-size="9" fill="#00796B">MET-01 CNC 공구마모 / 03 도금 두께 / 05 단조 결함</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#0369A1">금속·정밀가공</text>
+      <text x="115" y="38" class="ko-r" font-size="10" fill="#475569">CNC · 도금 · 단조 · 용접 · 조립</text>
+      <text x="115" y="52" class="ko-r" font-size="9" fill="#0EA5E9">MET-01 CNC 공구마모 / 03 도금 두께 / 05 단조 결함</text>
     </g>
     <!-- RUB -->
     <g transform="translate(40, 260)">
-      <rect width="520" height="58" rx="10" fill="white" stroke="#E65100" stroke-width="2"/>
-      <rect width="100" height="58" rx="10" fill="#E65100"/><rect x="90" width="10" height="58" fill="#E65100"/>
+      <rect width="520" height="58" rx="10" fill="white" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="100" height="58" rx="10" fill="#F59E0B"/><rect x="90" width="10" height="58" fill="#F59E0B"/>
       <text x="50" y="26" text-anchor="middle" class="en" font-size="13" fill="white">SCN-RUB</text>
       <text x="50" y="48" text-anchor="middle" class="ko" font-size="24" fill="white" font-weight="900">5</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#BF360C">고무·폴리머</text>
-      <text x="115" y="38" class="ko-r" font-size="10" fill="#37474F">배합 · 압출 · 가류 · 사출 · 검사</text>
-      <text x="115" y="52" class="ko-r" font-size="9" fill="#F57C00">RUB-01 압출 두께 / 02 가류 시간 / 05 사출 결함 분류</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#9A3412">고무·폴리머</text>
+      <text x="115" y="38" class="ko-r" font-size="10" fill="#475569">배합 · 압출 · 가류 · 사출 · 검사</text>
+      <text x="115" y="52" class="ko-r" font-size="9" fill="#D97706">RUB-01 압출 두께 / 02 가류 시간 / 05 사출 결함 분류</text>
     </g>
     <!-- UTL -->
     <g transform="translate(40, 328)">
-      <rect width="520" height="58" rx="10" fill="white" stroke="#2E7D32" stroke-width="2"/>
-      <rect width="100" height="58" rx="10" fill="#2E7D32"/><rect x="90" width="10" height="58" fill="#2E7D32"/>
+      <rect width="520" height="58" rx="10" fill="white" stroke="#10B981" stroke-width="2"/>
+      <rect width="100" height="58" rx="10" fill="#10B981"/><rect x="90" width="10" height="58" fill="#10B981"/>
       <text x="50" y="26" text-anchor="middle" class="en" font-size="13" fill="white">SCN-UTL</text>
       <text x="50" y="48" text-anchor="middle" class="ko" font-size="24" fill="white" font-weight="900">6</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#1B5E20">유틸리티·공통</text>
-      <text x="115" y="38" class="ko-r" font-size="10" fill="#37474F">에너지 · 환경 · CBAM · 용수 · 컴프레서</text>
-      <text x="115" y="52" class="ko-r" font-size="9" fill="#388E3C">UTL-01 에너지 최적화 ★ / 02 CBAM 배출량 / 03 환경</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#047857">유틸리티·공통</text>
+      <text x="115" y="38" class="ko-r" font-size="10" fill="#475569">에너지 · 환경 · CBAM · 용수 · 컴프레서</text>
+      <text x="115" y="52" class="ko-r" font-size="9" fill="#10B981">UTL-01 에너지 최적화 ★ / 02 CBAM 배출량 / 03 환경</text>
     </g>
     <!-- MLO -->
     <g transform="translate(40, 396)">
-      <rect width="520" height="58" rx="10" fill="white" stroke="#6A1B9A" stroke-width="2"/>
-      <rect width="100" height="58" rx="10" fill="#6A1B9A"/><rect x="90" width="10" height="58" fill="#6A1B9A"/>
+      <rect width="520" height="58" rx="10" fill="white" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="100" height="58" rx="10" fill="#8B5CF6"/><rect x="90" width="10" height="58" fill="#8B5CF6"/>
       <text x="50" y="26" text-anchor="middle" class="en" font-size="13" fill="white">SCN-MLO</text>
       <text x="50" y="48" text-anchor="middle" class="ko" font-size="24" fill="white" font-weight="900">3</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#4A148C">MLOps 공통</text>
-      <text x="115" y="38" class="ko-r" font-size="10" fill="#37474F">피드백 · 드리프트 · 재학습 · 모니터링</text>
-      <text x="115" y="52" class="ko-r" font-size="9" fill="#7B1FA2">MLO-01 모니터링 / 02 드리프트 / 03 재학습 트리거</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#6D28D9">MLOps 공통</text>
+      <text x="115" y="38" class="ko-r" font-size="10" fill="#475569">피드백 · 드리프트 · 재학습 · 모니터링</text>
+      <text x="115" y="52" class="ko-r" font-size="9" fill="#8B5CF6">MLO-01 모니터링 / 02 드리프트 / 03 재학습 트리거</text>
     </g>
     <!-- LLM -->
     <g transform="translate(40, 464)">
-      <rect width="520" height="58" rx="10" fill="white" stroke="#00838F" stroke-width="2"/>
-      <rect width="100" height="58" rx="10" fill="#00838F"/><rect x="90" width="10" height="58" fill="#00838F"/>
+      <rect width="520" height="58" rx="10" fill="white" stroke="#06B6D4" stroke-width="2"/>
+      <rect width="100" height="58" rx="10" fill="#06B6D4"/><rect x="90" width="10" height="58" fill="#06B6D4"/>
       <text x="50" y="26" text-anchor="middle" class="en" font-size="13" fill="white">SCN-LLM</text>
       <text x="50" y="48" text-anchor="middle" class="ko" font-size="24" fill="white" font-weight="900">4</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#006064">LLM · RAG 공통</text>
-      <text x="115" y="38" class="ko-r" font-size="10" fill="#37474F">SOP 검색 · 장애 대응 · 도면·성적서 · 베테랑 인터뷰</text>
-      <text x="115" y="52" class="ko-r" font-size="9" fill="#0097A7">LLM-01 작업지시서 RAG ★ / 02 장애 응답 / 04 도면 QA</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#0E7490">LLM · RAG 공통</text>
+      <text x="115" y="38" class="ko-r" font-size="10" fill="#475569">SOP 검색 · 장애 대응 · 도면·성적서 · 베테랑 인터뷰</text>
+      <text x="115" y="52" class="ko-r" font-size="9" fill="#06B6D4">LLM-01 작업지시서 RAG ★ / 02 장애 응답 / 04 도면 QA</text>
     </g>
     <!-- SAF -->
     <g transform="translate(40, 532)">
-      <rect width="520" height="58" rx="10" fill="white" stroke="#C62828" stroke-width="2"/>
-      <rect width="100" height="58" rx="10" fill="#C62828"/><rect x="90" width="10" height="58" fill="#C62828"/>
+      <rect width="520" height="58" rx="10" fill="white" stroke="#F43F5E" stroke-width="2"/>
+      <rect width="100" height="58" rx="10" fill="#F43F5E"/><rect x="90" width="10" height="58" fill="#F43F5E"/>
       <text x="50" y="26" text-anchor="middle" class="en" font-size="13" fill="white">SCN-SAF</text>
       <text x="50" y="48" text-anchor="middle" class="ko" font-size="24" fill="white" font-weight="900">3</text>
-      <text x="115" y="22" class="ko" font-size="14" fill="#B71C1C">안전 · ESG</text>
-      <text x="115" y="38" class="ko-r" font-size="10" fill="#37474F">중대재해 · MSDS · PPE 비전 · 위험작업 감지</text>
-      <text x="115" y="52" class="ko-r" font-size="9" fill="#D32F2F">SAF-01 PPE 비전 / 02 위험작업 / 03 MSDS RAG</text>
+      <text x="115" y="22" class="ko" font-size="14" fill="#BE123C">안전 · ESG</text>
+      <text x="115" y="38" class="ko-r" font-size="10" fill="#475569">중대재해 · MSDS · PPE 비전 · 위험작업 감지</text>
+      <text x="115" y="52" class="ko-r" font-size="9" fill="#F43F5E">SAF-01 PPE 비전 / 02 위험작업 / 03 MSDS RAG</text>
     </g>
   </g>
 
   <!-- 합계 바 -->
   <g transform="translate(40, 600)">
     <rect width="520" height="40" rx="6" fill="url(#cat-accent)" filter="url(#cat-shadow)"/>
-    <text x="20" y="26" class="ko" font-size="13" fill="#1A237E">합계 — 12 + 7 + 5 + 6 + 3 + 4 + 3 = 40 시나리오</text>
-    <text x="500" y="26" text-anchor="end" class="ko-r" font-size="10" fill="#1A237E">7 도메인 · 모듈형</text>
+    <text x="20" y="26" class="ko" font-size="13" fill="#0F172A">합계 — 12 + 7 + 5 + 6 + 3 + 4 + 3 = 40 시나리오</text>
+    <text x="500" y="26" text-anchor="end" class="ko-r" font-size="10" fill="#0F172A">7 도메인 · 모듈형</text>
   </g>
 
   <!-- 하단: 6 패키지 매핑 인덱스 (660~780) -->
   <g transform="translate(40, 660)">
-    <rect width="520" height="120" rx="8" fill="white" stroke="#1565C0" stroke-width="1" stroke-dasharray="4 3"/>
-    <text x="20" y="22" class="ko" font-size="12" fill="#0D47A1">6 결합 패키지 매핑 (사업계획서 §부록 B)</text>
-    <g font-size="9" class="ko-r" fill="#37474F">
+    <rect width="520" height="120" rx="8" fill="white" stroke="#6366F1" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#4338CA">6 결합 패키지 매핑 (사업계획서 §부록 B)</text>
+    <g font-size="9" class="ko-r" fill="#475569">
       <text x="20" y="40">P1 대기업철강 (9) — STL-01·03·09·10 + UTL-01 + MLO-01·02 + LLM-02 + SAF-02</text>
       <text x="20" y="55">P2 중견냉연 (6) — STL-04·05·06·09 + MLO-03 + LLM-02</text>
       <text x="20" y="70">P3 특수강관 (4) — STL-07·08·11 + LLM-01</text>
       <text x="20" y="85">P4 고무양산 (5) — RUB-01·02·05 + LLM-03 + MLO-01</text>
       <text x="20" y="100">P5 정밀가공 (6) — MET-01·03 + UTL-01 + LLM-01·04 + SAF-01</text>
-      <text x="20" y="113" fill="#F57F17" font-weight="700">▸ Top5: LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01      P6 유틸ESG (5)</text>
+      <text x="20" y="113" fill="#F59E0B" font-weight="700">▸ Top5: LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01      P6 유틸ESG (5)</text>
     </g>
   </g>
 </svg>

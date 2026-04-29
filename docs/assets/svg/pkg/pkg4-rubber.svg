@@ -7,19 +7,20 @@
 
   <defs>
     <linearGradient id="pkg4-header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#E65100"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FB923C"/>
     </linearGradient>
     <linearGradient id="pkg4-card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFF8E1"/>
-      <stop offset="100%" stop-color="#FFE0B2"/>
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
     </linearGradient>
     <linearGradient id="pkg4-accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F57F17"/>
-      <stop offset="100%" stop-color="#FFA726"/>
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
     </linearGradient>
-    <filter id="pkg4-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#5D4037" flood-opacity="0.22"/>
+    <filter id="pkg4-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <filter id="pkg4-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -33,7 +34,7 @@
   </defs>
 
   <!-- 배경 -->
-  <rect width="600" height="800" fill="#FFFDF7"/>
+  <rect width="600" height="800" fill="#FFFBEB"/>
 
   <!-- 상단 헤더 (100px) -->
   <rect width="600" height="100" fill="url(#pkg4-header)"/>
@@ -41,76 +42,76 @@
   <text x="32" y="62" class="ko" fill="white" font-size="22">패키지 4 — 고무 양산 OEM</text>
   <text x="32" y="84" class="ko-r" fill="rgba(255,255,255,0.92)" font-size="13">자동차 부품 1 차 협력사 · LG EXAONE sLM 결합</text>
   <g transform="translate(528, 28)" filter="url(#pkg4-glow)">
-    <circle cx="22" cy="22" r="22" fill="#1A237E"/>
-    <text x="22" y="29" text-anchor="middle" class="ko" fill="#FFB300" font-size="22">4</text>
+    <circle cx="22" cy="22" r="22" fill="#4338CA"/>
+    <text x="22" y="29" text-anchor="middle" class="ko" fill="#FBBF24" font-size="22">4</text>
   </g>
 
   <!-- 중간 영역 (y=100~680, 580px) — 4 시나리오 카드 세로 배치 -->
 
   <!-- 섹션 라벨 -->
-  <text x="32" y="128" class="ko" fill="#BF360C" font-size="13">5 시나리오 · 위→아래 양산 흐름</text>
-  <text x="32" y="146" class="ko-r" fill="#8D6E63" font-size="10">배합 → 압출·외관 → 금형 변경 → 작업표준 RAG</text>
+  <text x="32" y="128" class="ko" fill="#9A3412" font-size="13">5 시나리오 · 위→아래 양산 흐름</text>
+  <text x="32" y="146" class="ko-r" fill="#64748B" font-size="10">배합 → 압출·외관 → 금형 변경 → 작업표준 RAG</text>
 
   <!-- 카드 1 — RUB-01 밴버리 배합 -->
   <g transform="translate(32, 162)" filter="url(#pkg4-shadow)">
-    <rect width="536" height="100" rx="10" fill="url(#pkg4-card)" stroke="#FFCC80" stroke-width="1"/>
-    <rect width="6" height="100" rx="3" fill="#F57F17"/>
-    <circle cx="44" cy="50" r="22" fill="#F57F17"/>
+    <rect width="536" height="100" rx="10" fill="url(#pkg4-card)" stroke="#FCD34D" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#F59E0B"/>
+    <circle cx="44" cy="50" r="22" fill="#F59E0B"/>
     <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">RUB</text>
     <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-01</text>
-    <text x="84" y="34" class="ko" fill="#BF360C" font-size="14">밴버리·믹서 배합 품질 예측</text>
-    <text x="84" y="54" class="ko-r" fill="#5D4037" font-size="11">토크 곡선·전력·온도 → 분산도·점도 (5.2-b 시계열)</text>
-    <text x="84" y="74" class="ko-r" fill="#8D6E63" font-size="10">RUB-01 · 확장 시나리오 · 1 차 라인 한정</text>
-    <text x="84" y="90" class="ko-r" fill="#8D6E63" font-size="10">목표 — 분산 불량 [%] 감소 · 후속 라벨 외주 분리</text>
+    <text x="84" y="34" class="ko" fill="#9A3412" font-size="14">밴버리·믹서 배합 품질 예측</text>
+    <text x="84" y="54" class="ko-r" fill="#475569" font-size="11">토크 곡선·전력·온도 → 분산도·점도 (5.2-b 시계열)</text>
+    <text x="84" y="74" class="ko-r" fill="#64748B" font-size="10">RUB-01 · 확장 시나리오 · 1 차 라인 한정</text>
+    <text x="84" y="90" class="ko-r" fill="#64748B" font-size="10">목표 — 분산 불량 [%] 감소 · 후속 라벨 외주 분리</text>
   </g>
 
   <!-- 카드 2 — RUB-02 압출 + RUB-05 외관 비전 (주력) -->
   <g transform="translate(32, 274)" filter="url(#pkg4-shadow)">
-    <rect width="536" height="118" rx="10" fill="#FFE0B2" stroke="#FF8A65" stroke-width="2"/>
-    <rect width="6" height="118" rx="3" fill="#E65100"/>
-    <circle cx="44" cy="58" r="26" fill="#E65100"/>
+    <rect width="536" height="118" rx="10" fill="#FED7AA" stroke="#FB923C" stroke-width="2"/>
+    <rect width="6" height="118" rx="3" fill="#D97706"/>
+    <circle cx="44" cy="58" r="26" fill="#D97706"/>
     <text x="44" y="55" text-anchor="middle" class="ko" fill="white" font-size="10">RUB</text>
     <text x="44" y="68" text-anchor="middle" class="ko" fill="white" font-size="10">-02·05</text>
-    <text x="84" y="32" class="ko" fill="#BF360C" font-size="14">압출 치수 · 언더큐어 외관 비전 (주력)</text>
-    <text x="84" y="52" class="ko-r" fill="#5D4037" font-size="11">레이저 치수계 + 라인스캔 → 실시간 보정·결함 분류</text>
-    <text x="84" y="70" class="ko-r" fill="#5D4037" font-size="11">5.2-b 시계열 + 5.2-c 비전 결합 패턴</text>
-    <text x="84" y="92" class="ko-r" fill="#8D6E63" font-size="10">RUB-02 (주력) + RUB-05 (확장) · 외경 ±[수치] mm 자동 보정</text>
-    <text x="84" y="108" class="ko-r" fill="#BF360C" font-size="10" font-weight="700">▼ 본 사업의 차별 가치</text>
+    <text x="84" y="32" class="ko" fill="#9A3412" font-size="14">압출 치수 · 언더큐어 외관 비전 (주력)</text>
+    <text x="84" y="52" class="ko-r" fill="#475569" font-size="11">레이저 치수계 + 라인스캔 → 실시간 보정·결함 분류</text>
+    <text x="84" y="70" class="ko-r" fill="#475569" font-size="11">5.2-b 시계열 + 5.2-c 비전 결합 패턴</text>
+    <text x="84" y="92" class="ko-r" fill="#64748B" font-size="10">RUB-02 (주력) + RUB-05 (확장) · 외경 ±[수치] mm 자동 보정</text>
+    <text x="84" y="108" class="ko-r" fill="#9A3412" font-size="10" font-weight="700">▼ 본 사업의 차별 가치</text>
   </g>
 
   <!-- 카드 3 — LLM-03 8D 보고서 EXAONE -->
   <g transform="translate(32, 404)" filter="url(#pkg4-shadow)">
-    <rect width="536" height="100" rx="10" fill="url(#pkg4-card)" stroke="#FFCC80" stroke-width="1"/>
-    <rect width="6" height="100" rx="3" fill="#6A1B9A"/>
-    <circle cx="44" cy="50" r="22" fill="#6A1B9A"/>
+    <rect width="536" height="100" rx="10" fill="url(#pkg4-card)" stroke="#FCD34D" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#8B5CF6"/>
+    <circle cx="44" cy="50" r="22" fill="#8B5CF6"/>
     <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">LLM</text>
     <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-03</text>
-    <text x="84" y="34" class="ko" fill="#4A148C" font-size="14">8D 불량 보고서 자동 작성 (EXAONE)</text>
-    <text x="84" y="54" class="ko-r" fill="#5D4037" font-size="11">과거 8D·5Why·MSDS RAG → 한국어 sLM 초안 (5.2-f)</text>
-    <text x="84" y="74" class="ko-r" fill="#8D6E63" font-size="10">LLM-03 · LG EXAONE 1 차 적용 · 민감도 라우팅</text>
-    <text x="84" y="90" class="ko-r" fill="#8D6E63" font-size="10">목표 — OEM 클레임 응대 [%] 단축</text>
+    <text x="84" y="34" class="ko" fill="#6D28D9" font-size="14">8D 불량 보고서 자동 작성 (EXAONE)</text>
+    <text x="84" y="54" class="ko-r" fill="#475569" font-size="11">과거 8D·5Why·MSDS RAG → 한국어 sLM 초안 (5.2-f)</text>
+    <text x="84" y="74" class="ko-r" fill="#64748B" font-size="10">LLM-03 · LG EXAONE 1 차 적용 · 민감도 라우팅</text>
+    <text x="84" y="90" class="ko-r" fill="#64748B" font-size="10">목표 — OEM 클레임 응대 [%] 단축</text>
   </g>
 
   <!-- 카드 4 — MLO-01 드리프트 인프라 -->
   <g transform="translate(32, 516)" filter="url(#pkg4-shadow)">
-    <rect width="536" height="100" rx="10" fill="url(#pkg4-card)" stroke="#FFCC80" stroke-width="1"/>
-    <rect width="6" height="100" rx="3" fill="#283593"/>
-    <circle cx="44" cy="50" r="22" fill="#283593"/>
+    <rect width="536" height="100" rx="10" fill="url(#pkg4-card)" stroke="#FCD34D" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#4F46E5"/>
+    <circle cx="44" cy="50" r="22" fill="#4F46E5"/>
     <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">MLO</text>
     <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-01</text>
-    <text x="84" y="34" class="ko" fill="#1A237E" font-size="14">MLO-01 드리프트·자동 재학습 (인프라)</text>
-    <text x="84" y="54" class="ko-r" fill="#5D4037" font-size="11">5 모델 수명 관리 · IATF 16949 변경관리 정합</text>
-    <text x="84" y="74" class="ko-r" fill="#8D6E63" font-size="10">Track 2 풀 7 종 중 5 종 도입 · 첫 적용</text>
-    <text x="84" y="90" class="ko-r" fill="#8D6E63" font-size="10">PPAP·SQA 모델 카드·리니지 자동 보존</text>
+    <text x="84" y="34" class="ko" fill="#4338CA" font-size="14">MLO-01 드리프트·자동 재학습 (인프라)</text>
+    <text x="84" y="54" class="ko-r" fill="#475569" font-size="11">5 모델 수명 관리 · IATF 16949 변경관리 정합</text>
+    <text x="84" y="74" class="ko-r" fill="#64748B" font-size="10">Track 2 풀 7 종 중 5 종 도입 · 첫 적용</text>
+    <text x="84" y="90" class="ko-r" fill="#64748B" font-size="10">PPAP·SQA 모델 카드·리니지 자동 보존</text>
   </g>
 
   <!-- 5.2 카드 + 모듈 cross-ref 라벨 -->
   <g transform="translate(32, 632)">
-    <rect width="536" height="36" rx="8" fill="#FFF3E0" stroke="#FFCC80" stroke-width="1"/>
-    <text x="16" y="16" class="ko" fill="#BF360C" font-size="10">5.2 카드 결합</text>
-    <text x="16" y="30" class="ko-r" fill="#5D4037" font-size="9">5.2-b 시계열 · 5.2-c 비전 · 5.2-f LLM·RAG (EXAONE 분기)</text>
-    <text x="280" y="16" class="ko" fill="#BF360C" font-size="10">모듈 cross-ref</text>
-    <text x="280" y="30" class="ko-r" fill="#5D4037" font-size="9">OEM·자동차 공급망 + 연합학습 (후속) + 중대재해 (간접)</text>
+    <rect width="536" height="36" rx="8" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1"/>
+    <text x="16" y="16" class="ko" fill="#9A3412" font-size="10">5.2 카드 결합</text>
+    <text x="16" y="30" class="ko-r" fill="#475569" font-size="9">5.2-b 시계열 · 5.2-c 비전 · 5.2-f LLM·RAG (EXAONE 분기)</text>
+    <text x="280" y="16" class="ko" fill="#9A3412" font-size="10">모듈 cross-ref</text>
+    <text x="280" y="30" class="ko-r" fill="#475569" font-size="9">OEM·자동차 공급망 + 연합학습 (후속) + 중대재해 (간접)</text>
   </g>
 
   <!-- 하단 통계 (y=680~800, 120px) -->

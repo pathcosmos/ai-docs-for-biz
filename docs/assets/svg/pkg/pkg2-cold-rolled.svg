@@ -6,19 +6,20 @@
   <desc>SCN-STL-04 패스 스케줄 표준화 + 05 두께 조기경보 + 06 소둔 적재 + 09 압연기 예지보전 + MLO-03 현장 피드백 루프 + LLM-02 장애 대응 RAG 의 6 시나리오를 단일 AI 플랫폼 위에서 결합 운영하는 중견 스테인리스 냉연사 12 개월 통합 파일럿 인포그래픽.</desc>
   <defs>
     <linearGradient id="pkg2-header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1A237E"/>
-      <stop offset="100%" stop-color="#283593"/>
+      <stop offset="0%" stop-color="#3730A3"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
     </linearGradient>
     <linearGradient id="pkg2-card" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#283593"/>
-      <stop offset="100%" stop-color="#5C6BC0"/>
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="pkg2-card-alt" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3949AB"/>
-      <stop offset="100%" stop-color="#7986CB"/>
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A5B4FC"/>
     </linearGradient>
-    <filter id="pkg2-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    <filter id="pkg2-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
       .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
@@ -32,130 +33,130 @@
   <text x="30" y="60" class="ko" fill="white" font-size="20">패키지 2 — 중견 냉연 12 개월</text>
   <text x="30" y="82" class="ko-r" fill="rgba(255,255,255,0.9)" font-size="12">SUS304·316L · 1ZHM·2ZHM·정밀압연 + APL·BAF · ICS Lv.2 → Lv.2+</text>
   <g transform="translate(30, 120)">
-    <text x="0" y="14" class="ko" fill="#1A237E" font-size="12">6 시나리오 통합 — 단일 플랫폼 위 결합 운영</text>
+    <text x="0" y="14" class="ko" fill="#4338CA" font-size="12">6 시나리오 통합 — 단일 플랫폼 위 결합 운영</text>
   </g>
   <g transform="translate(30, 140)" filter="url(#pkg2-shadow)">
-    <rect width="265" height="92" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
+    <rect width="265" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="265" height="28" rx="8" fill="url(#pkg2-card)"/>
     <rect y="20" width="265" height="8" fill="url(#pkg2-card)"/>
     <text x="14" y="20" class="ko" fill="white" font-size="11">SCN-STL-04 · 패스 스케줄</text>
-    <text x="14" y="46" class="ko" fill="#1A237E" font-size="11">압연 패스 표준화·최적화</text>
-    <g transform="translate(14, 60)" class="ko-r" fill="#37474F" font-size="9">
+    <text x="14" y="46" class="ko" fill="#4338CA" font-size="11">압연 패스 표준화·최적화</text>
+    <g transform="translate(14, 60)" class="ko-r" fill="#475569" font-size="9">
       <text y="0">• 베테랑 암묵지 → AI 추천 모델</text>
       <text y="14">• 신규 셋업 [%] 단축 + 5.2-b</text>
       <text y="28">• 출측 두께 σ [%] 축소</text>
     </g>
   </g>
   <g transform="translate(305, 140)" filter="url(#pkg2-shadow)">
-    <rect width="265" height="92" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
+    <rect width="265" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="265" height="28" rx="8" fill="url(#pkg2-card-alt)"/>
     <rect y="20" width="265" height="8" fill="url(#pkg2-card-alt)"/>
     <text x="14" y="20" class="ko" fill="white" font-size="11">SCN-STL-05 · 두께 조기경보</text>
-    <text x="14" y="46" class="ko" fill="#1A237E" font-size="11">실시간 예측·이탈 경보</text>
-    <g transform="translate(14, 60)" class="ko-r" fill="#37474F" font-size="9">
+    <text x="14" y="46" class="ko" fill="#4338CA" font-size="11">실시간 예측·이탈 경보</text>
+    <g transform="translate(14, 60)" class="ko-r" fill="#475569" font-size="9">
       <text y="0">• 1 초 ICS Tag → 중간 스탠드 가시성</text>
       <text y="14">• 이탈 코일 손실 [%] 축소 + 5.2-b</text>
       <text y="28">• LSTM/Transformer 앙상블</text>
     </g>
   </g>
   <g transform="translate(30, 244)" filter="url(#pkg2-shadow)">
-    <rect width="265" height="92" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
+    <rect width="265" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="265" height="28" rx="8" fill="url(#pkg2-card)"/>
     <rect y="20" width="265" height="8" fill="url(#pkg2-card)"/>
     <text x="14" y="20" class="ko" fill="white" font-size="11">SCN-STL-06 · 소둔 결함 비전</text>
-    <text x="14" y="46" class="ko" fill="#1A237E" font-size="11">APL·BAF 적재·온도 최적화</text>
-    <g transform="translate(14, 60)" class="ko-r" fill="#37474F" font-size="9">
+    <text x="14" y="46" class="ko" fill="#4338CA" font-size="11">APL·BAF 적재·온도 최적화</text>
+    <g transform="translate(14, 60)" class="ko-r" fill="#475569" font-size="9">
       <text y="0">• 다점 열전대 + 결함 비전 결합</text>
       <text y="14">• 적재율 [%] 향상 + 5.2-c</text>
       <text y="28">• 결정립 균일성·기계 성질 보강</text>
     </g>
   </g>
   <g transform="translate(305, 244)" filter="url(#pkg2-shadow)">
-    <rect width="265" height="92" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
+    <rect width="265" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="265" height="28" rx="8" fill="url(#pkg2-card-alt)"/>
     <rect y="20" width="265" height="8" fill="url(#pkg2-card-alt)"/>
     <text x="14" y="20" class="ko" fill="white" font-size="11">SCN-STL-09 · 압연기 예지보전</text>
-    <text x="14" y="46" class="ko" fill="#1A237E" font-size="11">진동·전류 이상탐지</text>
-    <g transform="translate(14, 60)" class="ko-r" fill="#37474F" font-size="9">
+    <text x="14" y="46" class="ko" fill="#4338CA" font-size="11">진동·전류 이상탐지</text>
+    <g transform="translate(14, 60)" class="ko-r" fill="#475569" font-size="9">
       <text y="0">• 구동부 진동·전류·유압 1kHz</text>
       <text y="14">• 돌발 정지 [%] 감소 + 5.2-d</text>
       <text y="28">• MTTR [%] 단축 + 정비 자산화</text>
     </g>
   </g>
   <g transform="translate(30, 348)" filter="url(#pkg2-shadow)">
-    <rect width="265" height="92" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
+    <rect width="265" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="265" height="28" rx="8" fill="url(#pkg2-card)"/>
     <rect y="20" width="265" height="8" fill="url(#pkg2-card)"/>
     <text x="14" y="20" class="ko" fill="white" font-size="11">SCN-MLO-03 · 피드백 루프</text>
-    <text x="14" y="46" class="ko" fill="#1A237E" font-size="11">현장 HITL 검수·재학습</text>
-    <g transform="translate(14, 60)" class="ko-r" fill="#37474F" font-size="9">
+    <text x="14" y="46" class="ko" fill="#4338CA" font-size="11">현장 HITL 검수·재학습</text>
+    <g transform="translate(14, 60)" class="ko-r" fill="#475569" font-size="9">
       <text y="0">• 작업자 검수 → 라벨 자산화</text>
       <text y="14">• 드리프트·재학습 자동 트리거</text>
       <text y="28">• 5.2-e MLOps Lv.0 → Lv.2</text>
     </g>
   </g>
   <g transform="translate(305, 348)" filter="url(#pkg2-shadow)">
-    <rect width="265" height="92" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
+    <rect width="265" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
     <rect width="265" height="28" rx="8" fill="url(#pkg2-card-alt)"/>
     <rect y="20" width="265" height="8" fill="url(#pkg2-card-alt)"/>
     <text x="14" y="20" class="ko" fill="white" font-size="11">SCN-LLM-02 · 장애 대응 RAG</text>
-    <text x="14" y="46" class="ko" fill="#1A237E" font-size="11">CMMS·SOP 지식 검색</text>
-    <g transform="translate(14, 60)" class="ko-r" fill="#37474F" font-size="9">
+    <text x="14" y="46" class="ko" fill="#4338CA" font-size="11">CMMS·SOP 지식 검색</text>
+    <g transform="translate(14, 60)" class="ko-r" fill="#475569" font-size="9">
       <text y="0">• 자유텍스트 정비 이력 RAG 색인</text>
       <text y="14">• 장애 대응 [기간] → 분 단위 + 5.2-f</text>
       <text y="28">• 신입 단독 작업 [%] 단축</text>
     </g>
   </g>
   <g transform="translate(30, 460)">
-    <text x="0" y="14" class="ko" fill="#1A237E" font-size="12">12 개월 마일스톤 — 데이터·시범·확산</text>
+    <text x="0" y="14" class="ko" fill="#4338CA" font-size="12">12 개월 마일스톤 — 데이터·시범·확산</text>
   </g>
   <g transform="translate(30, 482)" filter="url(#pkg2-shadow)">
-    <rect width="540" height="60" rx="8" fill="white" stroke="#C5CAE9" stroke-width="1"/>
-    <rect x="20" y="14" width="166" height="14" rx="4" fill="#7986CB"/>
-    <rect x="186" y="14" width="166" height="14" rx="4" fill="#5C6BC0"/>
-    <rect x="352" y="14" width="166" height="14" rx="4" fill="#3949AB"/>
+    <rect width="540" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="14" width="166" height="14" rx="4" fill="#A5B4FC"/>
+    <rect x="186" y="14" width="166" height="14" rx="4" fill="#818CF8"/>
+    <rect x="352" y="14" width="166" height="14" rx="4" fill="#6366F1"/>
     <text x="103" y="24" text-anchor="middle" class="ko-r" fill="white" font-size="9">M1~M4 · 데이터 정합·인프라</text>
     <text x="269" y="24" text-anchor="middle" class="ko-r" fill="white" font-size="9">M5~M8 · 시범 운영·HITL</text>
     <text x="435" y="24" text-anchor="middle" class="ko-r" fill="white" font-size="9">M9~M12 · 확산·재학습 정착</text>
-    <text x="20" y="50" class="ko-r" fill="#37474F" font-size="9">ICS·MES Lv.2 진입 → MLOps Lv.2 + 5.2-b·c·d·f 카드 4 종 결합 인용</text>
+    <text x="20" y="50" class="ko-r" fill="#475569" font-size="9">ICS·MES Lv.2 진입 → MLOps Lv.2 + 5.2-b·c·d·f 카드 4 종 결합 인용</text>
   </g>
   <g transform="translate(30, 560)">
-    <rect width="540" height="220" rx="8" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="1"/>
-    <text x="16" y="22" class="ko" fill="#1A237E" font-size="11">5.2 카드 인덱스 + 사업기간·예산·KPI 결합</text>
+    <rect width="540" height="220" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="16" y="22" class="ko" fill="#4338CA" font-size="11">5.2 카드 인덱스 + 사업기간·예산·KPI 결합</text>
     <g transform="translate(16, 36)">
-      <rect width="124" height="44" rx="6" fill="#C5CAE9"/>
-      <text x="62" y="18" text-anchor="middle" class="ko" fill="#1A237E" font-size="10">5.2-b 시계열</text>
-      <text x="62" y="34" text-anchor="middle" class="ko-r" fill="#283593" font-size="9">두께 예측·앙상블</text>
+      <rect width="124" height="44" rx="6" fill="#E0E7FF"/>
+      <text x="62" y="18" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">5.2-b 시계열</text>
+      <text x="62" y="34" text-anchor="middle" class="ko-r" fill="#4F46E5" font-size="9">두께 예측·앙상블</text>
     </g>
     <g transform="translate(148, 36)">
-      <rect width="124" height="44" rx="6" fill="#C5CAE9"/>
-      <text x="62" y="18" text-anchor="middle" class="ko" fill="#1A237E" font-size="10">5.2-c 비전</text>
-      <text x="62" y="34" text-anchor="middle" class="ko-r" fill="#283593" font-size="9">표면·소둔 결함</text>
+      <rect width="124" height="44" rx="6" fill="#E0E7FF"/>
+      <text x="62" y="18" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">5.2-c 비전</text>
+      <text x="62" y="34" text-anchor="middle" class="ko-r" fill="#4F46E5" font-size="9">표면·소둔 결함</text>
     </g>
     <g transform="translate(280, 36)">
-      <rect width="124" height="44" rx="6" fill="#C5CAE9"/>
-      <text x="62" y="18" text-anchor="middle" class="ko" fill="#1A237E" font-size="10">5.2-d 이상탐지</text>
-      <text x="62" y="34" text-anchor="middle" class="ko-r" fill="#283593" font-size="9">예지보전·진동</text>
+      <rect width="124" height="44" rx="6" fill="#E0E7FF"/>
+      <text x="62" y="18" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">5.2-d 이상탐지</text>
+      <text x="62" y="34" text-anchor="middle" class="ko-r" fill="#4F46E5" font-size="9">예지보전·진동</text>
     </g>
     <g transform="translate(412, 36)">
-      <rect width="112" height="44" rx="6" fill="#C5CAE9"/>
-      <text x="56" y="18" text-anchor="middle" class="ko" fill="#1A237E" font-size="10">5.2-f LLM·RAG</text>
-      <text x="56" y="34" text-anchor="middle" class="ko-r" fill="#283593" font-size="9">CMMS·SOP</text>
+      <rect width="112" height="44" rx="6" fill="#E0E7FF"/>
+      <text x="56" y="18" text-anchor="middle" class="ko" fill="#4338CA" font-size="10">5.2-f LLM·RAG</text>
+      <text x="56" y="34" text-anchor="middle" class="ko-r" fill="#4F46E5" font-size="9">CMMS·SOP</text>
     </g>
-    <g transform="translate(16, 100)" class="ko-r" fill="#37474F" font-size="10">
-      <text y="0" class="ko" fill="#1A237E">사업 분류</text>
+    <g transform="translate(16, 100)" class="ko-r" fill="#475569" font-size="10">
+      <text y="0" class="ko" fill="#4338CA">사업 분류</text>
       <text y="16">제조AI특화 스마트공장 (중기부)</text>
-      <text x="200" y="0" class="ko" fill="#1A237E">사업 기간</text>
+      <text x="200" y="0" class="ko" fill="#4338CA">사업 기간</text>
       <text x="200" y="16">12 개월 (9~18 표준)</text>
-      <text x="380" y="0" class="ko" fill="#1A237E">총 사업비</text>
+      <text x="380" y="0" class="ko" fill="#4338CA">총 사업비</text>
       <text x="380" y="16">[수치] 억 · 정부 [%] / 자부담 [%]</text>
     </g>
-    <g transform="translate(16, 144)" class="ko-r" fill="#37474F" font-size="10">
-      <text y="0" class="ko" fill="#1A237E">데이터 성숙도</text>
+    <g transform="translate(16, 144)" class="ko-r" fill="#475569" font-size="10">
+      <text y="0" class="ko" fill="#4338CA">데이터 성숙도</text>
       <text y="16">ICS·MES Lv.2 → Lv.2+ / 부분 Lv.3</text>
-      <text x="280" y="0" class="ko" fill="#1A237E">MLOps 성숙도</text>
+      <text x="280" y="0" class="ko" fill="#4338CA">MLOps 성숙도</text>
       <text x="280" y="16">Lv.0 → Lv.2 (자동 + 부분 지속학습)</text>
     </g>
-    <text x="16" y="200" class="ko-r" fill="#78909C" font-size="8">출처: 사업계획서_패키지2_중견냉연_파일럿.md §0·1·2·3 + 시나리오_카탈로그.md 부록 B</text>
+    <text x="16" y="200" class="ko-r" fill="#64748B" font-size="8">출처: 사업계획서_패키지2_중견냉연_파일럿.md §0·1·2·3 + 시나리오_카탈로그.md 부록 B</text>
   </g>
 </svg>
