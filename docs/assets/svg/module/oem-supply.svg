@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="모듈 — OEM 공급망 정합 (BLK-OEM-A~G 7 블록)"
+     class="zoomable">
+  <title>OEM 공급망 정합 모듈 — IATF 16949 · PPAP · VDA 6.3 · SQA · FMEA</title>
+  <desc>자동차·전자·기계 OEM 의 1·2 차 공급망 정합 모듈 — OEM(현대차·기아·VW 등) 정점에서 1차·2차 협력사로 분기되는 트리 구조와 5 축 표준(IATF·PPAP·VDA·SQA·FMEA)을 시각화한 도식.</desc>
+
+  <defs>
+    <linearGradient id="oem-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <linearGradient id="oem-tier" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="oem-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#oem-header)"/>
+  <text x="30" y="32" class="ko" font-size="20" fill="white">모듈 · 자동차 OEM 공급망 정합</text>
+  <text x="30" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">IATF 16949 · PPAP · VDA 6.3 · SQA · FMEA · 5 STANDARDS</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFE082" text-anchor="end">변경관리 · 4M (Method 축)</text>
+
+  <!-- 트리 구조: OEM → Tier 1 → Tier 2 -->
+  <!-- OEM 정점 -->
+  <g transform="translate(335, 95)" filter="url(#oem-shadow)">
+    <rect width="130" height="50" rx="10" fill="url(#oem-tier)"/>
+    <text x="65" y="22" text-anchor="middle" class="ko" font-size="13" fill="white">OEM</text>
+    <text x="65" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">현대차·기아·VW·Toyota</text>
+  </g>
+
+  <!-- Tier 1 — 자동차 -->
+  <g transform="translate(80, 195)" filter="url(#oem-shadow)">
+    <rect width="170" height="50" rx="8" fill="white" stroke="#F57F17" stroke-width="2"/>
+    <rect width="170" height="20" rx="8" fill="url(#oem-tier)"/>
+    <rect y="14" width="170" height="6" fill="url(#oem-tier)"/>
+    <text x="10" y="14" class="ko" font-size="10" fill="white">Tier 1 · 자동차</text>
+    <text x="10" y="36" class="ko" font-size="10" fill="#E65100">화승알엔에이 · 코렌스</text>
+    <text x="10" y="48" class="ko" font-size="9" fill="#BF360C">호스 · 실링 · 웨더스트립</text>
+  </g>
+
+  <!-- Tier 1 — 조선 -->
+  <g transform="translate(315, 195)" filter="url(#oem-shadow)">
+    <rect width="170" height="50" rx="8" fill="white" stroke="#F57F17" stroke-width="2"/>
+    <rect width="170" height="20" rx="8" fill="url(#oem-tier)"/>
+    <rect y="14" width="170" height="6" fill="url(#oem-tier)"/>
+    <text x="10" y="14" class="ko" font-size="10" fill="white">Tier 1 · 조선·플랜트</text>
+    <text x="10" y="36" class="ko" font-size="10" fill="#E65100">코리녹스 · YCP특수강</text>
+    <text x="10" y="48" class="ko" font-size="9" fill="#BF360C">특수강관 · 스테인리스</text>
+  </g>
+
+  <!-- Tier 1 — 2차전지 -->
+  <g transform="translate(550, 195)" filter="url(#oem-shadow)">
+    <rect width="170" height="50" rx="8" fill="white" stroke="#F57F17" stroke-width="2"/>
+    <rect width="170" height="20" rx="8" fill="url(#oem-tier)"/>
+    <rect y="14" width="170" height="6" fill="url(#oem-tier)"/>
+    <text x="10" y="14" class="ko" font-size="10" fill="white">Tier 1 · 2 차전지·전자</text>
+    <text x="10" y="36" class="ko" font-size="10" fill="#E65100">정밀가공·박판 가공</text>
+    <text x="10" y="48" class="ko" font-size="9" fill="#BF360C">셀·모듈 부품군</text>
+  </g>
+
+  <!-- Tier 2 — 일반 -->
+  <g transform="translate(195, 280)" filter="url(#oem-shadow)">
+    <rect width="190" height="44" rx="6" fill="#FFF3E0" stroke="#FFB300" stroke-width="1.5"/>
+    <text x="95" y="18" text-anchor="middle" class="ko" font-size="11" fill="#E65100">Tier 2 협력사</text>
+    <text x="95" y="34" text-anchor="middle" class="ko" font-size="9" fill="#BF360C">간접 납품 · SQA 점수 영향</text>
+  </g>
+  <g transform="translate(415, 280)" filter="url(#oem-shadow)">
+    <rect width="190" height="44" rx="6" fill="#FFF3E0" stroke="#FFB300" stroke-width="1.5"/>
+    <text x="95" y="18" text-anchor="middle" class="ko" font-size="11" fill="#E65100">Tier 2 협력사</text>
+    <text x="95" y="34" text-anchor="middle" class="ko" font-size="9" fill="#BF360C">PPAP Level 2 · FMEA 의무</text>
+  </g>
+
+  <!-- 연결선 -->
+  <g stroke="#F57F17" stroke-width="1.8" fill="none">
+    <path d="M 400 145 L 165 195"/>
+    <path d="M 400 145 L 400 195"/>
+    <path d="M 400 145 L 635 195"/>
+    <path d="M 165 245 L 290 280"/>
+    <path d="M 400 245 L 510 280"/>
+    <path d="M 635 245 L 510 280"/>
+  </g>
+
+  <!-- 좌측 5 축 표준 사이드바 -->
+  <g transform="translate(20, 100)">
+    <rect width="50" height="180" rx="6" fill="#BF360C" opacity="0.08"/>
+    <text x="25" y="20" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5 축</text>
+    <g font-size="9" class="ko" fill="#E65100" text-anchor="middle">
+      <text x="25" y="50">IATF</text>
+      <text x="25" y="64">16949</text>
+      <text x="25" y="88">PPAP</text>
+      <text x="25" y="112">VDA</text>
+      <text x="25" y="126">6.3</text>
+      <text x="25" y="150">SQA</text>
+      <text x="25" y="172">FMEA</text>
+    </g>
+  </g>
+
+  <!-- 하단 7 블록 인덱스 -->
+  <g transform="translate(40, 340)" font-size="10" class="ko">
+    <g fill="#E65100">
+      <rect x="0" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17"/>
+      <text x="50" y="15" text-anchor="middle" font-weight="700">A · 노출도</text>
+    </g>
+    <g fill="#E65100">
+      <rect x="106" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17"/>
+      <text x="156" y="15" text-anchor="middle" font-weight="700">B · 인증 보유</text>
+    </g>
+    <g fill="#E65100">
+      <rect x="212" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17"/>
+      <text x="262" y="15" text-anchor="middle" font-weight="700">C · 변경관리 공백</text>
+    </g>
+    <g fill="#E65100">
+      <rect x="318" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17" stroke-width="2"/>
+      <text x="368" y="15" text-anchor="middle" font-weight="700">D · PPAP 정합 ★</text>
+    </g>
+    <g fill="#E65100">
+      <rect x="424" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17"/>
+      <text x="474" y="15" text-anchor="middle" font-weight="700">E · 신뢰성</text>
+    </g>
+    <g fill="#E65100">
+      <rect x="530" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17"/>
+      <text x="580" y="15" text-anchor="middle" font-weight="700">F · KPI(PPM·SQA)</text>
+    </g>
+    <g fill="#E65100">
+      <rect x="636" y="0" width="100" height="22" rx="4" fill="#FFF3E0" stroke="#F57F17"/>
+      <text x="686" y="15" text-anchor="middle" font-weight="700">G · 용어집</text>
+    </g>
+  </g>
+
+  <g transform="translate(40, 378)" font-size="10" class="ko" fill="#E65100">
+    <text x="0" y="0" font-weight="700">갭 17 해소 · 패키지 4 (고무양산) · 다중 OEM 동시 대응 · SaaS 보안 D + 연합학습 모듈과 결합 가능</text>
+  </g>
+</svg>

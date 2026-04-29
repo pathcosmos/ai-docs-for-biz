@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="패키지 3 — 특수강관 (디지털 경남 9 개월, RAG 중심 4 시나리오)"
+     class="zoomable">
+  <title>패키지 3 — 특수강관 (RAG 중심 9 개월 암묵지 자산화)</title>
+  <desc>STL-07·08·11 + LLM-01 의 4 시나리오를 RAG 인프라 위에서 통합 운영하여 베테랑 공정설계 암묵지를 형식지 자산으로 전환하는 디지털 경남 9 개월 통합 파일럿 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="pkg3-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00695C"/>
+      <stop offset="100%" stop-color="#26A69A"/>
+    </linearGradient>
+    <filter id="pkg3-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="pkg3-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <!-- 상단 헤더 -->
+  <rect width="800" height="80" fill="url(#pkg3-bg)"/>
+  <text x="32" y="34" class="en" fill="rgba(255,255,255,0.7)" font-size="11">PACKAGE 03 · SPECIAL PIPE · RAG-CENTRIC · 9 MONTHS</text>
+  <text x="32" y="62" class="ko" fill="white" font-size="24">특수강관 · 베테랑 암묵지 자산화 RAG</text>
+  <g transform="translate(700, 22)" filter="url(#pkg3-glow)">
+    <circle cx="36" cy="20" r="20" fill="#FFB300"/>
+    <text x="36" y="26" text-anchor="middle" class="ko" fill="#1A237E" font-size="20">3</text>
+  </g>
+
+  <!-- 중간 — RAG 동심원 + 4 시나리오 카드 -->
+  <g transform="translate(32, 100)">
+    <text x="0" y="0" class="ko" fill="#004D40" font-size="13">4 시나리오 — RAG 인프라 위 통합 운영 (암묵지 → 형식지)</text>
+  </g>
+
+  <!-- 좌측: RAG 인프라 표상 -->
+  <g transform="translate(80, 130)">
+    <circle cx="80" cy="70" r="68" fill="#E0F2F1" opacity="0.8"/>
+    <circle cx="80" cy="70" r="48" fill="#80CBC4" opacity="0.7"/>
+    <circle cx="80" cy="70" r="28" fill="#26A69A"/>
+    <text x="80" y="56" text-anchor="middle" class="ko" fill="white" font-size="10">RAG</text>
+    <text x="80" y="70" text-anchor="middle" class="ko" fill="white" font-size="10">5 계층</text>
+    <text x="80" y="84" text-anchor="middle" class="ko-r" fill="white" font-size="8">5.2-a·c·f·g</text>
+
+    <text x="80" y="20" text-anchor="middle" class="ko-r" fill="#004D40" font-size="9">검색·생성</text>
+    <text x="20" y="74" text-anchor="middle" class="ko-r" fill="#004D40" font-size="9">임베딩</text>
+    <text x="140" y="74" text-anchor="middle" class="ko-r" fill="#004D40" font-size="9">청킹</text>
+    <text x="80" y="160" text-anchor="middle" class="ko-r" fill="#004D40" font-size="9">감사·평가</text>
+  </g>
+
+  <!-- 우측: 4 시나리오 카드 (2×2) -->
+  <g transform="translate(280, 110)">
+    <g filter="url(#pkg3-shadow)">
+      <rect width="220" height="62" rx="10" fill="white"/>
+      <rect width="6" height="62" fill="#00695C"/>
+      <text x="20" y="22" class="ko" fill="#00695C" font-size="13">STL-07 (주력)</text>
+      <text x="20" y="40" class="ko" fill="#263238" font-size="11">인발·필거밀 공정설계 LLM</text>
+      <text x="20" y="54" class="ko-r" fill="#546E7A" font-size="9">신규 주문 → 패스 스케줄 추천</text>
+    </g>
+    <g filter="url(#pkg3-shadow)" transform="translate(240, 0)">
+      <rect width="220" height="62" rx="10" fill="white"/>
+      <rect width="6" height="62" fill="#00897B"/>
+      <text x="20" y="22" class="ko" fill="#00897B" font-size="13">STL-08</text>
+      <text x="20" y="40" class="ko" fill="#263238" font-size="11">밀시트 OCR + 표준화</text>
+      <text x="20" y="54" class="ko-r" fill="#546E7A" font-size="9">PDF·이미지 → 구조화</text>
+    </g>
+    <g filter="url(#pkg3-shadow)" transform="translate(0, 78)">
+      <rect width="220" height="62" rx="10" fill="white"/>
+      <rect width="6" height="62" fill="#26A69A"/>
+      <text x="20" y="22" class="ko" fill="#26A69A" font-size="13">STL-11</text>
+      <text x="20" y="40" class="ko" fill="#263238" font-size="11">UT 자동 판정 (A-scan)</text>
+      <text x="20" y="54" class="ko-r" fill="#546E7A" font-size="9">검사원 편차 축소</text>
+    </g>
+    <g filter="url(#pkg3-shadow)" transform="translate(240, 78)">
+      <rect width="220" height="62" rx="10" fill="white"/>
+      <rect width="6" height="62" fill="#4DB6AC"/>
+      <text x="20" y="22" class="ko" fill="#00695C" font-size="13">LLM-01 (주력)</text>
+      <text x="20" y="40" class="ko" fill="#263238" font-size="11">SOP RAG · 작업지시 검색</text>
+      <text x="20" y="54" class="ko-r" fill="#546E7A" font-size="9">신입 단독 결정 가능률 ↑</text>
+    </g>
+  </g>
+
+  <!-- 하단 — 통계 -->
+  <g transform="translate(32, 296)">
+    <rect width="736" height="80" rx="10" fill="#F5F7FA" stroke="#CFD8DC" stroke-width="1"/>
+    <g class="ko" font-size="11" fill="#37474F">
+      <text x="20" y="26" font-size="22" font-weight="800" fill="#00695C">9</text>
+      <text x="20" y="50" font-size="10">개월 · Phase 1·2 분리</text>
+      <text x="20" y="66" class="ko-r" font-size="9" fill="#78909C">디지털 경남 표준</text>
+
+      <text x="160" y="26" font-size="22" font-weight="800" fill="#00695C">4</text>
+      <text x="160" y="50" font-size="10">시나리오 · 5.2 카드 4 종</text>
+      <text x="160" y="66" class="ko-r" font-size="9" fill="#78909C">a + c + f + g</text>
+
+      <text x="320" y="26" font-size="22" font-weight="800" fill="#00695C">7</text>
+      <text x="320" y="50" font-size="10">핵심 KPI</text>
+      <text x="320" y="66" class="ko-r" font-size="9" fill="#78909C">의존도·견적·검색·UT</text>
+
+      <text x="460" y="26" font-size="22" font-weight="800" fill="#F57F17">암묵지</text>
+      <text x="460" y="50" font-size="10">→ 형식지 자산화 5 축</text>
+      <text x="460" y="66" class="ko-r" font-size="9" fill="#78909C">베테랑 BCP 리스크 해소</text>
+
+      <text x="620" y="26" font-size="22" font-weight="800" fill="#00695C">자동차</text>
+      <text x="620" y="50" font-size="10">·플랜트·조선 OEM</text>
+      <text x="620" y="66" class="ko-r" font-size="9" fill="#78909C">±0.05 mm 공차</text>
+    </g>
+  </g>
+</svg>

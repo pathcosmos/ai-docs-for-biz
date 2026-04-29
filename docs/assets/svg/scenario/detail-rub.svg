@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시나리오 상세 — RUB 고무·폴리머 (RUB-01·02·05 + 03·04)"
+     class="zoomable">
+  <title>시나리오 상세 — RUB 5 시나리오 · 압출기 아이콘 + 인과 사슬</title>
+  <desc>패키지 4 (중견 고무·폴리머 양산사) 의 5 시나리오 — 배합·압출·가류·사출·외관 — 의 인과 사슬과 5.2 엔진 매핑 도식.</desc>
+
+  <defs>
+    <linearGradient id="rub-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <linearGradient id="rub-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="rub-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#rub-header)"/>
+  <!-- 압출기 아이콘 (실린더 + 다이) -->
+  <g transform="translate(28, 22)">
+    <rect x="0" y="10" width="28" height="14" rx="2" fill="#424242"/>
+    <rect x="28" y="6" width="6" height="22" fill="#FFB300"/>
+    <rect x="34" y="14" width="14" height="6" fill="#FF6F00"/>
+    <circle cx="6" cy="17" r="2" fill="#FFEB3B"/>
+    <circle cx="14" cy="17" r="2" fill="#FFEB3B"/>
+    <circle cx="22" cy="17" r="2" fill="#FFEB3B"/>
+  </g>
+  <text x="85" y="32" class="ko" font-size="20" fill="white">시나리오 상세 · RUB (고무·폴리머)</text>
+  <text x="85" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">RUB-01·02·03·04·05 · MIXING → EXTRUSION → CURING → INJECTION → APPEARANCE</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFF59D" text-anchor="end">패키지 4 · 갭 15 해소</text>
+
+  <!-- 인과 사슬 흐름 (RUB-01 → RUB-02 → RUB-05) -->
+  <!-- RUB-01 -->
+  <g transform="translate(20, 110)" filter="url(#rub-shadow)">
+    <rect width="140" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2.5"/>
+    <rect width="140" height="40" rx="10" fill="url(#rub-card)"/>
+    <rect y="28" width="140" height="12" fill="url(#rub-card)"/>
+    <text x="70" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-01</text>
+    <text x="70" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">배합 분산도 예측</text>
+    <text x="70" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-b 시계열</text>
+    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
+      <text y="0">▸ 배치 ID·로트 ID</text>
+      <text y="16">▸ 토크·점도 곡선</text>
+      <text y="32">▸ 분산 불량 사전</text>
+      <text y="48">  감지</text>
+      <text y="68" fill="#F57F17" font-weight="700">▸ Track 1 핵심</text>
+    </g>
+  </g>
+
+  <!-- RUB-02 (강조 — 결합 시연) -->
+  <g transform="translate(170, 110)" filter="url(#rub-shadow)">
+    <rect width="155" height="160" rx="10" fill="white" stroke="#BF360C" stroke-width="3"/>
+    <rect width="155" height="40" rx="10" fill="url(#rub-card)"/>
+    <rect y="28" width="155" height="12" fill="url(#rub-card)"/>
+    <text x="77" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-02 ★</text>
+    <text x="77" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">압출 치수·표면</text>
+    <text x="77" y="58" text-anchor="middle" class="ko" font-size="10" fill="#BF360C" font-weight="700">5.2-b + 5.2-c 결합</text>
+    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
+      <text y="0">▸ 시계열 + 비전</text>
+      <text y="16">▸ 레이저 치수 +</text>
+      <text y="32">  라인스캔 카메라</text>
+      <text y="48">▸ Model Router 통합</text>
+      <text y="68" fill="#F57F17" font-weight="700">▸ 주력 Phase 1~2</text>
+    </g>
+  </g>
+
+  <!-- RUB-05 -->
+  <g transform="translate(335, 110)" filter="url(#rub-shadow)">
+    <rect width="140" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2.5"/>
+    <rect width="140" height="40" rx="10" fill="url(#rub-card)"/>
+    <rect y="28" width="140" height="12" fill="url(#rub-card)"/>
+    <text x="70" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-05</text>
+    <text x="70" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">고무 외관 비전</text>
+    <text x="70" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-c 비전</text>
+    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
+      <text y="0">▸ 검은 표면 미세결함</text>
+      <text y="16">▸ Self-supervised</text>
+      <text y="32">▸ 다각도 고조도 조명</text>
+      <text y="48">▸ Active Learning</text>
+      <text y="68" fill="#F57F17" font-weight="700">▸ 확장 Phase 2</text>
+    </g>
+  </g>
+
+  <!-- 분리선 -->
+  <line x1="500" y1="105" x2="500" y2="280" stroke="#FFB300" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- RUB-03 -->
+  <g transform="translate(515, 110)" filter="url(#rub-shadow)">
+    <rect width="135" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2"/>
+    <rect width="135" height="40" rx="10" fill="url(#rub-card)"/>
+    <rect y="28" width="135" height="12" fill="url(#rub-card)"/>
+    <text x="68" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-03</text>
+    <text x="68" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">가류 시간·온도</text>
+    <text x="68" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-e 최적화</text>
+    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
+      <text y="0">▸ BO vs RL 분기</text>
+      <text y="16">▸ 회분식 / 연속식</text>
+      <text y="32">▸ Safe BO 안전 레이어</text>
+      <text y="48">▸ STL-06 분기와 동일</text>
+      <text y="68" fill="#F57F17" font-weight="700">▸ 핵심 Phase 2</text>
+    </g>
+  </g>
+
+  <!-- RUB-04 -->
+  <g transform="translate(660, 110)" filter="url(#rub-shadow)">
+    <rect width="120" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2"/>
+    <rect width="120" height="40" rx="10" fill="url(#rub-card)"/>
+    <rect y="28" width="120" height="12" fill="url(#rub-card)"/>
+    <text x="60" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-04</text>
+    <text x="60" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">사출 불량 예측</text>
+    <text x="60" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-c (+5.2-b)</text>
+    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
+      <text y="0">▸ OPC-UA 보편</text>
+      <text y="16">▸ 플래시·쇼트샷</text>
+      <text y="32">▸ 데이터 진입 장벽 ↓</text>
+      <text y="48">▸ Quick Win 진입</text>
+      <text y="68" fill="#F57F17" font-weight="700">▸ Phase 1</text>
+    </g>
+  </g>
+
+  <!-- 인과 사슬 화살표 -->
+  <g stroke="#E65100" stroke-width="3" fill="none" marker-end="url(#rub-arrow)">
+    <path d="M 162 190 L 168 190"/>
+    <path d="M 327 190 L 333 190"/>
+  </g>
+  <defs>
+    <marker id="rub-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#E65100"/>
+    </marker>
+  </defs>
+
+  <!-- 인과 사슬 라벨 -->
+  <g transform="translate(20, 285)">
+    <rect width="465" height="22" rx="4" fill="#FFE0B2" stroke="#F57F17"/>
+    <text x="232" y="15" text-anchor="middle" class="ko" font-size="10" fill="#BF360C" font-weight="700">▸ 배합 → 압출 → 외관 인과 사슬 (배치·로트 ID 결합 분석 · 시너지 ROI α=1.05)</text>
+  </g>
+  <g transform="translate(515, 285)">
+    <rect width="265" height="22" rx="4" fill="#FFE0B2" stroke="#F57F17"/>
+    <text x="132" y="15" text-anchor="middle" class="ko" font-size="10" fill="#BF360C" font-weight="700">▸ 가류·사출 — 독립 시나리오</text>
+  </g>
+
+  <!-- 하단 사용 안내 -->
+  <g transform="translate(20, 320)">
+    <rect width="760" height="55" rx="8" fill="rgba(230,81,0,0.06)" stroke="#E65100" stroke-dasharray="3 2"/>
+    <text x="20" y="20" class="ko" font-size="11" fill="#BF360C" font-weight="700">자동차 OEM 협력사 (화승급): RUB-01·02·05 우선 도입 · 일반 양산: RUB-03·04 추가</text>
+    <text x="20" y="40" class="ko" font-size="10" fill="#E65100">▸ 5.2-b·5.2-c·5.2-e 3 엔진 망라 · LLM-03 (8D 보고서) 결합 · OEM 모듈 정합 가능</text>
+  </g>
+</svg>

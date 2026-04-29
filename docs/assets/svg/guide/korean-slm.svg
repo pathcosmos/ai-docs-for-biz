@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="한국 sLM 활용 가이드 — 7 모델 매트릭스 인포그래픽">
+  <title>한국 sLM 활용 가이드 — 비교 매트릭스 (EXAONE·HyperCLOVA X·Gauss·포스코·Mi:dm·Solar·외산)</title>
+  <desc>한국 정부지원·대기업 협력 사업에서 활용 가능한 sLM 7 라인업 (한국 5 + 오픈소스 1 + 외산 비교축 1) 매트릭스. 4 분기 의사결정 (민감도·사업·인프라·비용) 와 강도 3 단계 통일. 가이드 군 4 번째 자산.</desc>
+
+  <defs>
+    <linearGradient id="ks-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#42A5F5"/>
+    </linearGradient>
+    <filter id="ks-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="400" fill="#F5F7FA"/>
+
+  <!-- 헤더 -->
+  <rect width="800" height="50" fill="url(#ks-header)"/>
+  <text x="30" y="32" class="ko" font-size="20" fill="white">한국 sLM 활용 가이드 · 7 모델 매트릭스</text>
+  <text x="770" y="32" text-anchor="end" class="en" font-size="11" fill="rgba(255,255,255,0.8)">KOREAN SLM</text>
+
+  <!-- 7 모델 카드 (3 + 3 + 1) -->
+  <g transform="translate(40, 75)" filter="url(#ks-shadow)">
+    <text x="0" y="-3" class="ko" font-size="12" fill="#1A237E">한국 5 + 오픈소스 한국어 1 + 외산 비교축 1</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(0, 6)">
+      <rect x="0" y="0" width="232" height="80" rx="6" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+      <rect x="0" y="0" width="232" height="22" rx="6" fill="#1565C0"/>
+      <text x="10" y="16" class="ko" font-size="12" fill="white">EXAONE · LG AI</text>
+      <text x="10" y="38" class="ko-r" font-size="10" fill="#37474F">산업·제조·바이오 도메인</text>
+      <text x="10" y="52" class="ko-r" font-size="10" fill="#37474F">LG AI 플랫폼 + 온프레</text>
+      <text x="10" y="70" class="ko" font-size="10" fill="#1565C0">대중소상생 LG 트랙 ★</text>
+
+      <rect x="244" y="0" width="232" height="80" rx="6" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+      <rect x="244" y="0" width="232" height="22" rx="6" fill="#1565C0"/>
+      <text x="254" y="16" class="ko" font-size="12" fill="white">HyperCLOVA X · 네이버</text>
+      <text x="254" y="38" class="ko-r" font-size="10" fill="#37474F">범용·문서·검색·커머스</text>
+      <text x="254" y="52" class="ko-r" font-size="10" fill="#37474F">NCP API · CSAP 정합</text>
+      <text x="254" y="70" class="ko" font-size="10" fill="#1565C0">클라우드 종합솔루션 ★</text>
+
+      <rect x="488" y="0" width="232" height="80" rx="6" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+      <rect x="488" y="0" width="232" height="22" rx="6" fill="#1565C0"/>
+      <text x="498" y="16" class="ko" font-size="12" fill="white">Gauss · 삼성</text>
+      <text x="498" y="38" class="ko-r" font-size="10" fill="#37474F">가전·반도체·디스플레이</text>
+      <text x="498" y="52" class="ko-r" font-size="10" fill="#37474F">삼성 클라우드 + 온프레</text>
+      <text x="498" y="70" class="ko" font-size="10" fill="#1565C0">대중소상생 삼성 트랙 ★</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 96)">
+      <rect x="0" y="0" width="232" height="80" rx="6" fill="white" stroke="#7E57C2" stroke-width="1.5"/>
+      <rect x="0" y="0" width="232" height="22" rx="6" fill="#7E57C2"/>
+      <text x="10" y="16" class="ko" font-size="12" fill="white">포스코 sLM</text>
+      <text x="10" y="38" class="ko-r" font-size="10" fill="#37474F">철강·금속 도메인 특화</text>
+      <text x="10" y="52" class="ko-r" font-size="10" fill="#37474F">포스코 클라우드</text>
+      <text x="10" y="70" class="ko" font-size="10" fill="#7E57C2">대중소상생 포스코 트랙 ★</text>
+
+      <rect x="244" y="0" width="232" height="80" rx="6" fill="white" stroke="#7E57C2" stroke-width="1.5"/>
+      <rect x="244" y="0" width="232" height="22" rx="6" fill="#7E57C2"/>
+      <text x="254" y="16" class="ko" font-size="12" fill="white">KT Mi:dm · KT</text>
+      <text x="254" y="38" class="ko-r" font-size="10" fill="#37474F">범용·통신·고객 응대</text>
+      <text x="254" y="52" class="ko-r" font-size="10" fill="#37474F">KT 클라우드 + 온프레</text>
+      <text x="254" y="70" class="ko" font-size="10" fill="#7E57C2">CSAP · 콜센터 사업 ★</text>
+
+      <rect x="488" y="0" width="232" height="80" rx="6" fill="white" stroke="#26A69A" stroke-width="1.5"/>
+      <rect x="488" y="0" width="232" height="22" rx="6" fill="#26A69A"/>
+      <text x="498" y="16" class="ko" font-size="12" fill="white">Solar / Llama 한국어 (OSS)</text>
+      <text x="498" y="38" class="ko-r" font-size="10" fill="#37474F">파인튜닝 자유 (LoRA)</text>
+      <text x="498" y="52" class="ko-r" font-size="10" fill="#37474F">자체 호스팅 온프레</text>
+      <text x="498" y="70" class="ko" font-size="10" fill="#26A69A">R&amp;D · 전사적 DX 트랙 ★</text>
+    </g>
+
+    <!-- Row 3 (외산 비교축, 단일) -->
+    <g transform="translate(0, 192)">
+      <rect x="0" y="0" width="720" height="40" rx="6" fill="#F5F5F5" stroke="#78909C" stroke-width="1.5"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="#37474F">(외산 비교축) GPT · Claude · Gemini</text>
+      <text x="14" y="33" class="ko-r" font-size="10" fill="#78909C">API only · 토큰 과금 · 한국어 우수 · 데이터 외부 전송 · 데이터 민감도 낮은 일반 사업 한정</text>
+    </g>
+  </g>
+
+  <!-- 우측 4 분기 (작은 인포) -->
+  <g transform="translate(40, 320)">
+    <text x="0" y="0" class="ko" font-size="11" fill="#1A237E">4 분기 의사결정 — sLM 선정</text>
+    <g transform="translate(0, 6)" font-size="9" class="ko-r">
+      <rect x="0" y="0" width="175" height="20" rx="3" fill="#E3F2FD"/>
+      <text x="6" y="13" fill="#1565C0">§2.1 데이터 민감도 (① ~ ⑤)</text>
+      <rect x="180" y="0" width="175" height="20" rx="3" fill="#E3F2FD"/>
+      <text x="186" y="13" fill="#1565C0">§2.2 사업 성격 (트랙 매핑)</text>
+      <rect x="360" y="0" width="175" height="20" rx="3" fill="#E3F2FD"/>
+      <text x="366" y="13" fill="#1565C0">§2.3 인프라 (API · 온프레)</text>
+      <rect x="540" y="0" width="180" height="20" rx="3" fill="#E3F2FD"/>
+      <text x="546" y="13" fill="#1565C0">§2.4 비용 (토큰 vs GPU)</text>
+    </g>
+  </g>
+
+  <!-- 하단 통일 -->
+  <g transform="translate(40, 350)">
+    <rect x="0" y="0" width="720" height="35" rx="6" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
+    <text x="14" y="14" class="ko" font-size="10" fill="#E65100">가이드 군 4 번째 (운영 가이드 첫 모델 자산) · 4.26 포맷 표준 발현</text>
+    <text x="14" y="28" class="ko-r" font-size="9" fill="#37474F">▸ 8 장 구조 · 4 분기 의사결정 · 강도 3 단계 (민감 ④⑤·③·①②) · 패키지 4 EXAONE 5 위치 1 차 적용</text>
+  </g>
+</svg>

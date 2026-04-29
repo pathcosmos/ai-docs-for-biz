@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="RACI 책임 분담 매트릭스 — 4 역할 + AI 의사결정 + 권한 차등 3 차원"
+     class="zoomable">
+  <title>RACI 책임 분담 매트릭스 — Responsible · Accountable · Consulted · Informed + AI 위임</title>
+  <desc>RACI 4 역할 (R·A·C·I) × AI 의사결정 위임 단계 × 권한 차등 (자동·승인·인간 결정) 3 차원으로 구성된 책임 분담 매트릭스 시각화.</desc>
+
+  <defs>
+    <linearGradient id="raci-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="100%" stop-color="#3949AB"/>
+    </linearGradient>
+    <filter id="raci-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#raci-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">RACI MATRIX · AI DECISION DELEGATION · 3 AXES</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">책임 분담 매트릭스 — RACI × AI × 권한 차등</text>
+
+  <!-- RACI 4 역할 -->
+  <g transform="translate(32, 95)" class="ko" font-size="11">
+    <text y="0" fill="#1A237E" font-size="12" font-weight="700">RACI 4 역할</text>
+    <g transform="translate(0, 12)" filter="url(#raci-shadow)">
+      <rect width="170" height="60" rx="8" fill="white" stroke="#1A237E" stroke-width="1.5"/>
+      <rect width="50" height="60" rx="8" fill="#C62828"/>
+      <text x="25" y="38" text-anchor="middle" class="ko" fill="white" font-size="22">R</text>
+      <text x="60" y="22" fill="#1A237E" font-size="12">Responsible</text>
+      <text x="60" y="40" class="ko-r" fill="#37474F" font-size="10">실행 담당</text>
+      <text x="60" y="54" class="ko-r" fill="#78909C" font-size="9">현업·엔지니어</text>
+    </g>
+    <g transform="translate(186, 12)" filter="url(#raci-shadow)">
+      <rect width="170" height="60" rx="8" fill="white" stroke="#1A237E" stroke-width="1.5"/>
+      <rect width="50" height="60" rx="8" fill="#1565C0"/>
+      <text x="25" y="38" text-anchor="middle" class="ko" fill="white" font-size="22">A</text>
+      <text x="60" y="22" fill="#1A237E" font-size="12">Accountable</text>
+      <text x="60" y="40" class="ko-r" fill="#37474F" font-size="10">최종 책임</text>
+      <text x="60" y="54" class="ko-r" fill="#78909C" font-size="9">PM·임원</text>
+    </g>
+    <g transform="translate(372, 12)" filter="url(#raci-shadow)">
+      <rect width="170" height="60" rx="8" fill="white" stroke="#1A237E" stroke-width="1.5"/>
+      <rect width="50" height="60" rx="8" fill="#00897B"/>
+      <text x="25" y="38" text-anchor="middle" class="ko" fill="white" font-size="22">C</text>
+      <text x="60" y="22" fill="#1A237E" font-size="12">Consulted</text>
+      <text x="60" y="40" class="ko-r" fill="#37474F" font-size="10">자문·협의</text>
+      <text x="60" y="54" class="ko-r" fill="#78909C" font-size="9">전문가·법무</text>
+    </g>
+    <g transform="translate(558, 12)" filter="url(#raci-shadow)">
+      <rect width="170" height="60" rx="8" fill="white" stroke="#1A237E" stroke-width="1.5"/>
+      <rect width="50" height="60" rx="8" fill="#7B1FA2"/>
+      <text x="25" y="38" text-anchor="middle" class="ko" fill="white" font-size="22">I</text>
+      <text x="60" y="22" fill="#1A237E" font-size="12">Informed</text>
+      <text x="60" y="40" class="ko-r" fill="#37474F" font-size="10">통보 대상</text>
+      <text x="60" y="54" class="ko-r" fill="#78909C" font-size="9">경영진·감사</text>
+    </g>
+  </g>
+
+  <!-- AI 의사결정 + 권한 차등 -->
+  <g transform="translate(32, 200)" class="ko" font-size="11">
+    <text y="0" fill="#1A237E" font-size="12" font-weight="700">AI 의사결정 위임 + 권한 차등 3 단</text>
+    <g transform="translate(0, 12)" filter="url(#raci-shadow)">
+      <rect width="240" height="100" rx="10" fill="white" stroke="#3949AB" stroke-width="1.5"/>
+      <rect width="240" height="32" rx="10" fill="#3949AB"/>
+      <rect y="20" width="240" height="12" fill="#3949AB"/>
+      <text x="14" y="22" fill="white" font-size="12">자동 (AI 단독)</text>
+      <text x="14" y="56" class="ko-r" fill="#37474F" font-size="11">파라미터 자동 보정</text>
+      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="11">통계적 이상치 격리</text>
+      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">low-risk · 가역적</text>
+    </g>
+    <g transform="translate(252, 12)" filter="url(#raci-shadow)">
+      <rect width="240" height="100" rx="10" fill="white" stroke="#5C6BC0" stroke-width="1.5"/>
+      <rect width="240" height="32" rx="10" fill="#5C6BC0"/>
+      <rect y="20" width="240" height="12" fill="#5C6BC0"/>
+      <text x="14" y="22" fill="white" font-size="12">승인 (AI 제안 + 인간 승인)</text>
+      <text x="14" y="56" class="ko-r" fill="#37474F" font-size="11">설비 정지·교체 권고</text>
+      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="11">품질 출하 제외 결정</text>
+      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">mid-risk · HITL</text>
+    </g>
+    <g transform="translate(504, 12)" filter="url(#raci-shadow)">
+      <rect width="240" height="100" rx="10" fill="white" stroke="#7986CB" stroke-width="1.5"/>
+      <rect width="240" height="32" rx="10" fill="#7986CB"/>
+      <rect y="20" width="240" height="12" fill="#7986CB"/>
+      <text x="14" y="22" fill="white" font-size="12">인간 결정 (AI 보조)</text>
+      <text x="14" y="56" class="ko-r" fill="#37474F" font-size="11">투자·인사·계약</text>
+      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="11">규제 보고 콘텐츠 확정</text>
+      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">high-risk · 비가역</text>
+    </g>
+  </g>
+
+  <rect x="0" y="345" width="800" height="55" fill="#F5F7FA"/>
+  <g transform="translate(32, 372)" class="ko" font-size="12" fill="#1A237E">
+    <text y="0" font-weight="700">4 RACI 역할</text>
+    <text x="130" y="0" font-weight="700">3 권한 차등 단계</text>
+    <text x="290" y="0" font-weight="700">12 셀 매트릭스</text>
+    <text x="450" y="0" font-weight="700">감사 로그 의무</text>
+    <text x="600" y="0" font-weight="700">사업계획서 §6 거버넌스</text>
+  </g>
+</svg>

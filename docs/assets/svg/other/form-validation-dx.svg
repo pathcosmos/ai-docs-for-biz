@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="양식 검증 — 전사적 DX 67p · 8 섹션 추출 · 단계+연차 이중"
+     class="zoomable">
+  <title>양식 검증 — 전사적 DX 촉진 사업계획서 (67 페이지 · 8 섹션 · 단계+연차)</title>
+  <desc>전사적 DX 촉진 67 페이지 양식의 8 섹션 추출과 단계(준비·실증·확산) + 연차(1·2·3차) 이중 진척 표기 매핑.</desc>
+
+  <defs>
+    <linearGradient id="fv-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </linearGradient>
+    <filter id="fv-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#fv-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">FORM VALIDATION · DX PROMOTION · 67P · 8 SECTIONS</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">양식 검증 — 전사적 DX 촉진 (67p · 단계+연차 이중)</text>
+
+  <!-- 67p 양식 도식 -->
+  <g transform="translate(32, 95)">
+    <text y="0" class="ko" fill="#1A237E" font-size="12" font-weight="700">67 페이지 양식 → 8 섹션 추출</text>
+    <g transform="translate(0, 12)" filter="url(#fv-shadow)">
+      <rect width="120" height="180" rx="6" fill="white" stroke="#1565C0" stroke-width="1.5"/>
+      <rect width="120" height="22" rx="6" fill="#1565C0"/>
+      <text x="60" y="16" text-anchor="middle" class="ko" fill="white" font-size="11">PDF 67p</text>
+      <g transform="translate(8, 32)" font-size="8" fill="#37474F" class="ko-r">
+        <text y="0">섹션 1 · 사업 개요</text>
+        <text y="14">섹션 2 · 추진 배경</text>
+        <text y="28">섹션 3 · AS-IS</text>
+        <text y="42">섹션 4 · TO-BE</text>
+        <text y="56">섹션 5 · 추진 일정</text>
+        <text y="70">섹션 6 · 기대효과</text>
+        <text y="84">섹션 7 · 거버넌스</text>
+        <text y="98">섹션 8 · ESG·재무</text>
+        <text y="120" fill="#78909C">[부록 표·도표 21]</text>
+        <text y="134" fill="#78909C">[증빙 14]</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 화살표 + 8 섹션 카드 -->
+  <g transform="translate(170, 110)">
+    <path d="M 0 80 L 30 80" stroke="#1565C0" stroke-width="2" fill="none"/>
+    <polygon points="30,76 30,84 38,80" fill="#1565C0"/>
+  </g>
+
+  <g transform="translate(220, 110)" class="ko" font-size="10">
+    <g filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+      <text x="8" y="14" fill="#1A237E" font-size="11">§1 사업 개요</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">과제명·기간·체계</text>
+    </g>
+    <g transform="translate(140, 0)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+      <text x="8" y="14" fill="#1A237E" font-size="11">§2 추진 배경</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">거시·산업 환경</text>
+    </g>
+    <g transform="translate(280, 0)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+      <text x="8" y="14" fill="#1A237E" font-size="11">§3 AS-IS</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">현황·문제점</text>
+    </g>
+    <g transform="translate(420, 0)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+      <text x="8" y="14" fill="#4A148C" font-size="11">§4 TO-BE</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">전략·아키텍처</text>
+    </g>
+    <g transform="translate(0, 50)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+      <text x="8" y="14" fill="#4A148C" font-size="11">§5 추진 일정</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">단계+연차 이중</text>
+    </g>
+    <g transform="translate(140, 50)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+      <text x="8" y="14" fill="#4A148C" font-size="11">§6 기대효과</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">KPI · ROI</text>
+    </g>
+    <g transform="translate(280, 50)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+      <text x="8" y="14" fill="#4A148C" font-size="11">§7 거버넌스</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">RACI · 감사</text>
+    </g>
+    <g transform="translate(420, 50)" filter="url(#fv-shadow)">
+      <rect width="130" height="36" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+      <text x="8" y="14" fill="#4A148C" font-size="11">§8 ESG·재무</text>
+      <text x="8" y="28" class="ko-r" fill="#37474F" font-size="9">CBAM · ROI</text>
+    </g>
+  </g>
+
+  <!-- 단계+연차 이중 -->
+  <g transform="translate(220, 220)" class="ko" font-size="11">
+    <text y="0" fill="#1A237E" font-size="12" font-weight="700">단계 (3) + 연차 (3) 이중 진척 표기</text>
+    <g transform="translate(0, 12)" font-size="10">
+      <rect x="0" y="0" width="170" height="22" rx="6" fill="#1565C0"/>
+      <text x="8" y="15" fill="white">단계 1: 준비 (Y1)</text>
+      <rect x="180" y="0" width="180" height="22" rx="6" fill="#7B1FA2"/>
+      <text x="188" y="15" fill="white">단계 2: 실증 (Y1-Y2)</text>
+      <rect x="370" y="0" width="180" height="22" rx="6" fill="#5C6BC0"/>
+      <text x="378" y="15" fill="white">단계 3: 확산 (Y2-Y3)</text>
+    </g>
+    <g transform="translate(0, 42)" font-size="10">
+      <rect x="0" y="0" width="180" height="18" rx="4" fill="#FFB300"/>
+      <text x="8" y="13" fill="#1A237E">연차 1 (구축)</text>
+      <rect x="190" y="0" width="180" height="18" rx="4" fill="#FF9800"/>
+      <text x="198" y="13" fill="white">연차 2 (확장)</text>
+      <rect x="380" y="0" width="170" height="18" rx="4" fill="#F57F17"/>
+      <text x="388" y="13" fill="white">연차 3 (운영·전사)</text>
+    </g>
+  </g>
+
+  <rect x="0" y="335" width="800" height="65" fill="#F5F0F7"/>
+  <g transform="translate(32, 360)" class="ko" font-size="12" fill="#1A237E">
+    <text y="0" font-weight="700">67 페이지</text>
+    <text x="120" y="0" font-weight="700">8 섹션</text>
+    <text x="220" y="0" font-weight="700">21 표·도표</text>
+    <text x="350" y="0" font-weight="700">14 증빙</text>
+    <text x="460" y="0" font-weight="700">단계 3 + 연차 3 이중</text>
+    <text x="660" y="0" font-weight="700">DX 촉진 양식</text>
+  </g>
+  <text x="32" y="386" class="ko-r" font-size="10" fill="#546E7A">사업계획서 작성 전 양식 검증 → 누락·중복 0 건 보장</text>
+</svg>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="지원사업 공고 — 8 종 카드 (전사적 DX·스마트공장·디지털 경남 등)"
+     class="zoomable">
+  <title>정부·대기업 지원사업 공고 8 종 — 전사적 DX · 스마트공장 · 디지털 경남 외</title>
+  <desc>전사적 DX 촉진, 스마트공장, 디지털 경남, 대중소상생, 클라우드 지원사업, AI 바우처, K-디지털, AI 데이터 댐의 8 종 정부·대기업 지원사업 공고를 카드 형태로 시각화.</desc>
+
+  <defs>
+    <linearGradient id="sp-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="33%" stop-color="#6A1B9A"/>
+      <stop offset="66%" stop-color="#00695C"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="sp-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#sp-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.85)" font-size="11">SUPPORT PROGRAMS · 8 PROGRAMS · GOV + ENTERPRISE</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">지원사업 공고 8 종 — 정부 · 대기업 매핑</text>
+
+  <!-- 8 카드 (4×2) -->
+  <g transform="translate(28, 95)" class="ko" font-size="11">
+    <g filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#1565C0"/>
+      <rect y="18" width="180" height="10" fill="#1565C0"/>
+      <text x="12" y="20" fill="white" font-size="12">전사적 DX 촉진</text>
+      <text x="12" y="48" fill="#1A237E" font-size="11">대규모 R&amp;D</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">3~5 년 · 다년 협약</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">대기업 · 중견 · 컨소시엄</text>
+    </g>
+    <g transform="translate(190, 0)" filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#7B1FA2"/>
+      <rect y="18" width="180" height="10" fill="#7B1FA2"/>
+      <text x="12" y="20" fill="white" font-size="12">스마트공장</text>
+      <text x="12" y="48" fill="#4A148C" font-size="11">중기·기초·고도화</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">1~2 년 · 단기</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">중소·중견 제조</text>
+    </g>
+    <g transform="translate(380, 0)" filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#00897B"/>
+      <rect y="18" width="180" height="10" fill="#00897B"/>
+      <text x="12" y="20" fill="white" font-size="12">디지털 경남</text>
+      <text x="12" y="48" fill="#004D40" font-size="11">지자체 매칭</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">1~3 년 · 부산경남</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">지역 제조 · 클러스터</text>
+    </g>
+    <g transform="translate(570, 0)" filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#F57F17"/>
+      <rect y="18" width="180" height="10" fill="#F57F17"/>
+      <text x="12" y="20" fill="white" font-size="12">대중소상생</text>
+      <text x="12" y="48" fill="#E65100" font-size="11">대기업 + 협력사</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">1~2 년 · 협력</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">철강·고무 등</text>
+    </g>
+  </g>
+  <g transform="translate(28, 210)" class="ko" font-size="11">
+    <g filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#3949AB"/>
+      <rect y="18" width="180" height="10" fill="#3949AB"/>
+      <text x="12" y="20" fill="white" font-size="12">클라우드 지원사업</text>
+      <text x="12" y="48" fill="#1A237E" font-size="11">통합형 클라우드</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">2~3 년</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">CSP 연계 · ESG</text>
+    </g>
+    <g transform="translate(190, 0)" filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#5C6BC0"/>
+      <rect y="18" width="180" height="10" fill="#5C6BC0"/>
+      <text x="12" y="20" fill="white" font-size="12">AI 바우처</text>
+      <text x="12" y="48" fill="#1A237E" font-size="11">단기 · 솔루션 도입</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">~1 년</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">중소 · 단발</text>
+    </g>
+    <g transform="translate(380, 0)" filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#26A69A"/>
+      <rect y="18" width="180" height="10" fill="#26A69A"/>
+      <text x="12" y="20" fill="white" font-size="12">K-디지털 트레이닝</text>
+      <text x="12" y="48" fill="#004D40" font-size="11">AI 인력 양성</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">1 년</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">교육 + R&amp;D 결합</text>
+    </g>
+    <g transform="translate(570, 0)" filter="url(#sp-shadow)">
+      <rect width="180" height="100" rx="10" fill="white"/>
+      <rect width="180" height="28" rx="10" fill="#FFB300"/>
+      <rect y="18" width="180" height="10" fill="#FFB300"/>
+      <text x="12" y="20" fill="white" font-size="12">AI 데이터 댐</text>
+      <text x="12" y="48" fill="#E65100" font-size="11">데이터 구축·개방</text>
+      <text x="12" y="66" class="ko-r" fill="#37474F" font-size="10">2~3 년</text>
+      <text x="12" y="84" class="ko-r" fill="#78909C" font-size="9">제조 데이터셋</text>
+    </g>
+  </g>
+
+  <rect x="0" y="335" width="800" height="65" fill="#F5F7FA"/>
+  <g transform="translate(32, 360)" class="ko" font-size="12" fill="#1A237E">
+    <text y="0" font-weight="700">8 지원사업</text>
+    <text x="130" y="0" font-weight="700">정부 6 + 대기업 2</text>
+    <text x="290" y="0" font-weight="700">~1 년 / 1~3 년 / 3~5 년</text>
+    <text x="490" y="0" font-weight="700">철강·금속·고무 적합</text>
+    <text x="680" y="0" font-weight="700">패키지 매핑</text>
+  </g>
+  <text x="32" y="386" class="ko-r" font-size="10" fill="#546E7A">고객사 규모·기간·테마에 따른 지원사업 선택 가이드</text>
+</svg>

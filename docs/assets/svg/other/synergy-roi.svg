@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시너지 ROI 모델 — α_total + β_total 산식 + 6 패키지 84 셀"
+     class="zoomable">
+  <title>시너지 ROI 모델 (α + β) — 6 패키지 시너지 매트릭스 84 셀</title>
+  <desc>패키지 내부 시너지 α_total 과 패키지 간 시너지 β_total 의 합산 산식, 6×14 = 84 셀의 시너지 매트릭스, 패키지별 α + β 합계 분포를 시각화한 시너지 ROI 모델 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="syn-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F57F17"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+    <filter id="syn-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.20"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+      .formula { font-family: 'Inter',serif; font-style: italic; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#syn-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.85)" font-size="11">SYNERGY ROI MODEL · α + β · 6 PACKAGES</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">시너지 ROI 모델 — α_total + β_total</text>
+
+  <!-- 산식 박스 -->
+  <g transform="translate(32, 95)" filter="url(#syn-shadow)">
+    <rect width="320" height="100" rx="10" fill="white" stroke="#F57F17" stroke-width="1.5"/>
+    <text x="20" y="28" class="ko" fill="#E65100" font-size="13">시너지 ROI 산식</text>
+    <text x="20" y="56" class="formula" fill="#1A237E" font-size="15">ROI_total = Σ α_i + Σ β_ij</text>
+    <text x="20" y="76" class="ko-r" fill="#37474F" font-size="11">α_i — 패키지 i 내부 시나리오 시너지</text>
+    <text x="20" y="92" class="ko-r" fill="#37474F" font-size="11">β_ij — 패키지 i × j 간 교차 시너지</text>
+  </g>
+
+  <!-- 패키지 막대 -->
+  <g transform="translate(380, 95)" class="ko" font-size="11">
+    <text y="0" fill="#E65100" font-weight="700">패키지별 α + β 합계 (정규화)</text>
+    <g transform="translate(0, 12)" font-size="10">
+      <text y="14" fill="#1A237E">P1 철강 전사</text>
+      <rect x="100" y="4" width="280" height="12" rx="3" fill="#F57F17"/>
+      <text y="14" x="385" fill="#37474F">94</text>
+      <text y="32" fill="#1A237E">P2 가공 중견</text>
+      <rect x="100" y="22" width="220" height="12" rx="3" fill="#FF9800"/>
+      <text y="32" x="325" fill="#37474F">76</text>
+      <text y="50" fill="#1A237E">P3 특수강관</text>
+      <rect x="100" y="40" width="195" height="12" rx="3" fill="#FFA726"/>
+      <text y="50" x="300" fill="#37474F">68</text>
+      <text y="68" fill="#1A237E">P4 고무·고분자</text>
+      <rect x="100" y="58" width="180" height="12" rx="3" fill="#FFB300"/>
+      <text y="68" x="285" fill="#37474F">63</text>
+      <text y="86" fill="#1A237E">P5 정밀가공</text>
+      <rect x="100" y="76" width="160" height="12" rx="3" fill="#FFC107"/>
+      <text y="86" x="265" fill="#37474F">56</text>
+      <text y="104" fill="#1A237E">P6 유틸·ESG</text>
+      <rect x="100" y="94" width="140" height="12" rx="3" fill="#FFD54F"/>
+      <text y="104" x="245" fill="#37474F">48</text>
+    </g>
+  </g>
+
+  <!-- 84 셀 매트릭스 (6×14 dots) -->
+  <g transform="translate(32, 220)">
+    <text y="0" class="ko" fill="#E65100" font-size="12" font-weight="700">시너지 매트릭스 — 6 패키지 × 14 시나리오 = 84 셀</text>
+    <g transform="translate(0, 12)">
+      <!-- 6 rows × 14 cols = 84 dots -->
+      <g fill="#F57F17">
+        <!-- row 1 -->
+        <rect x="0" y="0" width="50" height="14" rx="2"/>
+        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.85"/>
+        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.25"/>
+        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+      </g>
+      <g fill="#FF9800" transform="translate(0, 18)">
+        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.85"/>
+        <rect x="108" y="0" width="50" height="14" rx="2"/>
+        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+      </g>
+      <g fill="#FFA726" transform="translate(0, 36)">
+        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.85"/>
+        <rect x="162" y="0" width="50" height="14" rx="2"/>
+        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.25"/>
+      </g>
+      <g fill="#FFB300" transform="translate(0, 54)">
+        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.85"/>
+        <rect x="216" y="0" width="50" height="14" rx="2"/>
+        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.2"/>
+      </g>
+      <g fill="#FFC107" transform="translate(0, 72)">
+        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.85"/>
+        <rect x="270" y="0" width="50" height="14" rx="2"/>
+        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.6"/>
+        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.2"/>
+      </g>
+      <g fill="#FFD54F" transform="translate(0, 90)">
+        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.55"/>
+        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.7"/>
+        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.85"/>
+        <rect x="324" y="0" width="50" height="14" rx="2"/>
+        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.5"/>
+        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.4"/>
+        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.2"/>
+        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.3"/>
+      </g>
+    </g>
+  </g>
+
+  <rect x="0" y="365" width="800" height="35" fill="#FFF8E1"/>
+  <g transform="translate(32, 386)" class="ko" font-size="11" fill="#E65100">
+    <text y="0" font-weight="700">6 패키지 · 84 시너지 셀 · α + β 합산 · 정량 ROI 산정 모델</text>
+  </g>
+</svg>

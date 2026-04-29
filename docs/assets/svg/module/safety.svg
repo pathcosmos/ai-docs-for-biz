@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="모듈 — 중대재해·산업안전 AI (BLK-SAF-A~G 7 블록)"
+     class="zoomable">
+  <title>중대재해·산업안전 AI 모듈 — 안전모 + 이상탐지 + SMS 알람</title>
+  <desc>중대재해처벌법 대응 안전 AI 모듈 — 안전모 아이콘과 5.2-d 이상탐지 엔진, SMS 알람 에스컬레이션을 시각화한 도식. 7 블록(A~G) 인덱스 포함.</desc>
+
+  <defs>
+    <linearGradient id="saf-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B71C1C"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <linearGradient id="saf-cell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF5350"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <filter id="saf-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#saf-header)"/>
+  <!-- 안전모 아이콘 -->
+  <g transform="translate(30, 18)">
+    <path d="M 5 30 L 5 22 Q 5 8 20 8 Q 35 8 35 22 L 35 30 Z" fill="#FFD600" stroke="white" stroke-width="2"/>
+    <rect x="2" y="28" width="36" height="6" rx="2" fill="#FFD600" stroke="white" stroke-width="1.5"/>
+    <line x1="20" y1="8" x2="20" y2="30" stroke="#C62828" stroke-width="2"/>
+  </g>
+  <text x="80" y="32" class="ko" font-size="20" fill="white">모듈 · 중대재해 · 산업안전 AI</text>
+  <text x="80" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SERIOUS-ACCIDENTS PREVENTION · 7 BLOCKS · CCTV · WEARABLE · MSDS RAG</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFCDD2" text-anchor="end">경영책임자 의무이행 증거 체계</text>
+
+  <!-- 3 축 아키텍처 -->
+  <g transform="translate(40, 100)" filter="url(#saf-shadow)">
+    <rect width="220" height="170" rx="12" fill="white" stroke="#FFCDD2" stroke-width="2"/>
+    <rect width="220" height="42" rx="12" fill="url(#saf-cell)"/>
+    <rect y="30" width="220" height="12" fill="url(#saf-cell)"/>
+    <text x="20" y="28" class="ko" font-size="15" fill="white">CCTV 비전</text>
+    <text x="20" y="68" class="ko" font-size="11" fill="#B71C1C">5.2-c 비전 위험요소 감지</text>
+    <g transform="translate(20, 84)" font-size="10" fill="#B71C1C" class="ko">
+      <text y="0">• 미착용·진입 금지</text>
+      <text y="16">• 회전기 협착·낙하물</text>
+      <text y="32">• 작업자 자세·동선</text>
+      <text y="48">• 사고 사전 징후 감지</text>
+      <text y="68" font-weight="700">▸ SCN-SAF-01</text>
+    </g>
+  </g>
+
+  <g transform="translate(290, 100)" filter="url(#saf-shadow)">
+    <rect width="220" height="170" rx="12" fill="white" stroke="#FFCDD2" stroke-width="2"/>
+    <rect width="220" height="42" rx="12" fill="url(#saf-cell)"/>
+    <rect y="30" width="220" height="12" fill="url(#saf-cell)"/>
+    <text x="20" y="28" class="ko" font-size="15" fill="white">웨어러블 5.2-d</text>
+    <text x="20" y="68" class="ko" font-size="11" fill="#B71C1C">이상탐지 + 생체 신호</text>
+    <g transform="translate(20, 84)" font-size="10" fill="#B71C1C" class="ko">
+      <text y="0">• 가속도 · 자이로</text>
+      <text y="16">• 심박 · 체온 · 위치</text>
+      <text y="32">• 추락·전도 패턴 학습</text>
+      <text y="48">• Isolation Forest · LSTM-AE</text>
+      <text y="68" font-weight="700">▸ BLK-SAF-D</text>
+    </g>
+  </g>
+
+  <g transform="translate(540, 100)" filter="url(#saf-shadow)">
+    <rect width="220" height="170" rx="12" fill="white" stroke="#FFCDD2" stroke-width="2"/>
+    <rect width="220" height="42" rx="12" fill="url(#saf-cell)"/>
+    <rect y="30" width="220" height="12" fill="url(#saf-cell)"/>
+    <text x="20" y="28" class="ko" font-size="15" fill="white">SMS 알람</text>
+    <text x="20" y="68" class="ko" font-size="11" fill="#B71C1C">에스컬레이션 + MSDS RAG</text>
+    <g transform="translate(20, 84)" font-size="10" fill="#B71C1C" class="ko">
+      <text y="0">• 작업자 → 관리감독자</text>
+      <text y="16">• → 안전관리자 → 책임자</text>
+      <text y="32">• 사고이력 · MSDS 자동검색</text>
+      <text y="48">• 5.2-f LLM·RAG 결합</text>
+      <text y="68" font-weight="700">▸ BLK-SAF-F</text>
+    </g>
+  </g>
+
+  <!-- 데이터 흐름 화살표 -->
+  <g stroke="#C62828" stroke-width="2" fill="none">
+    <path d="M 260 185 L 290 185" marker-end="url(#saf-arrow)"/>
+    <path d="M 510 185 L 540 185" marker-end="url(#saf-arrow)"/>
+  </g>
+  <defs>
+    <marker id="saf-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#C62828"/>
+    </marker>
+  </defs>
+
+  <!-- 7 블록 인덱스 -->
+  <g transform="translate(40, 295)">
+    <text x="0" y="0" class="ko" font-size="12" fill="#B71C1C">7 블록 · 7 삽입 지점 — 거시 · 당위성 · AS-IS · TO-BE · 정성효과 · Track 3 · 부록</text>
+  </g>
+  <g transform="translate(40, 312)" font-size="10" class="ko">
+    <g fill="#B71C1C">
+      <rect x="0" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+      <text x="50" y="15" text-anchor="middle" font-weight="700">A · 규제환경</text>
+    </g>
+    <g fill="#B71C1C">
+      <rect x="106" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+      <text x="156" y="15" text-anchor="middle" font-weight="700">B · 부산경남</text>
+    </g>
+    <g fill="#B71C1C">
+      <rect x="212" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+      <text x="262" y="15" text-anchor="middle" font-weight="700">C · AS-IS 공백</text>
+    </g>
+    <g fill="#B71C1C">
+      <rect x="318" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
+      <text x="368" y="15" text-anchor="middle" font-weight="700">D · 3 축 아키</text>
+    </g>
+    <g fill="#B71C1C">
+      <rect x="424" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+      <text x="474" y="15" text-anchor="middle" font-weight="700">E · 정성효과</text>
+    </g>
+    <g fill="#B71C1C">
+      <rect x="530" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+      <text x="580" y="15" text-anchor="middle" font-weight="700">F · 사고이력 RAG</text>
+    </g>
+    <g fill="#B71C1C">
+      <rect x="636" y="0" width="100" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+      <text x="686" y="15" text-anchor="middle" font-weight="700">G · 용어·법령</text>
+    </g>
+  </g>
+
+  <!-- 하단 통계 -->
+  <g transform="translate(40, 360)" font-size="11" class="ko" fill="#B71C1C">
+    <text x="0" y="0" font-weight="700">중대재해처벌법</text>
+    <text x="0" y="16" font-size="9" fill="#E57373">2024 · 5인 이상 확대</text>
+    <text x="180" y="0" font-weight="700">고온·고압·화학물질</text>
+    <text x="180" y="16" font-size="9" fill="#E57373">철강·금속·고무 구조적 고위험</text>
+    <text x="380" y="0" font-weight="700">데이터 기반 상시 증빙</text>
+    <text x="380" y="16" font-size="9" fill="#E57373">형식 점검 → CCTV·웨어러블·RAG</text>
+    <text x="620" y="0" font-weight="700" fill="#F57F17">SCN-SAF-01 풀 결합</text>
+    <text x="620" y="16" font-size="9" fill="#E57373">시나리오 ↔ 모듈 1:1</text>
+  </g>
+</svg>

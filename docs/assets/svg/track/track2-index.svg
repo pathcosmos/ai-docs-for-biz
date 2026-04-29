@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="Track 2 MLOps 본문 목차 — MLOps 7 모듈 가로 파이프라인"
+     class="zoomable">
+  <title>Track 2 — MLOps 본문 공통 목차 (7 모듈)</title>
+  <desc>Feature Store, Model Registry, Pipeline, 모니터링, 드리프트 탐지, 재학습 트리거, 거버넌스의 7 MLOps 모듈을 좌→우 파이프라인으로 시각화한 Track 2 목차.</desc>
+
+  <defs>
+    <linearGradient id="t2i-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6A1B9A"/>
+      <stop offset="100%" stop-color="#AB47BC"/>
+    </linearGradient>
+    <linearGradient id="t2i-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7B1FA2"/>
+      <stop offset="100%" stop-color="#6A1B9A"/>
+    </linearGradient>
+    <filter id="t2i-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.20"/>
+    </filter>
+    <marker id="t2i-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6A1B9A"/>
+    </marker>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#t2i-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">TRACK 2 · MLOPS · CONTINUOUS IMPROVEMENT INDEX</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">Track 2 — MLOps · 지속 개선 7 모듈</text>
+
+  <g transform="translate(20, 110)" class="ko" font-size="11">
+    <g filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">1</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">Feature</text>
+      <text x="50" y="64" text-anchor="middle" fill="white" font-size="11">Store</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">피쳐 일관성</text>
+    </g>
+    <g transform="translate(110, 0)" filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">2</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">Model</text>
+      <text x="50" y="64" text-anchor="middle" fill="white" font-size="11">Registry</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">버전·아티팩트</text>
+    </g>
+    <g transform="translate(220, 0)" filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">3</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">CI/CD</text>
+      <text x="50" y="64" text-anchor="middle" fill="white" font-size="11">Pipeline</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">자동 빌드·배포</text>
+    </g>
+    <g transform="translate(330, 0)" filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">4</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">모니터링</text>
+      <text x="50" y="68" text-anchor="middle" class="ko-r" fill="white" font-size="9">·대시보드</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">SLI·SLO</text>
+    </g>
+    <g transform="translate(440, 0)" filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">5</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">드리프트</text>
+      <text x="50" y="68" text-anchor="middle" class="ko-r" fill="white" font-size="9">·탐지</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">PSI·KS</text>
+    </g>
+    <g transform="translate(550, 0)" filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">6</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">재학습</text>
+      <text x="50" y="68" text-anchor="middle" class="ko-r" fill="white" font-size="9">·트리거</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">90→30 일</text>
+    </g>
+    <g transform="translate(660, 0)" filter="url(#t2i-shadow)">
+      <rect width="100" height="90" rx="10" fill="url(#t2i-card)"/>
+      <circle cx="20" cy="20" r="13" fill="#FFB300"/>
+      <text x="20" y="25" text-anchor="middle" fill="#4A148C" font-size="13">7</text>
+      <text x="50" y="50" text-anchor="middle" fill="white" font-size="11">거버넌스</text>
+      <text x="50" y="68" text-anchor="middle" class="ko-r" fill="white" font-size="9">·외부 검증</text>
+      <text x="50" y="82" text-anchor="middle" class="ko-r" fill="white" font-size="9">감사·승인</text>
+    </g>
+    <line x1="100" y1="45" x2="110" y2="45" stroke="#6A1B9A" stroke-width="2" marker-end="url(#t2i-arrow)"/>
+    <line x1="210" y1="45" x2="220" y2="45" stroke="#6A1B9A" stroke-width="2" marker-end="url(#t2i-arrow)"/>
+    <line x1="320" y1="45" x2="330" y2="45" stroke="#6A1B9A" stroke-width="2" marker-end="url(#t2i-arrow)"/>
+    <line x1="430" y1="45" x2="440" y2="45" stroke="#6A1B9A" stroke-width="2" marker-end="url(#t2i-arrow)"/>
+    <line x1="540" y1="45" x2="550" y2="45" stroke="#6A1B9A" stroke-width="2" marker-end="url(#t2i-arrow)"/>
+    <line x1="650" y1="45" x2="660" y2="45" stroke="#6A1B9A" stroke-width="2" marker-end="url(#t2i-arrow)"/>
+  </g>
+
+  <g transform="translate(32, 230)" class="ko" font-size="11" fill="#4A148C">
+    <text y="0">3 단 참조 아키텍처 — 데이터 레이어 / ML 레이어 / 운영 레이어</text>
+  </g>
+  <g transform="translate(32, 248)" class="ko-r" font-size="10" fill="#37474F">
+    <text y="0">개선 포인트: 성능 저하 탐지 → 재학습 트리거 → 피드백 수집 (지속 개선 루프)</text>
+  </g>
+
+  <rect x="0" y="320" width="800" height="80" fill="#F5F0F7"/>
+  <g transform="translate(32, 348)" class="ko" font-size="12" fill="#4A148C">
+    <text y="0" font-weight="700">7 모듈</text>
+    <text x="100" y="0" font-weight="700">3 단 아키텍처</text>
+    <text x="240" y="0" font-weight="700">5 Top 블록</text>
+    <text x="370" y="0" font-weight="700">CI/CD for ML</text>
+    <text x="510" y="0" font-weight="700">데이터 드리프트 탐지</text>
+    <text x="690" y="0" font-weight="700">감사·승인</text>
+  </g>
+  <text x="32" y="384" class="ko-r" font-size="10" fill="#546E7A">데이터 드리프트 → 재학습 트리거 → 피드백 수집 → 모델 갱신</text>
+</svg>

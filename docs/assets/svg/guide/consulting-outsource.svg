@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="컨설팅 위탁 운영 가이드 — 강도 3 단계 수평 막대 인포그래픽">
+  <title>컨설팅 위탁 운영 가이드 — 다년 R&amp;D 1단계 표준 (강도 3 단계)</title>
+  <desc>다년 R&amp;D 1단계 (9 개월·역량 분석 + 컨설팅) 외부 컨설팅 위탁 강도 3 단계 (낮음·중간·99 % 패턴) 수평 막대 시각화. 단년 R&amp;D vs 다년 R&amp;D 1단계 vs 다년 R&amp;D 2단계 비교. 가이드 군 9 번째 자산.</desc>
+
+  <defs>
+    <linearGradient id="co-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#42A5F5"/>
+    </linearGradient>
+    <filter id="co-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="400" fill="#F5F7FA"/>
+
+  <!-- 헤더 -->
+  <rect width="800" height="50" fill="url(#co-header)"/>
+  <text x="30" y="32" class="ko" font-size="20" fill="white">컨설팅 위탁 운영 · 강도 3 단계</text>
+  <text x="770" y="32" text-anchor="end" class="en" font-size="11" fill="rgba(255,255,255,0.8)">CONSULTING OUTSOURCE</text>
+
+  <!-- 강도 3 단계 수평 막대 (메인) -->
+  <g transform="translate(40, 80)" filter="url(#co-shadow)">
+    <text x="0" y="-3" class="ko" font-size="13" fill="#1A237E">컨설팅 위탁 강도 3 단계 (정부지원금 대비 비중)</text>
+
+    <!-- 축 -->
+    <line x1="160" y1="20" x2="660" y2="20" stroke="#37474F" stroke-width="1"/>
+    <line x1="160" y1="160" x2="660" y2="160" stroke="#37474F" stroke-width="1"/>
+
+    <!-- 강도 1: 낮음 (단년 R&D — 위탁비 [%] 이내) -->
+    <g transform="translate(0, 30)">
+      <text x="0" y="14" class="ko" font-size="11" fill="#1A237E">단년 R&amp;D (12 개월)</text>
+      <text x="0" y="28" class="ko-r" font-size="9" fill="#78909C">5 비목 균형 분포</text>
+      <rect x="160" y="0" width="80" height="32" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+      <text x="200" y="20" text-anchor="middle" class="ko" font-size="11" fill="#1B5E20">~ [%]</text>
+      <text x="245" y="14" class="ko" font-size="11" fill="#1B5E20">강도 ① 낮음</text>
+      <text x="245" y="28" class="ko-r" font-size="9" fill="#37474F">자문 보고서 · 기술 자문</text>
+    </g>
+
+    <!-- 강도 2: 중간 (다년 R&D 2단계 — 위탁 분산) -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="14" class="ko" font-size="11" fill="#1A237E">다년 R&amp;D 2단계 (1·2년차)</text>
+      <text x="0" y="28" class="ko-r" font-size="9" fill="#78909C">사내 + 6 종 위탁 분산</text>
+      <rect x="160" y="0" width="240" height="32" rx="4" fill="#FFF8E1" stroke="#F9A825" stroke-width="1.5"/>
+      <text x="280" y="20" text-anchor="middle" class="ko" font-size="11" fill="#E65100">[%] 위탁 분산</text>
+      <text x="408" y="14" class="ko" font-size="11" fill="#E65100">강도 ② 중간</text>
+      <text x="408" y="28" class="ko-r" font-size="9" fill="#37474F">인프라·알고리즘·시스템 위탁</text>
+    </g>
+
+    <!-- 강도 3: 99% 패턴 (다년 R&D 1단계) -->
+    <g transform="translate(0, 120)">
+      <text x="0" y="14" class="ko" font-size="11" fill="#1A237E">다년 R&amp;D 1단계 (9 개월)</text>
+      <text x="0" y="28" class="ko-r" font-size="9" fill="#78909C">컨설팅 본체 패턴</text>
+      <rect x="160" y="0" width="495" height="32" rx="4" fill="#FFEBEE" stroke="#C62828" stroke-width="1.5"/>
+      <text x="407" y="20" text-anchor="middle" class="ko" font-size="11" fill="#C62828">~ 99 % (89,815 / 91,016 천원)</text>
+      <text x="280" y="50" class="ko" font-size="11" fill="#C62828">강도 ③ 99 % 패턴</text>
+      <text x="280" y="64" class="ko-r" font-size="9" fill="#37474F">EY한영·삼정KPMG·딜로이트·PwC급 (DX 환경분석 + 추진전략)</text>
+    </g>
+  </g>
+
+  <!-- 4 분기 의사결정 (우측) -->
+  <g transform="translate(440, 80)">
+    <text x="0" y="-3" class="ko" font-size="12" fill="#1A237E">4 분기 의사결정</text>
+    <g transform="translate(0, 5)" font-size="10" class="ko-r">
+      <rect x="0" y="0" width="320" height="32" rx="4" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+      <text x="8" y="14" class="ko" fill="#1565C0">§3.1 컨설팅 vs 자체</text>
+      <text x="8" y="26" fill="#37474F">단년 자체 · 다년 1단계 위탁 본체</text>
+      <rect x="0" y="38" width="320" height="32" rx="4" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+      <text x="8" y="52" class="ko" fill="#1565C0">§3.2 컨설팅사 격</text>
+      <text x="8" y="64" fill="#37474F">대형 펌 vs 중소·전문 vs SI</text>
+    </g>
+  </g>
+
+  <!-- 1단계 본체 패턴 강조 박스 (하단 좌) -->
+  <g transform="translate(40, 250)">
+    <rect x="0" y="0" width="720" height="50" rx="6" fill="#FFEBEE" stroke="#C62828" stroke-width="1.5"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="#C62828">[다년 R&amp;D 1단계 본체 패턴 — 단년 5 비목 양식 적용 시 양식 부정합 발생]</text>
+    <text x="14" y="34" class="ko-r" font-size="10" fill="#37474F">[고객사] 책임: (a) 컨설팅 결과 수령·검증 · (b) 자체 종합 보고서 작성 · (c) 2단계 진입 게이트 통과</text>
+    <text x="14" y="46" class="ko-r" font-size="10" fill="#78909C">컨설팅 본체: DX 환경분석 + 추진전략 매트릭스 + BM + 로드맵 + 변화관리 (5 영역)</text>
+  </g>
+
+  <!-- 하단 통일 -->
+  <g transform="translate(40, 320)">
+    <rect x="0" y="0" width="720" height="65" rx="6" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
+    <text x="14" y="18" class="ko" font-size="11" fill="#E65100">가이드 군 9 번째 · 4.26 포맷 통일 · 패키지 1 §6.2.1 + 양식검증 §7 갭 #6·#13 1 차 적용</text>
+    <g transform="translate(14, 28)" font-size="10" class="ko-r" fill="#37474F">
+      <text y="10">▸ 8 장 구조 (개요·정의·4 분기·강도 3·실행·사례·결합·양식)</text>
+      <text y="24">▸ 4 분기 (컨설팅 vs 자체 · 컨설팅사 격 · 범위 · 검증)</text>
+      <text y="38">▸ 강도 3 단계 — 본 가이드의 핵심 시각화 도식</text>
+    </g>
+  </g>
+</svg>

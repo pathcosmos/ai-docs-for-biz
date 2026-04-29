@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시나리오 상세 — Phase 2 패키지 2 잔여 4 시나리오 (STL-05·06 · MLO-03 · LLM-02)"
+     class="zoomable">
+  <title>시나리오 상세 — Phase 2 (중견 냉연사 잔여 4 시나리오) · 전기로·압연기 아이콘</title>
+  <desc>패키지 2 (중견 스테인리스 냉연사) 의 후반 도입 4 시나리오 — STL-05 두께 예측, STL-06 소둔 최적화, MLO-03 피드백 루프, LLM-02 장애 RAG — 의 카드 도식.</desc>
+
+  <defs>
+    <linearGradient id="p2-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="100%" stop-color="#283593"/>
+    </linearGradient>
+    <linearGradient id="p2-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C6BC0"/>
+      <stop offset="100%" stop-color="#283593"/>
+    </linearGradient>
+    <filter id="p2-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#p2-header)"/>
+  <!-- 전기로 + 압연기 아이콘 -->
+  <g transform="translate(28, 18)">
+    <!-- 전기로 -->
+    <ellipse cx="14" cy="22" rx="14" ry="8" fill="#FFAB00"/>
+    <rect x="0" y="14" width="28" height="10" fill="#FF6F00"/>
+    <line x1="6" y1="10" x2="6" y2="14" stroke="#FFEB3B" stroke-width="2"/>
+    <line x1="14" y1="6" x2="14" y2="14" stroke="#FFEB3B" stroke-width="2"/>
+    <line x1="22" y1="10" x2="22" y2="14" stroke="#FFEB3B" stroke-width="2"/>
+    <!-- 압연 롤 -->
+    <circle cx="40" cy="14" r="6" fill="white" stroke="#283593" stroke-width="1.5"/>
+    <circle cx="40" cy="28" r="6" fill="white" stroke="#283593" stroke-width="1.5"/>
+    <rect x="34" y="20" width="14" height="3" fill="#FFEB3B"/>
+  </g>
+  <text x="90" y="32" class="ko" font-size="19" fill="white">시나리오 상세 · Phase 2 (잔여 4)</text>
+  <text x="90" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SCN-STL-05·06 · MLO-03 · LLM-02 · COLD-ROLLING + ANNEALING</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFEB3B" text-anchor="end">패키지 2 · 갭 4 해소</text>
+
+  <!-- 4 카드 (2x2) -->
+  <g transform="translate(40, 100)" filter="url(#p2-shadow)">
+    <rect width="365" height="100" rx="10" fill="white" stroke="#283593" stroke-width="2"/>
+    <rect width="365" height="32" rx="10" fill="url(#p2-card)"/>
+    <rect y="22" width="365" height="10" fill="url(#p2-card)"/>
+    <text x="15" y="22" class="ko" font-size="12" fill="white">SCN-STL-05 · 냉연 두께 예측·이탈 조기경보</text>
+    <text x="345" y="22" text-anchor="end" class="ko" font-size="10" fill="#FFEB3B">5.2-b</text>
+    <g transform="translate(15, 48)" class="ko" font-size="10" fill="#1A237E">
+      <text y="0">▸ 압연 진행 중 실시간 두께 이탈 감지·교정 (운전 단계)</text>
+      <text y="16">▸ STL-04 와 보완재 — 사전 셋업(STL-04) + 실시간 운전(STL-05)</text>
+      <text y="32">▸ 동일 PLC 태그·동일 작업자 UI 공유 → 인프라 회수 비선형 ↑</text>
+      <text y="48" fill="#F57F17" font-weight="700">트랙 1 + Track 2 (드리프트 트리거)</text>
+    </g>
+  </g>
+
+  <g transform="translate(420, 100)" filter="url(#p2-shadow)">
+    <rect width="345" height="100" rx="10" fill="white" stroke="#283593" stroke-width="2"/>
+    <rect width="345" height="32" rx="10" fill="url(#p2-card)"/>
+    <rect y="22" width="345" height="10" fill="url(#p2-card)"/>
+    <text x="15" y="22" class="ko" font-size="12" fill="white">SCN-STL-06 · 소둔로 적재·온도 프로파일</text>
+    <text x="325" y="22" text-anchor="end" class="ko" font-size="10" fill="#FFEB3B">5.2-e</text>
+    <g transform="translate(15, 48)" class="ko" font-size="10" fill="#1A237E">
+      <text y="0">▸ BAF 회분식 (BO) vs APL 연속식 (RL) 분기 진단 사례</text>
+      <text y="16">▸ 안전 PLC 연동 + Safe BO·제약 BO 명시 설계</text>
+      <text y="32">▸ UTL-01 과 동일 5.2-e 패턴 — 도메인별 알고리즘 분기</text>
+      <text y="48" fill="#F57F17" font-weight="700">Track 1 + T2 + T3 (성적서 RAG)</text>
+    </g>
+  </g>
+
+  <g transform="translate(40, 215)" filter="url(#p2-shadow)">
+    <rect width="365" height="100" rx="10" fill="white" stroke="#283593" stroke-width="2"/>
+    <rect width="365" height="32" rx="10" fill="url(#p2-card)"/>
+    <rect y="22" width="365" height="10" fill="url(#p2-card)"/>
+    <text x="15" y="22" class="ko" font-size="12" fill="white">SCN-MLO-03 · 현장 피드백 루프</text>
+    <text x="345" y="22" text-anchor="end" class="ko" font-size="10" fill="#FFEB3B">운영 레이어</text>
+    <g transform="translate(15, 48)" class="ko" font-size="10" fill="#1A237E">
+      <text y="0">▸ 결합 도입 시 승수 효과 — 5 시나리오 모두의 라벨 환류 공급원</text>
+      <text y="16">▸ Track 2 6.4 현장 피드백 UI · 4.2 ⑥ 라벨 재주입 파이프라인</text>
+      <text y="32">▸ 통합 UI 1 회 입력 [수치] 초 이내 → 작업자 부담 선형 이하</text>
+      <text y="48" fill="#F57F17" font-weight="700">Track 2 — 인프라 (Phase 1~2)</text>
+    </g>
+  </g>
+
+  <g transform="translate(420, 215)" filter="url(#p2-shadow)">
+    <rect width="345" height="100" rx="10" fill="white" stroke="#283593" stroke-width="2"/>
+    <rect width="345" height="32" rx="10" fill="url(#p2-card)"/>
+    <rect y="22" width="345" height="10" fill="url(#p2-card)"/>
+    <text x="15" y="22" class="ko" font-size="12" fill="white">SCN-LLM-02 · 설비 장애 대응 RAG</text>
+    <text x="325" y="22" text-anchor="end" class="ko" font-size="10" fill="#FFEB3B">5.2-f</text>
+    <g transform="translate(15, 48)" class="ko" font-size="10" fill="#1A237E">
+      <text y="0">▸ LLM-01 (지시 측 사전 학습) 과 운영 층위 상이 — "사고 측" RAG</text>
+      <text y="16">▸ STL-09 예지보전 알람 연동 + 진동 프로파일 매칭</text>
+      <text y="32">▸ 동일 RAG 인프라(임베딩·벡터스토어·권한·평가) 공유</text>
+      <text y="48" fill="#F57F17" font-weight="700">Track 3 + Track 1 (STL-09) + T2</text>
+    </g>
+  </g>
+
+  <!-- 하단 사용 안내 -->
+  <g transform="translate(40, 335)">
+    <rect width="720" height="50" rx="8" fill="rgba(26,35,126,0.06)" stroke="#283593" stroke-dasharray="3 2"/>
+    <text x="20" y="20" class="ko" font-size="11" fill="#1A237E" font-weight="700">패키지 2 · 6 시나리오 전체 상세 본문 완성</text>
+    <text x="20" y="38" class="ko" font-size="10" fill="#283593">Top5 의 STL-04 · STL-09 + 본 자산의 STL-05·06 · MLO-03 · LLM-02 → 패키지 2 (중견 냉연 18 개월) 풀 인프라 자산</text>
+  </g>
+</svg>

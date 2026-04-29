@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="Track 3 LLM·RAG 본문 목차 — RAG 5 계층 + LLM + 청킹"
+     class="zoomable">
+  <title>Track 3 — LLM·RAG 본문 공통 목차 (RAG 5 계층 · LLM · 청킹 · 평가)</title>
+  <desc>RAG 5 계층(수집→임베딩→검색→생성→감사) + 한국 sLM + 청킹 4 전략 + 골드셋 평가의 구조를 좌→우 파이프라인 형태로 시각화한 Track 3 목차.</desc>
+
+  <defs>
+    <linearGradient id="t3i-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00695C"/>
+      <stop offset="100%" stop-color="#26A69A"/>
+    </linearGradient>
+    <linearGradient id="t3i-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00897B"/>
+      <stop offset="100%" stop-color="#00695C"/>
+    </linearGradient>
+    <filter id="t3i-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.20"/>
+    </filter>
+    <marker id="t3i-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00695C"/>
+    </marker>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#t3i-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">TRACK 3 · LLM · RAG · INDEX</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">Track 3 — RAG 5 계층 + LLM + 청킹 4 전략</text>
+
+  <!-- RAG 5 계층 -->
+  <g transform="translate(20, 100)" class="ko" font-size="11">
+    <g filter="url(#t3i-shadow)">
+      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
+      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">1. 수집·표준화</text>
+      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">SOP·작업지시·</text>
+      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">장애 보고서</text>
+    </g>
+    <g transform="translate(154, 0)" filter="url(#t3i-shadow)">
+      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
+      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">2. 청킹·임베딩</text>
+      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">고정·재귀·</text>
+      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">의미·테이블</text>
+    </g>
+    <g transform="translate(308, 0)" filter="url(#t3i-shadow)">
+      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
+      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">3. 검색</text>
+      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">Hybrid · BM25</text>
+      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">+ Vector</text>
+    </g>
+    <g transform="translate(462, 0)" filter="url(#t3i-shadow)">
+      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
+      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">4. 생성</text>
+      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">Citation · Reject</text>
+      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">한국 sLM</text>
+    </g>
+    <g transform="translate(616, 0)" filter="url(#t3i-shadow)">
+      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
+      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">5. 감사·평가</text>
+      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">골드셋·</text>
+      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">로그·피드백</text>
+    </g>
+    <line x1="140" y1="40" x2="154" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
+    <line x1="294" y1="40" x2="308" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
+    <line x1="448" y1="40" x2="462" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
+    <line x1="602" y1="40" x2="616" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
+  </g>
+
+  <!-- 청킹 4 전략 + 한국 sLM -->
+  <g transform="translate(32, 210)" class="ko" font-size="11">
+    <text y="0" fill="#004D40" font-size="12">청킹 4 전략 — 고정 윈도 / 재귀 / 의미 기반 / 테이블·표 보존</text>
+    <g transform="translate(0, 14)">
+      <rect width="120" height="32" rx="6" fill="#B2DFDB"/>
+      <text x="60" y="20" text-anchor="middle" fill="#004D40" font-size="11">고정 윈도</text>
+    </g>
+    <g transform="translate(132, 14)">
+      <rect width="120" height="32" rx="6" fill="#80CBC4"/>
+      <text x="60" y="20" text-anchor="middle" fill="#004D40" font-size="11">재귀 분할</text>
+    </g>
+    <g transform="translate(264, 14)">
+      <rect width="120" height="32" rx="6" fill="#4DB6AC"/>
+      <text x="60" y="20" text-anchor="middle" fill="white" font-size="11">의미 기반</text>
+    </g>
+    <g transform="translate(396, 14)">
+      <rect width="120" height="32" rx="6" fill="#26A69A"/>
+      <text x="60" y="20" text-anchor="middle" fill="white" font-size="11">테이블 보존</text>
+    </g>
+    <g transform="translate(540, 14)">
+      <rect width="180" height="32" rx="6" fill="#00897B"/>
+      <text x="90" y="20" text-anchor="middle" fill="white" font-size="11">한국 sLM (KO-LLM)</text>
+    </g>
+  </g>
+
+  <rect x="0" y="320" width="800" height="80" fill="#E8F5F1"/>
+  <g transform="translate(32, 348)" class="ko" font-size="12" fill="#004D40">
+    <text y="0" font-weight="700">5 계층 RAG</text>
+    <text x="120" y="0" font-weight="700">청킹 4 전략</text>
+    <text x="240" y="0" font-weight="700">베테랑 인터뷰 5 단계</text>
+    <text x="420" y="0" font-weight="700">권한·보안 ACL</text>
+    <text x="570" y="0" font-weight="700">5 Top 블록</text>
+    <text x="690" y="0" font-weight="700">한국 sLM</text>
+  </g>
+  <text x="32" y="384" class="ko-r" font-size="10" fill="#37474F">SOP·작업지시·장애 대응·표준 작업 QA·비정형 공정 지식 활용</text>
+</svg>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="사업 기간 압축 가이드 — 9·12·18 개월 분기 + 4 분기 의사결정 인포그래픽">
+  <title>사업 기간 압축 가이드 — 4 분기 의사결정 매트릭스</title>
+  <desc>사업 기간이 18 개월 표준에서 12·9 개월로 압축될 때 시나리오 후순위·인프라 축소·HITL UI 단일화·로드맵 분리의 4 분기 의사결정 (2×2 그리드) 와 9·12·18 개월 비교 표, 강도 3 단계 통일 표시.</desc>
+
+  <defs>
+    <linearGradient id="dc-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#42A5F5"/>
+    </linearGradient>
+    <linearGradient id="dc-q" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="dc-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="400" fill="#F5F7FA"/>
+
+  <!-- 헤더 -->
+  <rect width="800" height="50" fill="url(#dc-header)"/>
+  <text x="30" y="32" class="ko" font-size="20" fill="white">사업 기간 압축 가이드 · 4 분기 의사결정</text>
+  <text x="770" y="32" text-anchor="end" class="en" font-size="11" fill="rgba(255,255,255,0.8)">DURATION COMPRESS</text>
+
+  <!-- 4 분기 의사결정 (2x2 그리드) — 좌측 -->
+  <g transform="translate(40, 80)" filter="url(#dc-shadow)">
+    <text x="0" y="-5" class="ko" font-size="13" fill="#1A237E">압축의 4 분기 (어디를 줄이는가)</text>
+
+    <!-- Q1 시나리오 후순위 -->
+    <g transform="translate(0, 5)">
+      <rect x="0" y="0" width="180" height="95" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+      <rect x="0" y="0" width="180" height="22" rx="8" fill="url(#dc-q)"/>
+      <rect x="0" y="14" width="180" height="8" fill="url(#dc-q)"/>
+      <text x="10" y="16" class="ko" font-size="12" fill="white">§1.1 시나리오 후순위</text>
+      <text x="10" y="40" class="ko-r" font-size="10" fill="#37474F">핵심 시나리오만 1 단계</text>
+      <text x="10" y="56" class="ko-r" font-size="10" fill="#37474F">확장 시나리오 → 후속</text>
+      <text x="10" y="76" class="ko" font-size="10" fill="#1565C0">Quick Win · IoT 증설 회피</text>
+      <text x="10" y="89" class="ko-r" font-size="9" fill="#78909C">시나리오 범위 차원</text>
+    </g>
+
+    <!-- Q2 인프라 축소 -->
+    <g transform="translate(190, 5)">
+      <rect x="0" y="0" width="180" height="95" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+      <rect x="0" y="0" width="180" height="22" rx="8" fill="url(#dc-q)"/>
+      <rect x="0" y="14" width="180" height="8" fill="url(#dc-q)"/>
+      <text x="10" y="16" class="ko" font-size="12" fill="white">§1.2 인프라 축소</text>
+      <text x="10" y="40" class="ko-r" font-size="10" fill="#37474F">레지스트리·모니터·피드백</text>
+      <text x="10" y="56" class="ko-r" font-size="10" fill="#37474F">3 종 필수 유지</text>
+      <text x="10" y="76" class="ko" font-size="10" fill="#1565C0">피쳐스토어·고급거버넌스 후속</text>
+      <text x="10" y="89" class="ko-r" font-size="9" fill="#78909C">MLOps 구성 차원</text>
+    </g>
+
+    <!-- Q3 HITL UI 단일화 -->
+    <g transform="translate(0, 110)">
+      <rect x="0" y="0" width="180" height="95" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+      <rect x="0" y="0" width="180" height="22" rx="8" fill="url(#dc-q)"/>
+      <rect x="0" y="14" width="180" height="8" fill="url(#dc-q)"/>
+      <text x="10" y="16" class="ko" font-size="12" fill="white">§1.3 HITL UI 단일화</text>
+      <text x="10" y="40" class="ko-r" font-size="10" fill="#37474F">단일 통합 UI 위 위젯·뷰</text>
+      <text x="10" y="56" class="ko-r" font-size="10" fill="#37474F">학습 곡선 1 회 통합</text>
+      <text x="10" y="76" class="ko" font-size="10" fill="#1565C0">정보 밀도·알람피로도 주의</text>
+      <text x="10" y="89" class="ko-r" font-size="9" fill="#78909C">작업자 인터페이스 차원</text>
+    </g>
+
+    <!-- Q4 로드맵 분리 -->
+    <g transform="translate(190, 110)">
+      <rect x="0" y="0" width="180" height="95" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+      <rect x="0" y="0" width="180" height="22" rx="8" fill="url(#dc-q)"/>
+      <rect x="0" y="14" width="180" height="8" fill="url(#dc-q)"/>
+      <text x="10" y="16" class="ko" font-size="12" fill="white">§1.4 로드맵 분리</text>
+      <text x="10" y="40" class="ko-r" font-size="10" fill="#37474F">Phase 1·2 (본 사업)</text>
+      <text x="10" y="56" class="ko-r" font-size="10" fill="#37474F">Phase 3 → 후속 사업</text>
+      <text x="10" y="76" class="ko" font-size="10" fill="#1565C0">사업 가치 보존</text>
+      <text x="10" y="89" class="ko-r" font-size="9" fill="#78909C">시간 축 차원</text>
+    </g>
+  </g>
+
+  <!-- 9·12·18 개월 비교 (강도 3 단계) — 우측 -->
+  <g transform="translate(420, 80)">
+    <text x="0" y="-5" class="ko" font-size="13" fill="#1A237E">강도 3 단계 — 9 · 12 · 18 개월</text>
+
+    <!-- 9 개월 -->
+    <g transform="translate(0, 5)">
+      <rect x="0" y="0" width="340" height="62" rx="6" fill="#FFEBEE" stroke="#C62828" stroke-width="1.5"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="#C62828">9 개월 (압축) — 단기 시연·SaaS 트랙</text>
+      <text x="14" y="34" class="ko-r" font-size="10" fill="#37474F">시나리오 2~3 · MLOps 최소 3 종 · UI 통합 · RAG 후속 위임</text>
+      <text x="14" y="50" class="ko-r" font-size="10" fill="#78909C">사업비 비율 [%] · 후속 의존도 高 · 인프라 시너지 낮음</text>
+    </g>
+
+    <!-- 12 개월 -->
+    <g transform="translate(0, 75)">
+      <rect x="0" y="0" width="340" height="62" rx="6" fill="#FFF8E1" stroke="#F9A825" stroke-width="1.5"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="#E65100">12 개월 (중간) — 일반 스마트공장</text>
+      <text x="14" y="34" class="ko-r" font-size="10" fill="#37474F">시나리오 3~4 · MLOps 부분 5 종 · UI 부분 분리 · RAG 1 시나리오</text>
+      <text x="14" y="50" class="ko-r" font-size="10" fill="#78909C">사업비 비율 [%] · 후속 의존도 中 · 인프라 시너지 중간</text>
+    </g>
+
+    <!-- 18 개월 -->
+    <g transform="translate(0, 145)">
+      <rect x="0" y="0" width="340" height="62" rx="6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="#1B5E20">18 개월 (표준) — R&amp;D · 전사 DX</text>
+      <text x="14" y="34" class="ko-r" font-size="10" fill="#37474F">시나리오 5~6 · MLOps 풀 7 종 · UI 풀 분리 · RAG 2~3 시나리오</text>
+      <text x="14" y="50" class="ko-r" font-size="10" fill="#78909C">사업비 100 % · 후속 의존도 低 · 인프라 시너지 풀</text>
+    </g>
+  </g>
+
+  <!-- 하단 통일 -->
+  <g transform="translate(40, 320)">
+    <rect x="0" y="0" width="720" height="55" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+    <text x="14" y="18" class="ko" font-size="11" fill="#1565C0">cross-reference · 시너지 ROI 모델 §2.2 (인프라 시너지 β_track2) · 패키지 2 사례</text>
+    <g transform="translate(14, 28)" font-size="10" class="ko-r" fill="#37474F">
+      <text y="10">▸ 8 장 구조 (4 분기·비교·매핑·우선순위·시너지·결합·확인필요·한계)</text>
+      <text y="24">▸ 4 분기 MECE · 강도 3 단계 (압축·중간·표준) — 가이드 군 통일</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="패키지 2 — 중견 스테인리스 냉연 (18 개월, 6 시나리오)"
+     class="zoomable">
+  <title>패키지 2 — 중견 냉연 (제조AI특화 스마트공장 18 개월)</title>
+  <desc>STL-04·05·06·09 + MLO-03 + LLM-02 의 6 시나리오를 단일 AI 플랫폼으로 통합 운영하는 중견 스테인리스 냉연사 통합 파일럿 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="pkg2-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#283593"/>
+      <stop offset="100%" stop-color="#5C6BC0"/>
+    </linearGradient>
+    <filter id="pkg2-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="pkg2-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <!-- 상단 헤더 -->
+  <rect width="800" height="80" fill="url(#pkg2-bg)"/>
+  <text x="32" y="34" class="en" fill="rgba(255,255,255,0.7)" font-size="11">PACKAGE 02 · COLD-ROLLED STAINLESS · MID-CAP</text>
+  <text x="32" y="62" class="ko" fill="white" font-size="24">중견 스테인리스 냉연 · 패스 스케줄 + 예지보전</text>
+  <g transform="translate(700, 22)" filter="url(#pkg2-glow)">
+    <circle cx="36" cy="20" r="20" fill="#FFB300"/>
+    <text x="36" y="26" text-anchor="middle" class="ko" fill="#1A237E" font-size="20">2</text>
+  </g>
+
+  <!-- 중간 — 프로세스 플로우 (압연 → 소둔 → 후공정) -->
+  <g transform="translate(32, 100)">
+    <text x="0" y="0" class="ko" fill="#1A237E" font-size="13">6 시나리오 — 1ZHM·2ZHM·정밀압연 + APL·BAF + 후공정</text>
+  </g>
+
+  <g transform="translate(32, 116)">
+    <!-- 흐름 4 단 + 백본 -->
+    <line x1="80" y1="48" x2="700" y2="48" stroke="#5C6BC0" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- Stage 1 -->
+    <g filter="url(#pkg2-shadow)">
+      <rect x="0" y="20" width="160" height="56" rx="10" fill="white"/>
+      <rect x="0" y="20" width="160" height="20" rx="10" fill="#283593"/>
+      <text x="80" y="34" text-anchor="middle" class="ko" fill="white" font-size="11">압연 (1ZHM·2ZHM)</text>
+      <text x="80" y="56" text-anchor="middle" class="ko" fill="#283593" font-size="11">STL-04 패스 스케줄</text>
+      <text x="80" y="70" text-anchor="middle" class="ko-r" fill="#37474F" font-size="9">신규 사양 셋업 단축</text>
+    </g>
+    <!-- Stage 2 -->
+    <g filter="url(#pkg2-shadow)" transform="translate(184, 0)">
+      <rect y="20" width="160" height="56" rx="10" fill="white"/>
+      <rect y="20" width="160" height="20" rx="10" fill="#3949AB"/>
+      <text x="80" y="34" text-anchor="middle" class="ko" fill="white" font-size="11">두께 조기경보</text>
+      <text x="80" y="56" text-anchor="middle" class="ko" fill="#3949AB" font-size="11">STL-05 시계열</text>
+      <text x="80" y="70" text-anchor="middle" class="ko-r" fill="#37474F" font-size="9">출측 σ 축소</text>
+    </g>
+    <!-- Stage 3 -->
+    <g filter="url(#pkg2-shadow)" transform="translate(368, 0)">
+      <rect y="20" width="160" height="56" rx="10" fill="white"/>
+      <rect y="20" width="160" height="20" rx="10" fill="#5C6BC0"/>
+      <text x="80" y="34" text-anchor="middle" class="ko" fill="white" font-size="11">소둔 (APL·BAF)</text>
+      <text x="80" y="56" text-anchor="middle" class="ko" fill="#5C6BC0" font-size="11">STL-06 적재·온도</text>
+      <text x="80" y="70" text-anchor="middle" class="ko-r" fill="#37474F" font-size="9">스크랩률 감소</text>
+    </g>
+    <!-- Stage 4 -->
+    <g filter="url(#pkg2-shadow)" transform="translate(552, 0)">
+      <rect y="20" width="160" height="56" rx="10" fill="white"/>
+      <rect y="20" width="160" height="20" rx="10" fill="#7986CB"/>
+      <text x="80" y="34" text-anchor="middle" class="ko" fill="white" font-size="11">예지보전</text>
+      <text x="80" y="56" text-anchor="middle" class="ko" fill="#7986CB" font-size="11">STL-09 압연기</text>
+      <text x="80" y="70" text-anchor="middle" class="ko-r" fill="#37474F" font-size="9">돌발 정지 감소</text>
+    </g>
+
+    <!-- 인프라 레이어 (Track 2 + 3) -->
+    <g transform="translate(0, 96)" class="ko" font-size="10" fill="white">
+      <g filter="url(#pkg2-shadow)">
+        <rect width="346" height="40" rx="8" fill="#6A1B9A"/>
+        <text x="16" y="18" font-size="11">Track 2 — MLO-03</text>
+        <text x="16" y="32" class="ko-r" font-size="9" opacity="0.92">현장 피드백 루프 · HITL UI 단일화</text>
+      </g>
+      <g filter="url(#pkg2-shadow)" transform="translate(366, 0)">
+        <rect width="346" height="40" rx="8" fill="#00695C"/>
+        <text x="16" y="18" font-size="11">Track 3 — LLM-02</text>
+        <text x="16" y="32" class="ko-r" font-size="9" opacity="0.92">CMMS·SOP 자유 텍스트 RAG</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 하단 — 통계 -->
+  <g transform="translate(32, 296)">
+    <rect width="736" height="80" rx="10" fill="#F5F7FA" stroke="#CFD8DC" stroke-width="1"/>
+    <g class="ko" font-size="11" fill="#37474F">
+      <text x="20" y="26" font-size="22" font-weight="800" fill="#283593">9~18</text>
+      <text x="20" y="50" font-size="10">개월 · 표준 + 확장</text>
+      <text x="20" y="66" class="ko-r" font-size="9" fill="#78909C">제조AI특화 스마트공장</text>
+
+      <text x="160" y="26" font-size="22" font-weight="800" fill="#283593">6</text>
+      <text x="160" y="50" font-size="10">시나리오 · 5.2 카드 5 종</text>
+      <text x="160" y="66" class="ko-r" font-size="9" fill="#78909C">STL 4 + MLO 1 + LLM 1</text>
+
+      <text x="320" y="26" font-size="22" font-weight="800" fill="#283593">6</text>
+      <text x="320" y="50" font-size="10">핵심 KPI</text>
+      <text x="320" y="66" class="ko-r" font-size="9" fill="#78909C">σ · 셋업 · MTTR · 신입</text>
+
+      <text x="460" y="26" font-size="22" font-weight="800" fill="#F57F17">Lv.2 → Lv.3</text>
+      <text x="460" y="50" font-size="10">ICS·MES 성숙도 도약</text>
+      <text x="460" y="66" class="ko-r" font-size="9" fill="#78909C">MLOps Lv.0 → Lv.2</text>
+
+      <text x="620" y="26" font-size="22" font-weight="800" fill="#283593">SUS</text>
+      <text x="620" y="50" font-size="10">304 · 316L 박판</text>
+      <text x="620" y="66" class="ko-r" font-size="9" fill="#78909C">자동차·전자·EU 수출</text>
+    </g>
+  </g>
+</svg>

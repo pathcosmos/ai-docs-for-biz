@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시나리오 상세 — 재사용성 Top 5 (LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01)"
+     class="zoomable">
+  <title>시나리오 상세 — 재사용성 Top 5 · 압연기 아이콘 + 5 시나리오 카드</title>
+  <desc>부산·경남 제조 클러스터에서 재사용 효율이 가장 높은 5 시나리오 — SOP RAG, 밀시트 OCR, 패스 스케줄, 압연기 예지보전, 에너지 최적화 — 의 카드 도식.</desc>
+
+  <defs>
+    <linearGradient id="t5-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D47A1"/>
+      <stop offset="100%" stop-color="#1565C0"/>
+    </linearGradient>
+    <linearGradient id="t5-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#1565C0"/>
+    </linearGradient>
+    <filter id="t5-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#t5-header)"/>
+  <!-- 압연기 아이콘 (롤 2개) -->
+  <g transform="translate(28, 22)">
+    <rect x="0" y="14" width="44" height="6" rx="2" fill="#FFEB3B"/>
+    <circle cx="10" cy="10" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <circle cx="34" cy="10" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <circle cx="10" cy="26" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <circle cx="34" cy="26" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+  </g>
+  <text x="85" y="32" class="ko" font-size="20" fill="white">시나리오 상세 · 재사용성 Top 5</text>
+  <text x="85" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SCN-LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01 · ROLLING MILL</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFEB3B" text-anchor="end">5 단 구조 · Mermaid 1~2</text>
+
+  <!-- 5 카드 (1행 5개) -->
+  <g transform="translate(25, 100)" filter="url(#t5-shadow)">
+    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
+    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
+    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-LLM-01</text>
+    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">SOP RAG</text>
+    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">표준작업지시서</text>
+    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">질의응답</text>
+    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
+      <text y="0" font-weight="700">엔진:</text>
+      <text x="35" y="0">5.2-f LLM·RAG</text>
+      <text y="18" font-weight="700">트랙:</text>
+      <text x="35" y="18">Track 3</text>
+      <text y="36" font-weight="700">단계:</text>
+      <text x="35" y="36">Quick Win</text>
+      <text y="56" fill="#F57F17" font-weight="700">▸ 비정형 자산화</text>
+      <text y="72" fill="#1976D2">데이터 성숙도 낮은</text>
+      <text y="86" fill="#1976D2">진입 시나리오</text>
+    </g>
+    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★★</text>
+  </g>
+
+  <g transform="translate(180, 100)" filter="url(#t5-shadow)">
+    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
+    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
+    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-STL-08</text>
+    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">밀시트 OCR</text>
+    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">시험성적서</text>
+    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">디지털화·상관</text>
+    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
+      <text y="0" font-weight="700">엔진:</text>
+      <text x="35" y="0">5.2-f + 5.2-a</text>
+      <text y="18" font-weight="700">트랙:</text>
+      <text x="35" y="18">T3 + T1</text>
+      <text y="36" font-weight="700">단계:</text>
+      <text x="35" y="36">Quick Win</text>
+      <text y="56" fill="#F57F17" font-weight="700">▸ 텍스트+이미지</text>
+      <text y="72" fill="#1976D2">결합 검색</text>
+      <text y="86" fill="#1976D2">유사 사례 추천</text>
+    </g>
+    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★★</text>
+  </g>
+
+  <g transform="translate(335, 100)" filter="url(#t5-shadow)">
+    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
+    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
+    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-STL-04</text>
+    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">패스 스케줄 추천</text>
+    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">압연 셋업</text>
+    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">유사 사례 추천</text>
+    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
+      <text y="0" font-weight="700">엔진:</text>
+      <text x="35" y="0">5.2-a + 5.2-e</text>
+      <text y="18" font-weight="700">트랙:</text>
+      <text x="35" y="18">Track 1</text>
+      <text y="36" font-weight="700">단계:</text>
+      <text x="35" y="36">Phase 2 핵심</text>
+      <text y="56" fill="#F57F17" font-weight="700">▸ 시작품 손실 ↓</text>
+      <text y="72" fill="#1976D2">베테랑 노하우</text>
+      <text y="86" fill="#1976D2">디지털 자산화</text>
+    </g>
+    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★☆</text>
+  </g>
+
+  <g transform="translate(490, 100)" filter="url(#t5-shadow)">
+    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
+    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
+    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-STL-09</text>
+    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">압연기 예지보전</text>
+    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">진동·온도·전류</text>
+    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">이상탐지</text>
+    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
+      <text y="0" font-weight="700">엔진:</text>
+      <text x="35" y="0">5.2-d 예지보전</text>
+      <text y="18" font-weight="700">트랙:</text>
+      <text x="35" y="18">T1 + T2 + T3</text>
+      <text y="36" font-weight="700">단계:</text>
+      <text x="35" y="36">Phase 2 핵심</text>
+      <text y="56" fill="#F57F17" font-weight="700">▸ LLM-02 결합</text>
+      <text y="72" fill="#1976D2">장애 RAG 동반</text>
+      <text y="86" fill="#1976D2">정비 폐 루프</text>
+    </g>
+    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★☆</text>
+  </g>
+
+  <g transform="translate(645, 100)" filter="url(#t5-shadow)">
+    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
+    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
+    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-UTL-01</text>
+    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">에너지 최적화</text>
+    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">전사·ESG</text>
+    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">CBAM·K-ETS 4기</text>
+    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
+      <text y="0" font-weight="700">엔진:</text>
+      <text x="35" y="0">5.2-e 최적화</text>
+      <text y="18" font-weight="700">트랙:</text>
+      <text x="35" y="18">T1 + T2 + T3</text>
+      <text y="36" font-weight="700">단계:</text>
+      <text x="35" y="36">Phase 3 전사</text>
+      <text y="56" fill="#F57F17" font-weight="700">▸ 비용·탄소·규제</text>
+      <text y="72" fill="#1976D2">동시 해소</text>
+      <text y="86" fill="#1976D2">CBAM-D 결합</text>
+    </g>
+    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★☆</text>
+  </g>
+
+  <!-- 하단 사용 안내 -->
+  <g transform="translate(40, 320)">
+    <rect width="720" height="50" rx="8" fill="rgba(13,71,161,0.06)" stroke="#1565C0" stroke-dasharray="3 2"/>
+    <text x="20" y="20" class="ko" font-size="11" fill="#0D47A1" font-weight="700">5 단 구조</text>
+    <text x="100" y="20" class="ko" font-size="10" fill="#1565C0">① 적용맥락 → ② AS-IS 공백 → ③ AI 해결 운영 → ④ 기대효과 표 → ⑤ Mermaid 도식 1~2</text>
+    <text x="20" y="40" class="ko" font-size="10" fill="#1565C0">▸ 부산·경남 클러스터 공통 적용 · 사업계획서 §8.1 / §5.2 직접 인용 가능 · 플레이스홀더만 교체로 1~2 페이지 즉시 채움</text>
+  </g>
+
+  <!-- 하단 인덱스 -->
+  <g transform="translate(40, 380)" font-size="10" class="ko" fill="#0D47A1">
+    <text x="0" y="0" font-weight="700">5 시나리오 = 5.2-a / 5.2-d / 5.2-e / 5.2-f 4 엔진 망라 · 공통 MLOps + 공통 RAG 인프라 공유 · 비선형 ROI</text>
+  </g>
+</svg>

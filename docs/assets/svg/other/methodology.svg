@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="방법론 총론 — 36 방법론 (4.1~4.36) 카테고리 트리"
+     class="zoomable">
+  <title>방법론 총론 — 36 방법론 (4.1~4.36) 카테고리 트리</title>
+  <desc>방법론 총론의 36 재사용 방법론(4.1~4.36)을 5 대 카테고리(작성·아키텍처·검증·거버넌스·재무) 트리 구조로 시각화한 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="m-hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="25%" stop-color="#6A1B9A"/>
+      <stop offset="50%" stop-color="#00695C"/>
+      <stop offset="75%" stop-color="#F57F17"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <filter id="m-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#m-hd)"/>
+  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.85)" font-size="11">METHODOLOGY · 36 PATTERNS · 5 CATEGORIES · TREE</text>
+  <text x="32" y="54" class="ko" fill="white" font-size="22">방법론 총론 — 36 방법론 (4.1~4.36) 트리</text>
+
+  <!-- 루트 -->
+  <g transform="translate(360, 90)" filter="url(#m-shadow)">
+    <rect width="80" height="36" rx="18" fill="#1A237E"/>
+    <text x="40" y="22" text-anchor="middle" class="ko" fill="white" font-size="13">방법론 36</text>
+  </g>
+
+  <!-- 트리 라인 -->
+  <g stroke="#90A4AE" stroke-width="1.5" fill="none">
+    <line x1="400" y1="126" x2="80" y2="170"/>
+    <line x1="400" y1="126" x2="240" y2="170"/>
+    <line x1="400" y1="126" x2="400" y2="170"/>
+    <line x1="400" y1="126" x2="560" y2="170"/>
+    <line x1="400" y1="126" x2="720" y2="170"/>
+  </g>
+
+  <!-- 5 카테고리 -->
+  <g transform="translate(0, 170)" class="ko" font-size="11">
+    <g filter="url(#m-shadow)">
+      <rect x="20" y="0" width="120" height="42" rx="8" fill="#1565C0"/>
+      <text x="80" y="18" text-anchor="middle" fill="white" font-size="12">작성 패턴</text>
+      <text x="80" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">8 (4.1~4.8)</text>
+    </g>
+    <g filter="url(#m-shadow)">
+      <rect x="180" y="0" width="120" height="42" rx="8" fill="#7B1FA2"/>
+      <text x="240" y="18" text-anchor="middle" fill="white" font-size="12">아키텍처</text>
+      <text x="240" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">7 (4.9~4.15)</text>
+    </g>
+    <g filter="url(#m-shadow)">
+      <rect x="340" y="0" width="120" height="42" rx="8" fill="#00897B"/>
+      <text x="400" y="18" text-anchor="middle" fill="white" font-size="12">검증·평가</text>
+      <text x="400" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">8 (4.16~4.23)</text>
+    </g>
+    <g filter="url(#m-shadow)">
+      <rect x="500" y="0" width="120" height="42" rx="8" fill="#F57F17"/>
+      <text x="560" y="18" text-anchor="middle" fill="white" font-size="12">거버넌스</text>
+      <text x="560" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">7 (4.24~4.30)</text>
+    </g>
+    <g filter="url(#m-shadow)">
+      <rect x="660" y="0" width="120" height="42" rx="8" fill="#C62828"/>
+      <text x="720" y="18" text-anchor="middle" fill="white" font-size="12">재무·ROI</text>
+      <text x="720" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">6 (4.31~4.36)</text>
+    </g>
+  </g>
+
+  <!-- 하위 dot 배열 (방법론 점) -->
+  <g transform="translate(0, 240)">
+    <!-- 작성 8 -->
+    <g fill="#1565C0">
+      <circle cx="35" cy="0" r="4"/>
+      <circle cx="50" cy="0" r="4"/>
+      <circle cx="65" cy="0" r="4"/>
+      <circle cx="80" cy="0" r="4"/>
+      <circle cx="95" cy="0" r="4"/>
+      <circle cx="110" cy="0" r="4"/>
+      <circle cx="35" cy="14" r="4"/>
+      <circle cx="50" cy="14" r="4"/>
+    </g>
+    <!-- 아키텍처 7 -->
+    <g fill="#7B1FA2">
+      <circle cx="195" cy="0" r="4"/>
+      <circle cx="210" cy="0" r="4"/>
+      <circle cx="225" cy="0" r="4"/>
+      <circle cx="240" cy="0" r="4"/>
+      <circle cx="255" cy="0" r="4"/>
+      <circle cx="270" cy="0" r="4"/>
+      <circle cx="195" cy="14" r="4"/>
+    </g>
+    <!-- 검증 8 -->
+    <g fill="#00897B">
+      <circle cx="355" cy="0" r="4"/>
+      <circle cx="370" cy="0" r="4"/>
+      <circle cx="385" cy="0" r="4"/>
+      <circle cx="400" cy="0" r="4"/>
+      <circle cx="415" cy="0" r="4"/>
+      <circle cx="430" cy="0" r="4"/>
+      <circle cx="355" cy="14" r="4"/>
+      <circle cx="370" cy="14" r="4"/>
+    </g>
+    <!-- 거버넌스 7 -->
+    <g fill="#F57F17">
+      <circle cx="515" cy="0" r="4"/>
+      <circle cx="530" cy="0" r="4"/>
+      <circle cx="545" cy="0" r="4"/>
+      <circle cx="560" cy="0" r="4"/>
+      <circle cx="575" cy="0" r="4"/>
+      <circle cx="590" cy="0" r="4"/>
+      <circle cx="515" cy="14" r="4"/>
+    </g>
+    <!-- 재무 6 -->
+    <g fill="#C62828">
+      <circle cx="675" cy="0" r="4"/>
+      <circle cx="690" cy="0" r="4"/>
+      <circle cx="705" cy="0" r="4"/>
+      <circle cx="720" cy="0" r="4"/>
+      <circle cx="735" cy="0" r="4"/>
+      <circle cx="750" cy="0" r="4"/>
+    </g>
+  </g>
+
+  <!-- 대표 방법론 라벨 -->
+  <g transform="translate(32, 280)" class="ko-r" font-size="10" fill="#37474F">
+    <text y="0">대표: 4.1 모듈화 · 4.5 플레이스홀더 · 4.12 3 단 참조 · 4.18 골드셋 · 4.25 RACI · 4.32 NPV/IRR</text>
+  </g>
+
+  <rect x="0" y="320" width="800" height="80" fill="#F5F7FA"/>
+  <g transform="translate(32, 348)" class="ko" font-size="12" fill="#1A237E">
+    <text y="0" font-weight="700">36 방법론</text>
+    <text x="120" y="0" font-weight="700">5 카테고리</text>
+    <text x="240" y="0" font-weight="700">재사용 패턴</text>
+    <text x="370" y="0" font-weight="700">통합 파일럿 6 적용</text>
+    <text x="550" y="0" font-weight="700">ID: 4.1~4.36</text>
+    <text x="690" y="0" font-weight="700">총론 분리</text>
+  </g>
+  <text x="32" y="384" class="ko-r" font-size="10" fill="#546E7A">방법론_총론.md (Phase E5 d 단계) — 본문 분리로 재이식성 확보</text>
+</svg>

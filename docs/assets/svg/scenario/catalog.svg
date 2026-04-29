@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시나리오 카탈로그 — 7 도메인 · 40 시나리오"
+     class="zoomable">
+  <title>제조 AI 시나리오 카탈로그 — 7 도메인 트리 (STL·MET·RUB·UTL·SAF·LLM·MLO)</title>
+  <desc>40 종 시나리오 카탈로그를 7 도메인 (철강·금속·고무·유틸·안전·LLM·MLOps) 으로 분류한 트리 도식 + 도메인별 시나리오 수.</desc>
+
+  <defs>
+    <linearGradient id="cat-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="50%" stop-color="#3949AB"/>
+      <stop offset="100%" stop-color="#5C6BC0"/>
+    </linearGradient>
+    <filter id="cat-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#cat-header)"/>
+  <text x="30" y="32" class="ko" font-size="20" fill="white">시나리오 카탈로그 · 7 도메인 · 40 카드</text>
+  <text x="30" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SCENARIO CATALOG · STL · MET · RUB · UTL · MLO · LLM · SAF</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFEB3B" text-anchor="end">독립 재사용 모듈 · 조합 가능</text>
+
+  <!-- 루트 노드 -->
+  <g transform="translate(335, 95)" filter="url(#cat-shadow)">
+    <rect width="130" height="44" rx="10" fill="#FFB300"/>
+    <text x="65" y="20" text-anchor="middle" class="ko" font-size="13" fill="#1A237E">시나리오 카탈로그</text>
+    <text x="65" y="36" text-anchor="middle" class="ko" font-size="11" fill="#1A237E" font-weight="900">40 종</text>
+  </g>
+
+  <!-- 7 도메인 노드 (3+4 배치) -->
+  <!-- 1행 좌→우 -->
+  <g transform="translate(20, 175)" filter="url(#cat-shadow)">
+    <rect width="100" height="80" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
+    <rect width="100" height="22" rx="8" fill="#1565C0"/>
+    <rect y="16" width="100" height="6" fill="#1565C0"/>
+    <text x="50" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-STL</text>
+    <text x="50" y="42" text-anchor="middle" class="ko" font-size="11" fill="#1565C0">철강·제강</text>
+    <text x="50" y="62" text-anchor="middle" class="ko" font-size="20" fill="#0D47A1" font-weight="900">12</text>
+    <text x="50" y="74" text-anchor="middle" class="ko" font-size="8" fill="#1976D2">연주·압연·열처리</text>
+  </g>
+
+  <g transform="translate(135, 175)" filter="url(#cat-shadow)">
+    <rect width="100" height="80" rx="8" fill="white" stroke="#00695C" stroke-width="2"/>
+    <rect width="100" height="22" rx="8" fill="#00695C"/>
+    <rect y="16" width="100" height="6" fill="#00695C"/>
+    <text x="50" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-MET</text>
+    <text x="50" y="42" text-anchor="middle" class="ko" font-size="11" fill="#00695C">금속·정밀가공</text>
+    <text x="50" y="62" text-anchor="middle" class="ko" font-size="20" fill="#004D40" font-weight="900">7</text>
+    <text x="50" y="74" text-anchor="middle" class="ko" font-size="8" fill="#00796B">CNC·도금·단조</text>
+  </g>
+
+  <g transform="translate(250, 175)" filter="url(#cat-shadow)">
+    <rect width="100" height="80" rx="8" fill="white" stroke="#E65100" stroke-width="2"/>
+    <rect width="100" height="22" rx="8" fill="#E65100"/>
+    <rect y="16" width="100" height="6" fill="#E65100"/>
+    <text x="50" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-RUB</text>
+    <text x="50" y="42" text-anchor="middle" class="ko" font-size="11" fill="#E65100">고무·폴리머</text>
+    <text x="50" y="62" text-anchor="middle" class="ko" font-size="20" fill="#BF360C" font-weight="900">5</text>
+    <text x="50" y="74" text-anchor="middle" class="ko" font-size="8" fill="#F57C00">배합·압출·가류</text>
+  </g>
+
+  <g transform="translate(365, 175)" filter="url(#cat-shadow)">
+    <rect width="100" height="80" rx="8" fill="white" stroke="#2E7D32" stroke-width="2"/>
+    <rect width="100" height="22" rx="8" fill="#2E7D32"/>
+    <rect y="16" width="100" height="6" fill="#2E7D32"/>
+    <text x="50" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-UTL</text>
+    <text x="50" y="42" text-anchor="middle" class="ko" font-size="11" fill="#2E7D32">유틸·공통</text>
+    <text x="50" y="62" text-anchor="middle" class="ko" font-size="20" fill="#1B5E20" font-weight="900">6</text>
+    <text x="50" y="74" text-anchor="middle" class="ko" font-size="8" fill="#388E3C">에너지·환경·CBAM</text>
+  </g>
+
+  <g transform="translate(480, 175)" filter="url(#cat-shadow)">
+    <rect width="100" height="80" rx="8" fill="white" stroke="#C62828" stroke-width="2"/>
+    <rect width="100" height="22" rx="8" fill="#C62828"/>
+    <rect y="16" width="100" height="6" fill="#C62828"/>
+    <text x="50" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-SAF</text>
+    <text x="50" y="42" text-anchor="middle" class="ko" font-size="11" fill="#C62828">안전·ESG</text>
+    <text x="50" y="62" text-anchor="middle" class="ko" font-size="20" fill="#B71C1C" font-weight="900">3</text>
+    <text x="50" y="74" text-anchor="middle" class="ko" font-size="8" fill="#D32F2F">중대재해·MSDS</text>
+  </g>
+
+  <g transform="translate(595, 175)" filter="url(#cat-shadow)">
+    <rect width="100" height="80" rx="8" fill="white" stroke="#00695C" stroke-width="2"/>
+    <rect width="100" height="22" rx="8" fill="#00695C"/>
+    <rect y="16" width="100" height="6" fill="#00695C"/>
+    <text x="50" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-LLM</text>
+    <text x="50" y="42" text-anchor="middle" class="ko" font-size="11" fill="#00695C">LLM · RAG</text>
+    <text x="50" y="62" text-anchor="middle" class="ko" font-size="20" fill="#004D40" font-weight="900">4</text>
+    <text x="50" y="74" text-anchor="middle" class="ko" font-size="8" fill="#00796B">SOP·장애·도면</text>
+  </g>
+
+  <g transform="translate(710, 175)" filter="url(#cat-shadow)">
+    <rect width="80" height="80" rx="8" fill="white" stroke="#6A1B9A" stroke-width="2"/>
+    <rect width="80" height="22" rx="8" fill="#6A1B9A"/>
+    <rect y="16" width="80" height="6" fill="#6A1B9A"/>
+    <text x="40" y="14" text-anchor="middle" class="ko" font-size="10" fill="white">SCN-MLO</text>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="10" fill="#6A1B9A">MLOps</text>
+    <text x="40" y="62" text-anchor="middle" class="ko" font-size="20" fill="#4A148C" font-weight="900">3</text>
+    <text x="40" y="74" text-anchor="middle" class="ko" font-size="8" fill="#7B1FA2">피드백·드리프트</text>
+  </g>
+
+  <!-- 트리 연결선 -->
+  <g stroke="#5C6BC0" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 400 139 L 70 175"/>
+    <path d="M 400 139 L 185 175"/>
+    <path d="M 400 139 L 300 175"/>
+    <path d="M 400 139 L 415 175"/>
+    <path d="M 400 139 L 530 175"/>
+    <path d="M 400 139 L 645 175"/>
+    <path d="M 400 139 L 750 175"/>
+  </g>
+
+  <!-- 부록 카드 영역 -->
+  <g transform="translate(40, 280)">
+    <rect width="720" height="60" rx="8" fill="rgba(26,35,126,0.06)" stroke="#3949AB" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="11" fill="#1A237E" font-weight="700">부록</text>
+    <text x="60" y="22" class="ko" font-size="10" fill="#283593">A. 선택 가이드</text>
+    <text x="180" y="22" class="ko" font-size="10" fill="#283593">B. 결합 패키지 5 종</text>
+    <text x="320" y="22" class="ko" font-size="10" fill="#283593">C. 확장 축</text>
+    <text x="430" y="22" class="ko" font-size="10" fill="#283593">D. 지원사업 매칭</text>
+    <text x="20" y="44" class="ko" font-size="10" fill="#3949AB" font-weight="700">Top5:</text>
+    <text x="65" y="44" class="ko" font-size="10" fill="#283593">LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01</text>
+    <text x="380" y="44" class="ko" font-size="10" fill="#3949AB" font-weight="700">결합 패키지:</text>
+    <text x="465" y="44" class="ko" font-size="10" fill="#283593">P2(냉연)·P3(특수강관)·P4(고무)·P5(SaaS)·P6(유틸ESG)</text>
+  </g>
+
+  <!-- 하단 통계 -->
+  <g transform="translate(40, 365)" font-size="11" class="ko" fill="#1A237E">
+    <text x="0" y="0" font-weight="700">총 40 시나리오</text>
+    <text x="115" y="0" font-weight="700">7 도메인 트리</text>
+    <text x="245" y="0" font-weight="700">5 결합 패키지</text>
+    <text x="375" y="0" font-weight="700">독립 재사용 모듈</text>
+    <text x="0" y="20" font-size="9" fill="#3949AB">철강 12 + 금속 7 + 고무 5 + 유틸 6 + 안전 3 + LLM 4 + MLOps 3</text>
+    <text x="500" y="20" font-size="9" fill="#F57F17" font-weight="700">▸ 업종·규모·데이터 성숙도별 조합</text>
+  </g>
+</svg>

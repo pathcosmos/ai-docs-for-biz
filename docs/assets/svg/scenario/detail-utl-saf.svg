@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시나리오 상세 — UTL·SAF (UTL-02·03 + SAF-01·02 + UTL-01)"
+     class="zoomable">
+  <title>시나리오 상세 — UTL·SAF · 에너지·환경·안전 결합</title>
+  <desc>패키지 6 (유틸·ESG 파일럿) 의 5+1 시나리오 — UTL-01 에너지 최적화, UTL-02 컴프레서·보일러, UTL-03 폐수·배출가스, SAF-01 중대재해 위험, SAF-02 CBAM 신고 — 카드 도식.</desc>
+
+  <defs>
+    <linearGradient id="us-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B5E20"/>
+      <stop offset="50%" stop-color="#388E3C"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <linearGradient id="utl-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <linearGradient id="saf-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF5350"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <filter id="us-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#us-header)"/>
+  <!-- 에너지 (전구) + 안전 (방패) 결합 아이콘 -->
+  <g transform="translate(28, 18)">
+    <!-- 전구 -->
+    <circle cx="14" cy="16" r="10" fill="#FFD600" stroke="white" stroke-width="2"/>
+    <rect x="10" y="24" width="8" height="5" fill="#424242"/>
+    <line x1="14" y1="6" x2="14" y2="3" stroke="#FFEB3B" stroke-width="2"/>
+    <!-- 방패 -->
+    <path d="M 38 6 L 50 6 L 50 22 Q 50 30 44 32 Q 38 30 38 22 Z" fill="#FFCDD2" stroke="white" stroke-width="2"/>
+    <text x="44" y="22" text-anchor="middle" font-size="10" fill="#C62828" font-weight="900">+</text>
+  </g>
+  <text x="90" y="32" class="ko" font-size="20" fill="white">시나리오 상세 · UTL · SAF</text>
+  <text x="90" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">ENERGY + ENVIRONMENT + SAFETY · UTL-01·02·03 + SAF-01·02</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFEB3B" text-anchor="end">패키지 6 · 갭 20 해소</text>
+
+  <!-- UTL-01 (Top5 결합 표시) -->
+  <g transform="translate(25, 100)" filter="url(#us-shadow)">
+    <rect width="145" height="190" rx="10" fill="white" stroke="#2E7D32" stroke-width="2.5" stroke-dasharray="4 2"/>
+    <rect width="145" height="40" rx="10" fill="url(#utl-card)"/>
+    <rect y="28" width="145" height="12" fill="url(#utl-card)"/>
+    <text x="73" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-UTL-01</text>
+    <text x="73" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">에너지 최적화</text>
+    <text x="73" y="58" text-anchor="middle" class="ko" font-size="10" fill="#1B5E20" font-weight="700">5.2-e 최적화</text>
+    <g transform="translate(12, 76)" class="ko" font-size="9" fill="#2E7D32">
+      <text y="0">▸ 전사·ESG 통합</text>
+      <text y="16">▸ CBAM·K-ETS 4기</text>
+      <text y="32">▸ 비용·탄소·규제</text>
+      <text y="48">  동시 해소</text>
+      <text y="64">▸ Phase 3 전사</text>
+      <text y="84" fill="#F57F17" font-weight="700">★ Top5 포함</text>
+      <text y="100" fill="#1B5E20">(별도 자산 결합)</text>
+    </g>
+  </g>
+
+  <!-- UTL-02 -->
+  <g transform="translate(180, 100)" filter="url(#us-shadow)">
+    <rect width="145" height="190" rx="10" fill="white" stroke="#2E7D32" stroke-width="2"/>
+    <rect width="145" height="40" rx="10" fill="url(#utl-card)"/>
+    <rect y="28" width="145" height="12" fill="url(#utl-card)"/>
+    <text x="73" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-UTL-02</text>
+    <text x="73" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">컴프레서·보일러</text>
+    <text x="73" y="58" text-anchor="middle" class="ko" font-size="10" fill="#1B5E20" font-weight="700">5.2-d + 5.2-e</text>
+    <g transform="translate(12, 76)" class="ko" font-size="9" fill="#2E7D32">
+      <text y="0">▸ 효율·누기 예지보전</text>
+      <text y="16">▸ 자동 보정 폐 루프</text>
+      <text y="32">▸ "5.2-d+5.2-e"</text>
+      <text y="48">  1 차 결합 사례</text>
+      <text y="64">▸ 안전 PLC 위배 금지</text>
+      <text y="84" fill="#F57F17" font-weight="700">▸ Quick Win P1~2</text>
+    </g>
+  </g>
+
+  <!-- UTL-03 -->
+  <g transform="translate(335, 100)" filter="url(#us-shadow)">
+    <rect width="145" height="190" rx="10" fill="white" stroke="#2E7D32" stroke-width="2"/>
+    <rect width="145" height="40" rx="10" fill="url(#utl-card)"/>
+    <rect y="28" width="145" height="12" fill="url(#utl-card)"/>
+    <text x="73" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-UTL-03</text>
+    <text x="73" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">폐수·배출가스</text>
+    <text x="73" y="58" text-anchor="middle" class="ko" font-size="10" fill="#1B5E20" font-weight="700">5.2-b + 5.2-f</text>
+    <g transform="translate(12, 76)" class="ko" font-size="9" fill="#2E7D32">
+      <text y="0">▸ TMS · CEMS</text>
+      <text y="16">▸ 환경부 송신 의무</text>
+      <text y="32">▸ 사전 검증·이상</text>
+      <text y="48">  사전 감지</text>
+      <text y="64">▸ 약품·유량 권고</text>
+      <text y="84" fill="#F57F17" font-weight="700">▸ Phase 1~2</text>
+    </g>
+  </g>
+
+  <!-- 분리선 (UTL ↔ SAF) -->
+  <line x1="490" y1="95" x2="490" y2="295" stroke="#F57F17" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- SAF-01 (모듈_중대재해 결합) -->
+  <g transform="translate(505, 100)" filter="url(#us-shadow)">
+    <rect width="135" height="190" rx="10" fill="white" stroke="#C62828" stroke-width="2"/>
+    <rect width="135" height="40" rx="10" fill="url(#saf-card)"/>
+    <rect y="28" width="135" height="12" fill="url(#saf-card)"/>
+    <text x="68" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-SAF-01</text>
+    <text x="68" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">중대재해 감지</text>
+    <text x="68" y="58" text-anchor="middle" class="ko" font-size="10" fill="#B71C1C" font-weight="700">5.2-c 비전</text>
+    <g transform="translate(10, 76)" class="ko" font-size="9" fill="#C62828">
+      <text y="0">▸ CCTV · 웨어러블</text>
+      <text y="16">▸ 미착용·진입 금지</text>
+      <text y="32">▸ 5.2-f 사고이력 RAG</text>
+      <text y="48">▸ 모듈_중대재해</text>
+      <text y="64">  BLK-A·C·D·F 결합</text>
+      <text y="84" fill="#F57F17" font-weight="700">▸ Quick Win P1</text>
+    </g>
+  </g>
+
+  <!-- SAF-02 (모듈_CBAM 결합) -->
+  <g transform="translate(650, 100)" filter="url(#us-shadow)">
+    <rect width="135" height="190" rx="10" fill="white" stroke="#C62828" stroke-width="2"/>
+    <rect width="135" height="40" rx="10" fill="url(#saf-card)"/>
+    <rect y="28" width="135" height="12" fill="url(#saf-card)"/>
+    <text x="68" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-SAF-02</text>
+    <text x="68" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">CBAM 신고 자동화</text>
+    <text x="68" y="58" text-anchor="middle" class="ko" font-size="10" fill="#B71C1C" font-weight="700">5.2-b + 5.2-e</text>
+    <g transform="translate(10, 76)" class="ko" font-size="9" fill="#C62828">
+      <text y="0">▸ 분기 신고 자동화</text>
+      <text y="16">▸ 산정 로직 + 보고서</text>
+      <text y="32">▸ 5.2-f 규제 RAG</text>
+      <text y="48">▸ 모듈_CBAM 풀 결합</text>
+      <text y="64">  BLK-A·C·D·F</text>
+      <text y="84" fill="#F57F17" font-weight="700">▸ Phase 2</text>
+    </g>
+  </g>
+
+  <!-- 영역 라벨 -->
+  <g transform="translate(155, 305)">
+    <rect width="180" height="22" rx="4" fill="#E8F5E9" stroke="#2E7D32"/>
+    <text x="90" y="15" text-anchor="middle" class="ko" font-size="10" fill="#1B5E20" font-weight="700">UTL · 에너지·환경 (3)</text>
+  </g>
+  <g transform="translate(575, 305)">
+    <rect width="180" height="22" rx="4" fill="#FFEBEE" stroke="#C62828"/>
+    <text x="90" y="15" text-anchor="middle" class="ko" font-size="10" fill="#B71C1C" font-weight="700">SAF · 안전·ESG (2)</text>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(20, 340)">
+    <rect width="760" height="50" rx="8" fill="rgba(46,125,50,0.06)" stroke="#2E7D32" stroke-dasharray="3 2"/>
+    <text x="20" y="20" class="ko" font-size="11" fill="#1B5E20" font-weight="700">패키지 6 · 5+1 시나리오 = UTL-01 (Top5) + UTL-02·03 + SAF-01·02</text>
+    <text x="20" y="38" class="ko" font-size="10" fill="#388E3C">▸ 모듈_중대재해 + 모듈_CBAM 풀 결합 운영 · 시나리오는 모델/흐름, 모듈은 거버넌스/법령 분담</text>
+  </g>
+</svg>

@@ -106,6 +106,7 @@ hooks:
   - hooks/highlight_placeholders.py   # [고객사]·[수치]·[공정] 등 플레이스홀더 시각 강조
   - hooks/linkify_sources.py          # > [출처: 파일명 §섹션] 자동 링크화 (274 인용)
   - hooks/inject_toc.py               # 300 줄 이상 페이지 상단에 'TOC 빠른 진입' 박스 자동
+  - hooks/inject_hero_svg.py          # slug 매칭 SVG 자동 hero 주입 (페이지 상단 figure)
   - hooks/build_crossref.py           # 274 인용 → docs/data/crossref.json (D3 그래프 입력)
 
 extra_css:

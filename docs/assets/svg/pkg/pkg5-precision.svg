@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="패키지 5 — 정밀가공 (클라우드 SaaS 6 개월, 4 시나리오 + 통합 UI)"
+     class="zoomable">
+  <title>패키지 5 — 정밀가공 중소 (클라우드 SaaS 6 개월 경량)</title>
+  <desc>MET-01·03 + UTL-01 + LLM-01·04 + SAF-01 의 6 시나리오 표준을 6 개월 SaaS 압축 구조로 도입하여 도입 비용 회수 효율을 끌어올리는 클라우드 종합솔루션 통합 파일럿 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="pkg5-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#66BB6A"/>
+    </linearGradient>
+    <filter id="pkg5-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="pkg5-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <!-- 상단 헤더 -->
+  <rect width="800" height="80" fill="url(#pkg5-bg)"/>
+  <text x="32" y="34" class="en" fill="rgba(255,255,255,0.85)" font-size="11">PACKAGE 05 · CNC PRECISION · CLOUD SaaS · 6 MONTHS</text>
+  <text x="32" y="62" class="ko" fill="white" font-size="24">정밀가공 중소 · 클라우드 SaaS 경량</text>
+  <g transform="translate(700, 22)" filter="url(#pkg5-glow)">
+    <circle cx="36" cy="20" r="20" fill="#FFB300"/>
+    <text x="36" y="26" text-anchor="middle" class="ko" fill="#1B5E20" font-size="20">5</text>
+  </g>
+
+  <!-- 중간 — SaaS 단일 테넌시 위에 4 시나리오 그리드 -->
+  <g transform="translate(32, 100)">
+    <text x="0" y="0" class="ko" fill="#1B5E20" font-size="13">6 시나리오 (4 + 통합 UI 인프라) — 단일 클라우드 테넌시 공유</text>
+  </g>
+
+  <!-- SaaS 클라우드 백판 -->
+  <g transform="translate(32, 116)">
+    <rect width="736" height="170" rx="14" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="20" y="22" class="ko-r" fill="#2E7D32" font-size="10">CLOUD SaaS · 단일 테넌시 (AWS · NCP · KT Cloud 中 1)</text>
+
+    <!-- Row 1 — 2 카드 -->
+    <g filter="url(#pkg5-shadow)" transform="translate(20, 40)">
+      <rect width="220" height="58" rx="10" fill="white"/>
+      <rect width="220" height="22" rx="10" fill="#2E7D32"/>
+      <text x="14" y="16" class="ko" fill="white" font-size="11">MET-01 (주력)</text>
+      <text x="14" y="40" class="ko" fill="#263238" font-size="11">CNC 공구 마모·파손 예지</text>
+      <text x="14" y="52" class="ko-r" fill="#546E7A" font-size="9">컨트롤러 로그 · 시계열</text>
+    </g>
+    <g filter="url(#pkg5-shadow)" transform="translate(258, 40)">
+      <rect width="220" height="58" rx="10" fill="white"/>
+      <rect width="220" height="22" rx="10" fill="#388E3C"/>
+      <text x="14" y="16" class="ko" fill="white" font-size="11">MET-03 (주력)</text>
+      <text x="14" y="40" class="ko" fill="#263238" font-size="11">3D 스캔 치수 검사 자동화</text>
+      <text x="14" y="52" class="ko-r" fill="#546E7A" font-size="9">전수검사 시간 단축</text>
+    </g>
+    <g filter="url(#pkg5-shadow)" transform="translate(496, 40)">
+      <rect width="220" height="58" rx="10" fill="white"/>
+      <rect width="220" height="22" rx="10" fill="#43A047"/>
+      <text x="14" y="16" class="ko" fill="white" font-size="11">UTL-01</text>
+      <text x="14" y="40" class="ko" fill="#263238" font-size="11">공장 에너지 최적화</text>
+      <text x="14" y="52" class="ko-r" fill="#546E7A" font-size="9">피크 부하 요금 절감</text>
+    </g>
+
+    <!-- Row 2 — 3 카드 -->
+    <g filter="url(#pkg5-shadow)" transform="translate(20, 108)">
+      <rect width="220" height="48" rx="10" fill="white"/>
+      <rect width="6" height="48" fill="#00695C"/>
+      <text x="20" y="20" class="ko" fill="#00695C" font-size="11">LLM-01</text>
+      <text x="20" y="38" class="ko-r" fill="#37474F" font-size="10">SOP RAG (후속 분리)</text>
+    </g>
+    <g filter="url(#pkg5-shadow)" transform="translate(258, 108)">
+      <rect width="220" height="48" rx="10" fill="white"/>
+      <rect width="6" height="48" fill="#00695C"/>
+      <text x="20" y="20" class="ko" fill="#00695C" font-size="11">LLM-04</text>
+      <text x="20" y="38" class="ko-r" fill="#37474F" font-size="10">CAD 도면 지능 검색</text>
+    </g>
+    <g filter="url(#pkg5-shadow)" transform="translate(496, 108)">
+      <rect width="220" height="48" rx="10" fill="white"/>
+      <rect width="6" height="48" fill="#6A1B9A"/>
+      <text x="20" y="20" class="ko" fill="#6A1B9A" font-size="11">MLO-03 + SAF-01</text>
+      <text x="20" y="38" class="ko-r" fill="#37474F" font-size="10">통합 UI · 안전 (후속)</text>
+    </g>
+  </g>
+
+  <!-- 하단 — 통계 -->
+  <g transform="translate(32, 296)">
+    <rect width="736" height="80" rx="10" fill="#F1F8E9" stroke="#C5E1A5" stroke-width="1"/>
+    <g class="ko" font-size="11" fill="#33691E">
+      <text x="20" y="26" font-size="22" font-weight="800" fill="#2E7D32">6</text>
+      <text x="20" y="50" font-size="10">개월 · 압축 (4 분기 적용)</text>
+      <text x="20" y="66" class="ko-r" font-size="9" fill="#558B2F">클라우드 종합솔루션</text>
+
+      <text x="160" y="26" font-size="22" font-weight="800" fill="#2E7D32">4 + 1</text>
+      <text x="160" y="50" font-size="10">시나리오 + 통합 UI</text>
+      <text x="160" y="66" class="ko-r" font-size="9" fill="#558B2F">18M 표준의 6 시나리오 압축</text>
+
+      <text x="320" y="26" font-size="22" font-weight="800" fill="#2E7D32">7</text>
+      <text x="320" y="50" font-size="10">핵심 KPI</text>
+      <text x="320" y="66" class="ko-r" font-size="9" fill="#558B2F">파손·치수·전력·도면</text>
+
+      <text x="460" y="26" font-size="22" font-weight="800" fill="#F57F17">SaaS</text>
+      <text x="460" y="50" font-size="10">단일 테넌시 · 비선형 ROI</text>
+      <text x="460" y="66" class="ko-r" font-size="9" fill="#558B2F">M2·M4·M6 게이트</text>
+
+      <text x="620" y="26" font-size="22" font-weight="800" fill="#2E7D32">CNC</text>
+      <text x="620" y="50" font-size="10">선반·머시닝센터·MCT</text>
+      <text x="620" y="66" class="ko-r" font-size="9" fill="#558B2F">중소 5 인 이상 사업장</text>
+    </g>
+  </g>
+</svg>

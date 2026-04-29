@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
+     aria-label="시나리오 상세 — 특수강관 (STL-07 + STL-11 + LLM-01 RAG 중심)"
+     class="zoomable">
+  <title>시나리오 상세 — 특수강관 · 강관 아이콘 + RAG 양축 검색</title>
+  <desc>패키지 3 (중견 특수강관) 의 핵심 2 시나리오 — STL-07 인발·필거밀 공정설계 LLM (5.2-a + 5.2-f 양축 검색), STL-11 비파괴검사 UT/ECT 자동 판정 + LLM-01 SOP RAG 결합 도식.</desc>
+
+  <defs>
+    <linearGradient id="sp-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#004D40"/>
+      <stop offset="100%" stop-color="#00695C"/>
+    </linearGradient>
+    <linearGradient id="sp-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#26A69A"/>
+      <stop offset="100%" stop-color="#00695C"/>
+    </linearGradient>
+    <linearGradient id="sp-llm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="sp-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="70" fill="url(#sp-header)"/>
+  <!-- 강관 아이콘 (3 단 동심원 + 사선) -->
+  <g transform="translate(28, 18)">
+    <ellipse cx="20" cy="20" rx="18" ry="10" fill="none" stroke="white" stroke-width="2"/>
+    <ellipse cx="20" cy="20" rx="12" ry="6" fill="none" stroke="#80CBC4" stroke-width="2"/>
+    <ellipse cx="20" cy="20" rx="6" ry="3" fill="#FFEB3B"/>
+    <line x1="2" y1="20" x2="38" y2="20" stroke="white" stroke-width="1" stroke-dasharray="2 2"/>
+  </g>
+  <text x="85" y="32" class="ko" font-size="20" fill="white">시나리오 상세 · 특수강관 (RAG 중심)</text>
+  <text x="85" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SCN-STL-07 + STL-11 + LLM-01 · DRAWING + PILGER MILL + UT/ECT</text>
+  <text x="770" y="42" class="ko" font-size="13" fill="#FFEB3B" text-anchor="end">패키지 3 · 갭 23 해소</text>
+
+  <!-- STL-07 (좌) — 5.2-a + 5.2-f 양축 결합 강조 -->
+  <g transform="translate(25, 100)" filter="url(#sp-shadow)">
+    <rect width="290" height="200" rx="12" fill="white" stroke="#004D40" stroke-width="3"/>
+    <rect width="290" height="44" rx="12" fill="url(#sp-card)"/>
+    <rect y="32" width="290" height="12" fill="url(#sp-card)"/>
+    <text x="15" y="22" class="ko" font-size="13" fill="white">SCN-STL-07 ★ 인발·필거밀 공정설계 LLM</text>
+    <text x="15" y="40" class="ko" font-size="10" fill="#FFEB3B">5.2-a + 5.2-f 병기 결합 (양축 동시 검색)</text>
+    <!-- 양축 검색 도식 -->
+    <g transform="translate(15, 60)">
+      <!-- 메타 임베딩 (이름) -->
+      <rect x="0" y="0" width="125" height="56" rx="6" fill="#E0F2F1" stroke="#00695C"/>
+      <text x="62" y="16" text-anchor="middle" class="ko" font-size="10" fill="#004D40" font-weight="700">5.2-a 메타 임베딩</text>
+      <text x="62" y="32" text-anchor="middle" class="ko" font-size="9" fill="#00695C">"이름 비슷"</text>
+      <text x="62" y="48" text-anchor="middle" class="ko" font-size="9" fill="#00695C">치수·재질·OD·t</text>
+      <!-- 응답 임베딩 (응답) -->
+      <rect x="135" y="0" width="125" height="56" rx="6" fill="#E0F2F1" stroke="#00695C"/>
+      <text x="197" y="16" text-anchor="middle" class="ko" font-size="10" fill="#004D40" font-weight="700">5.2-f LLM·RAG</text>
+      <text x="197" y="32" text-anchor="middle" class="ko" font-size="9" fill="#00695C">"응답 비슷"</text>
+      <text x="197" y="48" text-anchor="middle" class="ko" font-size="9" fill="#00695C">Citation·검수</text>
+      <!-- 동일 Vector DB 라벨 -->
+      <line x1="62" y1="56" x2="62" y2="68" stroke="#F57F17" stroke-width="1.5"/>
+      <line x1="197" y1="56" x2="197" y2="68" stroke="#F57F17" stroke-width="1.5"/>
+      <line x1="62" y1="68" x2="197" y2="68" stroke="#F57F17" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(15, 138)">
+      <rect width="260" height="20" rx="4" fill="#FFE0B2" stroke="#F57F17"/>
+      <text x="130" y="14" text-anchor="middle" class="ko" font-size="9" fill="#BF360C" font-weight="700">동일 Vector DB · 동일 메타 스토어 위에서 양축 동시 운영</text>
+    </g>
+    <text x="15" y="178" class="ko" font-size="9" fill="#004D40">▸ 후속 5.2-g 형상 임베딩 (DWG·STEP) 결합 → 3 축 확장</text>
+    <text x="15" y="192" class="ko" font-size="9" fill="#F57F17" font-weight="700">▸ 베테랑 검수 게이트 = STL-11 과 공유</text>
+  </g>
+
+  <!-- STL-11 -->
+  <g transform="translate(330, 100)" filter="url(#sp-shadow)">
+    <rect width="220" height="200" rx="12" fill="white" stroke="#00695C" stroke-width="2"/>
+    <rect width="220" height="44" rx="12" fill="url(#sp-card)"/>
+    <rect y="32" width="220" height="12" fill="url(#sp-card)"/>
+    <text x="15" y="22" class="ko" font-size="13" fill="white">SCN-STL-11 · UT/ECT 판정</text>
+    <text x="15" y="40" class="ko" font-size="10" fill="#FFEB3B">5.2-c 신호 분류 모드</text>
+    <g transform="translate(15, 60)" class="ko" font-size="10" fill="#004D40">
+      <text y="0">▸ UT A-scan 1D 신호 분류</text>
+      <text y="18">▸ ECT 와전류 결함 검출</text>
+      <text y="36">▸ 5.2-c 비전 엔진 골격</text>
+      <text y="54">  (분류·검출·세그) 재사용</text>
+      <text y="74" font-weight="700">▸ 5.2-f 결합:</text>
+      <text y="90">  처분 매뉴얼·과거 결함</text>
+      <text y="106">  사례 자동 회신</text>
+      <text y="124" fill="#F57F17" font-weight="700">▸ 검사원 판정 보조</text>
+      <text y="140" fill="#00695C">  HITL UI 공유</text>
+    </g>
+  </g>
+
+  <!-- LLM-01 (RAG 중심 강조) -->
+  <g transform="translate(565, 100)" filter="url(#sp-shadow)">
+    <rect width="215" height="200" rx="12" fill="white" stroke="#F57F17" stroke-width="2.5"/>
+    <rect width="215" height="44" rx="12" fill="url(#sp-llm)"/>
+    <rect y="32" width="215" height="12" fill="url(#sp-llm)"/>
+    <text x="15" y="22" class="ko" font-size="13" fill="white">SCN-LLM-01 · SOP RAG</text>
+    <text x="15" y="40" class="ko" font-size="10" fill="white">5.2-f LLM·RAG (Track 3)</text>
+    <g transform="translate(15, 60)" class="ko" font-size="10" fill="#BF360C">
+      <text y="0">▸ 작업표준·교대 인계</text>
+      <text y="18">▸ 베테랑 노하우 형식지화</text>
+      <text y="36">▸ 암묵지 → 디지털 자산</text>
+      <text y="56" font-weight="700">▸ 본 패키지 RAG 중심:</text>
+      <text y="74">  STL-07 (공정설계)</text>
+      <text y="90">  STL-11 (UT 처분)</text>
+      <text y="106">  LLM-01 (SOP)</text>
+      <text y="126" fill="#004D40" font-weight="700">▸ 동일 RAG 인프라 공유</text>
+      <text y="142" fill="#00695C">  임베딩·벡터스토어·권한</text>
+    </g>
+  </g>
+
+  <!-- 결합 화살표 -->
+  <g stroke="#F57F17" stroke-width="2" fill="none" stroke-dasharray="4 2">
+    <path d="M 315 200 L 330 200"/>
+    <path d="M 550 200 L 565 200"/>
+  </g>
+
+  <!-- 하단 명분 박스 -->
+  <g transform="translate(25, 315)">
+    <rect width="755" height="60" rx="8" fill="rgba(0,77,64,0.06)" stroke="#004D40" stroke-dasharray="3 2"/>
+    <text x="20" y="22" class="ko" font-size="11" fill="#004D40" font-weight="700">암묵지 자산화 명분 — BCP 리스크 직접 해소</text>
+    <text x="20" y="40" class="ko" font-size="10" fill="#00695C">▸ 베테랑 [수치] 명·검사원 [수치] 명의 머릿속 노하우 → 형식지·디지털 자산으로 전환 (단일 통합 검수 화면)</text>
+    <text x="20" y="56" class="ko" font-size="10" fill="#F57F17" font-weight="700">▸ 자동차·플랜트·조선 OEM 다중 협력 강관사 사업 1 순위 도입 · 단일 OEM 단일 제품군은 STL-07 단독 진입 권장</text>
+  </g>
+</svg>
