@@ -1941,6 +1941,47 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 
 ---
 
+#### 엔트리 #49 — Phase E15 SVG 시각 정체성 전면 개편 (가로형 → 세로형 + 직각 화살표 + 디자인 SVG)
+
+- **맥락**: 사용자 라이브 검증 중 추가 호소 누적 (mermaid 시각 정체성·가로형 거대화·곡선 화살표·"삽화 (Mermaid)" 라벨 등). 단계별 처리로 6 commit 누적 — Phase E15-1 (LR→TD) → E15-2 (8 디자인 SVG) → E15-3 (template 시범) → E15-4 (라벨·orthogonal) → E15-5 (stepBefore 정책) → E15-6 (8 syntax error fix).
+- **사용자 요청 원문 요지** (다중): "이런 가로형 이미지가 너무 많아, 다 세로형으로 바꿔야 해, 재전수조사 하고 전면재작업" / "삽화 (Mermaid) 라고 표기한건 별로 안맞지 않나?" / "이미지 안에 화살표 어색해 각지게 꺾이게 해서 좀 잘 보이게" / "화살표 직각으로 다 바꾸라니까 그걸 정책으로 삼고" / "ok 직각 화살표 정책 좋다 잘 적용되었어, 다음 작업 추천해 줘" / "추천대로".
+- **AI 수행**:
+  - **E15-1 (commit `02b5989`)**: scripts/audit_svg_aspect.py 신설 (90 SVG aspect 전수 분석 — 가로 62/세로 16/정사각 12) + scripts/rotate_mermaid_to_vertical.py 신설 (git history 기반 mermaid 복원 + LR→TD 자동 치환 + mmdc 재변환). 42 SVG LR→TD 변환 성공. 가로 62→22.
+  - **E15-2 (commit `e75009f`)**: 극단 가로형 8 SVG (ratio>5) 직접 디자인 SVG (card_stack template) 재작성. scripts/generate_card_stack_svg.py 신설 (~430 줄). 노드·구조 보존 + 600×800 portrait + 도메인별 색상 매트릭스. 가로 22→14.
+  - **E15-3 (commit `c41e8b0`)**: render_tree_branching + render_matrix_2x2 template 추가. 시범 2 SVG 생성 (track1-top5/d1·by-package/d1) — Plan A 검증.
+  - **E15-4 (commit `dcdc9b0`)**: 16 .md 파일 "### 삽화 (Mermaid)" → "### 도식" 일괄 치환 + tree_branching 화살표 곡선→orthogonal (4 종 화살표 path 신설).
+  - **E15-5 (commit `a393f28`)**: 직각 화살표 정책 명문화 — `_try_mmdc()` 가 자동 `%%{init: {"flowchart": {"curve": "stepBefore"}}}%%` directive prepend. scripts/regenerate_all_mmdc.py 신설 → 83 mmdc SVG 재변환 (직각 화살표 적용). 8 syntax error fail 잔존.
+  - **E15-6 (commit `0f8171b`)**: 8 fail SVG 직접 디자인 SVG (card_stack) 변환 — assembly/d1·detail-utl-saf/d3·pkg6/d1·rag-infra/d1·track1-top5/d2·track2-top5/d1·track3-top5/d1·d2. 자주 보이는 핵심 페이지 (Track 1·2·3 BLK 본문) 안정화. 가로 14→7.
+- **판단 근거**:
+  - **mermaid stepBefore directive 의 정책 가치 (방법론 후보 4.54)**: mermaid 의 default curve `basis` (Bezier) 가 시각적으로 어색 + 정보 흐름 불명확. `stepBefore` 가 Figma·Lucidchart 표준 직각 화살표. directive 1 줄 추가만으로 모든 mmdc 변환 화살표 직각화 — 사이드 이펙트 0.
+  - **mmdc 자동 변환 vs 디자인 SVG 결정 매트릭스 (방법론 후보 4.55)**: mmdc 는 mermaid 코드 보존 + 자동 layout 의 장점이 있으나, syntax error (한글 placeholder + subgraph 충돌) 시 fallback 필요. 의사결정 트리: (1) syntax 정상 → mmdc + stepBefore (2) syntax error → 노드 추출 + 디자인 SVG card_stack 변환 (3) 극단 가로형 (ratio > 5) → 디자인 SVG 강제. 자주 보이는 페이지 우선.
+  - **Python 템플릿 SVG 의 토큰 효율성 (방법론 후보 4.56)**: 8-12 SVG 직접 작성 시 ~80-100K 토큰 소요. Python 템플릿 함수 (render_svg) + SPECS dict 분리 시 ~5-10K 토큰 (90% 절감). 카드 stack·tree_branching·matrix_2x2 3 종 templates 으로 90% 케이스 cover.
+  - **사용자 인내심 한계 + 단계별 검증 패턴**: 6 commit 누적이지만 각 commit 후 사용자 라이브 검증 → 즉각 호소 → 다음 commit 으로 fix. 큰 작업 (전수 디자인 SVG 변환) 회피하고 점진적 호소 대응.
+- **사용자 의사결정**: 단계별 호소 + Auto 모드 위임. 마지막 "ok 직각 화살표 정책 좋다 잘 적용되었어, 다음 작업 추천해 줘" → 1순위 (8 fail SVG fix) 추천 → "추천대로" 진행.
+- **산출물**:
+  - **commit 6 종 양 원격 동기화**: `02b5989`·`e75009f`·`c41e8b0`·`dcdc9b0`·`a393f28`·`0f8171b`
+  - **신규 스크립트 4 종**:
+    - scripts/audit_svg_aspect.py (~70 줄, aspect ratio 전수 분석)
+    - scripts/rotate_mermaid_to_vertical.py (~190 줄, git history 기반 LR→TD 자동)
+    - scripts/generate_card_stack_svg.py (~830 줄, Python 템플릿 SVG 일괄 생성)
+    - scripts/regenerate_all_mmdc.py (~150 줄, mmdc 정책 재변환)
+  - **수정 스크립트**: scripts/convert_mermaid.py (`_try_mmdc()` stepBefore 자동 prepend)
+  - **SVG 변경**: 91 mmdc SVG 모두 (83 재변환 + 8 디자인 SVG 변환) + 10 디자인 SVG 신규 (E15-2 의 8 + E15-3 의 2)
+  - **aspect ratio 누적**: 가로 62 → 22 → 14 → 7 (89% 감소) · 세로 16 → 51 (3.2 배) · 정사각 12 → 33 (2.75 배)
+  - **16 .md 파일** "### 삽화 (Mermaid)" → "### 도식" 일괄 치환
+  - **scripts/generate_card_stack_svg.py 의 templates 3 종**: card_stack (단계 흐름) · tree_branching (3 입력→합류→분기) · matrix_2x2 (의사결정)
+- **방법론 후보 4.54**: **mermaid stepBefore directive 직각 화살표 정책** — `%%{init: {"flowchart": {"curve": "stepBefore"}}}%%` directive 자동 prepend 로 모든 mmdc 변환 SVG 화살표 직각화. Figma·Lucidchart 표준. 사이드 이펙트 0. 정책 자동화 도구 (`_try_mmdc()` 보강) 로 향후 신규 mermaid 추가 시에도 자동 적용.
+- **방법론 후보 4.55**: **mmdc 자동 변환 vs 디자인 SVG 결정 매트릭스** — 의사결정 트리: (1) syntax 정상 + ratio < 5 → mmdc + stepBefore (2) syntax error → 디자인 SVG card_stack 변환 (3) 극단 가로형 (ratio > 5) → 디자인 SVG 강제. 자주 보이는 페이지 (Track top5·홈·blocks) 우선. mermaid 코드 보존 가치 vs 시각 통일성 결합.
+- **방법론 후보 4.56**: **Python 템플릿 SVG 의 토큰 효율 패턴** — 8-12 SVG 직접 작성 시 ~80-100K 토큰. Python 템플릿 함수 (render_svg / render_tree_branching / render_matrix_2x2) + SPECS dict 분리 시 ~5-10K 토큰 (90% 절감). 3 종 templates 로 90% 케이스 cover. 신규 SVG 추가 시 SPECS dict 1 행 추가만.
+- **잔여**:
+  - **약 가로형 7 SVG**: ratio 1.5~5 — 시각 OK, 보존
+  - **gantt 3 종**: 시간축 본질 가로형, 보존
+  - **Sprint 4 (콘텐츠 가다듬기)**: 사용자 명시 승인 시 진입
+  - **Sprint 5 보완**: 접근성·검색·SEO·PDF·다크 모드 정합 (선택)
+- **다음 단계**: 사용자 라이브 사이트 재검증 (https://pathcosmos.github.io/ai-docs-for-biz/) → 직각 화살표 + 디자인 SVG 통일성 + "도식" 라벨 확인.
+
+---
+
 ## 4. 방법론 인덱스 (본문은 `방법론_총론.md` 참조)
 
 > **분리 사유 (엔트리 #26)**: 본 §4 가 28 항목·212 줄 누적되어 작업로그 본체 (변동 기록) 와 방법론 (안정 자산) 이 한 파일에서 충돌. 방법론 본문을 `방법론_총론.md` 로 분리하고 본 §4 는 인덱스만 유지.
