@@ -1832,6 +1832,47 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 
 ---
 
+#### 엔트리 #46 — Phase E12: 현대 SaaS 디자인 시스템 전면 개편 + lightbox 풀폭 줌 + 사이드바 정리
+
+- **맥락**: 엔트리 #45 직후 사용자 다중 호소 — (1) "이미지 클릭 시 더 크게" → lightbox 풀폭+줌 / (2) "frontend 작업자 불러서 전면 디자인 개편 + 색깔 톤도 단순해" → SaaS 톤 종합 개편 / (3) "mermaid 로 남아있는 삽화 다 일반 이미지로" → mmdc 91 SVG 의 mermaid 기본 스타일 SaaS 톤 통일 / (4) "세로형 문서에 더 잘 맞게" → 레이아웃·카드·hover 정합 / (5) "왼쪽 메뉴 꼬라지 너무 이상" → 사이드바 콘텐츠 그룹 25 항목 일괄 노출 + 간격 넓음.
+- **사용자 요청 원문 요지** (5 메시지): (1) "이미지 클릭하면 좀 훨씬 더 크게 보이면 좋겠는데" / (2) "frontend 작업자 불러서 전면적인 디자인 개편 좀 진행하자 색깔 톤도 너무 좀 단순해" / (3) "그리고 아직도 mermaid 로 남아있는 삽화들 다 일반 이미지로 바꾸라니깐" / (4) "세로형태 문서에 더 잘 맞게 잘 정리해서" / (5) "왼쪽 메뉴 꼬라지 너무 이상하지 않냐?".
+- **AI 수행**:
+  - **AskUserQuestion 2 결정 (방향+범위)**: 현대적 SaaS 톤 (Linear·Vercel·Stripe) + 종합 (색·타이포·레이아웃·애니메이션). Material 단순 톤 → indigo·violet·pink·emerald·amber 풍성한 시스템.
+  - **lightbox 풀폭 + 줌 (commit `6d069ca`)**: max-width 92vw → 98vw + max-height 85vh → 88vh. 자체 구현 줌 (의존성 0, vanilla JS): 클릭 1x→2x→3x→5x 사이클 / 휠 0.5x~8x 부드러운 줌 / drag pan / ESC 닫기. 줌 배지 (🔍 N%) 실시간 + 1x 리셋 버튼 + 사용 안내 1 줄.
+  - **Phase E12 4 Stage 병렬 + 메인 직접 (방법론 4.22 혼합 흐름, commit `437df1b`)**:
+    - **Stage A 에이전트** — extra.css +579 줄 (`docs/stylesheets/extra.css` 934 → 1,513 → 메인 +140 → 1,652 줄). Indigo·Violet·Pink 단일 brand gradient + Slate scale + 4 그라데이션 + 5 shadow tier + H1 4xl/800 letter-spacing -0.025em + body 1.13rem/1.75 + 카드 hover translateY+scale+shadow-xl + 다크 slate-950 + glassmorphism + prefers-reduced-motion 가드.
+    - **Stage B 에이전트** — `scripts/patch_mmdc_svg_style.py` 신설 (132 줄, idempotent + ET XML 검증). 91/91 SVG 일괄 patch — trebuchet ms → Pretendard / mermaid violet (#9370DB·#ECECFF) → SaaS indigo (#818CF8·#EEF2FF·#4338CA) / 회색 (#333·#555·#888·#ddd) → Tailwind slate (#1E293B·#334155·#64748B·#E2E8F0). hex lookahead `(?![\dA-Fa-f])` 부분 매치 회피.
+    - **Stage C 에이전트** — 12 핵심 SVG (hero-home + track 3 + pkg 6 + scenario/catalog + guide/quickstart) SaaS 톤 재 매핑. 도메인별 정체성 보존 (track2 violet·track3 cyan·pkg3 teal·pkg4 amber·pkg5 sky·pkg6 emerald) + 단일 SaaS 팔레트 통합. 1-layer dropShadow → 2-layer Linear/Stripe 정교 (#0F172A 0.08+0.06). Material 잔여 색상 0 검증. 분량 ±2 줄 (색상만 변경).
+    - **Stage D 메인 직접** — 사이드바 +140 줄 (사용자 "왼쪽 메뉴 꼬라지" 응급). 항목 padding 0.4em → 0.32em + font 0.82rem + sub-그룹 헤더 (🔧·📦·🎯) 시각 위계 (좌측 2px indigo border + gradient subtle bg) + 1 그룹 헤더 (🚀·📦·📋·📌) 강조 (좌측 3px + 0.92rem 800 + indigo-700) + active gradient + glow + 비활성 sub-그룹 항목 색상 약화 + separator (1px dashed slate-200) + 다크 모드 호환.
+- **판단 근거**:
+  - **lightbox 자체 구현 (vanilla JS) vs 라이브러리 결정**: panzoom·zoomable 등 라이브러리 ~10KB 추가 vs 자체 구현 ~2KB. 자체 구현 채택 — 의존성 0 + 정확한 디자인 컨트롤 (줌 배지·1x 리셋·SaaS 톤 hint). 인터랙션 5 종 (클릭 사이클·휠·drag pan·ESC·overlay 클릭) 모두 vanilla 가능.
+  - **Stage 분배 — 메인 vs 에이전트 (방법론 4.22)**:
+    - 디자인 시스템 (CSS 580 줄) — 에이전트 (spec 명확하면 메인 동일 품질, 토큰 절감 메인 절약).
+    - mmdc 91 SVG patch (정규식 자동) — 에이전트 (작업 복잡도 낮지만 검증 + idempotent script 작성 가치).
+    - 12 핵심 SVG 색상 재 매핑 — 에이전트 (12 SVG 각각 read+edit, 토큰 큼 → 메인 직접 회피).
+    - 사이드바 보강 — **메인 직접** (긴급·실시간 사용자 호소 + 작은 작업 ~140 줄 + 즉시 반영).
+  - **사이드바 시각 위계 강화 결정**: 4 그룹 (큰) + sub-그룹 (작은) + 항목 (가장 작은) 3 단계 위계 명확화. 1 그룹 헤더 0.92rem/800/indigo-700 + sub-그룹 헤더 0.78rem/700/slate-700 + 항목 0.82rem/normal/slate. CSS 변수 fallback 로 Stage A 디자인 시스템 미로드 시에도 정상 작동.
+  - **mmdc SVG 의 idempotent patch 패턴 (방법론 후보 4.48)**: 정규식 14 개 (폰트 2 + 색상 12) + idempotent 검증 (재실행 0 변경). 향후 신규 mermaid 추가 시 patch 재실행으로 즉시 통일. lookahead `(?![\dA-Fa-f])` 가 `#333` 매치 시 `#3333`·`#333AAA` 회피.
+- **사용자 의사결정**: AskUserQuestion 2 결정 모두 Recommended (현대 SaaS 톤·종합 범위) + 추가 호소 4 종 즉각 반영. Auto 모드 위임.
+- **산출물**:
+  - **commit 2 종 양 원격 동기화**:
+    - `6d069ca` lightbox 풀폭+줌 (2 files +128/-6)
+    - `437df1b` Phase E12 종합 (106 files +1618/-681)
+  - **CSS 보강**: extra.css 934 → 1,652 줄 (+718 = +579 Stage A + 140 Stage D)
+  - **신규 스크립트**: `scripts/patch_mmdc_svg_style.py` 132 줄 (재사용 가능한 mmdc style patcher)
+  - **91 mmdc SVG 통일**: trebuchet → Pretendard + mermaid violet → SaaS indigo + 회색 → slate
+  - **12 핵심 SVG SaaS 톤**: 도메인별 색상 정체성 보존 + 단일 SaaS 팔레트
+  - **lightbox 줌 인터랙션 5 종**: 클릭 사이클·휠·drag pan·ESC·overlay
+- **방법론 후보 4.48**: **mmdc SVG 의 idempotent style patch 패턴** — Python 정규식 14 개 (폰트·색상) + 재실행 0 변경 검증 (idempotent). 신규 mermaid 추가 시 스크립트 재실행으로 즉시 톤 통일. hex lookahead `(?![\dA-Fa-f])` 부분 매치 회피. ET XML 검증 + size delta 보고.
+- **방법론 후보 4.49**: **현대 SaaS 디자인 시스템의 고정 변수 패턴** — `:root` 변수 8 색상 ramp (indigo·violet·pink·slate·emerald·amber·rose·cyan) + 4 그라데이션 + 5 shadow tier + 4 radius + 5 spacing + 8 font-size + 2 ease 이 단일 디자인 시스템 spec. 본문 1.13rem/1.75 (한국어 가독성) + H1 4xl/800/-0.025em (한국어 letter-spacing 음수) + 카드 hover translateY+scale+shadow-xl. CSS 변수 + `var(--xxx, fallback)` 패턴으로 fallback 보장.
+- **잔여 작업**:
+  - **사용자 라이브 사이트 재검증**: 5 호소 모두 해결 여부 + 새 디자인 톤 적합도 + 사이드바 시각 위계 확인.
+  - **30 미재작업 SVG (track top5·engine-cards·guide·module·other)**: Stage B mmdc patch + Stage A CSS 로 부분 효과. 사용자 검토 후 추가 결정.
+  - **CSS 다크 모드 toggle 사용자 검증**: glassmorphism + slate-950 + 그림자 재계산 정합도.
+- **다음 단계**: 사용자 라이브 사이트 (https://pathcosmos.github.io/ai-docs-for-biz/) 검증 → 5 호소 모두 해결 여부 + 디자인 톤 적합도 확인 후 추가 폴리시 결정.
+
+---
+
 ## 4. 방법론 인덱스 (본문은 `방법론_총론.md` 참조)
 
 > **분리 사유 (엔트리 #26)**: 본 §4 가 28 항목·212 줄 누적되어 작업로그 본체 (변동 기록) 와 방법론 (안정 자산) 이 한 파일에서 충돌. 방법론 본문을 `방법론_총론.md` 로 분리하고 본 §4 는 인덱스만 유지.
