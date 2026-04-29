@@ -797,3 +797,101 @@
   margin-top: 2em;
   font-size: 0.85em;
 }
+
+/* =============================================================================
+   Phase E11-1 — TOC 좌·우 정비 (사용자 4 호소 #1·#2)
+   우측 H3 숨김 + 사이드바 4 그룹 헤더 강조 + SVG 세로형 대비
+   ============================================================================= */
+
+/* 우측 TOC — H3 이하 숨김 (H2 만 표시, pkg1 기준 55 → 9 항목) */
+.md-nav--secondary .md-nav__list .md-nav__list {
+  display: none;
+}
+
+/* 우측 TOC — 최대 높이 제한 + 스크롤 (긴 페이지 대비) */
+.md-nav--secondary .md-nav__list {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-default-fg-color--lightest) transparent;
+}
+
+.md-nav--secondary .md-nav__list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.md-nav--secondary .md-nav__list::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 2px;
+}
+
+/* 우측 TOC 제목 보강 — "On this page" 영문 → 시각 강조 */
+.md-nav--secondary > .md-nav__title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5em;
+  padding: 0.6em 0.5em;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  text-transform: none;
+}
+
+/* 우측 TOC H2 항목 — 적당한 간격 + 가독성 */
+.md-nav--secondary .md-nav__link {
+  padding: 0.35em 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+  background: none;
+  border-left: none;
+}
+
+/* 좌측 사이드바 4 그룹 헤더 — 더 강한 시각 분리 */
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--md-primary-fg-color);
+  padding: 0.7em 0.6em 0.5em;
+  letter-spacing: -0.01em;
+}
+
+/* 사이드바 sub-그룹 (4 그룹 안의 nested) 들여쓰기 단순화 */
+.md-nav--lifted .md-nav .md-nav .md-nav {
+  padding-left: 0.5em;
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+  margin-left: 0.4em;
+}
+
+/* SVG 세로형 대비 — max-width 480px (760px 본문 컬럼 내 좌우 여백 확보) */
+.md-typeset figure svg.zoomable,
+.md-typeset figure img.zoomable,
+.md-typeset .hero-svg-wrap svg,
+.md-typeset .hero-svg-wrap img {
+  max-width: 480px;
+  max-height: 640px;
+  width: auto;
+  height: auto;
+  margin: 1.5em auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* hero SVG 만 더 큰 크기 허용 (홈·index 페이지) */
+.md-content article:has(.home-cta) figure svg,
+.md-content article:has(.home-cta) figure img {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+/* 모바일 — TOC 양쪽 비활성 시 본문 폭 정상 */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--secondary {
+    display: none;
+  }
+}
