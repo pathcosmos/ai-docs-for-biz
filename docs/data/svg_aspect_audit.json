@@ -61,46 +61,6 @@
       "first_nodes": []
     },
     {
-      "path": "docs/assets/diagrams/graph/diagram-1.svg",
-      "slug": "graph",
-      "diagram": "diagram-1.svg",
-      "width": 2057.62109375,
-      "height": 278.0,
-      "ratio": 7.4,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
-      "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-1.svg",
-      "slug": "pkg2-cold-rolled",
-      "diagram": "diagram-1.svg",
-      "width": 1764.640625,
-      "height": 141.0359344482422,
-      "ratio": 12.51,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
-      "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-2.svg",
-      "slug": "pkg2-cold-rolled",
-      "diagram": "diagram-2.svg",
-      "width": 1660.109375,
-      "height": 222.0,
-      "ratio": 7.48,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
-      "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-5.svg",
-      "slug": "pkg2-cold-rolled",
-      "diagram": "diagram-5.svg",
-      "width": 2214.078125,
-      "height": 274.96875,
-      "ratio": 8.05,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
       "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-9.svg",
       "slug": "pkg2-cold-rolled",
       "diagram": "diagram-9.svg",
@@ -121,52 +81,12 @@
       "first_nodes": []
     },
     {
-      "path": "docs/assets/diagrams/pkg4-rubber/diagram-1.svg",
-      "slug": "pkg4-rubber",
-      "diagram": "diagram-1.svg",
-      "width": 1717.6875,
-      "height": 234.0,
-      "ratio": 7.34,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
-      "path": "docs/assets/diagrams/pkg4-rubber/diagram-2.svg",
-      "slug": "pkg4-rubber",
-      "diagram": "diagram-2.svg",
-      "width": 1533.890625,
-      "height": 222.0,
-      "ratio": 6.91,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
       "path": "docs/assets/diagrams/pkg4-rubber/diagram-3.svg",
       "slug": "pkg4-rubber",
       "diagram": "diagram-3.svg",
       "width": 2749.1328125,
       "height": 886.0,
       "ratio": 3.1,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
-      "path": "docs/assets/diagrams/pkg5-precision/diagram-1.svg",
-      "slug": "pkg5-precision",
-      "diagram": "diagram-1.svg",
-      "width": 1636.03125,
-      "height": 222.0,
-      "ratio": 7.37,
-      "orientation": "horizontal",
-      "first_nodes": []
-    },
-    {
-      "path": "docs/assets/diagrams/pkg5-precision/diagram-2.svg",
-      "slug": "pkg5-precision",
-      "diagram": "diagram-2.svg",
-      "width": 1724.71875,
-      "height": 302.0,
-      "ratio": 5.71,
       "orientation": "horizontal",
       "first_nodes": []
     },
@@ -795,6 +715,46 @@
       "first_nodes": []
     },
     {
+      "path": "docs/assets/diagrams/graph/diagram-1.svg",
+      "slug": "graph",
+      "diagram": "diagram-1.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
+      "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-1.svg",
+      "slug": "pkg2-cold-rolled",
+      "diagram": "diagram-1.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
+      "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-2.svg",
+      "slug": "pkg2-cold-rolled",
+      "diagram": "diagram-2.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
+      "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-5.svg",
+      "slug": "pkg2-cold-rolled",
+      "diagram": "diagram-5.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
       "path": "docs/assets/diagrams/pkg2-cold-rolled/diagram-8.svg",
       "slug": "pkg2-cold-rolled",
       "diagram": "diagram-8.svg",
@@ -805,12 +765,52 @@
       "first_nodes": []
     },
     {
+      "path": "docs/assets/diagrams/pkg4-rubber/diagram-1.svg",
+      "slug": "pkg4-rubber",
+      "diagram": "diagram-1.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
+      "path": "docs/assets/diagrams/pkg4-rubber/diagram-2.svg",
+      "slug": "pkg4-rubber",
+      "diagram": "diagram-2.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
       "path": "docs/assets/diagrams/pkg4-rubber/diagram-5.svg",
       "slug": "pkg4-rubber",
       "diagram": "diagram-5.svg",
       "width": 1349.375,
       "height": 998.0,
       "ratio": 1.35,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
+      "path": "docs/assets/diagrams/pkg5-precision/diagram-1.svg",
+      "slug": "pkg5-precision",
+      "diagram": "diagram-1.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
+      "orientation": "square",
+      "first_nodes": []
+    },
+    {
+      "path": "docs/assets/diagrams/pkg5-precision/diagram-2.svg",
+      "slug": "pkg5-precision",
+      "diagram": "diagram-2.svg",
+      "width": 600.0,
+      "height": 800.0,
+      "ratio": 0.75,
       "orientation": "square",
       "first_nodes": []
     },
