@@ -294,21 +294,58 @@
 }
 
 .lightbox-container {
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: 100vw;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .lightbox-image {
-  max-width: 92vw;
-  max-height: 85vh;
+  max-width: 98vw;       /* 92vw → 98vw — 화면 거의 풀폭 */
+  max-height: 88vh;      /* 85vh → 88vh */
+  width: auto;
+  height: auto;
   object-fit: contain;
   background: white;
   border-radius: 0.4rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  cursor: zoom-in;
+  user-select: none;
+  transition: transform 0.15s ease-out;
+  transform-origin: center center;
+}
+
+/* 줌 표시 배지 */
+.lightbox-zoom-badge {
+  background: rgba(255, 255, 255, 0.92);
+  color: #1565C0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-family: var(--md-text-font);
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  min-width: 68px;
+  justify-content: center;
+}
+
+/* 사용 안내 — overlay 하단 1 줄 */
+.lightbox-hint {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.78rem;
+  font-family: var(--md-text-font);
+  text-align: center;
+  letter-spacing: 0.01em;
+  padding: 0.3rem 1rem;
+  max-width: 90vw;
+  word-break: keep-all;
 }
 
 .lightbox-actions {
