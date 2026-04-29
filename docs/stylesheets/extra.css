@@ -441,3 +441,128 @@
   border-radius: 50%;
   display: inline-block;
 }
+
+/* =============================================================================
+   Phase E10-1 — UX 정비 (사용자 피드백 "어지럽고 산만")
+   ============================================================================= */
+
+/* 워크스페이스 메타 약화 (.meta-marker — Phase·엔트리·방법론·에이전트 ID) */
+.md-content .meta-marker {
+  color: var(--md-default-fg-color--lighter);
+  font-size: 0.82em;
+  opacity: 0.55;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 1px dotted var(--md-default-fg-color--lightest);
+  padding: 0 1px;
+  cursor: help;
+}
+
+.md-content .meta-marker:hover {
+  opacity: 0.85;
+}
+
+/* Hero SVG max-height — 기존 ~480px 대비 50% 축소 */
+.md-typeset figure svg.zoomable,
+.md-typeset figure img {
+  max-height: 280px;
+  width: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* H1 그라데이션 텍스트 제거 — 가독성 우선 단색 + 두꺼운 좌측 보더 */
+.md-typeset h1 {
+  background: none;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  color: var(--md-primary-fg-color);
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  border-left: 5px solid var(--md-primary-fg-color);
+  padding: 0.2em 0 0.2em 0.6em;
+  margin-bottom: 0.8em;
+  font-size: 1.95em;
+}
+
+/* 페이지 정보 details (메타 collapsible) — wrap_meta_blockquote 의 산출 */
+.md-typeset details.info[open],
+.md-typeset details.info {
+  border-left: 3px solid var(--md-default-fg-color--lighter);
+  background: var(--md-code-bg-color);
+  font-size: 0.88em;
+}
+
+.md-typeset details.info > summary {
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  background: transparent;
+  padding-block: 0.4em;
+}
+
+.md-typeset details.info > summary::before {
+  content: none; /* 기존 admonition 아이콘 제거 */
+}
+
+/* Paste-ready admonition — 신규 'copy' 타입 (사용자 main use case) */
+.md-typeset .admonition.copy,
+.md-typeset details.copy {
+  border-left: 5px solid #F57F17;
+  background: rgba(245, 127, 23, 0.04);
+  position: relative;
+  margin: 1em 0;
+}
+
+.md-typeset .admonition.copy > .admonition-title,
+.md-typeset details.copy > summary {
+  background: rgba(245, 127, 23, 0.12);
+  color: #E65100;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(245, 127, 23, 0.2);
+}
+
+.md-typeset .admonition.copy > .admonition-title::before,
+.md-typeset details.copy > summary::before {
+  content: "📋";
+  margin-right: 0.5em;
+  font-size: 1.1em;
+}
+
+/* 페이지 footer "이 페이지 정보" details (개발자용 메타) */
+.md-typeset details.meta-footer {
+  margin-top: 2em;
+  border-left: 3px solid var(--md-default-fg-color--lightest);
+  background: var(--md-code-bg-color);
+  font-size: 0.82em;
+}
+
+.md-typeset details.meta-footer > summary {
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+}
+
+/* 페이지 본문 viewport 비율 개선 — 상단 여백 줄임 */
+.md-content__inner > h1:first-child {
+  margin-top: 0.4em;
+}
+
+/* 출처 인용 (`> [출처: ...]`) — 시각 약화 (메타 성격) */
+.md-typeset blockquote p:first-child:has(a[href*=".md"]):only-child,
+.md-typeset blockquote:only-child {
+  font-size: 0.85em;
+  opacity: 0.75;
+  border-left-color: var(--md-default-fg-color--lighter);
+}
+
+/* 사이드바 그룹 헤더 좌측 보더 강조 (그룹 시각 분리) */
+.md-nav__title {
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 0.5rem;
+}
+
+/* 모바일 반응형 — 메타 marker hover 비활성 */
+@media (hover: none) {
+  .md-content .meta-marker:hover {
+    opacity: 0.55;
+  }
+}
