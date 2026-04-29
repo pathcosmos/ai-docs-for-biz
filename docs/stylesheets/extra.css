@@ -905,8 +905,12 @@
   margin-left: 0.4em;
 }
 
-/* [E12-Fix-3] SVG 크기 확대 (사용자 호소 "이미지가 작아 알아보기 어려움")
-   세로형 SVG (600×800) 와 mmdc SVG 모두 본문 폭에 가깝게 표시 */
+/* [E14-Fix] SVG 이미지 정책 전면 재정의 (사용자 호소 "세로로 너무 큼")
+   - 일반 figure: 90% 폭 + 여백 + 적절한 max-height
+   - 세로형 디자인 SVG (600×800): 620×850 (정확한 viewBox 표시)
+   - mmdc 다이어그램 (다양한 viewBox): max-width 760px + max-height 540px (강제 제한)
+   - 홈 hero: 700×600
+   - 진단 C 보고: L910 selector 가 L503 의 280px override 문제 해결 */
 .md-typeset figure svg,
 .md-typeset figure img,
 .md-typeset .md-content figure svg.zoomable,
@@ -914,32 +918,48 @@
 .md-typeset .hero-svg-wrap svg,
 .md-typeset .hero-svg-wrap img,
 .md-typeset img[src$=".svg"] {
-  max-width: 100%;       /* 본문 폭 모두 채움 */
+  max-width: 100%;
+  max-height: 720px;     /* 무제한 → 720px 강제 제한 (사용자 "세로 너무 큼" 호소) */
   width: auto;
   height: auto;
-  margin: 2em auto;
+  margin: 1.5em auto;
   display: block;
   object-fit: contain;
 }
 
-/* 세로형 SVG 만 별도 max-width 허용 (너무 길어지지 않도록) */
+/* 세로형 디자인 SVG (assets/svg/, viewBox 600×800) */
 .md-typeset figure img[src*="/svg/"],
 .md-typeset img[src*="/svg/"]:not([src*="/diagrams/"]) {
-  max-width: 720px;     /* 세로형 600×800 + 여백 */
-  max-height: 900px;
+  max-width: 620px;      /* 720px → 620px (viewBox 600 + 여백) */
+  max-height: 850px;
 }
 
-/* mmdc 변환 다이어그램 (가로형 위주) — 본문 폭 모두 채움 */
+/* mmdc 변환 다이어그램 (가로형 위주, viewBox 200~2900px 광범위) */
 .md-typeset img[src*="/diagrams/"] {
-  max-width: 100%;
-  max-height: none;
+  max-width: 760px !important;   /* 100% → 760px (본문 폭 가득 차게 안 늘어남) */
+  max-height: 540px !important;  /* none → 540px (사용자 호소 핵심 fix) */
+  width: auto !important;
+  height: auto !important;
 }
 
-/* hero SVG (홈) — 본문 폭 절반 정도 */
+/* hero SVG (홈) — 본문 폭 절반 */
 .md-content article:has(.home-cta) figure svg,
 .md-content article:has(.home-cta) figure img {
-  max-width: 700px;
-  max-height: 700px;
+  max-width: 700px !important;
+  max-height: 600px !important;
+}
+
+/* 모바일 추가 제한 (640px 이하) */
+@media screen and (max-width: 40em) {
+  .md-typeset img[src*="/diagrams/"] {
+    max-width: 100% !important;
+    max-height: 400px !important;
+  }
+  .md-typeset figure img[src*="/svg/"],
+  .md-typeset img[src*="/svg/"]:not([src*="/diagrams/"]) {
+    max-width: 100%;
+    max-height: 600px;
+  }
 }
 
 /* 모바일 — TOC 양쪽 비활성 시 본문 폭 정상 */
