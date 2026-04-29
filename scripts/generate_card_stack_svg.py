@@ -666,6 +666,210 @@ DEMO_SPECS = [
 ]
 
 
+# === Phase E15-6 — 8 mmdc syntax error SVG → card_stack (1 순위 추천 적용) ===
+FAIL_SPECS = [
+    {
+        "slug": "assembly_d1",
+        "path": "assembly/diagram-1.svg",
+        "title": "사업계획서 본문 조립 7 단계",
+        "subtitle": "BLK-T1·2·3 + 패키지 + 가이드 paste 흐름",
+        "en_label": "ASSEMBLY · 7-STEP PASTE WORKFLOW",
+        "desc": "사업계획서 작성 시 본 사이트 자산을 paste 하는 7 단계 표준 워크플로 — 사업 성격·도메인 매핑부터 외부검증까지",
+        "bg": "#EEF2FF",
+        "grad": ["#3730A3", "#4F46E5"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#F1F5F9", "stroke": "#818CF8",
+        "text_main": "#1E1B4B", "text_sub": "#475569",
+        "cross_ref_label": "사업계획서 작성 Quickstart 가이드 본문 조립 7 단계",
+        "cross_ref_1": "참조: guide/quickstart.md + guide/assembly.md",
+        "cross_ref_2": "결합 5.2 카드: 도메인별 자동 매칭 (5.2-a~g)",
+        "nodes": [
+            {"main": "1단계: 사업 성격 식별", "sub": "지원사업 유형·R&D vs 일반"},
+            {"main": "2단계: 패키지 매칭", "sub": "by-package 의사결정 트리"},
+            {"main": "3단계: 도메인 시나리오", "sub": "SCN-XXX-NN 카탈로그"},
+            {"main": "4단계: BLK 본문 paste", "sub": "Track 1·2·3 핵심 5 블록"},
+            {"main": "5단계: 플레이스홀더 치환", "sub": "[고객사]·[수치]·[공정] 등"},
+            {"main": "6단계: 양식 검증", "sub": "외부검증 가이드 RACI"},
+            {"main": "7단계: 사업계획서 완성", "sub": "TRL·KPI 정합 검증"},
+        ],
+    },
+    {
+        "slug": "utlsaf_d3",
+        "path": "detail-utl-saf/diagram-3.svg",
+        "title": "CBAM 신고 자동화 흐름",
+        "subtitle": "EU 탄소국경조정 분기 신고",
+        "en_label": "SCN-SAF-02 · CBAM REPORT AUTOMATION",
+        "desc": "FEMS·MES 데이터 → 5.2-b 시계열 결손 보정 → 직접·간접 배출 산정 → ABC 제품 단위 배분 → CBAM 분기 신고서 자동 생성",
+        "bg": "#FEF2F2",
+        "grad": ["#B91C1C", "#DC2626"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#FEE2E2", "stroke": "#FCA5A5",
+        "text_main": "#7F1D1D", "text_sub": "#991B1B",
+        "cross_ref_label": "사업계획서 §SCN-SAF-02 CBAM 자동화 paste 가능",
+        "cross_ref_1": "결합 5.2 카드: 5.2-b (시계열) + 5.2-e (보고서 자동)",
+        "cross_ref_2": "모듈_CBAM_대응 BLK-CBAM-A·C·D·F 풀 결합",
+        "nodes": [
+            {"main": "FEMS / MES 데이터", "sub": "전력·가스·증기·생산실적"},
+            {"main": "구매 시스템 + 원료 이력", "sub": "PPA·REC·강·합금·환원제"},
+            {"main": "데이터마트 통합", "sub": "동일 시간 축 정합"},
+            {"main": "5.2-b 시계열 보정", "sub": "결손·이상값 자동 보간"},
+            {"main": "직접 배출 산정", "sub": "연료별 IPCC 계수"},
+            {"main": "간접 배출 산정", "sub": "전력 PPA·REC 차감"},
+            {"main": "ABC 제품 배분", "sub": "활동 기반 원가 자동"},
+            {"main": "CBAM 신고서 자동 생성", "sub": "5.2-e 보고서 + RAG 양식"},
+        ],
+    },
+    {
+        "slug": "pkg6_d1",
+        "path": "pkg6-util-esg/diagram-1.svg",
+        "title": "유틸·ESG 인적 의존성 리스크",
+        "subtitle": "BLK 공통 패턴 — 암묵지·환경 약품비",
+        "en_label": "PKG 6 · TACIT KNOWLEDGE × ESG RISK",
+        "desc": "유틸·ESG 영역의 인적 의존성 (베테랑·Excel·작업자 경험) → 현장 운영 판단 → 작업자 편차·에너지 원단위 산포 → 환경 약품비 누수 → 구조적 리스크",
+        "bg": "#F0FDF4",
+        "grad": ["#15803D", "#22C55E"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#DCFCE7", "stroke": "#86EFAC",
+        "text_main": "#14532D", "text_sub": "#166534",
+        "cross_ref_label": "사업계획서 §3.1 사업 배경 (PKG 6 유틸·ESG)",
+        "cross_ref_1": "결합: BLK-T1-3.1 인적 의존 + BLK-CBAM-C 데이터 단절",
+        "cross_ref_2": "5.2-a (유사사례) + 5.2-f (RAG 형식지화)",
+        "nodes": [
+            {"main": "베테랑 + Excel + 작업자", "sub": "3 입력 의존"},
+            {"main": "현장 운영 판단", "sub": "암묵지 전수"},
+            {"main": "공정 설정값 결정", "sub": "변수 (수치)종 동시 조작"},
+            {"main": "작업자 간 편차", "sub": "±(수치)% 차이"},
+            {"main": "에너지 원단위 산포", "sub": "kWh/N㎥ 변동"},
+            {"main": "환경 약품비 누수", "sub": "(수치)% 추가 소비"},
+            {"main": "구조적 리스크", "sub": "이탈·퇴직 시 즉각 마비"},
+            {"main": "AI 해결: 5.2-f RAG", "sub": "암묵지 형식지화"},
+        ],
+    },
+    {
+        "slug": "rag_d1",
+        "path": "rag-infra/diagram-1.svg",
+        "title": "RAG 통합 운영 5 계층 아키텍처",
+        "subtitle": "수집·임베딩·검색·생성·감사 표준",
+        "en_label": "RAG INFRA · 5-LAYER STANDARD",
+        "desc": "문서 수집·정제 → 임베딩 → 검색 → 생성 → 감사·운영 5 계층의 표준 데이터 흐름. 권한·민감도 게이트 + Track 2 모니터링 + BLK-CSEC-F 라우팅 결합",
+        "bg": "#EEF2FF",
+        "grad": ["#4338CA", "#6366F1"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#E0E7FF", "stroke": "#A5B4FC",
+        "text_main": "#312E81", "text_sub": "#3730A3",
+        "cross_ref_label": "RAG 인프라 운영 가이드 §3 통합 5 계층",
+        "cross_ref_1": "결합: track3 §4.2 RAG 7 단계 + sLM 가이드 §1·§5",
+        "cross_ref_2": "BLK-CSEC-F 민감도 라우팅 + Track 2 §5.5 모니터링",
+        "nodes": [
+            {"main": "1. 문서 수집·정제", "sub": "OCR·파서·청킹·메타"},
+            {"main": "2. 임베딩", "sub": "멀티뷰·파인튜닝"},
+            {"main": "권한·민감도 게이트", "sub": "BLK-CSEC-F 라우팅"},
+            {"main": "3. 검색", "sub": "Dense + BM25 + Rerank"},
+            {"main": "4. 생성", "sub": "sLM (가이드 §1 LLM)"},
+            {"main": "응답 + Citation", "sub": "근거 강제·환각 방지"},
+            {"main": "5. 감사·운영", "sub": "로그·드리프트·피드백"},
+            {"main": "재인덱싱·재학습 환류", "sub": "Track 2 §5.5 트리거"},
+        ],
+    },
+    {
+        "slug": "t1_top5_d2",
+        "path": "track1-top5/diagram-2.svg",
+        "title": "BLK-T1-3.2 데이터 단절·비정형 한계",
+        "subtitle": "정형/비정형 단절 + 양식 비표준",
+        "en_label": "TRACK 1 · BLK-T1-3.2 · DATA FRAGMENTATION",
+        "desc": "정형 시스템 (MES·SCADA·PLC) 과 비정형 원천 (성적서·Excel·HWP·교대 일지) 의 양식 비표준 단절 → 통합 분석 불가 → 데이터 자산 망실",
+        "bg": "#EEF2FF",
+        "grad": ["#3730A3", "#6366F1"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#E0E7FF", "stroke": "#A5B4FC",
+        "text_main": "#312E81", "text_sub": "#3730A3",
+        "cross_ref_label": "사업계획서 §3.2 사업 배경 paste 가능 (Track 1)",
+        "cross_ref_1": "결합 5.2 카드: 5.2-f (LLM·RAG 비정형) + 5.2-c (비전 OCR)",
+        "cross_ref_2": "BLK-T1-3.1 인적 의존 + BLK-T2-3.2 모니터링 부재",
+        "nodes": [
+            {"main": "정형 시스템", "sub": "MES·SCADA·PLC·ERP"},
+            {"main": "비정형 원천", "sub": "성적서·도면·교대 일지"},
+            {"main": "성적서 스캔 PDF", "sub": "OCR 미적용"},
+            {"main": "공정설계 Excel", "sub": "분산·미관리"},
+            {"main": "작업표준서 HWP/PDF", "sub": "양식 비표준"},
+            {"main": "교대 일지 수기", "sub": "디지털화 부재"},
+            {"main": "단절 지점", "sub": "정형↔비정형 상호 참조 불가"},
+            {"main": "양식 비표준", "sub": "통합 분석 불가능"},
+        ],
+    },
+    {
+        "slug": "t2_top5_d1",
+        "path": "track2-top5/diagram-1.svg",
+        "title": "BLK-T2-3.2 모니터링 부재로 후행적 모델 운영",
+        "subtitle": "드리프트 잠복 → 누적 손실",
+        "en_label": "TRACK 2 · BLK-T2-3.2 · LATE DETECTION",
+        "desc": "모델 입력·예측·성능 3 축 모니터링 부재 → 드리프트 잠복 (수개월) → 불량·재작업 누적 → 사후 인지 (현장 클레임 발생 후)",
+        "bg": "#F5F3FF",
+        "grad": ["#6D28D9", "#8B5CF6"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#EDE9FE", "stroke": "#C4B5FD",
+        "text_main": "#4C1D95", "text_sub": "#5B21B6",
+        "cross_ref_label": "사업계획서 §6 MLOps AS-IS paste 가능 (Track 2)",
+        "cross_ref_1": "해결: §5.5 인프라·데이터·성능 3 층 모니터링",
+        "cross_ref_2": "결합: SCN-MLO-01 드리프트·재학습 자동 트리거",
+        "nodes": [
+            {"main": "모델 배포·시범 운영", "sub": "AI 엔진 일부 도입"},
+            {"main": "모니터링 채널 부재", "sub": "입력·예측·성능 3 축 0"},
+            {"main": "외생 변화 발생", "sub": "공급사 교체·계절·노후"},
+            {"main": "드리프트 잠복 (기간)", "sub": "수개월 미감지"},
+            {"main": "현장 불량·재작업", "sub": "사후 인지"},
+            {"main": "사후 비용", "sub": "재학습 비용 (수치) 배"},
+            {"main": "원인 규명 불능", "sub": "추론 로그 미보존"},
+            {"main": "동일 사고 재발", "sub": "구조적 위험"},
+        ],
+    },
+    {
+        "slug": "t3_top5_d1",
+        "path": "track3-top5/diagram-1.svg",
+        "title": "BLK-T3-3.1 문서 포맷 이질·검색 불가",
+        "subtitle": "분산 저장 + OCR 미적용 + 전용 포맷",
+        "en_label": "TRACK 3 · BLK-T3-3.1 · DOC HETEROGENEITY",
+        "desc": "이질 포맷 (HWP·PDF·DWG·종이) + 분산 저장소 (부서 파일서버·개인 PC·메일함·캐비닛) → OCR 미적용 → 작업자 수동 탐색에 (기간)/건",
+        "bg": "#F0FDFA",
+        "grad": ["#0F766E", "#14B8A6"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#CCFBF1", "stroke": "#5EEAD4",
+        "text_main": "#134E4A", "text_sub": "#115E59",
+        "cross_ref_label": "사업계획서 §3.1 사업 배경 paste 가능 (Track 3)",
+        "cross_ref_1": "해결: §4.2 RAG 5 계층 + 5.2-f LLM·RAG 엔진",
+        "cross_ref_2": "결합: BLK-T1-3.2 데이터 단절 + BLK-T3-3.2 암묵지",
+        "nodes": [
+            {"main": "이질 포맷", "sub": "HWP·PDF·DWG·종이"},
+            {"main": "분산 저장소", "sub": "4 위치 파편화"},
+            {"main": "부서 파일서버", "sub": "권한 분리"},
+            {"main": "개인 PC + 메일함", "sub": "유실 위험"},
+            {"main": "출력본 캐비닛", "sub": "디지털화 0"},
+            {"main": "OCR 미적용", "sub": "전용 포맷 폐쇄"},
+            {"main": "최신본 식별 불가", "sub": "버전 혼동"},
+            {"main": "작업자 수동 탐색", "sub": "(기간)/건 시간 손실"},
+        ],
+    },
+    {
+        "slug": "t3_top5_d2",
+        "path": "track3-top5/diagram-2.svg",
+        "title": "BLK-T3-3.2 숙련자 암묵지 의존·전이 실패",
+        "subtitle": "베테랑 이탈 시 노하우 망실",
+        "en_label": "TRACK 3 · BLK-T3-3.2 · TACIT TRANSFER FAILURE",
+        "desc": "베테랑 (수치)명 · 경력 (기간)+ 의 암묵지 (공정설계 결정 이유·장애 처치 우선순위) → 문서화 부재·단편 기록 → 퇴직·이직 시 망실 → 신입 단독 작업 (기간) 지연",
+        "bg": "#F0FDFA",
+        "grad": ["#0F766E", "#14B8A6"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#CCFBF1", "stroke": "#5EEAD4",
+        "text_main": "#134E4A", "text_sub": "#115E59",
+        "cross_ref_label": "사업계획서 §3.2 사업 배경 paste 가능 (Track 3)",
+        "cross_ref_1": "해결: 5.2-f LLM·RAG + 5.2-g 형상 임베딩",
+        "cross_ref_2": "결합: BLK-T1-3.1 + Track 3 §5.2 청킹 전략",
+        "nodes": [
+            {"main": "베테랑 (수치)명", "sub": "경력 (기간)+ 누적"},
+            {"main": "암묵지 자산", "sub": "공정설계·장애 처치"},
+            {"main": "문서화 부재", "sub": "단편 기록만 잔존"},
+            {"main": "ERP·MES 부적합", "sub": "비정형 노하우 미수용"},
+            {"main": "퇴직·이직 발생", "sub": "경쟁사 이직 위험"},
+            {"main": "노하우 망실", "sub": "전수 부재 → 즉시 손실"},
+            {"main": "신입 단독 작업", "sub": "(기간) 지연"},
+            {"main": "AI 해결: RAG 형식지화", "sub": "암묵지 → 검색 가능 자산"},
+        ],
+    },
+]
+
+
 def main():
     for spec in SPECS:
         svg = render_svg(spec)
@@ -674,6 +878,16 @@ def main():
         out_path.write_text(svg, encoding="utf-8")
         n_lines = svg.count("\n")
         print(f"  ✓ {spec['path']} ({n_lines} 줄, {len(spec['nodes'])} 노드, card_stack)")
+
+    # === Phase E15-6 — 8 syntax error fail SVG → card_stack ===
+    print("\n## Phase E15-6 — 8 mmdc syntax error → card_stack 디자인 SVG")
+    for spec in FAIL_SPECS:
+        svg = render_svg(spec)
+        out_path = OUT_DIR / spec["path"]
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(svg, encoding="utf-8")
+        n_lines = svg.count("\n")
+        print(f"  ✓ {spec['path']} ({n_lines} 줄, {len(spec['nodes'])} 노드)")
 
     # === Phase E15-3 demo (template 다양화 시범) ===
     print("\n## Phase E15-3 시범 (5 templates 다양화)")
