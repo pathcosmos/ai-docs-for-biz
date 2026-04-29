@@ -231,6 +231,11 @@ def convert_mermaid_to_svg(mermaid_code: str, output_path: Path) -> tuple[bool, 
 
 
 def _try_mmdc(mermaid_code: str, output_path: Path) -> tuple[bool, str]:
+    # [E15-5] 모든 mermaid 다이어그램 직각 화살표 정책 — init directive 자동 prepend
+    # 단, 이미 init directive 가 있으면 skip (사용자 명시 설정 우선)
+    if not mermaid_code.lstrip().startswith("%%{init"):
+        mermaid_code = '%%{init: {"flowchart": {"curve": "stepBefore"}}}%%\n' + mermaid_code
+
     with tempfile.NamedTemporaryFile(
         suffix=".mmd", mode="w", encoding="utf-8", delete=False
     ) as tmp:
