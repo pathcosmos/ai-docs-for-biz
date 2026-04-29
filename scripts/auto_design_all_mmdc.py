@@ -215,12 +215,32 @@ def is_mmdc_svg(svg_path: Path) -> bool:
 
 
 def extract_nodes(svg_path: Path) -> list[dict]:
-    """SVG 안 `<p>` 태그에서 노드 텍스트 추출 — `<br />` 메인/부속 자동 분리."""
+    """SVG 안 노드 텍스트 추출 — flowchart·gantt·sequence 모두 fallback."""
     text = svg_path.read_text(encoding="utf-8", errors="ignore")
-    # nodeLabel 의 <p>...</p> — 안에 <br /> 또는 일반 텍스트 (DOTALL)
+    # 1차: flowchart nodeLabel 의 <p>
     raw = re.findall(r'class="nodeLabel"[^>]*><p[^>]*>(.*?)</p>', text, re.DOTALL)
+    # 2차: gantt taskText
     if not raw:
-        # fallback: 모든 <p> 태그
+        raw = re.findall(r'class="taskText[^"]*"[^>]*>([^<]+?)</text>', text)
+        # gantt section title
+        if not raw:
+            raw = re.findall(r'class="[^"]*sectionTitle[^"]*"[^>]*>([^<]+?)</text>', text)
+        if raw:
+            return [{"main": t.strip(), "sub": ""} for t in raw[:8] if t.strip() and len(t.strip()) >= 2]
+    # 3차: sequenceDiagram actor / message
+    if not raw:
+        actors = re.findall(r'class="actor[^"]*"[^>]*>([^<]+?)</text>', text)
+        messages = re.findall(r'class="messageText[^"]*"[^>]*>([^<]+?)</text>', text)
+        combined = actors + messages
+        if combined:
+            return [{"main": t.strip(), "sub": ""} for t in combined[:8] if t.strip() and len(t.strip()) >= 2]
+    # 4차: 모든 <text> 태그 (최후 fallback)
+    if not raw:
+        raw = re.findall(r"<text[^>]*>([^<]{2,80})</text>", text)
+        if raw:
+            return [{"main": t.strip(), "sub": ""} for t in raw[:8] if t.strip()]
+    if not raw:
+        # 5차: 모든 <p> 태그
         raw = re.findall(r"<p[^>]*>(.*?)</p>", text, re.DOTALL)
 
     nodes = []

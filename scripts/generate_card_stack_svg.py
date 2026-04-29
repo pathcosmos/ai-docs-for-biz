@@ -336,6 +336,108 @@ SPECS = [
 ]
 
 
+def render_flow_grid(spec: dict) -> str:
+    """flow_grid template — multi-column row 분기 표현 (사용자 명시 "한 row 에 column 여러개").
+
+    spec["rows"] = [
+        [{"main": ..., "sub": ...}],                              # row 1: 1 column
+        [{"main": ..., "sub": ...}, {...}, {...}],                # row 2: 3 column
+        [{"main": ..., "sub": ...}],                              # row 3: 1 column (합류)
+        ...
+    ]
+    """
+    grad_id = f"g_{spec['slug']}"
+    rows = spec["rows"]
+
+    # 가용 영역: y=110 ~ y=680 (570px). row 별 높이 자동 분배.
+    avail_h = 570
+    n_rows = len(rows)
+    row_h = (avail_h - 8 * (n_rows - 1)) // n_rows
+    row_h = min(row_h, 110)
+    row_h = max(row_h, 60)
+    card_h = row_h - 12  # 카드 높이 (row 내부 padding 6 위·아래)
+
+    parts = []
+    for i, row in enumerate(rows):
+        row_y = 110 + i * (row_h + 8)
+        n_cols = len(row)
+        avail_w = 540  # 600 - 30*2
+        col_gap = 12
+        col_w = (avail_w - col_gap * (n_cols - 1)) // n_cols
+        col_w = min(col_w, 520)
+        for j, node in enumerate(row):
+            x = 30 + j * (col_w + col_gap)
+            parts.append(f'''  <g transform="translate({x}, {row_y})">
+    <rect width="{col_w}" height="{card_h}" rx="8" fill="url(#{grad_id}_card)" stroke="{spec['stroke']}" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="{col_w // 2}" y="{card_h // 2 - 4}" text-anchor="middle" font-size="11" font-weight="700" fill="{spec['text_main']}">{node["main"]}</text>
+    <text x="{col_w // 2}" y="{card_h // 2 + 12}" text-anchor="middle" font-size="9" font-weight="500" fill="{spec['text_sub']}">{node.get("sub", "")}</text>
+  </g>''')
+        # 다음 row 와의 화살표 (각 column → 다음 row 합류 또는 1:1)
+        if i < n_rows - 1:
+            next_row = rows[i + 1]
+            next_y = 110 + (i + 1) * (row_h + 8)
+            mid_y = (row_y + card_h + next_y) // 2
+            next_n = len(next_row)
+            avail_w = 540
+            next_col_w = (avail_w - col_gap * (next_n - 1)) // next_n
+            for j in range(n_cols):
+                src_x = 30 + j * (col_w + col_gap) + col_w // 2
+                src_y = row_y + card_h
+                if next_n == 1:
+                    # 모든 column → 1 합류 (mid 화살표)
+                    target_x = 300
+                elif next_n == n_cols:
+                    # 1:1 매핑
+                    target_x = 30 + j * (next_col_w + col_gap) + next_col_w // 2
+                else:
+                    # 균등 분배 (가장 가까운 target)
+                    target_idx = min(int(j * next_n / n_cols), next_n - 1)
+                    target_x = 30 + target_idx * (next_col_w + col_gap) + next_col_w // 2
+                parts.append(f'  <path d="M {src_x} {src_y} L {src_x} {mid_y} L {target_x} {mid_y} L {target_x} {next_y}" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2" marker-end="url(#arrow_{grad_id})"/>')
+
+    if "grad_3stop" in spec:
+        grad_stops = f'''<stop offset="0%" stop-color="{spec["grad_3stop"][0]}"/><stop offset="50%" stop-color="{spec["grad_3stop"][1]}"/><stop offset="100%" stop-color="{spec["grad_3stop"][2]}"/>'''
+    else:
+        grad_stops = f'''<stop offset="0%" stop-color="{spec["grad"][0]}"/><stop offset="100%" stop-color="{spec["grad"][1]}"/>'''
+
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="{spec['title']} — {spec['subtitle']}">
+  <title>{spec['title']}</title>
+  <desc>{spec['desc']}</desc>
+  <defs>
+    <linearGradient id="{grad_id}" x1="0%" y1="0%" x2="100%" y2="100%">
+      {grad_stops}
+    </linearGradient>
+    <linearGradient id="{grad_id}_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="{spec['card_fill_top']}"/>
+      <stop offset="100%" stop-color="{spec['card_fill_bot']}"/>
+    </linearGradient>
+    <marker id="arrow_{grad_id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="{spec['stroke']}"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text {{ font-family: "Pretendard", system-ui, -apple-system, sans-serif; }}
+  </style>
+  <rect width="600" height="800" fill="{spec['bg']}"/>
+  <rect x="0" y="0" width="600" height="100" fill="url(#{grad_id})"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">{spec['en_label']}</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">{spec['title']}</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">{spec['subtitle']}</text>
+{chr(10).join(parts)}
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 {spec['cross_ref_label']}</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">{spec['cross_ref_1']}</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">{spec['cross_ref_2']}</text>
+</svg>
+'''
+
+
 def render_tree_branching(spec: dict) -> str:
     """tree_branching template — 3 입력 → 합류 → 분기 → 결과 합류 (BLK-T1-3.1 같은 인적 의존성·리스크 다이어그램).
 
@@ -888,6 +990,48 @@ def main():
         out_path.write_text(svg, encoding="utf-8")
         n_lines = svg.count("\n")
         print(f"  ✓ {spec['path']} ({n_lines} 줄, {len(spec['nodes'])} 노드)")
+
+    # === Phase E15-8 — flow_grid template 시범 (multi-column row) ===
+    print("\n## Phase E15-8 — flow_grid template (multi-column row)")
+    flow_grid_spec = {
+        "slug": "t1_top5_d3_flowgrid",
+        "path": "track1-top5/diagram-3.svg",
+        "title": "BLK-T1-4.4 피쳐 엔지니어링 접근",
+        "subtitle": "3 축 (도메인·자동·메타) → 다단계 선정 → 피쳐 스토어",
+        "en_label": "TRACK 1 · BLK-T1-4.4 · FEATURE ENGINEERING",
+        "desc": "원시 데이터 (PLC·MES·비전·문서) → 3 축 피쳐 생성 (도메인·자동·메타) → 후보 풀 (수백~수천) → 다단계 선정 (상관·MI·SHAP) → 채택 피쳐셋 → 피쳐 스토어 → 모델 입력 + Track 2 연계",
+        "bg": "#EEF2FF",
+        "grad": ["#3730A3", "#6366F1"],
+        "card_fill_top": "#FFFFFF", "card_fill_bot": "#E0E7FF", "stroke": "#A5B4FC",
+        "text_main": "#312E81", "text_sub": "#3730A3",
+        "cross_ref_label": "사업계획서 §4.4 본문 paste 가능 (Track 1 BLK-T1-4.4)",
+        "cross_ref_1": "결합 5.2 카드: 5.2-b (시계열 피쳐) + 5.2-d (피쳐 스토어 일관성)",
+        "cross_ref_2": "Track 2 SCN-MLO-02 피쳐 스토어 + 모델 레지스트리 결합",
+        "rows": [
+            [{"main": "원시 데이터", "sub": "PLC · MES · 비전 · 문서"}],
+            [
+                {"main": "도메인 피쳐", "sub": "롤링통계·차분·누적"},
+                {"main": "자동 피쳐 생성", "sub": "tsfresh · featuretools"},
+                {"main": "메타 피쳐", "sub": "재질·레시피·설비ID"},
+            ],
+            [{"main": "피쳐 후보 풀", "sub": "수백~수천 개"}],
+            [{"main": "상관·다중공선성 제거", "sub": "1단계 선정"}],
+            [{"main": "상호정보량 평가", "sub": "2단계 (비선형 관계)"}],
+            [{"main": "SHAP 기여도 선별", "sub": "3단계 (모델 기반)"}],
+            [{"main": "채택 피쳐셋", "sub": "최종 입력 피쳐"}],
+            [{"main": "피쳐 스토어", "sub": "학습·추론 일관성"}],
+            [
+                {"main": "모델 입력", "sub": "Track 1 학습 파이프라인"},
+                {"main": "Track 2 MLOps", "sub": "SCN-MLO-02 연계"},
+            ],
+        ],
+    }
+    svg = render_flow_grid(flow_grid_spec)
+    out_path = OUT_DIR / flow_grid_spec["path"]
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(svg, encoding="utf-8")
+    n_lines = svg.count("\n")
+    print(f"  ✓ {flow_grid_spec['path']} ({n_lines} 줄, flow_grid: 9 rows · 3 multi-column)")
 
     # === Phase E15-3 demo (template 다양화 시범) ===
     print("\n## Phase E15-3 시범 (5 templates 다양화)")
