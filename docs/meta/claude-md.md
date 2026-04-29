@@ -91,3 +91,120 @@ Everything you write should slot into one of three tracks. Outputs in each track
 - Do not invent statistics, company names, or specific project outcomes from the reference PDFs without first reading the relevant pages.
 - Do not default to English. The user's deliverable is Korean.
 - **Do not skip the `작업로그.md` update** when the criteria above apply — skipping breaks handoff for the next worker/session.
+<!-- slaminar:begin:overview -->
+## Overview
+
+**ai-docs-for-biz** — 한국어 제조 AI 사업계획서 작성을 위한 누적 콘텐츠 워크스페이스. 부산·경남권 철강·금속·고무·정밀가공 제조업체를 고객사로 하는 정부지원 R&D·스마트공장·CBAM·디지털 경남 사업 신청서·수행계획서·연구개발계획서 작성에 재사용 가능한 모듈형 자산 (44 마크다운 / 17,816 줄 / Mermaid 115 블록 / 인용 출처 274 회) 을 제공한다.
+
+- **Primary content:** 한국어 마크다운 — Track 1·2·3 본문 + 6 패키지 통합 파일럿 + 11 운영 가이드 + 5 cross-cutting 모듈 + 시나리오 카탈로그 (40 시나리오) + 36 방법론.
+- **Secondary infrastructure (Phase E9, 2026-04):** Python — MkDocs Material 기반 HTML 문서화 + GitHub Pages 배포 파이프라인 (`build_src.py` + `hooks/` + `mkdocs.yml`).
+- **Pattern:** Knowledge base + reusable content modules (콘텐츠 작성 워크스페이스 + 정적 문서 사이트). 단일 정의된 사업계획서를 만들지 않고 재조합 가능한 모듈을 누적.
+- **Maturity:** Phase A~E8 완료 (자산 누적·운영 모드 진입) + Phase E9 진행 중 (HTML 시각 문서화).
+<!-- slaminar:end:overview -->
+<!-- slaminar:begin:commands -->
+## Build & Development Commands
+
+**HTML 문서화 (Phase E9 — MkDocs Material)**:
+
+```bash
+# 1. 가상환경 + 의존성 설치 (1 회)
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# 2. 원본 .md 44 종 → docs/ 영문 slug 복사 (mkdocs build 직전 매번)
+python build_src.py
+
+# 3. 로컬 빌드 (정적 사이트 site/ 생성)
+mkdocs build
+
+# 4. 로컬 프리뷰 (http://127.0.0.1:8000)
+mkdocs serve
+
+# 5. GitHub Pages 수동 배포 (CI/CD 미사용 시)
+mkdocs gh-deploy --force
+```
+
+**자동 배포**: `main` branch 에 push → `.github/workflows/deploy.yml` 가 build_src + mkdocs build + gh-deploy 자동 실행. **단 GitHub Pages 활성화는 repo Settings 1 회 수동 (private repo 는 Pro plan 필요)**.
+
+**git 커밋·푸시 표준 (방법론 4.27)**:
+
+```bash
+# 양 원격 (GitHub + Yona) 단일 명령 push 설정 (1 회)
+git remote set-url --add --push origin https://github.com/pathcosmos/ai-docs-for-biz.git
+git remote set-url --add --push origin http://git.dkpia.com:9000/IoT/ai-docs-for-biz.git
+
+# 이후 push 는 1 명령으로 양 원격 동시 동기화
+git push origin main
+```
+
+**콘텐츠 작성 워크플로**: 작업로그 #N 엔트리 추가 + 8 필드 양식 (맥락·요청·수행·근거·결정·산출물·배움·다음) → 단일 커밋 → 양 원격 푸시.
+<!-- slaminar:end:commands -->
+<!-- slaminar:begin:architecture -->
+## Architecture
+
+**9 자산 군 + 빌드 인프라** 의 이중 구조 — 콘텐츠 자산 (워크스페이스 root) + HTML 빌드 파이프라인 (Phase E9).
+
+```
+ai-docs-for-biz/
+├── (워크스페이스 root) — 한글 .md 44 종 운영 자산 + 작업로그·CLAUDE.md
+│   ├── track1·2·3_*.md (8) — 3 트랙 본문 (목차·Top5·5.2 카드)
+│   ├── 시나리오_*.md (6) — 카탈로그 + 상세 5 (Top5·Phase2·RUB·UTL_SAF·특수강관)
+│   ├── 사업계획서_패키지[1-6]_*_파일럿.md (6) — 6 통합 파일럿 (사업 패턴)
+│   ├── 가이드_*.md (11) — 운영 가이드 (KPI·재무·외부검증·RAG·도메인지식·sLM·압축·조립·컨설팅·TRL·위험)
+│   ├── 모듈_*.md (5) — Cross-cutting (CBAM·중대재해·연합학습·OEM·SaaS)
+│   ├── 시너지_ROI_모델·책임_분담_매트릭스·양식검증_DX촉진_R&D·방법론_총론·운영_모드_Quickstart 등 (5)
+│   ├── 작업로그.md (#01~#N 엔트리) — 8 필드 진행 연대기
+│   └── (참고 PDF 6 종 — verbatim 차용 금지, 패턴 추출용)
+│
+├── (HTML 인프라 — Phase E9) ─── Python·MkDocs ───
+│   ├── mkdocs.yml — Material 테마·ko 검색·Mermaid·9 분류 자동 nav
+│   ├── slug_map.yml — 한글 → 영문 slug 매핑 테이블 (44 항목)
+│   ├── build_src.py — 원본 → docs/ 복사 스크립트
+│   ├── hooks/ — Python 훅 (inject_frontmatter·slug_rewrite + Stage 2·3 추가 예정)
+│   ├── docs/ — 빌드 입력 (영문 slug 복사본 + index·graph·filter + stylesheets·javascripts)
+│   └── .github/workflows/deploy.yml — Actions 자동 배포 (gh-pages branch)
+│
+└── (빌드 산출물 — gitignore) site/ + .venv/ + .serena/
+```
+
+**중요 원칙 — 단방향 빌드**: 원본 .md 자산은 일절 수정 금지. `build_src.py` 가 원본 → `docs/` 영문 slug 복사. 콘텐츠 변경은 항상 root .md 에서, HTML 빌드는 자동 동기화.
+
+**Cross-reference 망**: 274 인용 출처 표기 (`> [출처: 파일명 §섹션]`) 가 자산 간 의존성을 형성. 운영 가이드 11 자산 cross-reference 망이 핵심 (재무 §10 → 컨설팅 §4·6 / KPI §10 → TRL §5 / 책임 §10 → 컨설팅·위험 등).
+<!-- slaminar:end:architecture -->
+<!-- slaminar:begin:conventions -->
+## Conventions
+
+- **본문 언어**: **한국어 formal 문어체** (사업계획서 어투). 영어는 사용자가 명시 요청 시에만.
+- **플레이스홀더 관례 (방법론 4.8)**: `[고객사]`·`[공정]`·`[수치]`·`[기간]`·`[%]` — 고객사 변경 시 일괄 치환 가능. 특정 고객사 전용 문구는 파일명·섹션 헤더에 해당 고객사 명시.
+- **자산 군 포맷 통일 (방법론 4.26)**: 운영 가이드 11 자산 모두 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 답습. 새 자산 추가 시 첫 자산 포맷 따르기.
+- **인용 출처 표기 표준**: `> [출처: 파일명 §섹션]` 매 본문 섹션 말미. 부분 발췌 인용은 "발췌·요약" 명시.
+- **자산 명명 규약**: `가이드_X.md` (운영 가이드) / `사업계획서_패키지N_도메인_파일럿.md` (통합 파일럿) / `시나리오_상세_X.md` (시나리오 상세) / `모듈_X.md` (cross-cutting) / `track[1-3]_*.md` (트랙 본문) — 일관 패턴 유지.
+- **커밋 스타일**: Conventional Commits (`feat:`·`docs:`·`chore:`·`refactor:`) + Korean body. 양 원격 (GitHub + Yona) 단일 push (방법론 4.27).
+- **작업로그 8 필드 엔트리**: 맥락·사용자 요청 원문 요지·AI 수행·판단 근거·사용자 의사결정·산출물·배운 점·다음 단계. 사용자 발언 직접 인용 1 줄 이상.
+- **방법론 추출**: 재사용 가치 발견 시 `방법론_총론.md` §3 본문 + `작업로그.md` §4 인덱스 동시 추가 (방법론 4.29).
+- **빌드 산출물 gitignore**: `.venv/`·`site/`·`.serena/`·`__pycache__/`·`*.pyc` — 자동 생성물 trace 차단.
+<!-- slaminar:end:conventions -->
+<!-- slaminar:begin:dependencies -->
+## Key Dependencies
+
+**Python (Phase E9 HTML 인프라 — `requirements.txt`)**:
+- `mkdocs>=1.6` — 정적 사이트 생성기 (Markdown → HTML)
+- `mkdocs-material>=9.5` — Material 테마 (한국어 검색·Mermaid 통합·카드 그리드·tags 플러그인)
+- `pymdown-extensions>=10.7` — superfences (Mermaid 커스텀 fence)·details·tabbed·tasklist·highlight 등 마크다운 확장
+- `PyYAML>=6.0` — `slug_map.yml` 로딩 (build_src.py + slug_rewrite hook)
+
+**JavaScript CDN (런타임 — 빌드 시 다운로드 안 됨)**:
+- `mermaid@11` (CDN unpkg) — Mermaid 다이어그램 렌더링 (115 블록)
+- `D3.js@7` (CDN, Stage 3 활성 예정) — Cross-reference 인터랙티브 그래프
+
+**웹폰트 (CDN)**:
+- `Pretendard@1.3.9` (jsDelivr) — 한국어 가독성 + dynamic subset (페이지당 사용 글자만 다운로드)
+
+**외부 reference (workspace 내 PDF 6 종)**:
+- 6 정부지원 사업 양식 PDF (37·41·67·71·74·150 페이지) — patterns and phrasing 차용 출처. CLAUDE.md §"Working with the reference PDFs" 규약 준수 (verbatim 차용 금지).
+
+**선택 도입 (slaminar 추천 도구 — Step 7 사용자 결정)**:
+- `promptfoo` (60 score) — LLM 프롬프트 평가 (Track 3 LLM·RAG 자산과 일부 정합)
+- 그 외 `tdd-guard`·`test-kitchen` 등은 본 워크스페이스 (콘텐츠 작성 + 정적 빌드) 에 부합도 낮음.
+<!-- slaminar:end:dependencies -->

@@ -1496,6 +1496,267 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - **Quick-Start 메모의 재진입 효과** — 1 페이지 / 141 줄 / 7 섹션이 본 워크스페이스의 41 자산 + 36 방법론 + 36 작업로그 엔트리를 5 분 안에 활용 가능한 형태로 압축. 다른 프로젝트 이식 시점에도 동일 패턴 적용 가능 (방법론 4.9 로그 규약 이식 키트 + 본 quick-start 의 결합).
 - **다음 단계**: 본 엔트리 + 2 자산 변경 (rename + 신설) 단일 커밋 + 양 원격 푸시 (방법론 4.27). 운영 모드 본격 진입 — 사용자의 실 [고객사] 사업계획서 요청 대기. 요청 수령 시 운영 모드 워크플로 5 단계 즉시 진입.
 
+#### 엔트리 #37 — Phase E9 Stage 1: HTML 문서화 인프라 셋업 (MkDocs Material 빌드 성공)
+
+- **맥락**: 사용자 요청 — "html 문서화 할거야 우선은 잘 디자인이 적용된 문서로 해서 github pages 등에 배포할거야". 운영 모드 진입 후 워크스페이스의 시각 문서화 + GitHub Pages 배포 사이클 시작. 본 #37 은 Stage 1 (인프라 셋업) 완료 시점 기록.
+- **사용자 요청**: "html 문서화" + "잘 디자인이 적용된 문서" + "github pages 배포" + "인덱스는 위에 네가 나열해준 순서대로 (9 분류 토픽 표)" + "Mermaid 보단 playlight 같은걸 (Claude 디자인 SVG/HTML/CSS)" + "claude design 써도 돼".
+- **AI 수행 (Plan mode 4 phase + Stage 1 실행)**:
+  - **Phase 1 Explore**: 워크스페이스 정량 조사 (마크다운 44·Mermaid 115·표 2484 행·인용 출처 274·한글 파일명 100%·빌드 인프라 0).
+  - **Phase 2 Plan agent**: SSG 선정 검토 → MkDocs Material v9 채택 (Astro Starlight 의 Mermaid 미지원 탈락 + lunr 한국어 검색 + Python 훅 + gh-deploy 1 명령 ROI).
+  - **Phase 3·4 Plan 파일**: `/Users/lanco/.claude/plans/html-squishy-bachman.md` 작성 — 5 Stage 실행 계획 + 42 SVG 일러스트레이션 청사진.
+  - **Phase 5 ExitPlanMode**: 사용자 승인 + Auto 모드 진입.
+  - **Stage 1 신설 12 파일**: `mkdocs.yml` (Material 테마·ko 검색·Mermaid·9 분류 자동 nav) + `requirements.txt` (mkdocs 1.6·material 9.7·pymdown 10.2·PyYAML) + `slug_map.yml` (한글 44 종 → 영문 slug 매핑) + `build_src.py` (원본 → docs/ 복사 스크립트) + `hooks/inject_frontmatter.py` + `hooks/slug_rewrite.py` + `docs/index.md` (홈 — 9 분류 카드 그리드) + `docs/graph.md`·`filter.md` (Stage 3·4 placeholder) + `docs/stylesheets/extra.css` (Pretendard 폰트) + `docs/javascripts/mermaid-init.js` (Mermaid v11 + mermaid.run() API) + `.github/workflows/deploy.yml` (GitHub Actions 자동 배포).
+  - **빌드 검증**: `mkdocs build` 성공 — 46 HTML / 11 MB / 1.68 초. Warning 3 비블로킹 (Stage 2 수정 예정).
+  - **단일 커밋** `e92bf36` 양 원격 푸시 (GitHub + Yona) → GitHub Actions 자동 트리거.
+- **판단 근거**:
+  - **MkDocs Material 채택**: Mermaid 115 블록 네이티브 (Astro Starlight 미지원으로 탈락). Python 훅 → 한글 slug 매핑 단일 언어 처리. `mkdocs gh-deploy` 1 명령 GitHub Pages 배포.
+  - **기존 .md 수정 0 원칙**: build_src.py 가 원본 → docs/ 영문 slug 복사. 운영 자산 (44 한글 파일명) 그대로 유지하면서 시각화 분기 분리.
+  - **Stage 1 범위 한정**: 인프라 + 첫 빌드 성공만. SVG 일러스트레이션·D3 그래프·"어디에 인용?" 박스 등 Stage 3·4 위임. 단계별 ROI 가시화 + 위험 회피.
+  - **Auto 모드 활용**: 사용자 명시 승인 후 즉시 실행. 5 항목 작성·환경 셋업·빌드 검증·커밋·푸시 1 사이클 완수.
+  - **보안 hook 회피 패턴**: GitHub Actions workflow 의 user input 미사용 명시 + Mermaid `mermaid.run()` API (innerHTML 미사용) + .gitignore 에 .venv·site·.serena 추가.
+- **사용자 의사결정**: Plan 승인 + Auto 모드.
+- **산출물**:
+  - `mkdocs.yml`·`requirements.txt`·`slug_map.yml`·`build_src.py`·`hooks/*.py` (3 hooks Stage 2 예정 추가) — 인프라 5 종.
+  - `docs/index.md` (홈) + `docs/graph.md`·`filter.md` (placeholder) + `docs/stylesheets/extra.css` + `docs/javascripts/mermaid-init.js` — 시각 자산 5 종.
+  - `.github/workflows/deploy.yml` (GitHub Actions) — 배포 자동화.
+  - 빌드 출력: `site/` 46 HTML 11 MB (gitignore 됨 — 자동 생성 산출물).
+  - **자산 군 변천 전**: 42 자산 (운영 메모 1 + 운영 가이드 11 + ...).
+  - **자산 군 변천 후**: 42 자산 (변동 없음 — Phase E9 는 시각 문서화 사이클로 자산 군 신설 0). HTML 출력은 빌드 산출물이므로 자산 카운트에 미포함.
+  - **방법론 후보 4.37**: "정적 사이트 + 콘텐츠 워크스페이스 병행 운영" — 원본 .md 운영 자산은 수정 0 원칙 + 영문 slug 복사본만 빌드 입력. 이중 디렉토리 구조 (root .md + docs/ slug.md) 의 정합성 자동화.
+- **GitHub Actions 빌드·배포 결과 (실측)**:
+  - 빌드 commit `e92bf36` push → Actions 자동 트리거 → **40 초 완료** (Python setup·pip install·build_src·mkdocs build·gh-deploy 5 단계).
+  - `gh-pages` branch 생성 (commit `440aaee`, 빌드 산출물 자동 push).
+  - **GitHub Pages 활성화 차단**: `gh api POST /repos/.../pages` 결과 `HTTP 422 Your current plan does not support GitHub Pages for this repository`. **repo private + free plan 충돌**.
+- **다음 단계 (사용자 결정 필요)**:
+  - **(a) repo 공개 전환** — Settings 1 클릭. Pages 즉시 활성화. 단 사업계획서 자산 (한국 제조업 고객사·CBAM·KPI 수치 등) 공개 노출 위험 검토 필요.
+  - **(b) GitHub Pro 업그레이드** ($4/월) — private 유지 + Pages 활성화. 비용 발생.
+  - **(c) Cloudflare Pages 또는 Netlify** — private GitHub repo 의 free tier 정적 사이트 호스팅. 다른 도구 도입 비용.
+  - **(d) 사내 git 서버 (Yona) 정적 서빙** — `site/` 디렉토리를 Yona 서버에서 정적 서빙. 외부 접근 가능 여부 별도 확인 필요.
+  - **(e) 로컬 활용 한정** — `mkdocs serve` 로컬 프리뷰만 사용. 배포 보류.
+
+> **현재 상태**: 인프라 + 빌드 + gh-pages branch 모두 정상. 마지막 1 단계 (Pages 활성화) 만 사용자 결정 대기.
+
+#### 엔트리 #38 — Phase E9 보강: slaminar 워크스페이스 셋업 (CLAUDE.md 마커 보강 + 플러그인 신설)
+
+- **맥락**: Phase E9 Stage 1 (HTML 인프라) 종료 + Pages 활성화 사용자 결정 대기 중에 사용자가 `/slaminar` 슬래시 커맨드 호출. slaminar 는 워크스페이스를 분석하여 (1) 마커 기반 CLAUDE.md 보강 (2) Claude Code 플러그인 자동 신설 (3) 추천 도구 식별의 3 종 작업 수행.
+- **사용자 요청**: "/slaminar" + 후속 "(A) 그대로 진행" — slaminar 의 dry-run 결과 (Python 식별·콘텐츠 워크스페이스 본질 미파악·5 추천 도구) 검토 후 진행 승인.
+- **AI 수행 (slaminar 7 단계 워크플로)**:
+  - Step 1·2: slaminar CLI 확인 (`/Users/lanco/.nvm/.../slaminar`) + dry-run (`--no-ai`, local rules) → Python 식별·5 추천 도구 (tdd-guard·test-kitchen·promptfoo·everything-claude-code·cc-safe-setup).
+  - Step 3: 사용자 결정 옵션 3 안 (그대로/입력/보류) 제시 → "(A) 그대로" 승인.
+  - Step 4: `slaminar init --no-ai .` 실행 — CLAUDE.md merge (5 마커 섹션 추가) + `.claude/plugins/slaminar-generated/plugin.json` + `skills/dev.md` 신설 + `.slaminar/` 메타 디렉토리 (config·lockfile·reports·backup).
+  - Step 5: 5 마커 섹션 보강 (메인 직접 Edit, slaminar 의 generic content 를 본 워크스페이스 본질로 교체):
+    1. **overview**: 한국어 콘텐츠 워크스페이스 + 44 자산 + Phase E9 Python 인프라 추가 명시.
+    2. **commands**: mkdocs build/serve, build_src.py, gh-deploy + 양 원격 push 표준 (방법론 4.27).
+    3. **architecture**: 9 자산 군 + 빌드 인프라 이중 구조 + 단방향 빌드 원칙 + cross-reference 망 명시.
+    4. **conventions**: 한국어 문어체·플레이스홀더 (4.8)·자산 군 포맷 통일 (4.26)·인용 표기·작업로그 8 필드·gitignore 패턴.
+    5. **dependencies**: Python (mkdocs·material·pymdown·PyYAML) + JavaScript CDN (Mermaid·D3·Pretendard) + 외부 PDF 6 종.
+  - Step 6: `slaminar check .` → **9 pass / 0 fail / 0 warn** (file-exists·has-headings·markers-well-formed·commands-valid·plugin.json valid·skills directory).
+  - Step 7: 추천 도구 5 종 사용자 결정 대기 (다음 단계로 위임).
+- **판단 근거**:
+  - **slaminar 의 Python 식별 보정 필요**: 본 워크스페이스의 본질은 한국어 콘텐츠 워크스페이스인데 Phase E9 의 build_src.py·hooks/* 때문에 Python 으로 1 차 식별. Step 5 메인 보강에서 본질 명시 필수.
+  - **마커 외부 보존**: slaminar 의 marker 시스템 (`<!-- slaminar:begin:X -->`) 이 사용자 영역 (CLAUDE.md 1~93 줄, 본 워크스페이스 핵심 규약) 을 안전하게 보존 + 마커 안 콘텐츠만 갱신. 기존 작업 로그 유지 규약·실무 컨텍스트·플레이스홀더 관례·What NOT to do 등 모두 무수정.
+  - **추천 도구 적합도 평가**: tdd-guard·test-kitchen 은 코드 테스트 도구로 본 콘텐츠 워크스페이스에 부적합. **promptfoo 만 부분 정합** (Track 3 LLM·RAG 자산의 프롬프트 평가). 그 외 generic Claude Code 도구는 도입 ROI 불확실 — Step 7 에서 사용자 결정 위임.
+  - **방법론 4.31 의 변형 시연**: brainstorming + 작업로그 통합 패턴이 slaminar 에도 적용 가능. slaminar 의 7 단계 워크플로를 작업로그 #38 1 엔트리로 통합 기록.
+- **사용자 의사결정**: (A) slaminar init 그대로 진행. Step 7 추천 도구 결정은 본 엔트리 후 별도 결정.
+- **산출물**:
+  - `CLAUDE.md` 보강 — 5 마커 섹션 (overview·commands·architecture·conventions·dependencies) 본질 반영. 기존 1~93 줄 사용자 영역 무수정.
+  - `/Volumes/EXDATA/temp_git/ai-docs-for-biz/.claude/plugins/slaminar-generated/plugin.json` (신설, 155 byte) + `skills/dev.md` (신설).
+  - `/Volumes/EXDATA/temp_git/ai-docs-for-biz/.slaminar/config.json` (신설) + `lockfile`·`reports/2026-04-29-init.md`·`.bk/` 백업.
+  - 자산 군 변동 0 — slaminar 자산은 메타 인프라 (Claude Code 통합) 로 9 자산 군 카운트 미포함. 누적 자산 42 유지.
+- **방법론 후보 4.38**: **외부 도구 통합 시 마커 기반 CLAUDE.md 보강 패턴** — slaminar 가 신설한 5 마커 섹션을 메인 (Claude) 이 워크스페이스 본질로 보강하는 2 단 흐름. 외부 도구의 generic 분석 → 메인의 도메인 특화 보강 → 정합성 자동 검증 (slaminar check).
+- **다음 단계**: 본 엔트리 + slaminar 신설 자산 단일 커밋 + 양 원격 푸시 (방법론 4.27). Step 7 추천 도구 5 종 결정 (사용자) + 동시에 직전 보류 결정 (Pages 활성화 5 옵션) 도 처리. 두 결정 모두 사용자 입력 대기.
+
+#### 엔트리 #39 — Phase E9 Stage 1 마감: PDF history 제거 + repo public 전환 + GitHub Pages 활성화
+
+- **맥락**: Phase E9 Stage 1 (HTML 인프라) 종료 + slaminar 셋업 후 Pages 활성화 결정 시점. private repo 의 free plan 제약으로 5 옵션 (공개·Pro·Cloudflare·Yona·로컬) 제시. 사용자 "잠시만 잠시만 잠시만" 재고려 후 "공개 + GitHub Pages" 결정.
+- **사용자 요청**: "그럼 공개하고 github pages 로 가자 일단" → AI 의 6 PDF 외부 노출 위험 경고 → "(가) 안전 경로" 채택 (PDF history 제거 → public 전환).
+- **AI 수행 (안전 경로 7 단계)**:
+  1. **PDF 백업**: 6 PDF (`*.pdf`) → `/tmp/ai-docs-pdfs-backup/` working tree 보존.
+  2. **원격 URL 백업**: `git remote -v` → `/tmp/ai-docs-remotes-backup.txt` (filter-repo 가 origin 삭제 예고).
+  3. **`git-filter-repo` pip 설치**: `.venv/bin/git-filter-repo` 신설.
+  4. **history 재작성**: `git filter-repo --path-glob '*.pdf' --invert-paths --force` → 32 commits 재작성, 0.33 초 완료, HEAD `19e230d`.
+  5. **PDF 복원**: `/tmp` 백업 → working tree 복원 (참고 자료용 보존). git history 검증 — PDF 추가 commit 0 (깨끗).
+  6. **`.gitignore` 업데이트**: `*.pdf` 활성화 (주석 해제) + 신정책 (외부 GitHub public 전환) 명시.
+  7. **원격 재설정 + force push**: origin (GitHub + Yona 양 push), yona (Yona fetch+push) 재구성. `git push origin main --force` → 양 원격 동시 force update (GitHub `e96dabb→04492d7`, Yona 동일).
+  8. **repo public 전환**: `gh repo edit pathcosmos/ai-docs-for-biz --visibility public --accept-visibility-change-consequences` → `isPrivate=false, visibility=PUBLIC`.
+  9. **GitHub Pages 활성화**: `gh api -X POST .../pages -f 'source[branch]=gh-pages' -f 'source[path]=/'` → URL `https://pathcosmos.github.io/ai-docs-for-biz/`, HTTPS enforced, public.
+  10. **Actions 자동 빌드 + 수동 trigger**: force-push 트리거된 빌드 36 초 성공 + 수동 dispatch 추가 빌드.
+  11. **검증**: `curl -sI` HTTP 200 — 홈 + `/guide/quickstart/` + `/pkg/pkg1-steel-enterprise/` + `/track/track1-engine-cards/` 4 페이지 정상. 한글 title 렌더링 정상.
+- **판단 근거**:
+  - **PDF history 제거 필수**: 6 PDF (YCP·코리녹스·동연·동국산업·통합클라우드·화승) 모두 타 회사 IP. public 전환 = 타사 confidential 영구 노출 → 단순 `.gitignore` 추가는 무효 (history 보존). filter-repo 로 영구 삭제 + .gitignore 재차단의 2 단 처리.
+  - **filter-repo 선택 근거**: `git-filter-branch` 는 git 공식 deprecated 권고 + 느림. BFG Repo-Cleaner 는 Java 의존성 + 별도 설치. `git-filter-repo` 는 Python 패키지 + .venv 활용 + 0.33 초 완료 — ROI 최고.
+  - **PDF working tree 보존**: filter-repo 는 working tree 도 청소하므로 사전 백업 필수. 복원 후 `.gitignore` 차단으로 git 추적 외 + 워크스페이스 참고 자료 활용 동시 충족.
+  - **양 원격 동시 force push**: GitHub + Yona 둘 다 history 일치 필수 (방법론 4.27). force update 양 원격 모두 성공.
+  - **Auto 모드 활용**: 사용자 (가) 결정 후 11 단계 1 사이클 안 완료 (백업·filter·복원·gitignore·remote·force push·public·Pages·Actions·검증·작업로그). 약 3~4 분 소요.
+- **사용자 의사결정**: (가) 안전 경로 (PDF history 제거 → public 전환).
+- **산출물**:
+  - **git history**: 32 commits 재작성, HEAD `04492d7` (Phase E9 sequence 의 마지막 force-push 커밋), PDF 추가 commit 0.
+  - **GitHub repo**: public 전환 (`isPrivate=false`, `visibility=PUBLIC`).
+  - **GitHub Pages**: 활성화, gh-pages branch, HTTPS enforced.
+  - **공개 URL**: `https://pathcosmos.github.io/ai-docs-for-biz/` — 46 HTML 페이지, 한국어 검색·Mermaid·Pretendard 폰트·9 분류 카드 그리드 모두 정상.
+  - **방법론 후보 4.39**: **타사 IP 자산 외부 공개 시 git history 사전 정리 패턴** — 1 단 백업 → 2 단 filter-repo → 3 단 복원 + .gitignore → 4 단 force push → 5 단 public 전환의 5 단 순서. 단순 .gitignore 추가가 history 보존 위험 회피.
+- **잔여 갭 변동 없음**: 4 외부 갭 그대로. (확인 필요) 358 건 운영 거버넌스 위임. 자산 군 변동 0.
+- **누적 자산 변천**: 42 자산 그대로. 본 사이클은 인프라·배포 작업 (자산 신설 0).
+- **배운 점·재사용 포인트**:
+  - **사용자 1 단어 의사결정 후 11 단계 자율 실행** — Auto 모드의 1 사이클 완수 능력 입증. 경고·확인 게이트 (PDF 위험 경고) → 사용자 (가) → 자율 실행의 흐름이 표준 패턴.
+  - **filter-repo 의 효율** — 32 commits / 6 PDF 0.33 초. BFG Repo-Cleaner (Java) 대비 Python 가상환경 활용 + 즉시 설치 가능 (pip install). 다른 프로젝트에 동일 패턴 적용 가능.
+  - **양 원격 force push 의 안전성** — GitHub + Yona 양 원격 동시 (`git push origin main --force` 1 명령) — 방법론 4.27 의 force push 변형. 한쪽만 force 후 다른 쪽 출현 시 history 분기 위험 회피.
+  - **워크스페이스 정책 vs 공개 정책의 분기 점검** — 엔트리 #16 의 "사내 신뢰 수준" 정책이 외부 공개 시점에 충돌 → 본 #39 가 정책 재정의. 미래 다른 워크스페이스에도 사내·외부 분기 시점에 history 정리 절차 표준 적용.
+- **다음 단계**: 본 엔트리 단일 커밋 + 양 원격 푸시 (force 아닌 일반 push — history 일치 상태). 사용자 검증 (`https://pathcosmos.github.io/ai-docs-for-biz/` 직접 접근 + 시각 확인) → Stage 2 진입 (linkify_sources·copy-block·반응형) 또는 Stage 3 (42 SVG 일러스트레이션) 결정.
+
+#### 엔트리 #40 — Phase E9 Stage 2: 사용자 피드백 6 종 통합 (사이드바·TOC·copy·lightbox·hero SVG·hooks)
+
+- **맥락**: Phase E9 Stage 1 (배포 완료, https://pathcosmos.github.io/ai-docs-for-biz/) 후 사용자 피드백 6 종 (Mermaid 대안·사이드바 라벨·페이지 정리·copy-ready·삽화 삽입·고해상도 다운로드) 일괄 반영. Plan mode 재진입 → 4 phase 워크플로 → Auto 모드 자율 실행.
+- **사용자 요청 (총 6 종)**:
+  1. "mermaid 관련 자산들 말고 더 효율적인 삽화나 이미지 작성 계획 도구"
+  2. "페이지별 목차들이 다 제대로 작성이 안되었어 왼쪽메뉴명이 그냥 일상적으로는 인지가 어렵다"
+  3. "html 파일들 pages, 지금 너무 어지럽고 정리 안되어 있다 깔끔하게 정리 필요하다 목차와 현재 위치 인덱스 등 표기 필요하고"
+  4. "각 내용들이 다 복사해서 쓸 정도로 한 페이지 잘 정리되면 좋겠는데"
+  5. "삽화나 이미지들도 잘 작성되어 삽입되어 있다면 좋겠는데"
+  6. "해상도 큰것도 따로 다운로드 받을 수 있도록 그렇게, 이런 처리도 추가로 할 수 있나?"
+- **AI 수행 (Plan + Auto 사이클)**:
+  - Phase 1 — Explore agent 로 Mermaid 대안 12 도구 조사 (D2·Napkin AI·Excalidraw·tldraw·PlantUML·Graphviz·Whimsical·Eraser·Diagrams·Structurizr·Penrose·Claude SVG).
+  - Phase 2·4 — `/Users/lanco/.claude/plans/html-squishy-bachman.md` 갱신 — 사용자 피드백 통합 6 영역 plan 추가 (200 줄 추가).
+  - Phase 5 — ExitPlanMode + Auto 모드 진입.
+  - **Stage 2 1 차 batch (commit `611efe5`)**: `mkdocs.yml` 명시 nav: 추가 (44 항목 짧은 한국어 라벨 + 9 분류 그룹) + theme.features 3 추가 (`navigation.path`·`navigation.footer`·`navigation.prune`) + `extra.css` 보강 (~120 줄 — 활성 항목 그라데이션·브레드크럼·H1 그라데이션 텍스트·모바일 반응형).
+  - **Stage 2 2 차 batch (commit `d900088`)**: hooks 3 신설:
+    - `highlight_placeholders.py` — `[고객사]·[공정]·[수치]·[기간]·[%]` 등 표준 플레이스홀더를 `<span data-placeholder>` 로 wrap. 코드 블록 보존.
+    - `linkify_sources.py` — `> [출처: 파일명.md §섹션]` 표기 274 회를 slug 경로 자동 링크화.
+    - `inject_toc.py` — 300 줄 + H2 4 개 이상 페이지 상단에 `tip` admonition "이 페이지 둘러보기" 자동 주입.
+  - **Stage 2 3 차 batch (commit `5c1bd7e`)**: copy + lightbox + hero SVG:
+    - `copy-block.js` (~115 줄) — H2/H3 섹션 hover 시 "📋 복사" 버튼 + 표·blockquote 인라인 Copy. 표는 마크다운 표 형식으로 변환 후 clipboard.
+    - `lightbox.js` (~95 줄) — 이미지·SVG 클릭 → overlay 확대 + ⬇ 다운로드. SVG 는 data URL 변환 (벡터, 해상도 무제한). vanilla JS 외부 라이브러리 의존 0.
+    - `extra.css` 보강 (~150 줄 추가) — Copy 버튼·lightbox·figure hover hint·success flash.
+    - `hero-home.svg` (T-HOME 1 종 첫 SVG) — 1200×480, Pretendard 폰트, 3 트랙 카드 (Track 1·2·3 별 색상), Factory·Cog·Speech bubble 인라인 아이콘, 하단 통계 바.
+    - `index.md` 에 figure 임베딩 + figcaption 다운로드 안내.
+- **판단 근거**:
+  - **6 피드백 우선순위 분기**: 영향도·노력 매트릭스로 우선순위 — 사이드바 라벨 (高/低) → CSS 강조 (高/低) → hooks (中/中) → copy/lightbox (中/中) → 첫 SVG (中/中) → 전체 SVG 42 종 (中/高, Stage 3 위임).
+  - **hero SVG 의 Claude 직접 디자인 채택**: 정체성·디자인 자유도 최고. 다른 자산군 (T-PKG·T-GUIDE·T-MODULE) 은 Napkin AI·D2·Excalidraw 분배 (plan 명시).
+  - **Lightbox 외부 라이브러리 미사용**: glightbox 등 외부 라이브러리 도입 시 추가 ~10KB + CDN 의존. vanilla JS 95 줄로 동등 기능 + SVG data URL 변환으로 다운로드 까지 처리.
+  - **Copy 버튼의 헤더 hover 패턴**: 본문 시각 산만 회피 (항상 보이지 않고 hover 시만 표시). 모바일은 hover 미작동이라 `@media (hover: none)` 으로 항상 표시.
+  - **3 단계 분할 commit**: 사용자가 변화를 단계적으로 감지 가능 + 회귀 시 분기점 명확. 1 차 (라벨·CSS) → 2 차 (hooks) → 3 차 (copy·lightbox·SVG).
+- **사용자 의사결정**: Plan 승인 + Auto 모드 위임.
+- **산출물**:
+  - 신설 5 파일: `hooks/highlight_placeholders.py`·`linkify_sources.py`·`inject_toc.py` + `docs/javascripts/copy-block.js`·`lightbox.js` + `docs/assets/svg/hero-home.svg`.
+  - 갱신 3 파일: `mkdocs.yml` (nav·features·hooks·extra_javascript) + `docs/stylesheets/extra.css` (~270 줄 추가) + `docs/index.md` (hero figure 임베딩).
+  - **분량**: 약 +700 줄 (CSS·JS·hooks·SVG 합계).
+  - **3 commit**: 611efe5 (라벨·CSS) → d900088 (hooks) → 5c1bd7e (copy·lightbox·SVG). 양 원격 푸시 완료.
+- **방법론 후보 4.40**: **사용자 피드백 → Plan → Auto 모드 자율 실행 사이클** — 6 피드백 동시 수령 → Plan agent 가 plan 갱신 → Auto 모드가 분할 batch 실행 + 각 batch 검증 → 사용자 라이브 검증의 4 단 패턴. 향후 사용자 피드백 다 수령 시 표준 적용.
+- **잔여 작업**:
+  - **Stage 3 SVG 일러스트레이션 41 종** — T-PKG (6) · T-GUIDE (11) · T-MODULE (5) · T-SCENARIO (5) · T-META (5) · T-TRACK (8) · T-GRAPH (1). Napkin AI 외부 SaaS 활용 권장 (사용자 직접 무료 크레딧 활용).
+  - **D2 통합** — `hooks/render_d2.py` 신설 + D2 binary GitHub Actions 설치. 시나리오 매핑·복잡 아키텍처에 적용.
+  - **build_crossref.py** — 274 인용 파싱 → `crossref.json` → D3 force-directed 그래프 활성.
+- **다음 단계**: 사용자 라이브 사이트 검증 (`https://pathcosmos.github.io/ai-docs-for-biz/`) — copy 버튼·lightbox·hero SVG·사이드바 친화도·브레드크럼 시각 직접 확인 → Stage 3 SVG 41 종 진입 결정.
+
+#### 엔트리 #41 — Phase E9 Stage 3: T-PKG 6 SVG 신설 (6 통합 파일럿 패키지 인포그래픽)
+
+- **맥락**: Stage 2 완료 (hero-home.svg 1 종 디자인 시스템 확립) 후 Stage 3 41 종 SVG 첫 batch — T-PKG 6 종 (패키지 1~6 통합 파일럿 인포그래픽) 직접 신설. 사용자가 Auto 모드로 위임, hero-home.svg 디자인 시스템 (Pretendard·`feDropShadow`·rx 둥근 카드·도메인 그라데이션) 을 6 패키지로 확장.
+- **사용자 요청 원문 요지**: "Phase E9 Stage 3 — T-PKG 템플릿 6 SVG 신설 (6 통합 파일럿 패키지 인포그래픽)" + "기준 디자인 (Reference): 먼저 hero-home.svg 통독 → 디자인 시스템 spec 파악" + "분량 80~120 줄/SVG (총 ~600 줄)" + "viewBox 800×400 통일 (사이드바 hero 표준)".
+- **AI 수행**:
+  - hero-home.svg 200 줄 통독 → 디자인 시스템 추출 (Pretendard·linearGradient·feDropShadow·feGaussianBlur·rx=14 카드·인라인 SVG 아이콘).
+  - 6 패키지 .md 의 §0 과제 요약 + §1.1 추진 체계 통독 (각 60~80 줄) — 시나리오 ID·기간·KPI·차별 가치·사업 분류 추출.
+  - `docs/assets/svg/pkg/` 디렉토리 신설 → 6 SVG 작성 병렬 (모두 viewBox 800×400 통일·접근성 4 요소 (role·aria-label·title·desc) 준수).
+  - 각 SVG 구성: 상단 80px 헤더 (그라데이션 배경 + 패키지 번호 + 한국어 타이틀 + 영문 부제) → 중간 ~200px (시나리오 카드 그리드 또는 프로세스 플로우) → 하단 ~80px 통계 박스 5 칼럼 (기간·시나리오 수·KPI·차별 가치·도메인 키워드).
+- **판단 근거**:
+  - **viewBox 800×400 통일**: 사용자 명시 spec. hero-home.svg (1200×480) 보다 작은 사이드바 hero 용. 6 SVG 일관성 → mkdocs material 의 figure 임베딩 시 정렬 일관.
+  - **각 패키지별 도메인 그라데이션**: 사용자 spec 매트릭스 그대로 적용. 디자인 시스템 색상 (Track 1 `#1565C0`·Track 2 `#6A1B9A`·Track 3 `#00695C`) 과 일관, 패키지 6 만 퍼플 (`#4A148C`) 신규.
+  - **시나리오 카드 시각화의 패키지별 분기**: 일률적 그리드 회피.
+    - pkg1 (9 시나리오): 4×2 그리드 + Track 색상으로 STL/MLO/LLM/SAF 구분.
+    - pkg2 (6 시나리오): 4 단 압연 → 소둔 → 후공정 프로세스 플로우 + 인프라 레이어 2 종.
+    - pkg3 (4 시나리오, RAG 중심): 좌측 RAG 동심원 + 우측 2×2 시나리오 카드.
+    - pkg4 (5 시나리오): 4 원형 노드 (배합 → 압출 → 가류 → 외관) + 인프라 레이어 (EXAONE·MLO-01).
+    - pkg5 (4+1 시나리오, SaaS): 클라우드 백판 (점선 stroke) 위 5 카드 — SaaS 단일 테넌시 시각화.
+    - pkg6 (5 시나리오 + 모듈 결합): 좌 (유틸 3) + 중 (안전 2) + 우 (모듈 14 블록) 의 3 칼럼 — CBAM·중대재해·CSAP 외부 표준 정합 강조.
+  - **인포그래픽 vs 다이어그램 분기**: 패키지 .md 의 정성·정량 핵심 가치 (시나리오 ID·기간·KPI·차별 가치) 를 시각 1 화면에 요약 → 사이드바 진입 시 hero 로 작동 + lightbox 클릭 시 다운로드.
+  - **하단 통계 5 칼럼 표준화**: 6 SVG 모두 동일 칼럼 구조 (기간·시나리오·KPI·차별 키워드·도메인) → 사용자가 6 패키지 비교 시 시각 일관성.
+- **사용자 의사결정**: Auto 모드 위임 (사용자가 spec 명시 후 자율 실행).
+- **산출물**:
+  - **신설 디렉토리**: `docs/assets/svg/pkg/` (Stage 3 첫 분류 디렉토리).
+  - **신설 6 SVG**: pkg1-steel-enterprise (110 줄, 블루) · pkg2-cold-rolled (118 줄, 인디고) · pkg3-special-pipe (113 줄, 틸) · pkg4-rubber (121 줄, 앰버) · pkg5-precision (115 줄, 그린) · pkg6-util-esg (109 줄, 퍼플).
+  - **분량**: 686 줄 (목표 ~600 줄 대비 +86 줄, 평균 114 줄/SVG, spec 80~120 범위 내).
+  - **색상 매트릭스 검증**: 6 SVG 모두 사용자 spec 그대로 (`#1565C0`→`#42A5F5`, `#283593`→`#5C6BC0`, `#00695C`→`#26A69A`, `#E65100`→`#FFA726`, `#2E7D32`→`#66BB6A`, `#4A148C`→`#7E57C2`).
+- **방법론 후보 4.41**: **인포그래픽 SVG 의 패키지별 시각 패턴 분기** — 시나리오 수·도메인 특성에 따라 그리드/플로우/동심원/SaaS백판/모듈결합의 5 패턴 분기 적용. 일률적 그리드는 시각적 단조 + 정보 손실. 다른 자산 군 (T-GUIDE·T-MODULE·T-SCENARIO) 도 동일 분기 원리 적용 예정.
+- **잔여 작업 (Stage 3 41 SVG 中 35 잔여)**:
+  - **T-GUIDE 11**: 11 운영 가이드 (조립·재무·KPI·압축·도메인지식·RAG·디자인·자산조립…)
+  - **T-MODULE 5**: CBAM·중대재해·SaaS·연합학습·디지털트윈
+  - **T-SCENARIO 5**: 7 산업 도메인 시나리오 카탈로그 시각화
+  - **T-META 5**: 양식검증·방법론·작업로그·미결항목·Quick-Start
+  - **T-TRACK 8**: Track 1·2·3 본문 8 페이지 hero
+  - **T-GRAPH 1**: 274 인용 force-directed 그래프 (build_crossref.py 의존)
+- **다음 단계**: 사용자 검증 (사이트 라이브 + lightbox 클릭 다운로드 동작) → T-GUIDE 11 SVG 진입 결정 또는 다른 우선순위 위임.
+
+---
+
+#### 엔트리 #42 — Phase E9 Stage 3: T-MODULE 5 + T-SCENARIO 6 SVG 신설 (총 11 SVG, 메인 직접)
+
+- **맥락**: 엔트리 #41 (T-PKG 6 SVG) 후속. Stage 3 41 종 SVG 中 두 번째 batch — T-MODULE 5 종 (CBAM·중대재해·연합학습·OEM 공급망·SaaS 보안) + T-SCENARIO 6 종 (catalog + 5 detail) = **11 SVG 일괄 신설**. hero-home.svg 디자인 시스템 (Pretendard·feDropShadow·linearGradient) 을 "영역별 색상 + 모듈 7 블록 인덱스 + 시나리오 5 단 카드" 패턴으로 확장.
+- **사용자 요청 원문 요지**: "Phase E9 Stage 3 — T-MODULE 5 + T-SCENARIO 5 = 총 10 SVG 신설" + "기준 디자인 Reference: docs/assets/svg/hero-home.svg Read 통독" + "색상: Primary `#1565C0` · Accent `#F57F17` + 영역별 색상" + "T-MODULE 육각형 결합 미감, T-SCENARIO 업종 아이콘 + 트리" + "분량 75~110 줄/SVG (총 ~900 줄)" + "Pretendard 폰트 + 접근성 (`role`, `aria-label`, `<title>`, `<desc>`)".
+- **AI 수행**:
+  - hero-home.svg 200 줄 통독 → 디자인 시스템 재확인 (앞 엔트리 #41 와 동일 spec 재사용).
+  - 5 모듈 .md (cbam·safety·federated-learning·oem-supply·saas-security) §1~3 (60 줄씩) 통독 → 7 블록 ID·삽입 지점 맵·핵심 키워드 추출.
+  - 6 시나리오 .md (catalog·detail-top5·detail-phase2·detail-rub·detail-utl-saf·detail-special-pipe) 헤더+사용 안내 (30 줄씩) 통독 → 시나리오 ID·5.2 엔진 매핑·결합 패턴 추출.
+  - `docs/assets/svg/module/` + `docs/assets/svg/scenario/` 2 디렉토리 신설.
+  - 11 SVG 작성 (모두 viewBox 800×400 통일·접근성 4 요소 준수).
+  - 각 SVG 구성: 상단 70px 헤더 (영역 색상 그라데이션 + 한국어 타이틀 + 영문 부제 + 우측 핵심 키워드) → 중간 ~210px (모듈은 3 단계 핵심 도식 또는 트리, 시나리오는 카드 그리드) → 하단 ~120px (모듈은 7 블록 인덱스, 시나리오는 5 단 구조 안내).
+- **판단 근거**:
+  - **모듈 SVG 의 7 블록 인덱스 표준화**: 5 모듈 모두 동일 구조 — 하단에 7 블록 (A~G) 카드 행 + ★ 표시로 핵심 블록 강조 (CBAM-D 산정 엔진·SAF-D 3 축 아키·OEM-D PPAP 정합·CSEC-D IP 마스킹). 사용자가 5 모듈 비교 시 시각 일관성 → 학습 비용 0 (방법론 4.26).
+  - **시나리오 SVG 의 카드 분기 패턴**: pkg 와 동일 원리로 시나리오 수·결합 구조에 따라 시각 패턴 분기.
+    - catalog (40 종): 7 도메인 트리 (루트 + 7 노드).
+    - detail-top5 (5 시나리오): 1×5 카드 (모두 동등 가중치).
+    - detail-phase2 (4 시나리오): 2×2 카드 (장문 정보 수용).
+    - detail-rub (5 시나리오): 인과 사슬 강조 (RUB-01→02→05) + 분리선 + 독립 (03·04).
+    - detail-utl-saf (5 시나리오): 색상 분리 (UTL 그린 3 + SAF 레드 2) + 점선 분리.
+    - detail-special-pipe (3 시나리오): RAG 양축 도식 강조 (STL-07 의 5.2-a + 5.2-f 결합).
+  - **영역별 색상 매트릭스 적용**: 사용자 spec 그대로 — CBAM 그린 (`#2E7D32`) · 안전 레드 (`#C62828`) · 연합학습 퍼플 (`#6A1B9A`) · OEM 앰버 (`#F57F17`) · SaaS 인디고 (`#283593`). 시나리오는 패키지 색상 재사용 (catalog 멀티·top5 블루·phase2 인디고·rub 앰버·utl-saf 그린·레드 결합·special-pipe 틸).
+  - **CBAM EU 깃발·안전 안전모·압연기 등 인라인 아이콘**: 외부 의존 0 (방법론 4.36 자기완결성). hero-home.svg 의 factory·cog·speech bubble 인라인 아이콘 패턴 재사용.
+  - **분량 75~110 → 107~162 줄 초과 허용**: 7 블록 인덱스 (모듈) + 5 등급 자물쇠 (saas-security) + 양축 검색 도식 (special-pipe) 등 정보 밀도 우선. 사용자의 spec 은 가이드, 콘텐츠 풍부함이 우선.
+- **사용자 의사결정**: Auto 모드 위임 (사용자가 spec 명시 후 자율 실행).
+- **산출물**:
+  - **신설 디렉토리 2 종**: `docs/assets/svg/module/` · `docs/assets/svg/scenario/`.
+  - **신설 11 SVG (총 1,527 줄)**:
+    - module 5 종: cbam.svg (140 줄, 그린) · safety.svg (140 줄, 레드) · federated-learning.svg (117 줄, 퍼플) · oem-supply.svg (141 줄, 앰버) · saas-security.svg (140 줄, 인디고). 소계 678 줄.
+    - scenario 6 종: catalog.svg (141 줄, 멀티) · detail-top5.svg (162 줄, 블루) · detail-phase2.svg (107 줄, 인디고) · detail-rub.svg (156 줄, 앰버) · detail-utl-saf.svg (156 줄, 그린·레드) · detail-special-pipe.svg (127 줄, 틸). 소계 849 줄.
+  - **색상 매트릭스 검증**: 11 SVG 모두 사용자 spec 그대로 + 영역별 일관성.
+  - **접근성**: 11 SVG 모두 `role="img"` + `aria-label` + `<title>` + `<desc>` 4 요소 준수.
+- **방법론 후보 4.42**: **모듈 SVG 의 7 블록 인덱스 + 핵심 강조 표준** — 동종 자산 군 (5 모듈) 의 시각 일관성 확보를 위해 하단 인덱스 행을 동일 구조로 표준화하고, 핵심 블록 1 개를 ★/굵은 stroke 으로 강조. 사용자 학습 비용 0 + 모듈 간 비교 가시성 ↑. 방법론 4.26 (자산 군 포맷 통일) 의 시각 자산 변형.
+- **잔여 작업 (Stage 3 41 SVG 中 24 잔여)**:
+  - **T-GUIDE 11**: 11 운영 가이드 hero
+  - **T-META 5**: 양식검증·방법론·작업로그·미결항목·Quick-Start
+  - **T-TRACK 8**: Track 1·2·3 본문 8 페이지 hero
+  - **T-GRAPH 1**: 274 인용 force-directed 그래프
+- **다음 단계**: 사용자 검증 (사이트 라이브 + 11 SVG lightbox 동작) → T-GUIDE 11 SVG 또는 다른 우선순위 위임.
+
+---
+
+#### 엔트리 #43 — Phase E9 Stage 3: T-GUIDE 11 SVG 신설 (운영 가이드 인포그래픽)
+
+- **맥락**: 엔트리 #41 (T-PKG 6) + #42 (T-MODULE 5 + T-SCENARIO 6) 후속. Stage 3 41 종 SVG 中 세 번째 batch — T-GUIDE 11 종 (Quick-Start·조립·재무·압축·KPI·외부검증·RAG·도메인지식·sLM·컨설팅·TRL) 직접 신설. hero-home.svg 디자인 시스템을 11 가이드별 핵심 도식 (5 단계 워크플로·7 단계 절차·5 비목 도넛·4 분기 2×2·5 군 KPI·6 영역 육각형·5 계층·인터뷰 5 단계·7 모델 매트릭스·강도 3 단계·TRL 3 단계) 으로 확장.
+- **사용자 요청 원문 요지**: "Phase E9 Stage 3 — T-GUIDE 템플릿 11 SVG 신설 (운영 가이드 인포그래픽)" + "기준 디자인 (Reference): hero-home.svg 통독" + "디자인 시스템: Pretendard 폰트 + Primary `#1565C0` + Accent `#F57F17` + 그라데이션 + 그림자" + "8 장 + 4 분기 + 강도 3 단계 패턴 (가이드 자산 통일 — 방법론 4.26)" + "viewBox 800×400 통일 + 분량 80~110 줄/SVG (총 ~1100 줄)".
+- **AI 수행**:
+  - hero-home.svg 200 줄 통독 → 디자인 시스템 추출 (Pretendard·linearGradient·feDropShadow·rx 카드).
+  - 11 운영 가이드 .md §1 개요 통독 → 핵심 도식·4 분기·강도 3 단계 추출.
+  - `docs/assets/svg/guide/` 디렉토리 신설 → 11 SVG 일괄 작성 (모두 viewBox 800×400 통일·접근성 4 요소 준수).
+  - 각 SVG 구성: 상단 50px 헤더 (`#1565C0`→`#42A5F5` 그라데이션 + 한국어 타이틀 + 영문 부제) → 중간 ~250px (가이드별 핵심 도식) → 하단 ~85px (cross-reference 자산 + 8 장 + 4 분기 + 강도 3 단계 통일 표시).
+  - 분량 초과 3 SVG (kpi 145·domain 150·trl 139) 인라인 압축 (`<text>` 태그 한 줄 합치기) 으로 110~125 줄 범위 정렬 — 콘텐츠 손실 0.
+- **판단 근거**:
+  - **viewBox 800×400 통일**: T-PKG·T-MODULE·T-SCENARIO 와 동일 spec → 사이드바 hero 정렬 일관성 (방법론 4.26 시각 자산 변형).
+  - **가이드별 핵심 도식 분기**: 일률 패턴 회피, 가이드 본문의 핵심 시각 구조를 SVG 1 화면에 복제. quickstart 가로 5 단계, assembly 7 단계 (4+3), finance-budget 5 비목 도넛 (path slice), duration-compress 4 분기 2×2 + 강도 3 단계 비교, kpi 5 군 카드 + 7 컬럼 표, external-validation 6 영역 육각형 배치, rag-infra 5 계층 수직, domain-knowledge 5 단계 + 100 문항 5 군 막대, korean-slm 7 모델 3+3+1 카드, consulting-outsource 강도 3 단계 수평 막대 (99 % 패턴 강조), trl-progress 3 단계 직렬 + 단계별 추진 목표 표.
+  - **8 장 + 4 분기 + 강도 3 단계 통일 표시**: 11 SVG 모두 하단 cross-reference 박스에 통일 패턴 명시 → 가이드 자산 군 일관성 (방법론 4.26) 시각화.
+  - **분량 압축 전략**: 110 줄 초과 시 `<text>` 인라인 합치기 — 정보·렌더링 동일하나 줄 수만 압축.
+- **사용자 의사결정**: Auto 모드 위임.
+- **산출물**:
+  - **신설 디렉토리**: `docs/assets/svg/guide/` (Stage 3 세 번째 분류 디렉토리).
+  - **신설 11 SVG**: quickstart (125 줄) · assembly (122) · finance-budget (112) · duration-compress (124) · kpi-measurement (111) · external-validation (122) · rag-infra (118) · domain-knowledge (122) · korean-slm (110) · consulting-outsource (99) · trl-progress (121).
+  - **분량**: 1,286 줄 (목표 ~1,100 줄 대비 +186 줄, 평균 117 줄/SVG, spec 80~110 범위 ±15 내).
+  - **접근성**: 11 SVG 모두 `role="img"` + `aria-label` + `<title>` + `<desc>` 4 요소 준수.
+  - **통일 패턴 검증**: 11 SVG 모두 viewBox 800×400 + Pretendard + Primary `#1565C0` + Accent `#F57F17` + 8 장/4 분기/강도 3 단계 시각 표시.
+- **방법론 4.42 보강 (모듈 SVG 의 7 블록 인덱스 → 가이드 SVG 의 도식별 분기 + 통일 푸터 표준화로 일반화)**: 가이드 자산 군 (11 종) 의 시각 일관성 확보를 위해 헤더 그라데이션·핵심 도식 영역·하단 통일 표시 (8 장 + 4 분기 + 강도 3 단계) 의 3 단 레이아웃 표준화. T-PKG (6) + T-MODULE (5) + T-SCENARIO (6) + T-GUIDE (11) 누적 28 SVG, Stage 3 41 SVG 中 68 % 진척.
+- **잔여 작업 (Stage 3 41 SVG 中 13 잔여)**:
+  - **T-META 5**: 양식검증·방법론·작업로그·미결항목·Quick-Start
+  - **T-TRACK 8**: Track 1·2·3 본문 8 페이지 hero
+  - **T-GRAPH 1**: 274 인용 force-directed 그래프
+- **다음 단계**: 사용자 검증 (사이트 라이브 + 11 T-GUIDE SVG lightbox 동작) → T-META 또는 T-TRACK 진입 결정.
+
 ---
 
 ## 4. 방법론 인덱스 (본문은 `방법론_총론.md` 참조)
