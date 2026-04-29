@@ -60,7 +60,7 @@
 | 작업조 간 처치 편차 | 작업자별 상이 | 표준 알람·제안 | 정량 표준화 |
 | False Alarm Rate | (절대 임계 기반) [%] | (예측 + 추세) [%] | [%] 감소 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![PLC/Historian 스탠드별 롤포스·텐션·속도·갭 1초 주기 (다이어그램 1)](../assets/diagrams/detail-phase2/diagram-1.svg)
 ![Phase 1: 예측 모드 HMI 표시만 (다이어그램 2)](../assets/diagrams/detail-phase2/diagram-2.svg)
@@ -96,7 +96,7 @@
 | 신규 강종 시작품 코일 수 | [수치] 코일 | [수치] 코일 | [%] 감소 |
 | 노하우 형식지화 비율 | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![코일 사양·요구 물성 재질·두께·폭·중량 (다이어그램 3)](../assets/diagrams/detail-phase2/diagram-3.svg)
 ![입력: 코일 군 사양·물성 목표 (다이어그램 4)](../assets/diagrams/detail-phase2/diagram-4.svg)
@@ -132,7 +132,7 @@
 | 작업자별 누적 기여 가시화 | 부재 | 기여 스코어 운영 | 현장 동기부여 자산 |
 | MLOps 폐루프 작동 빈도 (월) | [수치] 회 | [수치] 회 | [%] 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![AI 예측 결과 STL-05·06·09·LLM-02·MLO 등 (다이어그램 1)](../assets/diagrams/detail-phase2/diagram-1.svg)
 ![작업자 동기부여 루프 (다이어그램 6)](../assets/diagrams/detail-phase2/diagram-6.svg)
@@ -168,7 +168,7 @@
 | 베테랑 노하우 형식지화 (RAG 등재) | [%] | [%] | [수치] %p 향상 |
 | 야간·주말 단독 처치 가능 비율 | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![CMMS 워크오더 자유 텍스트 수치 (다이어그램 2)](../assets/diagrams/detail-phase2/diagram-2.svg)
 ![sequenceDiagram (다이어그램 8)](../assets/diagrams/detail-phase2/diagram-8.svg)

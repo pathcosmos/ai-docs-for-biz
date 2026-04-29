@@ -1906,6 +1906,41 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 
 ---
 
+#### 엔트리 #48 — Phase E14: mermaid 11 잔존 변환 + SCN ID 1,084 hyperlink
+
+- **맥락**: E13 완료 후 사용자 라이브 검증 중 추가 호소 2 종. (1) `track1_5.2_AI엔진_변형카드.md` 페이지 raw mermaid 표시 — convert_mermaid.py 정규식 `^\`\`\`mermaid` 가 들여쓰기 (list item content) 미매치 → 5.2-a~g 카드 7 블록 + 모듈 2 블록 + 패키지 4 추가 = 11 블록 잔존. (2) "5.2-a/b/c 대표 시나리오 (카탈로그)" 표 안 SCN-STL-04, 07 같은 ID 가 도메인 약어 (STL·MET·RUB·UTL·SAF·LLM·MLO) 만 표시 + 클릭 안 됨 → 사용자 친화도 0. 옵션 1 (자동 hyperlink + tooltip 결합) 사용자 명시 결정.
+- **사용자 요청 원문 요지**: (1) "이렇게 이미지로 표기 안된거 전수조사해서 수정 필요할 것 같은데 전수 검사하고 계획 세워 줘" / (2) "이런 ID 표가 너무 낯선데, 사용자 친화적으로 바꿀 수 없나? 아니면 검색이 되게 해주던가 링크를 걸던가 해야 할 것 같은데" / (3) "1 번으로 하자".
+- **AI 수행**:
+  - **전수 진단 (grep 정밀)**: `^[ \t]*```mermaid` (들여쓰기 허용) + bare fence + mermaid syntax 매치 → 5.2 카드 7 + 모듈 연합학습 1 + 중대재해 1 = 9 블록 (이후 재실행 시 패키지 2·4·5·OEM 12 추가 = 누적 21 블록 처리).
+  - **plan mode + Phase E14 plan 추가**: html-squishy-bachman.md 끝에 Phase E14 spec (E14-A·E14-B) 명시.
+  - **E14-A 보강 (scripts/convert_mermaid.py)**: `MERMAID_RE` 정규식에 `([ \t]*)` capture group 추가 (들여쓰기 보존) + `MERMAID_BARE_RE` 신규 (bare fence + flowchart 등 syntax) + `has_mermaid()` 검출 함수 (명시적 ```mermaid + bare fence 모두). `process_file()` 가 두 정규식 결합 처리 + 들여쓰기 group(1) 보존 (`![](svg)` 도 동일 들여쓰기).
+  - **build_src.py 재실행**: root .md 변경 → docs/ 영문 slug 본 동기화. 잔존 0 검증.
+  - **E14-B SCN ID 자동 hyperlink (commit `924e8e2`)**: scripts/extract_scn_names.py 신설 → 시나리오_카탈로그.md ### SCN-XXX-NN : 이름 패턴 파싱 → docs/data/scn_names.json (40 entries) 출력. hooks/linkify_scenario_id.py 신설 → 패턴 `\bSCN-(STL|MET|RUB|UTL|SAF|LLM|MLO|CSEC)-\d+\b` + code block 외부 + heading line 자기 anchor 회피 + 카탈로그 자기 참조 회피. 자동 변환: `SCN-STL-04` → `<a href="../scenario/catalog/#scn-stl-04" title="냉간압연 패스 스케줄 표준화·최적화" class="scn-link">SCN-STL-04</a>`. extra.css 40 줄 추가 (.scn-link indigo dotted underline + hover gradient bg + dark mode).
+- **판단 근거**:
+  - **mermaid 정규식 보강의 idempotent 패턴 (방법론 후보 4.52)**: 들여쓰기 + bare fence 모두 처리하면서 재실행 시 0 변경 보장. group(1) capture 로 들여쓰기 보존 → list item content 안 mermaid 도 안전 변환. 향후 신규 mermaid 추가 시 패턴별 자동 매치.
+  - **SCN hyperlink 의 정확도·안전성 (방법론 후보 4.53)**: code block / inline code 외부에서만 매치 — 마크다운 link 깨짐 회피. heading line 자기 anchor (`### SCN-STL-04`) 는 link 안 함 — anchor 자기참조 충돌 회피. 카탈로그 페이지 자체는 skip — 동일 페이지 anchor link 의미 없음.
+  - **1,084 매치의 의미**: 사용자 추정 100+ 위치 → 실제 1,084 매치. 5.2 카드 표 + 패키지 1~6 + 시나리오 상세 + 운영 가이드 + 모듈 + 인용 출처 등 광범위 노출. 클릭 1 회로 카탈로그 이동 + hover tooltip 시나리오명 표시 → 사용자 인지도 ↑.
+  - **JSON 매핑 단일 진실 원천 (시나리오_카탈로그.md)**: extract_scn_names.py 가 카탈로그 § 본문 파싱 → 신규 SCN 추가 시 카탈로그만 갱신하면 자동 hook 반영.
+- **사용자 의사결정**: 옵션 1 (E14-A + E14-B 결합) 명시 선택. Auto 모드 위임.
+- **산출물**:
+  - **commit `924e8e2`** — 42 files +393/-608
+  - **수정 스크립트**: `scripts/convert_mermaid.py` (정규식 2 패턴 + has_mermaid 함수)
+  - **신규 스크립트 1**: `scripts/extract_scn_names.py` (~60 줄, 40 entries 추출)
+  - **신규 hook 1**: `hooks/linkify_scenario_id.py` (~80 줄)
+  - **신규 데이터**: `docs/data/scn_names.json` (40 entries)
+  - **수정 mkdocs.yml**: hooks 1 종 추가 (linkify_scenario_id)
+  - **수정 extra.css**: ~40 줄 (.scn-link)
+  - **추가 SVG**: track1-engine-cards 7 + federated-learning 1 + safety 1 = 9 신규 SVG (+ 패키지 추가 매치 12 = 누적 21)
+  - **수정 .md**: 5.2 카드 + 모듈 2 + 패키지 4 = 7 종 (+ docs/ 동기화 7)
+- **방법론 후보 4.52**: **mermaid 정규식 보강의 idempotent 패턴** — 들여쓰기 capture group + bare fence 패턴 추가로 다양한 mermaid syntax 위치 (list item·standalone·bare) 자동 매치. has_mermaid() 검출 함수가 SLUG_MAP 통과 조건 일관 처리. 재실행 0 변경 보장.
+- **방법론 후보 4.53**: **본문 ID 자동 hyperlink hook 의 정확도·안전성 패턴** — code block / inline code 분리 (re.split) + heading line 자기 anchor 회피 + 카탈로그 페이지 자기 참조 skip + 상대 경로 동적 생성 (page.file.src_path 깊이 기반). 1,084 매치 무손실. 마크다운 link 깨짐 0.
+- **잔여 (Sprint 4·5)**:
+  - **Sprint 4 (콘텐츠 가다듬기)**: 10 핵심 페이지 구조·논리 깊이. 사용자 명시 승인 후 진입.
+  - **Sprint 5 보완**: 접근성 audit · 검색·SEO · PDF · 다크 모드 정합.
+- **다음 단계**: 사용자 라이브 사이트 재검증 (https://pathcosmos.github.io/ai-docs-for-biz/) → mermaid 잔존 0 + SCN hyperlink 클릭 동작 확인 → Sprint 4 진입 여부 결정.
+
+---
+
 ## 4. 방법론 인덱스 (본문은 `방법론_총론.md` 참조)
 
 > **분리 사유 (엔트리 #26)**: 본 §4 가 28 항목·212 줄 누적되어 작업로그 본체 (변동 기록) 와 방법론 (안정 자산) 이 한 파일에서 충돌. 방법론 본문을 `방법론_총론.md` 로 분리하고 본 §4 는 인덱스만 유지.

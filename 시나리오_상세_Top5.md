@@ -54,7 +54,7 @@
 | SOP 인용 근거 추적성 (감사 대응) | 수기 추적 | 자동 인용·링크 | 추적 시간 [%] 단축 |
 | 베테랑 검수 부담 (시간/주) | [수치] h | [수치] h | [%] 절감 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![SOP·작업표준·교육자료 PDF·HWP·스캔본 (다이어그램 1)](../assets/diagrams/detail-top5/diagram-1.svg)
 ![sequenceDiagram (다이어그램 2)](../assets/diagrams/detail-top5/diagram-2.svg)
@@ -87,7 +87,7 @@
 | 공급사 평가 데이터 신뢰성 | 수기 표본 | 전수 정량 | 평가 신뢰도 향상 |
 | 입고 검수 인력 (FTE) | [수치] | [수치] | [%] 절감 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![공급사 성적서 PDF·이미지·메일 (다이어그램 3)](../assets/diagrams/detail-top5/diagram-3.svg)
 ![신규 불량 발생 (다이어그램 4)](../assets/diagrams/detail-top5/diagram-4.svg)
@@ -120,7 +120,7 @@
 | 신입 단독 작업 가능 기간 | [기간] | [기간] | [%] 단축 |
 | 노하우 형식지화 비율 | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![신규 주문 재질·초기두께·목표두께·폭 (다이어그램 5)](../assets/diagrams/detail-top5/diagram-5.svg)
 ![Phase 1: 추천 모드 작업자 승인 (다이어그램 6)](../assets/diagrams/detail-top5/diagram-6.svg)
@@ -153,7 +153,7 @@
 | 정기 교체 부품 폐기 비용 (연) | [수치] 만 원 | [수치] 만 원 | [%] 절감 |
 | 정비 노하우 형식지화 (Track 3 연계) | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![진동·전류·유압·온도 ≥1kHz IoT 센서 (다이어그램 7)](../assets/diagrams/detail-top5/diagram-7.svg)
 ![운전 시작 Health=100 (다이어그램 8)](../assets/diagrams/detail-top5/diagram-8.svg)
@@ -186,7 +186,7 @@
 | CBAM 신고 데이터 신뢰도 | 추정·평균값 | 시간대별 실측 | 검증 통과율 [수치] %p 향상 |
 | 수요반응(DR) 보상 수익 (연) | [수치] 만 원 | [수치] 만 원 | [%] 증가 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![스마트미터·FEMS 15분 단위 사용량 (다이어그램 9)](../assets/diagrams/detail-top5/diagram-9.svg)
 ![피크 시간 임박 (다이어그램 10)](../assets/diagrams/detail-top5/diagram-10.svg)

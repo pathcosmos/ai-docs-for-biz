@@ -57,7 +57,7 @@
 | 사후 점도 라벨 결합 분석 가능률 | 수기 | 자동 (배치 ID) | 결합 분석 [%] 향상 |
 | 베테랑 단독 진단 대체율 (신입 단독 가능) | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![밴버리·믹서 PLC 전력·토크·온도·회전수 1~10 Hz (다이어그램 1)](../assets/diagrams/detail-rub/diagram-1.svg)
 ![Phase 1: 예측 모드 HMI 표시만 (다이어그램 2)](../assets/diagrams/detail-rub/diagram-2.svg)
@@ -91,7 +91,7 @@
 | 등급 강하·재가공 손실 (연) | [수치] 만 원 | [수치] 만 원 | [%] 절감 |
 | 작업조 간 처치 편차 | 작업자별 상이 | 통합 알람·제안 | 정량 표준화 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![압출기 PLC 스크류·인출·온도·압력 1~10 Hz (다이어그램 3)](../assets/diagrams/detail-rub/diagram-3.svg)
 ![sequenceDiagram (다이어그램 4)](../assets/diagrams/detail-rub/diagram-4.svg)
@@ -125,7 +125,7 @@
 | 양산 라인 병목 해소·증산 (월) | [수치] 부품 | [수치] 부품 | [%] 증산 |
 | 베테랑 단축 노하우 형식지화 | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![배합 조성·부품 형상 몰드 온도·외기·잔열 (다이어그램 5)](../assets/diagrams/detail-rub/diagram-5.svg)
 ![알고리즘 선택 진단 (다이어그램 6)](../assets/diagrams/detail-rub/diagram-6.svg)
@@ -159,7 +159,7 @@
 | 양산 라인 가용 가동률 (셋업 손실 회복) | [%] | [%] | [수치] %p 향상 |
 | 베테랑 셋업 노하우 형식지화 | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![사출기 OPC-UA 압력·속도·쿠션·보압 (다이어그램 7)](../assets/diagrams/detail-rub/diagram-7.svg)
 ![Phase 1: 예측 모드 HMI 알람 + SHAP (다이어그램 8)](../assets/diagrams/detail-rub/diagram-8.svg)
@@ -193,7 +193,7 @@
 | 신규 결함 유형 학습 도달 시간 | [기간] | [기간] | [%] 단축 |
 | 8D 보고서 입력 자동 결합률 | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![검사 컨베이어 부품 투입 (다이어그램 9)](../assets/diagrams/detail-rub/diagram-9.svg)
 ![sequenceDiagram (다이어그램 10)](../assets/diagrams/detail-rub/diagram-10.svg)

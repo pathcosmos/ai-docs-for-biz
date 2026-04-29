@@ -42,36 +42,40 @@
     <text x="80" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#1E1B4B">작업자별 경험</text>
     <text x="80" y="42" text-anchor="middle" font-size="9" font-weight="500" fill="#475569">암묵지 의존</text>
   </g>
-  <path d="M 120 176 Q 120 215 300 230" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
-  <path d="M 295 176 Q 295 215 300 230" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
-  <path d="M 470 176 Q 470 215 300 230" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 120 176 L 120 205 L 300 205 L 300 230" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 295 176 L 295 205 L 300 205 L 300 230" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 470 176 L 470 205 L 300 205 L 300 230" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
   <g transform="translate(180, 230)">
     <rect width="240" height="60" rx="10" fill="url(#g_demo_t1_31)" stroke="#818CF8" stroke-width="1" filter="url(#shadow)"/>
     <text x="120" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="white">현장 운영 판단</text>
     <text x="120" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="rgba(255,255,255,0.9)">암묵지 전수 (3 입력 합류)</text>
   </g>
-  <text x="300" y="305" text-anchor="middle" font-size="14" fill="#818CF8">▼</text>
+  <path d="M 300 290 L 300 315" fill="none" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arrow_g_demo_t1_31)"/>
   <g transform="translate(180, 315)">
     <rect width="240" height="60" rx="10" fill="url(#g_demo_t1_31_card)" stroke="#818CF8" stroke-width="1" filter="url(#shadow)"/>
     <text x="120" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#1E1B4B">공정 설정값 결정</text>
     <text x="120" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#475569">변수 (수치)종 동시 조작</text>
   </g>
-  <path d="M 300 375 Q 140 390 140 410" fill="none" stroke="#818CF8" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow_g_demo_t1_31)"/>
-  <rect x="160" y="380" width="80" height="18" rx="4" fill="#EEF2FF" stroke="#818CF8" stroke-width="0.5"/>
-  <text x="200" y="392" text-anchor="middle" font-size="9" font-weight="600" fill="#818CF8">문서화 부재</text>
+  <path d="M 300 375 L 300 392 L 140 392 L 140 410" fill="none" stroke="#818CF8" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <rect x="182" y="383" width="76" height="16" rx="3" fill="#EEF2FF" stroke="#818CF8" stroke-width="0.5"/>
+  <text x="220" y="394" text-anchor="middle" font-size="9" font-weight="600" fill="#818CF8">문서화 부재</text>
   <g transform="translate(60, 410)">
     <rect width="160" height="48" rx="8" fill="url(#g_demo_t1_31_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
     <text x="80" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#1E1B4B">표준 미정립</text>
     <text x="80" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="#475569">문서화 부재</text>
   </g>
-  <path d="M 300 375 Q 420 390 420 410" fill="none" stroke="#818CF8" stroke-width="1.4" marker-end="url(#arrow_g_demo_t1_31)"/>
-  <rect x="440" y="380" width="80" height="18" rx="4" fill="#EEF2FF" stroke="#818CF8" stroke-width="0.5"/>
-  <text x="480" y="392" text-anchor="middle" font-size="9" font-weight="600" fill="#818CF8">이탈·퇴직</text>
+  <path d="M 300 375 L 300 392 L 420 392 L 420 410" fill="none" stroke="#818CF8" stroke-width="1.4" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <rect x="312" y="383" width="76" height="16" rx="3" fill="#EEF2FF" stroke="#818CF8" stroke-width="0.5"/>
+  <text x="350" y="394" text-anchor="middle" font-size="9" font-weight="600" fill="#818CF8">이탈·퇴직</text>
   <g transform="translate(340, 410)">
     <rect width="160" height="48" rx="8" fill="url(#g_demo_t1_31_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
     <text x="80" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#1E1B4B">작업자 간 편차</text>
     <text x="80" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="#475569">±(수치)% 차이</text>
   </g>
+  <path d="M 140 458 L 140 475 L 92 475 L 92 490" fill="none" stroke="#818CF8" stroke-width="1.2" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 140 458 L 140 475 L 232 475 L 232 490" fill="none" stroke="#818CF8" stroke-width="1.2" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 420 458 L 420 475 L 372 475 L 372 490" fill="none" stroke="#818CF8" stroke-width="1.2" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 420 458 L 420 475 L 512 475 L 512 490" fill="none" stroke="#818CF8" stroke-width="1.2" marker-end="url(#arrow_g_demo_t1_31)"/>
   <g transform="translate(30, 490)">
     <rect width="125" height="50" rx="8" fill="white" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
     <text x="62.5" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#1E1B4B">즉각적 공정 마비</text>
@@ -92,7 +96,10 @@
     <text x="62.5" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#1E1B4B">후속 공정 산포</text>
     <text x="62.5" y="38" text-anchor="middle" font-size="8" font-weight="500" fill="#475569">품질 악화</text>
   </g>
-  <text x="300" y="565" text-anchor="middle" font-size="14" fill="#818CF8">▼</text>
+  <path d="M 92 540 L 92 557 L 300 557 L 300 575" fill="none" stroke="#818CF8" stroke-width="1.4" marker-end="url(#arrow_g_demo_t1_31)"/>
+  <path d="M 232 540 L 232 557 L 300 557" fill="none" stroke="#818CF8" stroke-width="1.2"/>
+  <path d="M 372 540 L 372 557 L 300 557" fill="none" stroke="#818CF8" stroke-width="1.2"/>
+  <path d="M 512 540 L 512 557 L 300 557" fill="none" stroke="#818CF8" stroke-width="1.2"/>
   <g transform="translate(150, 575)">
     <rect width="300" height="62" rx="10" fill="url(#g_demo_t1_31)" stroke="#818CF8" stroke-width="1.5" filter="url(#shadow)"/>
     <text x="150" y="32" text-anchor="middle" font-size="14" font-weight="800" fill="white">⚠ 구조적 리스크</text>

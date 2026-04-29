@@ -53,7 +53,7 @@
 | OEM SQA 응대 일관성 점수 | 작업자별 상이 | 통합 알람·근거 | 정량 표준화 |
 | 베테랑 퇴직 시 BCP 회복 기간 | [기간] | [기간] | [%] 단축 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![신규 주문 입력 외경·내경·두께·재질 + OEM 사양 (다이어그램 1)](../assets/diagrams/detail-special-pipe/diagram-1.svg)
 ![Phase 1 PoC M1~M6: 데이터·임베딩·초안 (다이어그램 2)](../assets/diagrams/detail-special-pipe/diagram-2.svg)
@@ -87,7 +87,7 @@
 | UT raw 신호 라벨링 활용 가능률 | [%] | [%] | 학습셋 자산화 |
 | 검사 1 본당 평균 소요 시간 | [수치] 분 | [수치] 분 | [%] 단축 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![UT 탐촉자 A-scan 1~10 μs·진폭 (다이어그램 3)](../assets/diagrams/detail-special-pipe/diagram-3.svg)
 ![sequenceDiagram (다이어그램 4)](../assets/diagrams/detail-special-pipe/diagram-4.svg)

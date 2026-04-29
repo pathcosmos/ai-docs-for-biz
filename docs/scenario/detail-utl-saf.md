@@ -56,7 +56,7 @@
 | 자동 보정 폐쇄 루프 적용률 (5.2-e 결합) | [%] | [%] | [수치] %p 향상 |
 | 보전 노하우 형식지화 (RAG 등재) | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![압력·유량·전력 센서 1초 주기 IoT (다이어그램 1)](../assets/diagrams/detail-utl-saf/diagram-1.svg)
 ![운전 시작 효율 = 정상 분포 (다이어그램 2)](../assets/diagrams/detail-utl-saf/diagram-2.svg)
@@ -90,7 +90,7 @@
 | 환경부 송신 정정 신고 (분기) | [수치] 건 | [수치] 건 | [%] 감소 |
 | 규제 개정 반영 리드타임 (RAG 결합) | [기간] | [기간] | [%] 단축 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![수질 TMS BOD·COD·SS·T-N·T-P (다이어그램 1)](../assets/diagrams/detail-utl-saf/diagram-1.svg)
 ![수치 (다이어그램 4)](../assets/diagrams/detail-utl-saf/diagram-4.svg)
@@ -124,7 +124,7 @@
 | 의무이행 증거 자동 보존 | 부재 | 4 단계 에스컬레이션 자동 기록 | 신규 거버넌스 확보 |
 | 안전 노하우 형식지화 (RAG 등재) | [%] | [%] | [수치] %p 향상 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![기존 CCTV 다채널 영상 (다이어그램 5)](../assets/diagrams/detail-utl-saf/diagram-5.svg)
 ![알람 발생 (다이어그램 1)](../assets/diagrams/detail-utl-saf/diagram-1.svg)
@@ -158,7 +158,7 @@ EU 수출 비중이 [수치] % 이상인 철강·알루미늄 제조 기업은 [
 | 규제 개정 반영 리드타임 (RAG 결합) | [기간] | [기간] | [%] 단축 |
 | 인접 ESG 규제 (K-ETS·RE100·TCFD) 재활용 | 미연동 | 단일 진실원 공유 | 추가 작성 부담 [%] 절감 |
 
-### 삽화 (Mermaid)
+### 도식
 
 ![FEMS 전력·가스·증기 15분 (다이어그램 3)](../assets/diagrams/detail-utl-saf/diagram-3.svg)
 ![분기 시작 (다이어그램 8)](../assets/diagrams/detail-utl-saf/diagram-8.svg)

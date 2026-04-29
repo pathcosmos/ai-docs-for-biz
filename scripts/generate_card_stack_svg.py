@@ -371,10 +371,11 @@ def render_tree_branching(spec: dict) -> str:
     <text x="80" y="42" text-anchor="middle" font-size="9" font-weight="500" fill="{spec['text_sub']}">{node["sub"]}</text>
   </g>''')
 
-    # 화살표 input → pivot1 (3 → 1)
+    # 화살표 input → pivot1 (3 → 1) — orthogonal (각진 직선)
+    # input box bottom y=176, pivot1 top y=230. mid Y=205 에서 수평 합류.
     for i in range(3):
         x_start = 120 + i * 175
-        input_xml.append(f'  <path d="M {x_start} 176 Q {x_start} 215 300 230" fill="none" stroke="{spec["stroke"]}" stroke-width="1.5" marker-end="url(#arrow_{grad_id})"/>')
+        input_xml.append(f'  <path d="M {x_start} 176 L {x_start} 205 L 300 205 L 300 230" fill="none" stroke="{spec["stroke"]}" stroke-width="1.5" marker-end="url(#arrow_{grad_id})"/>')
 
     # pivot1 (y=240, 합류)
     pivot1_xml = f'''  <g transform="translate(180, 230)">
@@ -382,7 +383,7 @@ def render_tree_branching(spec: dict) -> str:
     <text x="120" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="white">{pivot1.get("main", "")}</text>
     <text x="120" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="rgba(255,255,255,0.9)">{pivot1.get("sub", "")}</text>
   </g>
-  <text x="300" y="305" text-anchor="middle" font-size="14" fill="{spec['stroke']}">▼</text>'''
+  <path d="M 300 290 L 300 315" fill="none" stroke="{spec['stroke']}" stroke-width="1.5" marker-end="url(#arrow_{grad_id})"/>'''
 
     # pivot2 (y=320, 결정)
     pivot2_xml = f'''  <g transform="translate(180, 315)">
@@ -391,22 +392,35 @@ def render_tree_branching(spec: dict) -> str:
     <text x="120" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="{spec['text_sub']}">{pivot2.get("sub", "")}</text>
   </g>'''
 
-    # branches (좌·우 분기, y=410)
+    # branches (좌·우 분기, y=410) — orthogonal 화살표
+    # pivot2 bottom y=375 → branch top y=410. mid Y=392 에서 수평 분기.
     branches_xml = []
     if len(branches) >= 2:
         for i, b in enumerate(branches[:2]):
             x = 60 + i * 280  # 60, 340
-            dash = ' stroke-dasharray="4 3"' if b.get("dashed") else ""
+            dash = ' stroke-dasharray="5 3"' if b.get("dashed") else ""
             label = b.get("label", "")
-            label_x = 200 + i * 280  # 200, 480
-            branches_xml.append(f'''  <path d="M 300 375 Q {x + 80} 390 {x + 80} 410" fill="none" stroke="{spec["stroke"]}" stroke-width="1.4"{dash} marker-end="url(#arrow_{grad_id})"/>
-  <rect x="{label_x - 40}" y="380" width="80" height="18" rx="4" fill="{spec['bg']}" stroke="{spec['stroke']}" stroke-width="0.5"/>
-  <text x="{label_x}" y="392" text-anchor="middle" font-size="9" font-weight="600" fill="{spec['stroke']}">{label}</text>
+            label_x = 220 + i * 130  # 220, 350 (분기점 근처)
+            branch_x = x + 80  # 분기 카드 중앙 x
+            branches_xml.append(f'''  <path d="M 300 375 L 300 392 L {branch_x} 392 L {branch_x} 410" fill="none" stroke="{spec["stroke"]}" stroke-width="1.4"{dash} marker-end="url(#arrow_{grad_id})"/>
+  <rect x="{label_x - 38}" y="383" width="76" height="16" rx="3" fill="{spec['bg']}" stroke="{spec['stroke']}" stroke-width="0.5"/>
+  <text x="{label_x}" y="394" text-anchor="middle" font-size="9" font-weight="600" fill="{spec['stroke']}">{label}</text>
   <g transform="translate({x}, 410)">
     <rect width="160" height="48" rx="8" fill="url(#{grad_id}_card)" stroke="{spec['stroke']}" stroke-width="0.8" filter="url(#shadow)"/>
     <text x="80" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="{spec['text_main']}">{b["main"]}</text>
     <text x="80" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="{spec['text_sub']}">{b["sub"]}</text>
   </g>''')
+
+    # branch 카드 → leaves 화살표 (좌 branch → leaves 0·1, 우 branch → leaves 2·3)
+    if len(branches) >= 2 and len(leaves) >= 4:
+        # 좌 branch 카드 (x=60, w=160) bottom y=458 → 좌측 2 leaves
+        leaf_x_centers = [30 + i * 140 + 62 for i in range(4)]  # 92, 232, 372, 512
+        # 좌 branch (cx=140) → leaves 0·1 (x=92, 232) — mid Y=475
+        branches_xml.append(f'  <path d="M 140 458 L 140 475 L 92 475 L 92 490" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2" marker-end="url(#arrow_{grad_id})"/>')
+        branches_xml.append(f'  <path d="M 140 458 L 140 475 L 232 475 L 232 490" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2" marker-end="url(#arrow_{grad_id})"/>')
+        # 우 branch (cx=420) → leaves 2·3 (x=372, 512) — mid Y=475
+        branches_xml.append(f'  <path d="M 420 458 L 420 475 L 372 475 L 372 490" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2" marker-end="url(#arrow_{grad_id})"/>')
+        branches_xml.append(f'  <path d="M 420 458 L 420 475 L 512 475 L 512 490" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2" marker-end="url(#arrow_{grad_id})"/>')
 
     # leaves (y=490, 4 box)
     leaves_xml = []
@@ -419,8 +433,12 @@ def render_tree_branching(spec: dict) -> str:
     <text x="62.5" y="38" text-anchor="middle" font-size="8" font-weight="500" fill="{spec['text_sub']}">{l.get("sub", "")}</text>
   </g>''')
 
-    # final (y=590, 합류)
-    final_xml = f'''  <text x="300" y="565" text-anchor="middle" font-size="14" fill="{spec['stroke']}">▼</text>
+    # final (y=575, 4 leaves 합류) — orthogonal
+    # leaves bottom y=540, final top y=575. mid Y=557 에서 수평 합류.
+    final_xml = f'''  <path d="M 92 540 L 92 557 L 300 557 L 300 575" fill="none" stroke="{spec["stroke"]}" stroke-width="1.4" marker-end="url(#arrow_{grad_id})"/>
+  <path d="M 232 540 L 232 557 L 300 557" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2"/>
+  <path d="M 372 540 L 372 557 L 300 557" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2"/>
+  <path d="M 512 540 L 512 557 L 300 557" fill="none" stroke="{spec["stroke"]}" stroke-width="1.2"/>
   <g transform="translate(150, 575)">
     <rect width="300" height="62" rx="10" fill="url(#{grad_id})" stroke="{spec['stroke']}" stroke-width="1.5" filter="url(#shadow)"/>
     <text x="150" y="32" text-anchor="middle" font-size="14" font-weight="800" fill="white">⚠ {final.get("main", "")}</text>
