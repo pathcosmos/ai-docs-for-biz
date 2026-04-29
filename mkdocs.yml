@@ -103,6 +103,7 @@ plugins:
 hooks:
   - hooks/inject_frontmatter.py
   - hooks/slug_rewrite.py
+  - hooks/wrap_top5_copy.py           # [E10-4] Track 1·2·3 Top5 페이지의 BLK 블록 자동 copy admonition wrap
   - hooks/wrap_meta_blockquote.py     # [E10-1] H1 직후 메타 인용 → <details> collapsible 자동
   - hooks/filter_worklog.py           # [E10-3] 작업로그 페이지에 개발자용 안내 banner 주입
   - hooks/highlight_placeholders.py   # [고객사]·[수치]·[공정] 등 플레이스홀더 시각 강조
@@ -135,6 +136,7 @@ nav:
   # 1 그룹 — 사용자 진입 (use-case 기반, 영향도 40%)
   - 🚀 시작하기:
       - 5 분 안내: start-here.md
+      - 📋 공통 블록 모음 (paste-ready 15): blocks.md
       - 패키지 비교: by-package.md
       - Quick-Start 가이드: guide/quickstart.md
 

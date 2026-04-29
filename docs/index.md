@@ -15,33 +15,35 @@ hide:
 
 ---
 
-## 어디서 시작할까요?
+## 사업계획서 작성 — 즉시 paste 하세요
 
 <div class="grid cards" markdown>
 
-- :rocket:{ .lg .middle .accent-text } **처음이신가요?**
+- :clipboard:{ .lg .middle .accent-text } **📋 공통 블록 모음 — Paste-Ready 15**
 
     ---
 
-    5 분 안내 — 사이트 활용 + 패키지 매칭 + paste·다운로드 + 사업계획서 작성 흐름
+    Track 1·2·3 의 **15 핵심 블록** 일람 + 사업계획서 §3·4·5·6 paste 위치 매핑.
+    플레이스홀더만 치환하면 끝.
 
-    [:material-arrow-right: **5 분 안내 시작**](start-here.md){ .md-button .md-button--primary }
+    [:material-arrow-right: **15 블록 일람 시작**](blocks.md){ .md-button .md-button--primary }
 
 - :package:{ .lg .middle .accent-text } **패키지 비교**
 
     ---
 
-    6 패키지 매트릭스 — 도메인·기간·시나리오·KPI 한눈에 + 의사결정 트리
+    6 패키지 매트릭스 — 도메인·기간·시나리오·KPI 한눈에 + 의사결정 트리.
+    귀사에 맞는 패키지 5 분 매칭.
 
     [:material-arrow-right: **패키지 매트릭스**](by-package.md){ .md-button .md-button--primary }
 
-- :books:{ .lg .middle .accent-text } **기술 트랙 학습**
+- :rocket:{ .lg .middle .accent-text } **처음이신가요?**
 
     ---
 
-    Track 1·2·3 본문 — 제조 AI · MLOps · LLM·RAG 의 paste-ready 5 블록 + 5.2 엔진 카드 6 종
+    5 분 안내 — 사이트 활용 + 패키지 매칭 + paste·다운로드 + 사업계획서 작성 흐름.
 
-    [:material-arrow-right: **Track 1 시작**](track/track1-index.md){ .md-button .md-button--primary }
+    [:material-arrow-right: **5 분 안내**](start-here.md){ .md-button }
 
 </div>
 
