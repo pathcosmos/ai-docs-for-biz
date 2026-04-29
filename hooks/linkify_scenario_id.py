@@ -43,14 +43,29 @@ def load_names(docs_dir: Path) -> dict:
 
 
 def relative_catalog_href(src_path: str) -> str:
-    """페이지 디렉토리에서 scenario/catalog 까지 상대 경로."""
-    parts = src_path.split("/")
-    depth = len(parts) - 1  # 디렉토리 깊이
+    """페이지 디렉토리에서 scenario/catalog 까지 상대 경로.
+
+    mkdocs `use_directory_urls=true` (기본) 가정 — 모든 페이지 URL 이 trailing slash 형식.
+    따라서 페이지 URL 깊이 = src 디렉토리 깊이 + 1 (페이지 자체).
+
+    예:
+      index.md                       → / (URL depth 0)        → "scenario/catalog/"
+      blocks.md                      → /blocks/ (depth 1)     → "../scenario/catalog/"
+      track/track1-engine-cards.md   → /track/...-/ (depth 2) → "../../scenario/catalog/"
+      scenario/detail-top5.md        → /scenario/.../ (depth 2) → "../catalog/" (같은 dir 단축)
+    """
+    if src_path == "index.md":
+        return "scenario/catalog/"
+
     if src_path.startswith("scenario/"):
-        # 같은 디렉토리 안 — catalog.md 직접 link
-        return "catalog/"
-    prefix = "../" * depth if depth > 0 else ""
-    return prefix + "scenario/catalog/"
+        # 같은 디렉토리 — ../catalog/ (다른 scenario 페이지 → catalog/)
+        return "../catalog/"
+
+    parts = src_path.split("/")
+    dir_depth = len(parts) - 1  # 파일 제외 디렉토리 깊이
+    # use_directory_urls=true → URL 깊이 = dir_depth + 1
+    url_depth = dir_depth + 1
+    return "../" * url_depth + "scenario/catalog/"
 
 
 def linkify_text(text: str, names: dict, href_base: str) -> str:
