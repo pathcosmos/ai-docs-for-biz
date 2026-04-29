@@ -1,115 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="패키지 5 — 정밀가공 (클라우드 SaaS 6 개월, 4 시나리오 + 통합 UI)"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="패키지 5 — 정밀가공 SaaS 9 개월 (CNC 공구 마모·SPC 조기경보·작업표준 RAG·SaaS 보안 5 등급)"
      class="zoomable">
-  <title>패키지 5 — 정밀가공 중소 (클라우드 SaaS 6 개월 경량)</title>
-  <desc>MET-01·03 + UTL-01 + LLM-01·04 + SAF-01 의 6 시나리오 표준을 6 개월 SaaS 압축 구조로 도입하여 도입 비용 회수 효율을 끌어올리는 클라우드 종합솔루션 통합 파일럿 인포그래픽.</desc>
+  <title>패키지 5 — 정밀가공 SaaS (Precision Machining Cloud, 9 개월)</title>
+  <desc>정밀가공 중소사 클라우드 SaaS 단일 테넌시 9 개월 압축 통합 파일럿 — CNC 공구 마모·파손 예지, SPC 조기경보, 작업표준·CAD 도면 RAG, SaaS 보안 5 등급의 4 시나리오를 단일 통합 UI 위에서 운영. 5.2-b·d·f 카드와 SaaS 보안 모듈 cross-reference 포함.</desc>
 
   <defs>
-    <linearGradient id="pkg5-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2E7D32"/>
-      <stop offset="100%" stop-color="#66BB6A"/>
+    <linearGradient id="pkg5-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#01579B"/>
+      <stop offset="100%" stop-color="#0288D1"/>
+    </linearGradient>
+    <linearGradient id="pkg5-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E1F5FE"/>
+      <stop offset="100%" stop-color="#B3E5FC"/>
+    </linearGradient>
+    <linearGradient id="pkg5-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0288D1"/>
+      <stop offset="100%" stop-color="#4FC3F7"/>
     </linearGradient>
     <filter id="pkg5-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#01579B" flood-opacity="0.22"/>
     </filter>
     <filter id="pkg5-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <!-- 상단 헤더 -->
-  <rect width="800" height="80" fill="url(#pkg5-bg)"/>
-  <text x="32" y="34" class="en" fill="rgba(255,255,255,0.85)" font-size="11">PACKAGE 05 · CNC PRECISION · CLOUD SaaS · 6 MONTHS</text>
-  <text x="32" y="62" class="ko" fill="white" font-size="24">정밀가공 중소 · 클라우드 SaaS 경량</text>
-  <g transform="translate(700, 22)" filter="url(#pkg5-glow)">
-    <circle cx="36" cy="20" r="20" fill="#FFB300"/>
-    <text x="36" y="26" text-anchor="middle" class="ko" fill="#1B5E20" font-size="20">5</text>
+  <!-- 배경 -->
+  <rect width="600" height="800" fill="#F8FCFF"/>
+
+  <!-- 상단 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#pkg5-header)"/>
+  <text x="32" y="32" class="en" fill="rgba(255,255,255,0.92)" font-size="11">PACKAGE 05 · PRECISION MACHINING CLOUD · 9 MONTHS</text>
+  <text x="32" y="62" class="ko" fill="white" font-size="22">패키지 5 — 정밀가공 SaaS</text>
+  <text x="32" y="84" class="ko-r" fill="rgba(255,255,255,0.92)" font-size="13">CNC 중소사 · 클라우드 종합솔루션 단일 테넌시</text>
+  <g transform="translate(528, 28)" filter="url(#pkg5-glow)">
+    <circle cx="22" cy="22" r="22" fill="#FFFFFF"/>
+    <text x="22" y="29" text-anchor="middle" class="ko" fill="#0288D1" font-size="22">5</text>
   </g>
 
-  <!-- 중간 — SaaS 단일 테넌시 위에 4 시나리오 그리드 -->
-  <g transform="translate(32, 100)">
-    <text x="0" y="0" class="ko" fill="#1B5E20" font-size="13">6 시나리오 (4 + 통합 UI 인프라) — 단일 클라우드 테넌시 공유</text>
+  <!-- 중간 영역 (y=100~680, 580px) -->
+
+  <!-- 섹션 라벨 -->
+  <text x="32" y="128" class="ko" fill="#01579B" font-size="13">4 시나리오 + 통합 UI · 위→아래 가공 흐름</text>
+  <text x="32" y="146" class="ko-r" fill="#546E7A" font-size="10">CNC 가공 → SPC 검사 → 작업표준 RAG → SaaS 보안</text>
+
+  <!-- 카드 1 — MET-01 CNC 공구 마모 (주력) -->
+  <g transform="translate(32, 162)" filter="url(#pkg5-shadow)">
+    <rect width="536" height="118" rx="10" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
+    <rect width="6" height="118" rx="3" fill="#01579B"/>
+    <circle cx="44" cy="58" r="26" fill="#01579B"/>
+    <text x="44" y="55" text-anchor="middle" class="ko" fill="white" font-size="10">MET</text>
+    <text x="44" y="68" text-anchor="middle" class="ko" fill="white" font-size="10">-01</text>
+    <text x="84" y="32" class="ko" fill="#01579B" font-size="14">CNC 공구 마모·파손 예지 (주력)</text>
+    <text x="84" y="52" class="ko-r" fill="#37474F" font-size="11">컨트롤러 로그·진동·전류 → RUL 예측 (5.2-b · 5.2-d)</text>
+    <text x="84" y="70" class="ko-r" fill="#37474F" font-size="11">시계열 회귀 + 이상탐지 결합 패턴</text>
+    <text x="84" y="92" class="ko-r" fill="#546E7A" font-size="10">MET-01 (주력) · 잔여 수명 ±[수치]% 정확도</text>
+    <text x="84" y="108" class="ko-r" fill="#01579B" font-size="10" font-weight="700">▼ 본 사업의 핵심 가치</text>
   </g>
 
-  <!-- SaaS 클라우드 백판 -->
-  <g transform="translate(32, 116)">
-    <rect width="736" height="170" rx="14" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1.5" stroke-dasharray="6 4"/>
-    <text x="20" y="22" class="ko-r" fill="#2E7D32" font-size="10">CLOUD SaaS · 단일 테넌시 (AWS · NCP · KT Cloud 中 1)</text>
-
-    <!-- Row 1 — 2 카드 -->
-    <g filter="url(#pkg5-shadow)" transform="translate(20, 40)">
-      <rect width="220" height="58" rx="10" fill="white"/>
-      <rect width="220" height="22" rx="10" fill="#2E7D32"/>
-      <text x="14" y="16" class="ko" fill="white" font-size="11">MET-01 (주력)</text>
-      <text x="14" y="40" class="ko" fill="#263238" font-size="11">CNC 공구 마모·파손 예지</text>
-      <text x="14" y="52" class="ko-r" fill="#546E7A" font-size="9">컨트롤러 로그 · 시계열</text>
-    </g>
-    <g filter="url(#pkg5-shadow)" transform="translate(258, 40)">
-      <rect width="220" height="58" rx="10" fill="white"/>
-      <rect width="220" height="22" rx="10" fill="#388E3C"/>
-      <text x="14" y="16" class="ko" fill="white" font-size="11">MET-03 (주력)</text>
-      <text x="14" y="40" class="ko" fill="#263238" font-size="11">3D 스캔 치수 검사 자동화</text>
-      <text x="14" y="52" class="ko-r" fill="#546E7A" font-size="9">전수검사 시간 단축</text>
-    </g>
-    <g filter="url(#pkg5-shadow)" transform="translate(496, 40)">
-      <rect width="220" height="58" rx="10" fill="white"/>
-      <rect width="220" height="22" rx="10" fill="#43A047"/>
-      <text x="14" y="16" class="ko" fill="white" font-size="11">UTL-01</text>
-      <text x="14" y="40" class="ko" fill="#263238" font-size="11">공장 에너지 최적화</text>
-      <text x="14" y="52" class="ko-r" fill="#546E7A" font-size="9">피크 부하 요금 절감</text>
-    </g>
-
-    <!-- Row 2 — 3 카드 -->
-    <g filter="url(#pkg5-shadow)" transform="translate(20, 108)">
-      <rect width="220" height="48" rx="10" fill="white"/>
-      <rect width="6" height="48" fill="#00695C"/>
-      <text x="20" y="20" class="ko" fill="#00695C" font-size="11">LLM-01</text>
-      <text x="20" y="38" class="ko-r" fill="#37474F" font-size="10">SOP RAG (후속 분리)</text>
-    </g>
-    <g filter="url(#pkg5-shadow)" transform="translate(258, 108)">
-      <rect width="220" height="48" rx="10" fill="white"/>
-      <rect width="6" height="48" fill="#00695C"/>
-      <text x="20" y="20" class="ko" fill="#00695C" font-size="11">LLM-04</text>
-      <text x="20" y="38" class="ko-r" fill="#37474F" font-size="10">CAD 도면 지능 검색</text>
-    </g>
-    <g filter="url(#pkg5-shadow)" transform="translate(496, 108)">
-      <rect width="220" height="48" rx="10" fill="white"/>
-      <rect width="6" height="48" fill="#6A1B9A"/>
-      <text x="20" y="20" class="ko" fill="#6A1B9A" font-size="11">MLO-03 + SAF-01</text>
-      <text x="20" y="38" class="ko-r" fill="#37474F" font-size="10">통합 UI · 안전 (후속)</text>
-    </g>
+  <!-- 카드 2 — MET-03 3D 검사 SPC 조기경보 -->
+  <g transform="translate(32, 292)" filter="url(#pkg5-shadow)">
+    <rect width="536" height="100" rx="10" fill="url(#pkg5-card)" stroke="#81D4FA" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#0288D1"/>
+    <circle cx="44" cy="50" r="22" fill="#0288D1"/>
+    <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">MET</text>
+    <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-03</text>
+    <text x="84" y="34" class="ko" fill="#01579B" font-size="14">3D 스캔 치수 검사 · SPC 조기경보</text>
+    <text x="84" y="54" class="ko-r" fill="#37474F" font-size="11">CMM·3D 스캐너 → 공정능력지수 (Cpk) 추세·드리프트</text>
+    <text x="84" y="74" class="ko-r" fill="#546E7A" font-size="10">MET-03 · 주력 · 부분 도입 (1 차 라인 한정)</text>
+    <text x="84" y="90" class="ko-r" fill="#546E7A" font-size="10">목표 — 검사 자동화 [%] · 라벨링 외주 후속 분리</text>
   </g>
 
-  <!-- 하단 — 통계 -->
-  <g transform="translate(32, 296)">
-    <rect width="736" height="80" rx="10" fill="#F1F8E9" stroke="#C5E1A5" stroke-width="1"/>
-    <g class="ko" font-size="11" fill="#33691E">
-      <text x="20" y="26" font-size="22" font-weight="800" fill="#2E7D32">6</text>
-      <text x="20" y="50" font-size="10">개월 · 압축 (4 분기 적용)</text>
-      <text x="20" y="66" class="ko-r" font-size="9" fill="#558B2F">클라우드 종합솔루션</text>
+  <!-- 카드 3 — LLM-04 CAD 도면 / 작업표준 RAG -->
+  <g transform="translate(32, 404)" filter="url(#pkg5-shadow)">
+    <rect width="536" height="100" rx="10" fill="url(#pkg5-card)" stroke="#81D4FA" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#00695C"/>
+    <circle cx="44" cy="50" r="22" fill="#00695C"/>
+    <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">LLM</text>
+    <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-04</text>
+    <text x="84" y="34" class="ko" fill="#004D40" font-size="14">CAD 도면 · 작업표준 RAG</text>
+    <text x="84" y="54" class="ko-r" fill="#37474F" font-size="11">DWG·STEP 형상 임베딩 + CAM·SOP 청킹·검색 (5.2-f)</text>
+    <text x="84" y="74" class="ko-r" fill="#546E7A" font-size="10">LLM-04 · 확장 · 도면 우선 도입 → 후속 SOP RAG</text>
+    <text x="84" y="90" class="ko-r" fill="#546E7A" font-size="10">목표 — 도면 검색 [%] 단축 · Citation 의무</text>
+  </g>
 
-      <text x="160" y="26" font-size="22" font-weight="800" fill="#2E7D32">4 + 1</text>
-      <text x="160" y="50" font-size="10">시나리오 + 통합 UI</text>
-      <text x="160" y="66" class="ko-r" font-size="9" fill="#558B2F">18M 표준의 6 시나리오 압축</text>
+  <!-- 카드 4 — UTL-01 + 통합 UI · SaaS 보안 -->
+  <g transform="translate(32, 516)" filter="url(#pkg5-shadow)">
+    <rect width="536" height="100" rx="10" fill="url(#pkg5-card)" stroke="#81D4FA" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#283593"/>
+    <circle cx="44" cy="50" r="22" fill="#283593"/>
+    <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">SaaS</text>
+    <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="9">SEC·5</text>
+    <text x="84" y="34" class="ko" fill="#1A237E" font-size="14">에너지 최적화 + 통합 UI · SaaS 보안 5 등급</text>
+    <text x="84" y="54" class="ko-r" fill="#37474F" font-size="11">UTL-01 피크 시프트 + MLO-03 단일 통합 UI 피드백</text>
+    <text x="84" y="74" class="ko-r" fill="#546E7A" font-size="10">CSAP 표준등급 · 단일 테넌시 · 권한·로그·암호화 5 영역</text>
+    <text x="84" y="90" class="ko-r" fill="#546E7A" font-size="10">MLOps Lv.0 → Lv.1+ 압축 (3 종 — 레지스트리·모니터링·피드백)</text>
+  </g>
 
-      <text x="320" y="26" font-size="22" font-weight="800" fill="#2E7D32">7</text>
-      <text x="320" y="50" font-size="10">핵심 KPI</text>
-      <text x="320" y="66" class="ko-r" font-size="9" fill="#558B2F">파손·치수·전력·도면</text>
+  <!-- 5.2 카드 + 모듈 cross-ref 라벨 -->
+  <g transform="translate(32, 632)">
+    <rect width="536" height="36" rx="8" fill="#E1F5FE" stroke="#81D4FA" stroke-width="1"/>
+    <text x="16" y="16" class="ko" fill="#01579B" font-size="10">5.2 카드 결합</text>
+    <text x="16" y="30" class="ko-r" fill="#37474F" font-size="9">5.2-b 시계열 · 5.2-d 이상탐지·예지보전 · 5.2-f LLM·RAG</text>
+    <text x="280" y="16" class="ko" fill="#01579B" font-size="10">모듈 cross-ref</text>
+    <text x="280" y="30" class="ko-r" fill="#37474F" font-size="9">SaaS 클라우드 보안 (BLK-CSEC-A~E) · 중대재해 후속</text>
+  </g>
 
-      <text x="460" y="26" font-size="22" font-weight="800" fill="#F57F17">SaaS</text>
-      <text x="460" y="50" font-size="10">단일 테넌시 · 비선형 ROI</text>
-      <text x="460" y="66" class="ko-r" font-size="9" fill="#558B2F">M2·M4·M6 게이트</text>
+  <!-- 하단 통계 (y=680~800, 120px) -->
+  <g transform="translate(32, 692)">
+    <rect width="536" height="92" rx="10" fill="url(#pkg5-accent)" filter="url(#pkg5-shadow)"/>
+    <g class="ko" fill="white">
+      <text x="20" y="28" font-size="24" font-weight="800">9</text>
+      <text x="20" y="50" font-size="11">개월 압축</text>
+      <text x="20" y="68" class="ko-r" font-size="9" opacity="0.92">클라우드 종합솔루션</text>
 
-      <text x="620" y="26" font-size="22" font-weight="800" fill="#2E7D32">CNC</text>
-      <text x="620" y="50" font-size="10">선반·머시닝센터·MCT</text>
-      <text x="620" y="66" class="ko-r" font-size="9" fill="#558B2F">중소 5 인 이상 사업장</text>
+      <text x="110" y="28" font-size="24" font-weight="800">4+1</text>
+      <text x="110" y="50" font-size="11">시나리오</text>
+      <text x="110" y="68" class="ko-r" font-size="9" opacity="0.92">MET 2 + LLM 1 + UTL 1 + UI</text>
+
+      <text x="240" y="28" font-size="24" font-weight="800">SaaS</text>
+      <text x="240" y="50" font-size="11">단일 테넌시</text>
+      <text x="240" y="68" class="ko-r" font-size="9" opacity="0.92">CSAP 표준 5 등급 정합</text>
+
+      <text x="380" y="28" font-size="24" font-weight="800">Lv.1+</text>
+      <text x="380" y="50" font-size="11">MLOps 압축</text>
+      <text x="380" y="68" class="ko-r" font-size="9" opacity="0.92">레지스트리·모니터·피드백</text>
     </g>
   </g>
 </svg>

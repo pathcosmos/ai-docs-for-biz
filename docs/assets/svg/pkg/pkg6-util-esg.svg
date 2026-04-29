@@ -1,109 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="패키지 6 — 유틸·ESG (스마트공장 고도화 + ESG 12 개월, 5 시나리오)"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="패키지 6 — 유틸·ESG 12 개월 (UTL-01·02·03 + SAF-01·02 · CBAM 신고 결합)"
      class="zoomable">
-  <title>패키지 6 — 유틸·ESG (CBAM·중대재해 12 개월 통합)</title>
-  <desc>UTL-01·02·03 + SAF-01·02 의 5 시나리오를 단일 통합 AI 플랫폼으로 결합하여 CBAM·중대재해법·ESG 공시 3 중 규제 압박을 동시 대응하는 스마트공장 고도화 + ESG 트랙 12 개월 통합 파일럿 인포그래픽.</desc>
+  <title>패키지 6 — 유틸·ESG (Utility · CBAM · Safety, 12 개월)</title>
+  <desc>유틸·환경·안전 통합 운영 12 개월 통합 파일럿 — 컴프레서 누기, TMS·CEMS 폐수·배출가스, CBAM 분기 신고 자동화, 중대재해 비전의 5 시나리오를 단일 AI 플랫폼 위에서 운영. 5.2-b·d·e 카드와 CBAM·중대재해 모듈 7 블록 직접 결합.</desc>
 
   <defs>
-    <linearGradient id="pkg6-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#4A148C"/>
-      <stop offset="100%" stop-color="#7E57C2"/>
+    <linearGradient id="pkg6-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B5E20"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <linearGradient id="pkg6-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8F5E9"/>
+      <stop offset="100%" stop-color="#C8E6C9"/>
+    </linearGradient>
+    <linearGradient id="pkg6-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#66BB6A"/>
     </linearGradient>
     <filter id="pkg6-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1B5E20" flood-opacity="0.22"/>
     </filter>
     <filter id="pkg6-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <!-- 상단 헤더 -->
-  <rect width="800" height="80" fill="url(#pkg6-bg)"/>
-  <text x="32" y="34" class="en" fill="rgba(255,255,255,0.85)" font-size="11">PACKAGE 06 · UTILITY · ESG · CBAM · 12 MONTHS</text>
-  <text x="32" y="62" class="ko" fill="white" font-size="24">유틸·환경·안전 · 3 중 규제 동시 대응</text>
-  <g transform="translate(700, 22)" filter="url(#pkg6-glow)">
-    <circle cx="36" cy="20" r="20" fill="#FFB300"/>
-    <text x="36" y="26" text-anchor="middle" class="ko" fill="#311B92" font-size="20">6</text>
+  <!-- 배경 -->
+  <rect width="600" height="800" fill="#F7FBF7"/>
+
+  <!-- 상단 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#pkg6-header)"/>
+  <text x="32" y="32" class="en" fill="rgba(255,255,255,0.92)" font-size="11">PACKAGE 06 · UTILITY · CBAM · SAFETY · 12 MONTHS</text>
+  <text x="32" y="62" class="ko" fill="white" font-size="22">패키지 6 — 유틸·ESG</text>
+  <text x="32" y="84" class="ko-r" fill="rgba(255,255,255,0.92)" font-size="13">스마트공장 고도화 + ESG · CBAM 직접 결합</text>
+  <g transform="translate(528, 28)" filter="url(#pkg6-glow)">
+    <circle cx="22" cy="22" r="22" fill="#FFFFFF"/>
+    <text x="22" y="29" text-anchor="middle" class="ko" fill="#2E7D32" font-size="22">6</text>
   </g>
 
-  <!-- 중간 — 3 영역 + 외부 표준 결합 -->
-  <g transform="translate(32, 100)">
-    <text x="0" y="0" class="ko" fill="#311B92" font-size="13">5 시나리오 — 유틸 (3) + 안전 (2) + 외부 표준 정합 (CBAM·중대재해·CSAP)</text>
+  <!-- 중간 영역 (y=100~680, 580px) -->
+
+  <!-- 섹션 라벨 -->
+  <text x="32" y="128" class="ko" fill="#1B5E20" font-size="13">5 시나리오 · 위→아래 유틸·환경·안전 흐름</text>
+  <text x="32" y="146" class="ko-r" fill="#558B2F" font-size="10">에너지 → 누기 → TMS·CEMS → CBAM 신고 → 중대재해 비전</text>
+
+  <!-- 카드 1 — UTL-01 컴프레서·에너지 (주력) -->
+  <g transform="translate(32, 162)" filter="url(#pkg6-shadow)">
+    <rect width="536" height="100" rx="10" fill="url(#pkg6-card)" stroke="#A5D6A7" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#2E7D32"/>
+    <circle cx="44" cy="50" r="22" fill="#2E7D32"/>
+    <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">UTL</text>
+    <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-01</text>
+    <text x="84" y="34" class="ko" fill="#1B5E20" font-size="14">공장 에너지 최적화·피크 시프트 (주력)</text>
+    <text x="84" y="54" class="ko-r" fill="#33691E" font-size="11">FEMS 15 분 → 부하 예측·생산 일정 연동 (5.2-b · 5.2-e)</text>
+    <text x="84" y="74" class="ko-r" fill="#558B2F" font-size="10">UTL-01 · 전력·LNG·증기 원단위 [%] 절감</text>
+    <text x="84" y="90" class="ko-r" fill="#558B2F" font-size="10">시계열 + 최적화 결합 패턴</text>
   </g>
 
-  <g transform="translate(32, 116)">
-    <!-- 좌측 — 유틸 영역 (3 시나리오) -->
-    <g filter="url(#pkg6-shadow)">
-      <rect width="240" height="180" rx="12" fill="white"/>
-      <rect width="240" height="32" rx="12" fill="#4A148C"/>
-      <text x="16" y="22" class="ko" fill="white" font-size="13">유틸 · 환경</text>
-      <text x="16" y="56" class="ko" fill="#4A148C" font-size="11">UTL-01 (주력)</text>
-      <text x="16" y="70" class="ko-r" fill="#37474F" font-size="10">공장 에너지 최적화 (FEMS)</text>
-      <text x="16" y="92" class="ko" fill="#6A1B9A" font-size="11">UTL-02</text>
-      <text x="16" y="106" class="ko-r" fill="#37474F" font-size="10">컴프레서·보일러 누기 탐지</text>
-      <text x="16" y="128" class="ko" fill="#7E57C2" font-size="11">UTL-03</text>
-      <text x="16" y="142" class="ko-r" fill="#37474F" font-size="10">폐수·배출가스 이상 예측 (TMS)</text>
-      <text x="16" y="166" class="ko-r" fill="#9575CD" font-size="9">5.2-d 예지보전 + 5.2-e 최적화</text>
-    </g>
-
-    <!-- 우측 — 안전 영역 (2 시나리오) -->
-    <g filter="url(#pkg6-shadow)" transform="translate(258, 0)">
-      <rect width="240" height="180" rx="12" fill="white"/>
-      <rect width="240" height="32" rx="12" fill="#E65100"/>
-      <text x="16" y="22" class="ko" fill="white" font-size="13">안전 · ESG</text>
-      <text x="16" y="56" class="ko" fill="#E65100" font-size="11">SAF-01</text>
-      <text x="16" y="70" class="ko-r" fill="#37474F" font-size="10">중대재해 위험요소 감지</text>
-      <text x="16" y="84" class="ko-r" fill="#78909C" font-size="9">CCTV · 웨어러블 · 보호구</text>
-      <text x="16" y="110" class="ko" fill="#BF360C" font-size="11">SAF-02</text>
-      <text x="16" y="124" class="ko-r" fill="#37474F" font-size="10">탄소배출·CBAM 신고 자동화</text>
-      <text x="16" y="138" class="ko-r" fill="#78909C" font-size="9">분기 신고 공수 단축</text>
-      <text x="16" y="166" class="ko-r" fill="#FF8A65" font-size="9">EU 수출 비중 30% + 직접 트리거</text>
-    </g>
-
-    <!-- 우측 끝 — 모듈 결합 -->
-    <g filter="url(#pkg6-shadow)" transform="translate(516, 0)">
-      <rect width="220" height="180" rx="12" fill="#311B92"/>
-      <text x="16" y="22" class="ko" fill="#FFB300" font-size="12">모듈 직접 결합</text>
-      <text x="16" y="44" class="ko" fill="white" font-size="11">CBAM 모듈</text>
-      <text x="16" y="58" class="ko-r" fill="rgba(255,255,255,0.85)" font-size="9">BLK-CBAM-A~G (7 블록)</text>
-      <text x="16" y="82" class="ko" fill="white" font-size="11">중대재해 모듈</text>
-      <text x="16" y="96" class="ko-r" fill="rgba(255,255,255,0.85)" font-size="9">BLK-SAF-A~G (7 블록)</text>
-      <text x="16" y="120" class="ko" fill="white" font-size="11">SaaS 보안 모듈</text>
-      <text x="16" y="134" class="ko-r" fill="rgba(255,255,255,0.85)" font-size="9">BLK-CSEC-D · CSAP</text>
-      <text x="16" y="166" class="ko-r" fill="#FFB300" font-size="9">★ 14 블록 핵심 인용 — 본 파일럿 차별</text>
-    </g>
+  <!-- 카드 2 — UTL-02 컴프레서 누기 + UTL-03 TMS·CEMS -->
+  <g transform="translate(32, 274)" filter="url(#pkg6-shadow)">
+    <rect width="536" height="118" rx="10" fill="#C8E6C9" stroke="#66BB6A" stroke-width="2"/>
+    <rect width="6" height="118" rx="3" fill="#1B5E20"/>
+    <circle cx="44" cy="58" r="26" fill="#1B5E20"/>
+    <text x="44" y="55" text-anchor="middle" class="ko" fill="white" font-size="10">UTL</text>
+    <text x="44" y="68" text-anchor="middle" class="ko" fill="white" font-size="10">-02·03</text>
+    <text x="84" y="32" class="ko" fill="#1B5E20" font-size="14">컴프레서 누기 + TMS·CEMS 환경 예측</text>
+    <text x="84" y="52" class="ko-r" fill="#33691E" font-size="11">PLC 압력·유량 + 폐수 (BOD·COD) + 대기 (NOx·SOx)</text>
+    <text x="84" y="70" class="ko-r" fill="#33691E" font-size="11">5.2-d 예지보전 + 5.2-e 최적화 결합 (1 차 시연)</text>
+    <text x="84" y="92" class="ko-r" fill="#558B2F" font-size="10">UTL-02·03 · TMS 초과 사전 예측 [%] · 약품 선제 투입</text>
+    <text x="84" y="108" class="ko-r" fill="#1B5E20" font-size="10" font-weight="700">▼ 5.2-d/e 결합 차별 가치</text>
   </g>
 
-  <!-- 하단 — 통계 -->
-  <g transform="translate(32, 308)">
-    <rect width="736" height="68" rx="10" fill="#F3E5F5" stroke="#CE93D8" stroke-width="1"/>
-    <g class="ko" font-size="11" fill="#4A148C">
-      <text x="20" y="22" font-size="22" font-weight="800" fill="#4A148C">12</text>
-      <text x="20" y="44" font-size="10">개월 · 9M + Phase 2 확장</text>
-      <text x="20" y="58" class="ko-r" font-size="9" fill="#7B1FA2">스마트공장 고도화 + ESG</text>
+  <!-- 카드 3 — SAF-02 CBAM 신고 (직접 결합) -->
+  <g transform="translate(32, 404)" filter="url(#pkg6-shadow)">
+    <rect width="536" height="100" rx="10" fill="url(#pkg6-card)" stroke="#A5D6A7" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#FF6F00"/>
+    <circle cx="44" cy="50" r="22" fill="#FF6F00"/>
+    <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">SAF</text>
+    <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-02</text>
+    <text x="84" y="34" class="ko" fill="#E65100" font-size="14">CBAM 분기 신고 자동화 (모듈 직접 결합)</text>
+    <text x="84" y="54" class="ko-r" fill="#33691E" font-size="11">FEMS + MES + 밀시트 OCR → 제품 단위 내재배출량</text>
+    <text x="84" y="74" class="ko-r" fill="#558B2F" font-size="10">SAF-02 · BLK-CBAM-A~G 7 블록 풀 인용 · EU 수출 30%</text>
+    <text x="84" y="90" class="ko-r" fill="#558B2F" font-size="10">목표 — 신고 공수 [%] 단축 · 검증 실패 기본값 회피</text>
+  </g>
 
-      <text x="160" y="22" font-size="22" font-weight="800" fill="#4A148C">5</text>
-      <text x="160" y="44" font-size="10">시나리오 · 5.2 b·c·d·e</text>
-      <text x="160" y="58" class="ko-r" font-size="9" fill="#7B1FA2">UTL 3 + SAF 2</text>
+  <!-- 카드 4 — SAF-01 중대재해 비전 -->
+  <g transform="translate(32, 516)" filter="url(#pkg6-shadow)">
+    <rect width="536" height="100" rx="10" fill="url(#pkg6-card)" stroke="#A5D6A7" stroke-width="1"/>
+    <rect width="6" height="100" rx="3" fill="#C62828"/>
+    <circle cx="44" cy="50" r="22" fill="#C62828"/>
+    <text x="44" y="46" text-anchor="middle" class="ko" fill="white" font-size="11">SAF</text>
+    <text x="44" y="60" text-anchor="middle" class="ko" fill="white" font-size="11">-01</text>
+    <text x="84" y="34" class="ko" fill="#B71C1C" font-size="14">중대재해 위험요소 비전 감지</text>
+    <text x="84" y="54" class="ko-r" fill="#33691E" font-size="11">CCTV + 웨어러블 → 보호구·위험구역·낙상·폭로 감지</text>
+    <text x="84" y="74" class="ko-r" fill="#558B2F" font-size="10">SAF-01 · BLK-SAF-A~G 7 블록 풀 인용 · 부산경남 고위험</text>
+    <text x="84" y="90" class="ko-r" fill="#558B2F" font-size="10">경영책임자 의무이행 증거 축적 · 가명·마스킹 의무</text>
+  </g>
 
-      <text x="320" y="22" font-size="22" font-weight="800" fill="#4A148C">7</text>
-      <text x="320" y="44" font-size="10">핵심 KPI</text>
-      <text x="320" y="58" class="ko-r" font-size="9" fill="#7B1FA2">원단위·누기·TMS·보호구·CBAM</text>
+  <!-- 5.2 카드 + 모듈 cross-ref 라벨 -->
+  <g transform="translate(32, 632)">
+    <rect width="536" height="36" rx="8" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1"/>
+    <text x="16" y="16" class="ko" fill="#1B5E20" font-size="10">5.2 카드 결합</text>
+    <text x="16" y="30" class="ko-r" fill="#33691E" font-size="9">5.2-b 시계열 · 5.2-d 예지보전 · 5.2-e 최적화·자동 보정</text>
+    <text x="280" y="16" class="ko" fill="#1B5E20" font-size="10">모듈 직접 결합 (7×2)</text>
+    <text x="280" y="30" class="ko-r" fill="#33691E" font-size="9">CBAM A~G + 중대재해 A~G + SaaS 보안 BLK-CSEC-D</text>
+  </g>
 
-      <text x="460" y="22" font-size="22" font-weight="800" fill="#F57F17">3 중</text>
-      <text x="460" y="44" font-size="10">규제 동시 대응</text>
-      <text x="460" y="58" class="ko-r" font-size="9" fill="#7B1FA2">CBAM · 중대재해 · ESG 공시</text>
+  <!-- 하단 통계 (y=680~800, 120px) -->
+  <g transform="translate(32, 692)">
+    <rect width="536" height="92" rx="10" fill="url(#pkg6-accent)" filter="url(#pkg6-shadow)"/>
+    <g class="ko" fill="white">
+      <text x="20" y="28" font-size="24" font-weight="800">12</text>
+      <text x="20" y="50" font-size="11">개월 표준</text>
+      <text x="20" y="68" class="ko-r" font-size="9" opacity="0.92">스마트공장 고도화 + ESG</text>
 
-      <text x="620" y="22" font-size="22" font-weight="800" fill="#4A148C">M3·5·7·9·12</text>
-      <text x="620" y="44" font-size="10">5 회 게이트 검수</text>
-      <text x="620" y="58" class="ko-r" font-size="9" fill="#7B1FA2">CBAM 검증 + KOSHA + CSAP</text>
+      <text x="120" y="28" font-size="24" font-weight="800">5</text>
+      <text x="120" y="50" font-size="11">시나리오</text>
+      <text x="120" y="68" class="ko-r" font-size="9" opacity="0.92">UTL 3 + SAF 2</text>
+
+      <text x="220" y="28" font-size="24" font-weight="800">CBAM</text>
+      <text x="220" y="50" font-size="11">EU 수출 30%</text>
+      <text x="220" y="68" class="ko-r" font-size="9" opacity="0.92">분기 신고 자동화 직접 트리거</text>
+
+      <text x="380" y="28" font-size="24" font-weight="800">3중</text>
+      <text x="380" y="50" font-size="11">규제 동시 대응</text>
+      <text x="380" y="68" class="ko-r" font-size="9" opacity="0.92">CBAM·중대재해법·ESG 공시</text>
     </g>
   </g>
 </svg>

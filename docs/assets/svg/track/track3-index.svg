@@ -1,107 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="Track 3 LLM·RAG 본문 목차 — RAG 5 계층 + LLM + 청킹"
-     class="zoomable">
-  <title>Track 3 — LLM·RAG 본문 공통 목차 (RAG 5 계층 · LLM · 청킹 · 평가)</title>
-  <desc>RAG 5 계층(수집→임베딩→검색→생성→감사) + 한국 sLM + 청킹 4 전략 + 골드셋 평가의 구조를 좌→우 파이프라인 형태로 시각화한 Track 3 목차.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="Track 3 LLM·RAG 인덱스 — 5 계층 RAG 파이프라인 세로 흐름">
+  <title>Track 3 — LLM·RAG Knowledge Retrieval and Generation 5 계층 인덱스</title>
+  <desc>LLM·RAG 트랙의 RAG 5 계층 파이프라인 (수집·정제 → 임베딩 → 검색 → 생성 → 감사) 을 위에서 아래로 시각화한 인덱스 히어로. 비정형 지식 (SOP·도면·MSDS·이력) 을 형식지화하는 흐름 + 하단 핵심 블록 ID 인덱스.</desc>
 
   <defs>
-    <linearGradient id="t3i-hd" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00695C"/>
-      <stop offset="100%" stop-color="#26A69A"/>
+    <linearGradient id="t3-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/>
     </linearGradient>
-    <linearGradient id="t3i-card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00897B"/>
-      <stop offset="100%" stop-color="#00695C"/>
+    <linearGradient id="t3-layer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00695C"/><stop offset="100%" stop-color="#26A69A"/>
     </linearGradient>
-    <filter id="t3i-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.20"/>
+    <linearGradient id="t3-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/><stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="t3-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
     </filter>
-    <marker id="t3i-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#00695C"/>
-    </marker>
     <style>
-      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#t3i-hd)"/>
-  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">TRACK 3 · LLM · RAG · INDEX</text>
-  <text x="32" y="54" class="ko" fill="white" font-size="22">Track 3 — RAG 5 계층 + LLM + 청킹 4 전략</text>
+  <rect width="600" height="800" fill="#F5F7FA"/>
 
-  <!-- RAG 5 계층 -->
-  <g transform="translate(20, 100)" class="ko" font-size="11">
-    <g filter="url(#t3i-shadow)">
-      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
-      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">1. 수집·표준화</text>
-      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">SOP·작업지시·</text>
-      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">장애 보고서</text>
-    </g>
-    <g transform="translate(154, 0)" filter="url(#t3i-shadow)">
-      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
-      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">2. 청킹·임베딩</text>
-      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">고정·재귀·</text>
-      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">의미·테이블</text>
-    </g>
-    <g transform="translate(308, 0)" filter="url(#t3i-shadow)">
-      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
-      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">3. 검색</text>
-      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">Hybrid · BM25</text>
-      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">+ Vector</text>
-    </g>
-    <g transform="translate(462, 0)" filter="url(#t3i-shadow)">
-      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
-      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">4. 생성</text>
-      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">Citation · Reject</text>
-      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">한국 sLM</text>
-    </g>
-    <g transform="translate(616, 0)" filter="url(#t3i-shadow)">
-      <rect width="140" height="80" rx="10" fill="url(#t3i-card)"/>
-      <text x="70" y="28" text-anchor="middle" fill="white" font-size="12">5. 감사·평가</text>
-      <text x="70" y="50" text-anchor="middle" class="ko-r" fill="white" font-size="10">골드셋·</text>
-      <text x="70" y="64" text-anchor="middle" class="ko-r" fill="white" font-size="10">로그·피드백</text>
-    </g>
-    <line x1="140" y1="40" x2="154" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
-    <line x1="294" y1="40" x2="308" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
-    <line x1="448" y1="40" x2="462" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
-    <line x1="602" y1="40" x2="616" y2="40" stroke="#00695C" stroke-width="2" marker-end="url(#t3i-arrow)"/>
+  <!-- 상단 헤더 -->
+  <rect width="600" height="100" fill="url(#t3-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">KNOWLEDGE RETRIEVAL AND GENERATION</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="24" fill="white">Track 3 — LLM · RAG</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">SOP · 도면 · MSDS · 이력 → 형식지 5 계층 RAG</text>
+
+  <!-- 비정형 지식 입력 -->
+  <g transform="translate(30, 115)">
+    <rect width="540" height="36" rx="6" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
+    <text x="14" y="16" class="ko" font-size="10" fill="#E65100">비정형 지식 입력</text>
+    <text x="14" y="30" class="ko-r" font-size="9" fill="#5D4037">공정설계서 · 작업표준서(SOP) · 장애 이력 · 도면 · 밀시트 · MSDS · 8D 보고서</text>
   </g>
 
-  <!-- 청킹 4 전략 + 한국 sLM -->
-  <g transform="translate(32, 210)" class="ko" font-size="11">
-    <text y="0" fill="#004D40" font-size="12">청킹 4 전략 — 고정 윈도 / 재귀 / 의미 기반 / 테이블·표 보존</text>
-    <g transform="translate(0, 14)">
-      <rect width="120" height="32" rx="6" fill="#B2DFDB"/>
-      <text x="60" y="20" text-anchor="middle" fill="#004D40" font-size="11">고정 윈도</text>
-    </g>
-    <g transform="translate(132, 14)">
-      <rect width="120" height="32" rx="6" fill="#80CBC4"/>
-      <text x="60" y="20" text-anchor="middle" fill="#004D40" font-size="11">재귀 분할</text>
-    </g>
-    <g transform="translate(264, 14)">
-      <rect width="120" height="32" rx="6" fill="#4DB6AC"/>
-      <text x="60" y="20" text-anchor="middle" fill="white" font-size="11">의미 기반</text>
-    </g>
-    <g transform="translate(396, 14)">
-      <rect width="120" height="32" rx="6" fill="#26A69A"/>
-      <text x="60" y="20" text-anchor="middle" fill="white" font-size="11">테이블 보존</text>
-    </g>
-    <g transform="translate(540, 14)">
-      <rect width="180" height="32" rx="6" fill="#00897B"/>
-      <text x="90" y="20" text-anchor="middle" fill="white" font-size="11">한국 sLM (KO-LLM)</text>
-    </g>
+  <!-- Layer 1 -->
+  <g transform="translate(40, 165)" filter="url(#t3-shadow)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#00695C" stroke-width="1.5"/>
+    <circle cx="34" cy="30" r="20" fill="url(#t3-layer)"/>
+    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="white">1</text>
+    <text x="68" y="26" class="ko" font-size="14" fill="#00695C">수집 · 정제 (청킹)</text>
+    <text x="68" y="44" class="ko-r" font-size="10" fill="#37474F">PDF · HWP · DWG · 이미지 OCR · 계층/섹션/토픽/멀티뷰 청킹</text>
+    <text x="68" y="62" class="ko-r" font-size="9" fill="#78909C">한국 제조 문서 특성 (HWP·스캔 PDF) 대응 — §5.1 / §5.2</text>
   </g>
 
-  <rect x="0" y="320" width="800" height="80" fill="#E8F5F1"/>
-  <g transform="translate(32, 348)" class="ko" font-size="12" fill="#004D40">
-    <text y="0" font-weight="700">5 계층 RAG</text>
-    <text x="120" y="0" font-weight="700">청킹 4 전략</text>
-    <text x="240" y="0" font-weight="700">베테랑 인터뷰 5 단계</text>
-    <text x="420" y="0" font-weight="700">권한·보안 ACL</text>
-    <text x="570" y="0" font-weight="700">5 Top 블록</text>
-    <text x="690" y="0" font-weight="700">한국 sLM</text>
+  <path d="M 300 249 L 300 259 M 290 255 L 300 265 L 310 255" stroke="#00695C" stroke-width="2" fill="none"/>
+
+  <!-- Layer 2 -->
+  <g transform="translate(40, 269)" filter="url(#t3-shadow)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#00695C" stroke-width="1.5"/>
+    <circle cx="34" cy="30" r="20" fill="url(#t3-layer)"/>
+    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="white">2</text>
+    <text x="68" y="26" class="ko" font-size="14" fill="#00695C">임베딩</text>
+    <text x="68" y="44" class="ko-r" font-size="10" fill="#37474F">한국어 sLM 임베딩 모델 · 도메인 파인튜닝 · 벡터스토어 적재</text>
+    <text x="68" y="62" class="ko-r" font-size="9" fill="#78909C">Pinecone · Weaviate · Milvus · OpenSearch — §5.3 / §4.4</text>
   </g>
-  <text x="32" y="384" class="ko-r" font-size="10" fill="#37474F">SOP·작업지시·장애 대응·표준 작업 QA·비정형 공정 지식 활용</text>
+
+  <path d="M 300 353 L 300 363 M 290 359 L 300 369 L 310 359" stroke="#00695C" stroke-width="2" fill="none"/>
+
+  <!-- Layer 3 -->
+  <g transform="translate(40, 373)" filter="url(#t3-shadow)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#00695C" stroke-width="1.5"/>
+    <circle cx="34" cy="30" r="20" fill="url(#t3-layer)"/>
+    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="white">3</text>
+    <text x="68" y="26" class="ko" font-size="14" fill="#00695C">검색 (하이브리드)</text>
+    <text x="68" y="44" class="ko-r" font-size="10" fill="#37474F">Dense + BM25 + 메타 필터 + Re-ranker</text>
+    <text x="68" y="62" class="ko-r" font-size="9" fill="#78909C">권한·보안 (AD/HRM 연동, 민감정보 마스킹) — §5.4 / §5.6</text>
+  </g>
+
+  <path d="M 300 457 L 300 467 M 290 463 L 300 473 L 310 463" stroke="#00695C" stroke-width="2" fill="none"/>
+
+  <!-- Layer 4 -->
+  <g transform="translate(40, 477)" filter="url(#t3-shadow)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#00695C" stroke-width="1.5"/>
+    <circle cx="34" cy="30" r="20" fill="url(#t3-layer)"/>
+    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="white">4</text>
+    <text x="68" y="26" class="ko" font-size="14" fill="#00695C">생성 (LLM)</text>
+    <text x="68" y="44" class="ko-r" font-size="10" fill="#37474F">EXAONE · HyperCLOVA · GPT · Claude — 환각 방지 · 근거 인용</text>
+    <text x="68" y="62" class="ko-r" font-size="9" fill="#78909C">거부 정책 (Citation·Reject) · 외부 API vs 온프레미스 sLM — §5.5 / §4.3</text>
+  </g>
+
+  <path d="M 300 561 L 300 571 M 290 567 L 300 577 L 310 567" stroke="#00695C" stroke-width="2" fill="none"/>
+
+  <!-- Layer 5 -->
+  <g transform="translate(40, 581)" filter="url(#t3-shadow)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#F57F17" stroke-width="1.5"/>
+    <circle cx="34" cy="30" r="20" fill="url(#t3-accent)"/>
+    <text x="34" y="36" text-anchor="middle" class="ko" font-size="18" fill="#1A237E">5</text>
+    <text x="68" y="26" class="ko" font-size="14" fill="#E65100">감사 · 평가</text>
+    <text x="68" y="44" class="ko-r" font-size="10" fill="#37474F">RAGAS · 골드셋 평가 · 답변 품질 피드백 · 문서 보강 루프</text>
+    <text x="68" y="62" class="ko-r" font-size="9" fill="#78909C">검색·응답 드리프트 (→ Track 2) · 임베딩 재구축 주기 — §7.1 / §7.3</text>
+  </g>
+
+  <!-- 출력 표시 -->
+  <g transform="translate(30, 678)">
+    <rect width="540" height="28" rx="6" fill="#E0F2F1" stroke="#00695C" stroke-width="1"/>
+    <text x="270" y="18" text-anchor="middle" class="ko" font-size="10" fill="#00695C">Industrial Copilot · SOP QA · 장애 대응 · 베테랑 인터뷰 5 단계</text>
+  </g>
+
+  <!-- 하단 cross-reference 블록 ID -->
+  <g transform="translate(30, 712)" filter="url(#t3-shadow)">
+    <rect width="540" height="76" rx="8" fill="#E0F2F1" stroke="#00695C" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#00695C">핵심 블록 ID 인덱스 · RAG 5 계층 + 한국 sLM</text>
+    <g transform="translate(14, 32)">
+      <rect x="0" y="0" width="92" height="32" rx="4" fill="white"/>
+      <text x="46" y="13" text-anchor="middle" class="ko" font-size="9" fill="#00695C">BLK-T3-3.1</text>
+      <text x="46" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">문서 이질성</text>
+
+      <rect x="100" y="0" width="92" height="32" rx="4" fill="white"/>
+      <text x="146" y="13" text-anchor="middle" class="ko" font-size="9" fill="#00695C">BLK-T3-3.2</text>
+      <text x="146" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">암묵지 의존</text>
+
+      <rect x="200" y="0" width="92" height="32" rx="4" fill="white"/>
+      <text x="246" y="13" text-anchor="middle" class="ko" font-size="9" fill="#00695C">BLK-T3-4.2</text>
+      <text x="246" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">RAG 아키텍처</text>
+
+      <rect x="300" y="0" width="92" height="32" rx="4" fill="white"/>
+      <text x="346" y="13" text-anchor="middle" class="ko" font-size="9" fill="#00695C">BLK-T3-5.2</text>
+      <text x="346" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">청킹 4 전략</text>
+
+      <rect x="400" y="0" width="100" height="32" rx="4" fill="white"/>
+      <text x="450" y="13" text-anchor="middle" class="ko" font-size="9" fill="#00695C">BLK-T3-5.5</text>
+      <text x="450" y="26" text-anchor="middle" class="ko-r" font-size="8" fill="#37474F">생성·인용</text>
+    </g>
+  </g>
 </svg>
