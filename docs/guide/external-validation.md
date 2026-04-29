@@ -75,36 +75,7 @@
 
 각 검증 주체의 데이터 송신·보고서·감사 흐름이 분리 운영되면 시스템·인력·문서 중복이 발생하므로, 본 가이드는 7 검증 주체를 단일 운영 플랫폼 위에 결합하는 4 계층 아키텍처를 표준으로 제시한다. 본 아키텍처는 패키지 6 §5.4 (BLK-CBAM-D 산정 엔진 + BLK-SAF-D 통합 안전 대시보드 + BLK-CSEC-D 마스킹 게이트) 의 3 인프라 결합을 일반화한 것이며, Track 1 §5.x 구축 상세·Track 2 §4.2 MLOps 구성요소와 직접 정합한다.
 
-```mermaid
-flowchart LR
-    subgraph L1["계층 1 — 사내 데이터 수집·정형화"]
-        L1A[FEMS·TMS·CEMS]
-        L1B[MES·ERP·SCM]
-        L1C[CMMS·CCTV·웨어러블]
-        L1D[밀시트·MSDS·도면]
-    end
-    subgraph L2["계층 2 — AI 모니터링·예측"]
-        L2A[5.2-b 시계열 예측<br/>SCN-UTL-03]
-        L2B[5.2-c 비전·이벤트<br/>SCN-SAF-01]
-        L2C[5.2-d 이상 탐지<br/>SCN-UTL-02]
-        L2D[5.2-f LLM·RAG]
-    end
-    subgraph L3["계층 3 — 검증 주체별 변환·송신"]
-        L3A[XBRL·CSV<br/>CBAM·K-ETS]
-        L3B[XML<br/>TMS·CEMS]
-        L3C[PPAP·SPC·MSA<br/>OEM]
-        L3D[보고서·증빙<br/>KOSHA·CSAP]
-    end
-    subgraph L4["계층 4 — 감사·보고 자동화"]
-        L4A[감사 로그·불변 저장<br/>BLK-CSEC-C]
-        L4B[자료 소집 RAG<br/>BLK-CBAM-F·SAF-F]
-        L4C[증거 축적<br/>BLK-SAF-E]
-    end
-    L1 --> L2 --> L3 --> L4
-    L1 -.->|원시 데이터 직접| L3
-    L2 -.->|이벤트| L4
-```
-
+![계층 1 — 사내 데이터 수집·정형화 (다이어그램 1)](../assets/diagrams/external-validation/diagram-1.svg)
 ### 3.1 통합 운영의 4 계층
 
 - **계층 1 — 데이터 수집·정형화** (FEMS·TMS·CEMS·MES·ERP·CMMS·CCTV·웨어러블·밀시트·MSDS·도면) : 사내 단일 데이터레이크에 적재. 패키지 6 §2.3 ICS·MES Lv.1~Lv.2 + FEMS·TMS Lv.2 + CCTV Lv.1 의 통합 적재가 본 계층의 표준 도착 상태.

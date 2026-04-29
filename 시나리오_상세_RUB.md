@@ -59,31 +59,8 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[밴버리·믹서 PLC<br/>전력·토크·온도·회전수<br/>1~10 Hz] --> B[Edge 스트림 버퍼<br/>NTP 동기]
-    B --> C[슬라이딩 윈도우 피쳐<br/>통계·토크 피크·FFT 저주파]
-    M[원료 배합표·로트·작업자 ID<br/>외기 온습도] --> C
-    C --> D[1D-CNN + LSTM Stacking<br/>+ XGBoost 메타]
-    D --> E[분산도·무니 점도 예측<br/>σ 임계·추세 조기경보]
-    E --> F[HMI 통합 알람<br/>1·2·3차 + SHAP 기여도]
-    F --> G[조정 권고<br/>혼합 시간·스팀/쿨링·회전수]
-    G --> H[작업자 처치<br/>수용·기각·미세조정 로깅]
-    H --> I[사후 점도 측정<br/>배치 ID 자동 결합]
-    I --> J[Track 2 SCN-MLO-01<br/>PSI·KS 드리프트·재학습]
-    J --> D
-    H --> K[RUB-02 압출 입력<br/>배치 메타 피쳐 가중]
-```
-
-```mermaid
-flowchart TD
-    A[Phase 1: 예측 모드<br/>HMI 표시만] --> B[Phase 2: 가이드 모드<br/>알람 + 조정 권고]
-    B --> C[Phase 3: 부분 자동<br/>경미 이탈 자동 보정]
-    C --> D[Phase 4: 폐쇄 루프<br/>예외만 작업자 개입]
-    style A fill:#e8f4fc
-    style D fill:#fce8e8
-```
-
+![밴버리·믹서 PLC 전력·토크·온도·회전수 1~10 Hz (다이어그램 1)](../assets/diagrams/detail-rub/diagram-1.svg)
+![Phase 1: 예측 모드 HMI 표시만 (다이어그램 2)](../assets/diagrams/detail-rub/diagram-2.svg)
 ---
 
 ## SCN-RUB-02 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어
@@ -116,47 +93,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[압출기 PLC<br/>스크류·인출·온도·압력<br/>1~10 Hz] --> S[Edge 스트림 버퍼<br/>NTP 동기]
-    B[레이저 치수계<br/>외경·두께 1~10 Hz] --> S
-    C[라인스캔 카메라<br/>표면 이미지 시퀀스] --> V[비전 전처리<br/>왜곡 보정·정규화]
-    M[RUB-01 배합 분산도<br/>배치 메타·재료 등급] --> S
-    S --> D[1D-CNN/LSTM<br/>외경·두께 σ 예측]
-    V --> E[EfficientNet/YOLO<br/>표면 결함 분류·세그]
-    D --> R[Model Router<br/>부품 ID·라인 통과 시각 결합]
-    E --> R
-    R --> F[HMI 통합 알람<br/>이탈 예측 + 결함 등급·위치<br/>+ 통합 진단 + 조작 변수 제안]
-    F --> G[작업자 승인]
-    G --> H[PLC 안전 레이어<br/>허용 범위 검증]
-    H --> I[스크류·온도·속도<br/>자동 보정 적용]
-    I --> A
-    R --> J[Track 2 SCN-MLO-01<br/>드리프트·재학습]
-    F --> K[OEM 인수·출하 검사<br/>부품 ID 라벨 환류]
-    K --> D
-    K --> E
-```
-
-```mermaid
-sequenceDiagram
-    participant P as PLC + 치수계
-    participant V as 라인스캔 카메라
-    participant T as 시계열 모델
-    participant C as 비전 모델
-    participant R as Model Router
-    participant H as HMI
-    participant W as 작업자
-    P->>T: 1초 윈도우 + RUB-01 메타
-    V->>C: 이미지 시퀀스
-    T->>R: 외경·두께 σ 예측
-    C->>R: 결함 등급·위치 (세그 마스크)
-    R->>H: 통합 진단 + 조작 변수 제안
-    H->>W: 알람 + 제안값
-    W->>H: 승인 / 미세조정
-    H->>P: PLC 안전 레이어 → 자동 보정
-    P->>T: 보정 후 외경·두께 환류
-```
-
+![압출기 PLC 스크류·인출·온도·압력 1~10 Hz (다이어그램 3)](../assets/diagrams/detail-rub/diagram-3.svg)
+![sequenceDiagram (다이어그램 4)](../assets/diagrams/detail-rub/diagram-4.svg)
 ---
 
 ## SCN-RUB-03 — 가류(Curing) 시간·온도 최적화
@@ -189,42 +127,8 @@ sequenceDiagram
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[배합 조성·부품 형상<br/>몰드 온도·외기·잔열] --> B[가류도 예측<br/>LSTM/Transformer + 물리 하이브리드]
-    M[RUB-01 분산도·배합 메타] --> B
-    B --> C[제품 내부 온도·가류도<br/>가상 센서 추정]
-    C --> D{사이클 형식}
-    D -->|회분식| E[BO<br/>베이지안 최적화]
-    D -->|연속식| F[RL / MPC<br/>구간별 온도·속도]
-    E --> G[안전 레이어<br/>Safe BO·제약 BO]
-    F --> G
-    G --> H[추천 언로딩 시점<br/>온도 프로파일]
-    H --> I[HMI 표시<br/>가류도·사이클 단축·에너지 절감]
-    I --> J[작업자 승인]
-    J --> K[PLC 자동 송출]
-    K --> L[사후 가류도 측정<br/>라벨 환류]
-    L --> B
-    L --> M2[Track 2 SCN-MLO-01<br/>드리프트·재학습]
-    J --> N[Track 3 SCN-LLM-01<br/>표준 시간표 자동 갱신]
-```
-
-```mermaid
-flowchart TD
-    A[알고리즘 선택 진단] --> B{사이클 형식}
-    B -->|회분식<br/>이산 결정| C[BO 적용]
-    B -->|연속식<br/>연속 결정| D{시뮬레이터 정확도}
-    D -->|高| E[RL 적용]
-    D -->|中| F[MPC 적용]
-    C --> G[Safe BO 안전 레이어]
-    E --> G
-    F --> G
-    G --> H[작업자 승인 → PLC]
-    style C fill:#e8f4fc
-    style E fill:#fce8e8
-    style F fill:#f4fce8
-```
-
+![배합 조성·부품 형상 몰드 온도·외기·잔열 (다이어그램 5)](../assets/diagrams/detail-rub/diagram-5.svg)
+![알고리즘 선택 진단 (다이어그램 6)](../assets/diagrams/detail-rub/diagram-6.svg)
 ---
 
 ## SCN-RUB-04 — 사출·성형 공정 불량 예측 및 조건 추천
@@ -257,35 +161,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[사출기 OPC-UA<br/>압력·속도·쿠션·보압] --> C[사이클 시계열 피쳐<br/>피크·적분·변곡점]
-    B[금형 열전대 다점<br/>코어·캐비티·게이트] --> C
-    M[부품 메타<br/>배합·형상·로트] --> C
-    C --> D[XGBoost / 1D-CNN<br/>결함 유형 분류]
-    D --> E[결함 확률 + SHAP 기여도]
-    E --> F{임계 초과?}
-    F -->|미만| G[정상 가동 유지]
-    F -->|초과| H[HMI 즉시 알람<br/>변수 기여도]
-    H --> I[작업자 처치<br/>조건 미세조정]
-    I --> J[검사원 라벨<br/>사이클 ID 결합]
-    J --> D
-    K[신규 부품·신규 배합] --> L[5.2-a 유사 사례 검색<br/>Top-N + GB 보정]
-    L --> N[추천 조건<br/>사출·보압·금형 온도]
-    N --> O[물리 제약 검증]
-    O --> I
-    J --> P[Track 2 SCN-MLO-01·03<br/>드리프트·피드백 루프]
-```
-
-```mermaid
-flowchart TD
-    A[Phase 1: 예측 모드<br/>HMI 알람 + SHAP] --> B[Phase 2: 가이드 모드<br/>조건 추천 + 작업자 승인]
-    B --> C[Phase 3: 부분 자동<br/>경미 변동 자동 보정]
-    C --> D[Phase 4: 폐쇄 루프<br/>예외만 작업자 개입]
-    style A fill:#e8f4fc
-    style D fill:#fce8e8
-```
-
+![사출기 OPC-UA 압력·속도·쿠션·보압 (다이어그램 7)](../assets/diagrams/detail-rub/diagram-7.svg)
+![Phase 1: 예측 모드 HMI 알람 + SHAP (다이어그램 8)](../assets/diagrams/detail-rub/diagram-8.svg)
 ---
 
 ## SCN-RUB-05 — 고무 제품 외관 비전 검사 (표면 결함·이물)
@@ -318,46 +195,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[검사 컨베이어<br/>부품 투입] --> B[다각도 카메라<br/>동축·환형·측사·백라이트]
-    L[조도 모니터링 센서] --> B
-    B --> C[전처리<br/>왜곡 보정·정규화]
-    C --> D[Self-supervised Pretrain<br/>SimCLR/MAE/DINO]
-    D --> E[Fine-tune 분류·세그<br/>EfficientNet/ViT/U-Net]
-    E --> F[결함 등급·위치·신뢰도<br/>HMI 표시]
-    F --> G{신뢰도 임계?}
-    G -->|충족| H[자동 판정]
-    G -->|미달| I[검사원 재검토<br/>Active Learning 라벨]
-    I --> J[라벨 환류]
-    J --> E
-    H --> K[OEM 인수 검사<br/>부품 ID 결합]
-    K --> M[Track 2 SCN-MLO-01·03<br/>드리프트·피드백]
-    M --> E
-    F --> N[Track 3 SCN-LLM-03<br/>8D 보고서 자동 결합]
-    F --> O[RUB-02 압출 결과<br/>부품 ID 결합 → 이중 안전망]
-```
-
-```mermaid
-sequenceDiagram
-    participant P as 부품
-    participant C as 다각도 카메라
-    participant M as 비전 모델
-    participant H as HMI
-    participant I as 검사원
-    participant L as LLM-03
-    P->>C: 검사 컨베이어 진입
-    C->>M: 다각도 이미지
-    M->>H: 결함 등급·위치·신뢰도
-    alt 신뢰도 충족
-        H->>P: 자동 판정 (정상/결함)
-    else 신뢰도 미달
-        H->>I: 재검토 큐
-        I->>M: 라벨 환류 (Active Learning)
-    end
-    H->>L: 결함 부품 → 8D 보고서 자동 결합
-```
-
+![검사 컨베이어 부품 투입 (다이어그램 9)](../assets/diagrams/detail-rub/diagram-9.svg)
+![sequenceDiagram (다이어그램 10)](../assets/diagrams/detail-rub/diagram-10.svg)
 ---
 
 ## 추후 보강 후보

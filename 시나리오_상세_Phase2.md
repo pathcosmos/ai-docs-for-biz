@@ -62,30 +62,8 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[PLC/Historian<br/>스탠드별 롤포스·텐션·속도·갭<br/>1초 주기] --> B[Edge 스트림 버퍼<br/>NTP 동기]
-    B --> C[슬라이딩 윈도우 피쳐<br/>통계·스탠드 간 상호 피쳐<br/>+ 재질·사양 메타]
-    C --> D[1D-CNN/LSTM<br/>출측 두께 예측]
-    D --> E[이탈 판정<br/>σ 임계 + 추세 기반 조기 경보]
-    E --> F[HMI 통합 알람<br/>1·2·3차 단계 + SHAP 기여도]
-    F --> G[조작 변수 제안<br/>텐션·속도 조정값]
-    G --> H[작업자 처치<br/>수용·기각·미세조정 로깅]
-    H --> I[Track 2 SCN-MLO-03<br/>피드백 라벨 환류]
-    E --> J[Track 2 SCN-MLO-01<br/>PSI·KS 드리프트 감시]
-    J --> K[재학습 트리거]
-    H --> L[Track 3 SCN-LLM-02<br/>이탈 발생 시 유사 사례 회신]
-```
-
-```mermaid
-flowchart TD
-    A[Phase 1: 예측 모드<br/>HMI 표시만] --> B[Phase 2: 가이드 모드<br/>알람 + 제안값]
-    B --> C[Phase 3: 부분 자동<br/>경미 이탈 자동 보정]
-    C --> D[Phase 4: 폐쇄 루프<br/>예외만 작업자 개입]
-    style A fill:#e8f4fc
-    style D fill:#fce8e8
-```
-
+![PLC/Historian 스탠드별 롤포스·텐션·속도·갭 1초 주기 (다이어그램 1)](../assets/diagrams/detail-phase2/diagram-1.svg)
+![Phase 1: 예측 모드 HMI 표시만 (다이어그램 2)](../assets/diagrams/detail-phase2/diagram-2.svg)
 ---
 
 ## SCN-STL-06 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화
@@ -120,40 +98,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[코일 사양·요구 물성<br/>재질·두께·폭·중량] --> D[환경 모델<br/>물리 + 데이터 하이브리드]
-    B[로 내 다점 열전대<br/>실측 시계열] --> D
-    C[(과거 성적서·에너지 이력<br/>적재 패턴 매트릭스)] --> D
-    D --> E{회분식 / 연속식}
-    E -->|BAF| F[BO 최적화<br/>이산 적재 패턴 탐색]
-    E -->|APL| G[Safe RL<br/>라인속도·존 온도 연속 제어]
-    F --> H[안전 레이어<br/>승온율·재질별 금지 조건]
-    G --> H
-    H --> I[추천 패턴·프로파일<br/>+ 파레토 후보 비교]
-    I --> J[작업자 승인·미세조정<br/>HITL · 사유 입력]
-    J --> K[로 적용·실작업]
-    K --> L[사후 성적서·실측<br/>환경 모델 재학습]
-    L --> D
-    J --> M[Track 3 RAG<br/>사유 LLM 태깅]
-    L --> N[Track 2 SCN-MLO-01<br/>드리프트 감시]
-```
-
-```mermaid
-flowchart TD
-    A[입력: 코일 군 사양·물성 목표] --> B[환경 모델 시뮬레이션]
-    B --> C[다목적 후보 생성<br/>물성 균일성·에너지·사이클]
-    C --> D[파레토 전선 시각화<br/>슬라이더 가중치 조정]
-    D --> E[안전 레이어 검증]
-    E --> F[작업자 HMI 추천 표시]
-    F --> G{작업자 결정}
-    G -->|수용| H[적용]
-    G -->|미세조정| H
-    G -->|기각| I[사유 입력 → RAG 등재]
-    H --> J[실측 → 라벨 환류]
-    I --> J
-```
-
+![코일 사양·요구 물성 재질·두께·폭·중량 (다이어그램 3)](../assets/diagrams/detail-phase2/diagram-3.svg)
+![입력: 코일 군 사양·물성 목표 (다이어그램 4)](../assets/diagrams/detail-phase2/diagram-4.svg)
 ---
 
 ## SCN-MLO-03 — 현장 피드백 루프 (불량 확인·라벨 재주입)
@@ -188,42 +134,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[AI 예측 결과<br/>STL-05·06·09·LLM-02·MLO 등] --> B[현장 태블릿/HMI<br/>통합 피드백 UI]
-    B --> C[3단 평가<br/>맞음·틀림·부분맞음]
-    B --> D[사유 드롭다운<br/>시나리오별 옵션]
-    B --> E[자유 텍스트·사진]
-    C --> F[라벨 표준 스키마<br/>예측ID·피쳐·실측·작업자·시각]
-    D --> F
-    E --> F
-    F --> G[라벨 품질 검증<br/>이중·편향·이상 격리]
-    G --> H[(라벨 DB)]
-    H --> I[학습셋 자동 편입<br/>층화 추출·비율 규칙]
-    I --> J[Track 2 SCN-MLO-02<br/>피쳐 스토어 동기]
-    K[Track 2 SCN-MLO-01<br/>드리프트 탐지] --> L{재학습 트리거}
-    H --> L
-    L -->|라벨 충분| M[재학습 파이프라인]
-    L -->|라벨 부족| N[작업자 UI 게시<br/>능동 라벨 수집]
-    M --> O[챔피언·챌린저 비교]
-    O --> P[승격 시 UI 알림<br/>"v[N], 귀하 [건] 반영"]
-    P --> B
-```
-
-```mermaid
-flowchart TD
-    A[작업자 동기부여 루프] --> B[누적 피드백 건수 가시화]
-    B --> C[모델 개선 기여 스코어]
-    C --> D[월간 리뷰 시상·인정]
-    D --> E[지속 입력 동기]
-    E --> A
-    F[데이터 플라이휠] --> G[라벨 누적]
-    G --> H[정확도 향상]
-    H --> I[작업자 신뢰 확보]
-    I --> J[자발적 피드백 증가]
-    J --> F
-```
-
+![AI 예측 결과 STL-05·06·09·LLM-02·MLO 등 (다이어그램 1)](../assets/diagrams/detail-phase2/diagram-1.svg)
+![작업자 동기부여 루프 (다이어그램 6)](../assets/diagrams/detail-phase2/diagram-6.svg)
 ---
 
 ## SCN-LLM-02 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)
@@ -258,44 +170,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[CMMS 워크오더<br/>자유 텍스트 [수치]만 건] --> B[LLM 정제·태깅<br/>증상·원인·처치 3분할]
-    B --> C[구조화 메타 인덱스<br/>설비·부품·결과 라벨]
-    D[설비 매뉴얼·회로도·MSDS] --> E[OCR·VLM<br/>도면 캡션 인덱싱]
-    E --> F[(통합 RAG 인덱스<br/>벡터 + 메타 + 멀티모달)]
-    C --> F
-    G[SCN-STL-09 예지보전<br/>진동 스펙트로그램·고장 모드] --> H[프로파일 매칭]
-    H --> F
-    I[정비원 알람 수신<br/>모바일·CMMS 사이드패널] --> J[하이브리드 검색<br/>+ 고장 모드 메타 필터]
-    J --> F
-    F --> K[LLM 응답 생성<br/>유사 이력+절차+부품+예상 시간]
-    K --> L[근거 인용 강제<br/>워크오더ID·페이지·도면]
-    L --> M[정비원 처치 + 체크리스트]
-    M --> N[처치 결과 라벨 입력<br/>SCN-MLO-03 환류]
-    N --> C
-    M --> O[베테랑 진단 노트 등재<br/>스펙트로그램 + 의사결정 근거]
-    O --> F
-```
-
-```mermaid
-sequenceDiagram
-    participant S as STL-09 예지보전
-    participant T as 정비원 모바일
-    participant R as RAG 검색기
-    participant K as CMMS+매뉴얼+도면
-    participant M as MLO-03 라벨 환류
-    S->>T: Z롤 베어링 BPFO 알람
-    T->>R: 알람코드 + 진동 프로파일 + 위치
-    R->>K: 고장 모드 메타 + 임베딩 검색
-    K-->>R: 유사 워크오더 Top-N + 매뉴얼·도면
-    R-->>T: 권장 절차 + 부품번호 + 재고·리드타임
-    T->>T: 단계별 체크리스트 처치
-    T->>M: 처치 결과 라벨 (완료·재발·미해결)
-    M->>K: 결과 라벨·스펙트로그램 등재
-    M->>S: 결과 라벨 → 예지보전 모델 환류
-```
-
+![CMMS 워크오더 자유 텍스트 [수치 (다이어그램 2)](../assets/diagrams/detail-phase2/diagram-2.svg)
+![sequenceDiagram (다이어그램 8)](../assets/diagrams/detail-phase2/diagram-8.svg)
 ---
 
 ## 추후 보강 후보

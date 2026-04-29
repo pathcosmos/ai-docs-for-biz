@@ -24,29 +24,7 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    subgraph 외생[외생 변화]
-        E1[원재료 공급사 교체]
-        E2[계절 변화]
-        E3[설비 노후화]
-        E4[신규 결함 유형]
-    end
-    외생 -->|입력 분포 변화| M[배포 모델<br/>드리프트 발생]
-    M -.모니터링 부재.- BL1[입력 분포 추적 X]
-    M -.모니터링 부재.- BL2[예측 분포 추적 X]
-    M -.모니터링 부재.- BL3[성능 지표 추적 X]
-    M -.로그 미보존.- BL4[추론 입력값 휘발]
-    BL1 --> JP[잠복 [기간]<br/>드리프트→불량]
-    BL2 --> JP
-    BL3 --> JP
-    JP --> R1[현장 불량·재작업·클레임]
-    R1 --> R2[사후 인지<br/>비용 [수치]배 누적]
-    BL4 --> R3[원인 규명 불능<br/>재발 반복]
-    R2 --> X[후행적 운영]
-    R3 --> X
-```
-
+![외생 변화 (다이어그램 1)](../assets/diagrams/track2-top5/diagram-1.svg)
 > [출처: track2_공통본문_목차.md §3.2 모니터링 부재, §5.5 모니터링·드리프트 탐지·경보, 가이드_KPI_측정 §드리프트 지표 임계 (PSI 0.1·0.25), 통합 파일럿 §4.2 MLOps 6 차원]
 
 ---
@@ -63,23 +41,7 @@ flowchart LR
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart TD
-    R[① 모델 레지스트리<br/>MLflow<br/>버전·아티팩트·모델 카드]
-    R --- F[② 피쳐 스토어<br/>Feast<br/>Online·Offline 일관성]
-    R --- P[③ 학습·재학습 파이프라인<br/>Airflow·Kubeflow<br/>DAG 코드화]
-    R --- S[④ 추론 서빙<br/>BentoML·Seldon·Triton<br/>엣지·서버 이원]
-    R --- M[⑤ 모니터링<br/>Evidently·Prometheus·Grafana<br/>인프라·데이터·성능 3 층]
-    R --- B[⑥ 피드백 루프<br/>현장 태블릿 UI → 라벨 DB<br/>HITL 환류]
-    R --- G[⑦ 거버넌스<br/>RBAC·감사·리니지·모델 카드<br/>ISO 42001·IATF 16949]
-    F -.학습-추론 일관.- P
-    P -.아티팩트 등록.- R
-    S -.재배포.- M
-    M -.드리프트 트리거.- P
-    B -.정정 라벨.- F
-    G -.권한·로그.- R
-```
-
+![① 모델 레지스트리 MLflow 버전·아티팩트·모델 카드 (다이어그램 2)](../assets/diagrams/track2-top5/diagram-2.svg)
 > [출처: track2_공통본문_목차.md §4.2 핵심 구성요소 7 종, §4.3 도구 스택 선정 기준, 가이드_외부검증_운영 §RACI 매트릭스, 통합 파일럿 §4.2 MLOps 6 차원, 도메인_지식추출_가이드 §모듈 책임 분담]
 
 ---
@@ -96,32 +58,7 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    subgraph OT[공장 OT 구역]
-        A[PLC/센서/비전] --> B[엣지 추론<br/>경량 모델]
-        B --> C[게이트웨이<br/>DAQ]
-    end
-    subgraph ONPREM[온프레미스]
-        C --> D[데이터 레이크<br/>TSDB·Object]
-        D --> E[학습 파이프라인<br/>Airflow·Kubeflow]
-        E --> F[모델 레지스트리<br/>MLflow]
-        F --> G[서빙<br/>BentoML·Seldon]
-        G --> B
-        G --> H[모니터링<br/>Evidently·Prometheus]
-        H --> I[재학습 트리거]
-        I --> E
-    end
-    subgraph FB[피드백 루프]
-        J[현장 태블릿 UI] --> K[라벨 DB]
-        K --> D
-    end
-    subgraph CLD[클라우드 CSAP 리전]
-        L[실험·대용량 학습<br/>GPU]
-        L --> F
-    end
-```
-
+![공장 OT 구역 (다이어그램 3)](../assets/diagrams/track2-top5/diagram-3.svg)
 > [출처: track2_공통본문_목차.md §4.4 전체 참조 아키텍처, §2.2 배포 지형, §2.3 SLA/SLO, Track 1 §4.6 엔드투엔드 파이프라인, RAG_인프라_운영_가이드 §3 단 배포, 통합 파일럿 §4.2 MLOps 6 차원]
 
 ---
@@ -138,21 +75,7 @@ flowchart LR
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart TD
-    M[배포된 AI 엔진<br/>엣지·서버] --> L1[① 인프라 층<br/>Prometheus·Grafana]
-    M --> L2[② 데이터 층<br/>Evidently<br/>PSI·KS·JS]
-    M --> L3[③ 성능 층<br/>정확도·MAE·리콜<br/>실측 라벨]
-    L1 --> J[3 차원 결합 판정<br/>임계 × 기간 × 비즈니스 영향]
-    L2 --> J
-    L3 --> J
-    J -->|일시·자연 회귀| OK[정상 변동]
-    J -->|지속·KPI 동행| TR[재학습 트리거]
-    J -->|즉각 위험| AL[4 채널 경보<br/>Slack·메일·SMS·HMI]
-    AL --> ESC[Lv.1→Lv.2→Lv.3<br/>에스컬레이션]
-    TR --> RT[Track 2 §5.3<br/>재학습 파이프라인]
-```
-
+![배포된 AI 엔진 엣지·서버 (다이어그램 4)](../assets/diagrams/track2-top5/diagram-4.svg)
 > [출처: track2_공통본문_목차.md §5.5 모니터링·드리프트 탐지·경보, §6.2 재학습 트리거 5 대 축, 가이드_KPI_측정 §드리프트 임계, 위험관리_매트릭스_가이드 §경보 에스컬레이션, 통합 파일럿 §4.2 MLOps 6 차원]
 
 ---
@@ -169,32 +92,7 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart TD
-    S[성능 저하·드리프트 신호] --> AX[4 축 원인 분류]
-    AX --> X1[① 데이터<br/>품질·누락·편향]
-    AX --> X2[② 피쳐<br/>정의·누수·정규화]
-    AX --> X3[③ 모델<br/>알고리즘·HP·앙상블]
-    AX --> X4[④ 운영<br/>임계·경보·HITL]
-    X1 --> SC[3 축 스코어링<br/>신호 × 영향 × 비용]
-    X2 --> SC
-    X3 --> SC
-    X4 --> SC
-    SC -->|곱 ≥ 임계 [수치]| P1[월간 리뷰 우선 의제]
-    SC -->|곱 < 임계| P2[분기 포트폴리오 이연]
-    P1 --> PT[5 대 패턴 매칭]
-    PT --> PT1[공급사 변경]
-    PT --> PT2[신규 결함 유형]
-    PT --> PT3[계절·환경 변화]
-    PT --> PT4[설비 개·보수]
-    PT --> PT5[구간별 정확도 저하]
-    PT1 --> RX[표준 처방 절차<br/>리드타임 [기간]]
-    PT2 --> RX
-    PT3 --> RX
-    PT4 --> RX
-    PT5 --> RX
-```
-
+![성능 저하·드리프트 신호 (다이어그램 1)](../assets/diagrams/track2-top5/diagram-1.svg)
 > [출처: track2_공통본문_목차.md §6.1 개선 포인트 선정 노하우, §6.2 재학습 트리거 5 대 축, §6.5 월간 리뷰 리츄얼, 도메인_지식추출_가이드 §패턴 정형화, TRL_진척_관리_가이드 §개선 리드타임, 가이드_KPI_측정 §우선순위 스코어링]
 
 ---

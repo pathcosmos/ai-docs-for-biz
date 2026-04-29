@@ -23,22 +23,7 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart TD
-    A[베테랑 숙련공<br/>[수치]명 · 경력 [기간]+] -->|암묵지 전수| B[현장 운영 판단]
-    A -.이탈·퇴직.-> R1[즉각적 공정 마비]
-    C[Excel·수기 메모] --> B
-    D[작업자별 경험] --> B
-    B --> E[공정 설정값 결정<br/>변수 [수치]종 동시]
-    E --> F[작업자 간 편차 ±[수치]%]
-    F --> G[후속 공정 품질 산포]
-    F --> H[재작업률 [수치]%]
-    E -.문서화 부재.-> R2[표준 미정립]
-    R1 --> X[구조적 리스크]
-    R2 --> X
-    G --> X
-```
-
+![베테랑 숙련공 [수치 (다이어그램 1)](../assets/diagrams/track1-top5/diagram-1.svg)
 ---
 
 ## 3.2 데이터 단절 및 비정형·이미지 기반 관리의 한계 (BLK-T1-3.2)
@@ -53,35 +38,7 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    subgraph 비정형_원천[비정형 · 이미지 원천]
-        S1[밀시트 PDF<br/>공급사별 [수치]종 양식]
-        S2[성적서 스캔]
-        S3[공정설계 Excel]
-        S4[작업표준서 HWP/PDF]
-        S5[교대 일지 수기]
-    end
-    subgraph 단절_지점[단절 지점]
-        H1[수기 입력<br/>[수치]분/건 · 오류 [수치]%]
-        H2[양식 비표준]
-        H3[검색·연동 부재]
-    end
-    subgraph 정형_시스템[정형 시스템]
-        M1[MES 입고대장]
-        M2[QMS 검사결과]
-        M3[ERP 수주·출하]
-    end
-    S1 --> H1 --> M1
-    S2 --> H1
-    S3 --> H2 --> M2
-    S4 --> H3
-    S5 --> H3
-    M1 -.단절.- M2
-    M2 -.단절.- M3
-    H3 --> R[원소재-품질 상관 추적 불가]
-```
-
+![비정형 · 이미지 원천 (다이어그램 2)](../assets/diagrams/track1-top5/diagram-2.svg)
 ---
 
 ## 4.4 피쳐 엔지니어링 접근 (BLK-T1-4.4)
@@ -96,23 +53,7 @@ flowchart LR
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[원시 데이터<br/>PLC · MES · 비전 · 문서] --> B1[도메인 피쳐<br/>롤링통계 · 차분 · 누적]
-    A --> B2[자동 피쳐 생성<br/>tsfresh · featuretools]
-    A --> B3[메타 피쳐<br/>재질 · 레시피 · 설비ID]
-    B1 --> C[피쳐 후보 풀<br/>수백~수천개]
-    B2 --> C
-    B3 --> C
-    C --> D1[상관·다중공선성 제거]
-    D1 --> D2[상호정보량 평가]
-    D2 --> D3[SHAP 기여도 선별]
-    D3 --> E[채택 피쳐셋]
-    E --> F[피쳐 스토어<br/>학습·추론 일관성]
-    F --> G[모델 입력]
-    F -.연계.-> T2[Track 2 MLOps<br/>SCN-MLO-02]
-```
-
+![원시 데이터 PLC · MES · 비전 · 문서 (다이어그램 3)](../assets/diagrams/track1-top5/diagram-3.svg)
 ---
 
 ## 4.5 모델·알고리즘 선정 기준 및 앙상블 구성 (BLK-T1-4.5)
@@ -127,34 +68,7 @@ flowchart LR
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart TD
-    P[문제 유형 정의] --> P1[회귀]
-    P --> P2[시계열 예측]
-    P --> P3[이상탐지]
-    P --> P4[분류 · 비전/문서]
-    P --> P5[추천 · 검색]
-    P1 --> C1[XGBoost · LightGBM]
-    P2 --> C2[LSTM · Transformer · TCN]
-    P3 --> C3[IsolationForest · AE · OneClassSVM]
-    P4 --> C4[EfficientNet · ViT · Transformer]
-    P5 --> C5[Retrieval + LLM]
-    C1 --> S[선정 기준<br/>데이터규모 · 해석성<br/>추론지연 · 재학습 · 엣지]
-    C2 --> S
-    C3 --> S
-    C4 --> S
-    C5 --> S
-    S --> B[베이스라인]
-    B --> K[후보 모델 다중 학습]
-    K --> A[채택 모델]
-    A --> E1[Stacking]
-    A --> E2[Weighted Avg]
-    A --> E3[Model Router]
-    E1 --> O[운영 배포]
-    E2 --> O
-    E3 --> O
-```
-
+![문제 유형 정의 (다이어그램 4)](../assets/diagrams/track1-top5/diagram-4.svg)
 ---
 
 ## 4.6 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인 (BLK-T1-4.6)
@@ -169,36 +83,7 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    subgraph 수집[데이터 수집]
-        D1[PLC/SCADA<br/>시계열]
-        D2[MES/ERP/QMS<br/>정형 DB]
-        D3[비전 이미지]
-        D4[비정형 문서<br/>SOP · 밀시트]
-    end
-    D1 --> L1[TSDB]
-    D2 --> L2[RDB]
-    D3 --> L3[Object Storage]
-    D4 --> L4[Vector DB]
-    L1 --> P[정제·라벨링]
-    L2 --> P
-    L3 --> P
-    L4 --> P
-    P --> F[피쳐 엔지니어링<br/>피쳐 스토어]
-    F --> T[학습·평가<br/>베이스라인→후보→채택]
-    T --> R[모델 레지스트리]
-    R --> B1[Edge 배포]
-    R --> B2[Server 배포]
-    B1 --> I[실시간 추론]
-    B2 --> I
-    I --> H[현장 HMI · MES 통합]
-    H --> FB[운영 피드백<br/>품질·수율·HITL]
-    FB --> P
-    FB -.드리프트.-> T2[Track 2 MLOps<br/>SCN-MLO-01]
-    L4 -.RAG.-> T3[Track 3 LLM+RAG<br/>SCN-LLM-01~04]
-```
-
+![데이터 수집 (다이어그램 5)](../assets/diagrams/track1-top5/diagram-5.svg)
 ---
 
 ## 사용 예시 (중견 스테인리스 냉연사 기준 5 블록 조립)

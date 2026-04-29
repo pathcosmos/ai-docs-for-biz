@@ -222,20 +222,7 @@
 
 **FIG-CSEC-4 민감도 라우팅 결정 트리 (Mermaid 예시)**
 
-```mermaid
-flowchart TD
-    Q[사용자 질의 수신] --> M1{검색된 문서<br/>등급 ≥ ③ 민감?}
-    M1 -- 예 --> S
-    M1 -- 아니오 --> M2{질의에 도면 ID·<br/>고객사명·금형 코드?}
-    M2 -- 예 --> S
-    M2 -- 아니오 --> M3{사용자 권한<br/>레벨 = 외부?}
-    M3 -- 예 --> S
-    M3 -- 아니오 --> E[외부 LLM API<br/>GPT·Claude·Gemini]
-    S[온프레 sLM<br/>EXAONE·HyperCLOVA] --> R[응답 + 감사 로그]
-    E --> R
-    R --> U[사용자 회신]
-```
-
+![사용자 질의 수신 (다이어그램 1)](../assets/diagrams/saas-security/diagram-1.svg)
 이 결정 트리는 BLK-CSEC-F 본문의 3 축 판정 (등급 메타 · 키워드 패턴 · 권한 레벨) 을 시각화한 것이며, 게이트웨이 구현 시 동일 로직으로 작동한다.
 
 ---

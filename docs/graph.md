@@ -20,27 +20,5 @@ hide:
 
 ## 임시 — 자산 분류 트리
 
-```mermaid
-graph TD
-  ROOT[44 자산]
-  ROOT --> T[Track 본문 8 종]
-  ROOT --> S[시나리오 6 종]
-  ROOT --> P[6 패키지 파일럿]
-  ROOT --> G[11 운영 가이드]
-  ROOT --> M[5 모듈]
-  ROOT --> O[기타 자산 5]
-  ROOT --> META[메타 3]
-
-  T --> T1[Track 1 — 제조 AI]
-  T --> T2[Track 2 — MLOps]
-  T --> T3[Track 3 — LLM·RAG]
-
-  P --> PKG1[1 대기업 철강 다년 R&D]
-  P --> PKG2[2 중견 냉연]
-  P --> PKG3[3 특수강관 RAG]
-  P --> PKG4[4 고무 양산]
-  P --> PKG5[5 정밀가공 SaaS]
-  P --> PKG6[6 유틸 ESG]
-```
-
+![44 자산 (다이어그램 1)](assets/diagrams/graph/diagram-1.svg)
 [← 홈으로](index.md)

@@ -55,34 +55,8 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[신규 주문 입력<br/>외경·내경·두께·재질<br/>+ OEM 사양] --> B[메타·치수 임베딩<br/>5.2-a 유사 사례]
-    A --> C[본문·사유 임베딩<br/>5.2-f LLM·RAG]
-    M[Mill Sheet OCR<br/>STL-08 메타 적재] --> B
-    D[(Vector DB<br/>공정설계서·메모·OEM 응대)] --> B
-    D --> C
-    B --> E[Top-N 유사 주문<br/>이름 비슷 축]
-    C --> F[Top-N 유사 사유<br/>응답 비슷 축]
-    E --> G[Re-ranker<br/>병합·재정렬]
-    F --> G
-    G --> H[한국 sLM<br/>EXAONE/HyperCLOVA X<br/>+ Citation 강제]
-    H --> I[모관·패스·열처리·UT 기준<br/>4 항목 초안 + 근거]
-    I --> J[베테랑 HITL<br/>사용/수정/부적합 + 메모]
-    J --> K[MES 작업지시 자동 변환]
-    J --> L[Track 2 SCN-MLO-03<br/>피드백 환류 색인]
-    L --> D
-```
-
-```mermaid
-flowchart TD
-    A[Phase 1 PoC<br/>M1~M6: 데이터·임베딩·초안] --> B[Phase 2 Pilot<br/>M7~M8: 베테랑 검수 정착]
-    B --> C[Phase 2 후기<br/>M9: 신입 단독 모드 진입]
-    C --> D[후속 단계<br/>5.2-g 형상 임베딩 PoC]
-    style A fill:#e8f4fc
-    style D fill:#fce8e8
-```
-
+![신규 주문 입력 외경·내경·두께·재질 + OEM 사양 (다이어그램 1)](../assets/diagrams/detail-special-pipe/diagram-1.svg)
+![Phase 1 PoC M1~M6: 데이터·임베딩·초안 (다이어그램 2)](../assets/diagrams/detail-special-pipe/diagram-2.svg)
 ---
 
 ## SCN-STL-11 — 비파괴검사 UT/ECT 자동 판정
@@ -115,44 +89,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[UT 탐촉자<br/>A-scan 1~10 μs·진폭] --> B[신호 정규화<br/>리샘플링·dB 정규화]
-    B --> C[피쳐 추출<br/>peak·envelope·FFT]
-    C --> D[1D-CNN + Transformer<br/>Stacking 분류]
-    D --> E[결함 클래스·등급·위치<br/>+ 신뢰도 + SHAP]
-    E --> F[검사원 모니터 통합 패널<br/>AI 판정 + 유사 신호 Top-N]
-    F --> G[검사원 평가<br/>동의/부분/반대 + 메모]
-    G --> H{5.2-f RAG 결합}
-    H --> I[과거 사고 이력<br/>OEM 재검·반품]
-    H --> J[처분 매뉴얼<br/>등급별 분기 절차]
-    H --> K[OEM 결함 한도 사양]
-    I --> L[처분 결정 보조]
-    J --> L
-    K --> L
-    L --> M[MES·CMMS 기록<br/>+ Track 2 환류]
-    G --> N[Active Learning 큐<br/>반대 평가 우선 라벨]
-    N --> D
-```
-
-```mermaid
-sequenceDiagram
-    participant U as UT 장비
-    participant A as AI 신호 분류
-    participant R as RAG 처분 매뉴얼
-    participant H as HMI 통합 패널
-    participant I as 검사원
-    U->>A: A-scan 1 본 + 좌표
-    A->>A: 1D-CNN + Transformer 추론
-    A->>H: 클래스·신뢰도·SHAP
-    H->>R: 결함 클래스 → 사고 이력·매뉴얼 질의
-    R->>H: 유사 사례·처분 절차·OEM 한도
-    H->>I: 통합 패널 표시
-    I->>H: 동의/부분/반대 + 메모
-    H->>A: 라벨 환류
-    H->>U: 처분 결정 (재검·재가공·폐기)
-```
-
+![UT 탐촉자 A-scan 1~10 μs·진폭 (다이어그램 3)](../assets/diagrams/detail-special-pipe/diagram-3.svg)
+![sequenceDiagram (다이어그램 4)](../assets/diagrams/detail-special-pipe/diagram-4.svg)
 ---
 
 ## 추후 보강 후보

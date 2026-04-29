@@ -58,39 +58,8 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[압력·유량·전력 센서<br/>1초 주기 IoT] --> B[Edge 노드<br/>NTP 동기·전처리]
-    B --> C[운전 모드 분류기<br/>정상·무부하·부하]
-    C --> D[모드별 정상 분포<br/>Autoencoder·IF]
-    D --> E[잔차·누설 추정<br/>L/min·㎏/h 산출]
-    F[초음파·열화상 카메라<br/>모바일 앱 입력] --> E
-    E --> G[누기 위치 히트맵<br/>분기 라인별]
-    G --> H[작업자 순회 우선순위<br/>모바일 앱]
-    H --> I[보전 결과 라벨 환류<br/>SCN-MLO-03]
-    I --> D
-    E --> J{효율 회복 임박?}
-    J -->|징후| K[5.2-e 자동 보정<br/>회전수·토출압·공기비]
-    K --> L[안전 PLC 허용 범위 검증]
-    L --> M[자동 적용·작업자 알림]
-    L -->|범위 초과| N[수동 모드 전환·알람]
-    G --> O[Track 2 SCN-MLO-01<br/>계절·부하 드리프트 감시]
-```
-
-```mermaid
-flowchart TD
-    A[운전 시작<br/>효율 = 정상 분포] --> B[실시간 효율 추적]
-    B --> C{비효율 구간?}
-    C -->|미발생| B
-    C -->|발생| D[1차 주의: 모니터 표시]
-    D --> E[2차 경고: 5.2-e 자동 보정 시도]
-    E --> F{보정 성공?}
-    F -->|성공| B
-    F -->|실패·범위 초과| G[3차 긴급: 보전 워크오더]
-    G --> H[누기·누증 점검·시정]
-    H --> A
-```
-
+![압력·유량·전력 센서 1초 주기 IoT (다이어그램 1)](../assets/diagrams/detail-utl-saf/diagram-1.svg)
+![운전 시작 효율 = 정상 분포 (다이어그램 2)](../assets/diagrams/detail-utl-saf/diagram-2.svg)
 ---
 
 ## SCN-UTL-03 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)
@@ -123,42 +92,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[수질 TMS<br/>BOD·COD·SS·T-N·T-P] --> D[다변량 시계열<br/>데이터마트]
-    B[대기 CEMS<br/>SOx·NOx·TSP·HF] --> D
-    C[공정 부하·원료·외기<br/>외생 변수] --> D
-    D --> E[LSTM·TFT 예측<br/>[수치]분~[수치]시간 horizon]
-    E --> F[한계 초과 임박 판정<br/>예측값 + 신뢰구간]
-    F --> G[1·2·3차 단계 알람<br/>SHAP 변수 기여도]
-    G --> H[권고 조치 라이브러리<br/>약품·유량·부하 분산]
-    H --> I[작업자 처치<br/>수용·기각·미세조정 로깅]
-    I --> J[Track 2 SCN-MLO-03<br/>피드백 라벨 환류]
-    F --> K[환경부 송신 사전 검증<br/>이상치·결손 탐지]
-    K --> L[정정 신고 부담 사전 차단]
-    M[Track 3 SCN-LLM-04<br/>환경 규제 RAG] --> N[[법령-2026] 개정 자동 반영<br/>한계치·양식 갱신]
-    N --> F
-```
-
-```mermaid
-sequenceDiagram
-    participant S as TMS·CEMS 센서
-    participant P as 예측 엔진 5.2-b
-    participant O as 운영자 HMI
-    participant E as 환경부 송신
-    participant R as 규제 RAG 5.2-f
-    S->>P: 측정값 + 외생 변수
-    P->>P: [수치]분 horizon 예측
-    P->>O: 한계 80% 도달 예측 알람
-    O->>O: 권고 조치 라이브러리 표시
-    O->>S: 약품 투입·유량 조절
-    S->>P: 후속 측정값 환류
-    P->>E: 송신 데이터 사전 정합성 OK
-    E->>O: 정상 송신 확인
-    R->>O: [법령-2026] 한계치 갱신 알림
-    O->>P: 한계치 파라미터 갱신
-```
-
+![수질 TMS BOD·COD·SS·T-N·T-P (다이어그램 1)](../assets/diagrams/detail-utl-saf/diagram-1.svg)
+![수치 (다이어그램 4)](../assets/diagrams/detail-utl-saf/diagram-4.svg)
 ---
 
 ## SCN-SAF-01 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)
@@ -191,43 +126,8 @@ sequenceDiagram
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[기존 CCTV<br/>다채널 영상] --> B[Edge GPU<br/>실시간 추론]
-    B --> C[보호구 검출<br/>Object Detection]
-    B --> D[위험구역 침입<br/>구역 마스크 + Tracking]
-    B --> E[Pose Estimation<br/>비정형 자세·낙상]
-    B --> F[Action Recognition<br/>이상 행동·협착]
-    G[웨어러블 IoT<br/>심박·체온·가속도·위치] --> H[열사병·낙상 사전 감지]
-    G --> I[작업자 동선 히트맵<br/>1인·사각지대 식별]
-    C --> J[통합 안전 이벤트 스키마<br/>이벤트ID·시각·위치·유형·심도]
-    D --> J
-    E --> J
-    F --> J
-    H --> J
-    J --> K[4단계 알람 에스컬레이션<br/>현장→감독자→책임자→경영자]
-    K --> L[조치 결과 자동 기록<br/>불변 저장소]
-    L --> M[분기 안전 보고서<br/>의무이행 증거 축적]
-    J --> N[Track 3 SCN-LLM-02<br/>유사 사고 이력 + 매뉴얼 회신]
-    K --> O[Track 2 SCN-MLO-03<br/>알람 처치 라벨 환류]
-```
-
-```mermaid
-flowchart TD
-    A[알람 발생] --> B[1차: 현장 근무자<br/>즉시 자기 점검]
-    B --> C{[수치] 초 내 응답?}
-    C -->|미응답| D[2차: 관리감독자<br/>[수치] 초 SLA]
-    C -->|응답 완료| E[기록 보존·종결]
-    D --> F{현장 처치 완료?}
-    F -->|미완료·중대 위험| G[3차: 안전관리책임자<br/>[수치] 분 SLA]
-    F -->|완료| E
-    G --> H{중대재해 잠재?}
-    H -->|예| I[4차: 경영책임자<br/>[수치] 분 SLA]
-    H -->|아니오| E
-    I --> J[의사결정·재발 방지]
-    J --> E
-```
-
+![기존 CCTV 다채널 영상 (다이어그램 5)](../assets/diagrams/detail-utl-saf/diagram-5.svg)
+![알람 발생 (다이어그램 1)](../assets/diagrams/detail-utl-saf/diagram-1.svg)
 ---
 
 ## SCN-SAF-02 — 탄소배출 모니터링·CBAM 신고 자동화
@@ -260,45 +160,8 @@ EU 수출 비중이 [수치] % 이상인 철강·알루미늄 제조 기업은 [
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[FEMS<br/>전력·가스·증기 15분] --> E[통합 데이터마트<br/>시간 축 정합]
-    B[MES<br/>생산 실적·제품 가공 시간] --> E
-    C[구매 시스템<br/>전력 PPA·REC] --> E
-    D[원료 이력<br/>강·합금·환원제] --> E
-    E --> F[5.2-b 결손·이상 보정<br/>회귀 보간]
-    F --> G[직접 배출 산정<br/>연료·공정 화학]
-    F --> H[간접 배출 산정<br/>전력 + PPA·REC 차감]
-    G --> I[제품 단위 배분<br/>활동 기반 원가]
-    H --> I
-    I --> J[5.2-e 분기 신고서 자동 생성<br/>제품별·공정별 내재배출량]
-    J --> K[근거 데이터 패키지<br/>측정·로직·계수·보간 이력]
-    K --> L[운영자 검토·승인<br/>KPI 대시보드]
-    L --> M[EU CBAM 신고]
-    L --> N[검증 기관 감사 대응<br/>추적 시간 [%] 단축]
-    O[Track 3 SCN-LLM-04<br/>EU 시행 규칙 RAG] --> P[[법령-2026] 개정 자동 반영<br/>양식·계수 갱신]
-    P --> J
-    I --> Q[K-ETS·RE100·TCFD<br/>Scope 3 단일 진실원 확장]
-```
-
-```mermaid
-flowchart TD
-    A[분기 시작] --> B[15분 단위 데이터 수집<br/>FEMS·MES·구매]
-    B --> C{데이터 결손?}
-    C -->|결손| D[5.2-b 회귀 보간<br/>신뢰도 라벨 부여]
-    C -->|정상| E[산정 로직 적용]
-    D --> E
-    E --> F[직접·간접·공정 화학]
-    F --> G[제품 단위 배분]
-    G --> H[분기 신고서 초안]
-    H --> I[운영자 검토]
-    I --> J{이상 KPI?}
-    J -->|정상| K[승인·EU 송출]
-    J -->|이상| L[원인 추적<br/>측정·로직·계수 단계 진단]
-    L --> E
-    K --> M[근거 패키지 보존<br/>감사 대응]
-```
-
+![FEMS 전력·가스·증기 15분 (다이어그램 3)](../assets/diagrams/detail-utl-saf/diagram-3.svg)
+![분기 시작 (다이어그램 8)](../assets/diagrams/detail-utl-saf/diagram-8.svg)
 ---
 
 ## 추후 보강 후보

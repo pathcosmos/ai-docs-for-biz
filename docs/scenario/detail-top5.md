@@ -56,38 +56,8 @@
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[SOP·작업표준·교육자료<br/>PDF·HWP·스캔본] --> B[OCR·파서<br/>구조 보존 추출]
-    B --> C[계층·섹션 청킹<br/>메타 태깅]
-    C --> D[임베딩 + 메타 필터<br/>벡터스토어 적재]
-    E[현장 태블릿·HMI<br/>자연어 질의] --> F[하이브리드 검색<br/>Dense+BM25+Re-rank]
-    D --> F
-    F --> G[LLM 응답 생성<br/>근거 인용 강제]
-    G --> H[답변·출처 링크<br/>작업자 화면]
-    H --> I[피드백 수집<br/>👍/👎]
-    I --> J[재인덱싱·문서 보강<br/>Track 2 SCN-MLO-01]
-    J --> C
-```
-
-```mermaid
-sequenceDiagram
-    participant W as 작업자
-    participant T as 태블릿 UI
-    participant R as RAG 검색기
-    participant L as LLM
-    participant K as 권한·감사
-    W->>T: SUS304 0.3mm 소둔 조건?
-    T->>R: 질의 + 사용자 컨텍스트
-    R->>K: 권한 검사·민감도 필터
-    K-->>R: 인가 청크 Top-N
-    R->>L: 청크 + 시스템 프롬프트
-    L-->>T: 답변 + Citation
-    T-->>W: 답변·출처 링크
-    W->>T: 만족도 평가
-    T->>R: 피드백 → 재인덱싱 큐
-```
-
+![SOP·작업표준·교육자료 PDF·HWP·스캔본 (다이어그램 1)](../assets/diagrams/detail-top5/diagram-1.svg)
+![sequenceDiagram (다이어그램 2)](../assets/diagrams/detail-top5/diagram-2.svg)
 ---
 
 ## SCN-STL-08 — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석
@@ -119,32 +89,8 @@ sequenceDiagram
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[공급사 성적서<br/>PDF·이미지·메일] --> B[양식 자동 분류<br/>공급사·양식 ID]
-    B --> C[OCR + VLM 필드 추출<br/>화학성분·기계성질·열처리]
-    C --> D{신뢰도 임계?}
-    D -->|충족| E[MES 표준 스키마 적재<br/>로트 단위]
-    D -->|미달| F[검수 큐<br/>입고 검수자 확인]
-    F --> E
-    F --> G[정정 이력<br/>프롬프트·템플릿 학습]
-    G --> C
-    E --> H[원소재-완제품<br/>로트 결합 데이터마트]
-    I[MES 가공·검사·UT·클레임] --> H
-    H --> J[5.2-a 유사 사례 검색<br/>변수 중요도·상관]
-    J --> K[자재·품질 KPI 대시보드<br/>공급사 평가 보고서]
-```
-
-```mermaid
-flowchart LR
-    A[신규 불량 발생] --> B[해당 로트 성분·물성 조회]
-    B --> C[5.2-a 유사 성분 프로파일<br/>과거 로트 Top-N]
-    C --> D[처리 이력·결과 비교]
-    D --> E[원인 가설 + 근거 제시]
-    E --> F[Track 3 RAG 인덱스<br/>성적서 본문 회수]
-    F --> G[품질 보고서 자동 초안]
-```
-
+![공급사 성적서 PDF·이미지·메일 (다이어그램 3)](../assets/diagrams/detail-top5/diagram-3.svg)
+![신규 불량 발생 (다이어그램 4)](../assets/diagrams/detail-top5/diagram-4.svg)
 ---
 
 ## SCN-STL-04 — 냉간압연 패스 스케줄 표준화·최적화
@@ -176,30 +122,8 @@ flowchart LR
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[신규 주문<br/>재질·초기두께·목표두께·폭] --> B[사양 피쳐 임베딩]
-    C[(과거 실적 KB<br/>사양·설정·결과)] --> D[Top-N 유사 오더 검색]
-    B --> D
-    D --> E[Gradient Boosting<br/>미세 보정 회귀]
-    E --> F[물리 제약 검증<br/>압하율·토크·텐션 한계]
-    F --> G[추천 패스 스케줄<br/>+ 근거 유사 오더]
-    G --> H[작업자 승인·미세조정<br/>HITL]
-    H --> I[ICS 전송·실작업]
-    I --> J[결과 피쳐 자동 편입<br/>플라이휠]
-    J --> C
-    H --> K[조정 사유 자유 입력<br/>LLM 태깅 → Track 3 RAG]
-```
-
-```mermaid
-flowchart TD
-    A[Phase 1: 추천 모드<br/>작업자 승인] --> B[Phase 2: 가이드 모드<br/>이탈 시 경고]
-    B --> C[Phase 3: 부분 자동<br/>5.2-e 안전 BO 적용]
-    C --> D[Phase 4: 폐쇄 루프<br/>승인 예외 케이스만]
-    style A fill:#e8f4fc
-    style D fill:#fce8e8
-```
-
+![신규 주문 재질·초기두께·목표두께·폭 (다이어그램 5)](../assets/diagrams/detail-top5/diagram-5.svg)
+![Phase 1: 추천 모드 작업자 승인 (다이어그램 6)](../assets/diagrams/detail-top5/diagram-6.svg)
 ---
 
 ## SCN-STL-09 — 설비 예지보전 (압연기 롤·베어링·구동부)
@@ -231,37 +155,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[진동·전류·유압·온도<br/>≥1kHz IoT 센서] --> B[Edge 노드<br/>FFT·Envelope·Cepstrum]
-    B --> C[(TSDB<br/>시계열 적재)]
-    C --> D[이상탐지<br/>Autoencoder·IF]
-    C --> E[RUL 추정<br/>LSTM·Survival]
-    D --> F[Health Index<br/>임계 1·2·3차]
-    E --> F
-    F --> G{임계 초과?}
-    G -->|주의| H[모바일 알림]
-    G -->|경고·긴급| I[CMMS 워크오더 자동 생성<br/>부품·예비재고 매칭]
-    I --> J[정비팀 처치<br/>+ Track 3 SCN-LLM-02 장애 RAG]
-    J --> K[처치 결과 라벨 환류]
-    K --> D
-    K --> E
-    F --> L[Track 2 SCN-MLO-01<br/>드리프트·정상 분포 감시]
-```
-
-```mermaid
-flowchart TD
-    A[운전 시작<br/>Health=100] --> B[정상 상태 학습 분포]
-    B --> C[건전성 지수 추적]
-    C --> D{이상 패턴?}
-    D -->|미발생| C
-    D -->|발생| E[1차 주의 알람]
-    E --> F[2차 경고 + 워크오더]
-    F --> G[3차 긴급 + 라인 보호]
-    G --> H[부품 교체·정비]
-    H --> A
-```
-
+![진동·전류·유압·온도 ≥1kHz IoT 센서 (다이어그램 7)](../assets/diagrams/detail-top5/diagram-7.svg)
+![운전 시작 Health=100 (다이어그램 8)](../assets/diagrams/detail-top5/diagram-8.svg)
 ---
 
 ## SCN-UTL-01 — 공장 에너지(전력·가스·증기) 최적화·피크 관리
@@ -293,37 +188,8 @@ flowchart TD
 
 ### 삽화 (Mermaid)
 
-```mermaid
-flowchart LR
-    A[스마트미터·FEMS<br/>15분 단위 사용량] --> D[LSTM·TFT 예측<br/>24h horizon]
-    B[외기 온습도·기상] --> D
-    C[MES 생산계획·설비 스케줄] --> D
-    D --> E[수요 예측<br/>+ 신뢰구간]
-    F[한전 요금제·DR 신호] --> G[BO·MILP 최적화<br/>비필수 부하 재배치]
-    E --> G
-    G --> H[설비 가동 스케줄<br/>피크 시프트 권고]
-    H --> I[작업자 승인<br/>HITL · 안전 레이어]
-    I --> J[FEMS·DCS 자동 적용]
-    J --> K[실측 사용량 환류<br/>플라이휠]
-    K --> A
-    G --> L[Track 2 SCN-MLO-01<br/>예측 드리프트 감시]
-    J --> M[제품 단위 원단위 산정<br/>모듈_CBAM_대응 SCN-SAF-02]
-```
-
-```mermaid
-flowchart TD
-    A[피크 시간 임박] --> B{예측치 ≥ 계약전력 임계?}
-    B -->|미만| C[정상 운전 유지]
-    B -->|도달| D[1단계: 공조·조명 디밍]
-    D --> E[2단계: 압축기·일부 보조 설비]
-    E --> F[3단계: 비핵심 가공 라인]
-    F --> G[안전 레이어 검증<br/>납기·작업자 안전]
-    G --> H[작업자 알림·승인]
-    H --> I[부하 차단 실행]
-    I --> J[해제 조건 모니터링]
-    J --> C
-```
-
+![스마트미터·FEMS 15분 단위 사용량 (다이어그램 9)](../assets/diagrams/detail-top5/diagram-9.svg)
+![피크 시간 임박 (다이어그램 10)](../assets/diagrams/detail-top5/diagram-10.svg)
 ---
 
 ## 추후 보강 후보

@@ -517,20 +517,7 @@
 
 ## A-3. 의사결정 플로우 (요약)
 
-```mermaid
-flowchart TD
-    A[고객사 접촉] --> B{ICS/MES<br/>데이터 성숙도?}
-    B -->|Lv.0: 엑셀·수기| C[Track 3 LLM·RAG<br/>SOP·도면·밀시트 자산화]
-    B -->|Lv.1: 일부 수집| D[Track 1 단일 공정<br/>품질예측·예지보전]
-    B -->|Lv.2: 빅데이터| E[Track 1 + Track 2<br/>최적화 + MLOps]
-    C --> F{규모?}
-    D --> F
-    E --> F
-    F -->|중소| G[클라우드 SaaS 기반<br/>1~2개 시나리오 집중]
-    F -->|중견| H[관리형 MLOps<br/>3~5개 시나리오 패키지]
-    F -->|대| I[풀스택 MLOps<br/>전사 거버넌스]
-```
-
+![고객사 접촉 (다이어그램 1)](../assets/diagrams/catalog/diagram-1.svg)
 ---
 
 # 부록 B. 시나리오 결합 패키지

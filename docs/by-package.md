@@ -36,36 +36,7 @@ description: "6 통합 파일럿 패키지의 도메인·기간·시나리오·K
 
 ## 2. 의사결정 트리 — 5 분 매칭
 
-```mermaid
-graph TD
-  Q1{귀사 규모는?}
-  Q1 -->|대기업 매출 5조+| Q2{다년 R&D?}
-  Q1 -->|중견 1~5천억| Q3{주력 도메인?}
-  Q1 -->|중소 수백억| P5[패키지 5<br/>정밀가공 SaaS]
-
-  Q2 -->|예 33개월+| P1[패키지 1<br/>대기업 철강]
-  Q2 -->|아니오 단년| Q3
-
-  Q3 -->|철강 냉연·압연| P2[패키지 2<br/>중견 냉연]
-  Q3 -->|특수강관 + 암묵지| P3[패키지 3<br/>특수강관 RAG]
-  Q3 -->|고무·폴리머 양산| P4[패키지 4<br/>고무 양산]
-  Q3 -->|유틸·환경·ESG| P6[패키지 6<br/>유틸·ESG]
-
-  P1 --> R1[전사적 DX 촉진 R&D]
-  P2 --> R2[제조 AI 특화 스마트공장]
-  P3 --> R3[디지털 경남]
-  P4 --> R4[대중소상생 LG·삼성]
-  P5 --> R5[클라우드 종합솔루션]
-  P6 --> R6[스마트공장 기초 / 중대재해]
-
-  style P1 fill:#1565C0,stroke:#0D47A1,color:#fff
-  style P2 fill:#283593,stroke:#1A237E,color:#fff
-  style P3 fill:#00695C,stroke:#004D40,color:#fff
-  style P4 fill:#E65100,stroke:#BF360C,color:#fff
-  style P5 fill:#2E7D32,stroke:#1B5E20,color:#fff
-  style P6 fill:#4A148C,stroke:#311B92,color:#fff
-```
-
+![패키지 5 정밀가공 SaaS (다이어그램 1)](assets/diagrams/by-package/diagram-1.svg)
 복합 매칭 (예: 대기업 + 유틸 ESG = 패키지 1 + 패키지 6 결합) 도 가능합니다. 복합 매칭 시 [사업계획서 조립 가이드 §3 SCN ID 부정합 처리](guide/assembly.md) 참조.
 
 ---

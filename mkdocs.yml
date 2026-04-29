@@ -81,11 +81,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
+  # [E11-2] mermaid custom_fence 제거 — 99 블록 모두 정적 SVG 변환 완료
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -118,9 +115,8 @@ extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
-  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+  # [E11-2] mermaid.js CDN 제거 (~720KB gzip) — 99 mermaid 블록 모두 정적 SVG 변환 완료
   - https://d3js.org/d3.v7.min.js
-  - javascripts/mermaid-init.js
   - javascripts/copy-block.js   # 헤더·표·blockquote 단위 Copy 버튼 (paste-ready)
   - javascripts/lightbox.js     # 이미지·SVG 클릭 → 확대 + 다운로드 (고해상도)
   - javascripts/graph.js        # D3 force-directed cross-reference 그래프 (graph.md)
