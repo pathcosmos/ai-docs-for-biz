@@ -1,0 +1,4 @@
+config.local.json
+state.json
+.bk/
+lockfile.lock

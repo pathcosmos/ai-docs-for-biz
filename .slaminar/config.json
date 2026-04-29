@@ -1,0 +1,15 @@
+{
+  "slaminarVersion": "0.1.0",
+  "excludeAuthTools": true,
+  "fileCountCap": 10000,
+  "approvedTools": [
+    "tdd-guard",
+    "test-kitchen",
+    "promptfoo",
+    "everything-claude-code",
+    "cc-safe-setup"
+  ],
+  "catalogVersion": "",
+  "catalogUrl": "",
+  "catalogMode": "replace"
+}

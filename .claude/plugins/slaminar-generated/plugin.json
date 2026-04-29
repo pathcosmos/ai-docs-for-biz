@@ -1,0 +1,6 @@
+{
+  "name": "slaminar-generated",
+  "description": "Auto-generated Claude Code plugin for ai-docs-for-biz",
+  "version": "1.0.0",
+  "skills": "./skills"
+}
