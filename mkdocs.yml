@@ -1,0 +1,112 @@
+site_name: AI 사업계획서 자산 허브
+site_description: 한국어 제조 AI 사업계획서 작성을 위한 누적 자산 (44 마크다운, 9 분류, 36 방법론)
+site_url: https://pathcosmos.github.io/ai-docs-for-biz/
+site_author: ai-docs-for-biz workspace
+repo_url: https://github.com/pathcosmos/ai-docs-for-biz
+repo_name: pathcosmos/ai-docs-for-biz
+edit_uri: ""
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ko
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드 전환
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드 전환
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pathcosmos/ai-docs-for-biz
+  generator: false
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: "¤"
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+      separator: '[\s\-·\.\,\(\)]'
+  - tags
+
+hooks:
+  - hooks/inject_frontmatter.py
+  - hooks/slug_rewrite.py
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+# Navigation 은 Stage 2 에서 build_src.py 가 slug_map.yml 기반으로 자동 생성
+# 수동 nav: 를 정의하지 않으면 mkdocs 가 docs/ 디렉토리 구조 + Front matter 기반 자동 사이드바 생성

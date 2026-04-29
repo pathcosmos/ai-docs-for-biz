@@ -1,0 +1,74 @@
+/* extra.css — Pretendard 폰트 + 색상 팔레트 + 한국어 가독성 */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+:root {
+  --md-text-font: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --md-code-font: 'D2Coding', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* 한국어 본문 line-height 보강 */
+.md-typeset {
+  font-feature-settings: "kern" 1;
+  word-break: keep-all;
+  line-height: 1.7;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  word-break: keep-all;
+  font-weight: 700;
+}
+
+/* 출처 인용 박스 강조 */
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-accent-fg-color);
+  background: rgba(var(--md-default-fg-color--lightest), 0.04);
+  padding: 0.5em 0.9em;
+  margin: 0.6em 0;
+}
+
+.md-typeset blockquote p:first-child {
+  margin-top: 0;
+}
+
+.md-typeset blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* 표 가독성 보강 */
+.md-typeset table:not([class]) {
+  font-size: 0.85em;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+/* 카드 그리드 */
+.md-typeset .grid.cards {
+  margin: 1em 0;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.4rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 플레이스홀더 강조 (Stage 2 hooks 활성 후 효과) */
+.md-content [data-placeholder],
+.md-content code:has-text('[고객사]') {
+  background: rgba(245, 127, 23, 0.12);
+  border: 1px dashed #F57F17;
+  border-radius: 3px;
+  padding: 0 4px;
+  font-family: var(--md-code-font);
+  color: #E65100;
+  font-size: 0.92em;
+}

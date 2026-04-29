@@ -1,0 +1,61 @@
+# 한글 .md 파일명 → 영문 slug 경로 매핑 테이블
+# 사용처: build_src.py (원본 → docs/ 복사) + hooks/slug_rewrite.py (내부 링크 치환)
+# 추가 시: 신규 .md 파일이 워크스페이스에 추가되면 본 테이블에 1 행 추가 + build_src.py 재실행
+
+# === Track 1·2·3 (8 종) ===
+"track1_공통본문_목차.md": "track/track1-index.md"
+"track1_본문_공통Top5.md": "track/track1-top5.md"
+"track1_5.2_AI엔진_변형카드.md": "track/track1-engine-cards.md"
+"track2_공통본문_목차.md": "track/track2-index.md"
+"track2_본문_공통Top5.md": "track/track2-top5.md"
+"track3_공통본문_목차.md": "track/track3-index.md"
+"track3_본문_공통Top5.md": "track/track3-top5.md"
+
+# === 시나리오 (6 종) ===
+"시나리오_카탈로그.md": "scenario/catalog.md"
+"시나리오_상세_Top5.md": "scenario/detail-top5.md"
+"시나리오_상세_Phase2.md": "scenario/detail-phase2.md"
+"시나리오_상세_RUB.md": "scenario/detail-rub.md"
+"시나리오_상세_UTL_SAF.md": "scenario/detail-utl-saf.md"
+"시나리오_상세_특수강관.md": "scenario/detail-special-pipe.md"
+
+# === 6 통합 파일럿 ===
+"사업계획서_패키지1_대기업철강_파일럿.md": "pkg/pkg1-steel-enterprise.md"
+"사업계획서_패키지2_중견냉연_파일럿.md": "pkg/pkg2-cold-rolled.md"
+"사업계획서_패키지3_특수강관_파일럿.md": "pkg/pkg3-special-pipe.md"
+"사업계획서_패키지4_고무양산_파일럿.md": "pkg/pkg4-rubber.md"
+"사업계획서_패키지5_정밀가공중소_파일럿.md": "pkg/pkg5-precision.md"
+"사업계획서_패키지6_유틸ESG_파일럿.md": "pkg/pkg6-util-esg.md"
+
+# === 11 운영 가이드 ===
+"운영_모드_Quickstart.md": "guide/quickstart.md"
+"사업계획서_조립_가이드.md": "guide/assembly.md"
+"가이드_재무_예산_산정.md": "guide/finance-budget.md"
+"사업기간_압축_가이드.md": "guide/duration-compress.md"
+"가이드_KPI_측정.md": "guide/kpi-measurement.md"
+"가이드_외부검증_운영.md": "guide/external-validation.md"
+"가이드_RAG_인프라_운영.md": "guide/rag-infra.md"
+"가이드_도메인_지식추출.md": "guide/domain-knowledge.md"
+"가이드_한국_sLM_활용.md": "guide/korean-slm.md"
+"가이드_컨설팅_위탁_운영.md": "guide/consulting-outsource.md"
+"가이드_TRL_진척_관리.md": "guide/trl-progress.md"
+"가이드_위험관리_매트릭스.md": "guide/risk-matrix.md"
+
+# === 5 Cross-cutting 모듈 ===
+"모듈_CBAM_대응.md": "module/cbam.md"
+"모듈_중대재해_안전.md": "module/safety.md"
+"모듈_연합학습_산단공동.md": "module/federated-learning.md"
+"모듈_OEM_공급망_정합.md": "module/oem-supply.md"
+"모듈_SaaS_클라우드_보안.md": "module/saas-security.md"
+
+# === 기타 자산 ===
+"시너지_ROI_모델.md": "other/synergy-roi.md"
+"책임_분담_매트릭스.md": "other/raci-matrix.md"
+"지원사업_공고_스냅샷_2026.md": "other/support-programs.md"
+"양식검증_DX촉진_R&D.md": "other/form-validation-dx.md"
+"방법론_총론.md": "other/methodology.md"
+
+# === 메타 ===
+"작업로그.md": "meta/worklog.md"
+"CLAUDE.md": "meta/claude-md.md"
+"검토리포트_2026-04-24.md": "meta/review-report.md"

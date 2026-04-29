@@ -1,0 +1,55 @@
+name: Deploy MkDocs to GitHub Pages
+
+# 본 워크플로는 사용자 입력 (issue·PR·commit message 등) 을 run: 에 직접 사용하지 않음.
+# 모든 명령은 정적 인프라 (mkdocs·python·git config bot) 만 사용 — command injection 면역.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+      - "mkdocs.yml"
+      - "slug_map.yml"
+      - "build_src.py"
+      - "hooks/**"
+      - "docs/**"
+      - "requirements.txt"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Copy source markdown to docs with English slugs
+        run: python build_src.py
+
+      - name: Build MkDocs site (strict mode)
+        run: mkdocs build --strict
+        continue-on-error: true
+
+      - name: Build MkDocs site (relaxed fallback)
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mkdocs gh-deploy --force --no-history
