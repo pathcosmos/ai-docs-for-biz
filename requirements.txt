@@ -2,3 +2,5 @@ mkdocs>=1.6
 mkdocs-material>=9.5
 pymdown-extensions>=10.7
 PyYAML>=6.0
+mkdocs-redirects>=1.2     # legacy URL 호환 (Phase E10-2 nav 재그룹화 후)
+# 읽기 시간은 hooks/inject_page_footer.py 의 calculate_reading_time() 직접 구현 (외부 의존 0)
