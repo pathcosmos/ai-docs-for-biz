@@ -1,6 +1,6 @@
 ---
 title: "AI 사업계획서 자산 허브"
-description: "한국어 제조 AI 사업계획서 작성 — paste-ready 본문 + 다운로드 SVG + 매칭 패키지 6 종"
+description: "한국어 사업계획서 작성용 paste-ready 본문 + 다운로드 SVG"
 hide:
   - navigation
   - toc
@@ -8,90 +8,33 @@ hide:
 
 # AI 사업계획서 자산 허브
 
-<figure markdown="span">
-  ![3 트랙 아키텍처 — 제조 AI · MLOps · LLM·RAG](assets/svg/hero-home.svg){ .no-zoom-pls }
-  <figcaption>본문 블록 복사 + SVG 다운로드 + 플레이스홀더 치환만으로 한국어 사업계획서 작성</figcaption>
-</figure>
+**한국어 제조 AI 사업계획서** 작성에 그대로 paste 할 수 있는 **본문 블록** 과 **삽화 SVG** 를 제공합니다. 워크스페이스의 모든 자산을 한 곳에 정리.
 
 ---
 
-## 사업계획서 작성 — 즉시 paste 하세요
+## 어디로 가야 할지 모르겠다면, **여기 한 번만** 누르세요.
 
-<div class="grid cards" markdown>
-
-- :clipboard:{ .lg .middle .accent-text } **📋 공통 블록 모음 — Paste-Ready 15**
-
-    ---
-
-    Track 1·2·3 의 **15 핵심 블록** 일람 + 사업계획서 §3·4·5·6 paste 위치 매핑.
-    플레이스홀더만 치환하면 끝.
-
-    [:material-arrow-right: **15 블록 일람 시작**](blocks.md){ .md-button .md-button--primary }
-
-- :package:{ .lg .middle .accent-text } **패키지 비교**
-
-    ---
-
-    6 패키지 매트릭스 — 도메인·기간·시나리오·KPI 한눈에 + 의사결정 트리.
-    귀사에 맞는 패키지 5 분 매칭.
-
-    [:material-arrow-right: **패키지 매트릭스**](by-package.md){ .md-button .md-button--primary }
-
-- :rocket:{ .lg .middle .accent-text } **처음이신가요?**
-
-    ---
-
-    5 분 안내 — 사이트 활용 + 패키지 매칭 + paste·다운로드 + 사업계획서 작성 흐름.
-
-    [:material-arrow-right: **5 분 안내**](start-here.md){ .md-button }
-
+<div class="home-cta" markdown>
+[📋 **사업계획서 본문 paste 시작 — 15 블록 일람 →**](blocks.md){ .md-button .md-button--primary .home-giant-btn }
 </div>
 
----
-
-## 사업계획서 작성 5 단계
-
-```mermaid
-graph LR
-  A["1. 5 항목 입력<br/>(고객사·업종·지원사업)"] --> B["2. 패키지 매칭<br/>(6 중 1)"]
-  B --> C["3. 양식 검증<br/>(다년 R&D 시)"]
-  C --> D["4. 통합 파일럿 변형<br/>([고객사] 치환 + KPI 정량)"]
-  D --> E["5. 자체평가 6 항목<br/>+ 자산 인용"]
-  E --> F["✅ 사업계획서 1 부 완성"]
-  style A fill:#1565C0,stroke:#0D47A1,color:#fff
-  style F fill:#2E7D32,stroke:#1B5E20,color:#fff
-```
-
-각 단계의 자세한 안내는 **[5 분 안내](start-here.md)** 또는 **[Quick-Start 가이드](guide/quickstart.md)** 참조.
+15 블록은 사업계획서 §3 (사업 배경) · §4 (기술 설계) · §5 (운영) · §6 (개선) 에 그대로 paste 가능합니다. 플레이스홀더 (`[고객사]·[공정]·[수치]`) 만 귀사 정보로 치환하면 끝.
 
 ---
 
-## 자산 통계
+## 그 외 진입점
 
-<div class="grid" markdown>
-
-`44` 마크다운 자산  
-`9` 분류 자산 군
-
-`6` 통합 파일럿  
-`11` 운영 가이드
-
-`5` Cross-cutting 모듈  
-`40` 시나리오 (7 도메인)
-
-`42` SVG 일러스트  
-`109` cross-ref 인용
-
-</div>
-
-[:material-graph-outline: Cross-reference 인터랙티브 그래프 →](graph.md){ .md-button }
+- 🤔 **사이트 활용법부터 알고 싶다면** — [5 분 안내](start-here.md){ .md-button }
+- 📦 **어떤 패키지가 맞는지 모르겠다면** — [패키지 비교 매트릭스](by-package.md){ .md-button } (6 패키지 1 표 비교 + 의사결정 트리)
+- 📚 **기술을 더 깊이 학습하고 싶다면** — [Track 1 — 제조 AI](track/track1-index.md){ .md-button } / [Track 2 — MLOps](track/track2-index.md){ .md-button } / [Track 3 — LLM·RAG](track/track3-index.md){ .md-button }
 
 ---
 
-??? info "ℹ️ 부산·경남권 제조업체 대상 사업"
+??? info "ℹ️ 본 사이트는 누구를 위한 것인가요?"
 
-    본 사이트는 **부산·경남권 제조업체** (철강·금속가공·고무·폴리머·정밀가공) 의 정부지원 R&D 사업계획서 작성을 위한 누적 자산 허브입니다.
+    **부산·경남권 제조업체** (철강·금속가공·고무·폴리머·정밀가공) 의 **정부지원 R&D 사업계획서 작성자** 를 위한 누적 자산 허브입니다.
 
     - **주요 고객사 예**: 화승·YCP특수강·코리녹스·코렌스·대한제강·한국철강 등
-    - **적용 지원사업**: 전사적 DX 촉진 R&D · 제조 AI 특화 스마트공장 · 디지털 경남 · 대중소상생 LG·삼성·포스코 · 클라우드 종합솔루션 · 스마트공장 기초·고도화
-    - **자산 출처**: Phase A~E10 (2026-04~) 누적 36 작업 사이클 + 42 방법론 후보
+    - **적용 지원사업**: 전사적 DX 촉진 R&D · 제조 AI 특화 스마트공장 · 디지털 경남 · 대중소상생 · 클라우드 종합솔루션 · 스마트공장 기초·고도화
+
+    좌측 사이드바의 **🚀 시작하기** 그룹부터 진입하시면 됩니다.
