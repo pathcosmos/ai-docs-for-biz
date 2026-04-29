@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img"
+     aria-label="3 트랙 아키텍처 — 제조 AI · MLOps · LLM·RAG"
+     class="zoomable">
+  <title>AI 사업계획서 자산 허브 — 3 트랙 아키텍처 히어로</title>
+  <desc>제조 AI (Track 1), MLOps (Track 2), LLM·RAG (Track 3) 의 3 트랙이 6 패키지 + 11 운영 가이드 + 5 모듈로 결합되어 한국어 사업계획서 자산을 형성하는 모습을 시각화한 히어로 일러스트.</desc>
+
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="50%" stop-color="#3949AB"/>
+      <stop offset="100%" stop-color="#5C6BC0"/>
+    </linearGradient>
+
+    <linearGradient id="track1-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#42A5F5"/>
+    </linearGradient>
+
+    <linearGradient id="track2-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6A1B9A"/>
+      <stop offset="100%" stop-color="#AB47BC"/>
+    </linearGradient>
+
+    <linearGradient id="track3-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00695C"/>
+      <stop offset="100%" stop-color="#26A69A"/>
+    </linearGradient>
+
+    <linearGradient id="accent-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+
+    <pattern id="grid-bg" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+
+    <style>
+      .label-ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
+      .label-en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.05em; }
+      .text-light { fill: white; }
+      .text-muted { fill: rgba(255,255,255,0.7); }
+    </style>
+  </defs>
+
+  <!-- 배경 그라데이션 -->
+  <rect width="1200" height="480" fill="url(#bg-grad)"/>
+  <rect width="1200" height="480" fill="url(#grid-bg)"/>
+
+  <!-- 상단 부제 -->
+  <text x="600" y="50" text-anchor="middle" class="label-en text-muted" font-size="14" letter-spacing="0.3em">
+    AI BUSINESS PLAN ASSET HUB
+  </text>
+
+  <!-- 메인 타이틀 -->
+  <text x="600" y="98" text-anchor="middle" class="label-ko text-light" font-size="40">
+    한국어 제조 AI 사업계획서 자산 허브
+  </text>
+
+  <!-- 부제 -->
+  <text x="600" y="132" text-anchor="middle" class="label-ko text-muted" font-size="16">
+    44 마크다운 · 17,816 줄 · 115 Mermaid · 274 인용 · 36 방법론
+  </text>
+
+  <!-- Track 1 — 제조 AI -->
+  <g transform="translate(80, 180)" filter="url(#card-shadow)">
+    <rect width="320" height="220" rx="14" fill="white"/>
+    <rect width="320" height="60" rx="14" fill="url(#track1-grad)"/>
+    <rect y="46" width="320" height="20" fill="url(#track1-grad)"/>
+
+    <!-- Factory icon -->
+    <g transform="translate(20, 18)">
+      <rect x="0" y="14" width="30" height="24" fill="white" rx="2"/>
+      <polygon points="0,14 12,2 24,14" fill="white"/>
+      <rect x="6" y="22" width="4" height="6" fill="#1565C0"/>
+      <rect x="14" y="22" width="4" height="6" fill="#1565C0"/>
+      <rect x="22" y="22" width="4" height="6" fill="#1565C0"/>
+    </g>
+
+    <text x="60" y="40" class="label-ko text-light" font-size="22">Track 1</text>
+    <text x="60" y="58" class="label-ko text-light" font-size="13" opacity="0.95">제조 AI 본문</text>
+
+    <text x="20" y="105" class="label-ko" font-size="14" font-weight="600" fill="#1A237E">5.2 AI 엔진 카드 6 종</text>
+    <g transform="translate(20, 120)" font-size="11" fill="#37474F" class="label-ko">
+      <text y="0">• 시계열 (압연 두께)</text>
+      <text y="18">• 비전 (표면 결함)</text>
+      <text y="36">• 이상탐지·예지보전</text>
+      <text y="54">• 자동 보정 폐쇄 루프</text>
+      <text y="72">• LLM·RAG 결합</text>
+    </g>
+
+    <!-- 8 페이지 표시 -->
+    <text x="20" y="206" font-size="10" fill="#78909C" class="label-ko">📄 8 페이지 (목차·Top5·5.2 카드)</text>
+  </g>
+
+  <!-- Track 2 — MLOps -->
+  <g transform="translate(440, 180)" filter="url(#card-shadow)">
+    <rect width="320" height="220" rx="14" fill="white"/>
+    <rect width="320" height="60" rx="14" fill="url(#track2-grad)"/>
+    <rect y="46" width="320" height="20" fill="url(#track2-grad)"/>
+
+    <!-- Cog icon -->
+    <g transform="translate(20, 18)">
+      <circle cx="15" cy="20" r="11" fill="none" stroke="white" stroke-width="3"/>
+      <circle cx="15" cy="20" r="5" fill="white"/>
+      <g stroke="white" stroke-width="3" stroke-linecap="round">
+        <line x1="15" y1="4" x2="15" y2="9"/>
+        <line x1="15" y1="31" x2="15" y2="36"/>
+        <line x1="-1" y1="20" x2="4" y2="20"/>
+        <line x1="26" y1="20" x2="31" y2="20"/>
+      </g>
+    </g>
+
+    <text x="60" y="40" class="label-ko text-light" font-size="22">Track 2</text>
+    <text x="60" y="58" class="label-ko text-light" font-size="13" opacity="0.95">MLOps · 지속 개선</text>
+
+    <text x="20" y="105" class="label-ko" font-size="14" font-weight="600" fill="#4A148C">7 종 MLOps 모듈</text>
+    <g transform="translate(20, 120)" font-size="11" fill="#37474F" class="label-ko">
+      <text y="0">• Feature Store · Registry</text>
+      <text y="18">• 모니터링 · 데이터 드리프트</text>
+      <text y="36">• 재학습 트리거 (90→30 일)</text>
+      <text y="54">• 3 단 참조 아키텍처</text>
+      <text y="72">• 거버넌스 + 외부 검증</text>
+    </g>
+
+    <text x="20" y="206" font-size="10" fill="#78909C" class="label-ko">📄 2 페이지 (목차·Top5)</text>
+  </g>
+
+  <!-- Track 3 — LLM·RAG -->
+  <g transform="translate(800, 180)" filter="url(#card-shadow)">
+    <rect width="320" height="220" rx="14" fill="white"/>
+    <rect width="320" height="60" rx="14" fill="url(#track3-grad)"/>
+    <rect y="46" width="320" height="20" fill="url(#track3-grad)"/>
+
+    <!-- Speech bubble icon -->
+    <g transform="translate(20, 18)">
+      <path d="M 4 6 L 30 6 Q 34 6 34 10 L 34 28 Q 34 32 30 32 L 14 32 L 8 38 L 8 32 L 4 32 Q 0 32 0 28 L 0 10 Q 0 6 4 6 Z" fill="white"/>
+      <circle cx="9" cy="19" r="2" fill="#00695C"/>
+      <circle cx="17" cy="19" r="2" fill="#00695C"/>
+      <circle cx="25" cy="19" r="2" fill="#00695C"/>
+    </g>
+
+    <text x="60" y="40" class="label-ko text-light" font-size="22">Track 3</text>
+    <text x="60" y="58" class="label-ko text-light" font-size="13" opacity="0.95">LLM · RAG 공정 적용</text>
+
+    <text x="20" y="105" class="label-ko" font-size="14" font-weight="600" fill="#004D40">RAG 5 계층 + 한국 sLM</text>
+    <g transform="translate(20, 120)" font-size="11" fill="#37474F" class="label-ko">
+      <text y="0">• 수집 · 임베딩 · 검색</text>
+      <text y="18">• 생성 (Citation·Reject)</text>
+      <text y="36">• 감사 + 골드셋 평가</text>
+      <text y="54">• 청킹 4 전략</text>
+      <text y="72">• 베테랑 인터뷰 5 단계</text>
+    </g>
+
+    <text x="20" y="206" font-size="10" fill="#78909C" class="label-ko">📄 2 페이지 (목차·Top5)</text>
+  </g>
+
+  <!-- 하단 통계 바 -->
+  <g transform="translate(80, 425)">
+    <g font-size="11" class="label-ko">
+      <text x="0" y="14" class="text-light" font-weight="700">6 패키지</text>
+      <text x="0" y="30" class="text-muted" font-size="10">통합 파일럿</text>
+
+      <text x="120" y="14" class="text-light" font-weight="700">11 운영 가이드</text>
+      <text x="120" y="30" class="text-muted" font-size="10">조립·재무·KPI 등</text>
+
+      <text x="280" y="14" class="text-light" font-weight="700">5 모듈</text>
+      <text x="280" y="30" class="text-muted" font-size="10">CBAM·안전·연합학습</text>
+
+      <text x="400" y="14" class="text-light" font-weight="700">40 시나리오</text>
+      <text x="400" y="30" class="text-muted" font-size="10">7 산업 도메인</text>
+
+      <text x="540" y="14" class="text-light" font-weight="700">36 방법론</text>
+      <text x="540" y="30" class="text-muted" font-size="10">재사용 패턴</text>
+
+      <text x="680" y="14" class="text-light" font-weight="700">5 분 재진입</text>
+      <text x="680" y="30" class="text-muted" font-size="10">Quick-Start 메모</text>
+
+      <!-- 액센트 강조 -->
+      <g transform="translate(900, 0)">
+        <rect x="0" y="0" width="140" height="38" rx="6" fill="url(#accent-grad)" filter="url(#glow)"/>
+        <text x="70" y="16" text-anchor="middle" fill="#1A237E" font-weight="800" font-size="11">한국어 사업계획서</text>
+        <text x="70" y="30" text-anchor="middle" fill="#1A237E" font-weight="700" font-size="10">Paste-Ready 자산</text>
+      </g>
+    </g>
+  </g>
+</svg>

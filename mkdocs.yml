@@ -113,6 +113,8 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
   - javascripts/mermaid-init.js
+  - javascripts/copy-block.js   # 헤더·표·blockquote 단위 Copy 버튼 (paste-ready)
+  - javascripts/lightbox.js     # 이미지·SVG 클릭 → 확대 + 다운로드 (고해상도)
 
 # =============================================================================
 # Navigation — 사이드바 친화 라벨링 (Phase E9 Stage 2 보강, 사용자 피드백 #2 대응)
