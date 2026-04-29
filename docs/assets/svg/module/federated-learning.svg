@@ -1,117 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="모듈 — 연합학습·산단 공동 AI (BLK-FL-A~G 7 블록)"
-     class="zoomable">
-  <title>연합학습 · 산단 공동 AI 모듈 — 3 노드 모델 공유</title>
-  <desc>부산·경남 제조 클러스터 연합학습(Federated Learning) 모듈 — 3 노드(참여사) 가 원천 데이터 공유 없이 모델 가중치만 중앙 서버와 교환하는 구조 도식. 차등 프라이버시 + 거버넌스 7 블록.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="모듈 — 연합학습·산단 공동 AI 7 블록 세로 카드">
+  <title>연합학습 모듈 — 산업단지 공동 AI 7 블록</title>
+  <desc>부산·경남 제조 클러스터 연합학습(Federated Learning) 모듈의 7 블록(A 거시·B 데이터한계·C 아키·D 연합학습 패턴·E 상생·F MLOps·G FAQ) 을 위에서 아래로 시각화. 대중소상생·디지털경남 시너지.</desc>
 
   <defs>
-    <linearGradient id="fl-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#4A148C"/>
-      <stop offset="100%" stop-color="#6A1B9A"/>
+    <linearGradient id="fl-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
-    <linearGradient id="fl-node" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#AB47BC"/>
-      <stop offset="100%" stop-color="#7B1FA2"/>
+    <linearGradient id="fl-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
-    <radialGradient id="fl-server" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#CE93D8"/>
-      <stop offset="100%" stop-color="#6A1B9A"/>
-    </radialGradient>
-    <filter id="fl-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/><feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="fl-star" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="fl-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#fl-header)"/>
-  <text x="30" y="32" class="ko" font-size="20" fill="white">모듈 · 연합학습 · 산단 공동 AI</text>
-  <text x="30" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">FEDERATED LEARNING · DIFFERENTIAL PRIVACY · CLUSTER GOVERNANCE</text>
-  <text x="770" y="42" class="ko" font-size="13" fill="#E1BEE7" text-anchor="end">데이터 공유 없는 협력</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 중앙 서버 (Aggregator) -->
-  <g transform="translate(360, 165)" filter="url(#fl-glow)">
-    <circle cx="40" cy="40" r="38" fill="url(#fl-server)" stroke="#FFD600" stroke-width="2"/>
-    <text x="40" y="36" text-anchor="middle" class="ko" font-size="11" fill="white">중앙</text>
-    <text x="40" y="50" text-anchor="middle" class="ko" font-size="11" fill="white">집계 서버</text>
-    <text x="40" y="64" text-anchor="middle" class="en" font-size="8" fill="#FFEB3B">FedAvg · DP</text>
-  </g>
+  <rect width="600" height="100" fill="url(#fl-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">FEDERATED LEARNING · DIFFERENTIAL PRIVACY</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">연합학습 — 산업단지 공동 AI</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">7 블록 · 데이터 공유 없는 협력 · ε-DP 거버넌스</text>
 
-  <!-- 3 노드 -->
-  <!-- 노드 1 (좌상) -->
-  <g transform="translate(60, 105)">
-    <rect width="170" height="80" rx="10" fill="white" stroke="#7B1FA2" stroke-width="2"/>
-    <rect width="170" height="22" rx="10" fill="url(#fl-node)"/>
-    <rect y="16" width="170" height="6" fill="url(#fl-node)"/>
-    <text x="10" y="16" class="ko" font-size="11" fill="white">참여사 A · 철강</text>
-    <text x="10" y="40" class="ko" font-size="10" fill="#4A148C">로컬 데이터 [수치]만 건</text>
-    <text x="10" y="56" class="ko" font-size="9" fill="#7B1FA2">↓ 로컬 학습 → ▲ 가중치만 송신</text>
-    <text x="10" y="72" class="en" font-size="8" fill="#9C27B0">Flower / NVFlare</text>
+  <!-- A 거시 -->
+  <g transform="translate(40, 118)" filter="url(#fl-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-FL-A · 거시 배경</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#6D28D9">대중소상생 · 디지털경남 · 뿌리산업 첨단화</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">중소제조 단독 데이터 부족 → 클러스터 공동 학습으로 데이터 부족 극복</text>
   </g>
 
-  <!-- 노드 2 (우상) -->
-  <g transform="translate(570, 105)">
-    <rect width="170" height="80" rx="10" fill="white" stroke="#7B1FA2" stroke-width="2"/>
-    <rect width="170" height="22" rx="10" fill="url(#fl-node)"/>
-    <rect y="16" width="170" height="6" fill="url(#fl-node)"/>
-    <text x="10" y="16" class="ko" font-size="11" fill="white">참여사 B · 자동차부품</text>
-    <text x="10" y="40" class="ko" font-size="10" fill="#4A148C">로컬 데이터 [수치]만 건</text>
-    <text x="10" y="56" class="ko" font-size="9" fill="#7B1FA2">↓ 로컬 학습 → ▲ 가중치만 송신</text>
-    <text x="10" y="72" class="en" font-size="8" fill="#9C27B0">TFF / PySyft</text>
+  <!-- B 데이터 한계 -->
+  <g transform="translate(40, 200)" filter="url(#fl-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-FL-B · 데이터 한계</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#6D28D9">단독 학습 시 데이터 [수치] 만 건 한계</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">영업비밀·NDA 로 원천 데이터 공유 불가 · 일반화 성능 부족</text>
   </g>
 
-  <!-- 노드 3 (하단 중앙) -->
-  <g transform="translate(315, 290)">
-    <rect width="170" height="80" rx="10" fill="white" stroke="#7B1FA2" stroke-width="2"/>
-    <rect width="170" height="22" rx="10" fill="url(#fl-node)"/>
-    <rect y="16" width="170" height="6" fill="url(#fl-node)"/>
-    <text x="10" y="16" class="ko" font-size="11" fill="white">참여사 C · 조선기자재</text>
-    <text x="10" y="40" class="ko" font-size="10" fill="#4A148C">로컬 데이터 [수치]만 건</text>
-    <text x="10" y="56" class="ko" font-size="9" fill="#7B1FA2">↓ 로컬 학습 → ▲ 가중치만 송신</text>
-    <text x="10" y="72" class="en" font-size="8" fill="#9C27B0">DP-SGD · ε=[수치]</text>
+  <!-- C 아키텍처 -->
+  <g transform="translate(40, 282)" filter="url(#fl-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-FL-C · 3 노드 아키텍처</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#6D28D9">참여사 A·B·C ↔ 중앙 집계 서버 (FedAvg)</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">로컬 학습 → 가중치만 송신 → 글로벌 모델 → 분배 (Flower · NVFlare)</text>
   </g>
 
-  <!-- 연결선 (가중치 교환) -->
-  <g stroke="#FFD600" stroke-width="2.5" fill="none" stroke-dasharray="6 3" opacity="0.85">
-    <path d="M 230 145 L 360 200"/>
-    <path d="M 570 145 L 440 200"/>
-    <path d="M 400 245 L 400 290"/>
+  <!-- D 연합학습 패턴 (★) -->
+  <g transform="translate(40, 364)" filter="url(#fl-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-star)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-star)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="#0F172A">BLK-FL-D · 연합학습 패턴 ★</text>
+    <text x="490" y="18" text-anchor="end" class="en" font-size="9" fill="#0F172A">CORE</text>
+    <text x="14" y="50" class="ko" font-size="14" fill="#6D28D9">FedAvg + DP-SGD · ε-DP 프라이버시 예산</text>
+    <text x="14" y="68" class="ko-r" font-size="10" fill="#475569">원천 데이터 비공유 · 모델 가중치만 교환 · 역공학 리스크 차단</text>
+    <text x="14" y="84" class="ko-r" font-size="9" fill="#64748B">DP 노이즈 ε=[수치] · 데이터 주권 + ESG(G) 거버넌스 동시 만족</text>
   </g>
 
-  <!-- 차등 프라이버시 라벨 -->
-  <g transform="translate(265, 158)">
-    <rect x="0" y="0" width="60" height="16" rx="8" fill="#FFEB3B" stroke="#F57F17"/>
-    <text x="30" y="12" text-anchor="middle" class="ko" font-size="9" fill="#1A237E">DP 노이즈</text>
-  </g>
-  <g transform="translate(475, 158)">
-    <rect x="0" y="0" width="60" height="16" rx="8" fill="#FFEB3B" stroke="#F57F17"/>
-    <text x="30" y="12" text-anchor="middle" class="ko" font-size="9" fill="#1A237E">DP 노이즈</text>
-  </g>
-  <g transform="translate(370, 260)">
-    <rect x="0" y="0" width="60" height="16" rx="8" fill="#FFEB3B" stroke="#F57F17"/>
-    <text x="30" y="12" text-anchor="middle" class="ko" font-size="9" fill="#1A237E">DP 노이즈</text>
+  <!-- E 상생효과 -->
+  <g transform="translate(40, 464)" filter="url(#fl-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-FL-E · 상생효과</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#6D28D9">단독 [%] 정확도 → 클러스터 [%] 향상</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">중소 단독 불가능 모델 가용화 · 영업비밀 보존 · 산단 차원 경쟁력</text>
   </g>
 
-  <!-- 우측 상단 정보 -->
-  <g transform="translate(40, 200)" font-size="10" class="ko" fill="#4A148C">
-    <text x="0" y="0" font-weight="700">▸ 원천 데이터 비공유</text>
-    <text x="0" y="14">▸ 모델 가중치만 교환</text>
-    <text x="0" y="28">▸ 역공학 리스크 차단</text>
-  </g>
-  <g transform="translate(625, 200)" font-size="10" class="ko" fill="#4A148C">
-    <text x="0" y="0" font-weight="700">▸ ε-DP 프라이버시 예산</text>
-    <text x="0" y="14">▸ 영업비밀 보존 거버넌스</text>
-    <text x="0" y="28">▸ 데이터 주권 + ESG(G)</text>
+  <!-- F MLOps -->
+  <g transform="translate(40, 546)" filter="url(#fl-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-FL-F · MLOps 거버넌스</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#6D28D9">참여사별 학습 라운드 감사·롤백 정책</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">기여도 측정 · Byzantine 공격 방어 · 라운드별 모델 레지스트리</text>
   </g>
 
-  <!-- 하단 7 블록 인덱스 -->
-  <g transform="translate(40, 380)" font-size="9" class="ko" fill="#4A148C">
-    <text x="0" y="0" font-weight="700">7 블록 · A 거시 · B 데이터한계 · C 아키텍처 · D 거버넌스 · E 상생효과 · F MLOps · G FAQ      |      대중소상생 · 디지털경남 · 뿌리산업 첨단화</text>
+  <!-- G FAQ -->
+  <g transform="translate(40, 628)" filter="url(#fl-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#fl-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#fl-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-FL-G · FAQ·용어집</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#6D28D9">FedAvg · DP-SGD · 차등 프라이버시 표준</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">참여사 자격 + 데이터 표준화 + 라운드 절차 + 분쟁 조정</text>
+  </g>
+
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 720)" filter="url(#fl-shadow)">
+    <rect width="540" height="68" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#6D28D9">시너지 — 대중소상생 트랙 · 디지털경남 · 뿌리산업 첨단화 사업</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">SaaS 보안 모듈 D (IP 마스킹) + OEM 공급망 모듈 결합 가능 · 갭 14 해소</text>
+    <text x="14" y="54" class="ko-r" font-size="9" fill="#64748B">→ 패키지 4·5 + 다수 참여사 컨소시엄 사업 첨부</text>
   </g>
 </svg>

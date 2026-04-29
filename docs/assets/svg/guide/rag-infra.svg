@@ -1,118 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="RAG 인프라 운영 가이드 — 5 계층 수직 인포그래픽">
-  <title>RAG 인프라 운영 가이드 — 5 계층 (수집·임베딩·검색·생성·감사)</title>
-  <desc>RAG 인프라를 발생 순서·기능 분리에 따라 5 계층으로 구분 (1 수집·정제, 2 임베딩, 3 검색, 4 생성, 5 감사·운영) 수직 다이어그램. 가이드 군 7 번째 자산. 8 장 + 4 분기 + 강도 3 단계 통일.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="RAG 인프라 운영 가이드 — 5 계층 수직 세로형 인포그래픽"
+     class="zoomable">
+  <title>RAG 인프라 운영 가이드 (세로형) — 5 계층 (수집·임베딩·검색·생성·감사)</title>
+  <desc>RAG 인프라 5 계층 (수집·정제 → 임베딩 → 검색 → 생성 → 감사·운영) 수직 다이어그램 + 계층 별 핵심 컴포넌트 + 가이드 군 통일 (8 장 + 4 분기) 세로형 인포그래픽.</desc>
 
   <defs>
-    <linearGradient id="rag-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1565C0"/>
-      <stop offset="100%" stop-color="#42A5F5"/>
+    <linearGradient id="rag-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
-    <linearGradient id="rag-l1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/></linearGradient>
-    <linearGradient id="rag-l2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3949AB"/><stop offset="100%" stop-color="#5C6BC0"/></linearGradient>
-    <linearGradient id="rag-l3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6A1B9A"/><stop offset="100%" stop-color="#AB47BC"/></linearGradient>
-    <linearGradient id="rag-l4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00695C"/><stop offset="100%" stop-color="#26A69A"/></linearGradient>
-    <linearGradient id="rag-l5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F57F17"/><stop offset="100%" stop-color="#FFB300"/></linearGradient>
-    <filter id="rag-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    <linearGradient id="rag-step" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="rag-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="400" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 헤더 -->
-  <rect width="800" height="50" fill="url(#rag-header)"/>
-  <text x="30" y="32" class="ko" font-size="20" fill="white">RAG 인프라 운영 가이드 · 5 계층</text>
-  <text x="770" y="32" text-anchor="end" class="en" font-size="11" fill="rgba(255,255,255,0.8)">RAG INFRASTRUCTURE</text>
+  <!-- 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#rag-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">RAG 인프라 운영 가이드</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">RAG INFRASTRUCTURE — 5 LAYERS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">수집 → 임베딩 → 검색 → 생성 → 감사 5 계층</text>
 
-  <!-- 5 계층 수직 -->
-  <g transform="translate(40, 75)" filter="url(#rag-shadow)">
-    <!-- L1 수집·정제 -->
-    <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="500" height="42" rx="6" fill="url(#rag-l1)"/>
-      <circle cx="22" cy="21" r="14" fill="white" opacity="0.9"/>
-      <text x="22" y="26" text-anchor="middle" class="ko" font-size="13" fill="#1565C0">1</text>
-      <text x="46" y="18" class="ko" font-size="13" fill="white">문서 수집·정제</text>
-      <text x="46" y="34" class="ko-r" font-size="10" fill="rgba(255,255,255,0.9)">OCR · HWP/DOCX/PDF · LlamaParse · 청킹 · 메타 추출</text>
-      <!-- 화살표 (L1 → L2) -->
-      <path d="M 250 42 L 250 50 L 245 46 M 250 50 L 255 46" stroke="#37474F" stroke-width="2" fill="none"/>
-    </g>
-    <!-- L2 임베딩 -->
-    <g transform="translate(0, 52)">
-      <rect x="0" y="0" width="500" height="42" rx="6" fill="url(#rag-l2)"/>
-      <circle cx="22" cy="21" r="14" fill="white" opacity="0.9"/>
-      <text x="22" y="26" text-anchor="middle" class="ko" font-size="13" fill="#3949AB">2</text>
-      <text x="46" y="18" class="ko" font-size="13" fill="white">임베딩</text>
-      <text x="46" y="34" class="ko-r" font-size="10" fill="rgba(255,255,255,0.9)">BGE-M3 · KoSimCSE · KURE · LoRA·QLoRA 도메인 파인튜닝</text>
-      <path d="M 250 42 L 250 50 L 245 46 M 250 50 L 255 46" stroke="#37474F" stroke-width="2" fill="none"/>
-    </g>
-    <!-- L3 검색 -->
-    <g transform="translate(0, 104)">
-      <rect x="0" y="0" width="500" height="42" rx="6" fill="url(#rag-l3)"/>
-      <circle cx="22" cy="21" r="14" fill="white" opacity="0.9"/>
-      <text x="22" y="26" text-anchor="middle" class="ko" font-size="13" fill="#6A1B9A">3</text>
-      <text x="46" y="18" class="ko" font-size="13" fill="white">검색 (Dense + BM25)</text>
-      <text x="46" y="34" class="ko-r" font-size="10" fill="rgba(255,255,255,0.9)">Pinecone · Weaviate · Milvus · OpenSearch · Re-ranker · Top-K</text>
-      <path d="M 250 42 L 250 50 L 245 46 M 250 50 L 255 46" stroke="#37474F" stroke-width="2" fill="none"/>
-    </g>
-    <!-- L4 생성 -->
-    <g transform="translate(0, 156)">
-      <rect x="0" y="0" width="500" height="42" rx="6" fill="url(#rag-l4)"/>
-      <circle cx="22" cy="21" r="14" fill="white" opacity="0.9"/>
-      <text x="22" y="26" text-anchor="middle" class="ko" font-size="13" fill="#00695C">4</text>
-      <text x="46" y="18" class="ko" font-size="13" fill="white">생성 (Citation·환각 방지)</text>
-      <text x="46" y="34" class="ko-r" font-size="10" fill="rgba(255,255,255,0.9)">EXAONE · HyperCLOVA X · Mi:dm · Solar · sLM 가이드 §1 결합</text>
-      <path d="M 250 42 L 250 50 L 245 46 M 250 50 L 255 46" stroke="#37474F" stroke-width="2" fill="none"/>
-    </g>
-    <!-- L5 감사·운영 -->
-    <g transform="translate(0, 208)">
-      <rect x="0" y="0" width="500" height="42" rx="6" fill="url(#rag-l5)"/>
-      <circle cx="22" cy="21" r="14" fill="white" opacity="0.9"/>
-      <text x="22" y="26" text-anchor="middle" class="ko" font-size="13" fill="#F57F17">5</text>
-      <text x="46" y="18" class="ko" font-size="13" fill="white">감사·운영 (횡단 거버넌스)</text>
-      <text x="46" y="34" class="ko-r" font-size="10" fill="rgba(255,255,255,0.9)">MLOps 7 종 + RAGAS + 질의·응답 로그 + Citation 추적 + 권한 감사</text>
-    </g>
+  <!-- 5 계층 수직 (130~660) -->
+  <!-- L1 수집·정제 -->
+  <g transform="translate(40, 130)" filter="url(#rag-shadow)">
+    <rect width="520" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <circle cx="36" cy="60" r="22" fill="url(#rag-step)"/>
+    <text x="36" y="66" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">L1</text>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">수집·정제</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">INGEST</text>
+    <text x="80" y="48" class="ko-r" font-size="11" fill="#1E293B">PDF·HWP·Excel·DB·이미지·MES 로그 수집</text>
+    <text x="80" y="64" class="ko-r" font-size="9" fill="#64748B">OCR + 청킹 + PII 마스킹 + 메타데이터 부착</text>
+    <text x="80" y="82" class="ko" font-size="9" fill="#6366F1">→ 도메인 지식추출 §3 인터뷰 100 문항 활용</text>
   </g>
 
-  <!-- 우측 4 분기 -->
-  <g transform="translate(560, 80)">
-    <text x="0" y="0" class="ko" font-size="12" fill="#1A237E">4 분기 의사결정</text>
-    <g transform="translate(0, 10)">
-      <rect x="0" y="0" width="200" height="50" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
-      <text x="10" y="16" class="ko" font-size="10" fill="#1565C0">§2.1 벡터 DB 분기</text>
-      <text x="10" y="30" class="ko-r" font-size="9" fill="#37474F">매니지드 · 온프레 · 하이브리드</text>
-      <text x="10" y="44" class="ko-r" font-size="9" fill="#78909C">데이터 민감도 ① ~ ⑤</text>
-    </g>
-    <g transform="translate(0, 65)">
-      <rect x="0" y="0" width="200" height="50" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
-      <text x="10" y="16" class="ko" font-size="10" fill="#1565C0">§2.2 임베딩 모델 분기</text>
-      <text x="10" y="30" class="ko-r" font-size="9" fill="#37474F">외산 API · 공개 OSS · 파인튜닝</text>
-      <text x="10" y="44" class="ko-r" font-size="9" fill="#78909C">도메인 어휘 격차</text>
-    </g>
-    <g transform="translate(0, 120)">
-      <rect x="0" y="0" width="200" height="50" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
-      <text x="10" y="16" class="ko" font-size="10" fill="#1565C0">§2.3 검색 전략 분기</text>
-      <text x="10" y="30" class="ko-r" font-size="9" fill="#37474F">Dense · BM25 · 하이브리드</text>
-      <text x="10" y="44" class="ko-r" font-size="9" fill="#78909C">QPS · 정확도 균형</text>
-    </g>
-    <g transform="translate(0, 175)">
-      <rect x="0" y="0" width="200" height="50" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
-      <text x="10" y="16" class="ko" font-size="10" fill="#1565C0">§2.4 생성 LLM 분기</text>
-      <text x="10" y="30" class="ko-r" font-size="9" fill="#37474F">sLM 7 모델 (한국 5 + OSS + 외산)</text>
-      <text x="10" y="44" class="ko-r" font-size="9" fill="#78909C">민감도 라우팅</text>
-    </g>
+  <!-- 화살표 -->
+  <path d="M 300 230 L 300 240" stroke="#6366F1" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- L2 임베딩 -->
+  <g transform="translate(40, 235)" filter="url(#rag-shadow)">
+    <rect width="520" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <circle cx="36" cy="60" r="22" fill="url(#rag-step)"/>
+    <text x="36" y="66" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">L2</text>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">임베딩</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">EMBED</text>
+    <text x="80" y="48" class="ko-r" font-size="11" fill="#1E293B">한국어 임베딩 모델 + 벡터 DB</text>
+    <text x="80" y="64" class="ko-r" font-size="9" fill="#64748B">KoSimCSE·BGE·KURE + Qdrant·Chroma·Milvus</text>
+    <text x="80" y="82" class="ko" font-size="9" fill="#6366F1">→ 한국 sLM 가이드 §2 임베딩 모델 비교</text>
   </g>
 
-  <!-- 하단 통일 -->
-  <g transform="translate(40, 340)">
-    <rect x="0" y="0" width="720" height="45" rx="6" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
-    <text x="14" y="16" class="ko" font-size="11" fill="#E65100">가이드 군 7 번째 · track3 §4.2 의 7 단계를 5 계층 통합 · cross-reference (sLM·KPI·외부검증)</text>
-    <text x="14" y="32" class="ko-r" font-size="10" fill="#37474F">▸ 8 장 구조 · 4 분기 (벡터DB·임베딩·검색·LLM) · 강도 3 단계 (운영 부담 中·中·高)</text>
+  <!-- L3 검색 -->
+  <g transform="translate(40, 340)" filter="url(#rag-shadow)">
+    <rect width="520" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <circle cx="36" cy="60" r="22" fill="url(#rag-step)"/>
+    <text x="36" y="66" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">L3</text>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">검색·재정렬</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">RETRIEVE</text>
+    <text x="80" y="48" class="ko-r" font-size="11" fill="#1E293B">하이브리드 검색 + 리랭커</text>
+    <text x="80" y="64" class="ko-r" font-size="9" fill="#64748B">BM25 + Dense + Cross-Encoder + Top-k 필터링</text>
+    <text x="80" y="82" class="ko" font-size="9" fill="#6366F1">→ 청킹 전략 §4 + 권한 필터 §6</text>
+  </g>
+
+  <!-- L4 생성 -->
+  <g transform="translate(40, 445)" filter="url(#rag-shadow)">
+    <rect width="520" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <circle cx="36" cy="60" r="22" fill="url(#rag-step)"/>
+    <text x="36" y="66" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">L4</text>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">생성·근거 인용</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">GENERATE</text>
+    <text x="80" y="48" class="ko-r" font-size="11" fill="#1E293B">LLM (한국 sLM 우선) + 인용·할루시 차단</text>
+    <text x="80" y="64" class="ko-r" font-size="9" fill="#64748B">HyperCLOVA·EXAONE·Mi:dm·Solar + 출처 표기 강제</text>
+    <text x="80" y="82" class="ko" font-size="9" fill="#6366F1">→ Track 3 §5 프롬프트 + sLM 가이드 §1</text>
+  </g>
+
+  <!-- L5 감사 -->
+  <g transform="translate(40, 550)" filter="url(#rag-shadow)">
+    <rect width="520" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <circle cx="36" cy="60" r="22" fill="url(#rag-step)"/>
+    <text x="36" y="66" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">L5</text>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">감사·운영</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">AUDIT</text>
+    <text x="80" y="48" class="ko-r" font-size="11" fill="#1E293B">로그·드리프트·재학습 트리거</text>
+    <text x="80" y="64" class="ko-r" font-size="9" fill="#64748B">QA 셋 회귀 + 사용자 피드백 + 감사 로그</text>
+    <text x="80" y="82" class="ko" font-size="9" fill="#6366F1">→ MLOps §3 모니터링 + KPI G5 모델</text>
+  </g>
+
+  <!-- 강조 박스 (660~680) -->
+  <g transform="translate(40, 658)">
+    <rect width="520" height="22" rx="6" fill="#EEF2FF"/>
+    <text x="14" y="15" class="ko" font-size="10" fill="#4338CA">5 계층 발생 순서·기능 분리 — 어떤 계층 변경도 다른 계층에 영향 최소</text>
+  </g>
+
+  <!-- cross-reference 박스 (685~785) -->
+  <g transform="translate(40, 685)">
+    <rect width="520" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#D97706">cross-reference · 5 계층 + 한국 sLM + 도메인 지식추출</text>
+    <g font-size="9" class="ko-r" fill="#475569">
+      <text x="14" y="38">▸ L1 수집 — 도메인 지식추출 §3 (베테랑 인터뷰 100 문항)</text>
+      <text x="14" y="54">▸ L2 임베딩 + L4 생성 — 한국 sLM 가이드 §1·2 (7 모델 매트릭스)</text>
+      <text x="14" y="70">▸ L5 감사 — MLOps §3 + KPI 가이드 G5 (정확도·F1·드리프트)</text>
+      <text x="14" y="88" fill="#6366F1" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
+    </g>
   </g>
 </svg>

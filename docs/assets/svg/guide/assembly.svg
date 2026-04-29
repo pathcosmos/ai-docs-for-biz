@@ -1,122 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="사업계획서 조립 가이드 — 7 단계 조립 절차 인포그래픽">
-  <title>사업계획서 조립 가이드 — 7 단계 표준 절차</title>
-  <desc>워크스페이스 자산을 조합하여 단일 사업계획서 1 부를 완성하기까지의 표준 7 단계 흐름 (패키지 결정·5.2 카드 매핑·본문 인용·모듈 삽입·신규 작성·인용 표기·자체평가) 와 8 장 구조 + 4 분기 + 강도 3 단계 가이드 군 통일 표시.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="사업계획서 조립 가이드 — 7 단계 표준 절차 세로형 인포그래픽"
+     class="zoomable">
+  <title>사업계획서 조립 가이드 (세로형) — 7 단계 표준 절차</title>
+  <desc>워크스페이스 자산을 조합하여 단일 사업계획서 1 부를 완성하기까지의 표준 7 단계 흐름 (요청 식별 → 패키지 매칭 → 양식 검증 → 5.2 카드 매핑 → 본문 paste → 플레이스홀더 치환 → 시연·외부검증) 와 6 패키지 5.2 카드 매핑표 cross-reference 를 세로형으로 시각화한 운영 가이드 인포그래픽.</desc>
 
   <defs>
-    <linearGradient id="as-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1565C0"/>
-      <stop offset="100%" stop-color="#42A5F5"/>
+    <linearGradient id="as-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
-    <linearGradient id="as-circle" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFB300"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+    <linearGradient id="as-step" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
-    <filter id="as-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    <linearGradient id="as-final" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="as-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="400" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 헤더 -->
-  <rect width="800" height="50" fill="url(#as-header)"/>
-  <text x="30" y="32" class="ko" font-size="20" fill="white">사업계획서 조립 가이드 · 7 단계 절차</text>
-  <text x="770" y="32" text-anchor="end" class="en" font-size="11" fill="rgba(255,255,255,0.8)">ASSEMBLY GUIDE</text>
+  <!-- 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#as-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">사업계획서 조립 가이드</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">ASSEMBLY GUIDE — 7 STEPS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">자산 조합 → [고객사] 사업계획서 1 부 완성 표준 절차</text>
 
-  <!-- 7 단계 — 위 4 + 아래 3 배치 -->
-  <g transform="translate(40, 80)" filter="url(#as-shadow)">
-    <!-- 1행 4 단계 -->
-    <g>
-      <rect x="0" y="0" width="170" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="20" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="20" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">1</text>
-      <text x="42" y="25" class="ko" font-size="12" fill="#1A237E">패키지 결정</text>
-      <text x="10" y="48" class="ko-r" font-size="10" fill="#37474F">시나리오_카탈로그 §부록B</text>
-      <text x="10" y="60" class="ko-r" font-size="10" fill="#78909C">패키지 1~6 단일/복합</text>
+  <!-- 세로 타임라인 라인 -->
+  <line x1="80" y1="140" x2="80" y2="660" stroke="#6366F1" stroke-width="3" stroke-dasharray="6 4" opacity="0.4"/>
 
-      <rect x="180" y="0" width="170" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="200" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="200" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">2</text>
-      <text x="222" y="25" class="ko" font-size="12" fill="#1A237E">5.2 카드 매핑</text>
-      <text x="190" y="48" class="ko-r" font-size="10" fill="#37474F">5.2-a~f 인용 매핑표</text>
-      <text x="190" y="60" class="ko-r" font-size="10" fill="#78909C">갭 1 정합성 기반</text>
-
-      <rect x="360" y="0" width="170" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="380" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="380" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">3</text>
-      <text x="402" y="25" class="ko" font-size="12" fill="#1A237E">본문 인용</text>
-      <text x="370" y="48" class="ko-r" font-size="10" fill="#37474F">track1 §1~6 카드 + Top5</text>
-      <text x="370" y="60" class="ko-r" font-size="10" fill="#78909C">SCN ID 부정합 점검</text>
-
-      <rect x="540" y="0" width="170" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="560" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="560" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">4</text>
-      <text x="582" y="25" class="ko" font-size="12" fill="#1A237E">모듈 삽입</text>
-      <text x="550" y="48" class="ko-r" font-size="10" fill="#37474F">CBAM·안전·연합학습</text>
-      <text x="550" y="60" class="ko-r" font-size="10" fill="#78909C">표준 삽입 지점</text>
-    </g>
-
-    <!-- 연결선 (1행 → 2행) -->
-    <path d="M 645 65 Q 645 88 280 88 L 95 88 L 95 110" stroke="#1565C0" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
-
-    <!-- 2행 3 단계 -->
-    <g transform="translate(0, 110)">
-      <rect x="0" y="0" width="220" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="20" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="20" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">5</text>
-      <text x="42" y="25" class="ko" font-size="12" fill="#1A237E">신규 작성</text>
-      <text x="10" y="48" class="ko-r" font-size="10" fill="#37474F">신규 작성 비율 25~35 %</text>
-      <text x="10" y="60" class="ko-r" font-size="10" fill="#78909C">고객사 도메인·시스템 반영</text>
-
-      <rect x="240" y="0" width="220" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="260" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="260" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">6</text>
-      <text x="282" y="25" class="ko" font-size="12" fill="#1A237E">인용 출처 표기</text>
-      <text x="250" y="48" class="ko-r" font-size="10" fill="#37474F">[출처: 파일명 §섹션] 형식</text>
-      <text x="250" y="60" class="ko-r" font-size="10" fill="#78909C">발췌·요약 명시</text>
-
-      <rect x="490" y="0" width="220" height="65" rx="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-      <circle cx="510" cy="20" r="13" fill="url(#as-circle)"/>
-      <text x="510" y="25" text-anchor="middle" class="ko" font-size="13" fill="white">7</text>
-      <text x="532" y="25" class="ko" font-size="12" fill="#1A237E">자체평가</text>
-      <text x="500" y="48" class="ko-r" font-size="10" fill="#37474F">6 항목 (활용·갭·자연성</text>
-      <text x="500" y="60" class="ko-r" font-size="10" fill="#78909C">신규·비율·일관성)</text>
+  <!-- Step 1 (120~190) -->
+  <g transform="translate(40, 120)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">1</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">요청 식별</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">5 ITEMS</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">고객사·사업·기간·양식·시나리오 영역 입력</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ 운영_모드_Quickstart §1 + CLAUDE.md</text>
     </g>
   </g>
 
-  <!-- 패키지별 5.2 카드 매핑 미니 -->
-  <g transform="translate(40, 270)">
-    <text x="0" y="0" class="ko" font-size="11" fill="#1A237E">패키지별 5.2 카드 매핑 (정합성 기반)</text>
-    <g transform="translate(0, 8)" font-size="9" class="ko-r">
-      <rect x="0" y="0" width="115" height="22" rx="3" fill="#E3F2FD"/>
-      <text x="6" y="14" fill="#1565C0">P1 → b·c·d·e·f</text>
-      <rect x="120" y="0" width="115" height="22" rx="3" fill="#E3F2FD"/>
-      <text x="126" y="14" fill="#1565C0">P2 → a·b·d·e·f</text>
-      <rect x="240" y="0" width="115" height="22" rx="3" fill="#E3F2FD"/>
-      <text x="246" y="14" fill="#1565C0">P3 → a·c·f</text>
-      <rect x="360" y="0" width="115" height="22" rx="3" fill="#E3F2FD"/>
-      <text x="366" y="14" fill="#1565C0">P4 → b·c·f</text>
-      <rect x="480" y="0" width="115" height="22" rx="3" fill="#E3F2FD"/>
-      <text x="486" y="14" fill="#1565C0">P5 → b·c·e·f</text>
-      <rect x="600" y="0" width="110" height="22" rx="3" fill="#E3F2FD"/>
-      <text x="606" y="14" fill="#1565C0">P6 → b·c·d·e</text>
+  <!-- Step 2 (200~270) -->
+  <g transform="translate(40, 200)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">2</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">패키지 매칭</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">6 PKG</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">P1~P6 단일 또는 복합 매핑 (시나리오 카탈로그 §부록 B)</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ 사업 성격·고객사 규모·도메인 적합도 평가</text>
     </g>
   </g>
 
-  <!-- 하단 통일 패턴 -->
-  <g transform="translate(40, 315)">
-    <rect x="0" y="0" width="720" height="60" rx="6" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
-    <text x="14" y="18" class="ko" font-size="11" fill="#E65100">조립 가이드 · cross-reference 41 자산 · 갭 1·3 표준화</text>
-    <g transform="translate(14, 28)" font-size="10" class="ko-r" fill="#37474F">
-      <text y="10">▸ 8 장 구조 (절차·매핑·SCN·인용·모듈·신규·일관성·평가)</text>
-      <text y="24">▸ 4 분기 (패키지·인프라·UI·로드맵) · 강도 3 단계 적용</text>
+  <!-- Step 3 (280~350) -->
+  <g transform="translate(40, 280)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">3</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">양식 검증</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">PDF</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">사업양식 PDF 목차·필수항목·페이지 한계 추출</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ 양식검증_DX촉진_R&amp;D §3 절차</text>
+    </g>
+  </g>
+
+  <!-- Step 4 (360~430) -->
+  <g transform="translate(40, 360)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">4</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">5.2 카드 매핑</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">6 CARDS</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">5.2-a~f AI 엔진 변형카드 정합성 매핑</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ track1 §5.2 + 갭 1 정합성 표</text>
+    </g>
+  </g>
+
+  <!-- Step 5 (440~510) -->
+  <g transform="translate(40, 440)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">5</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">본문 블록 paste</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">15+11+5</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">Track 1·2·3 Top5 + 가이드 11 + 모듈 5 paste</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ 인용 출처 표기 [출처: 파일 §섹션] 표준</text>
+    </g>
+  </g>
+
+  <!-- Step 6 (520~590) -->
+  <g transform="translate(40, 520)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">6</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">플레이스홀더 치환</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">5 SLOTS</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">[고객사]·[공정]·[수치]·[기간]·[%] 일괄 치환</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ 신규 작성 비율 25~40 % (방법론 4.34)</text>
+    </g>
+  </g>
+
+  <!-- Step 7 (600~670) -->
+  <g transform="translate(40, 600)">
+    <circle cx="40" cy="35" r="24" fill="url(#as-step)" filter="url(#as-shadow)"/>
+    <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">7</text>
+    <g transform="translate(95, 0)" filter="url(#as-shadow)">
+      <rect width="425" height="65" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="22" rx="10" fill="#6366F1"/>
+      <rect y="16" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="16" class="ko" font-size="12" fill="white">시연·외부검증</text>
+      <text x="410" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">6 ITEMS</text>
+      <text x="14" y="38" class="ko-r" font-size="10" fill="#475569">자체평가 6 항목 + 외부검증 RACI 통과</text>
+      <text x="14" y="54" class="ko-r" font-size="9" fill="#6366F1">→ 외부검증_가이드 §3 + 작업로그 #N 추가</text>
+    </g>
+  </g>
+
+  <!-- 하단: cross-reference 박스 (685~785) -->
+  <g transform="translate(40, 685)">
+    <rect width="520" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#D97706">cross-reference · 6 패키지 5.2 카드 매핑 (정합성 기반)</text>
+    <g font-size="9" class="ko-r" fill="#475569">
+      <text x="14" y="38">▸ P1 대기업철강 → 5.2-b·c·d·e·f / P2 중견냉연 → a·b·d·e·f / P3 특수강관 → a·c·f</text>
+      <text x="14" y="54">▸ P4 고무·폴리머 → b·c·f / P5 정밀가공 → b·c·e·f / P6 유틸·ESG → b·c·d·e</text>
+      <text x="14" y="70">▸ 신규 작성 비율 25~40 % · 인용 출처 표기 274 회 표준 · 자체평가 6 항목</text>
+      <text x="14" y="88" fill="#6366F1" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
     </g>
   </g>
 </svg>

@@ -1,124 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="T-GRAPH — 노드 44 + 엣지 274 정적 그래프 fallback"
-     class="zoomable">
-  <title>T-GRAPH — 자산 인용 그래프 정적 fallback (노드 44 · 엣지 274)</title>
-  <desc>3 트랙(블루·퍼플·틸) + 6 패키지(앰버) + 11 운영 가이드(인디고) + 5 모듈(크림슨) 노드 44 개와 인용 엣지 274 개를 정적 좌표로 배치한 D3 인터랙티브 그래프의 백업 일러스트.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="Cross-reference 그래프 — 44 자산 + 109 인용 정적 fallback">
+  <title>T-GRAPH — 자산 인용 그래프 정적 fallback</title>
+  <desc>3 트랙(인디고·바이올렛·시안) + 6 패키지(앰버) + 11 운영 가이드(인디고 작은) + 5 모듈(로즈) 노드 44 개와 인용 엣지 109 개를 정적 좌표로 표현. D3 인터랙티브 그래프 미동작 환경 fallback.</desc>
 
   <defs>
-    <linearGradient id="tg-hd" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1A237E"/>
-      <stop offset="50%" stop-color="#6A1B9A"/>
-      <stop offset="100%" stop-color="#00695C"/>
+    <linearGradient id="tg-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#EC4899"/>
     </linearGradient>
-    <filter id="tg-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.20"/>
+    <filter id="tg-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#tg-hd)"/>
-  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">T-GRAPH · STATIC FALLBACK · 44 NODES · 274 EDGES</text>
-  <text x="32" y="54" class="ko" fill="white" font-size="22">자산 인용 그래프 — 정적 fallback</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 그래프 영역 (노드 + 엣지 단순화) -->
-  <g transform="translate(0, 80)">
-    <!-- 엣지 (대표적인 인용 흐름만 표시) -->
-    <g stroke="rgba(120,144,156,0.30)" stroke-width="1" fill="none">
-      <line x1="160" y1="80" x2="400" y2="100"/>
-      <line x1="160" y1="80" x2="640" y2="100"/>
-      <line x1="160" y1="80" x2="220" y2="180"/>
-      <line x1="160" y1="80" x2="380" y2="180"/>
-      <line x1="160" y1="80" x2="540" y2="180"/>
-      <line x1="400" y1="100" x2="220" y2="180"/>
-      <line x1="400" y1="100" x2="380" y2="180"/>
-      <line x1="400" y1="100" x2="540" y2="180"/>
-      <line x1="400" y1="100" x2="700" y2="180"/>
-      <line x1="640" y1="100" x2="380" y2="180"/>
-      <line x1="640" y1="100" x2="540" y2="180"/>
-      <line x1="640" y1="100" x2="700" y2="180"/>
-      <line x1="220" y1="180" x2="120" y2="240"/>
-      <line x1="380" y1="180" x2="280" y2="240"/>
-      <line x1="540" y1="180" x2="440" y2="240"/>
-      <line x1="540" y1="180" x2="600" y2="240"/>
-      <line x1="700" y1="180" x2="600" y2="240"/>
-      <line x1="700" y1="180" x2="720" y2="240"/>
-      <line x1="160" y1="80" x2="120" y2="240"/>
-      <line x1="160" y1="80" x2="280" y2="240"/>
-      <line x1="400" y1="100" x2="280" y2="240"/>
-      <line x1="400" y1="100" x2="440" y2="240"/>
-      <line x1="640" y1="100" x2="600" y2="240"/>
-      <line x1="640" y1="100" x2="720" y2="240"/>
+  <rect width="600" height="100" fill="url(#tg-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">CROSS-REFERENCE GRAPH · 44 NODES · 109 EDGES</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">자산 인용 그래프</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">3 트랙 + 6 패키지 + 11 운영 가이드 + 5 모듈 = 44 자산</text>
+
+  <!-- 그래프 영역 (120 ~ 660) — 580px 코어 -->
+  <g transform="translate(0, 120)">
+    <!-- 엣지 (대표 인용 흐름만 — 그래프 클러스터 표현) -->
+    <g stroke="rgba(99,102,241,0.18)" stroke-width="1" fill="none">
+      <line x1="180" y1="80" x2="420" y2="80"/>
+      <line x1="180" y1="80" x2="300" y2="200"/>
+      <line x1="180" y1="80" x2="120" y2="220"/>
+      <line x1="180" y1="80" x2="240" y2="220"/>
+      <line x1="180" y1="80" x2="360" y2="220"/>
+      <line x1="420" y1="80" x2="300" y2="200"/>
+      <line x1="420" y1="80" x2="240" y2="220"/>
+      <line x1="420" y1="80" x2="360" y2="220"/>
+      <line x1="420" y1="80" x2="480" y2="220"/>
+      <line x1="300" y1="200" x2="120" y2="220"/>
+      <line x1="300" y1="200" x2="240" y2="220"/>
+      <line x1="300" y1="200" x2="360" y2="220"/>
+      <line x1="300" y1="200" x2="480" y2="220"/>
+      <line x1="120" y1="220" x2="100" y2="360"/>
+      <line x1="240" y1="220" x2="200" y2="360"/>
+      <line x1="240" y1="220" x2="300" y2="360"/>
+      <line x1="360" y1="220" x2="400" y2="360"/>
+      <line x1="360" y1="220" x2="300" y2="360"/>
+      <line x1="480" y1="220" x2="500" y2="360"/>
+      <line x1="180" y1="80" x2="80" y2="440"/>
+      <line x1="420" y1="80" x2="520" y2="440"/>
+      <line x1="300" y1="200" x2="300" y2="440"/>
+      <line x1="120" y1="220" x2="160" y2="440"/>
+      <line x1="480" y1="220" x2="440" y2="440"/>
     </g>
 
-    <!-- 트랙 노드 (3 개, 큰 원) -->
+    <!-- 트랙 노드 (3 큰 원) -->
     <g filter="url(#tg-shadow)">
-      <circle cx="160" cy="80" r="28" fill="#1565C0"/>
-      <text x="160" y="84" text-anchor="middle" class="ko" fill="white" font-size="11">Track 1</text>
-      <circle cx="400" cy="100" r="28" fill="#7B1FA2"/>
-      <text x="400" y="104" text-anchor="middle" class="ko" fill="white" font-size="11">Track 2</text>
-      <circle cx="640" cy="100" r="28" fill="#00897B"/>
-      <text x="640" y="104" text-anchor="middle" class="ko" fill="white" font-size="11">Track 3</text>
+      <circle cx="180" cy="80" r="32" fill="#6366F1"/>
+      <text x="180" y="78" text-anchor="middle" class="ko" font-size="11" fill="white">Track 1</text>
+      <text x="180" y="93" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.85)">제조 AI</text>
+      <circle cx="420" cy="80" r="32" fill="#8B5CF6"/>
+      <text x="420" y="78" text-anchor="middle" class="ko" font-size="11" fill="white">Track 2</text>
+      <text x="420" y="93" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.85)">MLOps</text>
+      <circle cx="300" cy="200" r="32" fill="#06B6D4"/>
+      <text x="300" y="198" text-anchor="middle" class="ko" font-size="11" fill="white">Track 3</text>
+      <text x="300" y="213" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.85)">LLM·RAG</text>
     </g>
 
-    <!-- 패키지 노드 (6 개, 앰버) -->
-    <g filter="url(#tg-shadow)" font-size="9" class="ko" fill="#1A237E">
-      <circle cx="100" cy="180" r="16" fill="#FFB300"/>
-      <text x="100" y="184" text-anchor="middle">P1</text>
-      <circle cx="220" cy="180" r="16" fill="#FFB300"/>
-      <text x="220" y="184" text-anchor="middle">P2</text>
-      <circle cx="380" cy="180" r="16" fill="#FFB300"/>
-      <text x="380" y="184" text-anchor="middle">P3</text>
-      <circle cx="540" cy="180" r="16" fill="#FFB300"/>
-      <text x="540" y="184" text-anchor="middle">P4</text>
-      <circle cx="700" cy="180" r="16" fill="#FFB300"/>
-      <text x="700" y="184" text-anchor="middle">P5</text>
-      <circle cx="460" cy="50" r="16" fill="#FFB300"/>
-      <text x="460" y="54" text-anchor="middle">P6</text>
+    <!-- 패키지 노드 (6 앰버) -->
+    <g filter="url(#tg-shadow)" font-size="9" class="ko" fill="white">
+      <circle cx="120" cy="220" r="18" fill="#F59E0B"/>
+      <text x="120" y="224" text-anchor="middle">P1</text>
+      <circle cx="240" cy="220" r="18" fill="#F59E0B"/>
+      <text x="240" y="224" text-anchor="middle">P2</text>
+      <circle cx="360" cy="220" r="18" fill="#F59E0B"/>
+      <text x="360" y="224" text-anchor="middle">P3</text>
+      <circle cx="480" cy="220" r="18" fill="#F59E0B"/>
+      <text x="480" y="224" text-anchor="middle">P4</text>
+      <circle cx="180" cy="320" r="18" fill="#F59E0B"/>
+      <text x="180" y="324" text-anchor="middle">P5</text>
+      <circle cx="420" cy="320" r="18" fill="#F59E0B"/>
+      <text x="420" y="324" text-anchor="middle">P6</text>
     </g>
 
-    <!-- 운영 가이드 노드 (11 개, 인디고 작은 원) -->
-    <g fill="#3949AB">
-      <circle cx="40" cy="240" r="9"/>
-      <circle cx="80" cy="240" r="9"/>
-      <circle cx="120" cy="240" r="9"/>
-      <circle cx="200" cy="240" r="9"/>
-      <circle cx="240" cy="240" r="9"/>
-      <circle cx="280" cy="240" r="9"/>
-      <circle cx="360" cy="240" r="9"/>
-      <circle cx="400" cy="240" r="9"/>
-      <circle cx="440" cy="240" r="9"/>
-      <circle cx="520" cy="240" r="9"/>
-      <circle cx="600" cy="240" r="9"/>
+    <!-- 운영 가이드 노드 (11 인디고 작은 원) -->
+    <g fill="#3949AB" font-size="7" class="ko">
+      <circle cx="60" cy="360" r="9"/>
+      <circle cx="100" cy="360" r="9"/>
+      <circle cx="140" cy="360" r="9"/>
+      <circle cx="180" cy="400" r="9"/>
+      <circle cx="220" cy="400" r="9"/>
+      <circle cx="260" cy="400" r="9"/>
+      <circle cx="300" cy="360" r="9"/>
+      <circle cx="340" cy="400" r="9"/>
+      <circle cx="380" cy="400" r="9"/>
+      <circle cx="420" cy="400" r="9"/>
+      <circle cx="500" cy="360" r="9"/>
     </g>
 
-    <!-- 모듈 노드 (5 개, 크림슨) -->
-    <g fill="#C62828">
-      <circle cx="660" cy="240" r="10"/>
-      <circle cx="700" cy="240" r="10"/>
-      <circle cx="740" cy="240" r="10"/>
-      <circle cx="60" cy="40" r="10"/>
-      <circle cx="740" cy="40" r="10"/>
+    <!-- 모듈 노드 (5 로즈) -->
+    <g fill="#F43F5E" filter="url(#tg-shadow)" font-size="8" class="ko">
+      <circle cx="80" cy="440" r="13"/>
+      <text x="80" y="443" text-anchor="middle" fill="white">CB</text>
+      <circle cx="160" cy="440" r="13"/>
+      <text x="160" y="443" text-anchor="middle" fill="white">SF</text>
+      <circle cx="300" cy="440" r="13"/>
+      <text x="300" y="443" text-anchor="middle" fill="white">FL</text>
+      <circle cx="440" cy="440" r="13"/>
+      <text x="440" y="443" text-anchor="middle" fill="white">OE</text>
+      <circle cx="520" cy="440" r="13"/>
+      <text x="520" y="443" text-anchor="middle" fill="white">SS</text>
+    </g>
+
+    <!-- 통계 박스 -->
+    <g transform="translate(40, 480)" filter="url(#tg-shadow)">
+      <rect width="520" height="80" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="20" y="22" class="ko" font-size="12" fill="#4338CA">그래프 통계</text>
+      <g transform="translate(20, 36)" font-size="10" class="ko">
+        <circle cx="6" cy="-3" r="6" fill="#6366F1"/>
+        <text x="18" y="0" fill="#0F172A">3 트랙</text>
+        <circle cx="86" cy="-3" r="6" fill="#F59E0B"/>
+        <text x="98" y="0" fill="#0F172A">6 패키지</text>
+        <circle cx="180" cy="-3" r="6" fill="#3949AB"/>
+        <text x="192" y="0" fill="#0F172A">11 운영 가이드</text>
+        <circle cx="312" cy="-3" r="6" fill="#F43F5E"/>
+        <text x="324" y="0" fill="#0F172A">5 모듈</text>
+      </g>
+      <text x="20" y="68" class="ko-r" font-size="9" fill="#475569">총 44 노드 · 274 인용 출처 (109 직접 엣지) · 9 자산군 색상 클러스터</text>
     </g>
   </g>
 
-  <!-- 범례 + 통계 -->
-  <rect x="0" y="335" width="800" height="65" fill="#F5F7FA"/>
-  <g transform="translate(32, 358)" class="ko" font-size="11">
-    <circle cx="6" cy="-3" r="6" fill="#1565C0"/>
-    <text x="20" y="0" fill="#1A237E">3 트랙</text>
-    <circle cx="106" cy="-3" r="6" fill="#FFB300"/>
-    <text x="120" y="0" fill="#1A237E">6 패키지</text>
-    <circle cx="220" cy="-3" r="6" fill="#3949AB"/>
-    <text x="234" y="0" fill="#1A237E">11 운영 가이드</text>
-    <circle cx="370" cy="-3" r="6" fill="#C62828"/>
-    <text x="384" y="0" fill="#1A237E">5 모듈</text>
-    <text x="470" y="0" fill="#1A237E" font-weight="700">노드 44 · 엣지 274</text>
-    <text x="650" y="0" fill="#37474F" font-size="10">D3 graph fallback</text>
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 720)" filter="url(#tg-shadow)">
+    <rect width="540" height="68" rx="8" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#4338CA">D3 인터랙티브 그래프 안내</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">JS 동작 환경에서는 docs/graph 페이지에서 D3 force-directed 그래프 인터랙션 가능</text>
+    <text x="14" y="54" class="ko-r" font-size="9" fill="#64748B">노드 클릭 → 자산 페이지 이동 · 엣지 hover → 인용 출처 미리보기 · 색상 = 9 자산 군</text>
   </g>
-  <text x="32" y="386" class="ko-r" font-size="10" fill="#546E7A">사이트의 인터랙티브 그래프 미동작 환경 대응 — 정적 SVG</text>
 </svg>

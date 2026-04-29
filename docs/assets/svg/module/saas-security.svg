@@ -1,140 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="모듈 — SaaS·클라우드 보안 거버넌스 (BLK-CSEC-A~G 7 블록)"
-     class="zoomable">
-  <title>SaaS·클라우드 보안 모듈 — 5 등급 분류 + 자물쇠 도식</title>
-  <desc>SaaS·클라우드 도입 사업의 보안 거버넌스 모듈 — 5 등급(공개·내부·민감·기밀·영업비밀) 분류 체계와 등급별 자물쇠 강도(CSAP·ISMS-P 정합)를 시각화한 도식.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="모듈 — SaaS·클라우드 보안 5 등급 + 7 블록 세로 카드">
+  <title>SaaS·클라우드 보안 모듈 — 5 등급 민감도 분류 + 7 블록</title>
+  <desc>SaaS·클라우드 도입 사업의 보안 거버넌스 모듈 — 5 등급(공개·내부·민감·기밀·영업비밀) 자물쇠 도식 + 7 블록(A 환경·B 분류·C 아키·D IP 마스킹·E 정성·F 라우팅·G 용어) 위에서 아래로 시각화.</desc>
 
   <defs>
-    <linearGradient id="csec-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1A237E"/>
-      <stop offset="100%" stop-color="#283593"/>
+    <linearGradient id="ss-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
-    <linearGradient id="csec-1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#90CAF9"/><stop offset="100%" stop-color="#42A5F5"/></linearGradient>
-    <linearGradient id="csec-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7986CB"/><stop offset="100%" stop-color="#3F51B5"/></linearGradient>
-    <linearGradient id="csec-3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5C6BC0"/><stop offset="100%" stop-color="#283593"/></linearGradient>
-    <linearGradient id="csec-4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3949AB"/><stop offset="100%" stop-color="#1A237E"/></linearGradient>
-    <linearGradient id="csec-5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#283593"/><stop offset="100%" stop-color="#0D1457"/></linearGradient>
-    <filter id="csec-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.20"/>
+    <linearGradient id="ss-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="ss-star" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="ss-l1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A5B4FC"/><stop offset="100%" stop-color="#818CF8"/></linearGradient>
+    <linearGradient id="ss-l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#6366F1"/></linearGradient>
+    <linearGradient id="ss-l3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient>
+    <linearGradient id="ss-l4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#3730A3"/></linearGradient>
+    <linearGradient id="ss-l5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3730A3"/><stop offset="100%" stop-color="#1E1B4B"/></linearGradient>
+    <filter id="ss-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#csec-header)"/>
-  <text x="30" y="32" class="ko" font-size="20" fill="white">모듈 · SaaS · 클라우드 보안 거버넌스</text>
-  <text x="30" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">CSAP · ISMS-P · MULTI-TENANCY · DATA SOVEREIGNTY · 7 BLOCKS</text>
-  <text x="770" y="42" class="ko" font-size="13" fill="#C5CAE9" text-anchor="end">5 등급 분류 + 자물쇠 도식</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <rect width="600" height="100" fill="url(#ss-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SAAS · CLOUD SECURITY · CSAP · ISMS-P</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">SaaS·클라우드 보안</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">5 등급 민감도 분류 + 7 블록 거버넌스</text>
 
   <!-- 5 등급 자물쇠 도식 (좌→우 강도 증가) -->
-  <!-- 등급 1: 공개 -->
-  <g transform="translate(40, 110)" filter="url(#csec-shadow)">
-    <rect width="135" height="180" rx="10" fill="white" stroke="#90CAF9" stroke-width="2"/>
-    <rect width="135" height="34" rx="10" fill="url(#csec-1)"/>
-    <rect y="22" width="135" height="12" fill="url(#csec-1)"/>
-    <text x="68" y="22" text-anchor="middle" class="ko" font-size="13" fill="white">① 공개</text>
-    <!-- 자물쇠 (열림) -->
-    <g transform="translate(57, 50)">
-      <path d="M 6 16 Q 6 4 16 4 Q 26 4 26 16" fill="none" stroke="#42A5F5" stroke-width="2.5"/>
-      <rect x="2" y="16" width="20" height="14" rx="2" fill="#90CAF9"/>
+  <g transform="translate(30, 120)">
+    <rect width="540" height="120" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#ss-shadow)"/>
+    <text x="14" y="20" class="ko" font-size="12" fill="#3730A3">5 등급 민감도 자물쇠</text>
+    <!-- 등급 1 -->
+    <g transform="translate(20, 32)">
+      <rect width="96" height="80" rx="6" fill="url(#ss-l1)"/>
+      <g transform="translate(36, 12)">
+        <path d="M 6 16 Q 6 4 16 4 Q 26 4 26 16" fill="none" stroke="white" stroke-width="2"/>
+        <rect x="2" y="16" width="20" height="14" rx="2" fill="white"/>
+      </g>
+      <text x="48" y="62" text-anchor="middle" class="ko" font-size="10" fill="white">① 공개</text>
+      <text x="48" y="74" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.9)">외부 LLM OK</text>
     </g>
-    <text x="68" y="110" text-anchor="middle" class="ko" font-size="10" fill="#1565C0">홍보·공개 자료</text>
-    <text x="68" y="128" text-anchor="middle" class="ko" font-size="9" fill="#1976D2">외부 LLM 가능</text>
-    <text x="68" y="148" text-anchor="middle" class="en" font-size="8" fill="#42A5F5">TLS 1.2+</text>
-    <text x="68" y="168" text-anchor="middle" class="ko" font-size="8" fill="#1976D2">SaaS 적재 OK</text>
-  </g>
-
-  <!-- 등급 2: 내부 -->
-  <g transform="translate(190, 110)" filter="url(#csec-shadow)">
-    <rect width="135" height="180" rx="10" fill="white" stroke="#7986CB" stroke-width="2"/>
-    <rect width="135" height="34" rx="10" fill="url(#csec-2)"/>
-    <rect y="22" width="135" height="12" fill="url(#csec-2)"/>
-    <text x="68" y="22" text-anchor="middle" class="ko" font-size="13" fill="white">② 내부</text>
-    <g transform="translate(57, 50)">
-      <path d="M 6 16 Q 6 4 16 4 Q 26 4 26 16" fill="none" stroke="#3F51B5" stroke-width="2.5"/>
-      <rect x="2" y="16" width="20" height="14" rx="2" fill="#7986CB"/>
-      <circle cx="14" cy="22" r="2" fill="white"/>
+    <!-- 등급 2 -->
+    <g transform="translate(122, 32)">
+      <rect width="96" height="80" rx="6" fill="url(#ss-l2)"/>
+      <g transform="translate(36, 12)">
+        <path d="M 6 16 Q 6 4 16 4 Q 26 4 26 16" fill="none" stroke="white" stroke-width="2.2"/>
+        <rect x="2" y="16" width="20" height="14" rx="2" fill="white"/>
+        <circle cx="12" cy="22" r="2" fill="#6366F1"/>
+      </g>
+      <text x="48" y="62" text-anchor="middle" class="ko" font-size="10" fill="white">② 내부</text>
+      <text x="48" y="74" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.9)">SSO·AES-256</text>
     </g>
-    <text x="68" y="110" text-anchor="middle" class="ko" font-size="10" fill="#283593">생산 실적·KPI</text>
-    <text x="68" y="128" text-anchor="middle" class="ko" font-size="9" fill="#303F9F">외부 LLM 차단</text>
-    <text x="68" y="148" text-anchor="middle" class="en" font-size="8" fill="#3F51B5">SSO + AES-256</text>
-    <text x="68" y="168" text-anchor="middle" class="ko" font-size="8" fill="#303F9F">SaaS 적재 OK</text>
-  </g>
-
-  <!-- 등급 3: 민감 -->
-  <g transform="translate(340, 110)" filter="url(#csec-shadow)">
-    <rect width="135" height="180" rx="10" fill="white" stroke="#5C6BC0" stroke-width="2"/>
-    <rect width="135" height="34" rx="10" fill="url(#csec-3)"/>
-    <rect y="22" width="135" height="12" fill="url(#csec-3)"/>
-    <text x="68" y="22" text-anchor="middle" class="ko" font-size="13" fill="white">③ 민감</text>
-    <g transform="translate(55, 50)">
-      <path d="M 6 18 Q 6 4 18 4 Q 30 4 30 18" fill="none" stroke="#283593" stroke-width="3"/>
-      <rect x="0" y="18" width="28" height="18" rx="2" fill="#5C6BC0"/>
-      <circle cx="14" cy="26" r="2.5" fill="#FFD600"/>
+    <!-- 등급 3 -->
+    <g transform="translate(224, 32)">
+      <rect width="96" height="80" rx="6" fill="url(#ss-l3)"/>
+      <g transform="translate(34, 10)">
+        <path d="M 6 18 Q 6 4 18 4 Q 30 4 30 18" fill="none" stroke="white" stroke-width="2.5"/>
+        <rect x="0" y="18" width="28" height="18" rx="2" fill="white"/>
+        <circle cx="14" cy="26" r="2.5" fill="#FBBF24"/>
+      </g>
+      <text x="48" y="62" text-anchor="middle" class="ko" font-size="10" fill="white">③ 민감</text>
+      <text x="48" y="74" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.9)">CSAP 하·중</text>
     </g>
-    <text x="68" y="110" text-anchor="middle" class="ko" font-size="10" fill="#1A237E">CNC 가공 로그</text>
-    <text x="68" y="128" text-anchor="middle" class="ko" font-size="9" fill="#283593">검사 결과·BOM 일부</text>
-    <text x="68" y="148" text-anchor="middle" class="en" font-size="8" fill="#3949AB">CSAP 하·중 등급</text>
-    <text x="68" y="168" text-anchor="middle" class="ko" font-size="8" fill="#283593">SaaS 적재 + 마스킹</text>
-  </g>
-
-  <!-- 등급 4: 기밀 -->
-  <g transform="translate(490, 110)" filter="url(#csec-shadow)">
-    <rect width="135" height="180" rx="10" fill="white" stroke="#3949AB" stroke-width="2"/>
-    <rect width="135" height="34" rx="10" fill="url(#csec-4)"/>
-    <rect y="22" width="135" height="12" fill="url(#csec-4)"/>
-    <text x="68" y="22" text-anchor="middle" class="ko" font-size="13" fill="white">④ 기밀</text>
-    <g transform="translate(53, 50)">
-      <path d="M 8 20 Q 8 4 20 4 Q 32 4 32 20" fill="none" stroke="#0D1457" stroke-width="3.5"/>
-      <rect x="0" y="20" width="32" height="20" rx="2" fill="#3949AB"/>
-      <circle cx="16" cy="29" r="3" fill="#FFD600"/>
-      <rect x="14" y="30" width="4" height="6" fill="#FFD600"/>
+    <!-- 등급 4 -->
+    <g transform="translate(326, 32)">
+      <rect width="96" height="80" rx="6" fill="url(#ss-l4)"/>
+      <g transform="translate(32, 8)">
+        <path d="M 8 20 Q 8 4 20 4 Q 32 4 32 20" fill="none" stroke="white" stroke-width="3"/>
+        <rect x="0" y="20" width="32" height="20" rx="2" fill="white"/>
+        <circle cx="16" cy="29" r="3" fill="#FBBF24"/>
+      </g>
+      <text x="48" y="62" text-anchor="middle" class="ko" font-size="10" fill="white">④ 기밀</text>
+      <text x="48" y="74" text-anchor="middle" class="ko-r" font-size="8" fill="rgba(255,255,255,0.9)">CSAP 상·ISMS-P</text>
     </g>
-    <text x="68" y="115" text-anchor="middle" class="ko" font-size="10" fill="#0D1457">고객사 사양서</text>
-    <text x="68" y="133" text-anchor="middle" class="ko" font-size="9" fill="#1A237E">NDA 대상 데이터</text>
-    <text x="68" y="153" text-anchor="middle" class="en" font-size="8" fill="#283593">CSAP 상 + ISMS-P</text>
-    <text x="68" y="170" text-anchor="middle" class="ko" font-size="8" fill="#1A237E">국내 CSP 한정</text>
-  </g>
-
-  <!-- 등급 5: 영업비밀 -->
-  <g transform="translate(640, 110)" filter="url(#csec-shadow)">
-    <rect width="135" height="180" rx="10" fill="white" stroke="#0D1457" stroke-width="2.5"/>
-    <rect width="135" height="34" rx="10" fill="url(#csec-5)"/>
-    <rect y="22" width="135" height="12" fill="url(#csec-5)"/>
-    <text x="68" y="22" text-anchor="middle" class="ko" font-size="13" fill="white">⑤ 영업비밀</text>
-    <g transform="translate(50, 48)">
-      <path d="M 10 22 Q 10 4 22 4 Q 34 4 34 22" fill="none" stroke="#000" stroke-width="4"/>
-      <rect x="0" y="22" width="36" height="22" rx="2" fill="#0D1457"/>
-      <circle cx="18" cy="32" r="3.5" fill="#FFD600"/>
-      <rect x="16" y="33" width="4" height="8" fill="#FFD600"/>
-      <text x="18" y="56" text-anchor="middle" font-size="9" fill="#C62828" font-weight="900">!</text>
+    <!-- 등급 5 -->
+    <g transform="translate(428, 32)">
+      <rect width="96" height="80" rx="6" fill="url(#ss-l5)"/>
+      <g transform="translate(30, 6)">
+        <path d="M 10 22 Q 10 4 22 4 Q 34 4 34 22" fill="none" stroke="white" stroke-width="3.5"/>
+        <rect x="0" y="22" width="36" height="22" rx="2" fill="white"/>
+        <circle cx="18" cy="32" r="3.5" fill="#FBBF24"/>
+      </g>
+      <text x="48" y="62" text-anchor="middle" class="ko" font-size="10" fill="white">⑤ 영업비밀</text>
+      <text x="48" y="74" text-anchor="middle" class="ko-r" font-size="8" fill="#FCA5A5">SaaS 적재 금지</text>
     </g>
-    <text x="68" y="120" text-anchor="middle" class="ko" font-size="10" fill="#000">DWG · STEP · IFC</text>
-    <text x="68" y="138" text-anchor="middle" class="ko" font-size="9" fill="#0D1457">정밀가공 도면</text>
-    <text x="68" y="158" text-anchor="middle" class="en" font-size="8" fill="#1A237E">온프레 sLM 강제</text>
-    <text x="68" y="174" text-anchor="middle" class="ko" font-size="8" fill="#0D1457" font-weight="700">SaaS 적재 금지</text>
   </g>
 
-  <!-- 강도 증가 화살표 -->
-  <g transform="translate(40, 305)">
-    <line x1="0" y1="0" x2="735" y2="0" stroke="#F57F17" stroke-width="2" marker-end="url(#csec-arrow)"/>
-    <text x="367" y="-4" text-anchor="middle" class="ko" font-size="9" fill="#F57F17">민감도 / 보안 강도 증가</text>
+  <!-- 7 블록 — A 환경 -->
+  <g transform="translate(40, 256)" filter="url(#ss-shadow)">
+    <rect width="520" height="56" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-card)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-card)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="white">BLK-CSEC-A · 거시 환경 (CSAP·ISMS-P)</text>
+    <text x="14" y="42" class="ko-r" font-size="10" fill="#475569">국내 CSP 우선 (네이버·KT·NHN) · 외산 (AWS·Azure) DPA 부속</text>
   </g>
-  <defs>
-    <marker id="csec-arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,0 10,5 0,10" fill="#F57F17"/>
-    </marker>
-  </defs>
 
-  <!-- 하단 7 블록 -->
-  <g transform="translate(40, 330)" font-size="10" class="ko" fill="#1A237E">
-    <text x="0" y="0" font-weight="700">7 블록 — A 거시(CSAP) · B 분류 · C 아키(SSO·암호화) · D IP 마스킹 ★ · E 정성 · F SaaS RAG · G 용어</text>
+  <!-- B 분류 -->
+  <g transform="translate(40, 320)" filter="url(#ss-shadow)">
+    <rect width="520" height="56" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-card)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-card)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="white">BLK-CSEC-B · 5 등급 분류 체계</text>
+    <text x="14" y="42" class="ko-r" font-size="10" fill="#475569">공개·내부·민감·기밀·영업비밀 · 데이터 카탈로그 자동 분류</text>
   </g>
-  <g transform="translate(40, 365)" font-size="10" class="ko" fill="#1A237E">
-    <text x="0" y="0" font-weight="700">패키지 5 (정밀가공 SaaS) 핵심 · 국내 CSP(네이버·KT·NHN) 우선 · 외산(AWS·Azure) DPA 부속</text>
-    <text x="0" y="16" font-size="9" fill="#3949AB">Track 3 § 5.6 권한·민감정보 라우팅 — 영업비밀 질의 → 온프레 sLM 강제 우회</text>
+
+  <!-- C 아키 -->
+  <g transform="translate(40, 384)" filter="url(#ss-shadow)">
+    <rect width="520" height="56" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-card)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-card)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="white">BLK-CSEC-C · 보안 아키텍처</text>
+    <text x="14" y="42" class="ko-r" font-size="10" fill="#475569">SSO + 암호화 + 멀티테넌시 분리 + 감사 로그 + WAF</text>
+  </g>
+
+  <!-- D IP 마스킹 (★) -->
+  <g transform="translate(40, 448)" filter="url(#ss-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-star)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-star)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="#0F172A">BLK-CSEC-D · IP 마스킹 ★</text>
+    <text x="490" y="16" text-anchor="end" class="en" font-size="9" fill="#0F172A">CORE</text>
+    <text x="14" y="42" class="ko" font-size="13" fill="#3730A3">민감 데이터 마스킹 + 토크나이제이션</text>
+    <text x="14" y="60" class="ko-r" font-size="9" fill="#64748B">DWG·STEP·BOM 식별자 → 익명 토큰 변환 · 외부 LLM 노출 차단</text>
+  </g>
+
+  <!-- E 정성 -->
+  <g transform="translate(40, 530)" filter="url(#ss-shadow)">
+    <rect width="520" height="56" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-card)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-card)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="white">BLK-CSEC-E · 정성효과</text>
+    <text x="14" y="42" class="ko-r" font-size="10" fill="#475569">영업비밀 보존 · 컴플라이언스 신뢰 · OEM 보안 심사 통과</text>
+  </g>
+
+  <!-- F SaaS RAG 라우팅 -->
+  <g transform="translate(40, 594)" filter="url(#ss-shadow)">
+    <rect width="520" height="56" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-card)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-card)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="white">BLK-CSEC-F · 권한·민감정보 라우팅</text>
+    <text x="14" y="42" class="ko-r" font-size="10" fill="#475569">영업비밀 질의 → 온프레 sLM 강제 우회 · 외부 LLM 라우팅 차단</text>
+  </g>
+
+  <!-- G 용어 -->
+  <g transform="translate(40, 658)" filter="url(#ss-shadow)">
+    <rect width="520" height="56" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="22" rx="8" fill="url(#ss-card)"/>
+    <rect y="14" width="520" height="8" fill="url(#ss-card)"/>
+    <text x="14" y="16" class="ko" font-size="11" fill="white">BLK-CSEC-G · 용어·표준</text>
+    <text x="14" y="42" class="ko-r" font-size="10" fill="#475569">CSAP·ISMS-P·DPA·KISA · 등급별 통제 항목 매핑 표</text>
+  </g>
+
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 728)" filter="url(#ss-shadow)">
+    <rect width="540" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#3730A3">cross-ref — 패키지 5 (정밀가공 SaaS) 핵심 · 갭 11 해소</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">Track 3 §5.6 권한·민감정보 라우팅 정합 · OEM 모듈 + 연합학습 모듈 결합</text>
+    <text x="14" y="52" class="ko-r" font-size="9" fill="#64748B">→ 영업비밀 질의 → 온프레 sLM 강제 · 외부 LLM 라우팅 차단</text>
   </g>
 </svg>

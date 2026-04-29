@@ -1,144 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="방법론 총론 — 36 방법론 (4.1~4.36) 카테고리 트리"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="방법론 총론 — 47 방법론 4 군 분류 세로형"
      class="zoomable">
-  <title>방법론 총론 — 36 방법론 (4.1~4.36) 카테고리 트리</title>
-  <desc>방법론 총론의 36 재사용 방법론(4.1~4.36)을 5 대 카테고리(작성·아키텍처·검증·거버넌스·재무) 트리 구조로 시각화한 인포그래픽.</desc>
+  <title>방법론 총론 (세로형) — 47 방법론 4 군 분류</title>
+  <desc>방법론 총론 47 종을 4 군 (A 사업계획·B 기술·C 운영·D 메타) 으로 분류하고 핵심 5 ★ 방법론을 강조한 세로형 카테고리 트리. 군별 방법론 수와 대표 항목 인덱스 표시.</desc>
 
   <defs>
-    <linearGradient id="m-hd" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1A237E"/>
-      <stop offset="25%" stop-color="#6A1B9A"/>
-      <stop offset="50%" stop-color="#00695C"/>
-      <stop offset="75%" stop-color="#F57F17"/>
-      <stop offset="100%" stop-color="#C62828"/>
+    <linearGradient id="meth-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
     </linearGradient>
-    <filter id="m-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.18"/>
+    <linearGradient id="meth-a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="meth-b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="100%" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <linearGradient id="meth-c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCE7F3"/>
+      <stop offset="100%" stop-color="#FBCFE8"/>
+    </linearGradient>
+    <linearGradient id="meth-d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <filter id="meth-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#m-hd)"/>
-  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.85)" font-size="11">METHODOLOGY · 36 PATTERNS · 5 CATEGORIES · TREE</text>
-  <text x="32" y="54" class="ko" fill="white" font-size="22">방법론 총론 — 36 방법론 (4.1~4.36) 트리</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 루트 -->
-  <g transform="translate(360, 90)" filter="url(#m-shadow)">
-    <rect width="80" height="36" rx="18" fill="#1A237E"/>
-    <text x="40" y="22" text-anchor="middle" class="ko" fill="white" font-size="13">방법론 36</text>
-  </g>
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#meth-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">방법론 총론</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">47 METHODS · 4 GROUPS · TOP 5</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FCE7F3">사업계획서·콘텐츠 작성 + 기술 + 운영 + 메타 — 재사용 가능 방법론</text>
 
-  <!-- 트리 라인 -->
-  <g stroke="#90A4AE" stroke-width="1.5" fill="none">
-    <line x1="400" y1="126" x2="80" y2="170"/>
-    <line x1="400" y1="126" x2="240" y2="170"/>
-    <line x1="400" y1="126" x2="400" y2="170"/>
-    <line x1="400" y1="126" x2="560" y2="170"/>
-    <line x1="400" y1="126" x2="720" y2="170"/>
-  </g>
+  <!-- A 사업계획·콘텐츠 -->
+  <g filter="url(#meth-shadow)">
+    <g transform="translate(40, 120)">
+      <rect width="520" height="118" rx="10" fill="url(#meth-a)" stroke="#6366F1" stroke-width="2"/>
+      <rect width="80" height="118" rx="10" fill="#6366F1"/><rect x="70" width="10" height="118" fill="#6366F1"/>
+      <text x="40" y="50" text-anchor="middle" class="en" font-size="11" fill="white">GROUP A</text>
+      <text x="40" y="80" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">14</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#3730A3">A. 사업계획·콘텐츠 작성 (14 종)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">자산 명명·플레이스홀더·8 장 포맷·인용 출처·시너지 ROI 산식</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#FBBF24">★ 4.8 플레이스홀더 — 고객사 일괄 치환 (재활용 핵심)</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#FBBF24">★ 4.26 자산 군 포맷 통일 (운영 가이드 11 자산)</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#6366F1">▸ 4.1·4.4·4.7·4.8·4.10·4.13·4.15·4.18·4.21·4.24·4.26·4.29·4.32·4.36</text>
+      <text x="100" y="100" class="ko-r" font-size="9" fill="#475569">활용: 모든 패키지 1~6 + 6 통합 파일럿 + 11 운영 가이드</text>
+      <text x="100" y="114" class="ko-r" font-size="9" fill="#3730A3">▸ 출처: 방법론_총론.md §3.A</text>
+    </g>
 
-  <!-- 5 카테고리 -->
-  <g transform="translate(0, 170)" class="ko" font-size="11">
-    <g filter="url(#m-shadow)">
-      <rect x="20" y="0" width="120" height="42" rx="8" fill="#1565C0"/>
-      <text x="80" y="18" text-anchor="middle" fill="white" font-size="12">작성 패턴</text>
-      <text x="80" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">8 (4.1~4.8)</text>
+    <!-- B 기술 -->
+    <g transform="translate(40, 248)">
+      <rect width="520" height="118" rx="10" fill="url(#meth-b)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="118" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="118" fill="#8B5CF6"/>
+      <text x="40" y="50" text-anchor="middle" class="en" font-size="11" fill="white">GROUP B</text>
+      <text x="40" y="80" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">12</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#5B21B6">B. 기술·모델·MLOps·RAG (12 종)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">트랙 1·2·3 통합 패턴 · 시나리오 카탈로그 · TRL 5→9 단계</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#FBBF24">★ 4.5 트랙 1·2·3 통합 매핑 (모델·MLOps·RAG)</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">데이터 표준화·앙상블 선정·RAG 청킹·sLM 압축·연합학습</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#8B5CF6">▸ 4.2·4.3·4.5·4.9·4.11·4.14·4.17·4.20·4.23·4.28·4.31·4.34</text>
+      <text x="100" y="100" class="ko-r" font-size="9" fill="#475569">활용: track1·2·3_*.md + 모듈_연합학습·SaaS + 가이드_RAG·sLM·압축</text>
+      <text x="100" y="114" class="ko-r" font-size="9" fill="#5B21B6">▸ 출처: 방법론_총론.md §3.B</text>
     </g>
-    <g filter="url(#m-shadow)">
-      <rect x="180" y="0" width="120" height="42" rx="8" fill="#7B1FA2"/>
-      <text x="240" y="18" text-anchor="middle" fill="white" font-size="12">아키텍처</text>
-      <text x="240" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">7 (4.9~4.15)</text>
-    </g>
-    <g filter="url(#m-shadow)">
-      <rect x="340" y="0" width="120" height="42" rx="8" fill="#00897B"/>
-      <text x="400" y="18" text-anchor="middle" fill="white" font-size="12">검증·평가</text>
-      <text x="400" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">8 (4.16~4.23)</text>
-    </g>
-    <g filter="url(#m-shadow)">
-      <rect x="500" y="0" width="120" height="42" rx="8" fill="#F57F17"/>
-      <text x="560" y="18" text-anchor="middle" fill="white" font-size="12">거버넌스</text>
-      <text x="560" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">7 (4.24~4.30)</text>
-    </g>
-    <g filter="url(#m-shadow)">
-      <rect x="660" y="0" width="120" height="42" rx="8" fill="#C62828"/>
-      <text x="720" y="18" text-anchor="middle" fill="white" font-size="12">재무·ROI</text>
-      <text x="720" y="34" text-anchor="middle" class="ko-r" fill="white" font-size="10">6 (4.31~4.36)</text>
-    </g>
-  </g>
 
-  <!-- 하위 dot 배열 (방법론 점) -->
-  <g transform="translate(0, 240)">
-    <!-- 작성 8 -->
-    <g fill="#1565C0">
-      <circle cx="35" cy="0" r="4"/>
-      <circle cx="50" cy="0" r="4"/>
-      <circle cx="65" cy="0" r="4"/>
-      <circle cx="80" cy="0" r="4"/>
-      <circle cx="95" cy="0" r="4"/>
-      <circle cx="110" cy="0" r="4"/>
-      <circle cx="35" cy="14" r="4"/>
-      <circle cx="50" cy="14" r="4"/>
+    <!-- C 운영 -->
+    <g transform="translate(40, 376)">
+      <rect width="520" height="118" rx="10" fill="url(#meth-c)" stroke="#EC4899" stroke-width="2"/>
+      <rect width="80" height="118" rx="10" fill="#EC4899"/><rect x="70" width="10" height="118" fill="#EC4899"/>
+      <text x="40" y="50" text-anchor="middle" class="en" font-size="11" fill="white">GROUP C</text>
+      <text x="40" y="80" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">13</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#9F1239">C. 운영·거버넌스·재무 (13 종)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">RACI·KPI·재무·외부 검증·중대재해·CBAM·OEM·컨설팅</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#FBBF24">★ 4.6 KPI·재무 ROI 시너지 가산 (β/α 모델)</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">권한 차등 H-G-A · 위험 매트릭스 · 양식 검증 7 단계</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#EC4899">▸ 4.6·4.12·4.16·4.19·4.22·4.25·4.27·4.30·4.33·4.35·4.37·4.39·4.41</text>
+      <text x="100" y="100" class="ko-r" font-size="9" fill="#475569">활용: 가이드_KPI·재무·외부검증·위험·컨설팅 + 책임_분담 + 모듈_OEM·CBAM</text>
+      <text x="100" y="114" class="ko-r" font-size="9" fill="#9F1239">▸ 출처: 방법론_총론.md §3.C</text>
     </g>
-    <!-- 아키텍처 7 -->
-    <g fill="#7B1FA2">
-      <circle cx="195" cy="0" r="4"/>
-      <circle cx="210" cy="0" r="4"/>
-      <circle cx="225" cy="0" r="4"/>
-      <circle cx="240" cy="0" r="4"/>
-      <circle cx="255" cy="0" r="4"/>
-      <circle cx="270" cy="0" r="4"/>
-      <circle cx="195" cy="14" r="4"/>
-    </g>
-    <!-- 검증 8 -->
-    <g fill="#00897B">
-      <circle cx="355" cy="0" r="4"/>
-      <circle cx="370" cy="0" r="4"/>
-      <circle cx="385" cy="0" r="4"/>
-      <circle cx="400" cy="0" r="4"/>
-      <circle cx="415" cy="0" r="4"/>
-      <circle cx="430" cy="0" r="4"/>
-      <circle cx="355" cy="14" r="4"/>
-      <circle cx="370" cy="14" r="4"/>
-    </g>
-    <!-- 거버넌스 7 -->
-    <g fill="#F57F17">
-      <circle cx="515" cy="0" r="4"/>
-      <circle cx="530" cy="0" r="4"/>
-      <circle cx="545" cy="0" r="4"/>
-      <circle cx="560" cy="0" r="4"/>
-      <circle cx="575" cy="0" r="4"/>
-      <circle cx="590" cy="0" r="4"/>
-      <circle cx="515" cy="14" r="4"/>
-    </g>
-    <!-- 재무 6 -->
-    <g fill="#C62828">
-      <circle cx="675" cy="0" r="4"/>
-      <circle cx="690" cy="0" r="4"/>
-      <circle cx="705" cy="0" r="4"/>
-      <circle cx="720" cy="0" r="4"/>
-      <circle cx="735" cy="0" r="4"/>
-      <circle cx="750" cy="0" r="4"/>
+
+    <!-- D 메타 -->
+    <g transform="translate(40, 504)">
+      <rect width="520" height="118" rx="10" fill="url(#meth-d)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="118" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="118" fill="#F59E0B"/>
+      <text x="40" y="50" text-anchor="middle" class="en" font-size="11" fill="white">GROUP D</text>
+      <text x="40" y="80" text-anchor="middle" class="ko" font-size="22" fill="white" font-weight="900">8</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">D. 메타·작업 흐름·세션 (8 종)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">작업로그 8 필드 · Phase 운영 · 갭 발견 · 병렬 실행 · 인계</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#FBBF24">★ 4.29 방법론 추출·동시 인덱스 갱신 (이식성 핵심)</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">사용자 발언 직접 인용 · 단계별 커밋 · 양 원격 동시 push</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#F59E0B">▸ 4.29·4.38·4.40·4.42·4.43·4.44·4.45·4.46</text>
+      <text x="100" y="100" class="ko-r" font-size="9" fill="#475569">활용: 작업로그.md + CLAUDE.md + 운영_모드_Quickstart</text>
+      <text x="100" y="114" class="ko-r" font-size="9" fill="#92400E">▸ 출처: 방법론_총론.md §3.D</text>
     </g>
   </g>
 
-  <!-- 대표 방법론 라벨 -->
-  <g transform="translate(32, 280)" class="ko-r" font-size="10" fill="#37474F">
-    <text y="0">대표: 4.1 모듈화 · 4.5 플레이스홀더 · 4.12 3 단 참조 · 4.18 골드셋 · 4.25 RACI · 4.32 NPV/IRR</text>
+  <!-- 핵심 5 ★ -->
+  <g transform="translate(40, 632)" filter="url(#meth-shadow)">
+    <rect width="520" height="68" rx="8" fill="#FBBF24"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#0F172A">핵심 5 ★ 방법론 (재이식 우선)</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#0F172A">★ 4.5 트랙 1·2·3 통합  ★ 4.6 시너지 ROI (β/α)  ★ 4.8 플레이스홀더</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#0F172A">★ 4.26 자산 군 포맷 통일  ★ 4.29 방법론 추출·인덱스 동기화</text>
   </g>
 
-  <rect x="0" y="320" width="800" height="80" fill="#F5F7FA"/>
-  <g transform="translate(32, 348)" class="ko" font-size="12" fill="#1A237E">
-    <text y="0" font-weight="700">36 방법론</text>
-    <text x="120" y="0" font-weight="700">5 카테고리</text>
-    <text x="240" y="0" font-weight="700">재사용 패턴</text>
-    <text x="370" y="0" font-weight="700">통합 파일럿 6 적용</text>
-    <text x="550" y="0" font-weight="700">ID: 4.1~4.36</text>
-    <text x="690" y="0" font-weight="700">총론 분리</text>
+  <!-- 하단 -->
+  <g transform="translate(40, 710)">
+    <rect width="520" height="70" rx="8" fill="white" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#5B21B6">총합 47 = A 14 + B 12 + C 13 + D 8 — 재사용 가능 모듈형 방법론</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ 다른 프로젝트로 이식 시 D 군 (작업로그 8 필드) 먼저 적용</text>
+    <text x="20" y="56" class="ko-r" font-size="9" fill="#8B5CF6">▸ 출처: 방법론_총론.md §3 + 작업로그.md §4 (47 인덱스)</text>
   </g>
-  <text x="32" y="384" class="ko-r" font-size="10" fill="#546E7A">방법론_총론.md (Phase E5 d 단계) — 본문 분리로 재이식성 확보</text>
 </svg>

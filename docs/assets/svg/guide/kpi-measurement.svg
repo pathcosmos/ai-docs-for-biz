@@ -1,111 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="KPI 측정 가이드 — 5 군 분류 + KPI 표 7 컬럼 인포그래픽">
-  <title>KPI 측정·산출·검증 가이드 — 5 군 분류</title>
-  <desc>제조 AI 사업의 KPI 5 군 (품질·운영·AI 모델·운영 거버넌스·사업 재무) MECE 분류와 표준 측정 도구 매트릭스 7 컬럼, 8 장 + 4 분기 + 강도 3 단계 가이드 군 통일 표시.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="KPI 측정 가이드 — 5 군 카드 + 7 컬럼 표 세로형 인포그래픽"
+     class="zoomable">
+  <title>KPI 측정 가이드 (세로형) — 5 군 KPI 분류</title>
+  <desc>KPI 측정 가이드 5 군 카드 (R&amp;D 성과·현장 성과·재무 성과·거버넌스·AI 모델 품질) + 7 컬럼 표준 표 (KPI·정의·목표·측정 주기·소유자·연계 모듈·외부검증) + 가이드 군 통일 (8 장 + 4 분기) 세로형 인포그래픽.</desc>
 
   <defs>
-    <linearGradient id="kpi-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1565C0"/>
-      <stop offset="100%" stop-color="#42A5F5"/>
+    <linearGradient id="kp-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
-    <filter id="kpi-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    <linearGradient id="kp-final" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="kp-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="400" fill="#F5F7FA"/>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 헤더 -->
-  <rect width="800" height="50" fill="url(#kpi-header)"/>
-  <text x="30" y="32" class="ko" font-size="20" fill="white">KPI 측정·산출·검증 표준 · 5 군</text>
-  <text x="770" y="32" text-anchor="end" class="en" font-size="11" fill="rgba(255,255,255,0.8)">KPI MEASUREMENT</text>
+  <!-- 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#kp-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">KPI 측정 가이드</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">KPI MEASUREMENT — 5 GROUPS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">사업계획서 KPI 표준 5 군 + 7 컬럼 표</text>
 
-  <!-- 5 군 카드 -->
-  <g transform="translate(40, 75)" filter="url(#kpi-shadow)">
-    <text x="0" y="-3" class="ko" font-size="12" fill="#1A237E">KPI 5 군 (MECE) — Q · O · M · G · B</text>
-
-    <g transform="translate(0, 5)">
-      <rect x="0" y="0" width="142" height="65" rx="6" fill="#E3F2FD"/>
-      <rect x="0" y="0" width="142" height="22" rx="6" fill="#1565C0"/>
-      <text x="8" y="16" class="ko" font-size="11" fill="white">Q. 품질 KPI</text>
-      <text x="8" y="38" class="ko-r" font-size="9" fill="#1A237E">PPM · FPY · σ · Recall</text>
-      <text x="8" y="52" class="ko-r" font-size="9" fill="#37474F">MES + QMS + SPC</text>
-      <text x="8" y="62" class="ko-r" font-size="8" fill="#78909C">산출물 차원</text>
-
-      <rect x="148" y="0" width="142" height="65" rx="6" fill="#E3F2FD"/>
-      <rect x="148" y="0" width="142" height="22" rx="6" fill="#1565C0"/>
-      <text x="156" y="16" class="ko" font-size="11" fill="white">O. 운영 KPI</text>
-      <text x="156" y="38" class="ko-r" font-size="9" fill="#1A237E">OEE · CT · 가동률 · kWh</text>
-      <text x="156" y="52" class="ko-r" font-size="9" fill="#37474F">PLC · MES · FEMS</text>
-      <text x="156" y="62" class="ko-r" font-size="8" fill="#78909C">설비·라인 차원</text>
-
-      <rect x="296" y="0" width="142" height="65" rx="6" fill="#E3F2FD"/>
-      <rect x="296" y="0" width="142" height="22" rx="6" fill="#7E57C2"/>
-      <text x="304" y="16" class="ko" font-size="11" fill="white">M. AI 모델 KPI</text>
-      <text x="304" y="38" class="ko-r" font-size="9" fill="#1A237E">F1·AUROC·환각률·RAGAS</text>
-      <text x="304" y="52" class="ko-r" font-size="9" fill="#37474F">MLflow · Evidently</text>
-      <text x="304" y="62" class="ko-r" font-size="8" fill="#78909C">AI 차원</text>
-
-      <rect x="444" y="0" width="142" height="65" rx="6" fill="#E3F2FD"/>
-      <rect x="444" y="0" width="142" height="22" rx="6" fill="#7E57C2"/>
-      <text x="452" y="16" class="ko" font-size="11" fill="white">G. 거버넌스 KPI</text>
-      <text x="452" y="38" class="ko-r" font-size="9" fill="#1A237E">PSI · MTTR · HITL 승인율</text>
-      <text x="452" y="52" class="ko-r" font-size="9" fill="#37474F">MLOps + 감사 + CMMS</text>
-      <text x="452" y="62" class="ko-r" font-size="8" fill="#78909C">운영 차원</text>
-
-      <rect x="592" y="0" width="160" height="65" rx="6" fill="#E3F2FD"/>
-      <rect x="592" y="0" width="160" height="22" rx="6" fill="#F57F17"/>
-      <text x="600" y="16" class="ko" font-size="11" fill="white">B. 사업·재무 KPI</text>
-      <text x="600" y="38" class="ko-r" font-size="9" fill="#1A237E">매출·ROI·SQA·재거래율</text>
-      <text x="600" y="52" class="ko-r" font-size="9" fill="#37474F">ERP · SCM · CRM</text>
-      <text x="600" y="62" class="ko-r" font-size="8" fill="#78909C">재무 차원</text>
+  <!-- 5 군 카드 (130~360) — 2+2+1 -->
+  <g transform="translate(40, 130)">
+    <!-- 1행 -->
+    <g transform="translate(0, 0)" filter="url(#kp-shadow)">
+      <rect width="250" height="105" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="250" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="250" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">G1 · R&amp;D 성과</text>
+      <text x="240" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">RESEARCH</text>
+      <text x="14" y="46" class="ko-r" font-size="10" fill="#475569">논문·특허·기술이전</text>
+      <text x="14" y="62" class="ko-r" font-size="9" fill="#64748B">SCI 논문 [건] · 특허출원 [건]</text>
+      <text x="14" y="76" class="ko-r" font-size="9" fill="#64748B">기술이전 매출 [수치] 만원</text>
+      <text x="14" y="96" class="ko" font-size="9" fill="#6366F1">→ TRL §5 단계별 산출물</text>
+    </g>
+    <g transform="translate(270, 0)" filter="url(#kp-shadow)">
+      <rect width="250" height="105" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="250" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="250" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">G2 · 현장 성과</text>
+      <text x="240" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">FIELD</text>
+      <text x="14" y="46" class="ko-r" font-size="10" fill="#475569">생산·품질·안전·에너지</text>
+      <text x="14" y="62" class="ko-r" font-size="9" fill="#64748B">생산성 +[%] · 불량률 -[%]</text>
+      <text x="14" y="76" class="ko-r" font-size="9" fill="#64748B">에너지 -[%] · LTIFR -[%]</text>
+      <text x="14" y="96" class="ko" font-size="9" fill="#6366F1">→ 패키지 별 시나리오 KPI</text>
+    </g>
+    <!-- 2행 -->
+    <g transform="translate(0, 115)" filter="url(#kp-shadow)">
+      <rect width="250" height="105" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="250" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="250" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">G3 · 재무 성과</text>
+      <text x="240" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">FINANCE</text>
+      <text x="14" y="46" class="ko-r" font-size="10" fill="#475569">매출·원가·ROI</text>
+      <text x="14" y="62" class="ko-r" font-size="9" fill="#64748B">매출 +[수치] · 원가 -[%]</text>
+      <text x="14" y="76" class="ko-r" font-size="9" fill="#64748B">ROI [%] · NPV [수치]</text>
+      <text x="14" y="96" class="ko" font-size="9" fill="#6366F1">→ 시너지 ROI §3</text>
+    </g>
+    <g transform="translate(270, 115)" filter="url(#kp-shadow)">
+      <rect width="250" height="105" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="250" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="250" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">G4 · 거버넌스</text>
+      <text x="240" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">GOVERNANCE</text>
+      <text x="14" y="46" class="ko-r" font-size="10" fill="#475569">RACI·감사·보안</text>
+      <text x="14" y="62" class="ko-r" font-size="9" fill="#64748B">RACI 충족률 [%]</text>
+      <text x="14" y="76" class="ko-r" font-size="9" fill="#64748B">감사 통과 [건] · 보안 [%]</text>
+      <text x="14" y="96" class="ko" font-size="9" fill="#6366F1">→ 책임 분담 매트릭스</text>
     </g>
   </g>
 
-  <!-- KPI 측정 도구 매트릭스 (7 컬럼) -->
-  <g transform="translate(40, 170)">
-    <text x="0" y="0" class="ko" font-size="12" fill="#1A237E">KPI 측정 도구 매트릭스 — 7 컬럼</text>
+  <!-- 5번째 카드 (G5) — 가운데 정렬 -->
+  <g transform="translate(175, 365)" filter="url(#kp-shadow)">
+    <rect width="250" height="55" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+    <rect width="250" height="22" rx="10" fill="#6366F1"/>
+    <rect y="16" width="250" height="6" fill="#6366F1"/>
+    <text x="14" y="16" class="ko" font-size="12" fill="white">G5 · AI 모델 품질</text>
+    <text x="240" y="16" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">AI MODEL</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">정확도·F1·드리프트·재학습 주기</text>
+    <text x="14" y="50" class="ko" font-size="9" fill="#6366F1">→ MLOps §3 모니터링</text>
+  </g>
 
-    <g transform="translate(0, 12)">
-      <!-- 헤더 행 -->
-      <rect x="0" y="0" width="720" height="22" fill="#1A237E"/>
-      <text x="50" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">KPI 군</text>
-      <text x="180" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">대표 KPI</text>
-      <text x="310" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">표준 도구</text>
-      <text x="430" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">산출 빈도</text>
-      <text x="540" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">정합 자산</text>
-      <text x="635" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">책임자</text>
-      <text x="700" y="15" text-anchor="middle" class="ko" font-size="9" fill="white">임계</text>
+  <!-- 7 컬럼 표 (440~600) -->
+  <g transform="translate(40, 440)" filter="url(#kp-shadow)">
+    <rect width="520" height="160" rx="10" fill="white" stroke="#E2E8F0"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">7 컬럼 KPI 표 표준</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">7 COLUMNS</text>
 
-      <!-- 데이터 행 (5 군 압축) -->
-      <g font-size="9" class="ko-r" fill="#37474F">
-        <rect x="0" y="22" width="720" height="20" fill="white"/>
-        <text x="50" y="36" text-anchor="middle" fill="#1565C0">품질</text><text x="180" y="36" text-anchor="middle">불량률 PPM</text><text x="310" y="36" text-anchor="middle">MES + QMS + SPC</text><text x="430" y="36" text-anchor="middle">일·월</text><text x="540" y="36" text-anchor="middle">track1 §6.3</text><text x="635" y="36" text-anchor="middle">품질 부서장</text><text x="700" y="36" text-anchor="middle">[임계]</text>
-        <rect x="0" y="42" width="720" height="20" fill="#F5F7FA"/>
-        <text x="50" y="56" text-anchor="middle" fill="#1565C0">운영</text><text x="180" y="56" text-anchor="middle">OEE</text><text x="310" y="56" text-anchor="middle">MES + PLC + Historian</text><text x="430" y="56" text-anchor="middle">일·주</text><text x="540" y="56" text-anchor="middle">track1 §3.5</text><text x="635" y="56" text-anchor="middle">생산 관리자</text><text x="700" y="56" text-anchor="middle">[임계]</text>
-        <rect x="0" y="62" width="720" height="20" fill="white"/>
-        <text x="50" y="76" text-anchor="middle" fill="#7E57C2">모델</text><text x="180" y="76" text-anchor="middle">F1 · AUROC</text><text x="310" y="76" text-anchor="middle">MLflow + Evidently</text><text x="430" y="76" text-anchor="middle">실시간·주</text><text x="540" y="76" text-anchor="middle">Track2 §5.5</text><text x="635" y="76" text-anchor="middle">MLE</text><text x="700" y="76" text-anchor="middle">[임계]</text>
-        <rect x="0" y="82" width="720" height="20" fill="#F5F7FA"/>
-        <text x="50" y="96" text-anchor="middle" fill="#7E57C2">거버넌스</text><text x="180" y="96" text-anchor="middle">PSI · MTTR</text><text x="310" y="96" text-anchor="middle">MLOps + 감사 시스템</text><text x="430" y="96" text-anchor="middle">실시간·이벤트</text><text x="540" y="96" text-anchor="middle">Track2 §6.5</text><text x="635" y="96" text-anchor="middle">MLOps Lead</text><text x="700" y="96" text-anchor="middle">0.25</text>
-        <rect x="0" y="102" width="720" height="20" fill="white"/>
-        <text x="50" y="116" text-anchor="middle" fill="#F57F17">사업·재무</text><text x="180" y="116" text-anchor="middle">ROI · Payback</text><text x="310" y="116" text-anchor="middle">ERP + 시너지 ROI 모델</text><text x="430" y="116" text-anchor="middle">월·분기·연</text><text x="540" y="116" text-anchor="middle">시너지 §3</text><text x="635" y="116" text-anchor="middle">PM·재무</text><text x="700" y="116" text-anchor="middle">[임계]</text>
-      </g>
+    <g transform="translate(0, 36)" font-size="9" class="ko" fill="#1E293B">
+      <rect x="10" y="0" width="500" height="22" fill="#EEF2FF"/>
+      <text x="20" y="14">①KPI</text>
+      <text x="90" y="14">②정의</text>
+      <text x="170" y="14">③목표</text>
+      <text x="240" y="14">④주기</text>
+      <text x="310" y="14">⑤소유자</text>
+      <text x="385" y="14">⑥연계 모듈</text>
+      <text x="465" y="14">⑦검증</text>
+    </g>
+    <g transform="translate(0, 62)" font-size="9" class="ko-r" fill="#475569">
+      <text x="20" y="14">불량률</text>
+      <text x="90" y="14">% 단위</text>
+      <text x="170" y="14">-[%]</text>
+      <text x="240" y="14">월·일</text>
+      <text x="310" y="14">QA</text>
+      <text x="385" y="14">G2 현장</text>
+      <text x="465" y="14">외부</text>
+    </g>
+    <g transform="translate(0, 84)" font-size="9" class="ko-r" fill="#475569">
+      <text x="20" y="14">생산성</text>
+      <text x="90" y="14">/ 시간</text>
+      <text x="170" y="14">+[%]</text>
+      <text x="240" y="14">분기</text>
+      <text x="310" y="14">생산</text>
+      <text x="385" y="14">G2 현장</text>
+      <text x="465" y="14">외부</text>
+    </g>
+    <g transform="translate(0, 106)" font-size="9" class="ko-r" fill="#475569">
+      <text x="20" y="14">정확도</text>
+      <text x="90" y="14">F1</text>
+      <text x="170" y="14">≥[수치]</text>
+      <text x="240" y="14">주·일</text>
+      <text x="310" y="14">MLE</text>
+      <text x="385" y="14">G5 모델</text>
+      <text x="465" y="14">자체</text>
+    </g>
+    <g transform="translate(0, 128)" font-size="9" class="ko-r" fill="#475569">
+      <text x="20" y="14">ROI</text>
+      <text x="90" y="14">현재 가치</text>
+      <text x="170" y="14">[%]</text>
+      <text x="240" y="14">반기</text>
+      <text x="310" y="14">CFO</text>
+      <text x="385" y="14">G3 재무</text>
+      <text x="465" y="14">외부</text>
     </g>
   </g>
 
-  <!-- 하단 통일 -->
-  <g transform="translate(40, 320)">
-    <rect x="0" y="0" width="720" height="55" rx="6" fill="#FFF3E0" stroke="#F57F17" stroke-width="1"/>
-    <text x="14" y="18" class="ko" font-size="11" fill="#E65100">가이드 군 5 번째 자산 · 4.26 포맷 통일 · cross-reference 4 선행 가이드</text>
-    <g transform="translate(14, 28)" font-size="10" class="ko-r" fill="#37474F">
-      <text y="10">▸ 8 장 구조 (분류·도구·빈도·검증·양식·결합·확인필요·한계)</text>
-      <text y="24">▸ 4 분기 (시점·도구·검증·결합) · 강도 3 단계 (산출 빈도)</text>
+  <!-- 강조 박스 (610~670) -->
+  <g transform="translate(40, 610)" filter="url(#kp-shadow)">
+    <rect width="520" height="60" rx="10" fill="url(#kp-final)"/>
+    <text x="20" y="24" class="ko" font-size="13" fill="white">측정 표준화 — 모든 KPI 7 컬럼 + 5 군 분류 필수</text>
+    <text x="20" y="44" class="ko-r" font-size="10" fill="rgba(255,255,255,0.92)">사업계획서 §5 KPI 표 + 시연 §7 외부검증 통과 → 자체평가 6 항목</text>
+  </g>
+
+  <!-- cross-reference 박스 (685~785) -->
+  <g transform="translate(40, 685)">
+    <rect width="520" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#D97706">cross-reference · KPI 5 군 + 7 컬럼 표 + 외부검증</text>
+    <g font-size="9" class="ko-r" fill="#475569">
+      <text x="14" y="38">▸ G1 R&amp;D / G2 현장 / G3 재무 / G4 거버넌스 / G5 AI 모델 (5 군 표준)</text>
+      <text x="14" y="54">▸ §10 cross-reference — TRL §5 (단계별 산출물) + 외부검증 §3 (RACI)</text>
+      <text x="14" y="70">▸ 시연 단계 §7 — 외부검증 RACI 통과 + KPI 7 컬럼 표 첨부</text>
+      <text x="14" y="88" fill="#6366F1" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
     </g>
   </g>
 </svg>

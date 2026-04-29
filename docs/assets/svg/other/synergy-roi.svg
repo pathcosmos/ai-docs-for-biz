@@ -1,171 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="시너지 ROI 모델 — α_total + β_total 산식 + 6 패키지 84 셀"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="시너지 ROI 모델 — 3 트랙 × 6 패키지 매트릭스 + ROI 등급 세로형"
      class="zoomable">
-  <title>시너지 ROI 모델 (α + β) — 6 패키지 시너지 매트릭스 84 셀</title>
-  <desc>패키지 내부 시너지 α_total 과 패키지 간 시너지 β_total 의 합산 산식, 6×14 = 84 셀의 시너지 매트릭스, 패키지별 α + β 합계 분포를 시각화한 시너지 ROI 모델 인포그래픽.</desc>
+  <title>시너지 ROI 모델 (세로형) — 3 트랙 × 6 패키지 + α_total + β_total</title>
+  <desc>3 트랙 (Track 1 모델·Track 2 MLOps·Track 3 RAG) × 6 패키지 (대기업철강·압연소둔·특수강관·고무·정밀가공·유틸ESG) 시너지 매트릭스 18 셀과 ROI 등급 (S·A·B·C 4 단계) 분포를 세로형으로 시각화. α_total (직접효과) + β_total (간접 시너지) 산식 표기.</desc>
 
   <defs>
-    <linearGradient id="syn-hd" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F57F17"/>
-      <stop offset="100%" stop-color="#FFB300"/>
+    <linearGradient id="syn-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
     </linearGradient>
-    <filter id="syn-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.20"/>
+    <linearGradient id="syn-s" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="syn-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
-      .formula { font-family: 'Inter',serif; font-style: italic; font-weight: 600; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#syn-hd)"/>
-  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.85)" font-size="11">SYNERGY ROI MODEL · α + β · 6 PACKAGES</text>
-  <text x="32" y="54" class="ko" fill="white" font-size="22">시너지 ROI 모델 — α_total + β_total</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#syn-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">시너지 ROI 모델</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">3 TRACKS × 6 PACKAGES · ALPHA + BETA</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FCE7F3">α_total (직접 ROI) + β_total (시너지 가산) — 결합 패키지 우월성</text>
 
   <!-- 산식 박스 -->
-  <g transform="translate(32, 95)" filter="url(#syn-shadow)">
-    <rect width="320" height="100" rx="10" fill="white" stroke="#F57F17" stroke-width="1.5"/>
-    <text x="20" y="28" class="ko" fill="#E65100" font-size="13">시너지 ROI 산식</text>
-    <text x="20" y="56" class="formula" fill="#1A237E" font-size="15">ROI_total = Σ α_i + Σ β_ij</text>
-    <text x="20" y="76" class="ko-r" fill="#37474F" font-size="11">α_i — 패키지 i 내부 시나리오 시너지</text>
-    <text x="20" y="92" class="ko-r" fill="#37474F" font-size="11">β_ij — 패키지 i × j 간 교차 시너지</text>
+  <g transform="translate(40, 120)" filter="url(#syn-shadow)">
+    <rect width="520" height="60" rx="8" fill="white" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="20" y="24" class="ko" font-size="12" fill="#6D28D9">ROI 산식</text>
+    <text x="20" y="44" class="ko-r" font-size="11" fill="#0F172A">ROI_pkg = Σ α_i (개별 시나리오 ROI) + Σ β_ij (시너지 가산, i≠j)</text>
+    <text x="500" y="24" text-anchor="end" class="en" font-size="10" fill="#8B5CF6">β/α ≈ 0.15~0.30</text>
   </g>
 
-  <!-- 패키지 막대 -->
-  <g transform="translate(380, 95)" class="ko" font-size="11">
-    <text y="0" fill="#E65100" font-weight="700">패키지별 α + β 합계 (정규화)</text>
-    <g transform="translate(0, 12)" font-size="10">
-      <text y="14" fill="#1A237E">P1 철강 전사</text>
-      <rect x="100" y="4" width="280" height="12" rx="3" fill="#F57F17"/>
-      <text y="14" x="385" fill="#37474F">94</text>
-      <text y="32" fill="#1A237E">P2 가공 중견</text>
-      <rect x="100" y="22" width="220" height="12" rx="3" fill="#FF9800"/>
-      <text y="32" x="325" fill="#37474F">76</text>
-      <text y="50" fill="#1A237E">P3 특수강관</text>
-      <rect x="100" y="40" width="195" height="12" rx="3" fill="#FFA726"/>
-      <text y="50" x="300" fill="#37474F">68</text>
-      <text y="68" fill="#1A237E">P4 고무·고분자</text>
-      <rect x="100" y="58" width="180" height="12" rx="3" fill="#FFB300"/>
-      <text y="68" x="285" fill="#37474F">63</text>
-      <text y="86" fill="#1A237E">P5 정밀가공</text>
-      <rect x="100" y="76" width="160" height="12" rx="3" fill="#FFC107"/>
-      <text y="86" x="265" fill="#37474F">56</text>
-      <text y="104" fill="#1A237E">P6 유틸·ESG</text>
-      <rect x="100" y="94" width="140" height="12" rx="3" fill="#FFD54F"/>
-      <text y="104" x="245" fill="#37474F">48</text>
+  <!-- 매트릭스 헤더 (3 트랙 컬럼 라벨) -->
+  <g transform="translate(40, 200)">
+    <!-- 코너 빈 셀 -->
+    <rect width="100" height="30" rx="4" fill="#E2E8F0"/>
+    <text x="50" y="20" text-anchor="middle" class="ko-r" font-size="10" fill="#475569">패키지 \ 트랙</text>
+    <!-- T1 -->
+    <rect x="100" width="140" height="30" rx="4" fill="#6366F1"/>
+    <text x="170" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">T1 모델·AI</text>
+    <!-- T2 -->
+    <rect x="240" width="140" height="30" rx="4" fill="#8B5CF6"/>
+    <text x="310" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">T2 MLOps</text>
+    <!-- T3 -->
+    <rect x="380" width="140" height="30" rx="4" fill="#EC4899"/>
+    <text x="450" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">T3 LLM·RAG</text>
+  </g>
+
+  <!-- 6 패키지 행 (각 50px) -->
+  <g transform="translate(40, 232)" font-family="Pretendard">
+    <!-- P1 대기업철강 -->
+    <g>
+      <rect width="100" height="50" fill="#EEF2FF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="10" y="22" class="ko-r" font-size="10" fill="#3730A3">P1 대기업철강</text>
+      <text x="10" y="38" class="ko-r" font-size="9" fill="#6366F1">9 시나리오</text>
+      <rect x="100" width="140" height="50" fill="#FEF3C7" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="170" y="22" text-anchor="middle" class="ko" font-size="13" fill="#92400E">S</text>
+      <text x="170" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 4 + β 2</text>
+      <rect x="240" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="310" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="310" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2 + β 1</text>
+      <rect x="380" width="140" height="50" fill="#FCE7F3" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="450" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9F1239">A</text>
+      <text x="450" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2 + β 1</text>
+    </g>
+    <!-- P2 압연소둔 -->
+    <g transform="translate(0, 50)">
+      <rect width="100" height="50" fill="#EEF2FF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="10" y="22" class="ko-r" font-size="10" fill="#3730A3">P2 압연·소둔</text>
+      <text x="10" y="38" class="ko-r" font-size="9" fill="#6366F1">6 시나리오</text>
+      <rect x="100" width="140" height="50" fill="#FEF3C7" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="170" y="22" text-anchor="middle" class="ko" font-size="13" fill="#92400E">S</text>
+      <text x="170" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 3 + β 1</text>
+      <rect x="240" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="310" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="310" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1 + β 1</text>
+      <rect x="380" width="140" height="50" fill="#FCE7F3" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="450" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9F1239">B</text>
+      <text x="450" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1</text>
+    </g>
+    <!-- P3 특수강관 -->
+    <g transform="translate(0, 100)">
+      <rect width="100" height="50" fill="#EEF2FF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="10" y="22" class="ko-r" font-size="10" fill="#3730A3">P3 특수강관</text>
+      <text x="10" y="38" class="ko-r" font-size="9" fill="#6366F1">4 시나리오</text>
+      <rect x="100" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="170" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="170" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2 + β 0.5</text>
+      <rect x="240" width="140" height="50" fill="#E0F2FE" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="310" y="22" text-anchor="middle" class="ko" font-size="13" fill="#0369A1">B</text>
+      <text x="310" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1</text>
+      <rect x="380" width="140" height="50" fill="#FEF3C7" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="450" y="22" text-anchor="middle" class="ko" font-size="13" fill="#92400E">S ★</text>
+      <text x="450" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2 + β 1.5</text>
+    </g>
+    <!-- P4 고무 -->
+    <g transform="translate(0, 150)">
+      <rect width="100" height="50" fill="#EEF2FF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="10" y="22" class="ko-r" font-size="10" fill="#3730A3">P4 고무 양산</text>
+      <text x="10" y="38" class="ko-r" font-size="9" fill="#6366F1">5 시나리오</text>
+      <rect x="100" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="170" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="170" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2 + β 1</text>
+      <rect x="240" width="140" height="50" fill="#E0F2FE" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="310" y="22" text-anchor="middle" class="ko" font-size="13" fill="#0369A1">B</text>
+      <text x="310" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1</text>
+      <rect x="380" width="140" height="50" fill="#E0F2FE" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="450" y="22" text-anchor="middle" class="ko" font-size="13" fill="#0369A1">B</text>
+      <text x="450" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1</text>
+    </g>
+    <!-- P5 정밀가공 -->
+    <g transform="translate(0, 200)">
+      <rect width="100" height="50" fill="#EEF2FF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="10" y="22" class="ko-r" font-size="10" fill="#3730A3">P5 정밀가공</text>
+      <text x="10" y="38" class="ko-r" font-size="9" fill="#6366F1">6 시나리오</text>
+      <rect x="100" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="170" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="170" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2</text>
+      <rect x="240" width="140" height="50" fill="#FCE7F3" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="310" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9F1239">C</text>
+      <text x="310" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 0.5</text>
+      <rect x="380" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="450" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="450" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2 + β 0.5</text>
+    </g>
+    <!-- P6 유틸ESG -->
+    <g transform="translate(0, 250)">
+      <rect width="100" height="50" fill="#EEF2FF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="10" y="22" class="ko-r" font-size="10" fill="#3730A3">P6 유틸·ESG</text>
+      <text x="10" y="38" class="ko-r" font-size="9" fill="#6366F1">5 시나리오</text>
+      <rect x="100" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="170" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="170" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 2</text>
+      <rect x="240" width="140" height="50" fill="#FFEDD5" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="310" y="22" text-anchor="middle" class="ko" font-size="13" fill="#9A3412">A</text>
+      <text x="310" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1.5 + β 0.5</text>
+      <rect x="380" width="140" height="50" fill="#E0F2FE" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="450" y="22" text-anchor="middle" class="ko" font-size="13" fill="#0369A1">B</text>
+      <text x="450" y="40" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">α 1</text>
     </g>
   </g>
 
-  <!-- 84 셀 매트릭스 (6×14 dots) -->
-  <g transform="translate(32, 220)">
-    <text y="0" class="ko" fill="#E65100" font-size="12" font-weight="700">시너지 매트릭스 — 6 패키지 × 14 시나리오 = 84 셀</text>
-    <g transform="translate(0, 12)">
-      <!-- 6 rows × 14 cols = 84 dots -->
-      <g fill="#F57F17">
-        <!-- row 1 -->
-        <rect x="0" y="0" width="50" height="14" rx="2"/>
-        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.85"/>
-        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.25"/>
-        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-      </g>
-      <g fill="#FF9800" transform="translate(0, 18)">
-        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.85"/>
-        <rect x="108" y="0" width="50" height="14" rx="2"/>
-        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-      </g>
-      <g fill="#FFA726" transform="translate(0, 36)">
-        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.85"/>
-        <rect x="162" y="0" width="50" height="14" rx="2"/>
-        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.25"/>
-      </g>
-      <g fill="#FFB300" transform="translate(0, 54)">
-        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.85"/>
-        <rect x="216" y="0" width="50" height="14" rx="2"/>
-        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.2"/>
-      </g>
-      <g fill="#FFC107" transform="translate(0, 72)">
-        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.85"/>
-        <rect x="270" y="0" width="50" height="14" rx="2"/>
-        <rect x="324" y="0" width="50" height="14" rx="2" opacity="0.6"/>
-        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.2"/>
-      </g>
-      <g fill="#FFD54F" transform="translate(0, 90)">
-        <rect x="0" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-        <rect x="54" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="108" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="162" y="0" width="50" height="14" rx="2" opacity="0.55"/>
-        <rect x="216" y="0" width="50" height="14" rx="2" opacity="0.7"/>
-        <rect x="270" y="0" width="50" height="14" rx="2" opacity="0.85"/>
-        <rect x="324" y="0" width="50" height="14" rx="2"/>
-        <rect x="378" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="432" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="486" y="0" width="50" height="14" rx="2" opacity="0.5"/>
-        <rect x="540" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-        <rect x="594" y="0" width="50" height="14" rx="2" opacity="0.4"/>
-        <rect x="648" y="0" width="50" height="14" rx="2" opacity="0.2"/>
-        <rect x="702" y="0" width="50" height="14" rx="2" opacity="0.3"/>
-      </g>
+  <!-- 등급 범례 -->
+  <g transform="translate(40, 552)" filter="url(#syn-shadow)">
+    <rect width="520" height="60" rx="8" fill="white"/>
+    <text x="20" y="24" class="ko" font-size="12" fill="#0F172A">ROI 등급 범례 (β/α 비율 기반)</text>
+    <g transform="translate(20, 32)">
+      <rect width="22" height="22" rx="4" fill="#FEF3C7" stroke="#F59E0B"/>
+      <text x="34" y="16" class="ko-r" font-size="10" fill="#92400E">S — β/α ≥ 0.25 (전략 핵심)</text>
+    </g>
+    <g transform="translate(170, 32)">
+      <rect width="22" height="22" rx="4" fill="#FFEDD5" stroke="#F97316"/>
+      <text x="34" y="16" class="ko-r" font-size="10" fill="#9A3412">A — 0.15~0.25 (강추천)</text>
+    </g>
+    <g transform="translate(310, 32)">
+      <rect width="22" height="22" rx="4" fill="#E0F2FE" stroke="#0EA5E9"/>
+      <text x="34" y="16" class="ko-r" font-size="10" fill="#0369A1">B — 0.05~0.15</text>
+    </g>
+    <g transform="translate(420, 32)">
+      <rect width="22" height="22" rx="4" fill="#FCE7F3" stroke="#EC4899"/>
+      <text x="34" y="16" class="ko-r" font-size="10" fill="#9F1239">C — &lt;0.05</text>
     </g>
   </g>
 
-  <rect x="0" y="365" width="800" height="35" fill="#FFF8E1"/>
-  <g transform="translate(32, 386)" class="ko" font-size="11" fill="#E65100">
-    <text y="0" font-weight="700">6 패키지 · 84 시너지 셀 · α + β 합산 · 정량 ROI 산정 모델</text>
+  <!-- ROI 분포 바 -->
+  <g transform="translate(40, 624)" filter="url(#syn-shadow)">
+    <rect width="520" height="56" rx="8" fill="url(#syn-s)"/>
+    <text x="20" y="24" class="ko" font-size="13" fill="#0F172A">시너지 분포 — S 3 셀 (P1·P2·P3) · A 8 셀 · B 5 셀 · C 1 셀</text>
+    <text x="20" y="44" class="ko-r" font-size="10" fill="#0F172A">β_total 평균 22% 가산 — 결합 패키지가 단독 시나리오 합 대비 우월</text>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(40, 692)">
+    <rect width="520" height="88" rx="8" fill="white" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#6D28D9">시너지 핵심 발견 (β 가산 사례)</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ P1 T1+T2: STL-09 PdM + MLO-02 드리프트 = 모델 수명 연장</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ P3 T3 ★: LLM-01·02 RAG 양축 = 베테랑 의존 -50% (β 1.5)</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#8B5CF6">▸ 출처: 시너지_ROI_모델.md §3·5 + 가이드_재무.md §6·10</text>
   </g>
 </svg>

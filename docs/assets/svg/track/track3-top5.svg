@@ -1,85 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="Track 3 Top5 — BLK-T3-3.1·3.2·4.2·5.2·5.5 5 블록 카드"
-     class="zoomable">
-  <title>Track 3 — 재사용 Top 5 블록 (3.1 / 3.2 / 4.2 / 5.2 / 5.5)</title>
-  <desc>비정형 공정 지식 사장, RAG 도입 당위성, RAG 5 계층 아키텍처, 청킹 4 전략, 골드셋·평가의 5 핵심 블록을 카드 그리드로 시각화한 Track 3 Top5.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="Track 3 — 사업계획서 §4·5 본문 LLM·RAG 5 블록 세로 카드">
+  <title>Track 3 — Top 5 Reusable Blocks (BLK-T3-3.1·3.2·4.2·5.2·5.5)</title>
+  <desc>LLM·RAG Track 3 의 5 핵심 재사용 블록 — 문서 이질성, 암묵지 의존, RAG 5 계층, 청킹 전략, 골드셋·환각 방지를 위에서 아래로 시각화한 카드.</desc>
 
   <defs>
-    <linearGradient id="t3t-hd" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00695C"/>
-      <stop offset="100%" stop-color="#26A69A"/>
+    <linearGradient id="t3t-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#22D3EE"/>
     </linearGradient>
-    <filter id="t3t-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    <linearGradient id="t3t-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="t3t-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 700; }
-      .ko-r { font-family: 'Pretendard','Apple SD Gothic Neo',sans-serif; font-weight: 500; }
-      .en { font-family: 'Inter',sans-serif; font-weight: 600; letter-spacing: 0.10em; }
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#t3t-hd)"/>
-  <text x="32" y="28" class="en" fill="rgba(255,255,255,0.78)" font-size="11">TRACK 3 · TOP 5 REUSABLE BLOCKS</text>
-  <text x="32" y="54" class="ko" fill="white" font-size="22">Track 3 — 재사용 Top 5 블록 (실문 초안)</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <g transform="translate(32, 100)" class="ko" font-size="12">
-    <g filter="url(#t3t-shadow)">
-      <rect width="240" height="100" rx="10" fill="white" stroke="#00695C" stroke-width="1.5"/>
-      <rect width="240" height="32" rx="10" fill="#00695C"/>
-      <rect y="20" width="240" height="12" fill="#00695C"/>
-      <text x="14" y="22" fill="white" font-size="13">BLK-T3-3.1</text>
-      <text x="14" y="56" fill="#004D40" font-size="13">비정형 공정 지식 사장</text>
-      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="10">SOP·장애 사례·암묵지 분산</text>
-      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">2~3 문단 + Mermaid</text>
-    </g>
-    <g transform="translate(252, 0)" filter="url(#t3t-shadow)">
-      <rect width="240" height="100" rx="10" fill="white" stroke="#00796B" stroke-width="1.5"/>
-      <rect width="240" height="32" rx="10" fill="#00796B"/>
-      <rect y="20" width="240" height="12" fill="#00796B"/>
-      <text x="14" y="22" fill="white" font-size="13">BLK-T3-3.2</text>
-      <text x="14" y="56" fill="#004D40" font-size="13">RAG 도입 당위성</text>
-      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="10">검색·근거 인용·환각 억제</text>
-      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">2~3 문단 + Mermaid</text>
-    </g>
-    <g transform="translate(504, 0)" filter="url(#t3t-shadow)">
-      <rect width="240" height="100" rx="10" fill="white" stroke="#00897B" stroke-width="1.5"/>
-      <rect width="240" height="32" rx="10" fill="#00897B"/>
-      <rect y="20" width="240" height="12" fill="#00897B"/>
-      <text x="14" y="22" fill="white" font-size="13">BLK-T3-4.2</text>
-      <text x="14" y="56" fill="#004D40" font-size="13">RAG 5 계층 아키텍처</text>
-      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="10">수집·임베딩·검색·생성·감사</text>
-      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">2~3 문단 + Mermaid</text>
-    </g>
-  </g>
-  <g transform="translate(158, 220)" class="ko" font-size="12">
-    <g filter="url(#t3t-shadow)">
-      <rect width="240" height="100" rx="10" fill="white" stroke="#009688" stroke-width="1.5"/>
-      <rect width="240" height="32" rx="10" fill="#009688"/>
-      <rect y="20" width="240" height="12" fill="#009688"/>
-      <text x="14" y="22" fill="white" font-size="13">BLK-T3-5.2</text>
-      <text x="14" y="56" fill="#004D40" font-size="13">청킹 4 전략 비교</text>
-      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="10">고정·재귀·의미·테이블 보존</text>
-      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">2~3 문단 + Mermaid</text>
-    </g>
-    <g transform="translate(252, 0)" filter="url(#t3t-shadow)">
-      <rect width="240" height="100" rx="10" fill="white" stroke="#26A69A" stroke-width="1.5"/>
-      <rect width="240" height="32" rx="10" fill="#26A69A"/>
-      <rect y="20" width="240" height="12" fill="#26A69A"/>
-      <text x="14" y="22" fill="white" font-size="13">BLK-T3-5.5</text>
-      <text x="14" y="56" fill="#004D40" font-size="13">골드셋·평가</text>
-      <text x="14" y="76" class="ko-r" fill="#37474F" font-size="10">정답·관련도·근거 검증</text>
-      <text x="14" y="92" class="ko-r" fill="#78909C" font-size="9">2~3 문단 + Mermaid</text>
-    </g>
+  <rect width="600" height="100" fill="url(#t3t-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">TRACK 3 · TOP 5 REUSABLE BLOCKS</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">Track 3 — 사업계획서 §4·5 본문</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">문서 이질성 · 암묵지 의존 · RAG 5 계층 · 청킹 · 환각 방지</text>
+
+  <!-- BLK-T3-3.1 -->
+  <g transform="translate(40, 120)" filter="url(#t3t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t3t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t3t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T3-3.1</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§3.1 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#0E7490">문서 이질성 · 비정형 공정 지식 사장</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">SOP · 장애 사례 · 도면 · 메일 · 카톡 분산</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §3.1 직접 paste</text>
   </g>
 
-  <rect x="0" y="340" width="800" height="60" fill="#E8F5F1"/>
-  <g transform="translate(32, 366)" class="ko" font-size="12" fill="#004D40">
-    <text y="0" font-weight="700">5 블록</text>
-    <text x="100" y="0" font-weight="700">600~1,200 자/블록</text>
-    <text x="280" y="0" font-weight="700">5 Mermaid</text>
-    <text x="400" y="0" font-weight="700">한국 sLM 적용</text>
-    <text x="560" y="0" font-weight="700">사업계획서 직접 투입</text>
+  <!-- BLK-T3-3.2 -->
+  <g transform="translate(40, 244)" filter="url(#t3t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t3t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t3t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T3-3.2</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§3.2 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#0E7490">암묵지 의존 · RAG 도입 당위성</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">검색 · 근거 인용 · 환각 억제 · sLM 정합</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §3.2 직접 paste</text>
+  </g>
+
+  <!-- BLK-T3-4.2 -->
+  <g transform="translate(40, 368)" filter="url(#t3t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t3t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t3t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T3-4.2</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§4.2 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#0E7490">RAG 5 계층 아키텍처</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">수집 · 임베딩 · 검색 · 생성 · 감사 (Citation)</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §4.2 직접 paste</text>
+  </g>
+
+  <!-- BLK-T3-5.2 -->
+  <g transform="translate(40, 492)" filter="url(#t3t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t3t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t3t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T3-5.2</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§5.2 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#0E7490">청킹 4 전략 비교</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">고정 · 재귀 · 의미 단위 · 표·도면 보존 청킹</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §5.2 직접 paste</text>
+  </g>
+
+  <!-- BLK-T3-5.5 -->
+  <g transform="translate(40, 616)" filter="url(#t3t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t3t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t3t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T3-5.5</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§5.5 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#0E7490">환각 방지 · 골드셋·평가</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">정답 · 관련도 · 근거 검증 · Citation 강제</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §5.5 직접 paste</text>
+  </g>
+
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 740)" filter="url(#t3t-shadow)">
+    <rect width="540" height="50" rx="8" fill="#ECFEFF" stroke="#06B6D4" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#0E7490">paste 위치 · 사업계획서 §4·5 (LLM·RAG 본문)</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">5 블록 × 약 850 자 = 약 4,250 자 · Mermaid 5 · 한국 sLM 적용 · 5.2-e (LLM·RAG) 결합</text>
   </g>
 </svg>

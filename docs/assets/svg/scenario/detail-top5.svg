@@ -1,162 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="시나리오 상세 — 재사용성 Top 5 (LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01)"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="철강 Top 5 시나리오 상세 — 5 카드 세로형"
      class="zoomable">
-  <title>시나리오 상세 — 재사용성 Top 5 · 압연기 아이콘 + 5 시나리오 카드</title>
-  <desc>부산·경남 제조 클러스터에서 재사용 효율이 가장 높은 5 시나리오 — SOP RAG, 밀시트 OCR, 패스 스케줄, 압연기 예지보전, 에너지 최적화 — 의 카드 도식.</desc>
+  <title>시나리오 상세 — 철강 Top 5 (STL-01·02·05·06·09)</title>
+  <desc>철강 도메인 우선 도입 Top 5 시나리오 — 연속주조 (STL-01) · 압연 형상 (STL-02) · 냉연 두께 (STL-05) · 표면 비전 (STL-06) · 예지보전 (STL-09) — 의 모델·KPI·도입난이도·기간을 5 카드 세로 stack 으로 시각화.</desc>
 
   <defs>
-    <linearGradient id="t5-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0D47A1"/>
-      <stop offset="100%" stop-color="#1565C0"/>
+    <linearGradient id="t5-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
     <linearGradient id="t5-card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#42A5F5"/>
-      <stop offset="100%" stop-color="#1565C0"/>
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
     </linearGradient>
-    <filter id="t5-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    <linearGradient id="t5-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A5B4FC"/>
+    </linearGradient>
+    <filter id="t5-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#t5-header)"/>
-  <!-- 압연기 아이콘 (롤 2개) -->
-  <g transform="translate(28, 22)">
-    <rect x="0" y="14" width="44" height="6" rx="2" fill="#FFEB3B"/>
-    <circle cx="10" cy="10" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <circle cx="34" cy="10" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <circle cx="10" cy="26" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <circle cx="34" cy="26" r="8" fill="white" stroke="#1565C0" stroke-width="2"/>
-  </g>
-  <text x="85" y="32" class="ko" font-size="20" fill="white">시나리오 상세 · 재사용성 Top 5</text>
-  <text x="85" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SCN-LLM-01 · STL-08 · STL-04 · STL-09 · UTL-01 · ROLLING MILL</text>
-  <text x="770" y="42" class="ko" font-size="13" fill="#FFEB3B" text-anchor="end">5 단 구조 · Mermaid 1~2</text>
+  <rect width="600" height="800" fill="#F8FAFC"/>
 
-  <!-- 5 카드 (1행 5개) -->
-  <g transform="translate(25, 100)" filter="url(#t5-shadow)">
-    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
-    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
-    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-LLM-01</text>
-    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">SOP RAG</text>
-    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">표준작업지시서</text>
-    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">질의응답</text>
-    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
-      <text y="0" font-weight="700">엔진:</text>
-      <text x="35" y="0">5.2-f LLM·RAG</text>
-      <text y="18" font-weight="700">트랙:</text>
-      <text x="35" y="18">Track 3</text>
-      <text y="36" font-weight="700">단계:</text>
-      <text x="35" y="36">Quick Win</text>
-      <text y="56" fill="#F57F17" font-weight="700">▸ 비정형 자산화</text>
-      <text y="72" fill="#1976D2">데이터 성숙도 낮은</text>
-      <text y="86" fill="#1976D2">진입 시나리오</text>
+  <!-- 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#t5-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">철강 Top 5 시나리오</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SCN-STL · PRIORITY 5</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#E0E7FF">연주 · 압연 · 냉연 · 표면 · 예지보전 — 도입 우선순위 5 종</text>
+
+  <!-- 5 시나리오 카드 stack (110~600) -->
+  <g filter="url(#t5-shadow)">
+    <g transform="translate(40, 120)">
+      <rect width="520" height="92" rx="10" fill="url(#t5-card)" stroke="#6366F1" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#6366F1"/><rect x="70" width="10" height="92" fill="#6366F1"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">STL-01</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★1</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#3730A3">연속주조 표면결함 예측</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">CCM 센서 · 시계열 · LSTM/Transformer 앙상블</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#6366F1">KPI: 결함률 -25% · 검사시간 -40% · ROI 1.8 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#E0E7FF"/>
+      <rect x="100" y="65" width="320" height="6" rx="3" fill="url(#t5-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★★ · 기간 9-12 개월 · TRL 5→7</text>
     </g>
-    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★★</text>
-  </g>
 
-  <g transform="translate(180, 100)" filter="url(#t5-shadow)">
-    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
-    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
-    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-STL-08</text>
-    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">밀시트 OCR</text>
-    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">시험성적서</text>
-    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">디지털화·상관</text>
-    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
-      <text y="0" font-weight="700">엔진:</text>
-      <text x="35" y="0">5.2-f + 5.2-a</text>
-      <text y="18" font-weight="700">트랙:</text>
-      <text x="35" y="18">T3 + T1</text>
-      <text y="36" font-weight="700">단계:</text>
-      <text x="35" y="36">Quick Win</text>
-      <text y="56" fill="#F57F17" font-weight="700">▸ 텍스트+이미지</text>
-      <text y="72" fill="#1976D2">결합 검색</text>
-      <text y="86" fill="#1976D2">유사 사례 추천</text>
+    <g transform="translate(40, 222)">
+      <rect width="520" height="92" rx="10" fill="url(#t5-card)" stroke="#6366F1" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#6366F1"/><rect x="70" width="10" height="92" fill="#6366F1"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">STL-02</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★2</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#3730A3">압연 형상·평탄도 제어</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">압연 하중·롤갭 · 회귀 + 강화학습 보정</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#6366F1">KPI: 형상오차 -30% · 재압연률 -35% · ROI 2.0 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#E0E7FF"/>
+      <rect x="100" y="65" width="285" height="6" rx="3" fill="url(#t5-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★★ · 기간 12 개월 · TRL 5→7</text>
     </g>
-    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★★</text>
-  </g>
 
-  <g transform="translate(335, 100)" filter="url(#t5-shadow)">
-    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
-    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
-    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-STL-04</text>
-    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">패스 스케줄 추천</text>
-    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">압연 셋업</text>
-    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">유사 사례 추천</text>
-    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
-      <text y="0" font-weight="700">엔진:</text>
-      <text x="35" y="0">5.2-a + 5.2-e</text>
-      <text y="18" font-weight="700">트랙:</text>
-      <text x="35" y="18">Track 1</text>
-      <text y="36" font-weight="700">단계:</text>
-      <text x="35" y="36">Phase 2 핵심</text>
-      <text y="56" fill="#F57F17" font-weight="700">▸ 시작품 손실 ↓</text>
-      <text y="72" fill="#1976D2">베테랑 노하우</text>
-      <text y="86" fill="#1976D2">디지털 자산화</text>
+    <g transform="translate(40, 324)">
+      <rect width="520" height="92" rx="10" fill="url(#t5-card)" stroke="#6366F1" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#6366F1"/><rect x="70" width="10" height="92" fill="#6366F1"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">STL-05</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★3</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#3730A3">냉연 두께 편차 보정</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">두께계 · 장력·속도 · XGBoost + PID 협조</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#6366F1">KPI: 두께편차 -40% · 수율 +3.5% · ROI 1.5 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#E0E7FF"/>
+      <rect x="100" y="65" width="240" height="6" rx="3" fill="url(#t5-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
     </g>
-    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★☆</text>
-  </g>
 
-  <g transform="translate(490, 100)" filter="url(#t5-shadow)">
-    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
-    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
-    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-STL-09</text>
-    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">압연기 예지보전</text>
-    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">진동·온도·전류</text>
-    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">이상탐지</text>
-    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
-      <text y="0" font-weight="700">엔진:</text>
-      <text x="35" y="0">5.2-d 예지보전</text>
-      <text y="18" font-weight="700">트랙:</text>
-      <text x="35" y="18">T1 + T2 + T3</text>
-      <text y="36" font-weight="700">단계:</text>
-      <text x="35" y="36">Phase 2 핵심</text>
-      <text y="56" fill="#F57F17" font-weight="700">▸ LLM-02 결합</text>
-      <text y="72" fill="#1976D2">장애 RAG 동반</text>
-      <text y="86" fill="#1976D2">정비 폐 루프</text>
+    <g transform="translate(40, 426)">
+      <rect width="520" height="92" rx="10" fill="url(#t5-card)" stroke="#6366F1" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#6366F1"/><rect x="70" width="10" height="92" fill="#6366F1"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">STL-06</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★4</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#3730A3">표면 결함 비전 검사</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">라인스캔 · CNN (YOLO·EfficientNet) · 분류·세그</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#6366F1">KPI: 검출률 99.2% · 오검 -55% · 인력 -2 명/교대</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#E0E7FF"/>
+      <rect x="100" y="65" width="200" height="6" rx="3" fill="url(#t5-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6 개월 · TRL 7→9</text>
     </g>
-    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★☆</text>
-  </g>
 
-  <g transform="translate(645, 100)" filter="url(#t5-shadow)">
-    <rect width="145" height="200" rx="10" fill="white" stroke="#1565C0" stroke-width="2"/>
-    <rect width="145" height="44" rx="10" fill="url(#t5-card)"/>
-    <rect y="32" width="145" height="12" fill="url(#t5-card)"/>
-    <text x="73" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-UTL-01</text>
-    <text x="73" y="38" text-anchor="middle" class="ko" font-size="10" fill="white">에너지 최적화</text>
-    <text x="73" y="62" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">전사·ESG</text>
-    <text x="73" y="78" text-anchor="middle" class="ko" font-size="11" fill="#0D47A1">CBAM·K-ETS 4기</text>
-    <g transform="translate(15, 95)" font-size="9" fill="#1565C0" class="ko">
-      <text y="0" font-weight="700">엔진:</text>
-      <text x="35" y="0">5.2-e 최적화</text>
-      <text y="18" font-weight="700">트랙:</text>
-      <text x="35" y="18">T1 + T2 + T3</text>
-      <text y="36" font-weight="700">단계:</text>
-      <text x="35" y="36">Phase 3 전사</text>
-      <text y="56" fill="#F57F17" font-weight="700">▸ 비용·탄소·규제</text>
-      <text y="72" fill="#1976D2">동시 해소</text>
-      <text y="86" fill="#1976D2">CBAM-D 결합</text>
+    <g transform="translate(40, 528)">
+      <rect width="520" height="92" rx="10" fill="url(#t5-card)" stroke="#6366F1" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#6366F1"/><rect x="70" width="10" height="92" fill="#6366F1"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">STL-09</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★5</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#3730A3">설비 예지보전 (PdM)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">진동·온도·전류 · 이상탐지 + RUL 회귀</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#6366F1">KPI: 비계획 정지 -45% · MTBF +30% · ROI 1.6 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#E0E7FF"/>
+      <rect x="100" y="65" width="260" height="6" rx="3" fill="url(#t5-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
     </g>
-    <text x="73" y="190" text-anchor="middle" class="en" font-size="8" fill="#1565C0">REUSE = ★★★★☆</text>
   </g>
 
-  <!-- 하단 사용 안내 -->
-  <g transform="translate(40, 320)">
-    <rect width="720" height="50" rx="8" fill="rgba(13,71,161,0.06)" stroke="#1565C0" stroke-dasharray="3 2"/>
-    <text x="20" y="20" class="ko" font-size="11" fill="#0D47A1" font-weight="700">5 단 구조</text>
-    <text x="100" y="20" class="ko" font-size="10" fill="#1565C0">① 적용맥락 → ② AS-IS 공백 → ③ AI 해결 운영 → ④ 기대효과 표 → ⑤ Mermaid 도식 1~2</text>
-    <text x="20" y="40" class="ko" font-size="10" fill="#1565C0">▸ 부산·경남 클러스터 공통 적용 · 사업계획서 §8.1 / §5.2 직접 인용 가능 · 플레이스홀더만 교체로 1~2 페이지 즉시 채움</text>
+  <!-- 종합 요약 바 -->
+  <g transform="translate(40, 640)">
+    <rect width="520" height="50" rx="6" fill="#FBBF24" filter="url(#t5-shadow)"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#0F172A">5 시나리오 통합 도입 — 평균 ROI 1.7 년 · 24-30 개월 단계 도입</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#0F172A">패키지 1 (대기업철강 9) · 패키지 2 (중견냉연 6) 핵심 구성</text>
   </g>
 
   <!-- 하단 인덱스 -->
-  <g transform="translate(40, 380)" font-size="10" class="ko" fill="#0D47A1">
-    <text x="0" y="0" font-weight="700">5 시나리오 = 5.2-a / 5.2-d / 5.2-e / 5.2-f 4 엔진 망라 · 공통 MLOps + 공통 RAG 인프라 공유 · 비선형 ROI</text>
+  <g transform="translate(40, 700)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#6366F1" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#3730A3">조합 매핑 — 6 패키지 / 트랙 1·2 통합 활용</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ STL-06 + STL-09 = MES 통합 PdM (빠른 ROI 도입)</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ STL-01·02·05 = 압연 라인 전체 품질 통합 (3 종 결합)</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#6366F1">▸ Top4 중첩: LLM-01 + UTL-01 추가 시 패키지 1 완성</text>
   </g>
 </svg>

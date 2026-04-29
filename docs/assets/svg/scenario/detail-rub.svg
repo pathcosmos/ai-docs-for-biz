@@ -1,156 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img"
-     aria-label="시나리오 상세 — RUB 고무·폴리머 (RUB-01·02·05 + 03·04)"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="고무·폴리머 RUB 시나리오 상세 — 5 카드 세로형"
      class="zoomable">
-  <title>시나리오 상세 — RUB 5 시나리오 · 압출기 아이콘 + 인과 사슬</title>
-  <desc>패키지 4 (중견 고무·폴리머 양산사) 의 5 시나리오 — 배합·압출·가류·사출·외관 — 의 인과 사슬과 5.2 엔진 매핑 도식.</desc>
+  <title>시나리오 상세 — 고무·폴리머 (RUB-01·02·03·04·05)</title>
+  <desc>고무·폴리머 도메인 5 시나리오 — RUB-01 압출 두께 · RUB-02 가류 시간 · RUB-03 배합 안정 · RUB-04 검사 자동 · RUB-05 사출 결함 분류 — 의 모델·KPI·도입난이도·기간을 5 카드 세로 stack 으로 시각화.</desc>
 
   <defs>
-    <linearGradient id="rub-header" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#E65100"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+    <linearGradient id="rub-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
     </linearGradient>
     <linearGradient id="rub-card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFB300"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
     </linearGradient>
-    <filter id="rub-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    <linearGradient id="rub-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FCD34D"/>
+    </linearGradient>
+    <filter id="rub-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
     <style>
-      .ko { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; font-weight: 700; }
-      .en { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: 0.06em; }
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
     </style>
   </defs>
 
-  <rect width="800" height="70" fill="url(#rub-header)"/>
-  <!-- 압출기 아이콘 (실린더 + 다이) -->
-  <g transform="translate(28, 22)">
-    <rect x="0" y="10" width="28" height="14" rx="2" fill="#424242"/>
-    <rect x="28" y="6" width="6" height="22" fill="#FFB300"/>
-    <rect x="34" y="14" width="14" height="6" fill="#FF6F00"/>
-    <circle cx="6" cy="17" r="2" fill="#FFEB3B"/>
-    <circle cx="14" cy="17" r="2" fill="#FFEB3B"/>
-    <circle cx="22" cy="17" r="2" fill="#FFEB3B"/>
-  </g>
-  <text x="85" y="32" class="ko" font-size="20" fill="white">시나리오 상세 · RUB (고무·폴리머)</text>
-  <text x="85" y="54" class="en" font-size="11" fill="rgba(255,255,255,0.85)">RUB-01·02·03·04·05 · MIXING → EXTRUSION → CURING → INJECTION → APPEARANCE</text>
-  <text x="770" y="42" class="ko" font-size="13" fill="#FFF59D" text-anchor="end">패키지 4 · 갭 15 해소</text>
+  <rect width="600" height="800" fill="#FFFBEB"/>
 
-  <!-- 인과 사슬 흐름 (RUB-01 → RUB-02 → RUB-05) -->
-  <!-- RUB-01 -->
-  <g transform="translate(20, 110)" filter="url(#rub-shadow)">
-    <rect width="140" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2.5"/>
-    <rect width="140" height="40" rx="10" fill="url(#rub-card)"/>
-    <rect y="28" width="140" height="12" fill="url(#rub-card)"/>
-    <text x="70" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-01</text>
-    <text x="70" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">배합 분산도 예측</text>
-    <text x="70" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-b 시계열</text>
-    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
-      <text y="0">▸ 배치 ID·로트 ID</text>
-      <text y="16">▸ 토크·점도 곡선</text>
-      <text y="32">▸ 분산 불량 사전</text>
-      <text y="48">  감지</text>
-      <text y="68" fill="#F57F17" font-weight="700">▸ Track 1 핵심</text>
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#rub-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">고무·폴리머 RUB</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.9)">SCN-RUB · 5 SCENARIOS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FFF7ED">화승·고무 양산 라인 — 배합·압출·가류·사출·검사 풀라인</text>
+
+  <!-- 5 시나리오 카드 stack -->
+  <g filter="url(#rub-shadow)">
+    <g transform="translate(40, 120)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-01</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★1</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">압출 두께·외경 안정화</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">압출기 압력·온도·속도 · LSTM + PID 협조</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 두께 편차 -45% · 폐기율 -30% · ROI 1.4 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="280" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
+    </g>
+
+    <g transform="translate(40, 222)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-02</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★2</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">가류 시간·온도 최적화</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">가류 프로파일 · 회귀 + 강화학습</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 사이클타임 -12% · 미가류 불량 -50% · ROI 1.6 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="240" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
+    </g>
+
+    <g transform="translate(40, 324)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-03</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">③</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">배합 균질도·물성 예측</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">컴파운드 레시피 + Mooney 점도 · GBM 회귀</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 물성 산포 -25% · 시험 횟수 -40% · ROI 2.0 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="200" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★★ · 기간 9-12 개월 · TRL 5→7</text>
+    </g>
+
+    <g transform="translate(40, 426)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-04</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">④</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">자동 검사·치수 측정</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">3D 스캔·라인스캔 · CNN 분류 + 회귀</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 검사 인력 -2 명 · 오검 -55% · ROI 1.3 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="180" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★ · 기간 4-6 개월 · TRL 7→9</text>
+    </g>
+
+    <g transform="translate(40, 528)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-05</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★5</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">사출 결함 분류 (비전)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">사출품 표면 · YOLO + EfficientNet 앙상블</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 검출률 98% · 클레임 -40% · ROI 1.5 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="220" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6 개월 · TRL 7→9</text>
     </g>
   </g>
 
-  <!-- RUB-02 (강조 — 결합 시연) -->
-  <g transform="translate(170, 110)" filter="url(#rub-shadow)">
-    <rect width="155" height="160" rx="10" fill="white" stroke="#BF360C" stroke-width="3"/>
-    <rect width="155" height="40" rx="10" fill="url(#rub-card)"/>
-    <rect y="28" width="155" height="12" fill="url(#rub-card)"/>
-    <text x="77" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-02 ★</text>
-    <text x="77" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">압출 치수·표면</text>
-    <text x="77" y="58" text-anchor="middle" class="ko" font-size="10" fill="#BF360C" font-weight="700">5.2-b + 5.2-c 결합</text>
-    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
-      <text y="0">▸ 시계열 + 비전</text>
-      <text y="16">▸ 레이저 치수 +</text>
-      <text y="32">  라인스캔 카메라</text>
-      <text y="48">▸ Model Router 통합</text>
-      <text y="68" fill="#F57F17" font-weight="700">▸ 주력 Phase 1~2</text>
-    </g>
+  <!-- 종합 -->
+  <g transform="translate(40, 640)">
+    <rect width="520" height="50" rx="6" fill="#FB923C" filter="url(#rub-shadow)"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#FFF7ED">5 시나리오 풀라인 — 평균 ROI 1.6 년 · 패키지 4 (고무양산) 핵심</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#FFF7ED">화승알엔에이 reference + 부산경남 고무 양산업체 적용 가능</text>
   </g>
 
-  <!-- RUB-05 -->
-  <g transform="translate(335, 110)" filter="url(#rub-shadow)">
-    <rect width="140" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2.5"/>
-    <rect width="140" height="40" rx="10" fill="url(#rub-card)"/>
-    <rect y="28" width="140" height="12" fill="url(#rub-card)"/>
-    <text x="70" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-05</text>
-    <text x="70" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">고무 외관 비전</text>
-    <text x="70" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-c 비전</text>
-    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
-      <text y="0">▸ 검은 표면 미세결함</text>
-      <text y="16">▸ Self-supervised</text>
-      <text y="32">▸ 다각도 고조도 조명</text>
-      <text y="48">▸ Active Learning</text>
-      <text y="68" fill="#F57F17" font-weight="700">▸ 확장 Phase 2</text>
-    </g>
-  </g>
-
-  <!-- 분리선 -->
-  <line x1="500" y1="105" x2="500" y2="280" stroke="#FFB300" stroke-width="1" stroke-dasharray="3 3"/>
-
-  <!-- RUB-03 -->
-  <g transform="translate(515, 110)" filter="url(#rub-shadow)">
-    <rect width="135" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2"/>
-    <rect width="135" height="40" rx="10" fill="url(#rub-card)"/>
-    <rect y="28" width="135" height="12" fill="url(#rub-card)"/>
-    <text x="68" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-03</text>
-    <text x="68" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">가류 시간·온도</text>
-    <text x="68" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-e 최적화</text>
-    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
-      <text y="0">▸ BO vs RL 분기</text>
-      <text y="16">▸ 회분식 / 연속식</text>
-      <text y="32">▸ Safe BO 안전 레이어</text>
-      <text y="48">▸ STL-06 분기와 동일</text>
-      <text y="68" fill="#F57F17" font-weight="700">▸ 핵심 Phase 2</text>
-    </g>
-  </g>
-
-  <!-- RUB-04 -->
-  <g transform="translate(660, 110)" filter="url(#rub-shadow)">
-    <rect width="120" height="160" rx="10" fill="white" stroke="#F57F17" stroke-width="2"/>
-    <rect width="120" height="40" rx="10" fill="url(#rub-card)"/>
-    <rect y="28" width="120" height="12" fill="url(#rub-card)"/>
-    <text x="60" y="18" text-anchor="middle" class="ko" font-size="11" fill="white">SCN-RUB-04</text>
-    <text x="60" y="34" text-anchor="middle" class="ko" font-size="10" fill="white">사출 불량 예측</text>
-    <text x="60" y="58" text-anchor="middle" class="ko" font-size="10" fill="#E65100" font-weight="700">5.2-c (+5.2-b)</text>
-    <g transform="translate(10, 75)" class="ko" font-size="9" fill="#BF360C">
-      <text y="0">▸ OPC-UA 보편</text>
-      <text y="16">▸ 플래시·쇼트샷</text>
-      <text y="32">▸ 데이터 진입 장벽 ↓</text>
-      <text y="48">▸ Quick Win 진입</text>
-      <text y="68" fill="#F57F17" font-weight="700">▸ Phase 1</text>
-    </g>
-  </g>
-
-  <!-- 인과 사슬 화살표 -->
-  <g stroke="#E65100" stroke-width="3" fill="none" marker-end="url(#rub-arrow)">
-    <path d="M 162 190 L 168 190"/>
-    <path d="M 327 190 L 333 190"/>
-  </g>
-  <defs>
-    <marker id="rub-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <polygon points="0,0 8,4 0,8" fill="#E65100"/>
-    </marker>
-  </defs>
-
-  <!-- 인과 사슬 라벨 -->
-  <g transform="translate(20, 285)">
-    <rect width="465" height="22" rx="4" fill="#FFE0B2" stroke="#F57F17"/>
-    <text x="232" y="15" text-anchor="middle" class="ko" font-size="10" fill="#BF360C" font-weight="700">▸ 배합 → 압출 → 외관 인과 사슬 (배치·로트 ID 결합 분석 · 시너지 ROI α=1.05)</text>
-  </g>
-  <g transform="translate(515, 285)">
-    <rect width="265" height="22" rx="4" fill="#FFE0B2" stroke="#F57F17"/>
-    <text x="132" y="15" text-anchor="middle" class="ko" font-size="10" fill="#BF360C" font-weight="700">▸ 가류·사출 — 독립 시나리오</text>
-  </g>
-
-  <!-- 하단 사용 안내 -->
-  <g transform="translate(20, 320)">
-    <rect width="760" height="55" rx="8" fill="rgba(230,81,0,0.06)" stroke="#E65100" stroke-dasharray="3 2"/>
-    <text x="20" y="20" class="ko" font-size="11" fill="#BF360C" font-weight="700">자동차 OEM 협력사 (화승급): RUB-01·02·05 우선 도입 · 일반 양산: RUB-03·04 추가</text>
-    <text x="20" y="40" class="ko" font-size="10" fill="#E65100">▸ 5.2-b·5.2-c·5.2-e 3 엔진 망라 · LLM-03 (8D 보고서) 결합 · OEM 모듈 정합 가능</text>
+  <!-- 하단 -->
+  <g transform="translate(40, 700)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#92400E">도입 우선순위 — 빠른 가시성 → 깊이 있는 최적화</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ Phase 1: RUB-04 (검사) + RUB-05 (사출 비전) — 6 개월 내 가시화</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ Phase 2: RUB-01 (압출) + RUB-02 (가류) — 라인 안정화</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#D97706">▸ Phase 3: RUB-03 (배합 R&D) — 신소재 개발 연계</text>
   </g>
 </svg>
