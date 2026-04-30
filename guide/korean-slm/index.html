@@ -1,0 +1,2680 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 가이드는 한국 정부지원·대기업 협력 사업에서 활용 가능한 sLM 7 개 라인업 (한국 5 + 오픈소스 한국어 파생 1 + 외산 비교축 1) 을 단일 매트릭스로 정렬하여, 사업계획서 §4.3 LLM 모델 선택 전략 본문에 직접 인용 가능한 형태로 제시한다. 각 행의 라이선스·벤치마크·단가는 분기 단위 변동 영역이므로 (확인 필요) 표기를 유지하여 인용 …">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/guide/korean-slm/">
+      
+      
+        <link rel="prev" href="../domain-knowledge/">
+      
+      
+        <link rel="next" href="../consulting-outsource/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>가이드 — 한국 sLM 활용 (LG EXAONE·삼성·포스코·HyperCLOVA·Mi:dm) - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#slm-lg-exaonehyperclovamidm" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              가이드 — 한국 sLM 활용 (LG EXAONE·삼성·포스코·HyperCLOVA·Mi:dm)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../track/track1-index/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영·참고
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 본문 조립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance-budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    재무·예산 산정 (5 비목)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duration-compress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업기간 압축 (단계+연차)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpi-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPI 측정 (5 군 정량)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    외부검증 운영 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag-infra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG 인프라 운영 (5 계층)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도메인 지식추출 (인터뷰 5 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    한국 sLM 활용 (7 모델 매트릭스)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    한국 sLM 활용 (7 모델 매트릭스)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-slm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 한국 sLM 비교 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 활용 의사결정 4 분기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 활용 의사결정 4 분기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 데이터 민감도 분기 (정책 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 사업 성격 분기 (제도 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 도메인 특화 분기 (산업 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 비용·운영 분기 (재무 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 도메인 파인튜닝 절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 도메인 파인튜닝 절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 5 단계 절차
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 파인튜닝 비용 추정 프레임 (재무 가이드 결합)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 평가셋 구성 표준
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 평가셋 구성 표준">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 도메인 골드셋 4 카테고리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 평가 지표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 라우팅 임계 설계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 라우팅 임계 설계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        임계값 정의 표준
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 사업계획서 §4.3 적용 양식
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 사업계획서 §4.3 적용 양식">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 인용 강도 5 단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-4-lg-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 강도 4 인용 예시 (대중소상생 LG AI 트랙)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 확인 필요 항목 (시점 변동 영역)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 모델 한계
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 자산 결합 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 추후 보강 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consulting-outsource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    컨설팅 위탁 (강도 3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trl-progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TRL 진척 관리 (3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위험 매트릭스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 참고 자료
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 참고 자료
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/synergy-roi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시너지 ROI 모델
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/raci-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    책임 분담 매트릭스 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/support-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지원사업 공고 스냅샷
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/form-validation-dx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    양식 검증 — DX 촉진 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    방법론 총론 (47 방법론)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 인터랙티브 도구
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔗 인터랙티브 도구
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-ref 그래프 (44 자산)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    태그 필터
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-slm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 한국 sLM 비교 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 활용 의사결정 4 분기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 활용 의사결정 4 분기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 데이터 민감도 분기 (정책 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 사업 성격 분기 (제도 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 도메인 특화 분기 (산업 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 비용·운영 분기 (재무 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 도메인 파인튜닝 절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 도메인 파인튜닝 절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 5 단계 절차
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 파인튜닝 비용 추정 프레임 (재무 가이드 결합)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 평가셋 구성 표준
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 평가셋 구성 표준">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 도메인 골드셋 4 카테고리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 평가 지표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 라우팅 임계 설계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 라우팅 임계 설계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        임계값 정의 표준
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 사업계획서 §4.3 적용 양식
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 사업계획서 §4.3 적용 양식">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 인용 강도 5 단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-4-lg-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 강도 4 인용 예시 (대중소상생 LG AI 트랙)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 확인 필요 항목 (시점 변동 영역)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 모델 한계
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 자산 결합 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 추후 보강 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영·참고
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영 가이드 (작성 실무)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">guide</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="slm-lg-exaonehyperclovamidm">가이드 — 한국 sLM 활용 (LG EXAONE·삼성·포스코·HyperCLOVA·Mi:dm)<a class="headerlink" href="#slm-lg-exaonehyperclovamidm" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 19 분 읽기</span></p>
+<figure>
+  <img alt="가이드 — 한국 sLM 활용 (LG EXAONE·삼성·포스코·HyperCLOVA·Mi:dm)" src="../../assets/svg/guide/korean-slm.svg" />
+<br />
+<figcaption>운영 가이드 인포그래픽 — 8 장 + 4 분기 + 강도 3 단계 시각</figcaption>
+</figure>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><span class="meta-marker">Phase E3</span> (패키지 4 대중소상생 LG AI 트랙 고무 양산 12 개월 파일럿) 가 발견한 갭 16 해소. 한국 정부지원·대기업 협력 사업에서 외산 GPT/Claude 의존이 아닌 한국 sLM 활용을 표준화하기 위한 운영 가이드. 본 가이드는 <code>other/synergy-roi.md</code> · <code>guide/duration-compress.md</code> · <code>재무_예산_산정_가이드.md</code> 와 같은 운영 가이드 군의 새 멤버이며, <strong>본 가이드가 첫 자산이라 향후 자산 (다른 모델 가이드·도구 가이드 등) 의 포맷 표준</strong> 이 된다 (<span class="meta-marker">방법론 4.26</span> 신규 자산 첫 발현 표준).</p>
+</details>
+<blockquote>
+<p>플레이스홀더 범례 — <code>[수치]</code> 수치, <code>[%]</code> 비율, <code>[기간]</code> 기간, <code>[임계]</code> 임계값. <strong>(확인 필요)</strong> 항목은 §7 에 목록화한다 — 한국 sLM 시장은 모델 출시·라이선스·벤치마크가 분기 단위로 변동하므로 시점 의존 수치는 본문에서 확정하지 않는다.</p>
+<p>본 가이드의 직접 근거 — <code>track/track3-index.md</code> §4.3 (LLM 모델 선택 전략 — 외부 API vs 온프레미스 sLM 하이브리드 라우팅), <code>track/track1-engine-cards.md</code> §5.2-f LLM·RAG 지식검색 엔진의 sLM 분기, <code>pkg/pkg4-rubber.md</code> §1.1·§4.1·§4.3·§5.2-f·§7.2 의 EXAONE 활용 5 위치 명시 사례, <code>module/saas-security.md</code> BLK-CSEC-F (민감도 라우팅 — 외부 API vs 온프레), <code>other/synergy-roi.md</code> + <code>재무_예산_산정_가이드.md</code> (비용 결합).</p>
+</blockquote>
+<hr />
+<h2 id="1-slm">1. 한국 sLM 비교 매트릭스<a class="headerlink" href="#1-slm" title="Permanent link">¤</a></h2>
+<p>본 가이드는 한국 정부지원·대기업 협력 사업에서 활용 가능한 sLM 7 개 라인업 (한국 5 + 오픈소스 한국어 파생 1 + 외산 비교축 1) 을 단일 매트릭스로 정렬하여, 사업계획서 §4.3 LLM 모델 선택 전략 본문에 직접 인용 가능한 형태로 제시한다. 각 행의 라이선스·벤치마크·단가는 분기 단위 변동 영역이므로 (확인 필요) 표기를 유지하여 인용 시 시점 검증을 강제한다.</p>
+<table>
+<thead>
+<tr>
+<th>모델</th>
+<th>제공자</th>
+<th>라이선스 (확인 필요)</th>
+<th>도메인 특화</th>
+<th>한국어 평가축 (확인 필요)</th>
+<th>배포 형태</th>
+<th>적합 사업</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EXAONE</strong></td>
+<td>LG AI Research</td>
+<td>상업 활용 가능성·과금 모델 (확인 필요)</td>
+<td>산업·제조·바이오 (LG 그룹 도메인)</td>
+<td>KMMLU·HAERAE 점수 (확인 필요)</td>
+<td>LG AI 플랫폼 + 온프레 옵션 (확인 필요)</td>
+<td><strong>대중소상생 LG AI 트랙</strong> · LG 그룹 협력사 · 자동차 부품·고무·전자·디스플레이</td>
+</tr>
+<tr>
+<td><strong>HyperCLOVA X</strong></td>
+<td>네이버 클라우드</td>
+<td>API 과금 + 온프레 옵션 (확인 필요)</td>
+<td>범용·문서·검색·커머스</td>
+<td>네이버 자체 평가셋 + KMMLU (확인 필요)</td>
+<td>네이버 클라우드 플랫폼 (NCP) API · CSAP 정합</td>
+<td><strong>클라우드 종합솔루션 (NCP 연계)</strong> · 네이버 협력 사업 · 일반 RAG</td>
+</tr>
+<tr>
+<td><strong>삼성 GASS / Gauss</strong></td>
+<td>삼성 (제공 범위·외부 공개 여부 확인 필요)</td>
+<td>그룹 내부 우선 (외부 협력 가능성 확인 필요)</td>
+<td>가전·반도체·디스플레이 도메인 (확인 필요)</td>
+<td>(확인 필요)</td>
+<td>삼성 클라우드 + 온프레 (확인 필요)</td>
+<td><strong>대중소상생 삼성 AI 트랙</strong> · 삼성 그룹 협력사</td>
+</tr>
+<tr>
+<td><strong>포스코 sLM</strong></td>
+<td>포스코 그룹 (포스코DX·POSCO 홀딩스 등 — 확인 필요)</td>
+<td>그룹 내부 우선 (확인 필요)</td>
+<td><strong>철강·금속 도메인 특화</strong></td>
+<td>(확인 필요)</td>
+<td>포스코 클라우드 (확인 필요)</td>
+<td><strong>대중소상생 포스코 AI 트랙</strong> · 포스코 그룹 협력사 (1 차 벤더·SI)</td>
+</tr>
+<tr>
+<td><strong>KT Mi:dm</strong></td>
+<td>KT (확인 필요)</td>
+<td>API + 온프레 옵션 (확인 필요)</td>
+<td>범용·통신·고객 응대 (확인 필요)</td>
+<td>(확인 필요)</td>
+<td>KT 클라우드 + 온프레 (확인 필요)</td>
+<td><strong>클라우드 종합솔루션 (KT클라우드 연계)</strong> · 통신·콜센터·CSAP 사업</td>
+</tr>
+<tr>
+<td><strong>Solar / Llama·Qwen 한국어 파생</strong></td>
+<td>Upstage / 오픈소스 커뮤니티</td>
+<td>오픈소스 (Apache·Llama·Qwen 라이선스별 — 확인 필요)</td>
+<td>도메인 파인튜닝 자유 (LoRA·QLoRA)</td>
+<td>KMMLU·HAERAE 공개 점수 (확인 필요)</td>
+<td>자체 호스팅 온프레 (GPU 자가 운영)</td>
+<td><strong>R&amp;D 사업 (전사적 DX 촉진 등)</strong> · 보안 강·예산 한정 · 도메인 파인튜닝 핵심</td>
+</tr>
+<tr>
+<td><strong>(외산 비교축) GPT·Claude·Gemini</strong></td>
+<td>OpenAI · Anthropic · Google</td>
+<td>API only · 토큰 과금</td>
+<td>범용 우수·도메인 일반</td>
+<td>한국어 우수 (도메인 어휘 일부 약함)</td>
+<td>외부 API · 데이터 외부 전송</td>
+<td><strong>데이터 민감도 낮은 일반 사업</strong> · 비용 비교 기준선 · 외부 API 허용 시</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>본 표는 7 행 비교 매트릭스이며, <strong>한국 5 + 오픈소스 한국어 1 + 외산 비교축 1</strong> 의 구조이다. 채움 정도는 도메인·배포 형태·적합 사업 3 열은 자산 간 일관성 (track3·5.2-f·BLK-CSEC-F·패키지 4) 으로 확정 가능, 라이선스·벤치마크·단가 3 열은 시점 변동 영역이므로 (확인 필요) 로 통일.</p>
+<p>[출처: <code>track/track3-index.md</code> §4.3; <code>track/track1-engine-cards.md</code> §5.2-f; <code>module/saas-security.md</code> BLK-CSEC-F; <code>pkg/pkg4-rubber.md</code> §1.1 EXAONE 활용 명시 5 위치; <code>other/support-programs.md</code> §3 대중소상생 (LG·삼성·포스코) AI 트랙]</p>
+</blockquote>
+<hr />
+<h2 id="2-4">2. 활용 의사결정 4 분기<a class="headerlink" href="#2-4" title="Permanent link">¤</a></h2>
+<p>본 가이드의 핵심 의사결정 도구는 sLM 선정을 4 차원으로 직교 분기시키는 결정 매트릭스이다. 4 분기는 mutually exclusive 하게 설계되어 사업계획서 §4.3 본문에서 1 분기씩 단독 인용 가능하며, 동시에 4 분기를 모두 거치면 단일 sLM 추천이 결정된다.</p>
+<h3 id="21">2.1 데이터 민감도 분기 (정책 차원)<a class="headerlink" href="#21" title="Permanent link">¤</a></h3>
+<p><code>module/saas-security.md</code> BLK-CSEC-F 의 민감도 라우팅을 sLM 선정 차원으로 확장한 분기이다.</p>
+<ul>
+<li><strong>민감 등급 ④·⑤ (영업비밀·도면·고객 IP·OEM 사양·금형 코드)</strong> — <strong>온프레 sLM 강제</strong> (EXAONE 온프레 / HyperCLOVA 온프레 / Solar·Llama 자체 호스팅). 외부 API 절대 금지. BLK-CSEC-F "민감 ③ 이상 등급 문서 또는 도면·고객사 IP 가 포함된 질의는 온프레 sLM 으로 강제 라우팅" 규칙과 정합.</li>
+<li><strong>중간 등급 ③ (사내 운영 문서·8D·5Why 보고서·MSDS·작업표준서)</strong> — 온프레 sLM 우선, 단 외부 API 는 마스킹 필터 (PII·고객사명·도면 ID 토큰 치환) 적용 시 허용. EXAONE·HyperCLOVA API 게이트웨이형 (국내 데이터센터·CSAP 정합) 도 중간 등급 처리에 적합.</li>
+<li><strong>공개·내부 등급 ①·② (공개 매뉴얼·일반 작업 안내)</strong> — 외부 API 허용 + 비용 비교 우선. 한국 sLM API · 외산 API 토큰 단가를 비교하여 운영비 우위 모델 선택.</li>
+</ul>
+<h3 id="22">2.2 사업 성격 분기 (제도 차원)<a class="headerlink" href="#22" title="Permanent link">¤</a></h3>
+<p>지원사업 공고의 명시적·암묵적 sLM 요구를 4 그룹으로 분기한다.</p>
+<ul>
+<li><strong>대중소상생 트랙</strong> — 협력 대기업 sLM 활용이 사실상 의무. <strong>LG → EXAONE / 삼성 → GASS·Gauss / 포스코 → 그룹 sLM</strong> 의 트랙별 강제 매핑. <code>pkg/pkg4-rubber.md</code> §1.1·§4.1·§4.3 의 EXAONE 활용 5 위치 명시 사례가 직접 표준.</li>
+<li><strong>클라우드 종합솔루션 지원사업</strong> — CSP 연계 sLM 우선. <strong>네이버클라우드 (NCP) → HyperCLOVA / KT클라우드 → Mi:dm / NHN 클라우드 → 자체·오픈소스</strong>. CSAP 등급·국내 데이터센터 정합이 본 트랙의 핵심.</li>
+<li><strong>디지털 경남·일반 정부지원·스마트공장</strong> — 한국 sLM 우선 + 외산 보조의 하이브리드 라우팅. EXAONE·HyperCLOVA 가 1 순위, 도메인 특화 부재 시 오픈소스 + 도메인 파인튜닝.</li>
+<li><strong>R&amp;D (전사적 DX 촉진·연구개발과제)</strong> — 도메인 파인튜닝 자유도가 핵심 요구이므로 <strong>오픈소스 sLM (Solar·Llama·Qwen 한국어 파생) + LoRA·QLoRA 파인튜닝</strong> 권장. 본 트랙은 외부 API 의존을 R&amp;D 산출물의 자체 IP 보유 관점에서 회피한다.</li>
+</ul>
+<h3 id="23">2.3 도메인 특화 분기 (산업 차원)<a class="headerlink" href="#23" title="Permanent link">¤</a></h3>
+<p>고객사 산업·도메인 어휘 의존도에 따른 분기.</p>
+<ul>
+<li><strong>철강·금속·압연·열처리</strong> — <strong>포스코 sLM (그룹 내부 협력 사업 시)</strong> 또는 EXAONE 산업 도메인 + 오픈소스 도메인 파인튜닝. 패키지 2 (중견 냉연사) · 패키지 4 변형 트랙에 적용.</li>
+<li><strong>자동차 부품 (고무·폴리머·내·외장)</strong> — <strong>EXAONE (LG AI 트랙·LG 그룹 협력 시)</strong> 또는 GASS (삼성 협력 시). 패키지 4 (고무 양산 12 개월) 의 EXAONE 1 차 적용이 직접 사례. 한국어 도메인 어휘 (밴버리·믹서·언더큐어·플로우 라인·도그본·웨더링·블루밍 등) 처리 능력이 외산 LLM 대비 우위.</li>
+<li><strong>비철·고무·정밀가공·일반 제조</strong> — 도메인 특화 sLM 부재 → <strong>EXAONE·HyperCLOVA 일반 모델 + 사내 RAG (5.2-f) 결합</strong> 으로 도메인 격차 보정. 패키지 5 (정밀가공 중소 SaaS 경량) 가 본 분기에 위치.</li>
+<li><strong>화학·정유·반도체·디스플레이</strong> — 그룹별 sLM 우선 (LG·삼성 그룹 협력 트랙 시) 또는 EXAONE + 도메인 RAG.</li>
+<li><strong>금융·의료·법률 등 비제조</strong> — 본 가이드 범위 외 (별도 가이드 후속 작성 권장).</li>
+</ul>
+<h3 id="24">2.4 비용·운영 분기 (재무 차원)<a class="headerlink" href="#24" title="Permanent link">¤</a></h3>
+<p><code>재무_예산_산정_가이드.md</code> §4.1 재료비·운영비 항목과 결합되는 분기이다.</p>
+<ul>
+<li><strong>외부 API (GPT·Claude·외산)</strong> — 토큰 단가 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 원/1M (확인 필요), 운영 부담 낮음 (인프라 0), 데이터 외부 전송 위험. 사업 1 차년도 PoC·MVP 단계에 적합.</li>
+<li><strong>온프레 sLM (EXAONE 온프레·Solar 자체 호스팅)</strong> — GPU 인프라 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만원·운영 부담 高 (전담 SRE 필요)·영업비밀 보호. 사업 2 차년도 이후 운영 단계 또는 BLK-CSEC-F 민감도 강제 사업에 적합.</li>
+<li><strong>API 게이트웨이형 한국 sLM (HyperCLOVA·EXAONE API 옵션·Mi:dm)</strong> — 단가 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 원/1M (확인 필요)·국내 데이터센터·CSAP 정합·온프레 인프라 부담 없음. <strong>민감도 ②·③ 등급 + CSAP 요구 사업</strong> 의 균형점.</li>
+<li><strong>혼합 (하이브리드)</strong> — 민감도 게이트웨이로 분기하여 ① 민감 → 온프레 sLM, ② 일반 → 외부 API 또는 한국 API 의 비용 최적화. <code>track/track3-index.md</code> §4.3 의 하이브리드 라우팅과 직접 정합.</li>
+</ul>
+<blockquote>
+<p>4 분기 직교성 자기평가 — 2.1 (민감도) 은 정책, 2.2 (사업 성격) 는 제도, 2.3 (도메인) 은 산업, 2.4 (비용) 는 재무 차원으로 차원이 분리되어 mutually exclusive 한 결정축. 각 분기는 단독 인용 가능하며, 4 분기를 직렬로 거치면 단일 sLM 라인업이 추천된다.</p>
+</blockquote>
+<hr />
+<h2 id="3">3. 도메인 파인튜닝 절차<a class="headerlink" href="#3" title="Permanent link">¤</a></h2>
+<p>오픈소스 sLM (Solar·Llama·Qwen 한국어 파생) 또는 EXAONE·HyperCLOVA 의 파인튜닝 옵션을 활용할 때의 표준 5 단계 절차이다. 본 절차는 R&amp;D 트랙·도메인 어휘 격차 보정·BLK-CSEC-F 민감도 분기 ④·⑤ 등급 사업에 공통 적용된다.</p>
+<h3 id="31-5">3.1 5 단계 절차<a class="headerlink" href="#31-5" title="Permanent link">¤</a></h3>
+<ol>
+<li><strong>데이터 수집</strong> — 사내 도메인 문서 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 (작업표준서·SOP·8D·5Why 보고서·MSDS·과거 클레임 응대 기록·공정설계서·매뉴얼) + 도메인 QA 쌍 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 수집. 베테랑 인터뷰 기반 QA 셋이 도메인 어휘 격차 보정에 1 차 가치.</li>
+<li><strong>품질 정제</strong> — 중복 제거·민감정보 마스킹 (PII·고객사명·도면 ID·금형 코드 토큰 치환)·품질 등급 분류 (A·B·C). C 등급은 학습 제외, B 등급은 검증셋 후순위, A 등급만 학습셋 1 차 활용.</li>
+<li><strong>튜닝 방식 선택</strong> — Full Fine-tuning (전체 가중치 갱신, GPU·시간 부담 高) / <strong>LoRA·QLoRA (저랭크 어댑터, 효율적, 1 차 권장)</strong> / Prefix Tuning (가벼움, 도메인 어휘 보정에 한정 효과). 본 가이드는 1 차 도입 시 LoRA·QLoRA 를 권장한다.</li>
+<li><strong>평가셋 분리</strong> — 학습 <span class="placeholder-tag" data-placeholder="%">[%]</span> / 검증 <span class="placeholder-tag" data-placeholder="%">[%]</span> / 테스트 <span class="placeholder-tag" data-placeholder="%">[%]</span> 의 3 분할 + <strong>도메인 골드셋 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 문항</strong> 별도 보관. 도메인 골드셋은 §4 평가셋 구성 표준에 따라 4 카테고리로 구성.</li>
+<li><strong>A/B 검증</strong> — 베이스 모델 (파인튜닝 전) vs 파인튜닝 모델의 KPI 비교. 정확도·도메인 적합도·환각률·안전성·응답 지연의 5 축 비교. 검증 결과 기준 미달 시 데이터 추가 수집·하이퍼파라미터 재조정·튜닝 방식 재선택의 회귀 절차.</li>
+</ol>
+<h3 id="32">3.2 파인튜닝 비용 추정 프레임 (재무 가이드 결합)<a class="headerlink" href="#32" title="Permanent link">¤</a></h3>
+<p><code>재무_예산_산정_가이드.md</code> §4.1 재료비·연구장비 항목과 결합하여 파인튜닝 비용을 산출한다.</p>
+<ul>
+<li><strong>GPU 시간</strong> — <span class="placeholder-tag" data-placeholder="수치">[수치]</span> M 토큰 학습 시 GPU 시간 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> (모델 크기·LoRA rank·배치 크기 별 변동 — 확인 필요)</li>
+<li><strong>GPU 인프라</strong> — 자체 보유 시 0 (감가상각 별산), 클라우드 GPU 임대 시 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만원/시간 (확인 필요, CSP·인스턴스 타입 별 변동)</li>
+<li><strong>데이터 정제 인력</strong> — 도메인 전문가 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 인·월 + 라벨링 외주 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만원</li>
+<li><strong>검증·평가 인력</strong> — 도메인 전문가 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 인·월 (도메인 골드셋 작성 + A/B 검증)</li>
+<li><strong>합계</strong> — <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만원 (모델 크기·데이터 규모 별 변동)</li>
+</ul>
+<blockquote>
+<p>본 비용 프레임은 <code>재무_예산_산정_가이드.md</code> §4.1 의 "LLM·RAG" 행 (외주 비중 <span class="placeholder-tag" data-placeholder="%">[%]</span> · 운영 단계 모델 사용료 추가) 의 sLM 파인튜닝 세부 분해이며, 본 가이드 §3.2 + 재무 가이드 §4.1 을 결합 인용 시 사업계획서 예산 산정표의 LLM 행이 완성된다.</p>
+</blockquote>
+<hr />
+<h2 id="4">4. 평가셋 구성 표준<a class="headerlink" href="#4" title="Permanent link">¤</a></h2>
+<p>sLM 활용의 정합성·품질을 검증하는 도메인 골드셋의 표준 구성이다. 본 표준은 §3.1 5 단계 절차의 4 단계 (평가셋 분리) 의 도메인 골드셋 부분 + 운영 단계의 정기 회귀 평가에 공통 적용된다.</p>
+<h3 id="41-4">4.1 도메인 골드셋 4 카테고리<a class="headerlink" href="#41-4" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>일반 한국어 능력 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 문항</strong> — KMMLU·KoBEST·HAERAE 등 공개 벤치마크에서 도메인 무관 기본 한국어 능력 검증. 베이스 모델 선정 시 1 차 필터.</li>
+<li><strong>도메인 지식 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 문항</strong> — 사내 베테랑 인터뷰 기반 QA 셋. 제조 공정·품질·안전·OEM 응대·CAPA·8D 보고서 작성·MSDS 해석 등 도메인 특화 질의. 본 카테고리가 sLM 도메인 적합도의 핵심 지표.</li>
+<li><strong>안전성 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 문항</strong> — 환각·민감정보 누출·정책 위반·도면 외부 노출 시도·고객사 정보 추출 시도 등 안전 관련 케이스. BLK-CSEC-F 민감도 라우팅 정합 검증.</li>
+<li><strong>형식 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 문항</strong> — 보고서·매뉴얼·8D 작성·OEM 응대 표준 양식 출력 평가. 출력 형식이 사내 양식과 일치하는지 검증.</li>
+</ul>
+<p>총 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 문항 (4 카테고리 합산), 문항당 정답·근거·평가 기준 명시.</p>
+<h3 id="42">4.2 평가 지표<a class="headerlink" href="#42" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>Faithfulness (RAGAS)</strong> — 응답이 검색된 출처에 근거하는 정도. 0~1 스케일, <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 이상 통과.</li>
+<li><strong>Domain Accuracy</strong> — 도메인 골드셋 정답률 (%). 베이스 <span class="placeholder-tag" data-placeholder="%">[%]</span> vs 파인튜닝 <span class="placeholder-tag" data-placeholder="%">[%]</span> 비교.</li>
+<li><strong>Hallucination Rate</strong> — 근거 없는 응답 (출처 인용 누락·허위 사실) 비율. <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 이하 통과.</li>
+<li><strong>Safety Score</strong> — 정책 위반 (민감정보 노출·도면 외부 전송 시도) 응답 비율. <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 이하 통과.</li>
+<li><strong>Latency P50 / P95</strong> — 응답 지연. P50 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 이하 / P95 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 이하 통과.</li>
+</ul>
+<blockquote>
+<p>본 평가 지표는 운영 단계의 정기 회귀 평가에도 그대로 적용되며, 드리프트 탐지 (<code>pkg/pkg4-rubber.md</code> §6 MLO-01 드리프트 인프라) 의 sLM 분기 트리거로 작동한다.</p>
+</blockquote>
+<hr />
+<h2 id="5">5. 라우팅 임계 설계<a class="headerlink" href="#5" title="Permanent link">¤</a></h2>
+<p><code>track/track3-index.md</code> §4.3 의 하이브리드 라우팅과 <code>module/saas-security.md</code> BLK-CSEC-F 의 민감도 라우팅을 본 가이드 기준으로 임계 명시한 결정 트리이다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[사용자 질의]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  │
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  ├─&gt; [민감도 분류 게이트웨이]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  │     ① NER (PII·도면 ID·고객사명·금형 코드·OEM 사양) 검출
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  │     ② 정책 룰 (영업비밀·OEM·CAPA 키워드 패턴)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  │     ③ 검색 컨텍스트 문서의 등급 메타 (BLK-CSEC-B ①~⑤)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  │     ④ 사용자 권한 레벨 (작업자·검사원·QA·설계자·경영진)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  │
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  ├─&gt; [등급 ④·⑤ (영업비밀·도면·고객 IP)]
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  │     → 온프레 sLM 강제 라우팅
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  │       (EXAONE 온프레 / HyperCLOVA 온프레 / Solar 자체 호스팅)
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  │     → 외부 API 절대 차단
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  │
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  ├─&gt; [등급 ③ (사내 운영 문서) + 도메인 특화 필요]
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  │     → 도메인 파인튜닝 sLM (LoRA·QLoRA 적용 모델)
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  │     → 도메인 어휘 격차 보정·환각 억제 우위
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  │
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  ├─&gt; [등급 ②·③ + 일반 지식·CSAP 요구]
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  │     → 한국 sLM API 게이트웨이 (HyperCLOVA·EXAONE API·Mi:dm)
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  │     → 국내 데이터센터·CSAP 정합·운영 부담 없음
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>  │
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  ├─&gt; [등급 ①·② + 일반 지식 + 외부 API 허용]
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  │     → 외부 LLM API (GPT·Claude·Gemini)
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>  │     → 비용 우위·범용 우수·도메인 일반
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  │
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>  └─&gt; [응답 신뢰도 점수 &lt; [임계]]
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        → 휴먼 에스컬레이션 (HITL)
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        → 드리프트 탐지 트리거 (운영 단계)
+</span></code></pre></div>
+<h3 id="_1">임계값 정의 표준<a class="headerlink" href="#_1" title="Permanent link">¤</a></h3>
+<p>본 결정 트리의 임계값은 사업별 가변이나, 표준 권고치는 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>표준 권고 (확인 필요)</th>
+<th>근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>응답 신뢰도 임계 (Faithfulness)</td>
+<td><span class="placeholder-tag" data-placeholder="임계">[임계]</span> 이상 통과</td>
+<td>RAGAS 권장 + 사내 검증</td>
+</tr>
+<tr>
+<td>환각률 임계 (Hallucination Rate)</td>
+<td><span class="placeholder-tag" data-placeholder="임계">[임계]</span> 이하 통과</td>
+<td>안전성 KPI</td>
+</tr>
+<tr>
+<td>안전성 점수 임계 (Safety Score)</td>
+<td><span class="placeholder-tag" data-placeholder="임계">[임계]</span> 이하 통과</td>
+<td>정책 위반 0 지향</td>
+</tr>
+<tr>
+<td>응답 지연 임계 (P95 Latency)</td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span> 이하 통과</td>
+<td>현장 UX 요구</td>
+</tr>
+<tr>
+<td>사용자 권한 분기 임계</td>
+<td>4 단계 (작업자·검사원·QA·설계자)</td>
+<td>BLK-CSEC-D 권한 단계별 차등 노출</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>라우팅 임계 명확성 자기평가 — 결정 트리는 5 분기 + HITL 1 분기의 단계적 직렬 구조이며, 각 분기 조건은 BLK-CSEC-B (민감도 등급) · BLK-CSEC-F (라우팅) · §4.2 (평가 지표) 와 명시적으로 연동되어 임계가 모호하지 않다. 단, 임계 수치 자체는 사업별 가변이므로 <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 플레이스홀더로 유지.</p>
+</blockquote>
+<hr />
+<h2 id="6-43">6. 사업계획서 §4.3 적용 양식<a class="headerlink" href="#6-43" title="Permanent link">¤</a></h2>
+<p>본 가이드의 §1 비교 매트릭스 + §2 의사결정 4 분기 + §5 라우팅 결정 트리를 사업계획서 §4.3 (LLM 모델 선택 전략) 본문에 직접 인용하는 표준 양식이다. <strong>1 단락 + 표 1 개</strong> 의 가벼운 인용부터 <strong>3 단락 + 표 2 개 + 결정 트리 도식</strong> 의 완전 인용까지 5 단계 인용 강도를 제공한다.</p>
+<h3 id="61-5">6.1 인용 강도 5 단계<a class="headerlink" href="#61-5" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>강도</th>
+<th>분량</th>
+<th>구성</th>
+<th>적합 사업</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>강도 1 (1 줄)</td>
+<td>1 문장</td>
+<td>"본 사업은 한국 sLM (EXAONE·HyperCLOVA·Mi:dm) 활용을 우선하며, 외부 API 는 데이터 민감도 ②등급 이하에 한정한다"</td>
+<td>9 개월 압축 사업 §4.3 1 줄 인용</td>
+</tr>
+<tr>
+<td>강도 2 (1 단락)</td>
+<td>1 단락 (180~240자)</td>
+<td>하이브리드 라우팅 의지 + 민감도 분기 명시</td>
+<td>12 개월 표준 사업 §4.3</td>
+</tr>
+<tr>
+<td>강도 3 (1 단락 + 표)</td>
+<td>1 단락 + 비교 매트릭스 (§1)</td>
+<td>sLM 라인업 비교 + 본 사업 선정 모델</td>
+<td>18 개월 풀 사업 §4.3</td>
+</tr>
+<tr>
+<td>강도 4 (2 단락 + 표 + 결정 트리)</td>
+<td>2 단락 + 표 + §5 결정 트리 도식</td>
+<td>라우팅 정책 명시 + 임계 수치</td>
+<td>대중소상생 LG·삼성·포스코 트랙</td>
+</tr>
+<tr>
+<td>강도 5 (3 단락 + 표 2 + 도식)</td>
+<td>3 단락 + 비교 매트릭스 + 임계 표 + 결정 트리</td>
+<td>§1·§2·§5 통합 인용</td>
+<td>R&amp;D 사업 (전사적 DX 촉진)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-4-lg-ai">6.2 강도 4 인용 예시 (대중소상생 LG AI 트랙)<a class="headerlink" href="#62-4-lg-ai" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>본 사업은 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 영업비밀·OEM 사양·도면 자산을 외부 LLM API 로 노출시키지 않기 위해 <strong>LG EXAONE sLM 을 1 차 분기로 하는 하이브리드 라우팅</strong> 을 채택한다 (<code>track/track3-index.md</code> §4.3·<code>guide/korean-slm.md</code> §2.1·§5 적용). EXAONE 의 한국어 도메인 어휘 처리 능력 (자동차 부품·고무·폴리머 어휘) 과 LG AI 플랫폼 결합 가능성을 활용하여, 영업비밀·고객사 IP·OEM 사양 질의는 EXAONE 으로 강제 라우팅하고, 일반 지식 질의는 외부 API 또는 한국 API 게이트웨이 (HyperCLOVA) 로 비용 최적 분기한다.</p>
+<p>라우팅 결정은 ① 검색된 문서의 등급 메타, ② 질의에 포함된 키워드 패턴 (도면 ID·고객사명·금형 코드), ③ 사용자의 권한 레벨 의 3 축을 결합한 게이트웨이가 수행하며, 모든 라우팅 결정은 감사 로그 (<code>module/saas-security.md</code> BLK-CSEC-C) 에 기록되어 사후 추적 가능하다 (BLK-CSEC-F 정합).</p>
+<p>[본 §6.2 는 <code>pkg/pkg4-rubber.md</code> §4.3 의 양식을 본 가이드 §6 인용 양식으로 일반화한 것]</p>
+</blockquote>
+<hr />
+<h2 id="7">7. 확인 필요 항목 (시점 변동 영역)<a class="headerlink" href="#7" title="Permanent link">¤</a></h2>
+<p>한국 sLM 시장은 분기 단위로 변동하므로, 본 가이드의 (확인 필요) 항목을 사업계획서 인용 시점에 검증해야 한다.</p>
+<ol>
+<li><strong>모델 출시·버전</strong> — EXAONE 최신 버전 (3.0 / 3.5 / 4.0 등), HyperCLOVA X 최신 버전, GASS·Gauss 외부 공개 여부, 포스코 sLM 외부 협력 가능성, KT Mi:dm 최신 버전.</li>
+<li><strong>라이선스·상업 활용 가능성</strong> — 각 모델의 상업 활용 허용 범위, 그룹 외부 협력사 활용 조건, 재학습·파인튜닝 권한, 산출 모델 IP 귀속.</li>
+<li><strong>과금 모델</strong> — API 토큰 단가 (1M 토큰 기준), 온프레 라이선스 비용, 파인튜닝 옵션 추가 비용.</li>
+<li><strong>한국어 벤치마크 점수</strong> — KMMLU·KoBEST·HAERAE·Ko-BBH 등 공개 벤치마크의 최신 리더보드 점수, 도메인 특화 평가 (제조·금융·의료) 의 사내 검증 점수.</li>
+<li><strong>CSAP·ISMS-P 인증 여부</strong> — 한국 sLM API 의 CSAP 등급 (하·중·상), ISMS-P 인증 보유, 국내 데이터센터 위치, 데이터 주권 보장 약관.</li>
+<li><strong>도메인 특화 모델 출시 여부</strong> — 제조·금융·의료·법률 특화 모델의 출시 여부, 도메인 파인튜닝 사전 학습 자산 공개 여부.</li>
+<li><strong>GPU 인프라 단가</strong> — 클라우드 GPU 임대 단가 (NCP·KT·NHN·AWS·Azure 별), 자체 보유 GPU 의 감가상각 단가.</li>
+<li><strong>파인튜닝 비용</strong> — LoRA·QLoRA 파인튜닝의 GPU 시간·데이터 규모별 비용, 도메인 골드셋 작성 외주 단가.</li>
+<li><strong>운영 SRE 인력 단가</strong> — 온프레 sLM 운영 전담 인력의 인·월 단가, 클라우드 sLM 운영 인력의 인·월 단가.</li>
+<li><strong>갱신 주기</strong> — 본 가이드의 (확인 필요) 항목은 분기 1 회 갱신 권장 (한국 sLM 시장 변동 속도 기준).</li>
+</ol>
+<p>총 10 항목 — 시점 변동 영역의 정직 노출.</p>
+<hr />
+<h2 id="8">8. 모델 한계<a class="headerlink" href="#8" title="Permanent link">¤</a></h2>
+<ul>
+<li>본 가이드는 <strong>프레임</strong> 이며, 구체 수치는 시점·계약·고객사 별 변동. (확인 필요) 표기를 무시하고 인용 시 부정확 위험.</li>
+<li>한국 sLM 시장이 빠르게 변동하므로, <strong>분기 1 회 갱신 권장</strong> (본 가이드의 §7 항목을 분기 회귀 절차로 검증).</li>
+<li>본 가이드는 <strong>첫 자산</strong> 이라 다음 자산 (다른 모델 가이드·도구 가이드 등) 의 포맷 표준이 되며 (<span class="meta-marker">방법론 4.26</span>), 후속 자산은 본 가이드의 8 장 구조 (비교 매트릭스 → 의사결정 분기 → 도메인 파인튜닝 → 평가셋 → 라우팅 임계 → 적용 양식 → 확인 필요 → 한계) 를 표준으로 준용한다.</li>
+<li>본 가이드는 <strong>제조 도메인 중심</strong> 이며, 금융·의료·법률·공공 등 비제조 도메인은 별도 가이드 후속 작성 권장.</li>
+<li>본 가이드는 <strong>한국 sLM 활용</strong> 의 표준화이며, 도구·프레임워크 (LangChain·LlamaIndex·vLLM·TGI 등) 선택은 별도 가이드 후속 작성 권장.</li>
+</ul>
+<hr />
+<h2 id="9">9. 자산 결합 요약<a class="headerlink" href="#9" title="Permanent link">¤</a></h2>
+<p>본 가이드는 다음 자산과 직접 결합된다.</p>
+<table>
+<thead>
+<tr>
+<th>결합 자산</th>
+<th>결합 지점</th>
+<th>결합 효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>track/track3-index.md</code> §4.3</td>
+<td>LLM 모델 선택 전략 본문</td>
+<td>본 가이드 §1 매트릭스 + §2 의사결정 + §5 결정 트리를 §4.3 본문에 직접 인용</td>
+</tr>
+<tr>
+<td><code>track/track1-engine-cards.md</code> §5.2-f</td>
+<td>LLM·RAG 지식검색 엔진 sLM 분기</td>
+<td>본 가이드 §1·§2 가 5.2-f 의 sLM 라인업 결정 표준</td>
+</tr>
+<tr>
+<td><code>pkg/pkg4-rubber.md</code> §1.1·§4.1·§4.3·§5.2-f·§7.2</td>
+<td>EXAONE 활용 5 위치 명시</td>
+<td>본 가이드 §6.2 강도 4 인용 양식의 직접 사례</td>
+</tr>
+<tr>
+<td><code>module/saas-security.md</code> BLK-CSEC-F</td>
+<td>SaaS RAG 의 권한·민감정보 라우팅</td>
+<td>본 가이드 §2.1 민감도 분기 + §5 라우팅 결정 트리의 직접 근거</td>
+</tr>
+<tr>
+<td><code>재무_예산_산정_가이드.md</code> §4.1 LLM·RAG 행</td>
+<td>재료비·운영비 LLM 항목</td>
+<td>본 가이드 §3.2 파인튜닝 비용 프레임이 §4.1 의 sLM 세부 분해</td>
+</tr>
+<tr>
+<td><code>other/synergy-roi.md</code> 비정형 데이터 시너지</td>
+<td>공통 RAG 인프라·임베딩 시너지</td>
+<td>본 가이드 §1·§5 의 sLM 단일 라인업이 시너지 모델의 sLM 항목 입력</td>
+</tr>
+<tr>
+<td><code>other/support-programs.md</code> §3 대중소상생</td>
+<td>LG·삼성·포스코 AI 트랙 매핑</td>
+<td>본 가이드 §2.2 사업 성격 분기의 트랙별 sLM 강제 매핑 직접 근거</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>자산 결합도 자기평가 — 본 가이드의 8 장 (비교·결정·파인튜닝·평가·라우팅·적용·확인·한계) 이 7 개 자산과 모두 명시적 결합 지점을 보유. 시너지·재무 가이드와의 결합 (비용 모델 §3.2 + 재무 §4.1) 은 사업계획서 예산 산정의 LLM 행을 본 가이드로 완성 가능한 수준.</p>
+</blockquote>
+<hr />
+<h2 id="10">10. 추후 보강 후보<a class="headerlink" href="#10" title="Permanent link">¤</a></h2>
+<p>본 가이드의 후속 갱신·확장 후보는 다음과 같다.</p>
+<ul>
+<li><strong>다른 모델 가이드</strong> — 외산 LLM 활용 가이드 (GPT·Claude·Gemini·외산 오픈소스 한국어 파생), 비제조 도메인 sLM 가이드 (금융·의료·법률).</li>
+<li><strong>도구·프레임워크 가이드</strong> — RAG 도구 가이드 (LangChain·LlamaIndex·Haystack), 추론 서빙 가이드 (vLLM·TGI·llama.cpp), 평가 도구 가이드 (RAGAS·DeepEval·Promptfoo).</li>
+<li><strong>벤치마크 갱신</strong> — KMMLU·KoBEST·HAERAE·Ko-BBH 의 분기별 리더보드 갱신, 도메인 특화 벤치마크 (제조·자동차 부품·철강) 사내 신설.</li>
+<li><strong>모델 출시 추적</strong> — EXAONE·HyperCLOVA X·GASS·포스코 sLM·Mi:dm 의 분기별 신버전 출시 추적, 새 모델 라인업 (네이버·카카오·SKT 등) 의 신규 진입 추적.</li>
+<li><strong>사례 패턴 누적</strong> — 본 가이드의 §6 인용 양식이 사업계획서에 적용된 사례를 누적하여 강도 1~5 인용 패턴을 강화.</li>
+<li><strong><span class="meta-marker">방법론 4.26</span> 신규 자산 표준</strong> — 본 가이드가 첫 자산이므로, 후속 자산이 누적되면 8 장 구조 자체를 표준화하여 재무·시너지·압축 가이드와의 톤 정합 강화.</li>
+</ul>
+<blockquote>
+<p>본 가이드는 <strong>분기 1 회 갱신 + 새 사업 적용 시 §6 인용 강도 결정 + §7 (확인 필요) 시점 검증</strong> 의 3 단 운영 절차로 유지 관리한다.</p>
+</blockquote>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>가이드_한국_sLM_활용.md</code></li>
+<li><strong>자산 군</strong>: 📋 운영 가이드</li>
+<li><strong>slug 경로</strong>: <code>guide/korean-slm.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../domain-knowledge/" class="md-footer__link md-footer__link--prev" aria-label="이전: 도메인 지식추출 (인터뷰 5 단계)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                도메인 지식추출 (인터뷰 5 단계)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../consulting-outsource/" class="md-footer__link md-footer__link--next" aria-label="다음: 컨설팅 위탁 (강도 3 단계)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                컨설팅 위탁 (강도 3 단계)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

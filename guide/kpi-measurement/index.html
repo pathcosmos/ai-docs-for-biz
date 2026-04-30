@@ -1,0 +1,3162 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 가이드는 제조 AI 사업의 KPI 를 발생 원천에 따라 5 군으로 분류한다. 5 군은 mutually exclusive 하게 설계되어 사업계획서 §6.3 본문에서 군별 단독 인용 가능하며, 동시에 collectively exhaustive 하게 제조 AI 사업의 비즈니스·기술·운영·재무 차원을 모두 포괄한다. 5 군 분류는 사업계획서 §6.1 정량 효…">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/guide/kpi-measurement/">
+      
+      
+        <link rel="prev" href="../duration-compress/">
+      
+      
+        <link rel="next" href="../external-validation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>가이드 — KPI 측정·산출·검증 표준 - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kpi" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              가이드 — KPI 측정·산출·검증 표준
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../track/track1-index/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영·참고
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 본문 조립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance-budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    재무·예산 산정 (5 비목)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duration-compress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업기간 압축 (단계+연차)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPI 측정 (5 군 정량)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPI 측정 (5 군 정량)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kpi-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. KPI 분류 5 군
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. KPI 분류 5 군">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-kpi-product-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 품질 KPI (Product Quality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-kpi-operational-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 운영 KPI (Operational Performance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-ai-kpi-model-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 AI 모델 KPI (Model Performance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-kpi-operations-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 운영 거버넌스 KPI (Operations &amp; Governance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-kpi-business-financial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 사업·재무 KPI (Business &amp; Financial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. KPI 측정 도구 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 산출 빈도 표준
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 산출 빈도 표준">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 6 단계 빈도 표준
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 사업 단계별 빈도 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. KPI 검증 절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. KPI 검증 절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pre-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Pre-사업 (기준값 산정 — AS-IS 측정)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-in-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 사업 중 (목표값 추적 — In-Project 모니터링)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-post-outcome-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Post-사업 (효과 검증 — Outcome Validation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 사업계획서 §6.3 인용 양식
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 사업계획서 §6.3 인용 양식">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-1-1-9-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 강도 1 (1 표) — 최소 인용 — 9 개월 압축 사업 §6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-2-1-1-12-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 강도 2 (1 표 + 1 단락) — 표준 인용 — 12 개월 표준 사업 §6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-3-1-2-18-rd-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 강도 3 (1 표 + 2 단락 + 검증 절차) — 풀 인용 — 18 개월 풀 사업·R&amp;D 사업 §6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 인용 강도 선택 기준
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 패키지별 §6.3 인용 사례 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 시너지 ROI 모델·재무 가이드 결합
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 시너지 ROI 모델·재무 가이드 결합">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 시너지 ROI 모델과의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 재무 가이드와의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-slm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 sLM 가이드와의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 사업기간 압축 가이드와의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. (확인 필요) 항목
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 모델 한계
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 추후 보강 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-rd-kpi-phase-e7-97" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 다년 R&amp;D KPI 차원 보강 (Phase E7 — 갭 #9·#7)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 다년 R&amp;D KPI 차원 보강 (Phase E7 — 갭 #9·#7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-kpi-rd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 단계+연차 KPI 분기 표 (다년 R&amp;D 양식 강제)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-kpi-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 KPI 측정 방법 3 차원 (시점·소스·표준)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-1-9-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 1단계 9개월 월별 업무 분포 (갭 #7)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-kpi-7-31-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 KPI 표 7 컬럼 양식 (양식 §3.1-7 강제)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    외부검증 운영 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag-infra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG 인프라 운영 (5 계층)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도메인 지식추출 (인터뷰 5 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../korean-slm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    한국 sLM 활용 (7 모델 매트릭스)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consulting-outsource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    컨설팅 위탁 (강도 3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trl-progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TRL 진척 관리 (3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위험 매트릭스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 참고 자료
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 참고 자료
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/synergy-roi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시너지 ROI 모델
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/raci-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    책임 분담 매트릭스 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/support-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지원사업 공고 스냅샷
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/form-validation-dx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    양식 검증 — DX 촉진 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    방법론 총론 (47 방법론)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 인터랙티브 도구
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔗 인터랙티브 도구
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-ref 그래프 (44 자산)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    태그 필터
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kpi-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. KPI 분류 5 군
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. KPI 분류 5 군">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-kpi-product-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 품질 KPI (Product Quality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-kpi-operational-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 운영 KPI (Operational Performance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-ai-kpi-model-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 AI 모델 KPI (Model Performance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-kpi-operations-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 운영 거버넌스 KPI (Operations &amp; Governance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-kpi-business-financial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 사업·재무 KPI (Business &amp; Financial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. KPI 측정 도구 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 산출 빈도 표준
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 산출 빈도 표준">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 6 단계 빈도 표준
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 사업 단계별 빈도 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. KPI 검증 절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. KPI 검증 절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pre-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Pre-사업 (기준값 산정 — AS-IS 측정)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-in-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 사업 중 (목표값 추적 — In-Project 모니터링)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-post-outcome-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Post-사업 (효과 검증 — Outcome Validation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 사업계획서 §6.3 인용 양식
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 사업계획서 §6.3 인용 양식">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-1-1-9-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 강도 1 (1 표) — 최소 인용 — 9 개월 압축 사업 §6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-2-1-1-12-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 강도 2 (1 표 + 1 단락) — 표준 인용 — 12 개월 표준 사업 §6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-3-1-2-18-rd-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 강도 3 (1 표 + 2 단락 + 검증 절차) — 풀 인용 — 18 개월 풀 사업·R&amp;D 사업 §6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 인용 강도 선택 기준
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 패키지별 §6.3 인용 사례 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 시너지 ROI 모델·재무 가이드 결합
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 시너지 ROI 모델·재무 가이드 결합">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 시너지 ROI 모델과의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 재무 가이드와의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-slm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 sLM 가이드와의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 사업기간 압축 가이드와의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. (확인 필요) 항목
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 모델 한계
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 추후 보강 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-rd-kpi-phase-e7-97" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 다년 R&amp;D KPI 차원 보강 (Phase E7 — 갭 #9·#7)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 다년 R&amp;D KPI 차원 보강 (Phase E7 — 갭 #9·#7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-kpi-rd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 단계+연차 KPI 분기 표 (다년 R&amp;D 양식 강제)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-kpi-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 KPI 측정 방법 3 차원 (시점·소스·표준)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-1-9-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 1단계 9개월 월별 업무 분포 (갭 #7)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-kpi-7-31-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 KPI 표 7 컬럼 양식 (양식 §3.1-7 강제)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영·참고
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영 가이드 (작성 실무)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">guide</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">kpi</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="kpi">가이드 — KPI 측정·산출·검증 표준<a class="headerlink" href="#kpi" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 27 분 읽기</span></p>
+<figure>
+  <img alt="가이드 — KPI 측정·산출·검증 표준" src="../../assets/svg/guide/kpi-measurement.svg" />
+<br />
+<figcaption>운영 가이드 인포그래픽 — 8 장 + 4 분기 + 강도 3 단계 시각</figcaption>
+</figure>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><span class="meta-marker">Phase E1</span> 자체평가 갭 6 해소. 사업계획서 §6.3 KPI 섹션의 측정 도구·산출 빈도·근거 통합 자산. 운영 가이드 군의 5 번째 멤버 (<code>other/synergy-roi.md</code> · <code>guide/duration-compress.md</code> · <code>재무_예산_산정_가이드.md</code> · <code>guide/korean-slm.md</code> 에 이은 자산). 4.26 자산 군 포맷 통일 (8 장 구조 — 분류 → 도구 매트릭스 → 빈도 표준 → 검증 절차 → 적용 양식 → 결합 → 확인 필요 → 한계) 적용.</p>
+</details>
+<blockquote>
+<p>플레이스홀더 범례 — <code>[수치]</code> 수치, <code>[%]</code> 비율, <code>[기간]</code> 기간, <code>[고객사]</code> 고객사명, <code>[공정]</code> 공정명, <code>[임계]</code> 임계값. <strong>(확인 필요)</strong> 항목은 §7 에 목록화한다 — KPI 산정 근거·도구 라이센스·OEM 가이드라인 등은 사업·고객사·시점 별 변동 영역이므로 본문에서 확정하지 않는다.</p>
+<p>본 가이드의 직접 근거 — <code>guide/assembly.md</code> §6 신규 작성 섹션 (§6.1·§6.3 의 신규 작성 의무) + §8 자체평가 양식; <code>track/track2-index.md</code> §5.5 (3 층 모니터링·드리프트 지표 PSI/KS) · §6.3 (챔피언·챌린저) · §7.2 (KPI 정의·대시보드 5 그룹); <code>other/synergy-roi.md</code> §1·§2.4 (KPI 상호보강 시너지) · §6 (시너지 카드); <code>재무_예산_산정_가이드.md</code> §3 (단위 비용·시너지 보정); <code>guide/korean-slm.md</code> §4.2 (sLM 평가 지표); <code>사업계획서_패키지2/4/5_*.md</code> §6.3 KPI 섹션 — 본 가이드가 인용 대상이 되는 사례 군.</p>
+</blockquote>
+<hr />
+<h2 id="1-kpi-5">1. KPI 분류 5 군<a class="headerlink" href="#1-kpi-5" title="Permanent link">¤</a></h2>
+<p>본 가이드는 제조 AI 사업의 KPI 를 발생 원천에 따라 5 군으로 분류한다. 5 군은 mutually exclusive 하게 설계되어 사업계획서 §6.3 본문에서 군별 단독 인용 가능하며, 동시에 collectively exhaustive 하게 제조 AI 사업의 비즈니스·기술·운영·재무 차원을 모두 포괄한다. 5 군 분류는 사업계획서 §6.1 정량 효과 표의 행 분류, §6.3 KPI 정의 표의 시나리오·KPI 매핑, Track 2 §7.2 대시보드의 5 그룹 KPI 트리, 시너지 ROI 모델 §1.4 의 KPI 상호보강 시너지 입력, 재무 가이드 §3 단위 비용 산정의 KPI 입력으로 동일하게 재사용된다.</p>
+<h3 id="11-kpi-product-quality">1.1 품질 KPI (Product Quality)<a class="headerlink" href="#11-kpi-product-quality" title="Permanent link">¤</a></h3>
+<p>제품·공정 산출물의 품질 변동·수율·결함을 측정하는 KPI 군. 제조 AI 사업의 가장 직접적 정량 효과 영역으로, 사업계획서 §6.1 정량 효과 표의 1 행 또는 단일 시나리오 단독 인용 시 1 차 KPI 가 된다. 대표 지표는 불량률 (PPM·DPMO), 클레임률, 1 차 합격률 (FPY, First-Pass Yield), 표면 결함 검출률·Recall, 치수·물성 표준편차 σ, 재작업률 (Rework Rate), 폐기율 (Scrap Rate). 측정 도구는 MES·QMS·SPC 차트·비전 검사 시스템·작업자 일보·OEM 입고 검사 결과로 구성되며, 산출 빈도는 PLC 센서·비전의 실시간 산출, MES 일 집계, QMS·SPC 의 주·월 보고로 단계적이다. 본 군은 시나리오 <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a> (두께 σ), <a href="../../scenario/catalog/#scn-rub-02" title="압출(Extrusion) 라인 치수·표면 실시간 검사·제어" class="scn-link">SCN-RUB-02</a> (압출 외경·두께 σ), <a href="../../scenario/catalog/#scn-rub-05" title="고무 제품 외관 비전 검사 (표면 결함·이물)" class="scn-link">SCN-RUB-05</a> (외관 결함 분류 정확도), <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a> (치수 전수검사) 등 패키지 2·4·5 의 핵심 KPI 가 본 군에 위치한다.</p>
+<h3 id="12-kpi-operational-performance">1.2 운영 KPI (Operational Performance)<a class="headerlink" href="#12-kpi-operational-performance" title="Permanent link">¤</a></h3>
+<p>설비·라인·공정의 가동·생산성·에너지·재고를 측정하는 KPI 군. 사업계획서 §6.1 정량 효과 표에서 품질 KPI 와 함께 정량 효과의 양대 축을 형성한다. 대표 지표는 OEE (Overall Equipment Effectiveness — 가용도·성능·품질 3 축), 사이클 타임, 재공·재고 회전, 에너지 원단위 (kWh/제품 단위), 가용도 (Availability), 가동률 (Utilization), 사이클 타임 변동성 (CT σ), 피크 부하 시간 비중. 측정 도구는 PLC·MES·FEMS (Factory Energy Management System) ·Historian·SCADA 로 구성되며, 산출 빈도는 PLC·SCADA 실시간, MES 집계 일 단위, FEMS 일·주 단위, OEE 종합 주·월 단위이다. 본 군은 <a href="../../scenario/catalog/#scn-met-04" title="도금·도장·산세 공정 조건 최적화" class="scn-link">SCN-MET-04</a> (피크 부하 요금 절감), <a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a> (압연기 부하 변동), <a href="../../scenario/catalog/#scn-rub-04" title="사출·성형 공정 불량 예측 및 조건 추천" class="scn-link">SCN-RUB-04</a> (압출 가동률), Track 2 §7.2 운영 건전성 그룹 KPI 와 직접 연결된다.</p>
+<h3 id="13-ai-kpi-model-performance">1.3 AI 모델 KPI (Model Performance)<a class="headerlink" href="#13-ai-kpi-model-performance" title="Permanent link">¤</a></h3>
+<p>AI 모델 자체의 정확도·신뢰도·응답 성능을 측정하는 KPI 군. Track 2 §7.2 의 KPI 5 그룹 중 ① 모델 성능 그룹과 ② 운영 건전성 그룹의 일부에 직접 정합한다. 대표 지표는 정확도 (Accuracy) ·정밀도 (Precision) ·재현율 (Recall), F1 Score, RMSE/MAE/MAPE (회귀 계열), AUROC·AUPRC (이상탐지 계열), 환각률 (Hallucination Rate, LLM·RAG 계열), Citation 정확도·근거 일치율 (RAG 계열), Faithfulness·Answer Relevancy (RAGAS), 응답 지연 P50·P95·P99, 챔피언·챌린저 승급 비율, 캘리브레이션 오차 (ECE). 측정 도구는 MLOps 플랫폼 (MLflow·Weights &amp; Biases) ·Evidently·RAGAS·A/B 테스트 인프라·평가셋 (Golden Set)·사내 라벨링 검증 프로세스로 구성된다. 산출 빈도는 추론 시점의 실시간 산출 (지연·신뢰도) , 라벨 도착 후의 회귀 평가 (주·월) , 챔피언·챌린저 승급 검증의 분기 단위 산출이 결합된다.</p>
+<h3 id="14-kpi-operations-governance">1.4 운영 거버넌스 KPI (Operations &amp; Governance)<a class="headerlink" href="#14-kpi-operations-governance" title="Permanent link">¤</a></h3>
+<p>모델 수명·드리프트·재학습 리드타임·HITL 피드백·감사 적합도를 측정하는 KPI 군. Track 2 §5.5 모니터링 + §6.2 재학습 트리거 + §6.5 리뷰 리츄얼이 본 군의 직접 입력이다. 대표 지표는 PSI (Population Stability Index — 0.1 이하 안정 / 0.1~0.25 주의 / 0.25 이상 재학습 검토), KS (Kolmogorov-Smirnov), Jensen-Shannon Distance, 모델 평균 수명 (배포→폐기 평균 <span class="placeholder-tag" data-placeholder="기간">[기간]</span>), 드리프트 탐지→조치 리드타임, MTTR (Mean Time To Repair), 알람 정확도 (실제 결함 / 알람 발생 비율), False Alarm Rate, HITL 피드백 수집율·승인율, 모델 카드 완비율, 데이터 리니지 커버리지, 감사 로그 무결성. 측정 도구는 MLOps 플랫폼 (Track 2 §4.2 7 종 구성요소) ·CMMS (정비 이력)·피드백 UI (<a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>)·감사 시스템으로 구성되며, 산출 빈도는 모니터링 실시간, 트리거 발생 시 이벤트 단위, 리뷰 리츄얼의 주·월·분기 단위이다.</p>
+<h3 id="15-kpi-business-financial">1.5 사업·재무 KPI (Business &amp; Financial)<a class="headerlink" href="#15-kpi-business-financial" title="Permanent link">¤</a></h3>
+<p>사업의 매출·ROI·예산 집행·OEM 평가·신뢰도 향상을 측정하는 KPI 군. 시너지 ROI 모델 §1·§3 종합 ROI 산식 + 재무 가이드 §3 단위 비용·시너지 보정의 출력이 본 군의 직접 입력이다. 대표 지표는 매출 영향 (사업 도입 후 매출 증감), ROI (투자 대비 효익 비율), Payback Period (회수 기간), 사업비 집행률 (계획 vs 실집행 비율), 자부담·정부지원 정합 비율, OEM SQA (Supplier Quality Assurance) 점수, 신뢰도 향상 (재거래율·계약 갱신율), 후속 사업 수주율 (사업 종료 후 12·24 개월 시점). 측정 도구는 ERP·SCM·OEM 평가 시스템·재무 결산 시스템·CRM·계약 관리 시스템으로 구성되며, 산출 빈도는 월 (집행률·매출), 분기 (OEM SQA·재거래율), 연 (ROI 종합·사업 효과 검증), 사업 종료 후 12·24 개월 (후속 사업 수주율) 의 다단계 산출이다.</p>
+<blockquote>
+<p>5 군 MECE 자기평가 — 품질 (산출물 차원) · 운영 (설비·라인 차원) · 모델 (AI 차원) · 거버넌스 (운영 차원) · 사업 (재무 차원) 의 5 차원이 상호 배타적으로 분리되어 있고, 한 KPI 가 두 군에 동시 귀속되는 모호 영역이 발견되지 않는다. 또한 제조 AI 사업의 비즈니스·기술·운영·재무 차원을 누락 없이 포괄한다.</p>
+</blockquote>
+<hr />
+<h2 id="2-kpi">2. KPI 측정 도구 매트릭스<a class="headerlink" href="#2-kpi" title="Permanent link">¤</a></h2>
+<p>각 KPI 군의 표준 측정 도구를 매트릭스로 정리한다. 사업계획서 §6.3 본문에 표 1 개로 직접 인용 가능하며, 군별 3~5 행으로 구체 KPI·도구·빈도·정합 자산·책임자를 제시한다.</p>
+<table>
+<thead>
+<tr>
+<th>KPI 군</th>
+<th>대표 KPI</th>
+<th>표준 도구</th>
+<th>산출 빈도</th>
+<th>정합 자산</th>
+<th>책임자</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>품질</strong></td>
+<td>불량률 (PPM)</td>
+<td>MES + QMS + SPC</td>
+<td>일 (집계) / 월 (보고)</td>
+<td>track1 §6.3 + 재무 §3.2</td>
+<td>품질 부서장</td>
+</tr>
+<tr>
+<td><strong>품질</strong></td>
+<td>1 차 합격률 (FPY)</td>
+<td>MES + 작업자 일보</td>
+<td>일</td>
+<td>track1 §3.4 (수율)</td>
+<td>생산 관리자</td>
+</tr>
+<tr>
+<td><strong>품질</strong></td>
+<td>표면 결함 Recall</td>
+<td>비전 검사 시스템 + 라벨링 검증</td>
+<td>일 (자동) / 주 (라벨 회귀)</td>
+<td><a href="../../scenario/catalog/#scn-rub-05" title="고무 제품 외관 비전 검사 (표면 결함·이물)" class="scn-link">SCN-RUB-05</a> + Track 2 §5.5</td>
+<td>QA 검사원</td>
+</tr>
+<tr>
+<td><strong>품질</strong></td>
+<td>치수·물성 σ</td>
+<td>레이저 치수계 + SPC</td>
+<td>라인 통과별 (실시간)</td>
+<td><a href="../../scenario/catalog/#scn-rub-02" title="압출(Extrusion) 라인 치수·표면 실시간 검사·제어" class="scn-link">SCN-RUB-02</a> + <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a></td>
+<td>공정 엔지니어</td>
+</tr>
+<tr>
+<td><strong>품질</strong></td>
+<td>OEM 클레임률</td>
+<td>OEM 평가 시스템 + ERP</td>
+<td>월 / 분기</td>
+<td>모듈_OEM_공급망_정합</td>
+<td>영업·QA</td>
+</tr>
+<tr>
+<td><strong>운영</strong></td>
+<td>OEE</td>
+<td>MES + PLC + Historian</td>
+<td>일 (집계) / 주 (보고)</td>
+<td>track1 §3.5 (운영 효율)</td>
+<td>생산 관리자</td>
+</tr>
+<tr>
+<td><strong>운영</strong></td>
+<td>사이클 타임</td>
+<td>PLC + MES</td>
+<td>실시간 / 일</td>
+<td>track1 §6.1</td>
+<td>공정 엔지니어</td>
+</tr>
+<tr>
+<td><strong>운영</strong></td>
+<td>에너지 원단위</td>
+<td>FEMS + MES (제품 매핑)</td>
+<td>일 / 주</td>
+<td><a href="../../scenario/catalog/#scn-met-04" title="도금·도장·산세 공정 조건 최적화" class="scn-link">SCN-MET-04</a> + 모듈_CBAM</td>
+<td>에너지 담당</td>
+</tr>
+<tr>
+<td><strong>운영</strong></td>
+<td>가동률</td>
+<td>PLC + SCADA</td>
+<td>실시간 / 일</td>
+<td>track1 §3.5</td>
+<td>생산 관리자</td>
+</tr>
+<tr>
+<td><strong>AI 모델</strong></td>
+<td>정확도·Recall·F1</td>
+<td>MLOps + 평가셋</td>
+<td>추론 시점 / 주 회귀</td>
+<td>Track 2 §7.2 ① 모델 성능</td>
+<td>MLOps 엔지니어</td>
+</tr>
+<tr>
+<td><strong>AI 모델</strong></td>
+<td>RMSE/MAE</td>
+<td>MLflow + 회귀 평가</td>
+<td>주 / 월</td>
+<td><a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a> + Track 2 §7.2</td>
+<td>데이터 사이언티스트</td>
+</tr>
+<tr>
+<td><strong>AI 모델</strong></td>
+<td>환각률·RAGAS</td>
+<td>RAGAS + 평가셋</td>
+<td>분기 / 신규 모델 배포 시</td>
+<td>track3 §4.2 + sLM 가이드 §4.2</td>
+<td>LLM·RAG 엔지니어</td>
+</tr>
+<tr>
+<td><strong>AI 모델</strong></td>
+<td>응답 지연 P95</td>
+<td>APM (Prometheus) + UI 로그</td>
+<td>실시간 / 일</td>
+<td>Track 2 §5.5 ① 인프라</td>
+<td>MLOps 엔지니어</td>
+</tr>
+<tr>
+<td><strong>AI 모델</strong></td>
+<td>챔피언·챌린저 승급률</td>
+<td>챔피언·챌린저 보고서</td>
+<td>분기</td>
+<td>Track 2 §6.3</td>
+<td>MLOps 엔지니어</td>
+</tr>
+<tr>
+<td><strong>거버넌스</strong></td>
+<td>PSI·KS</td>
+<td>Evidently + Prometheus</td>
+<td>실시간 / 일 (임계 검사)</td>
+<td>Track 2 §5.5 ② 데이터 분포</td>
+<td>MLOps 엔지니어</td>
+</tr>
+<tr>
+<td><strong>거버넌스</strong></td>
+<td>모델 평균 수명</td>
+<td>모델 레지스트리</td>
+<td>트리거별 / 분기</td>
+<td>Track 2 §6.2 + <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a></td>
+<td>MLOps 엔지니어</td>
+</tr>
+<tr>
+<td><strong>거버넌스</strong></td>
+<td>드리프트→조치 리드타임</td>
+<td>MLOps 이벤트 로그</td>
+<td>트리거별</td>
+<td>Track 2 §6.2 5 축 트리거</td>
+<td>MLOps 엔지니어</td>
+</tr>
+<tr>
+<td><strong>거버넌스</strong></td>
+<td>HITL 피드백 수집율</td>
+<td>피드백 UI (<a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>)</td>
+<td>일 / 주</td>
+<td>Track 2 §6.4</td>
+<td>운영자·QA</td>
+</tr>
+<tr>
+<td><strong>거버넌스</strong></td>
+<td>모델 카드 완비율</td>
+<td>거버넌스 시스템</td>
+<td>분기 / 연 (감사)</td>
+<td>Track 2 §5.6 + 모듈_OEM</td>
+<td>MLOps·감사</td>
+</tr>
+<tr>
+<td><strong>사업·재무</strong></td>
+<td>ROI</td>
+<td>재무 결산 + 시너지 ROI 모델</td>
+<td>분기 / 연</td>
+<td>시너지 §3 + 재무 §3</td>
+<td>사업 책임자·CFO</td>
+</tr>
+<tr>
+<td><strong>사업·재무</strong></td>
+<td>사업비 집행률</td>
+<td>ERP + 회계</td>
+<td>월</td>
+<td>재무 §4</td>
+<td>사업 책임자</td>
+</tr>
+<tr>
+<td><strong>사업·재무</strong></td>
+<td>OEM SQA 점수</td>
+<td>OEM 평가 시스템</td>
+<td>분기</td>
+<td>모듈_OEM_공급망_정합</td>
+<td>영업·QA</td>
+</tr>
+<tr>
+<td><strong>사업·재무</strong></td>
+<td>후속 사업 수주율</td>
+<td>CRM + 계약 시스템</td>
+<td>사업 종료 후 12·24 개월</td>
+<td>검토리포트_2026-04-24</td>
+<td>사업 책임자</td>
+</tr>
+<tr>
+<td><strong>사업·재무</strong></td>
+<td>매출 영향</td>
+<td>ERP + SCM</td>
+<td>월 / 분기</td>
+<td>시너지 §6</td>
+<td>CFO·영업</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>매트릭스 채움도 자기평가 — KPI 군 5 × 5 행 = 25 행 구성. 각 행은 (대표 KPI · 도구 · 빈도 · 정합 자산 · 책임자) 5 열을 모두 채워 사업계획서 §6.3 직접 인용 가능. 정합 자산 열은 워크스페이스 자산 6 종 (track1·track2·track3 + 시너지·재무·sLM 가이드 + 모듈) 과의 결합 지점을 명시.</p>
+</blockquote>
+<hr />
+<h2 id="3">3. 산출 빈도 표준<a class="headerlink" href="#3" title="Permanent link">¤</a></h2>
+<p>산출 빈도는 KPI 측정 도구·인프라·라벨 도착 지연·운영 부담을 종합 고려하여 6 단계 표준으로 분류한다. 각 KPI 의 표준 빈도는 사업 단계 (PoC·Pilot·운영) 에 따라 단계적으로 강화된다.</p>
+<h3 id="31-6">3.1 6 단계 빈도 표준<a class="headerlink" href="#31-6" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>실시간 (&lt; 1 초~1 분)</strong> — PLC 센서·비전 카메라·실시간 추론·모니터링 인프라 메트릭. 무인 자동 산출 (인력 부담 0). 대상 KPI 는 사이클 타임·치수 σ·응답 지연 P95·PSI·CPU·GPU·메모리 사용률.</li>
+<li><strong>일 (Day)</strong> — MES 집계·일보·DR (Drift Report) 일일 리포트·작업자 인계록. 자동 집계 + 작업자 1 회 검수. 대상 KPI 는 OEE·일 불량률·일 가동률·일 에너지 원단위·일 알람 정확도.</li>
+<li><strong>주 (Week)</strong> — 회귀 평가 (Regression Test) ·A/B 검증·드리프트 임계 점검·HITL 피드백 집계. 자동 집계 + MLOps 엔지니어 주 1 회 점검. 대상 KPI 는 모델 정확도 회귀 점검·드리프트 추세·HITL 수집율 추세.</li>
+<li><strong>월 (Month)</strong> — 모니터링 대시보드 종합·SLA 리포트·QMS 월 보고서·재무 월결산. 운영위원회 정례 회의체 안건. 대상 KPI 는 월 불량률·월 매출 영향·사업비 집행률·OEM 클레임률 (월 집계).</li>
+<li><strong>분기 (Quarter)</strong> — 사업 ROI 점검·OEM SQA 분기 평가·재무 정산·챔피언·챌린저 승급 검증·RAGAS 평가셋 회귀·모델 카드 완비율 감사. 대상 KPI 는 분기 ROI·OEM SQA 점수·환각률·챔피언·챌린저 승급 비율.</li>
+<li><strong>연 (Year)</strong> — 라이센스·인증 갱신 (CSAP·ISMS-P·IATF 16949) ·예산 재배분·연 ROI 종합·후속 사업 수주율 (12 개월 시점). 대상 KPI 는 연 ROI 종합·인증 갱신 적합도·후속 사업 수주율.</li>
+</ul>
+<h3 id="32">3.2 사업 단계별 빈도 차이<a class="headerlink" href="#32" title="Permanent link">¤</a></h3>
+<p>KPI 산출 빈도는 사업 단계에 따라 다르게 운영된다. PoC·Pilot 단계에서는 빈번한 산출로 모델·도구의 정합성을 검증하고, 운영 단계에서는 빈도를 안정화하여 운영 부담을 최소화한다.</p>
+<table>
+<thead>
+<tr>
+<th>KPI 군</th>
+<th>PoC (1~3 개월)</th>
+<th>Pilot (3~6 개월)</th>
+<th>운영 (6 개월 이후)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>품질</td>
+<td>일 (수기 검증 병행)</td>
+<td>일 (자동 집계)</td>
+<td>일 + 월 보고</td>
+</tr>
+<tr>
+<td>운영</td>
+<td>일</td>
+<td>실시간 + 일</td>
+<td>실시간 + 일 + 주</td>
+</tr>
+<tr>
+<td>AI 모델</td>
+<td>일 (학습 회귀)</td>
+<td>주 (회귀 + A/B)</td>
+<td>주 + 분기 (RAGAS)</td>
+</tr>
+<tr>
+<td>거버넌스</td>
+<td>주 (임계 튜닝)</td>
+<td>일 + 주</td>
+<td>실시간 (PSI) + 트리거별</td>
+</tr>
+<tr>
+<td>사업·재무</td>
+<td>월 (PoC ROI 추정)</td>
+<td>월 + 분기</td>
+<td>분기 + 연 (종합)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>단계별 빈도 강화 원칙 — PoC 단계는 모델·도구의 정합성을 빈번하게 검증하기 위해 빈도를 일·주 단위로 집중하고, 운영 단계는 안정화되어 실시간·일 자동 산출 + 주·월·분기 정례 보고의 균형으로 운영 부담을 최소화한다. 본 표는 사업계획서 §5.5 일정·마일스톤 + §6.3 KPI 정의 본문에서 단계별 빈도 차이의 근거로 인용 가능하다.</p>
+</blockquote>
+<hr />
+<h2 id="4-kpi">4. KPI 검증 절차<a class="headerlink" href="#4-kpi" title="Permanent link">¤</a></h2>
+<p>KPI 의 신뢰성·재현성을 확보하기 위해 사업 전·중·후의 3 단계 검증 절차를 표준화한다. 본 절차는 사업계획서 §6.1·§6.3 + Track 2 §6.5 리뷰 리츄얼 + 시너지 ROI 모델 §3 보수·낙관 케이스 산식과 정합된다.</p>
+<h3 id="41-pre-as-is">4.1 Pre-사업 (기준값 산정 — AS-IS 측정)<a class="headerlink" href="#41-pre-as-is" title="Permanent link">¤</a></h3>
+<p>사업 시작 전 4~12 주 기간에 AS-IS 기준값을 측정한다. 본 단계의 목적은 사업 효과를 정량 비교 가능한 출발점을 확보하는 것이며, 측정의 신뢰성이 사업 종료 시점의 효과 검증 신뢰성을 결정한다.</p>
+<ul>
+<li><strong>측정 인프라 설치</strong> — PLC·MES·FEMS·QMS 의 데이터 추출 정합, 측정 도구의 사내 시스템 연동 검증, 작업자 일보·HMI 입력 표준화. 본 단계의 인프라 구축은 사업 본 추진의 사전 조건이며, 부재 시 사업 §3.5 AS-IS 인프라 항목에서 결손으로 명시.</li>
+<li><strong>표본 크기·시간대·작업조 분포 균일 확보</strong> — 측정 표본이 특정 시간대 (주간 vs 야간) ·작업조 (조 A vs 조 B) ·제품군 (대량 표준품 vs 소량 특수품) 에 편향되지 않도록 균등 분포로 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 측정. 표본 부족 시 사업 효과 검증의 통계적 유의성이 결손되므로, 표본 크기는 시나리오별 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 회 이상 권고.</li>
+<li><strong>외부 변동 통제</strong> — 계절 (여름 vs 겨울 — 에너지·습도) ·OEM 변경 (사양 갱신·클레임 대응) ·원자재 변동 (가격·공급사 교체) 등 외부 요인이 AS-IS 기준값에 미치는 영향을 분리 기록. 사업 효과 검증 시 외부 변동 영향을 차감 또는 보정.</li>
+<li><strong>기준값 표준 양식</strong> — KPI 별 (평균·중앙값·표준편차·5·95 백분위·표본 크기·측정 기간·외부 변동 기록) 7 항목 표준 기록. 본 양식은 사업 종료 시 효과 검증의 기준 데이터로 직접 인용.</li>
+</ul>
+<h3 id="42-in-project">4.2 사업 중 (목표값 추적 — In-Project 모니터링)<a class="headerlink" href="#42-in-project" title="Permanent link">¤</a></h3>
+<p>사업 추진 기간 동안 주·월 KPI 모니터링 대시보드 (Track 2 §5.5 정합) 를 통해 기준값 → 목표값의 진행을 상시 추적한다. 본 단계의 목적은 목표 대비 갭 발생 시 조기에 탐지하여 재학습 트리거 또는 사업 일정 조정으로 대응하는 것이다.</p>
+<ul>
+<li><strong>주·월 KPI 모니터링</strong> — 시나리오별 KPI 의 주 단위 추세·월 단위 종합을 운영위원회 정례 회의체 안건으로 보고 (Track 2 §6.5 리뷰 리츄얼 정합). 주 회의는 MLOps·운영 엔지니어, 월 회의는 운영위원회·고객사 책임자, 분기 회의는 경영진·OEM·정부지원 사업 담당자.</li>
+<li><strong>목표 대비 갭 탐지 → 재학습 트리거</strong> — KPI 가 목표값에서 <span class="placeholder-tag" data-placeholder="%">[%]</span> 이상 이탈 시 Track 2 §6.2 재학습 트리거 5 축 (드리프트·피드백 누적·외생 이벤트·정기 스케줄·KPI 이탈) 의 5 번째 축으로 작동. 트리거 발생 시 MLOps §5.3 학습·재학습 파이프라인이 자동 실행.</li>
+<li><strong>목표 대비 갭 탐지 → 사업 일정 조정</strong> — KPI 가 마일스톤 게이트 (§5.5) 의 임계를 통과하지 못하면 Phase 진행 중단 + 원인 분석 + 일정 재계획. 사업기간 압축 가이드 §5.2 의 후순위 시나리오 제거 양식과 정합.</li>
+<li><strong>HITL 피드백 회환</strong> — <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a> 단일 피드백 UI 를 통해 작업자·검사원·QA 가 KPI 측정 결과의 실효성·실측 적합도를 환류. 피드백 결과는 §6.4 모듈에 누적 + 다음 사업 단계 KPI 정의 갱신에 입력.</li>
+</ul>
+<h3 id="43-post-outcome-validation">4.3 Post-사업 (효과 검증 — Outcome Validation)<a class="headerlink" href="#43-post-outcome-validation" title="Permanent link">¤</a></h3>
+<p>사업 종료 시점 + 종료 후 12·24 개월 시점에 효과를 정량 검증한다. 본 단계의 목적은 사업 효과를 사외 검증 수준에서 입증하고, 후속 사업·산단 공동 확장의 근거를 확보하는 것이다.</p>
+<ul>
+<li><strong>정량 효과 (AS-IS vs TO-BE)</strong> — §4.1 의 기준값 + §4.2 의 진행 추적 데이터를 사용하여 (TO-BE - AS-IS) / AS-IS × 100 % 의 개선율 산정. 본 산정은 사업계획서 §6.1 정량 효과 표의 사후 검증 단계.</li>
+<li><strong>시너지 ROI 모델 §6.1 적용</strong> — 단일 시나리오 효과의 합 + 시너지 ROI 모델 §3 종합 ROI 산식 (α_total = α_data × α_infra × α_hitl × α_kpi) 을 적용하여 결합 시너지를 정량화. 본 산정은 시너지 ROI 모델의 보수·낙관 케이스 양 병기.</li>
+<li><strong>통계적 유의성 검정</strong> — Welch's t-test (평균 차이) ·순위합 검정 (Mann-Whitney U) ·χ² 검정 (범주형) 을 적용하여 AS-IS vs TO-BE 차이의 통계적 유의성을 p &lt; <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 수준에서 검증. 사업계획서 §7.1 챔피언·챌린저 검증 프로토콜과 정합.</li>
+<li><strong>사외 검증</strong> — OEM SQA 감사 (자동차 부품 1 차 협력사) ·정부지원 정산 (사업 종료 후 1·3·6 개월) ·인증 갱신 (CSAP·ISMS-P·IATF 16949) 의 외부 감사 결과를 검증 자료로 제출. 본 단계는 사업 효과의 외부 신뢰성을 확보.</li>
+<li><strong>후속 사업 수주율</strong> — 사업 종료 후 12·24 개월 시점의 후속 사업 수주율을 추가 검증 KPI 로 측정. 검토리포트 2026-04-24 의 후속 사업 발판 효과 정합.</li>
+</ul>
+<blockquote>
+<p>검증 절차 직교성 자기평가 — Pre (기준값) · In (목표값 추적) · Post (효과 검증) 의 3 단계가 사업 시점 기준으로 mutually exclusive 하게 분리되어 있고, 각 단계의 산출이 다음 단계의 입력이 되어 직렬 순환 구조를 형성. Track 2 §6.5 리뷰 리츄얼·시너지 ROI 모델 §3 산식·재무 가이드 §4 사업비 집행과 모두 명시적 결합.</p>
+</blockquote>
+<hr />
+<h2 id="5-63">5. 사업계획서 §6.3 인용 양식<a class="headerlink" href="#5-63" title="Permanent link">¤</a></h2>
+<p>본 가이드의 §1 KPI 5 군 + §2 도구 매트릭스 + §3 빈도 표준 + §4 검증 절차를 사업계획서 §6.3 KPI 섹션 본문에 직접 인용하는 표준 양식이다. 사업 분량·기간·심사 깊이에 따라 3 단계 인용 강도를 제공한다.</p>
+<h3 id="51-1-1-9-63">5.1 강도 1 (1 표) — 최소 인용 — 9 개월 압축 사업 §6.3<a class="headerlink" href="#51-1-1-9-63" title="Permanent link">¤</a></h3>
+<p>사업기간 압축 가이드 §3 의 9 개월 압축 사업에 적용되는 최소 인용 양식. 본 강도는 KPI 정의 + 기준값 + 목표값 + 측정 도구 + 산출 빈도 + 책임자 6 열의 표 1 개로 구성된다.</p>
+<table>
+<thead>
+<tr>
+<th>시나리오</th>
+<th>KPI</th>
+<th>정의</th>
+<th>기준값</th>
+<th>목표값</th>
+<th>측정 도구</th>
+<th>산출 빈도</th>
+<th>책임자</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(시나리오 ID)</td>
+<td>(KPI 명)</td>
+<td>(1 줄 정의)</td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span></td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span></td>
+<td>(도구명 1~2 개)</td>
+<td>(빈도)</td>
+<td>(책임자)</td>
+</tr>
+</tbody>
+</table>
+<p>본 강도는 패키지 5 (정밀가공 중소 SaaS 6 개월 압축) 의 §6.3 표준 양식이며, 표 1 개 + 1 단락 (8 줄 이내) 의 가벼운 인용으로 사업 분량 부담을 최소화한다.</p>
+<h3 id="52-2-1-1-12-63">5.2 강도 2 (1 표 + 1 단락) — 표준 인용 — 12 개월 표준 사업 §6.3<a class="headerlink" href="#52-2-1-1-12-63" title="Permanent link">¤</a></h3>
+<p>사업기간 압축 가이드 §3 의 12 개월 표준 사업에 적용되는 표준 인용 양식. 본 강도는 강도 1 의 표 1 개에 본 가이드 §1 KPI 5 군 분류 + §3 산출 빈도 표준의 인용 1 단락 (180~240 자) 을 추가한다.</p>
+<blockquote>
+<p>본 사업의 KPI 는 본 워크스페이스 표준 (<code>guide/kpi-measurement.md</code> §1) 의 5 군 분류 (품질·운영·AI 모델·거버넌스·사업·재무) 를 채택하며, 산출 빈도는 §3 의 6 단계 표준 (실시간·일·주·월·분기·연) 을 적용한다. KPI 측정·운영 거버넌스는 Track 2 §6.5 월간·분기·연간 리뷰 리츄얼과 정합하며, 운영위원회 정례 회의체 안건으로 직접 연결된다. 5 군별 대표 도구 (MES·QMS·MLOps·CMMS·ERP) 의 정합·단계별 빈도는 본 가이드 §2 도구 매트릭스를 본 사업 시나리오에 맞춰 부분 인용.</p>
+</blockquote>
+<p>본 강도는 패키지 4 (고무 양산 12 개월 표준 사업) ·패키지 2 (중견 냉연 18 개월 풀 사업의 §6.3 부분 인용) 의 §6.3 표준 양식이다.</p>
+<h3 id="53-3-1-2-18-rd-63">5.3 강도 3 (1 표 + 2 단락 + 검증 절차) — 풀 인용 — 18 개월 풀 사업·R&amp;D 사업 §6.3<a class="headerlink" href="#53-3-1-2-18-rd-63" title="Permanent link">¤</a></h3>
+<p>사업기간 압축 가이드 §3 의 18 개월 풀 사업 또는 R&amp;D 사업 (전사적 DX 촉진 등) 에 적용되는 풀 인용 양식. 본 강도는 강도 2 + §4 검증 절차 (Pre·In·Post 3 단계) + §2 도구 매트릭스의 행 1~2 군 발췌 인용을 추가한다.</p>
+<p>본 강도의 추가 단락 양식은 다음과 같다.</p>
+<blockquote>
+<p>KPI 의 신뢰성 확보를 위해 본 사업은 본 가이드 §4 의 3 단계 검증 절차 (Pre · In · Post) 를 적용한다. Pre-사업 단계 (사업 시작 전 <span class="placeholder-tag" data-placeholder="기간">[기간]</span>) 에서는 AS-IS 기준값을 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 회 이상 표본·외부 변동 통제 하에 측정하고, In-사업 단계에서는 Track 2 §5.5 모니터링 대시보드 + §6.5 리뷰 리츄얼을 통해 주·월 KPI 추세를 추적하며, Post-사업 단계에서는 시너지 ROI 모델 §3 의 종합 ROI 산식 + 통계적 유의성 검정 (Welch's t-test) + 외부 감사 (OEM SQA · 정부지원 정산 · 인증 갱신) 를 결합하여 효과를 외부 검증 수준으로 입증한다.</p>
+</blockquote>
+<p>본 강도는 패키지 1 (대기업 전사 AI 공장) ·전사적 DX 촉진 R&amp;D 사업의 §6.3 표준 양식이며, 본 가이드의 §1·§2·§3·§4 가 모두 동원된다.</p>
+<h3 id="54">5.4 인용 강도 선택 기준<a class="headerlink" href="#54" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>사업 성격</th>
+<th>사업 분량</th>
+<th>인용 강도</th>
+<th>본 가이드 동원 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9 개월 압축 (패키지 5·SaaS 경량)</td>
+<td>§6.3 8 줄 이내</td>
+<td>강도 1</td>
+<td>§2 매트릭스의 시나리오 행만 발췌</td>
+</tr>
+<tr>
+<td>12 개월 표준 (패키지 4·LG AI 트랙)</td>
+<td>§6.3 20~30 줄</td>
+<td>강도 2</td>
+<td>§1 + §2 + §3</td>
+</tr>
+<tr>
+<td>18 개월 풀 (패키지 2·중견 냉연)</td>
+<td>§6.3 40~50 줄</td>
+<td>강도 3</td>
+<td>§1 + §2 + §3 + §4</td>
+</tr>
+<tr>
+<td>R&amp;D 사업 (전사적 DX 촉진)</td>
+<td>§6.3 50~70 줄</td>
+<td>강도 3 + 부록</td>
+<td>§1·§2·§3·§4 + 본 가이드 전문 발췌 부록</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-63">5.5 패키지별 §6.3 인용 사례 매핑<a class="headerlink" href="#55-63" title="Permanent link">¤</a></h3>
+<p>본 가이드의 §5.1·§5.2·§5.3 인용 양식은 워크스페이스의 기존 패키지 사례와 다음과 같이 매핑된다. 본 매핑은 사업계획서 조립 가이드 §6 신규 작성 섹션 의무에 따라 §6.3 표 본체는 매번 새로 작성하되, 본 가이드의 §1·§2·§3 의 분류·도구·빈도 표준이 재사용 자산으로 인용되는 구조를 명확히 한다.</p>
+<ul>
+<li><strong>패키지 5 (정밀가공 중소 SaaS 6 개월 압축)</strong> — 강도 1. KPI 표 8~10 행 (MET-01·02·03·04 · LLM 표준작업 검색 · MLO 경량) + §3 빈도 표준의 일·주 범위 인용. §4 검증 절차는 Post 단계만 간략 1 단락으로 인용.</li>
+<li><strong>패키지 4 (고무 양산 12 개월 LG AI 트랙)</strong> — 강도 2. KPI 표 14~16 행 (RUB-01·02·05 · LLM-03 EXAONE · MLO-01) + §1 5 군 분류 1 단락 + §3 빈도 표준 + Track 2 §6.5 리뷰 리츄얼 결합. 본 가이드 §6.3 sLM 가이드 결합 (§4.2 RAGAS 회귀 평가) 동원.</li>
+<li><strong>패키지 2 (중견 냉연 18 개월 풀 사업)</strong> — 강도 3. KPI 표 18~20 행 (STL-04·05·06·09 · LLM-02 · MLO-03) + §4 Pre·In·Post 검증 절차 + §2 매트릭스의 거버넌스 행 보강 (Track 2 풀 7 종 도입 정합) + §6.1 시너지 ROI 결합 (KPI 상호보강 시너지 STL-04 → STL-09).</li>
+<li><strong>R&amp;D 사업 (전사적 DX 촉진)</strong> — 강도 3 + 부록. KPI 표 25~30 행 (전사 12+ 시나리오) + 본 가이드 §1·§2·§3·§4 풀 인용 + §6 4 가이드 결합 (시너지·재무·sLM·압축) 부록 + (확인 필요) 항목 §7 의 분기 1 회 갱신 양식.</li>
+</ul>
+<hr />
+<h2 id="6-roi">6. 시너지 ROI 모델·재무 가이드 결합<a class="headerlink" href="#6-roi" title="Permanent link">¤</a></h2>
+<p>본 가이드의 KPI 정의·측정·검증이 시너지 ROI 모델 §1.4 (KPI 상호보강 시너지) + 재무 가이드 §3 (단위 비용·시너지 보정) + sLM 가이드 §4.2 (sLM 평가 지표) 의 직접 입력으로 작용한다. 본 §6 은 본 가이드가 운영 가이드 군의 5 번째 멤버로서 다른 4 가이드와의 결합 지점을 명시한다.</p>
+<h3 id="61-roi">6.1 시너지 ROI 모델과의 결합<a class="headerlink" href="#61-roi" title="Permanent link">¤</a></h3>
+<p>시너지 ROI 모델 §1.4 의 KPI 상호보강 시너지는 한 시나리오의 산출 KPI 가 다른 시나리오의 입력 KPI 로 유입되어 비선형 효과를 만들어내는 구조를 정의한다. 본 가이드의 §1 KPI 5 군 분류는 이 KPI 상호보강 시너지의 측정 단위를 제공한다. 예시: <a href="../../scenario/catalog/#scn-stl-04" title="냉간압연 패스 스케줄 표준화·최적화" class="scn-link">SCN-STL-04</a> 패스 스케줄 안정화 → STL-09 압연기 부하 변동 감소 → 예지보전 모델 알람 정확도 향상의 인과 사슬에서, 패스 스케줄 안정화는 §1.2 운영 KPI (CT σ), 부하 변동은 §1.2 운영 KPI (부하 표준편차), 알람 정확도는 §1.3 AI 모델 KPI (Precision) + §1.4 거버넌스 KPI (False Alarm Rate) 로 분리 측정되고, 시너지 ROI 모델 §3.2 의 α_kpi 산식 (<code>α_kpi = 1 + Σ_pair (ω_ij × γ_ij)</code>) 에서 γ_ij 의 측정 단위가 본 가이드의 KPI 5 군 분류로 표준화된다.</p>
+<h3 id="62">6.2 재무 가이드와의 결합<a class="headerlink" href="#62" title="Permanent link">¤</a></h3>
+<p>재무 가이드 §3 단위 비용·시너지 보정은 사업비 산정 시 KPI 개선 폭을 시너지 보정 계수로 환산한다. 본 가이드의 §1.5 사업·재무 KPI (ROI·매출 영향·OEM SQA 점수) 는 재무 가이드 §3 의 출력에 해당하며, 본 가이드의 §1.1·§1.2·§1.3·§1.4 의 KPI 4 군은 재무 가이드 §3 의 시너지 보정 계수의 입력에 해당한다. 즉 본 가이드는 재무 가이드의 입력·출력 KPI 양 끝의 측정 표준을 제공한다.</p>
+<h3 id="63-slm">6.3 sLM 가이드와의 결합<a class="headerlink" href="#63-slm" title="Permanent link">¤</a></h3>
+<p>sLM 가이드 §4.2 평가 지표는 RAGAS·환각률·Citation 정확도·응답 지연 P95 의 4 축으로 sLM 평가를 표준화한다. 본 가이드의 §1.3 AI 모델 KPI 군은 sLM 가이드 §4.2 의 4 축을 포함하며, 본 가이드의 §3 빈도 표준은 sLM 가이드 §4.2 의 회귀 평가 빈도 (분기) 를 §3.1 의 분기 단계로 통합한다.</p>
+<h3 id="64">6.4 사업기간 압축 가이드와의 결합<a class="headerlink" href="#64" title="Permanent link">¤</a></h3>
+<p>사업기간 압축 가이드 §3 의 9·12·18 개월 분기는 본 가이드의 §5 인용 강도 3 단계 (강도 1·2·3) 와 직접 정합한다. 사업기간 압축 가이드 §5.2 의 후순위 시나리오 제거 양식은 본 가이드 §4.2 의 In-사업 단계 KPI 갭 탐지 → 사업 일정 조정의 운영 양식과 결합된다.</p>
+<blockquote>
+<p>4 가이드 결합도 자기평가 — 시너지 ROI (§6.1 — α_kpi 산식의 측정 단위) · 재무 (§6.2 — 입력·출력 KPI 양 끝의 표준) · sLM (§6.3 — §4.2 4 축의 §1.3 군 통합) · 사업기간 압축 (§6.4 — §3 분기와 §5 인용 강도 정합) 의 4 가이드와 모두 명시적 결합 지점을 보유. 본 가이드는 운영 가이드 군의 5 번째 멤버로서 4 가이드의 KPI 입력·출력 표준을 통합 제공.</p>
+</blockquote>
+<hr />
+<h2 id="7">7. (확인 필요) 항목<a class="headerlink" href="#7" title="Permanent link">¤</a></h2>
+<p>KPI 산정 근거·도구·빈도·책임자는 사업·고객사·시점별 변동 영역이므로, 본 가이드의 (확인 필요) 항목을 사업계획서 인용 시점에 검증한다.</p>
+<ol>
+<li><strong>KPI 산정 근거 표준</strong> — 산업별 KPI 표준 (철강·고무·정밀가공 등) ·OEM 별 KPI 가이드라인 (자동차 OEM SQA 표준·전자 OEM 품질 표준) ·정부 지원사업 평가 KPI (스마트공장·디지털 경남 등) 의 명시적 매핑.</li>
+<li><strong>KPI 측정 빈도의 사업 단계별 변동</strong> — PoC vs Pilot vs 운영 단계의 빈도 차이 표준은 §3.2 에 1 차 제시했으나, 시나리오·고객사·인프라 성숙도에 따른 추가 변동 패턴.</li>
+<li><strong>KPI 책임자 RACI</strong> — Responsible · Accountable · Consulted · Informed 의 4 역할별 KPI 책임자 매핑의 사내 표준. 본 가이드는 §2 매트릭스에서 단일 책임자만 명시했으나, RACI 표준화는 추가 작업 영역.</li>
+<li><strong>KPI 도구 라이센스 비용·CSAP 정합</strong> — MES·QMS·MLOps·FEMS 의 도구 라이센스 비용·CSAP 등급 (하·중·상) ·국내 데이터센터 정합·ISMS-P 인증 보유 여부.</li>
+<li><strong>KPI 통계적 유의성 검정 표준</strong> — Welch's t-test·Mann-Whitney U·χ² 검정의 사용 분기 + p 임계 <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 의 사업·시나리오별 표준.</li>
+<li><strong>KPI 표본 크기 산정 표준</strong> — Pre-사업 기준값 측정의 표본 크기 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 회·시간대·작업조 분포 균일 조건의 시나리오별 표준.</li>
+<li><strong>KPI 외부 변동 통제 표준</strong> — 계절·OEM 변경·원자재 변동의 KPI 영향 분리·보정 표준 + 사업계획서 §6.1·§6.3 의 외부 변동 명시 양식.</li>
+<li><strong>KPI 후속 사업 수주율 측정 표준</strong> — 사업 종료 후 12·24 개월 시점의 후속 사업 수주율의 측정 정의 (어떤 사업이 후속 사업으로 인정되는가의 분기) ·외부 검증 가능성 (CRM 시스템 외부 감사) .</li>
+<li><strong>KPI 갱신 주기</strong> — 본 가이드의 (확인 필요) 항목은 분기 1 회 갱신 권장 (산업·OEM·도구·법규의 분기 단위 변동 속도 기준).</li>
+</ol>
+<p>총 9 항목 — 시점·사업·고객사 변동 영역의 정직 노출.</p>
+<hr />
+<h2 id="8">8. 모델 한계<a class="headerlink" href="#8" title="Permanent link">¤</a></h2>
+<ul>
+<li>본 가이드는 <strong>프레임</strong> 이며, 구체 도구·빈도·책임자는 사업·고객사·시점 별 변동. 본 가이드의 §2 매트릭스 표준 도구 (MES·QMS·MLOps 등) 는 일반적 제조 AI 사업의 1 차 후보이며, 사내 기존 시스템 (<code>guide/assembly.md</code> §6 §5.4 기존 시스템 연동 신규 작성 섹션) 에 따라 교체 가능.</li>
+<li>측정 도구의 인프라 도입 (MES·QMS·FEMS·MLOps 신규 구축) 은 본 가이드의 범위 외이며, 별도 R&amp;D·인프라 사업 (스마트공장·디지털 경남·R&amp;D 과제) 의 영역. 본 가이드는 도입된 도구의 KPI 측정·산출·검증 표준만 제공.</li>
+<li>KPI 추적 도구의 결과 신뢰성은 도구 설치 정합·작업자 학습·외부 변동 통제에 의존하며, 본 가이드의 §4 검증 절차 (Pre·In·Post) 가 결손되면 KPI 의 신뢰성도 결손된다. 사업계획서 §3.5 AS-IS 인프라 항목에서 도구 설치 결손이 명시되면, 본 가이드의 §4.1 Pre-사업 단계가 4~12 주 → <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 으로 추가 연장될 수 있다.</li>
+<li>본 가이드는 <strong>제조 도메인 중심</strong> 이며, 금융·의료·법률·공공 등 비제조 도메인의 KPI 표준은 별도 가이드 후속 작성 권장.</li>
+<li>본 가이드는 운영 가이드 군의 <strong>5 번째 멤버</strong> 이며, 시너지 ROI · 사업기간 압축 · 재무 · sLM 의 4 가이드와의 결합을 §6 에 명시. 후속 자산 (예: 가이드_데이터_품질·가이드_HITL_운영·가이드_OEM_정합 등) 작성 시 본 가이드의 8 장 구조 (분류 → 도구 매트릭스 → 빈도 표준 → 검증 절차 → 적용 양식 → 결합 → 확인 필요 → 한계) 를 표준 포맷으로 준용 (4.26 자산 군 포맷 통일).</li>
+</ul>
+<hr />
+<h2 id="9">9. 추후 보강 후보<a class="headerlink" href="#9" title="Permanent link">¤</a></h2>
+<p>본 가이드의 향후 보강 후보는 다음과 같다.</p>
+<ol>
+<li><strong>산업별 KPI 보강 카드</strong> — 철강·고무·정밀가공·자동차 부품·반도체 등 산업별 KPI 보강 카드 추가. 본 가이드 §1 의 5 군 분류는 일반 프레임이며, 산업별 특화 KPI (예: 철강의 코일 단중·스트립 인장강도, 고무의 점도·분산도, 정밀가공의 표면 거칠기·진원도) 는 산업 카드로 분리 작성.</li>
+<li><strong>OEM 별 SQA 정합 KPI 표준</strong> — 자동차 OEM (현대·기아·GM·포드·도요타) ·전자 OEM (삼성·LG·애플) ·기계 OEM (지멘스·ABB) 별 SQA 평가 KPI 의 명시적 매핑. 모듈_OEM_공급망_정합 의 보강 영역.</li>
+<li><strong>RACI 표준화</strong> — KPI 책임자의 R·A·C·I 4 역할 매핑의 사내 표준화. 본 가이드 §2 매트릭스의 단일 책임자 컬럼을 4 역할 컬럼으로 확장.</li>
+<li><strong>KPI 대시보드 와이어프레임</strong> — Track 2 §7.2 의 3 계층 대시보드 (경영진·운영자·엔지니어) 와이어프레임 + 본 가이드의 5 군 KPI 트리 통합 도식. 사업계획서 §6.3·§7.2 직접 인용 가능 수준의 가시 자산.</li>
+<li><strong>KPI 사례 카드 시리즈</strong> — 패키지 1·2·3·4·5·6 별 §6.3 KPI 정의 표의 실 사례 카드 + 본 가이드의 §5 인용 강도와의 매핑. 본 가이드의 추상 프레임 → 구체 사례 보강.</li>
+<li><strong>KPI 검증 절차의 외부 검증 자료 양식</strong> — §4.3 Post-사업의 OEM SQA 감사·정부지원 정산·인증 갱신 결과 자료의 표준 양식. 사업 종료 보고서·후속 사업 신청서의 직접 인용 가능 수준.</li>
+</ol>
+<hr />
+<h2 id="10-rd-kpi-phase-e7-97">10. 다년 R&amp;D KPI 차원 보강 (<span class="meta-marker">Phase E7</span> — 갭 #9·#7)<a class="headerlink" href="#10-rd-kpi-phase-e7-97" title="Permanent link">¤</a></h2>
+<blockquote>
+<p><span class="meta-marker">Phase E7</span> (#33) 신규 갭 #9 (다년 KPI + 측정 방법 + 실측 표) + #7 (1단계 9개월 월별 업무 분포) 보강. 본 §10 은 단년 R&amp;D 의 단일 KPI 표 표준에 다년 R&amp;D 의 단계+연차 분기 + 측정 방법 3 차원 + 1단계 9개월 월별 업무 분포의 3 보강을 추가한다.</p>
+</blockquote>
+<h3 id="101-kpi-rd">10.1 단계+연차 KPI 분기 표 (다년 R&amp;D 양식 강제)<a class="headerlink" href="#101-kpi-rd" title="Permanent link">¤</a></h3>
+<p>다년 R&amp;D 양식은 KPI 를 단계 (1·2-1·2-2) 별 마일스톤 + 측정 시점으로 분리 강제한다 (<span class="meta-marker">방법론 4.32</span> 단계+연차 이중 구조).</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>연차</th>
+<th>핵심 마일스톤</th>
+<th>KPI 측정 시점</th>
+<th>측정 대상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1단계</strong></td>
+<td>1년차 (9개월)</td>
+<td>컨설팅 보고서 1식 + 역량 분석 + DX 추진전략·로드맵 확정</td>
+<td>1단계 종료 시점</td>
+<td>컨설팅 결과물·전략 보고서·로드맵 문서 (정성)</td>
+</tr>
+<tr>
+<td><strong>2단계</strong></td>
+<td>1년차 (12개월)</td>
+<td>현장 데이터 수집 인프라 <span class="placeholder-tag" data-placeholder="%">[%]</span> 구축 + PLC·HMI·Tag 통합 + 시작품 (TRL 5~6)</td>
+<td>2단계 1년차 종료 시점</td>
+<td>PLC·HMI 연결 수·Tag 수집율·OPC-UA 통신·MES·ERP 연동률</td>
+</tr>
+<tr>
+<td><strong>2단계</strong></td>
+<td>2년차 (12~14개월)</td>
+<td>AI 활용 시스템 운영 + 통합 관제 플랫폼 표준화 + KPI 7 종 실측 (TRL 7~8)</td>
+<td>2단계 2년차 종료 시점</td>
+<td>KPI 7 종 (Q·P·C) — 정량</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-kpi-3">10.2 KPI 측정 방법 3 차원 (시점·소스·표준)<a class="headerlink" href="#102-kpi-3" title="Permanent link">¤</a></h3>
+<p>다년 R&amp;D 양식은 단년 R&amp;D 의 단일 시점·단일 소스·내부 자체평가의 3 단일 표준 대신 다음 3 차원을 강제한다.</p>
+<p><strong>(1) 측정 시점 단계별 분리</strong> — 단계 종료 시점 + 단계 중간 점검 + 최종 점검의 3 시점. 1단계 정성 KPI 중심, 2단계 1년차 시작품 중간 점검, 2단계 2년차 종료 시점이 최종 정량 KPI 측정.</p>
+<p><strong>(2) 측정 데이터 출처의 다중 소스화</strong> — 단일 MES 출처가 아닌 MES + SCADA + X-DAS + 비전 카메라 + 환경 센서 다 소스 융합. KPI 별 출처 명시 + 출처 간 정합성 검증.</p>
+<p><strong>(3) 측정 표준 + 외부 검증</strong> — ISO 9001 (Q) + KS X 9001 (스마트공장) + EU CBAM Implementing Regulation (C) + KOSHA 안전 표준 등 양식·도메인별 측정 표준. 단계 종료 시점 외부 검증 보고서로 객관성 확보.</p>
+<h3 id="103-1-9-7">10.3 1단계 9개월 월별 업무 분포 (갭 #7)<a class="headerlink" href="#103-1-9-7" title="Permanent link">¤</a></h3>
+<p>다년 R&amp;D 1단계 (9개월) 의 「월별 주요 업무 (비중별 정리)」 표 양식 (양식 §3.1-7 강제):</p>
+<table>
+<thead>
+<tr>
+<th>월 (1단계)</th>
+<th>핵심 업무 (비중 %)</th>
+<th>KPI 측정 시점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>DATA 전처리 (30%) + 상관관계 분석 (35%) + 회귀분석 (35%)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>DATA 전처리 (10%) + 상관관계·회귀 (20%) + 머신러닝 교육 (10%) + GPU 서버 사용 신청 (5%) + 코일 규격별 분석 (10%)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>DATA 전처리 (70%) + 상관·회귀 (10%) + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 출장 (10%) + 데이터 시각화 (10%)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>M4</td>
+<td><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 출장 (입고시 이송중량 측정 20%) + DATA 전처리 (35%) + 데이터 그룹화 (20%) + 두께 분석 (20%) + 머신러닝 (5%)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>머신러닝 모델링 (집중) + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 출장 (분석 결과 전달)</td>
+<td>중간 점검</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>머신러닝 모델 검증 + 1단계 자체평가 보고서 작성 + 컨설팅 보고서 1식 최종화</td>
+<td><strong>단계 종료 점검</strong></td>
+</tr>
+<tr>
+<td>M7~M9</td>
+<td>단계 평가 + 협약 변경 + 2단계 진입 준비</td>
+<td>×</td>
+</tr>
+</tbody>
+</table>
+<p>본 표는 사업계획서_패키지1 §5.4 시연 사례의 표준화 양식.</p>
+<h3 id="104-kpi-7-31-7">10.4 KPI 표 7 컬럼 양식 (양식 §3.1-7 강제)<a class="headerlink" href="#104-kpi-7-31-7" title="Permanent link">¤</a></h3>
+<p>다년 R&amp;D 양식 강제 7 컬럼:</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>분야</th>
+<th>핵심성과지표 (KPI)</th>
+<th>단위</th>
+<th>기존 (개발 전)</th>
+<th>목표 (개발 후)</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Q</td>
+<td>(지표명)</td>
+<td>(단위)</td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span></td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span></td>
+<td>(관련 시나리오·5.2 카드)</td>
+</tr>
+</tbody>
+</table>
+<p>분야 코드: <strong>Q</strong> (Quality) + <strong>P</strong> (Productivity) + <strong>C</strong> (Cost / Compliance). KPI 측정 방법·출처·표준은 §10.2 의 3 차원 양식에 1:1 매핑.</p>
+<blockquote>
+<p>[출처: <a href="../../other/form-validation-dx/">양식검증_DX촉진_R&amp;D.md</a> §7 갭 #9·#7 + pkg/pkg1-steel-enterprise.md §2.2·§2.3·§2.4·§5.4 + other/methodology.md §3.32 단계+연차 이중 구조]</p>
+</blockquote>
+<hr />
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>가이드_KPI_측정.md</code></li>
+<li><strong>자산 군</strong>: 📋 운영 가이드</li>
+<li><strong>slug 경로</strong>: <code>guide/kpi-measurement.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../duration-compress/" class="md-footer__link md-footer__link--prev" aria-label="이전: 사업기간 압축 (단계+연차)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                사업기간 압축 (단계+연차)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../external-validation/" class="md-footer__link md-footer__link--next" aria-label="다음: 외부검증 운영 (RACI)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                외부검증 운영 (RACI)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

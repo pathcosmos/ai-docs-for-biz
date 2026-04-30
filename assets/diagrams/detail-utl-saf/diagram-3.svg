@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="CBAM 신고 자동화 흐름 — EU 탄소국경조정 분기 신고">
+  <title>CBAM 신고 자동화 흐름</title>
+  <desc>FEMS·MES 데이터 → 5.2-b 시계열 결손 보정 → 직접·간접 배출 산정 → ABC 제품 단위 배분 → CBAM 분기 신고서 자동 생성</desc>
+  <defs>
+    <linearGradient id="g_utlsaf_d3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B91C1C"/><stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="g_utlsaf_d3_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FEE2E2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#FEF2F2"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_utlsaf_d3)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">SCN-SAF-02 · CBAM REPORT AUTOMATION</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">CBAM 신고 자동화 흐름</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">EU 탄소국경조정 분기 신고</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">FEMS / MES 데이터</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">전력·가스·증기·생산실적</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">구매 시스템 + 원료 이력</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">PPA·REC·강·합금·환원제</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">데이터마트 통합</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">동일 시간 축 정합</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">5.2-b 시계열 보정</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">결손·이상값 자동 보간</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">직접 배출 산정</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">연료별 IPCC 계수</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">간접 배출 산정</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">전력 PPA·REC 차감</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">ABC 제품 배분</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">활동 기반 원가 자동</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#FCA5A5" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_utlsaf_d3_card)" stroke="#FCA5A5" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_utlsaf_d3)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#7F1D1D">CBAM 신고서 자동 생성</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#991B1B">5.2-e 보고서 + RAG 양식</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §SCN-SAF-02 CBAM 자동화 paste 가능</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합 5.2 카드: 5.2-b (시계열) + 5.2-e (보고서 자동)</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">모듈_CBAM_대응 BLK-CBAM-A·C·D·F 풀 결합</text>
+</svg>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="모듈 — 중대재해 안전 7 블록 세로 카드">
+  <title>중대재해 안전 모듈 — CCTV·웨어러블·MSDS RAG 7 블록</title>
+  <desc>중대재해처벌법 대응 안전 AI 모듈의 7 블록(A 규제·B 부산경남·C AS-IS·D 3 축 아키·E 정성·F RAG·G 용어)을 위에서 아래로 시각화. SAF-01·02 시나리오 cross-ref.</desc>
+
+  <defs>
+    <linearGradient id="sf-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="sf-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="sf-star" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="sf-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <rect width="600" height="100" fill="url(#sf-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">SERIOUS-ACCIDENTS PREVENTION · CCTV · WEARABLE</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">중대재해 안전 — CCTV·웨어러블</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">7 블록 · 경영책임자 의무이행 증거 체계</text>
+
+  <!-- A 규제환경 -->
+  <g transform="translate(40, 118)" filter="url(#sf-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-SAF-A · 규제환경</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#9F1239">중대재해처벌법 (2024 · 5 인 이상 확대)</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">경영책임자 형사 책임 · 안전보건 의무이행 증명 의무</text>
+  </g>
+
+  <!-- B 부산경남 -->
+  <g transform="translate(40, 200)" filter="url(#sf-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-SAF-B · 부산경남 산업 특성</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#9F1239">고온·고압·화학물질 구조적 고위험</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">철강·금속·고무·정밀가공 · 협착·낙하·화재·화학물질 누출</text>
+  </g>
+
+  <!-- C AS-IS 공백 -->
+  <g transform="translate(40, 282)" filter="url(#sf-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-SAF-C · AS-IS 공백</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#9F1239">형식 점검 → 데이터 기반 상시 증빙 격차</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">서면 점검표 · 분기별 회의록 · 증거 데이터 부재 · 사고 후 입증 어려움</text>
+  </g>
+
+  <!-- D 3 축 아키텍처 (★) -->
+  <g transform="translate(40, 364)" filter="url(#sf-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-star)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-star)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="#0F172A">BLK-SAF-D · 3 축 아키텍처 ★</text>
+    <text x="490" y="18" text-anchor="end" class="en" font-size="9" fill="#0F172A">CORE</text>
+    <text x="14" y="50" class="ko" font-size="14" fill="#9F1239">CCTV 비전 + 웨어러블 + SMS 알람</text>
+    <text x="14" y="68" class="ko-r" font-size="10" fill="#475569">5.2-b 비전 (미착용·진입 금지) + 5.2-c 이상탐지 (추락·전도)</text>
+    <text x="14" y="84" class="ko-r" font-size="9" fill="#64748B">에스컬레이션 4 단 (작업자 → 감독자 → 안전관리자 → 책임자)</text>
+  </g>
+
+  <!-- E 정성효과 -->
+  <g transform="translate(40, 464)" filter="url(#sf-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-SAF-E · 정성효과</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#9F1239">상시 증빙 데이터 · 형사 책임 면책 근거</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">사고 사전 징후 [%] 감지 · 사고율 [수치] 감소 · 보험료 인하</text>
+  </g>
+
+  <!-- F 사고이력 RAG -->
+  <g transform="translate(40, 546)" filter="url(#sf-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-SAF-F · 사고이력·MSDS RAG</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#9F1239">5.2-e LLM·RAG 결합 → 즉시 대응 지식</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">사고 사례 검색 · MSDS 자동 검색 · 작업절차서 검색 · Citation</text>
+  </g>
+
+  <!-- G 용어·법령 -->
+  <g transform="translate(40, 628)" filter="url(#sf-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#sf-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#sf-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-SAF-G · 용어·법령 표</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#9F1239">중처법·산안법·KOSHA Guide 표준</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">의무이행 증거 항목 + 점검 주기 + 위반 처벌 · ISO 45001 매핑</text>
+  </g>
+
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 720)" filter="url(#sf-shadow)">
+    <rect width="540" height="68" rx="8" fill="#FFF1F2" stroke="#F43F5E" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#9F1239">시나리오 cross-ref — SCN-SAF-01 (CCTV) · SCN-SAF-02 (웨어러블)</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">패키지 5·6 핵심 모듈 · 갭 8 해소 · 시나리오 ↔ 모듈 1:1 정합</text>
+    <text x="14" y="54" class="ko-r" font-size="9" fill="#64748B">→ 사업계획서 거시·당위·AS-IS·TO-BE·정성·Track 3·부록 7 삽입 지점</text>
+  </g>
+</svg>

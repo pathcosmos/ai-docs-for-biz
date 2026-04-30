@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="CNC 공구 마모·RUL 예지 — 8 단계 OPC-UA → 모바일 알람 → 환류">
+  <title>CNC 공구 마모·RUL 예지</title>
+  <desc>CNC 컨트롤러 1~10Hz 태그를 OPC-UA 게이트웨이로 클라우드 TSDB 적재, LSTM+XGBoost 스태킹 RUL 예측, 모바일 알람 + 드리프트·재학습</desc>
+  <defs>
+    <linearGradient id="g_pkg5_d1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/><stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="g_pkg5_d1_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F0F9FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_pkg5_d1)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">PKG 5 · DIAGRAM 1 · CNC TOOL WEAR · RUL FORECAST</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">CNC 공구 마모·RUL 예지</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">8 단계 OPC-UA → 모바일 알람 → 환류</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">CNC 컨트롤러</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">1~10Hz 태그 수집</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">OPC-UA 게이트웨이</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">NTP 동기·표준 프로토콜</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">클라우드 TSDB</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">슬라이딩 윈도우 피쳐</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">예측 모델</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">LSTM + XGBoost Stacking</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">마모 단계 분류</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">+ 파손 임박 조기경보</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">작업자 모바일 알람</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">+ 공구 교체 권고</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">드리프트 모니터링</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">PSI / KS 분포 측정</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg5_d1_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#0C4A6E">재학습 트리거</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#075985">Track 2 압축 모드</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §SCN-MET-01 CNC 공구 마모 paste 가능</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합 5.2 카드: 5.2-b (시계열) + 5.2-d (예지보전)</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">Track 2 SCN-MLO-01 압축 모드 (단일 텐넌트)</text>
+</svg>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="RACI 책임 분담 매트릭스 — 4 컬럼 × 7 영역 세로형"
+     class="zoomable">
+  <title>RACI 매트릭스 (세로형) — R·A·C·I 4 역할 × 7 영역</title>
+  <desc>RACI 책임 분담 매트릭스 — Responsible (실행) · Accountable (책임) · Consulted (자문) · Informed (통보) 4 역할을 7 영역 (데이터·모델·MLOps·운영·안전·법무·경영) 에 매핑한 세로형 매트릭스. 각 영역별 4 컬럼 표기.</desc>
+
+  <defs>
+    <linearGradient id="raci-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <filter id="raci-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#raci-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">책임 분담 매트릭스</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">RACI · 4 ROLES × 7 AREAS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#E2E8F0">Responsible · Accountable · Consulted · Informed — AI 도입 거버넌스</text>
+
+  <!-- 컬럼 헤더 -->
+  <g transform="translate(40, 118)">
+    <rect width="160" height="32" rx="4" fill="#475569"/>
+    <text x="80" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">영역</text>
+    <rect x="160" width="90" height="32" rx="4" fill="#DC2626"/>
+    <text x="205" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">R 실행</text>
+    <rect x="250" width="90" height="32" rx="4" fill="#F59E0B"/>
+    <text x="295" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">A 책임</text>
+    <rect x="340" width="90" height="32" rx="4" fill="#10B981"/>
+    <text x="385" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">C 자문</text>
+    <rect x="430" width="90" height="32" rx="4" fill="#0EA5E9"/>
+    <text x="475" y="20" text-anchor="middle" class="ko" font-size="11" fill="white">I 통보</text>
+  </g>
+
+  <!-- 7 영역 행 (각 60px) -->
+  <g transform="translate(40, 152)" filter="url(#raci-shadow)">
+    <!-- 1. 데이터 -->
+    <g>
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">1. 데이터 수집·관리</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">PLC·MES·SCADA</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">시계열 + 이미지</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">현장 IT</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">데이터팀</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">CTO</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">최종 검수</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">공정팀</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">도메인 자문</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">경영진</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">월간 보고</text>
+    </g>
+    <!-- 2. 모델 -->
+    <g transform="translate(0, 60)">
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">2. 모델 개발</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">학습·검증·튜닝</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">트랙 1·3</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">AI 팀</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">데이터사이</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">CTO</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">성능 승인</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">외부전문</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">검증·외부</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">현장</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">테스트 협력</text>
+    </g>
+    <!-- 3. MLOps -->
+    <g transform="translate(0, 120)">
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">3. MLOps·배포</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">CI/CD·드리프트</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">트랙 2</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">DevOps</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">MLEng</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">CTO</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">모델 등록</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">AI 팀</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">재학습 검토</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">운영팀</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">로그 통보</text>
+    </g>
+    <!-- 4. 현장 운영 -->
+    <g transform="translate(0, 180)">
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">4. 현장 운영·UI</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">알람·대시보드</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">교대·OJT</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">반장</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">교대장</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">공장장</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">SOP 승인</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">AI 팀</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">UX 개선</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">교육팀</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">교육 통보</text>
+    </g>
+    <!-- 5. 안전·ESG -->
+    <g transform="translate(0, 240)">
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">5. 안전·중대재해</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">PPE·MSDS·CBAM</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">SAF + UTL</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">안전팀</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">ESG 담당</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">CEO</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">법적 책임</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">법무·외부</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">규제 자문</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">전사원</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">교육</text>
+    </g>
+    <!-- 6. 법무·계약 -->
+    <g transform="translate(0, 300)">
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">6. 법무·IP·라이선스</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">데이터·LLM·IP</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">계약·OEM</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">법무팀</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">외부 자문사</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">CEO</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">서명·승인</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">CTO·AI</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">기술 검토</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">관계자</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">결과 통보</text>
+    </g>
+    <!-- 7. 경영·재무 -->
+    <g transform="translate(0, 360)">
+      <rect width="160" height="60" fill="white" stroke="#CBD5E1"/>
+      <text x="10" y="22" class="ko" font-size="11" fill="#0F172A">7. 경영·재무·KPI</text>
+      <text x="10" y="40" class="ko-r" font-size="9" fill="#475569">ROI·예산·성과</text>
+      <text x="10" y="54" class="ko-r" font-size="9" fill="#94A3B8">분기 점검</text>
+      <rect x="160" width="90" height="60" fill="#FEE2E2" stroke="#CBD5E1"/>
+      <text x="205" y="28" text-anchor="middle" class="ko" font-size="11" fill="#991B1B">경영기획</text>
+      <text x="205" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">재무팀</text>
+      <rect x="250" width="90" height="60" fill="#FEF3C7" stroke="#CBD5E1"/>
+      <text x="295" y="28" text-anchor="middle" class="ko" font-size="11" fill="#92400E">CEO/CFO</text>
+      <text x="295" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">최종 결재</text>
+      <rect x="340" width="90" height="60" fill="#D1FAE5" stroke="#CBD5E1"/>
+      <text x="385" y="28" text-anchor="middle" class="ko" font-size="11" fill="#047857">CTO·AI</text>
+      <text x="385" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">기술 ROI</text>
+      <rect x="430" width="90" height="60" fill="#E0F2FE" stroke="#CBD5E1"/>
+      <text x="475" y="28" text-anchor="middle" class="ko" font-size="11" fill="#0369A1">이사회</text>
+      <text x="475" y="44" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">분기 보고</text>
+    </g>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(40, 600)" filter="url(#raci-shadow)">
+    <rect width="520" height="68" rx="8" fill="#FBBF24"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#0F172A">RACI 핵심 원칙 — 1 영역 1 A · 다중 R 가능</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#0F172A">▸ A (Accountable) 는 영역당 단 1 인 — 책임 분산 방지</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#0F172A">▸ AI 의사결정은 H-G-A 3 차원 (Human·Guided·Automatic) 권한 차등</text>
+  </g>
+
+  <g transform="translate(40, 678)">
+    <rect width="520" height="102" rx="8" fill="white" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#334155">자산 매핑 — 책임_분담_매트릭스.md §3·5·10</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ 영역 1·2·3 = AI 팀 + DevOps + 데이터팀 (실행 핵심)</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ 영역 4 = 현장 반장·교대장 (UX 협력 + 알람 대응)</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#475569">▸ 영역 5·6·7 = 경영진 + 법무·외부 (거버넌스·중대재해법)</text>
+    <text x="20" y="90" class="ko-r" font-size="10" fill="#0EA5E9">▸ Cross-ref: 가이드_컨설팅 §4·6 · 가이드_위험 §3</text>
+  </g>
+</svg>

@@ -1,0 +1,3825 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 문서는 철강·금속가공을 중심으로 한 부산·경남권 제조업체(화승, YCP특수강, 코리녹스, 코렌스, 대한제강, 한국철강 등)를 고객으로 하는 제조 AI 관련 정부지원 사업계획서 · 사업신청서 · 수행계획서 · 연구개발계획서 작성 시, **MLOps 구축 및 지속적 개선(Track 2)** 에 반복적으로 투입되는 내용을 **모듈 단위로 재사용** 할 수 …">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/track/track2-index/">
+      
+      
+        <link rel="prev" href="../track1-engine-cards/">
+      
+      
+        <link rel="next" href="../track2-top5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Track 2 — MLOps 구축 및 지속적 개선 공통 본문 목차 - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#track-2-mlops" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Track 2 — MLOps 구축 및 지속적 개선 공통 본문 목차
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 콘텐츠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track1-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제조 AI 도입 기초·아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track1-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §3·4 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track1-engine-cards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps 도입 기초·구성요소 7 종
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps 도입 기초·구성요소 7 종
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서문
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목차 전체 구조
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        각 소섹션 카드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="각 소섹션 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 "모델 배포 이후" 의 리스크 — AI 제조 프로젝트 실패 유형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mlops-ot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 제조 현장 MLOps 의 특수성 (OT·폐쇄망·엣지 · 설비 수명)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-isoiec-42001-iso-9001-iatf-16949" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 규제·인증·감사 요구 (ISO/IEC 42001, ISO 9001, IATF 16949, 중대재해법)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 본 사업에서 MLOps 가 차지하는 위상과 범위
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-ai-track-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 운영 대상 AI 엔진 인벤토리 (Track 1 엔진 패턴 매핑)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 배포 지형 — 엣지·온프레미스·하이브리드 클라우드
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-slaslo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 추론 트래픽·지연 요구 (SLA/SLO 설계 입력)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mlops-lv0lv3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 보유 MLOps 성숙도 진단 (Lv.0~Lv.3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 수작업 배포·버전 혼선 및 "마지막에 학습시킨 사람" 의존
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 모니터링 부재 — 성능 저하를 불량 발생 후 인지
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 재학습 트리거·기준 부재로 인한 방치 및 과잉 재학습 양극단
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 피드백 단절 — 현장 확인값이 학습 데이터로 환류되지 않음
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 권한·리니지·감사 공백 (외부 심사·규제 대응 취약)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-mlops-cicd-for-ml-ct-cm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 MLOps 개념 프레임 (CI/CD for ML · CT · CM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 핵심 구성요소 7종 — 레지스트리·피쳐 스토어·파이프라인·서빙·모니터링·피드백·거버넌스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 오픈소스·상용 도구 스택 선정 기준 및 후보군
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 전체 참조 아키텍처 다이어그램 (엣지 ↔ 중앙 ↔ 클라우드)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-otit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 보안·네트워크 설계 (OT/IT 경계, 폐쇄망 모델 배포)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-mlflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 모델 레지스트리·버전·아티팩트 관리 (MLflow 등)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-onlineoffline-feast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 피쳐 스토어 구축 및 Online/Offline 일관성 (Feast 등)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-airflowkubeflowmlflow-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 학습·재학습 파이프라인 및 오케스트레이션 (Airflow·Kubeflow·MLflow Pipelines)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 추론 서빙 아키텍처 (엣지·서버 이원, 카나리·섀도우 배포)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-evidentlyfiddlerprometheusgrafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 모니터링 · 드리프트 탐지 · 경보 (Evidently·Fiddler·Prometheus·Grafana)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 거버넌스 — 권한·감사·리니지·모델 카드
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 개선 포인트 선정 노하우 (어디를 먼저 고칠 것인가)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 재학습 트리거 설계 (시간·드리프트·성능·피드백·외생 이벤트 5대 축)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 챔피언·챌린저 및 카나리·A/B 검증 프로토콜
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 현장 피드백 UI 및 라벨 재주입 파이프라인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 개선 사이클 가시화 (월간·분기 성능 리뷰 리츄얼)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-mttr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 정량적 기대효과 (모델 수명·MTTR·재학습 리드타임)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 KPI 정의 및 대시보드 설계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-track-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Track 1·3 과의 연계 지점 및 향후 로드맵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공통 자산 vs 특화 지점 맵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 1·3 연계 지점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Track 1·3 연계 지점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#track-1-track-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 1 ← Track 2 연계 (본 문서가 호출되는 지점)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-3-track-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 3 ↔ Track 2 연계 (상호 참조)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        사용 예시 — 중견 철강사 기준 조립 시연
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track2-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §6·7·8 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track3-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM·RAG 도입 기초·5 계층
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track3-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §4·5 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 6 패키지 통합 파일럿
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 6 패키지 통합 파일럿
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg1-steel-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 1 — 대기업 철강 다년 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg2-cold-rolled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 2 — 중견 냉연 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg3-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 3 — 특수강관 RAG 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg4-rubber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 4 — 고무 양산 OEM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg5-precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 5 — 정밀가공 SaaS 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg6-util-esg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 6 — 유틸·ESG·CBAM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시나리오 카탈로그 — 40 종 7 도메인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Top 5 (연속주조·압연·표면결함)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-phase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Phase 2 (압연·소둔 4 종)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-rub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    고무·폴리머 5 종 (배합·언더큐어)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-utl-saf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    유틸·안전 5 종 (CBAM·중대재해)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    특수강관 RAG (작업표준·정비이력)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧩 Cross-cutting 모듈
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧩 Cross-cutting 모듈
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/cbam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CBAM 대응 (EU 탄소국경조정)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    중대재해 안전 (CCTV·웨어러블)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/federated-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연합학습 (산업단지 공동 AI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/oem-supply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OEM 공급망 정합 (자동차·조선·2 차전지)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/saas-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SaaS·클라우드 보안 (5 등급 민감도)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../guide/assembly/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서문
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목차 전체 구조
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        각 소섹션 카드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="각 소섹션 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 "모델 배포 이후" 의 리스크 — AI 제조 프로젝트 실패 유형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mlops-ot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 제조 현장 MLOps 의 특수성 (OT·폐쇄망·엣지 · 설비 수명)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-isoiec-42001-iso-9001-iatf-16949" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 규제·인증·감사 요구 (ISO/IEC 42001, ISO 9001, IATF 16949, 중대재해법)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 본 사업에서 MLOps 가 차지하는 위상과 범위
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-ai-track-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 운영 대상 AI 엔진 인벤토리 (Track 1 엔진 패턴 매핑)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 배포 지형 — 엣지·온프레미스·하이브리드 클라우드
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-slaslo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 추론 트래픽·지연 요구 (SLA/SLO 설계 입력)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mlops-lv0lv3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 보유 MLOps 성숙도 진단 (Lv.0~Lv.3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 수작업 배포·버전 혼선 및 "마지막에 학습시킨 사람" 의존
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 모니터링 부재 — 성능 저하를 불량 발생 후 인지
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 재학습 트리거·기준 부재로 인한 방치 및 과잉 재학습 양극단
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 피드백 단절 — 현장 확인값이 학습 데이터로 환류되지 않음
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 권한·리니지·감사 공백 (외부 심사·규제 대응 취약)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-mlops-cicd-for-ml-ct-cm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 MLOps 개념 프레임 (CI/CD for ML · CT · CM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 핵심 구성요소 7종 — 레지스트리·피쳐 스토어·파이프라인·서빙·모니터링·피드백·거버넌스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 오픈소스·상용 도구 스택 선정 기준 및 후보군
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 전체 참조 아키텍처 다이어그램 (엣지 ↔ 중앙 ↔ 클라우드)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-otit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 보안·네트워크 설계 (OT/IT 경계, 폐쇄망 모델 배포)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-mlflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 모델 레지스트리·버전·아티팩트 관리 (MLflow 등)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-onlineoffline-feast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 피쳐 스토어 구축 및 Online/Offline 일관성 (Feast 등)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-airflowkubeflowmlflow-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 학습·재학습 파이프라인 및 오케스트레이션 (Airflow·Kubeflow·MLflow Pipelines)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 추론 서빙 아키텍처 (엣지·서버 이원, 카나리·섀도우 배포)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-evidentlyfiddlerprometheusgrafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 모니터링 · 드리프트 탐지 · 경보 (Evidently·Fiddler·Prometheus·Grafana)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 거버넌스 — 권한·감사·리니지·모델 카드
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 개선 포인트 선정 노하우 (어디를 먼저 고칠 것인가)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 재학습 트리거 설계 (시간·드리프트·성능·피드백·외생 이벤트 5대 축)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 챔피언·챌린저 및 카나리·A/B 검증 프로토콜
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 현장 피드백 UI 및 라벨 재주입 파이프라인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 개선 사이클 가시화 (월간·분기 성능 리뷰 리츄얼)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-mttr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 정량적 기대효과 (모델 수명·MTTR·재학습 리드타임)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 KPI 정의 및 대시보드 설계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-track-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Track 1·3 과의 연계 지점 및 향후 로드맵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공통 자산 vs 특화 지점 맵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 1·3 연계 지점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Track 1·3 연계 지점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#track-1-track-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 1 ← Track 2 연계 (본 문서가 호출되는 지점)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-3-track-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 3 ↔ Track 2 연계 (상호 참조)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        사용 예시 — 중견 철강사 기준 조립 시연
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../track1-index/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📦 콘텐츠
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">mlops</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">track</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">track2</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="track-2-mlops">Track 2 — MLOps 구축 및 지속적 개선 공통 본문 목차<a class="headerlink" href="#track-2-mlops" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 29 분 읽기</span></p>
+<figure>
+  <img alt="Track 2 — MLOps 구축 및 지속적 개선 공통 본문 목차" src="../../assets/svg/track/track2-index.svg" />
+<br />
+<figcaption>Track 본문 시각 — 클릭하여 확대·SVG 다운로드 (벡터, 해상도 무제한)</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">이 페이지 둘러보기</p>
+<p>본 페이지는 약 585 줄 / H2 섹션 6 개 입니다.
+우측 목차 (TOC) 를 활용하여 원하는 섹션으로 빠르게 이동할 수 있습니다.</p>
+</div>
+<h2 id="_1">서문<a class="headerlink" href="#_1" title="Permanent link">¤</a></h2>
+<p>본 문서는 철강·금속가공을 중심으로 한 부산·경남권 제조업체(화승, YCP특수강, 코리녹스, 코렌스, 대한제강, 한국철강 등)를 고객으로 하는 제조 AI 관련 정부지원 사업계획서 · 사업신청서 · 수행계획서 · 연구개발계획서 작성 시, <strong>MLOps 구축 및 지속적 개선(Track 2)</strong> 에 반복적으로 투입되는 내용을 <strong>모듈 단위로 재사용</strong> 할 수 있도록 설계한 공통 목차이다. Track 1 의 AI 엔진(5.2-a~f)이 현장에 배포된 이후에도 공정 조건·원재료 공급사·계절·신규 결함 유형의 변화에 따라 성능이 필연적으로 저하된다는 전제에서 출발하며, <strong>"모델은 배포 순간이 아니라 운영 첫날"</strong> 이라는 관점으로 배포·감시·재학습·거버넌스 전 주기를 사업계획서에 녹여낼 수 있는 블록 모음을 제공한다.</p>
+<p>본 목차는 Track 1 과 <strong>동일한 카드 포맷</strong>(목적 / 포함 내용 / 삽화·도식 후보 / 고객사별 가변 여부)을 유지하여 작성자가 세 트랙을 오갈 때 인지 부하를 최소화하도록 구성하였다. 각 소섹션 카드 말미에는 <code>[관련 시나리오: SCN-XXX, ...]</code> 형태로 시나리오 카탈로그와의 매핑을 명시하며, 특히 <strong><a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>/02/03</strong> (MLOps 공통 3종) 은 본 문서 전반에 반복적으로 등장한다. Track 1 본문에서 4.6(엔드투엔드 파이프라인), 5.3(HITL), 6.3(KPI), 7.1(MLOps 교량) 지점에서 본 문서를 호출하며, Track 3 RAG 는 모니터링 이벤트 조회·장애 사유 검색 지점에서 역참조된다.</p>
+<blockquote>
+<p><strong>플레이스홀더 범례</strong> — <code>[고객사]</code> 고객사명, <code>[공정]</code> 대상 공정명, <code>[수치]</code> 수치, <code>[기간]</code> 기간, <code>[%]</code> 비율.
+특정 고객사 전용 문구는 공통 자산과 분리되며, 본 문서는 고정 공통 블록 기준으로 작성됨.
+오픈소스·제품명(MLflow, Feast, Evidently, Kubeflow, Airflow, Seldon, BentoML, Prometheus, Grafana, Fiddler, Arize 등)은 실명 그대로 사용한다.</p>
+</blockquote>
+<hr />
+<h2 id="_2">목차 전체 구조<a class="headerlink" href="#_2" title="Permanent link">¤</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. MLOps 도입 필요성 및 거시 환경
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   1.1 &quot;모델 배포 이후&quot; 의 리스크 — AI 프로젝트 실패 유형
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   1.2 제조 현장 MLOps 의 특수성 (OT·폐쇄망·엣지 · 설비 수명)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   1.3 규제·인증·감사 요구 (ISO/IEC 42001, ISO 9001, IATF 16949, 중대재해법)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   1.4 본 사업에서 MLOps 가 차지하는 위상과 범위
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. 대상 모델·운영 환경 분석
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   2.1 운영 대상 AI 엔진 인벤토리 (Track 1 엔진 패턴 매핑)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>   2.2 배포 지형 — 엣지·온프레미스·하이브리드 클라우드
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   2.3 추론 트래픽·지연 요구 (SLA/SLO 설계 입력)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>   2.4 보유 MLOps 성숙도 진단 (Lv.0~Lv.3)
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>3. AS-IS — 모델 운영의 구조적 공백
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>   3.1 수작업 배포·버전 혼선 및 &quot;마지막에 학습시킨 사람&quot; 의존
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>   3.2 모니터링 부재 — 성능 저하를 불량 발생 후 인지
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   3.3 재학습 트리거·기준 부재로 인한 방치 및 과잉 재학습 양극단
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>   3.4 피드백 단절 — 현장 확인값이 학습 데이터로 환류되지 않음
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>   3.5 권한·리니지·감사 공백 (외부 심사·규제 대응 취약)
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>4. TO-BE — MLOps 아키텍처 및 핵심 구성요소
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>   4.1 MLOps 개념 프레임 (CI/CD for ML · CT · CM)
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>   4.2 핵심 구성요소 7종 — 레지스트리·피쳐 스토어·파이프라인·서빙·모니터링·피드백·거버넌스
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>   4.3 오픈소스·상용 도구 스택 선정 기준 및 후보군
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>   4.4 전체 참조 아키텍처 다이어그램 (엣지 ↔ 중앙 ↔ 클라우드)
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>   4.5 보안·네트워크 설계 (OT/IT 경계, 폐쇄망 모델 배포)
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>5. 구축 상세 — 배포·모니터링·재학습·거버넌스
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>   5.1 모델 레지스트리·버전·아티팩트 관리 (MLflow 등)
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>   5.2 피쳐 스토어 구축 및 Online/Offline 일관성 (Feast 등)
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>   5.3 학습·재학습 파이프라인 및 오케스트레이션 (Airflow·Kubeflow·MLflow Pipelines)
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>   5.4 추론 서빙 아키텍처 (엣지·서버 이원, 카나리·섀도우 배포)
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>   5.5 모니터링 · 드리프트 탐지 · 경보 (Evidently·Fiddler·Prometheus·Grafana)
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>   5.6 거버넌스 — 권한·감사·리니지·모델 카드
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>6. 지속 개선 루프 및 피드백 체계
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>   6.1 개선 포인트 선정 노하우 (어디를 먼저 고칠 것인가)
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>   6.2 재학습 트리거 설계 (시간·드리프트·성능·피드백·외생 이벤트 5대 축)
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>   6.3 챔피언·챌린저 및 카나리·A/B 검증 프로토콜
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>   6.4 현장 피드백 UI 및 라벨 재주입 파이프라인
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>   6.5 개선 사이클 가시화 (월간·분기 성능 리뷰 리츄얼)
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>7. 기대효과 · KPI · 사업 연계
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>   7.1 정량적 기대효과 (모델 수명·MTTR·재학습 리드타임)
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>   7.2 KPI 정의 및 대시보드 설계
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>   7.3 Track 1·3 과의 연계 지점 및 향후 로드맵
+</span></code></pre></div>
+<hr />
+<h2 id="_3">각 소섹션 카드<a class="headerlink" href="#_3" title="Permanent link">¤</a></h2>
+<h3 id="11-ai">1.1 "모델 배포 이후" 의 리스크 — AI 제조 프로젝트 실패 유형<a class="headerlink" href="#11-ai" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 심사자에게 "MLOps 는 옵션이 아니라 필수" 임을 설득하는 도입 문단을 제공한다. 배포형 AI 파일럿의 전형적 실패 유형을 제시하여 본 사업의 Track 2 편성을 정당화한다.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>일반 통계(글로벌 AI 프로젝트 상용화 실패율, 파일럿→운영 전환율) 을 **거시 데이터 형태로 인용 가능한 일반 문장**으로 서술 (구체 수치 출처 필요 시 PDF 검증 후 삽입).</li>
+<li>대표 실패 유형 5가지: 성능 드리프트 방치, 데이터 파이프라인 단절, 피드백 없는 모델 경직, 버전 혼선으로 인한 롤백 불가, 거버넌스 부재로 인한 내부 감사 탈락.</li>
+<li>본 사업이 이들 리스크를 어느 단계에서 차단하는지의 맵(표지용 요약 표).</li>
+<li><strong>삽화·도식 후보</strong>: AI 프로젝트 Lifecycle 상 "실패 지점" 하이라이트 다이어그램, 실패 유형 × 대응 모듈 매트릭스.</li>
+<li><strong>고객사별 가변 여부</strong>: <strong>공통 고정</strong>. 전 고객사·전 사업 동일 사용.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="12-mlops-ot">1.2 제조 현장 MLOps 의 특수성 (OT·폐쇄망·엣지 · 설비 수명)<a class="headerlink" href="#12-mlops-ot" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 일반 IT/SaaS 영역의 MLOps 와 제조 현장 MLOps 가 왜 다른지를 명확히 하여, 본 사업의 기술적 난이도·차별성을 확보한다.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>OT 네트워크 폐쇄성(공장 내 PLC·DCS · 외부 인터넷 차단) 환경에서의 모델 배포 제약.</li>
+<li>엣지 디바이스 자원 한계(CPU·GPU·메모리)와 경량화·양자화 요구.</li>
+<li>설비 수명(10~30년) 과 AI 모델 수명(수개월~수년) 의 시간 스케일 차이.</li>
+<li>실시간성 요구(추론 지연 &lt; 100 ms) 가 흔하며 클라우드 왕복이 불가한 시나리오 다수.</li>
+<li>IT/OT 경계(purdue model) 를 가로지르는 데이터·모델 흐름 설계 필요.</li>
+<li><strong>삽화·도식 후보</strong>: 일반 MLOps vs 제조 MLOps 비교 표, Purdue 모델 레벨 0~5 와 MLOps 구성요소의 매핑 다이어그램.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 고객사 네트워크 구성에 따라 경계 레이어만 일부 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-utl-06" title="공정별 디지털트윈 시뮬레이션" class="scn-link">SCN-UTL-06</a>]</strong></li>
+</ul>
+<h3 id="13-isoiec-42001-iso-9001-iatf-16949">1.3 규제·인증·감사 요구 (ISO/IEC 42001, ISO 9001, IATF 16949, 중대재해법)<a class="headerlink" href="#13-isoiec-42001-iso-9001-iatf-16949" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: MLOps 가 단순 기술 편의가 아니라 <strong>인증·감사·법규 대응 수단</strong> 임을 보인다. 심사 가점 및 대기업 공급망 편입 요구에 맞춘 논리.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>ISO/IEC 42001(AI 경영시스템) · ISO/IEC 23894(AI 리스크) 등 국제 AI 거버넌스 표준의 요구 항목.</li>
+<li>자동차 부품사의 IATF 16949 변경관리(Change Management) · 추적성 요구와 모델 버전·리니지 관리의 대응.</li>
+<li>중대재해처벌법 하 안전 관련 AI(예: <a href="../../scenario/catalog/#scn-saf-01" title="중대재해법 대응 위험요소 AI 감지 (CCTV·웨어러블)" class="scn-link">SCN-SAF-01</a>) 의 판정 근거 보존 의무.</li>
+<li>대기업(철강·자동차·전자 업종 원청) 공급망 편입 시 요구되는 AI 품질관리 조항(모델 카드·데이터 시트 제출).</li>
+<li><strong>삽화·도식 후보</strong>: 규제 요구 항목 ↔ MLOps 구성요소 매핑 표, 모델 카드 샘플 1페이지.</li>
+<li><strong>고객사별 가변 여부</strong>: 업종별 교체 — 자동차 부품(IATF), 조선·항공(AS9100), 의료(ISO 13485).</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-saf-01" title="중대재해법 대응 위험요소 AI 감지 (CCTV·웨어러블)" class="scn-link">SCN-SAF-01</a>, <a href="../../scenario/catalog/#scn-saf-02" title="탄소배출 모니터링·CBAM 신고 자동화" class="scn-link">SCN-SAF-02</a>, <a href="../../scenario/catalog/#scn-saf-03" title="화학물질·MSDS 지능 관리" class="scn-link">SCN-SAF-03</a>]</strong></li>
+</ul>
+<h3 id="14-mlops">1.4 본 사업에서 MLOps 가 차지하는 위상과 범위<a class="headerlink" href="#14-mlops" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 가 Track 1 부속물이 아니라 <strong>대등한 본 사업 축</strong> 임을 명시. 일부 지원사업(전사적 DX, 클라우드 종합)에서는 Track 2 가 본문이 되기도 한다.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>본 사업 내 MLOps 범위(구축 신규 / 기존 확장 / 운영 체계만 설계 등 3가지 모드 중 선택).</li>
+<li>Track 1 과의 역할 분담: Track 1 은 "무엇을 배포하는가", Track 2 는 "어떻게 살아 있게 하는가".</li>
+<li>예산·인력 배분 가이드 (일반적으로 전체 AI 예산의 <span class="placeholder-tag" data-placeholder="%">[%]</span>를 MLOps 에 배분하는 근거).</li>
+<li><strong>삽화·도식 후보</strong>: 본 사업 과제 범위 블록도(Track 1·2·3 비중 시각화).</li>
+<li><strong>고객사별 가변 여부</strong>: 사업별 교체(동일 고객사라도 지원사업별로 범위·비중 다름).</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="21-ai-track-1">2.1 운영 대상 AI 엔진 인벤토리 (Track 1 엔진 패턴 매핑)<a class="headerlink" href="#21-ai-track-1" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 가 어떤 엔진들을 운영 대상으로 삼는지 명시적으로 연결. Track 1 <code>5.2-a~f</code> 변형 카드와 1:1 매핑된다.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>엔진 인벤토리 표: 엔진명 / 기반 카드(5.2-a~f) / 대상 시나리오 / 배포 위치(엣지·서버) / 재학습 주기 / 성능 KPI / 담당 팀.</li>
+<li>엔진별 <strong>운영 프로파일</strong> 차이(예: 비전 엔진은 월 단위 재학습, 시계열 품질 예측은 주 단위, RAG 는 문서 업데이트 시점).</li>
+<li>신규 엔진 추가 시 인벤토리 갱신 프로세스.</li>
+<li><strong>삽화·도식 후보</strong>: 엔진 인벤토리 매트릭스 표, 엔진별 운영 주기 타임라인.</li>
+<li><strong>고객사별 가변 여부</strong>: 사업·시나리오별 전면 교체. 표 골격은 공통.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-stl-01" title="연속주조 블룸/슬라브 품질 예측" class="scn-link">SCN-STL-01</a>, <a href="../../scenario/catalog/#scn-stl-03" title="열간압연 두께·폭 편차 실시간 예측" class="scn-link">SCN-STL-03</a>, <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a>, <a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a>, <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>, <a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a>, <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a>, <a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a>, <a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a>, <a href="../../scenario/catalog/#scn-llm-02" title="설비 장애 대응 지식 검색·권고 (eCMMS 통합)" class="scn-link">SCN-LLM-02</a> — 즉 운영 대상 전 엔진]</strong></li>
+</ul>
+<h3 id="22">2.2 배포 지형 — 엣지·온프레미스·하이브리드 클라우드<a class="headerlink" href="#22" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 모델이 물리적으로 어디서 실행되는지를 명시하고, 이에 따른 MLOps 구성 분기를 설정한다.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>엣지(설비 옆 산업용 PC·GPU 박스): 실시간 제어·비전 검사 시나리오.</li>
+<li>온프레미스 서버(공장 내 데이터센터): 공정 최적화·대규모 모델·RAG 벡터스토어.</li>
+<li>클라우드(KT·NHN·AWS 등 국내 리전 선호): 개발·실험·비정형 대용량 학습, 일부 비실시간 추론.</li>
+<li>하이브리드 구성 원칙: 학습은 클라우드, 추론은 엣지·온프레미스 기본 유지.</li>
+<li>국내 클라우드·보안 인증(CSAP) 요구 대응.</li>
+<li><strong>삽화·도식 후보</strong>: 3단 배포 지형 다이어그램(Edge / On-prem / Cloud), 시나리오별 배포 위치 매핑 표.</li>
+<li><strong>고객사별 가변 여부</strong>: 고객사별 교체 — 대기업은 3단 모두, 중견은 2단(온프렘·엣지), 중소는 클라우드 비중 확대.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-utl-06" title="공정별 디지털트윈 시뮬레이션" class="scn-link">SCN-UTL-06</a>, <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>, <a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a>]</strong></li>
+</ul>
+<h3 id="23-slaslo">2.3 추론 트래픽·지연 요구 (SLA/SLO 설계 입력)<a class="headerlink" href="#23-slaslo" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 모니터링·서빙 설계의 전제가 되는 성능 요구를 수치로 확정.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>시나리오별 추론 TPS, 지연 요구(p50·p95·p99), 가용성 목표(99.0~99.9%).</li>
+<li>실시간·준실시간·배치 3구분 및 대표 예(제어 루프 &lt; 100 ms / HMI 경보 &lt; 1 s / RAG 질의 &lt; 5 s / 리포트 생성 비동기).</li>
+<li>지연 초과 시 fallback 정책(직전 추론 값 유지 / 룰기반 대체 / 수동 모드).</li>
+<li><strong>삽화·도식 후보</strong>: 시나리오별 SLA/SLO 카드 세트, 추론 지연 히스토그램 예시.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 SLA 템플릿 + 시나리오별 수치 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-stl-03" title="열간압연 두께·폭 편차 실시간 예측" class="scn-link">SCN-STL-03</a>, <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a>, <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>, <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a>, <a href="../../scenario/catalog/#scn-rub-04" title="사출·성형 공정 불량 예측 및 조건 추천" class="scn-link">SCN-RUB-04</a>]</strong></li>
+</ul>
+<h3 id="24-mlops-lv0lv3">2.4 보유 MLOps 성숙도 진단 (Lv.0~Lv.3)<a class="headerlink" href="#24-mlops-lv0lv3" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 1 의 스마트공장 수준 진단과 쌍을 이루는 <strong>MLOps 수준 진단</strong>. AS-IS 를 객관화해 심사자에게 근거를 제공한다.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>Lv.0 수동(노트북 학습·수동 배포 · 모니터링 없음) / Lv.1 재현 가능(코드·데이터 버전 관리) / Lv.2 자동화(CI/CD for ML · 파이프라인) / Lv.3 지속학습(자동 재학습 · 거버넌스) 정의.</li>
+<li>진단 체크리스트(레지스트리 유무, 파이프라인 자동화율, 모니터링 범위 등 15~20 항목).</li>
+<li>현재 수준 → 본 사업 완료 시 목표 수준 명시(예: Lv.0 → Lv.2).</li>
+<li><strong>삽화·도식 후보</strong>: 4단계 성숙도 계단 다이어그램, 체크리스트 점수 레이더 차트.</li>
+<li><strong>고객사별 가변 여부</strong>: 고객사별 진단 결과 교체. 척도·체크리스트는 공통.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="31">3.1 수작업 배포·버전 혼선 및 "마지막에 학습시킨 사람" 의존<a class="headerlink" href="#31" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: AS-IS 첫 번째 공백 — 배포가 속인화(屬人化)되어 있다는 점을 지적.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>모델 파일을 이메일·USB·공유 드라이브로 전달, 버전 표기 <code>_final_v3_진짜최종</code> 의 전형적 혼란.</li>
+<li>학습 코드·데이터·하이퍼파라미터 조합이 문서화되지 않아 재현 불가.</li>
+<li>담당자 퇴직 시 기존 모델 재학습 자체가 불가능해지는 리스크.</li>
+<li>롤백 메커니즘 부재로 장애 발생 시 즉각 복구 불가.</li>
+<li><strong>삽화·도식 후보</strong>: "USB 배포" 풍자 컨셉 이미지, 재현 가능성 결여 체크 표.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 수치·담당자 호칭만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>]</strong></li>
+</ul>
+<h3 id="32">3.2 모니터링 부재 — 성능 저하를 불량 발생 후 인지<a class="headerlink" href="#32" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 두 번째 공백 — 드리프트를 사전에 감지할 체계가 없다는 점.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>입력 피쳐 분포·예측 분포·성능 지표(정확도·MAE·리콜) 의 지속 추적 부재.</li>
+<li>원재료 공급사 교체, 계절 변화, 설비 노후화 등 외생 변화가 모델 입력에 투영되나 감지 채널 없음.</li>
+<li>결과적으로 현장 불량·재작업·클레임으로 비로소 모델 저하를 인지하는 후행적 운영.</li>
+<li>사고 후 원인 분석 시에도 당시 추론 로그·피쳐 값이 보존되지 않아 규명 실패.</li>
+<li><strong>삽화·도식 후보</strong>: AS-IS 타임라인(드리프트 → 불량 → 인지 → 대응, 각 단계 소요 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 강조), 결여된 모니터링 항목 체크 표.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 공정 예시만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-stl-01" title="연속주조 블룸/슬라브 품질 예측" class="scn-link">SCN-STL-01</a>, <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a>, <a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a>]</strong></li>
+</ul>
+<h3 id="33">3.3 재학습 트리거·기준 부재로 인한 방치 및 과잉 재학습 양극단<a class="headerlink" href="#33" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 세 번째 공백 — "언제 재학습할 것인가" 판단 기준의 부재.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>방치형: 초기 배포 모델을 수개월~수년간 그대로 운영.</li>
+<li>과잉형: 담당자 불안감에 따라 매일·매주 무의미한 재학습 반복, 자원 낭비 + 모델 혼선.</li>
+<li>기준이 없어 재학습 시점이 "담당자 감" 에 의존, 감사 시 설명 불가.</li>
+<li>재학습 결과의 검증 없이 교체되어 성능 저하를 촉발하는 사례.</li>
+<li><strong>삽화·도식 후보</strong>: 방치 vs 과잉 vs 최적 재학습의 성능 추이 비교 차트, 트리거 조건 부재의 의사결정 흐름도.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="34">3.4 피드백 단절 — 현장 확인값이 학습 데이터로 환류되지 않음<a class="headerlink" href="#34" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 네 번째 공백 — 현장 작업자의 "맞음/틀림" 확인값이 학습 루프로 돌아오지 않는 구조.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>AI 경보·추천에 대한 현장 승인·기각 이력이 종이·엑셀로만 남거나 유실.</li>
+<li>현장 정정 라벨이 학습 데이터로 편입되지 않아 모델이 같은 실수를 반복.</li>
+<li>작업자는 "AI 가 나아지는지 모르겠다" 며 신뢰 저하, 장기적으로 HITL 루프 자체가 사문화.</li>
+<li>피드백 UI 부재 · 피드백 데이터 스키마 미정의가 근본 원인.</li>
+<li><strong>삽화·도식 후보</strong>: 피드백 단절 다이어그램(모델 → 현장 → 단절), 현장 승인·기각 이력이 환류 시 얻는 개선 곡선.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>, Track 1 5.3 HITL 과 직결]</strong></li>
+</ul>
+<h3 id="35">3.5 권한·리니지·감사 공백 (외부 심사·규제 대응 취약)<a class="headerlink" href="#35" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 다섯 번째 공백 — 거버넌스 부재가 외부 감사·규제·공급망 편입을 저해.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>누가·언제·무엇을 학습·배포·변경했는지의 감사 로그 부재.</li>
+<li>모델이 어떤 데이터(원본·파생)를 학습했는지 리니지 추적 불가 → 개인정보·영업비밀 혼입 시 범위 특정 불가.</li>
+<li>접근 권한이 팀 공용 계정으로 관리되어 사고 시 책임 소재 불명.</li>
+<li>IATF 16949·ISO 9001·대기업 공급망 AI 점검 항목에서 반복 지적되는 공백.</li>
+<li><strong>삽화·도식 후보</strong>: 리니지·감사 공백 체크리스트, 요구 항목 vs 현재 상태 갭 표.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 규제·인증 목록만 업종별 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-saf-01" title="중대재해법 대응 위험요소 AI 감지 (CCTV·웨어러블)" class="scn-link">SCN-SAF-01</a>, <a href="../../scenario/catalog/#scn-saf-03" title="화학물질·MSDS 지능 관리" class="scn-link">SCN-SAF-03</a>]</strong></li>
+</ul>
+<h3 id="41-mlops-cicd-for-ml-ct-cm">4.1 MLOps 개념 프레임 (CI/CD for ML · CT · CM)<a class="headerlink" href="#41-mlops-cicd-for-ml-ct-cm" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 TO-BE 의 핵심 개념을 정의. 심사자 중 IT 배경자가 아닌 경우에도 이해 가능한 수준의 프레임 제시.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>전통 CI/CD 와 ML CI/CD 의 차이: 코드 외에 <strong>데이터·모델</strong> 이 함께 변경·배포 대상.</li>
+<li><strong>CT(Continuous Training)</strong>: 새 데이터·드리프트에 대응해 모델을 지속 재학습.</li>
+<li><strong>CM(Continuous Monitoring)</strong>: 성능·입력 분포·인프라 3축 상시 감시.</li>
+<li>Google MLOps Maturity Model, MLOps Level 0/&frac12; 에 대응되는 본 사업 위치.</li>
+<li><strong>삽화·도식 후보</strong>: CI/CD ↔ CI/CD4ML ↔ CT ↔ CM 4층 개념도, MLOps Level 0→1→2 진화 다이어그램.</li>
+<li><strong>고객사별 가변 여부</strong>: <strong>공통 고정</strong>. 전 사업 동일 사용.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>]</strong></li>
+</ul>
+<h3 id="42-7">4.2 핵심 구성요소 7종 — 레지스트리·피쳐 스토어·파이프라인·서빙·모니터링·피드백·거버넌스<a class="headerlink" href="#42-7" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 의 <strong>모듈 인벤토리</strong> 를 한 장으로 제시. 고객사·사업별 필요 모듈만 선택·조합 가능하도록.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>① 모델 레지스트리(버전·아티팩트·모델 카드)</li>
+<li>② 피쳐 스토어(Online/Offline, 피쳐 정의 재사용)</li>
+<li>③ 학습·재학습 파이프라인(오케스트레이션)</li>
+<li>④ 추론 서빙(엣지·서버·카나리)</li>
+<li>⑤ 모니터링·드리프트 탐지·경보</li>
+<li>⑥ 피드백 루프(현장 UI → 라벨 DB)</li>
+<li>⑦ 거버넌스(권한·감사·리니지)</li>
+<li>각 구성요소의 입출력·책임 범위·소유 팀 표.</li>
+<li><strong>삽화·도식 후보</strong>: 7모듈 원형 배치 아키텍처 도식(중앙: 모델 레지스트리), 모듈별 책임 RACI 표.</li>
+<li><strong>고객사별 가변 여부</strong>: <strong>공통 고정</strong>. Track 2 전체의 중심 다이어그램으로 재사용.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="43">4.3 오픈소스·상용 도구 스택 선정 기준 및 후보군<a class="headerlink" href="#43" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 구체 도구 선정을 <strong>근거 있는 선택</strong> 으로 제시하여 심사자 가점을 확보.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>선정 기준: 라이선스(상업 사용 가능성), 커뮤니티 활성도, 국내 사례, 온프레미스·폐쇄망 배포 가능성, 한글 지원, 보안 인증, 운영 인력 수급성.</li>
+<li>후보 스택 예시:<ul>
+<li>레지스트리·실험 추적: <strong>MLflow</strong>, Weights &amp; Biases, Neptune.</li>
+<li>피쳐 스토어: <strong>Feast</strong>, Tecton(상용), Hopsworks.</li>
+<li>오케스트레이션: <strong>Airflow</strong>, <strong>Kubeflow Pipelines</strong>, Prefect, Dagster.</li>
+<li>서빙: <strong>BentoML</strong>, <strong>Seldon Core</strong>, KServe, <strong>NVIDIA Triton Inference Server</strong>.</li>
+<li>모니터링: <strong>Evidently</strong>, Fiddler, Arize, WhyLabs, <strong>Prometheus + Grafana</strong> (인프라).</li>
+<li>컨테이너·k8s: Docker, Kubernetes, k3s(엣지).</li>
+</ul>
+</li>
+<li>고객사 여건별 권장 조합(대기업/중견/중소 각 1 템플릿).</li>
+<li><strong>삽화·도식 후보</strong>: 도구 비교 매트릭스(기준 × 도구), 권장 스택 3종 참조 아키텍처.</li>
+<li><strong>고객사별 가변 여부</strong>: 규모별 교체(3종 템플릿). 선정 기준은 공통 고정.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>]</strong></li>
+</ul>
+<h3 id="44">4.4 전체 참조 아키텍처 다이어그램 (엣지 ↔ 중앙 ↔ 클라우드)<a class="headerlink" href="#44" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 4장의 정점으로, MLOps 전체 구조를 <strong>한 장</strong> 에 제시. Track 1 의 4.6 엔드투엔드 파이프라인과 쌍을 이루는 메인 도식.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>엣지 노드(카메라·PLC 수집·경량 추론) → 공장 DAQ/게이트웨이 → 온프레 데이터 레이크 → 학습 클러스터 → 모델 레지스트리 → 서빙(엣지 재배포·서버 API) → 모니터링·드리프트 대시보드 → 재학습 트리거 → 피드백 DB.</li>
+<li>데이터 플레인(회색) / 컨트롤 플레인(파랑) / 피드백 플레인(주황) 3색 구분.</li>
+<li>보안 경계(OT ↔ IT ↔ 클라우드) 점선 표기.</li>
+<li><strong>삽화·도식 후보</strong>: 풀 페이지 Mermaid 또는 블록 다이어그램 1장. 예시:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flowchart LR
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  subgraph OT[공장 OT 구역]
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    A[PLC/센서/비전] --&gt; B[엣지 추론
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    경량 모델]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    B --&gt; C[게이트웨이
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    DAQ]
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  end
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  subgraph ONPREM[온프레미스]
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    C --&gt; D[데이터 레이크
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    TSDB/Object]
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    D --&gt; E[학습 파이프라인
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    Airflow/Kubeflow]
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    E --&gt; F[모델 레지스트리
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    MLflow]
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    F --&gt; G[서빙
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    BentoML/Seldon]
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    G --&gt; B
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    G --&gt; H[모니터링
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    Evidently/Prometheus]
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    H --&gt; I[재학습 트리거]
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    I --&gt; E
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  end
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  subgraph FB[피드백 루프]
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    J[현장 태블릿 UI] --&gt; K[라벨 DB]
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    K --&gt; D
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>  end
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  subgraph CLD[클라우드]
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    L[실험·대용량 학습
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    GPU]
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    L --&gt; F
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>  end
+</span></code></pre></div></li>
+<li><strong>고객사별 가변 여부</strong>: <strong>공통 고정</strong>(노드 이름만 일부 고객사 표준으로 교체).</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>, <a href="../../scenario/catalog/#scn-utl-06" title="공정별 디지털트윈 시뮬레이션" class="scn-link">SCN-UTL-06</a>]</strong></li>
+</ul>
+<h3 id="45-otit">4.5 보안·네트워크 설계 (OT/IT 경계, 폐쇄망 모델 배포)<a class="headerlink" href="#45-otit" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 제조 MLOps 의 최대 난제인 <strong>폐쇄망 내 모델 배포·업데이트</strong> 방법을 설계 수준에서 제시.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>OT ↔ IT 경계(DMZ·일방향 게이트웨이) 를 넘는 모델·데이터 전송 패턴(서명된 아티팩트, pull 기반 업데이트).</li>
+<li>엣지 노드의 TLS 인증서·디바이스 ID 관리.</li>
+<li>모델 아티팩트 서명·무결성 검증, SBOM(Software Bill of Materials) for ML.</li>
+<li>비밀키·토큰의 Vault 관리, 학습 데이터 중 개인정보·영업비밀 마스킹.</li>
+<li>망분리 환경에서의 업데이트 절차(오프라인 패키지 + 검수 승인).</li>
+<li><strong>삽화·도식 후보</strong>: OT/IT/DMZ 3영역 네트워크 다이어그램, 모델 아티팩트 서명·검증 시퀀스 다이어그램.</li>
+<li><strong>고객사별 가변 여부</strong>: 고객사별 교체(네트워크 정책·인증서 체계가 기업마다 상이).</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-saf-03" title="화학물질·MSDS 지능 관리" class="scn-link">SCN-SAF-03</a>]</strong></li>
+</ul>
+<h3 id="51-mlflow">5.1 모델 레지스트리·버전·아티팩트 관리 (MLflow 등)<a class="headerlink" href="#51-mlflow" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 구축 상세 1단계 — 모델 자체를 자산으로 관리하는 체계.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>실험 추적(파라미터·메트릭·코드 커밋 해시) 및 재현 가능성 확보.</li>
+<li>모델 단계(Staging / Production / Archived) 전이 정책.</li>
+<li>아티팩트 구성: weights, preprocessing pipeline, feature schema, model card, evaluation report.</li>
+<li>모델 카드 템플릿(모델 용도·데이터 범위·성능·제한·위험·담당자) — ISO/IEC 42001 대응.</li>
+<li>롤백 프로시저(Production 태그 이전 버전으로 원-클릭 복귀).</li>
+<li><strong>삽화·도식 후보</strong>: 모델 레지스트리 상태 전이도, 모델 카드 1페이지 샘플.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 도구명·필드 일부 교체 가능.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>]</strong></li>
+</ul>
+<h3 id="52-onlineoffline-feast">5.2 피쳐 스토어 구축 및 Online/Offline 일관성 (Feast 등)<a class="headerlink" href="#52-onlineoffline-feast" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 1 4.4 피쳐 엔지니어링의 운영판 — 피쳐를 <strong>재사용 자산</strong> 으로 관리.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>피쳐 정의(이름·계산 로직·데이터 타입·시간 해상도) 의 단일 소스(Feature Registry).</li>
+<li>Offline Store(학습용 배치, 수일~수년) ↔ Online Store(추론용 저지연, 초~분) 의 일관성 확보.</li>
+<li>시계열 피쳐의 time-travel 질의, 누수(leakage) 방지.</li>
+<li>시나리오 간 공통 피쳐(예: 재질·두께·온도 정규화 값)의 재사용 효율.</li>
+<li>피쳐 소유팀·SLA·문서화 정책.</li>
+<li><strong>삽화·도식 후보</strong>: Offline/Online 피쳐 스토어 이원 구조, 피쳐 재사용 매트릭스(시나리오 × 피쳐).</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 골격 + 시나리오별 피쳐 목록 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, Track 1 4.4 피쳐 엔지니어링 직접 연계]</strong></li>
+</ul>
+<h3 id="53-airflowkubeflowmlflow-pipelines">5.3 학습·재학습 파이프라인 및 오케스트레이션 (Airflow·Kubeflow·MLflow Pipelines)<a class="headerlink" href="#53-airflowkubeflowmlflow-pipelines" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: "자동화된 재학습" 의 실체 — DAG 기반 파이프라인으로 전 단계를 코드화.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>단계: 데이터 인출 → 검증 → 피쳐 계산 → 학습 → 평가 → 레지스트리 등록 → 승인 → 배포.</li>
+<li>각 단계의 실패 처리·재시도·알람 정책.</li>
+<li>스케줄(시간 기반) + 이벤트(드리프트·피드백 누적·외생 이벤트) 기반 트리거의 결합.</li>
+<li>GPU·분산 학습 자원 관리, 학습 예산(비용 상한).</li>
+<li><strong>삽화·도식 후보</strong>: 파이프라인 DAG 다이어그램, 단계별 산출물·게이트 표.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 골격 + 단계 일부 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>]</strong></li>
+</ul>
+<h3 id="54">5.4 추론 서빙 아키텍처 (엣지·서버 이원, 카나리·섀도우 배포)<a class="headerlink" href="#54" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 배포 전략을 <strong>무중단·안전</strong> 관점에서 설계.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>엣지 서빙: 경량화(양자화·증류·ONNX Runtime), OTA 업데이트.</li>
+<li>서버 서빙: REST/gRPC · 배치 · 비동기 큐.</li>
+<li><strong>카나리 배포</strong>: 5% → 25% → 100% 트래픽 점진 확대.</li>
+<li><strong>섀도우 배포</strong>: 신규 모델을 병렬 추론하되 결과는 비교만 (실서비스 영향 없음).</li>
+<li><strong>챔피언·챌린저</strong>: 동일 입력에 두 모델 추론, 일정 기간 KPI 비교 후 챌린저 승격.</li>
+<li>롤백·회로차단기(Circuit Breaker) 정책.</li>
+<li><strong>삽화·도식 후보</strong>: 카나리·섀도우·챔피언/챌린저 3가지 배포 패턴 비교도.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 트래픽 비율만 고객사 정책에 맞춰 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>, <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a>, <a href="../../scenario/catalog/#scn-rub-04" title="사출·성형 공정 불량 예측 및 조건 추천" class="scn-link">SCN-RUB-04</a>]</strong></li>
+</ul>
+<h3 id="55-evidentlyfiddlerprometheusgrafana">5.5 모니터링 · 드리프트 탐지 · 경보 (Evidently·Fiddler·Prometheus·Grafana)<a class="headerlink" href="#55-evidentlyfiddlerprometheusgrafana" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 의 <strong>심장부</strong> — "모델이 지금 건강한가" 를 상시 판정.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>3층 모니터링: ① 인프라(CPU·GPU·메모리·지연 — Prometheus) ② 데이터·피쳐 분포(PSI·KS·Jensen-Shannon — Evidently) ③ 모델 성능(정확도·MAE·리콜·캘리브레이션 — 실측 라벨 기반).</li>
+<li>드리프트 탐지 지표:<ul>
+<li><strong>PSI(Population Stability Index)</strong>: 0.1 이하 안정, 0.1~0.25 주의, 0.25 이상 재학습 검토.</li>
+<li><strong>KS(Kolmogorov-Smirnov)</strong>: 두 분포 간 최대 거리.</li>
+<li><strong>Jensen-Shannon / Wasserstein</strong>: 연속 분포 간 거리.</li>
+</ul>
+</li>
+<li>성능 저하 탐지: 실측 라벨 지연 시의 프록시 지표(예측 신뢰도 평균, 경보 빈도).</li>
+<li>경보 채널(Slack · 이메일 · SMS · HMI 알람) 및 에스컬레이션 정책.</li>
+<li><strong>삽화·도식 후보</strong>: 3층 모니터링 스택 다이어그램, PSI 시계열 대시보드 샘플, 드리프트 경보 플로우.</li>
+<li><strong>고객사별 가변 여부</strong>: <strong>공통 고정</strong>. 임계값만 시나리오별 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-stl-01" title="연속주조 블룸/슬라브 품질 예측" class="scn-link">SCN-STL-01</a>, <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a>, <a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a>, <a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a>, <a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a>]</strong></li>
+</ul>
+<h3 id="56">5.6 거버넌스 — 권한·감사·리니지·모델 카드<a class="headerlink" href="#56" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 외부 감사·내부 통제·규제 대응의 기반.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>RBAC(Role-Based Access Control): 데이터 사이언티스트 / MLOps 엔지니어 / 운영자 / 감사자 4 역할.</li>
+<li>감사 로그: 모델 등록·승격·배포·삭제 이벤트의 불변 기록.</li>
+<li>데이터 리니지: 원본 → 피쳐 → 학습셋 → 모델 → 추론 결과의 관계 그래프.</li>
+<li>모델 카드·데이터 시트 작성·갱신 프로세스 (ISO/IEC 42001 · IATF 16949 대응).</li>
+<li>외부 감사 대응 체크리스트.</li>
+<li><strong>삽화·도식 후보</strong>: RBAC 매트릭스, 리니지 그래프 예시, 모델 카드 1페이지.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 역할 명칭·인증 종류만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-saf-01" title="중대재해법 대응 위험요소 AI 감지 (CCTV·웨어러블)" class="scn-link">SCN-SAF-01</a>, <a href="../../scenario/catalog/#scn-saf-03" title="화학물질·MSDS 지능 관리" class="scn-link">SCN-SAF-03</a>]</strong></li>
+</ul>
+<h3 id="61">6.1 개선 포인트 선정 노하우 (어디를 먼저 고칠 것인가)<a class="headerlink" href="#61" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 본 문서의 <strong>차별화 포인트</strong> — 단순 "재학습하면 된다" 가 아니라 <strong>무엇을 왜 먼저 고칠 것인가</strong> 의 사고 틀을 제시.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>개선 대상 축 4분류: ① 데이터(품질 저하·수집 누락) ② 피쳐(정의 오류·누수) ③ 모델(알고리즘·하이퍼파라미터) ④ 운영(임계·경보·HITL UI).</li>
+<li>우선순위 판단 원칙: <strong>드리프트 신호 × 비즈니스 영향 × 수정 비용</strong> 3축 스코어링.</li>
+<li>대표 개선 포인트 패턴 5가지:<ul>
+<li><strong>원재료 공급사 변경</strong> → 입력 분포 드리프트 → 피쳐 정규화·재학습.</li>
+<li><strong>신규 결함 유형 출현</strong> → 라벨 체계 확장 + 재라벨링 + 재학습.</li>
+<li><strong>계절·환경 변화</strong> → 시간 피쳐·외생 변수 추가.</li>
+<li><strong>설비 개·보수 이후 신호 특성 변화</strong> → 드리프트 탐지 임계 재설정 + 재학습.</li>
+<li><strong>현장 피드백 누적으로 특정 구간 정확도 저하 확인</strong> → 해당 구간 가중 재학습.</li>
+</ul>
+</li>
+<li>개선 결정 회의체(월간 모델 리뷰) 운영 구조.</li>
+<li><strong>삽화·도식 후보</strong>: 개선 대상 4축 프레임, 우선순위 스코어링 표, 5대 개선 포인트 패턴 매트릭스.</li>
+<li><strong>고객사별 가변 여부</strong>: <strong>공통 고정</strong>. Track 2 에서 Track 1 3.1 "암묵지 리스크" 와 쌍을 이루는 최고 재사용 블록.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>, <a href="../../scenario/catalog/#scn-stl-01" title="연속주조 블룸/슬라브 품질 예측" class="scn-link">SCN-STL-01</a>, <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a>, <a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a>, <a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a>]</strong></li>
+</ul>
+<h3 id="62-5">6.2 재학습 트리거 설계 (시간·드리프트·성능·피드백·외생 이벤트 5대 축)<a class="headerlink" href="#62-5" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: "언제 재학습할 것인가" 를 5축으로 체계화.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>① <strong>시간 기반</strong>: 주·월·분기 정기 재학습(베이스라인).</li>
+<li>② <strong>드리프트 기반</strong>: PSI/KS 임계 초과.</li>
+<li>③ <strong>성능 기반</strong>: 실측 라벨 기반 성능이 허용치 아래로 하락.</li>
+<li>④ <strong>피드백 기반</strong>: 현장 정정 라벨 누적량이 임계 도달.</li>
+<li>⑤ <strong>외생 이벤트 기반</strong>: 원재료 공급사 변경, 설비 개·보수, 레시피 변경 등 비즈니스 이벤트.</li>
+<li>트리거 간 우선순위·중복 발화 처리(쿨다운·집계).</li>
+<li>자동 vs 수동 전환 기준(고위험 시나리오는 자동 학습 → <strong>수동 승인 후 배포</strong>).</li>
+<li><strong>삽화·도식 후보</strong>: 5대 트리거 벤 다이어그램, 트리거 → 파이프라인 → 승인 → 배포 시퀀스 도식.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 임계 수치만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="63-ab">6.3 챔피언·챌린저 및 카나리·A/B 검증 프로토콜<a class="headerlink" href="#63-ab" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: 재학습된 모델이 <strong>기존보다 낫다는 것을 입증</strong> 하는 절차.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>챔피언(현 운영 모델) vs 챌린저(신규 후보) 동시 추론 기간(일반적으로 <span class="placeholder-tag" data-placeholder="기간">[기간]</span>).</li>
+<li>비교 KPI: 정확도·리콜·MAE + 비즈니스 지표(불량 검출률·허위경보율).</li>
+<li>통계적 유의성 검정(Welch's t-test, 순위합 검정) 및 최소 표본 크기.</li>
+<li>승격 조건(KPI 개선 + 통계적 유의 + 운영 안전성 확인).</li>
+<li>실패 시 챌린저 폐기 및 차기 후보 탐색 루프.</li>
+<li><strong>삽화·도식 후보</strong>: 챔피언·챌린저 추론 분기도, KPI 비교 시계열 차트, 승격 의사결정 트리.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 비교 기간·임계만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-stl-03" title="열간압연 두께·폭 편차 실시간 예측" class="scn-link">SCN-STL-03</a>, <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>]</strong></li>
+</ul>
+<h3 id="64-ui">6.4 현장 피드백 UI 및 라벨 재주입 파이프라인<a class="headerlink" href="#64-ui" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 1 5.3 HITL 과 직결되는 운영판 — 피드백 데이터가 학습셋까지 도달하는 경로를 설계.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>현장 태블릿 UI: AI 예측 + "맞음/틀림/부분맞음" 3단 평가 + 사유 드롭다운 + 사진·메모 첨부.</li>
+<li>피드백 스키마: 예측 ID · 입력 피쳐 스냅샷 · 예측값 · 실측값 · 작업자 ID · 타임스탬프 · 비고.</li>
+<li>라벨 품질 관리: 이중 라벨링·합의·이상 라벨 탐지(작업자별 편향).</li>
+<li>라벨 DB → 학습셋 편입 파이프라인(스케줄 + 품질 필터).</li>
+<li>작업자 기여도 가시화(누적 피드백 건수·모델 개선 기여 스코어) → 현장 동기부여.</li>
+<li><strong>삽화·도식 후보</strong>: 피드백 UI 목업, 라벨 재주입 파이프라인, 작업자 기여 대시보드.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 평가 항목·드롭다운 옵션만 시나리오별 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>, <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>, <a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a>, <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a>, <a href="../../scenario/catalog/#scn-rub-05" title="고무 제품 외관 비전 검사 (표면 결함·이물)" class="scn-link">SCN-RUB-05</a>, Track 1 5.3 HITL 직결]</strong></li>
+</ul>
+<h3 id="65">6.5 개선 사이클 가시화 (월간·분기 성능 리뷰 리츄얼)<a class="headerlink" href="#65" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: MLOps 를 "도구" 가 아닌 <strong>운영 리츄얼</strong> 로 정착시키는 절차.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>월간 모델 리뷰: 전 엔진 대시보드 공유 → 드리프트·성능 이슈 → 개선 결정.</li>
+<li>분기 포트폴리오 리뷰: 엔진 추가·폐기·예산 재배분.</li>
+<li>연간 거버넌스 감사: 모델 카드·리니지·권한 점검.</li>
+<li>리뷰 산출물 템플릿(이슈·원인·조치·책임자·납기 5열 표).</li>
+<li>KPI: 평균 재학습 리드타임, 드리프트 탐지→조치 시간, 모델 수명, 개선 건수.</li>
+<li><strong>삽화·도식 후보</strong>: 개선 사이클 다이어그램(월→분기→연간), 리뷰 산출물 샘플 표.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 회의체 명칭만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="71-mttr">7.1 정량적 기대효과 (모델 수명·MTTR·재학습 리드타임)<a class="headerlink" href="#71-mttr" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 도입으로 얻는 수치 효과를 한 표로 제시.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>AS-IS / TO-BE / 개선효과 3열 표. 예:<ul>
+<li>모델 평균 수명 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> → <span class="placeholder-tag" data-placeholder="기간">[기간]</span> (연간 재학습 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>회 → <span class="placeholder-tag" data-placeholder="수치">[수치]</span>회 합리화).</li>
+<li>드리프트 탐지→조치 리드타임 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> → <span class="placeholder-tag" data-placeholder="기간">[기간]</span>.</li>
+<li>장애 대응 MTTR <span class="placeholder-tag" data-placeholder="기간">[기간]</span> → <span class="placeholder-tag" data-placeholder="기간">[기간]</span>.</li>
+<li>재학습 파이프라인 실행 시간 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> → <span class="placeholder-tag" data-placeholder="기간">[기간]</span>.</li>
+<li>모델 관련 감사 지적 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>건/년 → <span class="placeholder-tag" data-placeholder="수치">[수치]</span>건/년.</li>
+</ul>
+</li>
+<li><strong>삽화·도식 후보</strong>: AS-IS/TO-BE 대조 표, 핵심 지표 전·후 막대 그래프.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 표 골격 + 수치 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>]</strong></li>
+</ul>
+<h3 id="72-kpi">7.2 KPI 정의 및 대시보드 설계<a class="headerlink" href="#72-kpi" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 1 6.3 KPI 의 <strong>운영 버전</strong> — 모델 운영 자체를 측정 가능하게.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>KPI 그룹: ① 모델 성능(정확도·리콜·MAE) ② 운영 건전성(가용성·지연) ③ 드리프트(PSI·KS) ④ 개선 속도(재학습 리드타임·개선 건수) ⑤ 거버넌스(모델 카드 완비율·리니지 커버리지).</li>
+<li>KPI 카드: 정의·측정 주기·기준값·목표값·책임자.</li>
+<li>대시보드 구성: 경영진 뷰(요약 KPI) / 운영자 뷰(엔진별 상세) / 엔지니어 뷰(로그·메트릭).</li>
+<li><strong>삽화·도식 후보</strong>: KPI 트리(5그룹 × 하위), 3계층 대시보드 와이어프레임.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 풀 + 고객사별 선택. Track 1 6.3 과 KPI 일부 공유.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>, Track 1 6.3 KPI 연계]</strong></li>
+</ul>
+<h3 id="73-track-13">7.3 Track 1·3 과의 연계 지점 및 향후 로드맵<a class="headerlink" href="#73-track-13" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>목적</strong>: Track 2 가 고립 모듈이 아니라 Track 1·3 을 <strong>잇는 운영 축</strong> 임을 마무리 문단에서 재확인.</li>
+<li><strong>포함 내용</strong>:</li>
+<li>Track 1 ← Track 2: 4.6 파이프라인의 재학습 루프, 5.3 HITL 피드백 축적, 6.3 KPI 모니터링 대시보드, 7.1 MLOps 교량 문단을 본 Track 2 블록으로 치환.</li>
+<li>Track 3 ↔ Track 2: 모니터링 이벤트 → 유사 장애 이력 RAG 검색(<a href="../../scenario/catalog/#scn-llm-02" title="설비 장애 대응 지식 검색·권고 (eCMMS 통합)" class="scn-link">SCN-LLM-02</a>), 모델 카드·리니지의 자연어 QA(<a href="../../scenario/catalog/#scn-llm-04" title="설계자산(CAD 도면·엔지니어링 문서) 지능 검색" class="scn-link">SCN-LLM-04</a>), 재학습 사유 자동 보고서(<a href="../../scenario/catalog/#scn-llm-03" title="품질·불량 보고서 자동 작성" class="scn-link">SCN-LLM-03</a>).</li>
+<li>향후 로드맵: Lv.2 → Lv.3 으로의 전환, 디지털트윈(<a href="../../scenario/catalog/#scn-utl-06" title="공정별 디지털트윈 시뮬레이션" class="scn-link">SCN-UTL-06</a>) 기반 가상 환경 검증, AutoML·LLMOps 통합.</li>
+<li><strong>삽화·도식 후보</strong>: Track 1·2·3 연계 지도, 3~5년 MLOps 고도화 로드맵.</li>
+<li><strong>고객사별 가변 여부</strong>: 공통 고정. 로드맵 연차별 내용만 교체.</li>
+<li><strong>[관련 시나리오: <a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>, <a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a>, <a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>, <a href="../../scenario/catalog/#scn-llm-02" title="설비 장애 대응 지식 검색·권고 (eCMMS 통합)" class="scn-link">SCN-LLM-02</a>, <a href="../../scenario/catalog/#scn-llm-03" title="품질·불량 보고서 자동 작성" class="scn-link">SCN-LLM-03</a>, <a href="../../scenario/catalog/#scn-llm-04" title="설계자산(CAD 도면·엔지니어링 문서) 지능 검색" class="scn-link">SCN-LLM-04</a>, <a href="../../scenario/catalog/#scn-utl-06" title="공정별 디지털트윈 시뮬레이션" class="scn-link">SCN-UTL-06</a>]</strong></li>
+</ul>
+<hr />
+<h2 id="vs">공통 자산 vs 특화 지점 맵<a class="headerlink" href="#vs" title="Permanent link">¤</a></h2>
+<table>
+<thead>
+<tr>
+<th>섹션</th>
+<th>재사용 유형</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1 실패 유형</td>
+<td><strong>공통 고정</strong></td>
+<td>전 고객사·전 사업 동일 사용</td>
+</tr>
+<tr>
+<td>1.2 제조 MLOps 특수성</td>
+<td>공통 고정</td>
+<td>Purdue 레벨만 고객사 교체</td>
+</tr>
+<tr>
+<td>1.3 규제·인증 요구</td>
+<td>업종별 교체</td>
+<td>IATF/AS9100/ISO 13485 등</td>
+</tr>
+<tr>
+<td>1.4 본 사업 위상</td>
+<td>사업별 교체</td>
+<td>지원사업마다 범위 다름</td>
+</tr>
+<tr>
+<td>2.1 엔진 인벤토리</td>
+<td>사업·시나리오별 전면 교체</td>
+<td>표 골격 공통</td>
+</tr>
+<tr>
+<td>2.2 배포 지형</td>
+<td>규모별 교체</td>
+<td>대/중견/중소 3종</td>
+</tr>
+<tr>
+<td>2.3 SLA/SLO</td>
+<td>공통 템플릿 + 수치 교체</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4 성숙도 진단</td>
+<td>고객사별 교체</td>
+<td>척도·체크리스트 공통</td>
+</tr>
+<tr>
+<td>3.1 수작업 배포</td>
+<td><strong>공통 고정</strong></td>
+<td>AS-IS 최고 재사용 블록</td>
+</tr>
+<tr>
+<td>3.2 모니터링 부재</td>
+<td><strong>공통 고정</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>3.3 재학습 기준 부재</td>
+<td><strong>공통 고정</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>3.4 피드백 단절</td>
+<td><strong>공통 고정</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>3.5 거버넌스 공백</td>
+<td>공통 고정</td>
+<td>규제 목록만 교체</td>
+</tr>
+<tr>
+<td>4.1 개념 프레임</td>
+<td><strong>공통 고정</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>4.2 7종 구성요소</td>
+<td><strong>공통 고정</strong></td>
+<td>Track 2 중심 다이어그램</td>
+</tr>
+<tr>
+<td>4.3 도구 스택</td>
+<td>규모별 교체</td>
+<td>3종 템플릿</td>
+</tr>
+<tr>
+<td>4.4 참조 아키텍처</td>
+<td><strong>공통 고정</strong></td>
+<td>메인 풀페이지 도식</td>
+</tr>
+<tr>
+<td>4.5 보안·네트워크</td>
+<td>고객사별 교체</td>
+<td>네트워크 정책 상이</td>
+</tr>
+<tr>
+<td>5.1 레지스트리</td>
+<td>공통 고정</td>
+<td>도구명만 교체 가능</td>
+</tr>
+<tr>
+<td>5.2 피쳐 스토어</td>
+<td>공통 골격 + 피쳐 교체</td>
+<td></td>
+</tr>
+<tr>
+<td>5.3 파이프라인</td>
+<td>공통 골격 + 단계 교체</td>
+<td></td>
+</tr>
+<tr>
+<td>5.4 서빙·배포</td>
+<td>공통 고정</td>
+<td></td>
+</tr>
+<tr>
+<td>5.5 모니터링·드리프트</td>
+<td><strong>공통 고정</strong></td>
+<td>임계만 교체</td>
+</tr>
+<tr>
+<td>5.6 거버넌스</td>
+<td>공통 고정</td>
+<td>역할명·인증만 교체</td>
+</tr>
+<tr>
+<td>6.1 개선 포인트 선정</td>
+<td><strong>공통 고정</strong></td>
+<td>Track 2 최고 재사용 블록</td>
+</tr>
+<tr>
+<td>6.2 재학습 트리거 5축</td>
+<td><strong>공통 고정</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>6.3 챔피언·챌린저</td>
+<td>공통 고정</td>
+<td></td>
+</tr>
+<tr>
+<td>6.4 피드백 UI·파이프라인</td>
+<td>공통 고정</td>
+<td>드롭다운 옵션만 교체</td>
+</tr>
+<tr>
+<td>6.5 개선 사이클 리츄얼</td>
+<td>공통 고정</td>
+<td>회의체명만 교체</td>
+</tr>
+<tr>
+<td>7.1 정량 기대효과</td>
+<td>표 골격 공통 + 수치 교체</td>
+<td></td>
+</tr>
+<tr>
+<td>7.2 KPI·대시보드</td>
+<td>공통 풀 + 고객사 선택</td>
+<td>Track 1 6.3 과 일부 공유</td>
+</tr>
+<tr>
+<td>7.3 Track 연계·로드맵</td>
+<td><strong>공통 고정</strong></td>
+<td>로드맵 연차만 교체</td>
+</tr>
+</tbody>
+</table>
+<p><strong>재사용 효율이 높은 Top 5 블록</strong>: 3.2 모니터링 부재, 4.2 7종 구성요소, 4.4 참조 아키텍처, 5.5 모니터링·드리프트, 6.1 개선 포인트 선정 — 이 5개는 전 고객사·전 사업에서 거의 그대로 재사용 가능.</p>
+<p><strong>특화 지점 대표 예시 3개</strong>:
+1. <strong>1.3 규제·인증 요구</strong> — 자동차 부품(IATF 16949) / 조선·항공(AS9100) / 의료(ISO 13485) 로 분리 관리.
+2. <strong>2.2 배포 지형</strong> — 대기업 3단(엣지·온프레·클라우드) vs 중견 2단 vs 중소 클라우드 중심으로 교체.
+3. <strong>4.3 도구 스택</strong> — 대기업(상용 혼합) / 중견(오픈소스 중심 + 일부 상용) / 중소(경량 오픈소스) 3종 템플릿.</p>
+<hr />
+<h2 id="track-13">Track 1·3 연계 지점<a class="headerlink" href="#track-13" title="Permanent link">¤</a></h2>
+<h3 id="track-1-track-2">Track 1 ← Track 2 연계 (본 문서가 호출되는 지점)<a class="headerlink" href="#track-1-track-2" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Track 1 지점</th>
+<th>호출되는 Track 2 블록</th>
+<th>연계 방식</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>4.6 엔드투엔드 파이프라인</strong> 의 "재학습 루프" 노드</td>
+<td>4.4 참조 아키텍처, 5.3 파이프라인, 6.2 트리거 5축</td>
+<td>Track 1 4.6 도식 우측 하단의 재학습 루프가 바로 Track 2 로 확장된다. 본문에 "재학습 루프의 상세는 Track 2 5.3·6.2 에서 구체화" 1~2 문단 교량.</td>
+</tr>
+<tr>
+<td><strong>5.3 Human-in-the-loop 검증 체계</strong></td>
+<td>6.4 피드백 UI·라벨 재주입</td>
+<td>Track 1 5.3 에서 "피드백 데이터 자동 축적" 직후, "현장 피드백이 학습셋으로 환류되는 경로는 Track 2 6.4 에서 상세히 기술" 로 넘김.</td>
+</tr>
+<tr>
+<td><strong>6.3 KPI 및 측정 방법</strong></td>
+<td>5.5 모니터링, 7.2 KPI·대시보드</td>
+<td>Track 1 6.3 의 "모니터링 대시보드" 항목이 Track 2 5.5·7.2 로 연결. KPI 풀 일부 공유.</td>
+</tr>
+<tr>
+<td><strong>7.1 MLOps 교량 섹션</strong></td>
+<td>본 문서 전체</td>
+<td>Track 1 7.1 은 교량 문단만 유지, Track 2 본문 전체를 별첨 또는 본문 내 독립 장으로 삽입하는 분기점.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="track-3-track-2">Track 3 ↔ Track 2 연계 (상호 참조)<a class="headerlink" href="#track-3-track-2" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>연계 방향</th>
+<th>지점</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Track 2 → Track 3</td>
+<td>5.5 모니터링 경보 발생 시</td>
+<td>드리프트·성능 저하 경보에 대해 <strong>과거 유사 장애 사례 RAG 검색</strong>(<a href="../../scenario/catalog/#scn-llm-02" title="설비 장애 대응 지식 검색·권고 (eCMMS 통합)" class="scn-link">SCN-LLM-02</a>) 을 호출하여 조치 힌트를 제공.</td>
+</tr>
+<tr>
+<td>Track 2 → Track 3</td>
+<td>5.6 거버넌스 / 6.5 리뷰</td>
+<td>모델 카드·리니지·리뷰 산출물을 <strong>자연어 QA</strong>(<a href="../../scenario/catalog/#scn-llm-04" title="설계자산(CAD 도면·엔지니어링 문서) 지능 검색" class="scn-link">SCN-LLM-04</a>) 로 조회하여 감사·심사 대응.</td>
+</tr>
+<tr>
+<td>Track 2 → Track 3</td>
+<td>6.5 월간 리뷰</td>
+<td>재학습 사유·경과의 <strong>자동 보고서 작성</strong>(<a href="../../scenario/catalog/#scn-llm-03" title="품질·불량 보고서 자동 작성" class="scn-link">SCN-LLM-03</a>) 을 통해 리뷰 준비 부담 경감.</td>
+</tr>
+<tr>
+<td>Track 3 → Track 2</td>
+<td>RAG 운영</td>
+<td>Track 3 의 벡터스토어·임베딩 모델 자체도 MLOps 대상이며, 본 문서 4.2·5.1·5.5 의 모듈이 RAG 엔진 운영에도 적용된다.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">사용 예시 — 중견 철강사 기준 조립 시연<a class="headerlink" href="#_4" title="Permanent link">¤</a></h2>
+<p>가령 YCP특수강·코리녹스·중견 스테인리스 냉연사 수준의 중견 철강사 A사 대상 <strong>"디지털 경남" · "스마트공장 고도화"</strong> 성격의 사업계획서 내 MLOps 섹션(본문 또는 별첨 20~30페이지 분량) 을 본 목차로 조립한다고 하면, 1장은 <strong>1.1 실패 유형(공통 고정) + 1.2 제조 MLOps 특수성(공통 고정) + 1.3 규제 요구(IATF 블록 또는 ISO 9001 블록) + 1.4 본 사업 위상</strong> 순으로 도입 4~5페이지를 구성하고, 2장은 A사의 운영 대상 엔진(예: <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a> 냉연 두께 예측 + <a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a> 예지보전 + <a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a> UT 자동판정 + <a href="../../scenario/catalog/#scn-llm-02" title="설비 장애 대응 지식 검색·권고 (eCMMS 통합)" class="scn-link">SCN-LLM-02</a> 장애 RAG)을 <strong>2.1 엔진 인벤토리</strong> 에 채운 뒤 <strong>2.2 배포 지형(중견 2단)</strong> · <strong>2.3 SLA</strong> · <strong>2.4 성숙도 진단(Lv.0 → Lv.2 목표)</strong> 로 전환 시나리오를 명확화한다.</p>
+<p>3장은 <strong>3.1~3.5 의 공통 고정 AS-IS 블록</strong> 을 거의 그대로 가져와 A사 현장 수치(배포 방식·모니터링 현황·감사 지적 이력) 로만 교체하여 구조적 공백을 드러내고, 4장은 <strong>4.1 개념 프레임 + 4.2 7종 구성요소 + 4.3 도구 스택(중견 템플릿: MLflow + Feast + Airflow + BentoML + Evidently + Prometheus/Grafana) + 4.4 참조 아키텍처(공통 도식에 A사 노드명 치환) + 4.5 보안·네트워크(A사 OT/IT 경계 반영)</strong> 로 TO-BE 를 제시한다. 5장은 5.1~5.6 을 공통 골격 유지하며 5.2 피쳐 목록·5.3 파이프라인 단계를 A사 시나리오에 맞춰 교체하고, 6장은 <strong>6.1 개선 포인트 선정(공통 고정) + 6.2 재학습 트리거 5축 + 6.3 챔피언·챌린저 + 6.4 피드백 UI(<a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a> 기반) + 6.5 월간 리뷰 리츄얼</strong> 로 지속 개선 루프를 완결한다. 7장에서 <strong>7.1 정량 효과(A사 수치)</strong> · <strong>7.2 KPI·대시보드(Track 1 6.3 KPI 풀과 공유)</strong> · <strong>7.3 Track 1·3 연계 로드맵</strong> 으로 마무리하면, 전체 분량의 65~75%가 공통 블록으로 채워지고 25~35%만 A사 고유 수치·시나리오로 교체되어 재사용 효율을 극대화한 Track 2 원고가 얻어진다.</p>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>track2_공통본문_목차.md</code></li>
+<li><strong>자산 군</strong>: 🔧 기술 트랙</li>
+<li><strong>slug 경로</strong>: <code>track/track2-index.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../track1-engine-cards/" class="md-footer__link md-footer__link--prev" aria-label="이전: AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../track2-top5/" class="md-footer__link md-footer__link--next" aria-label="다음: 사업계획서 §6·7·8 본문 5 블록">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                사업계획서 §6·7·8 본문 5 블록
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

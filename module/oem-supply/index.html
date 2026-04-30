@@ -1,0 +1,3067 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 모듈은 자동차·전자·기계 OEM 의 1·2 차 협력사가 제조 AI 사업을 추진할 때 OEM 측이 요구하는 **변경관리·품질보증·승인 프로세스 정합** 을 사업계획서 여러 섹션에 일관 톤으로 주입하기 위한 **크로스커팅 재사용 블록 세트** 이다. 화승알엔에이·코리녹스·코렌스 등 워크스페이스의 핵심 고객군은 현대차·기아·GM·VW·Toyota·LG 등 …">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/module/oem-supply/">
+      
+      
+        <link rel="prev" href="../federated-learning/">
+      
+      
+        <link rel="next" href="../saas-security/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>모듈 — 자동차 OEM 공급망 정합 (크로스커팅 재사용 블록) - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oem" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              모듈 — 자동차 OEM 공급망 정합 (크로스커팅 재사용 블록)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 콘텐츠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제조 AI 도입 기초·아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §3·4 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-engine-cards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track2-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps 도입 기초·구성요소 7 종
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track2-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §6·7·8 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track3-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM·RAG 도입 기초·5 계층
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track3-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §4·5 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 6 패키지 통합 파일럿
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 6 패키지 통합 파일럿
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg1-steel-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 1 — 대기업 철강 다년 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg2-cold-rolled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 2 — 중견 냉연 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg3-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 3 — 특수강관 RAG 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg4-rubber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 4 — 고무 양산 OEM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg5-precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 5 — 정밀가공 SaaS 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg6-util-esg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 6 — 유틸·ESG·CBAM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시나리오 카탈로그 — 40 종 7 도메인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Top 5 (연속주조·압연·표면결함)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-phase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Phase 2 (압연·소둔 4 종)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-rub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    고무·폴리머 5 종 (배합·언더큐어)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-utl-saf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    유틸·안전 5 종 (CBAM·중대재해)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    특수강관 RAG (작업표준·정비이력)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧩 Cross-cutting 모듈
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧩 Cross-cutting 모듈
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CBAM 대응 (EU 탄소국경조정)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    중대재해 안전 (CCTV·웨어러블)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federated-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연합학습 (산업단지 공동 AI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OEM 공급망 정합 (자동차·조선·2 차전지)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OEM 공급망 정합 (자동차·조선·2 차전지)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 모듈 목적
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 삽입 지점 맵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 본문 블록
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 본문 블록">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-a-oem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-A — OEM 협력사 노출도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-B — 공정·품질 인증 보유 현황
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-c-oem-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-C — OEM 변경관리·승인 프로세스의 현 공백 (AS-IS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-d-ai-oem-ppapsqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-D — AI 도입의 OEM 변경관리 정합 (PPAP·SQA·문서)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-e-oem-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-E — OEM 신뢰성 강화·1 차 협력사 지위 (정성 기대효과)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-f-oem-kpi-ppmsqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-F — OEM 요구 KPI (PPM·납기·SQA 점수)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-g-oem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-G — OEM 인증·표준 용어 인덱스 (부록)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 관련 시나리오
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 관련 시나리오">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        카탈로그 시나리오·패키지와의 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        본 모듈이 지원하는 시나리오 확장
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 삽화·도식 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 유지보수 지침
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 확인 필요 항목 (실무 검증 후 채움)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../saas-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SaaS·클라우드 보안 (5 등급 민감도)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../guide/assembly/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 모듈 목적
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 삽입 지점 맵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 본문 블록
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 본문 블록">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-a-oem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-A — OEM 협력사 노출도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-B — 공정·품질 인증 보유 현황
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-c-oem-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-C — OEM 변경관리·승인 프로세스의 현 공백 (AS-IS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-d-ai-oem-ppapsqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-D — AI 도입의 OEM 변경관리 정합 (PPAP·SQA·문서)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-e-oem-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-E — OEM 신뢰성 강화·1 차 협력사 지위 (정성 기대효과)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-f-oem-kpi-ppmsqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-F — OEM 요구 KPI (PPM·납기·SQA 점수)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-oem-g-oem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-OEM-G — OEM 인증·표준 용어 인덱스 (부록)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 관련 시나리오
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 관련 시나리오">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        카탈로그 시나리오·패키지와의 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        본 모듈이 지원하는 시나리오 확장
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 삽화·도식 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 유지보수 지침
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 확인 필요 항목 (실무 검증 후 채움)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../track/track1-index/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📦 콘텐츠
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../cbam/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    🧩 Cross-cutting 모듈
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">module</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="oem">모듈 — 자동차 OEM 공급망 정합 (크로스커팅 재사용 블록)<a class="headerlink" href="#oem" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 26 분 읽기</span></p>
+<figure>
+  <img alt="모듈 — 자동차 OEM 공급망 정합 (크로스커팅 재사용 블록)" src="../../assets/svg/module/oem-supply.svg" />
+<br />
+<figcaption>Cross-cutting 모듈 인포그래픽 — 결합 영역 시각</figcaption>
+</figure>
+<h2 id="1">1. 모듈 목적<a class="headerlink" href="#1" title="Permanent link">¤</a></h2>
+<p>본 모듈은 자동차·전자·기계 OEM 의 1·2 차 협력사가 제조 AI 사업을 추진할 때 OEM 측이 요구하는 <strong>변경관리·품질보증·승인 프로세스 정합</strong> 을 사업계획서 여러 섹션에 일관 톤으로 주입하기 위한 <strong>크로스커팅 재사용 블록 세트</strong> 이다. 화승알엔에이·코리녹스·코렌스 등 워크스페이스의 핵심 고객군은 현대차·기아·GM·VW·Toyota·LG 등 글로벌 OEM 의 1·2 차 공급망에 속하며, 대중소상생 사업·OEM 협력 사업·디지털 경남·전사적 DX 등 다수의 지원사업이 OEM 측 변경관리·품질 인증 정합을 사실상의 자격 요건으로 요구하고 있다. 그럼에도 기존 모듈 (CBAM·중대재해·연합학습·SaaS 보안) 4 종은 환경·안전·연합·클라우드 축에 한정되어, OEM 정합 영역은 사업계획서 작성 시점에 <strong>§5.4 시스템 연동·§5.5 운영 거버넌스·§6.2 정성 효과·§6.3 KPI·§7.1 리스크</strong> 5 개 섹션을 매번 신규 작성하는 부담이 발생해 왔다. <span class="meta-marker">Phase E3</span> 패키지 4 (고무양산 파일럿) 의 자체평가에서도 동일 갭 (갭 17) 이 식별되었다.</p>
+<p>본 모듈은 <strong>IATF 16949 (자동차 품질경영 표준) · PPAP (Production Part Approval Process) · SQA (Supplier Quality Assurance) · VDA 6.3 (독일 OEM 프로세스 감사) · FMEA (고장모드영향분석)</strong> 의 5 축을 핵심 쟁점으로 삼아, AI 도입을 4M (Man·Machine·Material·Method) 변경의 Method 축으로 분류하고 OEM 사전 통지·승인 프로세스에 정합하는 어휘를 표준화한다. 또한 OEM 별로 출시되는 AI 가이드라인 (확인 필요) 과 산업기술보호법·OEM 도면 IP 보호의 정합을 함께 다루어, 1 차 협력사 SQA 점수 영향을 차단하는 거버넌스 톤을 제공한다. 기존 모듈과 동일 7 절·7 블록 (A~G) 포맷으로, 사업계획서 작성자가 고객사 OEM 노출도와 차종·구역에 따라 취사선택하여 삽입할 수 있도록 설계되었다.</p>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><strong>플레이스홀더 범례</strong> — <code>[고객사]</code> 고객사명, <code>[OEM]</code> 자동차·전자·기계 OEM 명, <code>[수치]</code> 수치 전반, <code>[%]</code> 비율, <code>[기간]</code> 기간, <code>[Tier]</code> 1·2·3 차 협력 단계, <code>[차종]</code> 차종·플랫폼명, <code>[부품]</code> 대상 부품군, <code>[법령-2026]</code> 시행 시점에 따라 교체가 필요한 법령·고시·인증 가이드 태그.
+본 모듈에 포함된 IATF 16949 개정·PPAP Level 별 요건·VDA 6.3 P 코드·OEM 별 AI 가이드라인은 모두 "(확인 필요)" 표기 또는 플레이스홀더로 처리하였으며, 실무 투입 전 <code>[법령-2026]</code> 기준의 최신 표준·OEM 매뉴얼을 확인하여 채워야 한다.</p>
+</details>
+<hr />
+<h2 id="2">2. 삽입 지점 맵<a class="headerlink" href="#2" title="Permanent link">¤</a></h2>
+<table>
+<thead>
+<tr>
+<th>삽입 위치 (상위 문서 섹션)</th>
+<th>본 모듈 블록</th>
+<th>분량 추천</th>
+<th>사용 성격</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Track 1 § 1.4 고객사 현황</td>
+<td><strong>BLK-OEM-A</strong> OEM 협력사 노출도</td>
+<td>1 문단 (220~300자)</td>
+<td>고객사별 교체 (OEM 매출 비중)</td>
+</tr>
+<tr>
+<td>Track 1 § 2.2 대상 공정 또는 § 2.3 인증 보유</td>
+<td><strong>BLK-OEM-B</strong> 공정·품질 인증 보유 현황 (IATF 16949·VDA 6.3)</td>
+<td>1 문단 + 표 (240~320자)</td>
+<td>고객사별 교체 (보유 인증 차이)</td>
+</tr>
+<tr>
+<td>Track 1 § 3.x AS-IS</td>
+<td><strong>BLK-OEM-C</strong> OEM 변경관리·승인 프로세스의 현 공백</td>
+<td>1~2 문단 (380~520자)</td>
+<td>공통 고정 (현장 공백 진단)</td>
+</tr>
+<tr>
+<td>Track 1 § 5.4 시스템 연동</td>
+<td><strong>BLK-OEM-D</strong> AI 도입의 OEM 변경관리 정합 (PPAP·SQA·문서)</td>
+<td>2 문단 (560~780자)</td>
+<td><strong>본 모듈의 핵심 블록</strong></td>
+</tr>
+<tr>
+<td>Track 1 § 6.2 정성 효과</td>
+<td><strong>BLK-OEM-E</strong> OEM 신뢰성 강화·1 차 협력사 지위</td>
+<td>1 문단 (220~280자)</td>
+<td>공통 고정 (CBAM-E 와 병기)</td>
+</tr>
+<tr>
+<td>Track 1 § 6.3 KPI</td>
+<td><strong>BLK-OEM-F</strong> OEM 요구 KPI (PPM·납기·SQA 점수)</td>
+<td>1 문단 + 표 (240~300자)</td>
+<td>고객사별 교체 (PPM·납기 수준)</td>
+</tr>
+<tr>
+<td>부록 / 별첨 용어집</td>
+<td><strong>BLK-OEM-G</strong> OEM 인증·표준 용어 인덱스</td>
+<td>0.5 페이지</td>
+<td>공통 고정 (부록 자산)</td>
+</tr>
+</tbody>
+</table>
+<p>총 <strong>7 개 블록 · 7 개 삽입 지점</strong> 으로, 기존 4 모듈 (CBAM·중대재해·연합학습·SaaS 보안) 과 동일 구조이다.</p>
+<p><strong>조합 패턴 예시</strong>
+- <strong>자동차 1 차 협력사 풀패키지</strong> (패키지 4 등): A + B + C + D + E + F + G (7 개 블록 모두 투입)
+- <strong>2 차 협력사 약식</strong>: A + D + E + F (노출도·정합·신뢰성·KPI 만 압축 투입)
+- <strong>R&amp;D 연구개발계획서용</strong>: C + D + G (현 공백·핵심 정합·용어집만 투입, 사업화 효과는 생략)
+- <strong>SaaS 보안 모듈과 결합</strong>: 본 모듈 D + 모듈 SaaS 보안 D (도면 IP) → 영업비밀 도면 + OEM 정합 통합 톤
+- <strong>연합학습 모듈과 결합</strong>: 본 모듈 D + 모듈 연합학습 → OEM 가이드라인 정합 + 산단 공동 학습 통합</p>
+<hr />
+<h2 id="3">3. 본문 블록<a class="headerlink" href="#3" title="Permanent link">¤</a></h2>
+<h3 id="blk-oem-a-oem">BLK-OEM-A — OEM 협력사 노출도<a class="headerlink" href="#blk-oem-a-oem" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-A</code></li>
+<li><strong>용도</strong>: Track 1 § 1.4 고객사 현황 말미에 "이 고객사가 OEM 공급망에서 어느 위치에 있는가" 를 수치로 환기. 후속 블록 B (인증) · C (현 공백) 의 전제로 작동.</li>
+<li><strong>초안 문장 (고객사별 교체, 약 270자)</strong>:</li>
+</ul>
+<blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 는 [OEM] 의 <code>[Tier]</code> 차 협력사로서 연간 매출의 <code>[%]</code>% 가 [OEM] 향 [부품] 납품에서 발생하며, 주력 차종은 [차종] · [차종] 등 <code>[수치]</code> 종이다. [OEM] 측 SQA 평가에서 직전 회기 <code>[등급]</code> 등급을 유지하고 있으며, 직납 BOM 점유율은 [부품] 기준 <code>[%]</code>% 수준이다. 또한 [OEM] 외에도 <code>[수치]</code> 개 OEM 에 분산 납품하고 있어, OEM 별로 상이한 변경관리·품질보증 표준에 동시 대응해야 하는 구조이다. 본 사업이 도입하는 AI 시스템은 단일 OEM 표준이 아니라 IATF 16949·VDA 6.3·OEM 별 AI 가이드라인 (확인 필요) 의 공통 분모를 정합 기준으로 채택하여, 다중 OEM 공급 구조에서도 일관된 변경관리·승인 프로세스를 운영할 수 있도록 설계된다.</p>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: <code>[OEM]</code>, <code>[Tier]</code> 차 협력, SQA <code>[등급]</code> 등급, BOM 점유 <code>[%]</code>%, 다중 OEM 공급, IATF 16949·VDA 6.3 공통 분모.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>단일 OEM 의존도 높은 고객사</em>: "또한 [OEM] 외에도 …" 부분을 "현재 [OEM] 단일 의존도가 <code>[%]</code>% 에 달해, 본 사업은 OEM 정합성 강화와 동시에 신규 OEM 영업 확장의 자격 요건 확보 효과를 함께 추구한다" 로 교체.</li>
+<li><em>2 차 협력사</em>: "직납 BOM 점유율" 부분을 "1 차 협력사 [고객사-1차] 를 경유한 간접 납품 비중 <code>[%]</code>%" 로 교체.</li>
+<li><em>전자·기계 OEM 동시 공급</em>: "주력 차종" 부분을 "주력 적용 제품군은 자동차·전자·산업기계 <code>[수치]</code> 개 부문" 으로 교체.</li>
+</ul>
+<hr />
+<h3 id="blk-oem-b">BLK-OEM-B — 공정·품질 인증 보유 현황<a class="headerlink" href="#blk-oem-b" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-B</code></li>
+<li><strong>용도</strong>: Track 1 § 2.2 대상 공정 안쪽 또는 § 2.3 별도 인증 보유 섹션에서, 본 사업의 대상 공정이 보유한 품질·환경·프로세스 인증을 OEM 정합 관점으로 정리. AI 도입이 인증 갱신 일정과 어떻게 맞물리는지를 표로 명시.</li>
+<li><strong>초안 문장 (고객사별 교체, 약 280자 + 표)</strong>:</li>
+</ul>
+<blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 는 자동차 산업 품질경영 표준인 <strong>IATF 16949</strong> 와 환경경영 <strong>ISO 14001</strong> 인증을 보유하고 있으며, [OEM] 의 요구에 따라 <strong>VDA 6.3 (프로세스 감사) · VDA 6.5 (제품 감사)</strong> 의 외부 감사를 <code>[기간]</code> 주기로 수검 받고 있다. 본 사업의 AI 도입이 적용되는 <span class="placeholder-tag" data-placeholder="공정">[공정]</span> 은 IATF 16949 7.1.5 (모니터링·측정 자원) · 8.5 (생산 및 서비스 제공) 조항에 직접 연계되며, AI 시스템의 검증·감사 추적 기능이 인증 갱신 시 OEM 감사관에게 추가 객관 증거로 제출 가능하도록 설계된다. 인증 갱신 주기는 IATF 16949 가 <code>[기간]</code>, VDA 6.3 가 <code>[기간]</code>, ISO 14001 이 <code>[기간]</code> 으로, 본 사업 일정은 직전 회기 갱신 시점과 <code>[기간]</code> 이상 시차를 두어 갱신 부담과 충돌하지 않도록 조정된다.</p>
+<table>
+<thead>
+<tr>
+<th>인증</th>
+<th>발행 기관</th>
+<th>적용 범위</th>
+<th>갱신 주기</th>
+<th>본 사업 정합 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IATF 16949</td>
+<td>IATF 인정 인증기관</td>
+<td>자동차 부품 품질경영 (ISO 9001 + 자동차 부속서)</td>
+<td><code>[기간]</code> (감시 심사 연 1 회)</td>
+<td>7.1.5 모니터링 자원 / 8.5 생산 제공</td>
+</tr>
+<tr>
+<td>VDA 6.3</td>
+<td>독일 OEM (VW·BMW·Daimler 등)</td>
+<td>프로세스 감사 (P-1 ~ P-7)</td>
+<td><code>[기간]</code> (OEM 요청 시)</td>
+<td>P-3·P-5·P-6·P-7 (확인 필요)</td>
+</tr>
+<tr>
+<td>VDA 6.5</td>
+<td>독일 OEM</td>
+<td>제품 감사</td>
+<td><code>[기간]</code></td>
+<td>양산 부품 샘플 검증</td>
+</tr>
+<tr>
+<td>ISO 14001</td>
+<td>KAB 인정 인증기관</td>
+<td>환경경영</td>
+<td><code>[기간]</code> (3 년)</td>
+<td>CBAM 모듈 BLK-CBAM-B 연계</td>
+</tr>
+<tr>
+<td>(선택) ISO 45001</td>
+<td>KAB 인정 인증기관</td>
+<td>안전보건경영</td>
+<td><code>[기간]</code></td>
+<td>중대재해 모듈 BLK-SAF-B 연계</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: IATF 16949 7.1.5·8.5, VDA 6.3 P-3·P-5·P-6·P-7, VDA 6.5, ISO 14001, ISO 45001, 인증 갱신 주기 <code>[기간]</code>, 외부 감사 시차.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>IATF 16949 미보유 (2 차 협력사 일부)</em>: "IATF 16949 와 …" 부분을 "ISO 9001 을 기반으로 [OEM] 측 자체 협력사 품질 표준 (예: 현대차 5-Star, GM BIQS, Ford Q1) 에 대응 중이며, 본 사업을 통해 IATF 16949 신규 취득을 단계적으로 추진한다" 로 교체.</li>
+<li><em>VDA 미적용 (북미 OEM 위주)</em>: VDA 6.3·6.5 행을 삭제하고 "AIAG (북미) CQI-9·CQI-11·CQI-15 등 특수공정 평가" 행으로 교체.</li>
+<li><em>전자·기계 OEM 추가</em>: 표 하단에 "TL 9000 (통신 장비)·AS 9100 (항공 우주)" 행 추가 옵션.</li>
+</ul>
+<hr />
+<h3 id="blk-oem-c-oem-as-is">BLK-OEM-C — OEM 변경관리·승인 프로세스의 현 공백 (AS-IS)<a class="headerlink" href="#blk-oem-c-oem-as-is" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-C</code></li>
+<li><strong>용도</strong>: Track 1 § 3.x AS-IS 진단에서, AI 도입이 OEM 측 4M 변경관리·PPAP 재제출·FMEA 갱신 의무를 발생시킨다는 점과, 현재 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 변경관리 문서가 분산·수기 관리되어 OEM 감사 시점의 자료 소집에 과도한 공수가 소요되는 구조적 공백을 1~2 문단으로 진단.</li>
+<li><strong>초안 문장 (공통 고정, 약 460자, 1~2 문단)</strong>:</li>
+</ul>
+<blockquote>
+<p>자동차 OEM 공급망에서 AI 도입은 단순한 IT 시스템 추가가 아니라, OEM 측 4M (Man·Machine·Material·Method) 변경관리 절차상 <strong>Method (작업 방법) 변경</strong> 으로 분류된다. 이는 AI 가 검사·예지보전·공정 파라미터 추천 등 양산 공정에 영향을 미치는 의사결정에 개입하는 순간, 협력사가 OEM 측에 사전 통지·PPAP (Production Part Approval Process) 재제출·FMEA (고장모드영향분석) 갱신·런 양산 검증 의무를 부담함을 의미한다. PPAP Level (확인 필요) 에 따라 부속 문서 종류가 달라지고, VDA 6.3 적용 OEM 의 경우 P-3 (개발) · P-7 (양산) 프로세스 감사가 추가로 트리거된다.</p>
+<p>그러나 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 현 변경관리 운영은 <strong>공정 변경 신청서 (수기) · FMEA (Excel) · SPC (Statistical Process Control) 차트 (개별 PC) · 컨트롤 플랜 (PDF) · 8D (불량 대응 8 단계 보고서) (메일)</strong> 가 각기 다른 시스템과 매체에 분산되어 있어, OEM 감사 시점에 변경 이력의 일관된 추적과 자료 소집에 평균 <code>[기간]</code> 일이 소요되며, 일부 항목은 담당자 부재 시 재구성이 불가능한 상태이다. 이 구조 위에 AI 시스템을 도입하면 변경관리·승인 부담이 가중되어 OEM 정합성 확보가 어려워지고, 1 차 협력사 SQA 점수 하락·신규 양산 수주 기회 상실의 리스크로 직결된다. 본 사업은 이 구조적 공백을 AI 도입과 동일 시점에 변경관리 디지털 백본으로 정합·해소함을 핵심 명제로 한다.</p>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: 4M 변경 (Man·Machine·Material·Method), Method 변경 분류, PPAP 재제출, FMEA 갱신, 런 양산 검증, VDA 6.3 P-3·P-7, 분산 수기 운영, 자료 소집 <code>[기간]</code> 일, SQA 점수 하락 리스크.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>변경관리 디지털화 일부 진행 고객사</em>: 두 번째 문단의 "각기 다른 시스템과 매체에 분산되어" 부분을 "PLM 일부 모듈에 통합되었으나 FMEA·8D 는 여전히 Excel·메일에 머물러" 로 교체.</li>
+<li><em>Method 변경에 한정되지 않는 사업</em>: 첫 문단의 "Method (작업 방법) 변경으로 분류된다" 뒤에 "동시에 신규 검사 장비 도입이 수반될 경우 Machine 변경, 신규 데이터 수집 인력 배치 시 Man 변경이 함께 발생" 1 문장 추가.</li>
+<li><em>R&amp;D 연구개발계획서용</em>: 두 번째 문단을 생략하고 첫 문단만 사용, "본 연구는 AI 의 OEM 변경관리 정합 자체를 연구 과제로 다룬다" 로 톤 전환.</li>
+</ul>
+<hr />
+<h3 id="blk-oem-d-ai-oem-ppapsqa">BLK-OEM-D — AI 도입의 OEM 변경관리 정합 (PPAP·SQA·문서)<a class="headerlink" href="#blk-oem-d-ai-oem-ppapsqa" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-D</code></li>
+<li><strong>용도</strong>: Track 1 § 5.4 시스템 연동에서, 본 사업의 AI 시스템이 OEM 변경관리·PPAP·SQA·VDA 6.3·OEM AI 가이드라인 (확인 필요) 에 어떻게 정합하는지를 2 문단·구체 절차로 명시. <strong>본 모듈의 핵심 블록</strong> 이며, 패키지 4 §5.4 신규 작성 부담을 흡수한다.</li>
+<li><strong>초안 문장 (시나리오별 교체, 약 700자, 2 문단)</strong>:</li>
+</ul>
+<blockquote>
+<p><strong>(1) 변경관리·PPAP 정합</strong> — 본 사업의 AI 도입은 [OEM] 측 4M 변경관리상 Method 변경으로 분류되며, 다음 3 단계 사전 통지·승인 프로세스로 표준화된다. 첫째 <strong>Δt-90 (양산 적용 90 일 전)</strong> 단계에서 변경 영향 평가서 (Change Impact Assessment) 와 신규 FMEA 초안을 [OEM] SQE (Supplier Quality Engineer) 에 제출하여 PPAP Level (확인 필요) 적용 여부를 사전 합의한다. 둘째 <strong>Δt-30</strong> 단계에서 갱신 FMEA·SPC·MSA (Measurement System Analysis) · 컨트롤 플랜·검사 표준서·런 양산 검증 결과를 PPAP 문서 패키지로 묶어 제출한다. 셋째 <strong>Δt-7</strong> 단계에서 OEM 의 Part Submission Warrant (PSW) 승인을 수령한 뒤 양산 적용을 개시한다. VDA 6.3 적용 OEM 의 경우 P-3 (개발) · P-7 (양산) 프로세스 감사 시 AI 시스템의 데이터·로직·검증 절차 일체가 감사 대상에 포함되며, 본 사업은 이를 사전에 대비하는 P 코드별 증빙 자료 구성을 시스템 연동 설계 단계에서 함께 산출한다.</p>
+<p><strong>(2) AI 시스템 자체의 OEM 인정 (SQA·OEM AI 가이드라인 정합)</strong> — AI 시스템은 단순 IT 자산이 아니라 OEM 의 SQA (Supplier Quality Assurance) 평가 대상의 일부로 인식되도록 다음 3 종 산출물을 표준 패키지로 운영한다. 첫째 <strong>모델 카드 (Model Card)</strong> — 모델의 학습 데이터·성능 지표·한계·재학습 주기를 OEM 측에 요청 시 즉시 제출 (Track 2 § 5.6 거버넌스 연계). 둘째 <strong>AI 의사결정 책임 매트릭스</strong> — AI 출력별로 작업자·QA·생산팀장·OEM 감사관·산업안전 책임자의 역할 분담을 명시하여, AI 가 잘못된 결정을 내렸을 때의 책임 귀속을 사전에 명료화. 셋째 <strong>AI 출력의 검수·승인 로그</strong> — 모든 AI 권고가 작업자에 의해 수용 또는 기각되었는지 감사 추적 가능한 형식으로 기록하여, OEM 감사관이 1 회 추출로 확인할 수 있도록 한다. [OEM] 별 AI 가이드라인 (예: GM AI Standard·VW Robust AI·Toyota AI Practice·현대차 AI Quality — 확인 필요) 이 출시되어 있는 경우 그 요건을 본 산출물 3 종에 흡수하여 정합하며, 협력사 SQA 점수에 부정적 영향을 차단한다.</p>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: 4M Method 변경, Δt-90·Δt-30·Δt-7 타임라인, PPAP Level 3·4 (확인 필요), FMEA·SPC·MSA·컨트롤 플랜, PSW (Part Submission Warrant), VDA 6.3 P-3·P-7, 모델 카드 (Track 2 § 5.6), AI 의사결정 책임 매트릭스, 검수·승인 로그, OEM AI 가이드라인 정합.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>VDA 6.3 미적용 (북미·국내 OEM 위주)</em>: "VDA 6.3 적용 OEM 의 경우 …" 1 문장을 "AIAG APQP (Advanced Product Quality Planning) 프레임워크의 Phase 4·5 에 본 변경 절차를 정합" 으로 교체.</li>
+<li><em>국내 OEM (현대차·기아) 단일 거래</em>: 두 번째 문단의 OEM 가이드라인 예시를 "현대차 AI Quality·기아 AI Standard (확인 필요)" 로 축소.</li>
+<li><em>경량 (중소·2 차 협력사)</em>: 첫 문단의 Δt-90/30/7 단계를 "Δt-60·Δt-14 의 2 단계" 로 축약하고, 두 번째 문단의 모델 카드·책임 매트릭스를 단일 표 1 종으로 통합.</li>
+<li><em>PPAP Level 5 적용 (안전 관련 부품)</em>: "PPAP Level (확인 필요)" 부분을 "PPAP Level 5 (양산 부품·시설·도구 일체 OEM 검증) 의 적용 가능성을 사전 검토하고, Level 5 적용 시 본 사업 일정에 추가 <code>[기간]</code> 의 OEM 현장 심사 기간을 반영" 으로 강화.</li>
+</ul>
+<hr />
+<h3 id="blk-oem-e-oem-1">BLK-OEM-E — OEM 신뢰성 강화·1 차 협력사 지위 (정성 기대효과)<a class="headerlink" href="#blk-oem-e-oem-1" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-E</code></li>
+<li><strong>용도</strong>: Track 1 § 6.2 정성 기대효과에서, 본 사업의 비재무적 효과 중 "OEM 신뢰성 강화·1 차 협력사 지위 유지·미래차 신규 수주 가능성" 축을 독립 블록으로 제시. CBAM-E·SAF-E·SEC-E 와 병기.</li>
+<li><strong>초안 문장 (공통 고정, 약 250자)</strong>:</li>
+</ul>
+<blockquote>
+<p>본 사업을 통해 구축되는 OEM 변경관리 디지털 백본과 AI 정합 거버넌스는 단기적으로는 [OEM] 측 SQA 평가 점수를 <code>[%]</code>% 수준 향상시켜 1 차 협력사 등급의 안정적 유지·승격에 기여하며, 중장기적으로는 [OEM] 의 대중소상생 사업·AI 협업 사업·미래차 (전동화·자율주행) 신규 부품 수주에서 우선 후보 자격을 확보할 수 있는 신뢰 기반으로 작동한다. 또한 본 사업의 산출물인 AI 정합 패키지 (모델 카드·책임 매트릭스·검수 로그) 는 신규 OEM 진입 시 영업 자격 검증 절차의 단축 효과를 가져오며, 화승알엔에이·코리녹스·코렌스 등 부산·경남권 자동차 부품 협력사의 공통 자산으로 산단·협회 차원의 전파 가능성을 확보한다. 이는 매출 다각화와 미래 모빌리티 시장 진입을 동시에 방어하는 전략 자산이 된다.</p>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: SQA 평가 향상 <code>[%]</code>%, 1 차 협력사 등급 유지·승격, 대중소상생·AI 협업 사업, 미래차 (전동화·자율주행) 신규 수주, 영업 자격 검증 단축, 부산·경남권 협력사 공통 자산.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>대기업 협력사 풀 톤</em>: 말미에 "또한 본 사업의 OEM 정합 거버넌스는 그룹 전사 협력사 평가 (Vendor Rating) 의 모범 사례로 등재 가능하며, 그룹 차원의 지속가능 공급망 (Sustainable Supply Chain) 정책과의 정합도를 높인다" 1 문장 추가.</li>
+<li><em>중소 협력사 톤</em>: "그룹 전사 …" 부분을 "1 차 협력사 가점 확보와 신규 OEM 영업 자격 검증 부담의 경감" 으로 순화.</li>
+<li><em>미래차 신규 수주 톤 강화</em>: "전동화·자율주행" 뒤에 "특히 모터·인버터·배터리 케이스·자율주행 센서 하우징 등 신규 부품군에서 OEM 측의 AI 검증 요구가 더욱 엄격해지는 추세를 선제적으로 대응" 1 문장 추가.</li>
+</ul>
+<hr />
+<h3 id="blk-oem-f-oem-kpi-ppmsqa">BLK-OEM-F — OEM 요구 KPI (PPM·납기·SQA 점수)<a class="headerlink" href="#blk-oem-f-oem-kpi-ppmsqa" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-F</code></li>
+<li><strong>용도</strong>: Track 1 § 6.3 KPI 섹션에서, 본 사업의 KPI 를 OEM 측 SQA 평가 항목과 일치하도록 정의. PPM·납기 준수율·클레임 응답·8D 적시성 등 OEM 이 매월·분기 단위로 측정하는 지표를 사업 KPI 로 채택하여, 본 사업 효과를 OEM 평가 점수로 직접 환산.</li>
+<li><strong>초안 문장 (고객사별 교체, 약 270자 + 표)</strong>:</li>
+</ul>
+<blockquote>
+<p>본 사업의 KPI 는 [OEM] 측 SQA 평가 항목과 1:1 정합하도록 설계되어, 사업 종료 후 [OEM] 의 분기 협력사 평가에 본 사업 효과가 직접 반영된다. 핵심 지표는 PPM (Parts Per Million 불량률) · 납기 준수율 (OTD, On-Time Delivery) · 클레임 응답 시간 (Initial Response Time) · 8D (8 Disciplines 불량 대응 보고서) 적시성의 4 종이며, 모두 AI 시스템에 의해 실시간 또는 일 단위로 추적·자동 보고된다. 본 사업 종료 시점 목표 수치와 직전 회기 [OEM] 측 평가 점수의 갭을 분기 단위로 모니터링하며, 갭이 <code>[기간]</code> 분기 연속 발생 시 재학습 트리거가 자동 작동한다 (Track 2 § 5.4 모니터링 연계).</p>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>정의</th>
+<th>직전 회기 (<code>[기간]</code>)</th>
+<th>본 사업 종료 목표</th>
+<th>OEM 평가 가중치 (확인 필요)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PPM</td>
+<td>100 만 개 당 불량 개수</td>
+<td><code>[수치]</code> PPM</td>
+<td><code>[수치]</code> PPM (<code>[%]</code>% 감축)</td>
+<td>30~40%</td>
+</tr>
+<tr>
+<td>OTD</td>
+<td>납기 준수율</td>
+<td><code>[%]</code>%</td>
+<td><code>[%]</code>% (+<code>[수치]</code> 포인트)</td>
+<td>20~25%</td>
+</tr>
+<tr>
+<td>클레임 응답 시간</td>
+<td>클레임 접수 → 초기 회신</td>
+<td><code>[기간]</code> 시간</td>
+<td><code>[기간]</code> 시간 (<code>[%]</code>% 단축)</td>
+<td>10~15%</td>
+</tr>
+<tr>
+<td>8D 적시성</td>
+<td>8D 보고서 마감 준수율</td>
+<td><code>[%]</code>%</td>
+<td><code>[%]</code>% (+<code>[수치]</code> 포인트)</td>
+<td>10~15%</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: PPM, OTD (On-Time Delivery), 클레임 Initial Response Time, 8D 적시성, OEM SQA 평가 가중치, 분기 모니터링, 갭 <code>[기간]</code> 분기 연속 → 재학습 트리거.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>OEM 별 평가 항목 차이</em>: "PPM·OTD·클레임 응답·8D" 4 종 외에 "현대차 5-Star 의 SQ (Supplier Quality) · DEL (Delivery) · TECH (기술) · COST (원가) · MGT (경영) 5 축" 으로 확장 옵션.</li>
+<li><em>전자·기계 OEM 추가</em>: 표 하단에 "FA (First Article 초도 검사) 합격률·MRB (Material Review Board 부적합 처리) 적시성" 행 추가.</li>
+<li><em>경량 (중소 2 차 협력사)</em>: 표를 PPM·OTD 2 행으로 축약, 가중치 행 삭제.</li>
+<li><em>재학습 트리거 강화</em>: 본문 끝에 "재학습 트리거 작동 시 Track 2 § 5.4 모니터링 모듈이 OEM SQE 에 사전 통지하여 변경관리 절차로 즉시 진입한다" 1 문장 추가.</li>
+</ul>
+<hr />
+<h3 id="blk-oem-g-oem">BLK-OEM-G — OEM 인증·표준 용어 인덱스 (부록)<a class="headerlink" href="#blk-oem-g-oem" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>블록 ID</strong>: <code>BLK-OEM-G</code></li>
+<li><strong>용도</strong>: 부록 또는 별첨 용어집에서, 사업계획서 본문을 읽는 심사자·이해관계자가 OEM 정합 관련 용어를 빠르게 확인할 수 있도록 제공. 0.5 페이지 내외, IATF 16949·PPAP·SQA·VDA 6.3·FMEA·APQP·MSA·SPC·8D·4M 의 10 종 용어와 약식 FAQ 를 포함.</li>
+<li><strong>초안 문장 (공통 고정, 표 + 짧은 서술)</strong>:</li>
+</ul>
+<blockquote>
+<p>본 사업계획서에서 사용되는 OEM 정합 관련 용어는 아래와 같으며, 구체적인 표준 개정 시점·PPAP Level 별 요건·VDA 6.3 P 코드 적용 범위는 <code>[법령-2026]</code> 의 최신 표준·OEM 매뉴얼을 우선으로 한다.</p>
+<table>
+<thead>
+<tr>
+<th>용어</th>
+<th>약어</th>
+<th>정의 (요약)</th>
+<th>본문 등장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>자동차 산업 품질경영 표준</td>
+<td>IATF 16949</td>
+<td>ISO 9001 + 자동차 부속서, 자동차 부품 품질경영 의무 표준</td>
+<td>A·B·D</td>
+</tr>
+<tr>
+<td>양산 부품 승인 프로세스</td>
+<td>PPAP</td>
+<td>Production Part Approval Process (Level 1~5)</td>
+<td>C·D</td>
+</tr>
+<tr>
+<td>협력사 품질 보증</td>
+<td>SQA</td>
+<td>Supplier Quality Assurance, OEM 의 협력사 품질 평가</td>
+<td>A·D·E·F</td>
+</tr>
+<tr>
+<td>독일 OEM 프로세스 감사</td>
+<td>VDA 6.3</td>
+<td>P-1~P-7 단계별 감사 표준</td>
+<td>B·D</td>
+</tr>
+<tr>
+<td>독일 OEM 제품 감사</td>
+<td>VDA 6.5</td>
+<td>양산 부품 샘플 감사 표준</td>
+<td>B</td>
+</tr>
+<tr>
+<td>고장모드영향분석</td>
+<td>FMEA</td>
+<td>Failure Mode and Effects Analysis</td>
+<td>C·D</td>
+</tr>
+<tr>
+<td>사전 제품 품질 계획</td>
+<td>APQP</td>
+<td>Advanced Product Quality Planning (북미 AIAG 프레임워크)</td>
+<td>D</td>
+</tr>
+<tr>
+<td>측정 시스템 분석</td>
+<td>MSA</td>
+<td>Measurement System Analysis</td>
+<td>D</td>
+</tr>
+<tr>
+<td>통계적 공정 관리</td>
+<td>SPC</td>
+<td>Statistical Process Control</td>
+<td>D·F</td>
+</tr>
+<tr>
+<td>불량 대응 8 단계 보고서</td>
+<td>8D</td>
+<td>8 Disciplines, 클레임·불량 대응 표준</td>
+<td>F</td>
+</tr>
+<tr>
+<td>변경관리 4 축</td>
+<td>4M</td>
+<td>Man · Machine · Material · Method</td>
+<td>C·D</td>
+</tr>
+<tr>
+<td>부품 제출 보증서</td>
+<td>PSW</td>
+<td>Part Submission Warrant, PPAP 최종 승인 문서</td>
+<td>D</td>
+</tr>
+<tr>
+<td>협력사 품질 엔지니어</td>
+<td>SQE</td>
+<td>Supplier Quality Engineer, OEM 측 협력사 담당자</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>FAQ 예시</strong>
+- <em>Q. AI 도입은 PPAP 어느 Level 로 분류되는가?</em> — Method 변경 범위와 안전 영향도에 따라 Level 3 또는 Level 4 가 일반적이며, 안전 관련 부품은 Level 5 적용 가능 (확인 필요).
+- <em>Q. VDA 6.3 P-3 와 P-7 의 차이는?</em> — P-3 는 개발 단계 프로세스, P-7 는 양산 단계 프로세스 감사이며, AI 도입은 양 단계 모두에 영향 (확인 필요).
+- <em>Q. OEM AI 가이드라인이 출시되지 않은 경우 어떤 기준을 따르는가?</em> — 본 모듈은 IATF 16949·VDA 6.3 의 일반 변경관리 조항을 기준선으로 하며, 향후 OEM AI 가이드라인 출시 시 BLK-OEM-D 갱신 (확인 필요).</p>
+</blockquote>
+<ul>
+<li><strong>주요 키워드·수치</strong>: 용어 정의 13 종, FAQ 3 종.</li>
+<li><strong>대체 문구 옵션</strong></li>
+<li><em>분량 제약 시</em>: 용어표를 IATF 16949·PPAP·SQA·VDA 6.3·FMEA·4M 6 개로 축약.</li>
+<li><em>북미 OEM 중심 사업</em>: VDA 6.3·6.5 행을 삭제하고 "AIAG CQI-9·CQI-11·CQI-15" 행으로 교체.</li>
+<li><em>전자·기계 OEM 추가</em>: 표 하단에 "TL 9000 (통신)·AS 9100 (항공)·IRIS (철도) " 행 추가.</li>
+</ul>
+<hr />
+<h2 id="4">4. 관련 시나리오<a class="headerlink" href="#4" title="Permanent link">¤</a></h2>
+<h3 id="_1">카탈로그 시나리오·패키지와의 매핑<a class="headerlink" href="#_1" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>카탈로그 시나리오·패키지</th>
+<th>본 모듈과의 관계</th>
+<th>주 사용 블록</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>패키지 4</strong> RUB-01·02·05 + LLM-03 + MLO-01 (고무양산 파일럿)</td>
+<td><strong>1 차 적용 사례.</strong> 본 모듈이 §5.4·5.5·6.2·6.3·7.1 신규 작성 부담을 흡수.</td>
+<td>A·B·C·D·E·F·G</td>
+</tr>
+<tr>
+<td><strong>패키지 1</strong> STL-01·02·03·09·10 (자동차 강판 OEM 공급)</td>
+<td>자동차 강판 OEM (현대제철·POSCO 경유) 정합 톤.</td>
+<td>A·B·D·E·F</td>
+</tr>
+<tr>
+<td><strong>패키지 5</strong> MET-01·02·03 (자동차 정밀가공)</td>
+<td>자동차 부품 정밀가공 OEM 공급 톤. SaaS 보안 모듈 D 와 결합 시 도면 IP + OEM 정합 통합.</td>
+<td>A·B·D·E</td>
+</tr>
+<tr>
+<td><strong>5.2-d 예지보전</strong></td>
+<td>설비 변경 시 PPAP Level 분류, AI 권고의 작업 변경 영향.</td>
+<td>D (변경관리 정합 검증)</td>
+</tr>
+<tr>
+<td><strong>5.2-c 비전 검사</strong></td>
+<td>AI 검사 도입 → 검사 표준서 변경 → PPAP Level 3 재제출 트리거.</td>
+<td>D·F</td>
+</tr>
+<tr>
+<td><strong>시나리오 <a href="../../scenario/catalog/#scn-llm-03" title="품질·불량 보고서 자동 작성" class="scn-link">SCN-LLM-03</a></strong> 작업표준서·매뉴얼 RAG</td>
+<td>OEM 매뉴얼·표준서 RAG 색인, AI 응답 시 출처 (OEM 매뉴얼 §·페이지) 명시.</td>
+<td>D·G</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a></strong> MLOps 기본 파이프라인</td>
+<td>모델 카드·재학습 트리거가 OEM 변경관리 정합 산출물의 핵심.</td>
+<td>D</td>
+</tr>
+<tr>
+<td><strong>부록 C-2 자동차 미래차 AI</strong></td>
+<td>본 모듈의 확장 축. 전동화·자율주행 신규 부품의 SOTIF·ASIL 정합으로 확장.</td>
+<td>D·E (확장판)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">본 모듈이 지원하는 시나리오 확장<a class="headerlink" href="#_2" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>OEM 정합 + SaaS 보안 결합 시나리오</strong> (모듈 SaaS 보안 D 와 결합): 영업비밀 도면이 OEM 측 PPAP 문서 패키지에 포함될 때의 마스킹·접근 권한 통합 톤.</li>
+<li><strong>OEM 정합 + 연합학습 결합 시나리오</strong> (모듈 연합학습 과 결합): 산단 공동 학습이 OEM 측 변경관리·데이터 주권 요구와 충돌하지 않도록 OEM 사전 통지 절차 통합.</li>
+<li><strong>미래차 (전동화·자율주행) 정합 시나리오</strong>: 본 모듈을 기반으로, ISO 21448 SOTIF (Safety Of The Intended Functionality) · ISO 26262 (도로차량 기능안전) · ASIL 등급의 신규 부품 정합 톤으로 확장. (확인 필요)</li>
+</ul>
+<hr />
+<h2 id="5">5. 삽화·도식 후보<a class="headerlink" href="#5" title="Permanent link">¤</a></h2>
+<p>본 모듈을 사업계획서에 삽입할 때 함께 사용할 수 있는 삽화·도식은 아래와 같다. 모두 Mermaid 또는 구조화된 표·매트릭스로 초안 작성 후 실제 문서에서 디자인 툴로 재제작한다.</p>
+<ol>
+<li><strong>FIG-OEM-1 OEM 변경관리·PPAP 프로세스 타임라인</strong> (블록 D 인접 배치 권장)</li>
+<li>Δt-90 (변경 영향 평가서·신규 FMEA 초안) → Δt-30 (PPAP 문서 패키지 제출) → Δt-7 (PSW 승인) → 양산 적용의 4 노드 타임라인.</li>
+<li>각 단계별 산출물·OEM 측 담당 (SQE·QA Manager) 을 병기.</li>
+<li>Mermaid <code>gantt</code> 또는 <code>flowchart LR</code> 형태.</li>
+</ol>
+<p><img alt="Δt-90 변경 영향 평가서 신규 FMEA 초안 (다이어그램 1)" src="../../assets/diagrams/oem-supply/diagram-1.svg" />
+2. <strong>FIG-OEM-2 IATF 16949 핵심 8 절 ↔ AI 시스템 매핑</strong> (블록 B·D 보조 배치)
+   - IATF 16949 8 절 (Context · Leadership · Planning · Support · Operation · Performance Eval · Improvement · 자동차 부속서) 을 좌측, AI 시스템 모듈 (데이터 수집·모델링·운영·MLOps·거버넌스) 을 우측에 배치, 정합 라인으로 연결.
+   - 매트릭스 형태 (8 행 × 5 열).</p>
+<ol>
+<li><strong>FIG-OEM-3 SQA 점수 산정 항목과 본 사업 KPI 결합 매트릭스</strong> (블록 F 부속)</li>
+<li>OEM SQA 평가 5 축 (SQ·DEL·TECH·COST·MGT) 을 행, 본 사업 KPI (PPM·OTD·클레임·8D) 를 열로 배치, 가중치를 셀에 명시.</li>
+<li>
+<p>본 사업 효과가 OEM 평가 점수에 어떻게 환산되는지 시각화.</p>
+</li>
+<li>
+<p><strong>FIG-OEM-4 AI 의사결정 책임 매트릭스</strong> (블록 D 부속)</p>
+</li>
+<li>행: 작업자 · QA 담당 · 생산팀장 · CISO · OEM 감사관 · 산업안전 책임자 · AI 시스템 운영자.</li>
+<li>열: 검사 결과 판정 · 예지보전 권고 · 공정 파라미터 추천 · 작업 표준서 변경.</li>
+<li>
+<p>RACI (Responsible · Accountable · Consulted · Informed) 또는 R/A/C/I 표기.</p>
+</li>
+<li>
+<p><strong>FIG-OEM-5 OEM AI 가이드라인 비교 매트릭스</strong> (블록 D 보조)</p>
+</li>
+<li>행: GM AI Standard · VW Robust AI · Toyota AI Practice · 현대차 AI Quality · 기아 AI Standard (확인 필요).</li>
+<li>열: 데이터 요건 · 모델 검증 요건 · 책임 매트릭스 요건 · 감사 추적 요건 · 갱신 주기.</li>
+<li>OEM 별 AI 가이드라인이 정식 출시되지 않은 시점에서는 IATF 16949 일반 조항 + 협력사 매뉴얼 수준에서 기록, 출시 후 갱신.</li>
+</ol>
+<hr />
+<h2 id="6">6. 유지보수 지침<a class="headerlink" href="#6" title="Permanent link">¤</a></h2>
+<p>OEM 정합 관련 표준·가이드라인은 <code>[연도]</code> 년 이후에도 IATF 16949 개정·VDA 6.3 갱신·OEM AI 가이드라인 출시·미래차 표준 (SOTIF·ASIL) 진화로 연 1~2 회 변동 가능성이 높다. 본 모듈의 유지보수는 <strong>태그 기반 검색 → 해당 블록 수정 → 연동 블록 정합성 확인</strong> 의 3 단계 절차를 따른다.</p>
+<table>
+<thead>
+<tr>
+<th>개정 사유</th>
+<th>수정해야 할 블록·위치</th>
+<th>사용 태그</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IATF 16949 개정 (조항 번호·요구사항 변경)</td>
+<td>BLK-OEM-B 표·BLK-OEM-D Δt-30 PPAP 패키지 부분·BLK-OEM-G 용어집</td>
+<td><code>[법령-2026]</code>, "IATF 16949" 문자열</td>
+</tr>
+<tr>
+<td>VDA 6.3 P 코드 개정 (AI 시스템 평가 P 코드 추가 등)</td>
+<td>BLK-OEM-B 표 P-3·P-5·P-6·P-7 행·BLK-OEM-D VDA 6.3 문장</td>
+<td><code>[법령-2026]</code>, "VDA 6.3" 문자열</td>
+</tr>
+<tr>
+<td>신규 OEM AI 가이드라인 출시 (GM·VW·Toyota·현대차·기아)</td>
+<td>BLK-OEM-D 두 번째 문단·BLK-OEM-G FAQ·FIG-OEM-5 매트릭스</td>
+<td>"OEM AI 가이드라인" 문자열, <code>[OEM]</code></td>
+</tr>
+<tr>
+<td>PPAP Level 정의 개정 또는 신규 Level 도입</td>
+<td>BLK-OEM-D 첫 문단 PPAP Level 부분·BLK-OEM-G FAQ</td>
+<td>"PPAP Level" 문자열</td>
+</tr>
+<tr>
+<td>미래차 표준 (ISO 21448 SOTIF·ISO 26262 ASIL) 개정</td>
+<td>본 모듈 §4 "미래차 정합 시나리오" 부분, BLK-OEM-E 미래차 톤</td>
+<td><code>[법령-2026]</code>, "SOTIF"·"ASIL" 문자열</td>
+</tr>
+<tr>
+<td>산업기술보호법·OEM 도면 IP 보호 정합</td>
+<td>BLK-OEM-D 두 번째 문단·BLK-OEM-G FAQ, SaaS 보안 모듈 D 연계</td>
+<td><code>[법령-2026]</code>, "산업기술보호법" 문자열</td>
+</tr>
+<tr>
+<td>한국 자동차산업협동조합 (KAICA) 가이드라인 출시</td>
+<td>BLK-OEM-A·BLK-OEM-D·BLK-OEM-G 신규 항목 추가</td>
+<td>"KAICA" 문자열</td>
+</tr>
+<tr>
+<td>고객사 OEM 노출도·SQA 등급 변화</td>
+<td>BLK-OEM-A 전면 교체·BLK-OEM-F 직전 회기 수치</td>
+<td><code>[고객사]</code>, <code>[OEM]</code>, <code>[%]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>정기 점검 주기</strong>: 분기 1 회 <code>[법령-2026]</code> 태그가 포함된 본문·FAQ 를 순회 점검하며, 연 1 회 전체 블록을 IATF·VDA·OEM 매뉴얼 최신 개정과 대조한다. 신규 OEM AI 가이드라인 출시 시점에는 본 모듈 BLK-OEM-D 두 번째 문단과 FIG-OEM-5 를 즉시 갱신한다.</p>
+<hr />
+<h2 id="7">7. 확인 필요 항목 (실무 검증 후 채움)<a class="headerlink" href="#7" title="Permanent link">¤</a></h2>
+<p>아래 항목은 본 모듈 초안 작성 시점에서 <strong>추측 기입을 금지한 영역</strong> 으로, 사업계획서 투입 전 사용자 (실무 담당자) 가 최신 표준·OEM 매뉴얼·인증 가이드를 근거로 확인·채움해야 한다.</p>
+<ol>
+<li><strong>IATF 16949 최신 개정 시점·범위</strong> — 현재 적용 판본·차기 개정 일정·자동차 부속서 변경사항 (확인 필요).</li>
+<li><strong>PPAP Level 별 요건 차이 (특히 AI 도입 시 적용 Level)</strong> — Level 1~5 의 부속 문서 차이, AI Method 변경 시 일반적 적용 Level (확인 필요).</li>
+<li><strong>VDA 6.3 P 코드의 AI 시스템 평가 적용</strong> — P-3 (개발) · P-5 (공급사 관리) · P-6 (생산) · P-7 (양산) 중 AI 시스템이 평가 대상에 포함되는 P 코드 (확인 필요).</li>
+<li><strong>주요 OEM AI 가이드라인 출시 여부 및 요건</strong> — GM AI Standard · VW Robust AI · Toyota AI Practice · 현대차 AI Quality · 기아 AI Standard 의 정식 출시 여부와 각 요건 (확인 필요).</li>
+<li><strong>1 차 협력사 SQA 점수 산정 방식 (OEM 별 상이)</strong> — 현대차 5-Star · GM BIQS · Ford Q1 · VW Formel Q · Toyota TSP 등 OEM 별 평가 항목·가중치·등급 체계 (확인 필요).</li>
+<li><strong>AI 결정의 PPAP 재승인 트리거 기준</strong> — 모델 재학습·하이퍼파라미터 변경·데이터 분포 드리프트 발생 시 PPAP 재제출 의무 발생 임계값 (확인 필요).</li>
+<li><strong>자동차 부품 미래차 (전동화·자율주행) 신규 PPAP 양식</strong> — 모터·인버터·배터리·자율주행 센서 부품군의 PPAP 양식 차이 (확인 필요).</li>
+<li><strong>한국 자동차산업협동조합 (KAICA) 가이드라인</strong> — KAICA 의 협력사 디지털화·AI 도입 가이드라인 존재 여부 (확인 필요).</li>
+<li><strong>AI 모델의 안전 표준 (ISO 21448 SOTIF·ISO 26262 ASIL)</strong> — 미래차 부품 적용 시 ASIL 등급별 AI 검증 요건 (확인 필요).</li>
+<li><strong>산업기술보호법·OEM 도면 IP 보호와의 정합</strong> — 영업비밀 도면 (DWG·STEP) 의 PPAP 제출 시 산업기술보호법상 사전 신고 의무 발생 여부 (확인 필요).</li>
+</ol>
+<p>총 10 항목.</p>
+<hr />
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>모듈_OEM_공급망_정합.md</code></li>
+<li><strong>자산 군</strong>: 🧩 Cross-cutting 모듈</li>
+<li><strong>slug 경로</strong>: <code>module/oem-supply.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../federated-learning/" class="md-footer__link md-footer__link--prev" aria-label="이전: 연합학습 (산업단지 공동 AI)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                연합학습 (산업단지 공동 AI)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../saas-security/" class="md-footer__link md-footer__link--next" aria-label="다음: SaaS·클라우드 보안 (5 등급 민감도)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                SaaS·클라우드 보안 (5 등급 민감도)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="BLK-T3-3.2 숙련자 암묵지 의존·전이 실패 — 베테랑 이탈 시 노하우 망실">
+  <title>BLK-T3-3.2 숙련자 암묵지 의존·전이 실패</title>
+  <desc>베테랑 (수치)명 · 경력 (기간)+ 의 암묵지 (공정설계 결정 이유·장애 처치 우선순위) → 문서화 부재·단편 기록 → 퇴직·이직 시 망실 → 신입 단독 작업 (기간) 지연</desc>
+  <defs>
+    <linearGradient id="g_t3_top5_d2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/><stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="g_t3_top5_d2_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F0FDFA"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_t3_top5_d2)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">TRACK 3 · BLK-T3-3.2 · TACIT TRANSFER FAILURE</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">BLK-T3-3.2 숙련자 암묵지 의존·전이 실패</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">베테랑 이탈 시 노하우 망실</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">베테랑 (수치)명</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">경력 (기간)+ 누적</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">암묵지 자산</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">공정설계·장애 처치</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">문서화 부재</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">단편 기록만 잔존</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">ERP·MES 부적합</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">비정형 노하우 미수용</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">퇴직·이직 발생</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">경쟁사 이직 위험</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">노하우 망실</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">전수 부재 → 즉시 손실</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">신입 단독 작업</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">(기간) 지연</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#5EEAD4" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t3_top5_d2_card)" stroke="#5EEAD4" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t3_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#134E4A">AI 해결: RAG 형식지화</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#115E59">암묵지 → 검색 가능 자산</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §3.2 사업 배경 paste 가능 (Track 3)</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">해결: 5.2-f LLM·RAG + 5.2-g 형상 임베딩</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">결합: BLK-T1-3.1 + Track 3 §5.2 청킹 전략</text>
+</svg>

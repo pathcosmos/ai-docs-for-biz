@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="BLK-T2-3.2 모니터링 부재로 후행적 모델 운영 — 드리프트 잠복 → 누적 손실">
+  <title>BLK-T2-3.2 모니터링 부재로 후행적 모델 운영</title>
+  <desc>모델 입력·예측·성능 3 축 모니터링 부재 → 드리프트 잠복 (수개월) → 불량·재작업 누적 → 사후 인지 (현장 클레임 발생 후)</desc>
+  <defs>
+    <linearGradient id="g_t2_top5_d1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/><stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="g_t2_top5_d1_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDE9FE"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F5F3FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_t2_top5_d1)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">TRACK 2 · BLK-T2-3.2 · LATE DETECTION</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">BLK-T2-3.2 모니터링 부재로 후행적 모델 운영</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">드리프트 잠복 → 누적 손실</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">모델 배포·시범 운영</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">AI 엔진 일부 도입</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">모니터링 채널 부재</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">입력·예측·성능 3 축 0</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">외생 변화 발생</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">공급사 교체·계절·노후</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">드리프트 잠복 (기간)</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">수개월 미감지</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">현장 불량·재작업</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">사후 인지</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">사후 비용</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">재학습 비용 (수치) 배</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">원인 규명 불능</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">추론 로그 미보존</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t2_top5_d1_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t2_top5_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#4C1D95">동일 사고 재발</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#5B21B6">구조적 위험</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §6 MLOps AS-IS paste 가능 (Track 2)</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">해결: §5.5 인프라·데이터·성능 3 층 모니터링</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">결합: SCN-MLO-01 드리프트·재학습 자동 트리거</text>
+</svg>

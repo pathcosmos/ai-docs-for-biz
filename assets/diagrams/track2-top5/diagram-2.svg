@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="Track 2 — MLOps (도식 2) — 학습-추론 일관 · 아티팩트 등록 · 재배포">
+  <title>Track 2 — MLOps (도식 2)</title>
+  <desc>Track 2 — MLOps 의 2번 도식 — 6 단계</desc>
+  <defs>
+    <linearGradient id="g_auto_track2-top5_2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/><stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="g_auto_track2-top5_2_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDE9FE"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F5F3FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_auto_track2-top5_2)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">TRACK 2 · MLOPS · DIAGRAM 2</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">Track 2 — MLOps (도식 2)</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">학습-추론 일관 · 아티팩트 등록 · 재배포</text>
+  <!-- 카드 stack 6 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_track2-top5_2_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_track2-top5_2)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#4C1D95">학습-추론 일관</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#5B21B6"></text>
+  </g>
+  <text x="300" y="186" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 188)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_track2-top5_2_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_track2-top5_2)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#4C1D95">아티팩트 등록</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#5B21B6"></text>
+  </g>
+  <text x="300" y="264" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 266)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_track2-top5_2_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_track2-top5_2)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#4C1D95">재배포</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#5B21B6"></text>
+  </g>
+  <text x="300" y="342" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 344)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_track2-top5_2_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_track2-top5_2)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#4C1D95">드리프트 트리거</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#5B21B6"></text>
+  </g>
+  <text x="300" y="420" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 422)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_track2-top5_2_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_track2-top5_2)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#4C1D95">정정 라벨</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#5B21B6"></text>
+  </g>
+  <text x="300" y="498" text-anchor="middle" font-size="10" fill="#C4B5FD" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 500)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_track2-top5_2_card)" stroke="#C4B5FD" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_track2-top5_2)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#4C1D95">권한·로그</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#5B21B6"></text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §6·§7·§8 본문 5 블록 paste 가능 (Track 2)</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">노드 6 단계 — 직각 화살표 흐름</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">디자인 SVG (Phase E15 정책) · 600×800 portrait</text>
+</svg>

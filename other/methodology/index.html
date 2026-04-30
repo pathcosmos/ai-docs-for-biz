@@ -1,0 +1,3175 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="1. **새 프로젝트 시작 시**: 본 문서를 시작점으로 복사. 도메인 무관 자산이므로 그대로 적용 가능. 2. **운영 중**: 새 방법론 발견 시 본 문서에 추가. 작업로그에는 1 줄 요지만 인덱스로 기록. 3. **다른 프로젝트로 이식**: 본 문서 + 작업로그 인덱스 + CLAUDE.md 의 "작업 로그 유지 규약" 3 자산이 시작점 패키지.">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/other/methodology/">
+      
+      
+        <link rel="prev" href="../form-validation-dx/">
+      
+      
+        <link rel="next" href="../../graph/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>방법론 총론 — AI 협업 콘텐츠 생산·운영 패턴 - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              방법론 총론 — AI 협업 콘텐츠 생산·운영 패턴
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../track/track1-index/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영·참고
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 본문 조립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/finance-budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    재무·예산 산정 (5 비목)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/duration-compress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업기간 압축 (단계+연차)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/kpi-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPI 측정 (5 군 정량)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/external-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    외부검증 운영 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/rag-infra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG 인프라 운영 (5 계층)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/domain-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도메인 지식추출 (인터뷰 5 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/korean-slm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    한국 sLM 활용 (7 모델 매트릭스)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/consulting-outsource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    컨설팅 위탁 (강도 3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/trl-progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TRL 진척 관리 (3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위험 매트릭스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 참고 자료
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 참고 자료
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synergy-roi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시너지 ROI 모델
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raci-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    책임 분담 매트릭스 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지원사업 공고 스냅샷
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../form-validation-dx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    양식 검증 — DX 촉진 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    방법론 총론 (47 방법론)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    방법론 총론 (47 방법론)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 사용 안내
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 사용 안내">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 본 문서 활용 흐름
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 분류 (5 군)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 작업로그와의 결합 운영
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 다른 프로젝트로 이식 체크리스트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 다른 프로젝트로 이식 체크리스트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 즉시 이식 가능 항목 (도메인 무관)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 약간 조정 필요 (도메인 어휘만 교체)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 시작점 패키지 (다른 프로젝트 적용 시)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 방법론 본문
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 방법론 본문">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 "공통 자산 + 시나리오 특화" 모듈형 콘텐츠 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 3 축 조합 카탈로그 생성법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 병렬 에이전트 프롬프트 체크리스트 (5 항목)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 엔진 패턴 승격 (카드 폭발 방지)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 "포인터 + 별도 파일" 패턴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 리뷰 정리본 6 항목 템플릿
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Phase 플래닝: "숨은 의존성 재발굴" 절차
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 플레이스홀더 관례 (유사도 검출 리스크 회피)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 로그 규약 이식 키트 (본 엔트리에서 추출)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-metaclaude-mdmd-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 meta/claude-md.md + Memory 이중 저장
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-phase-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 병렬 에이전트 "파일 소유권 분할" (Phase A 에서 검증)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 "(확인 필요)" + 기준일 스캐폴드 (시간 민감 자산)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-vs-phase-bc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 목차 vs 모듈 산출물 구분 (Phase B/C 에서 검증)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14 외부 저장소 푸시 시 제3자 자료 기본 제외
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.15 선제 리스크 커버 강제 (에이전트 프롬프트 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.16 리뷰 리포트 파일 저장 + 건강도 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#417" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.17 기계 검증 + 의미 검증 하이브리드 (리뷰 효율화)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#418-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.18 "규모 기준" 작업 분업 (에이전트 vs 메인 세션)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#419" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.19 단일 톤 레퍼런스 강제 (다중 에이전트 톤 일관성)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#420" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.20 패턴 분포 의도적 선정 (시연 효율 극대화)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#421-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.21 단발 패치 vs 표준화 분기 (갭 보강 효율)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.22 혼합 흐름 — 에이전트 병렬 + 메인 직접 (작업 결합)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.23 호혜적 자산 쌍 — 효과·비용 분담 (ROI 완성)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.24 갭 보강 사이클의 회차별 누적 (정밀화 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.25 두 극단 검증 — 한 사례가 아닌 두 대척점 사례 (자산 일반성 입증)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#426" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.26 자산 군의 포맷 통일 — 새 자산 추가 시 첫 자산의 포맷 따르기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#427-push-git-pushurl-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.27 다중 원격 push 단일화 (git pushurl --add 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#428-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.28 책임 매트릭스의 차원별 분리 (3 매트릭스 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#429" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.29 방법론 자산 분리 — 인덱스 + 본문 분리 운영
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#430-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.30 에이전트 출력 한도 vs 메인 직접 — 통합 파일럿의 분량 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#431-brainstorming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.31 brainstorming + 작업로그 통합 패턴 (워크스페이스 관례 우선)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-rd-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.32 다년 R&amp;D 단계+연차 이중 구조 (분기 5 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-filled-vs-blank-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.33 filled vs blank 양식 분리 기준 (양식 PDF 활용 정책)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.34 한국어 정보 밀도 압축 효과 (청사진 분량 vs 실제 분량)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 신규 방법론 추가 절차
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 다른 프로젝트 적용 사례 (확장 영역)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 인터랙티브 도구
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔗 인터랙티브 도구
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-ref 그래프 (44 자산)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    태그 필터
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 사용 안내
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 사용 안내">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 본 문서 활용 흐름
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 분류 (5 군)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 작업로그와의 결합 운영
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 다른 프로젝트로 이식 체크리스트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 다른 프로젝트로 이식 체크리스트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 즉시 이식 가능 항목 (도메인 무관)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 약간 조정 필요 (도메인 어휘만 교체)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 시작점 패키지 (다른 프로젝트 적용 시)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 방법론 본문
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 방법론 본문">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 "공통 자산 + 시나리오 특화" 모듈형 콘텐츠 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 3 축 조합 카탈로그 생성법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 병렬 에이전트 프롬프트 체크리스트 (5 항목)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 엔진 패턴 승격 (카드 폭발 방지)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 "포인터 + 별도 파일" 패턴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 리뷰 정리본 6 항목 템플릿
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Phase 플래닝: "숨은 의존성 재발굴" 절차
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 플레이스홀더 관례 (유사도 검출 리스크 회피)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 로그 규약 이식 키트 (본 엔트리에서 추출)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-metaclaude-mdmd-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 meta/claude-md.md + Memory 이중 저장
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-phase-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 병렬 에이전트 "파일 소유권 분할" (Phase A 에서 검증)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 "(확인 필요)" + 기준일 스캐폴드 (시간 민감 자산)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-vs-phase-bc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 목차 vs 모듈 산출물 구분 (Phase B/C 에서 검증)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14 외부 저장소 푸시 시 제3자 자료 기본 제외
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.15 선제 리스크 커버 강제 (에이전트 프롬프트 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.16 리뷰 리포트 파일 저장 + 건강도 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#417" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.17 기계 검증 + 의미 검증 하이브리드 (리뷰 효율화)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#418-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.18 "규모 기준" 작업 분업 (에이전트 vs 메인 세션)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#419" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.19 단일 톤 레퍼런스 강제 (다중 에이전트 톤 일관성)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#420" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.20 패턴 분포 의도적 선정 (시연 효율 극대화)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#421-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.21 단발 패치 vs 표준화 분기 (갭 보강 효율)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.22 혼합 흐름 — 에이전트 병렬 + 메인 직접 (작업 결합)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.23 호혜적 자산 쌍 — 효과·비용 분담 (ROI 완성)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.24 갭 보강 사이클의 회차별 누적 (정밀화 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.25 두 극단 검증 — 한 사례가 아닌 두 대척점 사례 (자산 일반성 입증)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#426" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.26 자산 군의 포맷 통일 — 새 자산 추가 시 첫 자산의 포맷 따르기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#427-push-git-pushurl-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.27 다중 원격 push 단일화 (git pushurl --add 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#428-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.28 책임 매트릭스의 차원별 분리 (3 매트릭스 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#429" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.29 방법론 자산 분리 — 인덱스 + 본문 분리 운영
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#430-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.30 에이전트 출력 한도 vs 메인 직접 — 통합 파일럿의 분량 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#431-brainstorming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.31 brainstorming + 작업로그 통합 패턴 (워크스페이스 관례 우선)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-rd-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.32 다년 R&amp;D 단계+연차 이중 구조 (분기 5 차원)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-filled-vs-blank-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.33 filled vs blank 양식 분리 기준 (양식 PDF 활용 정책)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.34 한국어 정보 밀도 압축 효과 (청사진 분량 vs 실제 분량)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 신규 방법론 추가 절차
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 다른 프로젝트 적용 사례 (확장 영역)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../guide/assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영·참고
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../synergy-roi/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📚 참고 자료
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">other</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="ai">방법론 총론 — AI 협업 콘텐츠 생산·운영 패턴<a class="headerlink" href="#ai" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 27 분 읽기</span></p>
+<figure>
+  <img alt="방법론 총론 — AI 협업 콘텐츠 생산·운영 패턴" src="../../assets/svg/other/methodology.svg" />
+<br />
+<figcaption>기타 자산 인포그래픽 — 핵심 도식</figcaption>
+</figure>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><strong>본 문서의 목적</strong>: 본 워크스페이스 (<code>ai-docs-for-biz</code>) 의 운영 과정에서 검증된 <strong>재사용 가능 방법론 28 항목</strong> 을 추출·정리한 자산. 본 문서는 다른 저장소·다른 도메인·다른 산출물 유형 (제안서·보고서·논문·교재 등) 으로 그대로 이식 가능하도록 자족화되어 있다.
+<strong>분리 사유</strong>: 작업로그 §4 가 28 항목·212 줄 누적되어 작업로그 본체 (변동 기록) 와 방법론 (안정 자산) 이 한 파일에서 충돌. 본 분리는 방법론을 다른 프로젝트의 시작점 자산으로 활용하기 위함이다.</p>
+</details>
+<hr />
+<h2 id="1">1. 사용 안내<a class="headerlink" href="#1" title="Permanent link">¤</a></h2>
+<h3 id="11">1.1 본 문서 활용 흐름<a class="headerlink" href="#11" title="Permanent link">¤</a></h3>
+<ol>
+<li><strong>새 프로젝트 시작 시</strong>: 본 문서를 시작점으로 복사. 도메인 무관 자산이므로 그대로 적용 가능.</li>
+<li><strong>운영 중</strong>: 새 방법론 발견 시 본 문서에 추가. 작업로그에는 1 줄 요지만 인덱스로 기록.</li>
+<li><strong>다른 프로젝트로 이식</strong>: 본 문서 + 작업로그 인덱스 + meta/claude-md.md 의 "작업 로그 유지 규약" 3 자산이 시작점 패키지.</li>
+</ol>
+<h3 id="12-5">1.2 분류 (5 군)<a class="headerlink" href="#12-5" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>군</th>
+<th>항목</th>
+<th>핵심</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. 콘텐츠 생산 패턴</strong></td>
+<td>4.1, 4.2, 4.4, 4.5, 4.13, 4.20, 4.26</td>
+<td>모듈 설계·엔진 패턴·시연 효율</td>
+</tr>
+<tr>
+<td><strong>B. 작업 분업·흐름</strong></td>
+<td>4.3, 4.11, 4.18, 4.19, 4.22</td>
+<td>에이전트·메인 분담·톤 일관성</td>
+</tr>
+<tr>
+<td><strong>C. 검증·리뷰</strong></td>
+<td>4.6, 4.7, 4.16, 4.17, 4.25</td>
+<td>리뷰 템플릿·기계 vs 의미 검증·일반성 입증</td>
+</tr>
+<tr>
+<td><strong>D. 자산 운영·관례</strong></td>
+<td>4.8, 4.9, 4.10, 4.12, 4.14, 4.15, 4.21, 4.23, 4.24, 4.28</td>
+<td>플레이스홀더·확인 필요·갭 보강·책임 매트릭스</td>
+</tr>
+<tr>
+<td><strong>E. Git·인프라</strong></td>
+<td>4.27</td>
+<td>다중 원격 push 단일화</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 작업로그와의 결합 운영<a class="headerlink" href="#13" title="Permanent link">¤</a></h3>
+<ul>
+<li>작업로그 §4 = <strong>인덱스만</strong> (방법론 ID·제목·1 줄 요지 + 본 파일 §해당 항목 참조).</li>
+<li>본 파일 §3 = <strong>본문</strong>.</li>
+<li>새 방법론 추가 시 (1) 본 파일에 신설 + (2) 작업로그 인덱스에 1 줄 추가 + (3) 해당 엔트리 본문에서 본 파일 참조.</li>
+</ul>
+<hr />
+<h2 id="2">2. 다른 프로젝트로 이식 체크리스트<a class="headerlink" href="#2" title="Permanent link">¤</a></h2>
+<h3 id="21">2.1 즉시 이식 가능 항목 (도메인 무관)<a class="headerlink" href="#21" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>A. 콘텐츠 생산 패턴 7 항목</strong> — 모듈 설계·재사용 자산 군의 일반 패턴.</li>
+<li><strong>B. 작업 분업 5 항목</strong> — 에이전트·메인 분담 표준 (Claude Code, Codex, Cursor 등 모든 AI 협업 환경).</li>
+<li><strong>C. 검증·리뷰 5 항목</strong> — 모든 워크스페이스의 리뷰·검증 패턴.</li>
+<li><strong>E. Git·인프라 1 항목</strong> — 모든 git 운영 환경.</li>
+</ul>
+<h3 id="22">2.2 약간 조정 필요 (도메인 어휘만 교체)<a class="headerlink" href="#22" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>D. 자산 운영·관례 10 항목</strong> — 플레이스홀더·갭 보강 등 — 도메인 어휘 (예: 본 프로젝트의 <code>[고객사]</code>) 만 새 프로젝트의 어휘로 교체.</li>
+</ul>
+<h3 id="23">2.3 시작점 패키지 (다른 프로젝트 적용 시)<a class="headerlink" href="#23" title="Permanent link">¤</a></h3>
+<ol>
+<li>본 <code>other/methodology.md</code> (28 방법론 본문)</li>
+<li><code>meta/worklog.md</code> 의 §1 (문서 유지·갱신 규약), §2 (프로젝트 기본 정보 스냅샷 양식), §4 (방법론 인덱스 빈 상태)</li>
+<li>meta/claude-md.md 의 "작업 로그 유지 규약" 섹션 (메타 규약)</li>
+<li>Memory <code>project_worklog_convention.md</code> (프로필 전역 규약)</li>
+</ol>
+<p>이 4 자산만 가지고 시작하면 신규 프로젝트도 동일 운영 체계 즉시 가동.</p>
+<hr />
+<h2 id="3">3. 방법론 본문<a class="headerlink" href="#3" title="Permanent link">¤</a></h2>
+<h3 id="41">4.1 "공통 자산 + 시나리오 특화" 모듈형 콘텐츠 전략<a class="headerlink" href="#41" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 한 산출물을 통째로 쓰지 않고, 재조합 가능한 모듈 세트를 유지.</li>
+<li><strong>언제 쓰나</strong>: 같은 유형의 문서를 <strong>반복 생산</strong> 해야 하는 경우 (제안서·보고서·사업계획서).</li>
+<li><strong>쓰지 말아야 할 때</strong>: 일회성 문서. 모듈화 오버헤드가 회수되지 않음.</li>
+<li><strong>핵심 구성</strong>: 공통 섹션 (고정) + 업종·규모별 교체 블록 + 고객사별 전면 교체 블록. 비율은 공통 60~70% / 교체 30~40% 목표.</li>
+</ul>
+<h3 id="42-3">4.2 3 축 조합 카탈로그 생성법<a class="headerlink" href="#42-3" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 업종 × 기술 × 규모 세 축을 교차해 시나리오를 breadth-first 로 생성.</li>
+<li><strong>언제 쓰나</strong>: "다양한 사례를 제시" 해야 하는 카탈로그·메뉴 성격 자산.</li>
+<li><strong>주의</strong>: 깊이보다 <strong>폭</strong> 우선을 에이전트 프롬프트에 명시.</li>
+<li><strong>본 프로젝트 적용</strong>: 40 시나리오 = 철강 12 + 금속 7 + 고무 5 + 유틸 6 + MLOps 3 + LLM 4 + 안전 3.</li>
+</ul>
+<h3 id="43-5">4.3 병렬 에이전트 프롬프트 체크리스트 (5 항목)<a class="headerlink" href="#43-5" title="Permanent link">¤</a></h3>
+<ol>
+<li>자기 완결 — 대화 맥락 미상속 가정.</li>
+<li>규칙 문서 핵심 재기술 — 자동 로드 불신.</li>
+<li>도구 사용법 재확인 — 알려진 실수(예: PDF <code>pages</code> 파라미터) 선제.</li>
+<li>산출 경로·포맷·필드 명시.</li>
+<li>복귀 보고 분량 제한 (본 컨텍스트 보호).</li>
+</ol>
+<h3 id="44">4.4 엔진 패턴 승격 (카드 폭발 방지)<a class="headerlink" href="#44" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 여러 구체 사례를 하나씩 카드로 만드는 대신, <strong>공통 패턴을 1차 차원으로 승격</strong> 하고 사례는 패턴의 적용 예시로 매핑.</li>
+<li><strong>본 프로젝트 적용</strong>: 40 시나리오 → 엔진 패턴 7 종 (5.2-a~g).</li>
+<li><strong>효과</strong>: 시나리오 증가 시 패턴 재지정만 하면 됨. 카드 수가 폭발하지 않음.</li>
+<li><strong>전제</strong>: 공통 패턴이 실제로 존재해야 성립. 억지 정규화는 해악.</li>
+</ul>
+<h3 id="45">4.5 "포인터 + 별도 파일" 패턴<a class="headerlink" href="#45" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 본문 목차의 한 섹션이 너무 커지면 본체에는 <strong>포인터 + 개요만</strong> 남기고 상세는 별도 파일.</li>
+<li><strong>본 프로젝트 적용</strong>: 5.2 섹션 (5 줄 유지) + <code>track/track1-engine-cards.md</code> (303 줄 상세).</li>
+<li><strong>명명 컨벤션</strong>: <code>track1_{섹션번호}_{주제}_카드.md</code>.</li>
+<li><strong>효과</strong>: 본문 목차 스캔성 유지 + 상세 독립 진화.</li>
+</ul>
+<h3 id="46-6">4.6 리뷰 정리본 6 항목 템플릿<a class="headerlink" href="#46-6" title="Permanent link">¤</a></h3>
+<ol>
+<li>한눈에 보기 (표 + 스켈레톤).</li>
+<li>결재 필요 설계 결정 (ID 부여, 예: D1~D5).</li>
+<li>핫스팟 구간 (라인 번호 명시).</li>
+<li>파일 간 정합성 체크.</li>
+<li>Red Flags (수정 후보).</li>
+<li>사용자 결정 요청 (간결한 답 포맷).</li>
+<li><strong>언제 쓰나</strong>: 대형 산출물(500 L 이상)을 사용자가 리뷰해야 할 때.</li>
+<li><strong>효과</strong>: 재독 회피 + 사용자 응답 초단답화.</li>
+</ol>
+<h3 id="47-phase">4.7 Phase 플래닝: "숨은 의존성 재발굴" 절차<a class="headerlink" href="#47-phase" title="Permanent link">¤</a></h3>
+<ul>
+<li>사용자 보류 목록 + 산출물 간 선행 관계 + 시간 민감성 + 통합 테스트 성격 항목을 <strong>같이 놓고</strong> 순서 설계.</li>
+<li>사용자 보류 항목만 보면 순서가 틀어짐 — 숨은 작업이 전제 조건일 수 있음.</li>
+<li><strong>본 프로젝트 적용</strong>: 보류 4 개 + 숨은 6 개 = 실제 10 개 작업 → <span class="meta-marker">Phase A</span>~F.</li>
+</ul>
+<h3 id="48">4.8 플레이스홀더 관례 (유사도 검출 리스크 회피)<a class="headerlink" href="#48" title="Permanent link">¤</a></h3>
+<ul>
+<li><code>[고객사]/[공정]/[수치]/[기간]</code> 등으로 고유값 치환.</li>
+<li>특정 고객사 전용 문구는 <strong>공통 자산과 파일 분리</strong>.</li>
+<li>정부지원 사업의 유사도 검출 감점·탈락 방지.</li>
+</ul>
+<h3 id="49">4.9 로그 규약 이식 키트 (본 엔트리에서 추출)<a class="headerlink" href="#49" title="Permanent link">¤</a></h3>
+<ul>
+<li>3 종 세트:</li>
+<li>별도 로그 파일 (<code>meta/worklog.md</code> 또는 <code>PROJECT_LOG.md</code>).</li>
+<li>규칙 문서(<code>meta/claude-md.md</code>)에 메타 규약 1 줄.</li>
+<li>Memory 에 규약 저장 (프로필 범위 호출).</li>
+<li>엔트리 8 필드 템플릿 (작업로그 §1.2 참조).</li>
+<li>프로젝트 초반 도입이 최선. 역기재 비용은 엔트리 10 개 이하일 때 수용 가능.</li>
+</ul>
+<h3 id="410-metaclaude-mdmd-memory">4.10 meta/claude-md.md + Memory 이중 저장<a class="headerlink" href="#410-metaclaude-mdmd-memory" title="Permanent link">¤</a></h3>
+<ul>
+<li>워크스페이스 로컬 규칙 (meta/claude-md.md) + 프로필 전역 맥락 (Memory) 동시 유지.</li>
+<li>meta/claude-md.md 는 해당 폴더에서만, Memory 는 다른 폴더·세션에서도 호출.</li>
+<li>동일 내용 중복 저장에 따른 일관성 비용은 작음 (거의 변동 없는 규칙·컨텍스트 한정).</li>
+</ul>
+<h3 id="411-phase-a">4.11 병렬 에이전트 "파일 소유권 분할" (<span class="meta-marker">Phase A</span> 에서 검증)<a class="headerlink" href="#411-phase-a" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 두 에이전트가 동일 파일을 편집할 가능성이 있으면 작업 범위가 아니라 <strong>파일 단위</strong> 로 나눠라.</li>
+<li><strong>왜</strong>: 범위 기준 분할("A1 은 플레이스홀더 치환, A2 는 섹션 이동") 은 같은 파일을 둘이 건드릴 여지가 있음. 파일 소유권 분할("A1 = 파일 X·Y, A2 = 파일 Z") 은 기계적으로 충돌이 불가능.</li>
+<li><strong>트레이드오프</strong>: 작업량이 불균형해질 수 있음 (한 쪽이 더 많은 파일 맡음). 대부분의 경우 충돌 회피 가치가 균형 손실보다 큼.</li>
+<li><strong>적용 체크리스트</strong>: 프롬프트에 명시적으로 "DO NOT TOUCH {다른 파일 목록}" 지시.</li>
+</ul>
+<h3 id="412">4.12 "(확인 필요)" + 기준일 스캐폴드 (시간 민감 자산)<a class="headerlink" href="#412" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 에이전트가 생성하는 자산 중 시간 의존성이 높은 값(지원사업 예산·공고 시기·법령 세부·외부 지표 등) 은 <strong>빈칸 "(확인 필요)" + 기준일 명시</strong> 로 남긴다. 절대 추측 기입 금지.</li>
+<li><strong>왜</strong>: 에이전트의 추측은 허위 정보가 되어 유입되면 뽑아내기 어려움. 명시적 공백은 사용자가 즉시 식별해 채울 수 있음.</li>
+<li><strong>추가</strong>: "갱신 이력" 섹션을 처음부터 구조에 넣어 두면 이후 스냅샷이 누적 관리됨.</li>
+<li><strong>적용 대상</strong>: 공고·법령·지표·가격·환율·인원·경쟁사 동향 등 시간 민감 영역 일체.</li>
+</ul>
+<h3 id="413-vs-phase-bc">4.13 목차 vs 모듈 산출물 구분 (<span class="meta-marker">Phase B</span>/C 에서 검증)<a class="headerlink" href="#413-vs-phase-bc" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 같은 "크로스커팅 콘텐츠" 라도 <strong>목차(구조) vs 모듈(삽입 블록)</strong> 의 산출물 성격을 프롬프트 수준에서 분기.</li>
+<li><strong>목차</strong>: 카드 포맷 · 플레이스홀더 중심 · 포함 내용은 블렛 요지. → 이후 <span class="meta-marker">Phase D</span> 에서 실문 집필 대상이 됨.</li>
+<li><strong>모듈</strong>: <strong>삽입 지점 맵 + 실제 완성 문어체 초안 문장</strong> (100~300자 / 블록). → 복사해서 바로 투입 가능한 완제품.</li>
+<li><strong>왜</strong>: 혼동하면 둘 다 어정쩡한 결과물 — 목차가 문장화되면 재사용 못 하고, 모듈이 플레이스홀더뿐이면 복사해도 바로 투입 불가.</li>
+<li><strong>적용 체크리스트</strong>: 프롬프트에 "산출물은 목차다" / "산출물은 복사 가능한 블록이다" 명시.</li>
+</ul>
+<h3 id="414-3">4.14 외부 저장소 푸시 시 제3자 자료 기본 제외<a class="headerlink" href="#414-3" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 외부 저장소(GitHub 등) 에 push 할 때 <strong>제3자에게서 받은 자료·참고 문서는 기본 제외</strong>. 비공개 레포라도 "타인 서버" 로 이관됨을 상기.</li>
+<li><strong>어떻게</strong>: <code>.gitignore</code> 에 해당 파일 타입·경로 패턴 기록 + 주석으로 포함 원할 시 해제 방법 안내 (<code>git add -f</code>).</li>
+<li><strong>왜</strong>: 자료의 재배포권은 보유권과 다름. 수취한 PDF·내부 문서·영상 등은 원작성자 허락 없이 재업로드 시 법적·신의적 리스크.</li>
+<li><strong>부가</strong>: <code>git add -A</code> 후 <code>git status --short</code> 로 자동 스테이지 파일(<code>.env</code>·<code>.credentials</code>·<code>.mcp.json</code> 등 점 파일) <strong>반드시 내용 확인</strong> 후 커밋.</li>
+</ul>
+<h3 id="415">4.15 선제 리스크 커버 강제 (에이전트 프롬프트 패턴)<a class="headerlink" href="#415" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 특정 주제에서 에이전트가 놓치기 쉬운 리스크를 <strong>프롬프트에서 필수 커버 항목으로 고정</strong>.</li>
+<li><strong>본 프로젝트 적용</strong>: 연합학습 모듈에 "영업비밀·차등 프라이버시·법적 책임 3 축 모두 커버" 강제 → 표면적 "데이터 안 모으면 끝" 서술이 아니라 DP-SGD·Secure Aggregation·모델 포이즈닝·기계 비학습까지 포함된 결과. 안전 모듈에 "프라이버시·노사 합의 필수 언급" 강제 → 4 지점 중첩 배치.</li>
+<li><strong>왜</strong>: 에이전트는 기본적으로 표면 서술에 안착하는 경향. 심층 리스크는 명시적 강제 없이는 누락.</li>
+<li><strong>적용 영역</strong>: 법·규제 연관 주제, 보안·프라이버시 주제, 안전·환경 주제.</li>
+</ul>
+<h3 id="416">4.16 리뷰 리포트 파일 저장 + 건강도 매트릭스<a class="headerlink" href="#416" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 대형 산출물(수백~수천 줄) 에 대한 리뷰는 메시지로 남기지 말고 <strong>별도 리뷰 파일로 저장</strong>. 파일은 파일별 4~5 축 건강도 매트릭스 (A/A-/B+ 등급) 로 시작.</li>
+<li><strong>왜 파일 저장</strong>: 메시지는 컨텍스트 회전과 함께 휘발. 리뷰 결과는 이후 수정 작업의 기준점이라 재참조 빈도가 높음.</li>
+<li><strong>왜 건강도 매트릭스</strong>: 사용자가 "어느 파일에 집중 리뷰할지" 를 한 눈에 결정 가능. 등급은 "치명도" 가 아니라 <strong>"수정 비용 대비 품질 영향"</strong> 기준.</li>
+<li><strong>본 프로젝트 적용</strong>: <code>meta/review-report.md</code> (<span class="meta-marker">Phase A</span>·B·C 완료 시점, 9 파일 3,187 L 대상, Red Flag 7 / Gap 6 / 결정 요청 3 선택지).</li>
+<li><strong>필드 구성</strong>: (1) 리뷰 범위·방법, (2) 한 눈에 보기 매트릭스, (3) 교차 참조 검증 결과, (4) Red Flags 우선순위별, (5) Gaps, (6) 파일별 강점·약점, (7) 사용자 결정 요청.</li>
+</ul>
+<h3 id="417">4.17 기계 검증 + 의미 검증 하이브리드 (리뷰 효율화)<a class="headerlink" href="#417" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 대형 산출물 교차 정합성 검증은 <strong>기계 검증 (grep/bash) + 의미 검증 (직접 읽기)</strong> 두 축의 병행이 100% 커버리지에 가장 빠르다.</li>
+<li><strong>기계 검증 대상</strong>: SCN ID 같은 식별자 참조 유효성, 섹션 번호 참조 유효성, 블록 ID 명명 규칙 일관성 — grep 이 100% 정확 + 초 단위 실행.</li>
+<li><strong>의미 검증 대상</strong>: 카드 포맷 준수, 톤 일관성, 내용 정합, 누락·중복 — 사람/AI 의 읽기가 필요.</li>
+<li><strong>실행 패턴</strong>: 한 메시지 안에 Read N 회 + Bash grep 2~3 회를 <strong>병렬 배치</strong>. 결과가 돌아온 뒤 합성.</li>
+<li><strong>본 프로젝트 적용</strong>: 5 신규 파일 Read + SCN/섹션/블록 ID grep 2 회 = 한 턴에 전 자산 검증 완료. 에이전트 dispatch 보다 빠름.</li>
+</ul>
+<h3 id="418-vs">4.18 "규모 기준" 작업 분업 (에이전트 vs 메인 세션)<a class="headerlink" href="#418-vs" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: "에이전트는 수정, 메인은 리뷰" 라는 4.17 의 거친 구분을 <strong>규모·복잡도 기준</strong> 으로 구체화. 작업 성격뿐 아니라 <strong>건당 작업량</strong> 이 분업 판단의 축.</li>
+<li><strong>판단 매트릭스</strong>:</li>
+<li><strong>대규모 수정 (파일 수십 곳 이상, 의미 판단 반복 필요)</strong> → 에이전트 소유권 분할 (4.11). 예: Phase A1/A2 플레이스홀더 파스, <span class="meta-marker">Phase B</span>/C 의 목차·모듈 신설.</li>
+<li><strong>소규모 수정 (Edit 1~2 회/파일, 판단 명확)</strong> → 메인 세션 직접. 에이전트 dispatch 오버헤드가 수정 자체보다 큼. 예: <span class="meta-marker">엔트리 #11</span> 의 8 건 Red Flag 정리 (5 파일 · Edit 9 회 · 메인 세션 직접 수행).</li>
+<li><strong>리뷰·분석</strong> → 메인 세션 (4.17).</li>
+<li><strong>창작·탐색</strong> → 에이전트 (병렬 dispatch 4.11 또는 단독).</li>
+<li><strong>오버헤드 함수</strong>: 에이전트 dispatch 비용 = 프롬프트 설계 + 왕복 지연 + 복귀 보고 해석. Edit 1 회 직접 수행 비용 = 대상 문자열 확인 + Edit 호출. 5~10 건 미만의 소규모 수정에서는 후자가 압도적으로 빠름.</li>
+<li><strong>본 프로젝트 교훈</strong>: <span class="meta-marker">Phase A</span>/B/C 는 에이전트 병렬이 옳았고, <span class="meta-marker">엔트리 #11</span> 은 메인 직접이 옳았음. 판단 축은 건수·복잡도.</li>
+</ul>
+<h3 id="419">4.19 단일 톤 레퍼런스 강제 (다중 에이전트 톤 일관성)<a class="headerlink" href="#419" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 여러 에이전트가 동시에 본문을 생산할 때 <strong>워크스페이스 내 기존 본문 1 개를 "톤 표준"</strong> 으로 못 박아 모든 프롬프트에서 인용하게 한다. 별도 스타일 가이드 작성보다 저비용·고효율.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">Phase D</span> 의 D1·D2·D3 3 에이전트 모두 <code>track/track1-index.md</code> L 406~410 "사용 예시 — 철강 대기업 A사 1부 조립" 시연 섹션을 톤 레퍼런스로 인용. 워크스페이스에서 유일한 한국어 문어체 본문 샘플이라 자연스러운 표준이 됨.</li>
+<li><strong>왜</strong>: 스타일 가이드를 별도로 작성하면 (1) 작성 비용, (2) 모호성 (어휘·문장 길이·명사화 정도 같은 문체 요소는 글로 설명하기 어려움), (3) 갱신 부담 발생. 실 샘플 1 개를 가리키는 것이 단순·정확·재해석 여지 없음.</li>
+<li><strong>전제 조건</strong>: 표준이 될 만한 본문 샘플이 워크스페이스에 최소 1 개 존재해야 함. 없으면 사용자와 1 단락만 직접 공동 작성하여 표준으로 박아두는 것이 시작점.</li>
+<li><strong>적용 범위</strong>: 다중 에이전트 본문·문서·기사 생산 일체. 코드의 경우는 코딩 컨벤션 파일 (e.g., <code>STYLE.md</code>) 인용으로 대체.</li>
+</ul>
+<h3 id="420">4.20 패턴 분포 의도적 선정 (시연 효율 극대화)<a class="headerlink" href="#420" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 사례·예시·시나리오 등을 <strong>단일 패턴에서 깊이</strong> 가 아니라 <strong>여러 패턴에 걸치게</strong> 의도적으로 선정하면, 한 묶음의 산출물로 "전 패턴 시연" 까지 동시에 얻는다.</li>
+<li><strong>본 프로젝트 적용</strong>: Phase D3 의 시나리오 Top 5 가 5.2 엔진 패턴 6 종 중 5 종에 걸치도록 선정 (LLM-01=5.2-f / STL-08=5.2-a+f / STL-04=5.2-a+e / STL-09=5.2-d / UTL-01=5.2-e). 결과적으로 5 시나리오 상세 본문이 동시에 <strong>패턴 결합 사례 4 건의 시연</strong> 이 됨. <span class="meta-marker">Phase E</span> (통합 파일럿) 에서 그대로 인용 가능.</li>
+<li><strong>반례</strong>: Top 5 를 모두 5.2-a 시나리오로 선정했으면 깊이는 깊되 패턴 다양성 시연이 누락. 통합 파일럿에서 별도 시연 콘텐츠를 추가 작성해야 했을 것.</li>
+<li><strong>선정 기준</strong>: (1) 재사용성 / 빈도 / 영향력 등 1 차 기준으로 후보군 도출, (2) 후보군 내에서 <strong>패턴 매트릭스 커버리지</strong> 가 최대가 되도록 부분집합 선정.</li>
+<li><strong>주의</strong>: 의도성을 사후 합리화로 끝내지 말고, <strong>사전 선정 시점에 매트릭스 커버리지를 계산</strong> 해 두어야 효과가 실제 발생.</li>
+</ul>
+<h3 id="421-vs">4.21 단발 패치 vs 표준화 분기 (갭 보강 효율)<a class="headerlink" href="#421-vs" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 자체평가에서 발견된 갭을 처리할 때 <strong>단일 사례인지 패턴인지</strong> 판단. 사례면 단발 패치, 패턴이면 표준 자산 신설 + 사례 패치를 표준의 적용 사례로 종속시킨다.</li>
+<li><strong>왜</strong>: 패턴인 갭을 단발 패치로만 처리하면 다음 사례에서 동일 갭 재발 (n 사례 × 패치 비용). 표준화는 1 회 비용 + 사례 패치 = n 사례 × ε 로 비용이 0 에 수렴.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">Phase E1</span> 갭 1 (5.2-e 미인용) + 갭 3 (SCN ID 부정합) 은 둘 다 패턴이라 <code>guide/assembly.md</code> 1 개 표준 문서로 해결 + 파일럿 사례 패치 5 건이 표준의 §9 적용 권고로 종속됨. 다음 패키지 파일럿(1·3·4·5·6) 에서 같은 갭이 자동 차단.</li>
+<li><strong>판단 체크리스트</strong>:</li>
+<li>같은 종류의 갭이 다른 사례에서도 발생할 수 있는가? → 패턴, 표준화.</li>
+<li>본 사례 고유의 우연한 누락인가? → 단발 패치.</li>
+<li>갭의 원인이 자산 선택·인용 정책의 부재인가? → 패턴, 표준화 (정책 문서 신설).</li>
+<li>갭의 원인이 자산 자체의 부재인가? → 신규 자산 신설 + 표준 인용 경로 정의.</li>
+</ul>
+<h3 id="422">4.22 혼합 흐름 — 에이전트 병렬 + 메인 직접 (작업 결합)<a class="headerlink" href="#422" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 한 사이클 내 <strong>신규 자산 창작 (에이전트)</strong> 과 <strong>기존 자산 소규모 패치 (메인 직접)</strong> 가 함께 필요할 때, 에이전트 dispatch 후 결과를 받아 메인이 즉시 패치를 적용하는 혼합 흐름이 효율적.</li>
+<li><strong>왜</strong>: 모든 작업을 단일 에이전트에 맡기면 (a) 메인 컨텍스트 활용 못함, (b) 에이전트가 중간 결과를 기다리며 멈춤. 모든 작업을 메인이 하면 &copy; 대규모 창작이 메인 컨텍스트를 점유.</li>
+<li><strong>흐름</strong>: (1) 에이전트 N 개 병렬 dispatch → (2) 결과 수신 → (3) 메인이 결과를 활용해 기존 자산 패치 → (4) 한 번의 로그 엔트리로 전체 사이클 기록.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">엔트리 #18</span> — G1·G2 병렬 에이전트로 신규 가이드·모델 신설 → 메인이 두 결과를 활용해 파일럿 §5.2 (5.2-e 카드 신설) · §6.1 (시너지 행) · 자체평가 갭 해소 박스 패치 → 단일 <span class="meta-marker">엔트리 #18</span> 로 일괄 기록.</li>
+<li><strong>주의</strong>: 에이전트 작업이 메인 패치의 입력이라면 dispatch 가 <strong>반드시 선행</strong>. 역순이면 메인 패치가 결과를 못 보고 마무리됨.</li>
+</ul>
+<h3 id="423-roi">4.23 호혜적 자산 쌍 — 효과·비용 분담 (ROI 완성)<a class="headerlink" href="#423-roi" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 한 도메인의 ROI 모델을 단일 자산으로 작성하면 효과 또는 비용 한쪽으로 치우치기 쉬움. <strong>효과 모델 (α 산식)</strong> 과 <strong>비용 모델 (β 산식)</strong> 을 별도 자산으로 분담하고 결합 시 완성형 ROI 가 도출되는 호혜 구조가 효과적.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">엔트리 #19</span> 의 <code>other/synergy-roi.md</code> (효과 시너지 4 분류 + α_total) + <code>재무_예산_산정_가이드.md</code> (비용 시너지 + β_synergy) 가 결합되어 <code>ROI = (Σ 효과 × α_total) / (Σ 비용 × (1 - β_synergy))</code> 완성형 ROI 도출. 두 자산이 단독으로는 부분적, 결합 시 완전.</li>
+<li><strong>왜</strong>: 효과·비용을 한 자산에 통합하면 (a) 자산이 비대 → 유지보수 부담, (b) 한쪽이 우선시되어 다른 쪽이 약화. 분담 시 각 자산이 자기 영역을 깊게 다룰 수 있음 + 결합 산식만 명시하면 끝.</li>
+<li><strong>적용 영역</strong>: ROI·KPI·성과 모델 일체. 효과·비용 외에도 위험·기회, 단기·장기 등 이항 분담 적용 가능.</li>
+<li><strong>결합 명시 책임</strong>: 어느 한 자산이 "결합 산식" 을 명시하고 다른 자산을 인용해야 함 (본 프로젝트는 G5 가 §7 에서 명시). 두 자산 모두 결합을 명시하지 않으면 호혜성이 무너짐.</li>
+</ul>
+<h3 id="424">4.24 갭 보강 사이클의 회차별 누적 (정밀화 패턴)<a class="headerlink" href="#424" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 통합 파일럿 → 자체평가 갭 → 표준 자산 신설로 갭 해소 → 재 자체평가의 사이클을 반복하면 회차마다 (a) 자산 수 증가, (b) 미해소 갭 감소, &copy; 표준화 비율 상승. 1 회차에 모든 갭을 다 메우려 하지 말고 <strong>회차별 누적 정밀화</strong> 가 효율적.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">Phase E1</span> = 1 회차 (8 갭 발견) / <span class="meta-marker">엔트리 #18</span> = 1 차 보강 (갭 1·2·3 해소, 5 갭 잔존) / <span class="meta-marker">엔트리 #19</span> = 2 차 보강 (갭 4·7·8 해소, 2 갭 잔존) / <span class="meta-marker">엔트리 #20</span> = 2 회차 통합 파일럿 (E2, 신규 갭 3 추가 발견 = 5 잔존). 회차별 잔여 갭은 8 → 5 → 2 → 5 로 변동 — <strong>새 회차는 새 갭을 발견할 수 있음</strong> 을 받아들이는 것이 중요.</li>
+<li><strong>왜 회차 분리가 유리한가</strong>:</li>
+<li>우선순위가 자연스럽게 드러남 (큰 갭 먼저, 작은 갭 후순위).</li>
+<li>각 회차의 산출물이 다음 회차의 자체평가 입력이 됨 (재귀적 정밀화).</li>
+<li>메인 컨텍스트·에이전트 작업량 분산.</li>
+<li><strong>종료 조건</strong>: 잔여 갭이 (a) 작업량 작고 우선순위 낮거나 (b) 외부 정보 (사용자 인터뷰·시장 단가) 없이는 해결 불가능한 영역만 남으면 종료.</li>
+<li><strong>갭 성격의 진화</strong> — 1 회차 갭은 워크스페이스 <strong>내부 정합 갭</strong>, 회차 누적은 워크스페이스가 다루지 못한 <strong>새 영역 갭</strong> 으로 전환. 본 프로젝트 <span class="meta-marker">엔트리 #18</span>·19 가 내부 정합, <span class="meta-marker">엔트리 #20</span> 의 E2 가 새 영역 발견 (DWG 형상 / SaaS 보안 / 6 개월 양식).</li>
+</ul>
+<h3 id="425">4.25 두 극단 검증 — 한 사례가 아닌 두 대척점 사례 (자산 일반성 입증)<a class="headerlink" href="#425" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 자산의 일반성·재사용성을 검증할 때 <strong>한 사례</strong> 만으로는 "그 사례가 자산에 잘 맞은 것" 인지 알 수 없음. <strong>두 대척점 사례</strong> 의 동시 통과가 일반성의 진짜 검증.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">Phase E1</span> (패키지 2 — 철강·18 개월·풀 인프라) + <span class="meta-marker">Phase E2</span> (패키지 5 — 정밀가공·6 개월·SaaS 경량) 의 두 대척점이 모두 일관성 점수 4.7~5.0 으로 통과 → 워크스페이스 자산이 <strong>도메인 독립적</strong> 임을 입증. 한쪽만 통과했다면 "그 도메인용 자산" 인지 의심 가능.</li>
+<li><strong>두 극단 선정 기준</strong>: (a) 도메인 (철강 vs 정밀가공) (b) 기간 (18 개월 vs 6 개월) &copy; 인프라 (풀 vs 경량) (d) 규모 (중견 vs 중소) — 가능한 많은 축에서 대척점.</li>
+<li><strong>부수 효과</strong>: 자체 평가에서 "가장 일반성 강한 자산" 과 "가장 도메인 특화 자산" 을 구분 가능. 일반성 자산은 그대로 유지, 도메인 특화 자산은 분기 확장 (예: 5.2-c 비전이 정밀가공 비전·고무 비전·철강 비전으로 분기) 의 원칙 도출.</li>
+<li><strong>적용 영역</strong>: 모든 표준 자산·플랫폼·라이브러리·프레임워크의 일반성 검증. 단일 사례 검증은 가짜 일반성. 두 대척점 검증은 진짜 일반성.</li>
+</ul>
+<h3 id="426">4.26 자산 군의 포맷 통일 — 새 자산 추가 시 첫 자산의 포맷 따르기<a class="headerlink" href="#426" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 한 워크스페이스 안에 동종 자산을 여러 개 추가할 때 (예: 모듈 5 종, 엔진 카드 7 종, 시나리오 상세 N 종), <strong>첫 자산이 정의한 포맷을 후속 자산이 그대로 따른다</strong>. 새 자산이 더 좋은 포맷을 갖더라도 일관성을 위해 동질화.</li>
+<li><strong>본 프로젝트 적용</strong>: 모듈 군 — CBAM (#C1) → 중대재해 (#C2) → 연합학습 (#C3) → SaaS 보안 (<span class="meta-marker">엔트리 #21</span>) → OEM 공급망 (<span class="meta-marker">엔트리 #23</span>) 5 종 모두 동일 7 절 구조. 엔진 카드 군 — 5.2-a~g 7 종 모두 동일 8 항목 구조. 운영 가이드 군 — 시너지·압축·재무·sLM·KPI 5 종.</li>
+<li><strong>왜</strong>: 사용자가 N 자산 군을 사용할 때 매 자산마다 새 포맷 학습은 비용. 일관 포맷 = 매트릭스 표·검색·인용·재구성 모두 N 자산 일괄 적용 가능.</li>
+<li><strong>첫 자산이 잘못 만들어진 경우의 트레이드오프</strong>: (a) 기존 자산 모두 재포맷 (큰 비용) vs (b) 첫 자산 따라 일관성 유지 (개선 기회 상실). 일반적으로 (b) 가 우선이며, 첫 자산이 명백히 결함이면 일괄 리팩토링.</li>
+<li><strong>포맷 변경 시 규칙</strong>: (1) 모든 N 자산을 동시에 변경, (2) 변경 사유·새 포맷·이주 결과를 작업로그 1 개 엔트리로 명시, (3) 새 자산은 변경 후 포맷 따름.</li>
+<li><strong>적용 영역</strong>: 자산 군 일체 — 카드 / 모듈 / 시나리오 / 가이드 / 양식. 단일 자산은 본 방법론 무관.</li>
+</ul>
+<h3 id="427-push-git-pushurl-add">4.27 다중 원격 push 단일화 (git pushurl --add 패턴)<a class="headerlink" href="#427-push-git-pushurl-add" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 다중 원격 (예: 외부 GitHub + 사내 사내 git) 에 동시 push 가 필요할 때, <strong>하나의 remote 에 push URL 을 다중 등록</strong> 하는 git 표준 기능으로 단일 명령 push 가능. alias·hook·CI 도입 없이 git 기본만 활용.</li>
+<li><strong>명령</strong>:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git remote set-url --add --push origin &lt;첫 push URL&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git remote set-url --add --push origin &lt;두 번째 push URL&gt;
+</span></code></pre></div>
+  첫 등록 시 <strong>기존 fetch URL 이 push 에서 제외</strong> 되므로 첫 URL 도 반드시 명시 추가. 이후 <code>git push origin &lt;branch&gt;</code> 1 회로 양 원격 동기화.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">엔트리 #24</span> — origin (GitHub) + yona (사내 Yona) 가 별도 remote 였으나 매 커밋 후 push 2 회 누적. origin 의 push URL 에 두 URL 모두 등록 후 yona remote 는 fetch 용 유지.</li>
+<li><strong>장점</strong>: 운영 효율 + git 표준 기능 + 로컬 한정 (커밋 외부, 다른 클론 영향 없음).</li>
+<li><strong>한계</strong>: 순차 push 라 첫 URL 실패 시 두 번째 push 가 부분 실패 가능. 안전 운영을 위해 별도 remote (yona) 도 유지하면 fallback 가능.</li>
+<li><strong>적용 영역</strong>: GitHub + GitLab 미러, 외부 + 사내 git 동시 운영, 내부 + 백업 git 등.</li>
+</ul>
+<h3 id="428-3">4.28 책임 매트릭스의 차원별 분리 (3 매트릭스 패턴)<a class="headerlink" href="#428-3" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 단일 RACI 매트릭스로 모든 책임 영역을 커버하려 하면 의사결정 책임·정보 노출 권한 등이 RACI 의 4 셀 (R/A/C/I) 로 표현되지 않아 모호 셀이 발생. <strong>차원별 분리</strong> — 활동 책임 (RACI) + 의사결정 책임 (Final/Veto/Audit/Information) + 권한 차등 (노출/마스킹/차단) 의 <strong>3 매트릭스로 분리</strong> 하면 각 차원이 명확히 결정.</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">엔트리 #25</span> 의 <code>other/raci-matrix.md</code> — RACI (활동 8 × 역할 7) + AI 의사결정 책임 (결정 7 × 역할 6) + 권한 단계별 차등 (사용자 7 × 정보 5). 기존 모듈 (OEM·중대재해·SaaS) 의 책임 매트릭스 항목이 본 자산의 3 매트릭스로 정합 매핑.</li>
+<li><strong>분리 기준</strong>:</li>
+<li><strong>활동 책임</strong> (RACI): 누가 활동을 수행·승인·자문·통보 받는가</li>
+<li><strong>의사결정 책임</strong>: 누가 최종 결정·거부권·감사권·정보권을 가지는가 (특히 AI 출력에 대한 책임)</li>
+<li><strong>정보 노출 권한</strong>: 누구에게 어느 등급의 정보가 노출되는가 (보안·민감도 차원)</li>
+<li><strong>장점</strong>: 각 차원이 다른 셀 어휘 (R/A/C/I vs Final/Veto/Audit/Info vs 노출/마스킹/차단) 로 명확. 사고 시 책임 귀속·감사·법적 정합 모두 별도 차원으로 분리 가능.</li>
+<li><strong>적용 영역</strong>: AI 도입 사업·OEM 협력·민감 정보 처리·대규모 조직의 책임 분담 일체.</li>
+</ul>
+<h3 id="429">4.29 방법론 자산 분리 — 인덱스 + 본문 분리 운영<a class="headerlink" href="#429" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 작업로그가 누적되면 안정 자산 (방법론) 과 변동 기록 (엔트리) 이 한 파일에서 충돌. <strong>방법론 본문을 별도 자산</strong> (예: <code>other/methodology.md</code>) <strong>으로 분리</strong> 하고 작업로그에는 <strong>인덱스 표</strong> (방법론 ID·제목·1 줄 요지) 만 유지. 작업로그 가독성 + 방법론 이식성 동시 확보.</li>
+<li><strong>분리 시점</strong>: 방법론 항목이 20+ 누적되거나 방법론 §4 본문이 200 줄 초과 시.</li>
+<li><strong>분리 자산 구성</strong>:</li>
+<li>§1 사용 안내 (활용 흐름·분류 매트릭스·작업로그 결합 운영)</li>
+<li>§2 다른 프로젝트로 이식 체크리스트</li>
+<li>§3 방법론 본문 (작업로그 §4 그대로 복사)</li>
+<li>§4 신규 방법론 추가 절차</li>
+<li>§5 다른 프로젝트 적용 사례 (확장 영역)</li>
+<li><strong>본 프로젝트 적용</strong>: <span class="meta-marker">엔트리 #26</span> — 작업로그 §4 (28 항목·212 줄) → <code>other/methodology.md</code> (270 줄) 신설 + 작업로그 §4 인덱스 표 (44 줄) 로 축소.</li>
+<li><strong>신규 방법론 추가 절차</strong>: (1) <code>other/methodology.md</code> §3 에 본문 추가, (2) 작업로그 §4 인덱스에 1 줄 요지 추가, (3) 해당 엔트리 본문에 본 파일 §해당 항목 참조.</li>
+<li><strong>장점</strong>: (a) 작업로그 가독성 회복 (1481 → 1320 줄), (b) 다른 프로젝트로 이식 시 <code>other/methodology.md</code> 단독 가져가면 충분, &copy; 분류·이식 가이드를 본문에 결합 가능.</li>
+<li><strong>적용 영역</strong>: 방법론·패턴·체크리스트가 누적되는 모든 프로젝트 운영 체계.</li>
+</ul>
+<h3 id="430-vs">4.30 에이전트 출력 한도 vs 메인 직접 — 통합 파일럿의 분량 한계<a class="headerlink" href="#430-vs" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 4.18 (규모 기준 작업 분업) 의 <strong>중요 보강</strong>. 에이전트 출력 토큰은 한도 (대략 64K) 가 있어 <strong>800 줄 이상 통합 파일럿</strong> (마크다운 본문 + 자체평가 + cross-reference) 작성 시 한도 초과 위험. <strong>메인 직접 작성</strong> 으로 전환하면 한도 80K+ 안전 구간. 단 <strong>200~300 줄 신규 자산</strong> 은 에이전트가 안전.</li>
+<li><strong>분기 기준</strong>:</li>
+<li><strong>메인 직접</strong> — 통합 파일럿 (800~1500 줄), 자체평가 + 5~10 자산 cross-reference + 5~7 도메인 비교 표 동시 출력.</li>
+<li><strong>에이전트 안전 구간</strong> — 200~300 줄 신규 자산 (시나리오 상세·운영 가이드·모듈), 단발 패치 (Edit 5~10 회), 표준화 자산 신설.</li>
+<li><strong>혼합 (4.22)</strong> — 신규 자산 (에이전트) + 기존 자산 소규모 패치 (메인) 동일 사이클.</li>
+<li><strong>본 프로젝트 적용</strong>:</li>
+<li><strong>#29 (<span class="meta-marker">Phase E5</span>)</strong>: 에이전트 1 차 시도 실패 (tool_uses 26 회 + 0 줄 출력) → 메인 직접 전환 (Write 1 회 + 짧은 응답) 으로 476 줄 안전 출력.</li>
+<li><strong>#30 (<span class="meta-marker">Phase E5</span> 후속)</strong>: 신규 3 자산 (160·221·221 줄) 모두 에이전트 안전 구간 → G15·G16·G17 3 병렬 동시 dispatch 성공 (충돌 0).</li>
+<li><strong>메인 직접 시 응답 토큰 절약</strong>: Write 도구로 큰 콘텐츠 1 회 출력 + 메인 자체 응답은 짧게 (3~5 줄 안내). 메인 응답 자체가 길면 다음 턴 토큰 부담.</li>
+<li><strong>적용 영역</strong>: 통합 산출물 (사업계획서·논문·기술서) 작성 자동화 — 분량 800 줄 임계로 에이전트·메인 분기.</li>
+</ul>
+<h3 id="431-brainstorming">4.31 brainstorming + 작업로그 통합 패턴 (워크스페이스 관례 우선)<a class="headerlink" href="#431-brainstorming" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: brainstorming 스킬의 표준 흐름 (설계 문서 → 자체 검토 → 사용자 검토 → writing-plans) 은 워크스페이스에 별도 작업로그 규약이 있는 경우 기능 중복. 워크스페이스 작업로그 규약이 brainstorming 스킬의 설계 문서 + 검토 게이트 역할을 이미 수행하고 있다면, 두 흐름을 1 개로 통합하여 1~2 턴 절약.</li>
+<li><strong>언제 적용 가능</strong>: (a) 워크스페이스에 작업로그 규약이 명시되어 있고 (b) 작업로그 엔트리가 8 필드 이상의 구조 (맥락·요청·수행·근거·결정·산출물·배운점·다음 단계) 를 가지며 &copy; 본 사이클의 산출물이 단일 자산이 아닌 다 자산 통합 (Cycle N 파일럿 등) 일 때.</li>
+<li><strong>통합 방식</strong>: brainstorming 의 §1·§2·§3 (설계 섹션) 검토 게이트는 그대로 유지. §4 (자체평가 + 검토 게이트) 와 별도 설계 문서 저장 단계는 생략, 결과를 작업로그 #N 엔트리의 "산출물 (계획)" + "다음 단계" 필드에 통합. writing-plans 호출도 작업로그 엔트리의 "Cycle 분할 청사진" 으로 흡수.</li>
+<li><strong>본 프로젝트 적용</strong>: #31 (<span class="meta-marker">Phase E6</span> brainstorming + Cycle 1) 의 1 차 시연. 4 턴 brainstorming clarifying questions + 3 섹션 설계 검토 게이트 후 §4 생략 + 설계 문서 작업로그 통합 (옵션 A) 선택 → 1~2 턴 절약.</li>
+<li><strong>적용 영역</strong>: 한국어 사업계획서·논문·기술서 등 작업로그 규약이 운영되는 모든 워크스페이스. brainstorming 스킬 호출 시 옵션 A (생략·통합) vs 옵션 B (정상 진행) 의 분기 기준이 필요.</li>
+</ul>
+<h3 id="432-rd-5">4.32 다년 R&amp;D 단계+연차 이중 구조 (분기 5 차원)<a class="headerlink" href="#432-rd-5" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 다년 R&amp;D 양식은 <strong>단계 (기술 성숙도 분기)</strong> + <strong>연차 (시간 분기)</strong> 의 두 차원을 동시 강제하며, 이는 단년 R&amp;D 양식의 단일 차원 (연차) 과 본질적으로 다르다. 단계 = 1단계 (역량분석·컨설팅·TRL 4) + 2단계 1년차 (데이터 수집·시작품·TRL 5~6) + 2단계 2년차 (AI 활용 시스템·실증·TRL 7~8) 의 표준 분기. 5 차원 (목표·예산·참여·위탁·TRL) 을 단계별 분리 강제.</li>
+<li><strong>단계 가로지름 부정합</strong>: 1단계 본문에 2단계 비목 인용 등 단계 가로지름은 양식 부정합 → 본문 작성 시 5 차원 차원별 단계 분리 일관 적용 강제.</li>
+<li><strong>단계별 표준 패턴</strong>: (1단계) 외부 컨설팅 위탁이 본체 (정부지원 ~99% 가 컨설팅비) — 4.31 의 컨설팅 99% 패턴. (2단계 1년차) 인프라 구축 + 위탁 1 종. (2단계 2년차) AI 모델 개발 + 다 위탁 분산 (6 종 동시 위탁 등).</li>
+<li><strong>본 프로젝트 적용</strong>: 양식검증_DX촉진_R&amp;D.md §5 단계별 강제 분리 + pkg/pkg1-steel-enterprise.md §5·§6 본문 시연. 단계 가로지름 부정합 0 (자체평가 §8.6 일관성 5/5).</li>
+<li><strong>적용 영역</strong>: 전사적 DX 촉진 R&amp;D · 글로벌 협력 R&amp;D · 산학협력 R&amp;D · 우수기업 R&amp;D 등 모든 다년 R&amp;D 양식 작성. 양식 검증 군 자산 신설 시 단계+연차 이중 구조 명시 의무.</li>
+</ul>
+<h3 id="433-filled-vs-blank-pdf">4.33 filled vs blank 양식 분리 기준 (양식 PDF 활용 정책)<a class="headerlink" href="#433-filled-vs-blank-pdf" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 양식 PDF 가 빈 양식 (template) 이 아닌 filled 사례 (다른 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 협약용 R&amp;D 계획서) 일 때, <strong>양식 추출</strong> (목차·§·표·필수 항목·5 조항 패턴 등 구조) 만 reference 로 사용 + <strong>본문·데이터 verbatim 차용은 금지</strong>. meta/claude-md.md 의 "treat as source material for patterns and phrasing, not text to reproduce" 규약 준수.</li>
+<li><strong>분리 처리 절차</strong>: (1) PDF 통독 시 양식 메타 (페이지·§ 구조·표·필수 항목) 와 filled 데이터 (특정 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 매출·인적사항·KPI 실측치 등) 분리 식별. (2) 양식 검증 자산 (예: <code>양식검증_X.md</code>) 에는 양식 메타만 정리, filled 데이터는 "양식 사례 데이터 발췌·요약" 으로 인용 출처 명시. (3) 통합 파일럿 (예: 사업계획서_패키지N_X.md) 작성 시 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 가설을 새로 정의하고 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>·<span class="placeholder-tag" data-placeholder="기간">[기간]</span> 등 플레이스홀더로 본문 작성.</li>
+<li><strong>본 프로젝트 적용</strong>: 패키지 5 (#27 정밀가공 SaaS) + 패키지 3 (#29 특수강관 9개월) + 패키지 1 (#31·32 대기업 철강 다년) 의 3 회 양식 검증 모두 동일 패턴. 패키지 1 은 PDF 가 동국산업 (filled) 이고 우리 가설이 동국제강 (별도) 인 가장 명확한 분리 사례.</li>
+<li><strong>적용 영역</strong>: 정부지원사업 양식 PDF 가 협약용 filled 사례로 제공되는 모든 경우. 빈 양식 template 이 별도 제공되지 않을 때 본 정책의 활용도 최대.</li>
+</ul>
+<h3 id="434-vs">4.34 한국어 정보 밀도 압축 효과 (청사진 분량 vs 실제 분량)<a class="headerlink" href="#434-vs" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>요지</strong>: 영어 기준 분량 청사진을 한국어 산출물에 그대로 적용하면 실제 분량이 약 <strong>45~55% 압축</strong> 된다. 한국어 문어체 (사업계획서·논문) 는 (a) 조사·어미가 응축적이고 (b) 표·다이어그램 활용이 본문 내 직접 가능하며 &copy; citation-driven 작성이 본문 압축을 가속하기 때문.</li>
+<li><strong>적용 산식</strong>: 청사진 분량 × 0.5 ≈ 실제 분량 (한국어 문어체 + 표·다이어그램 결합 + citation-driven). 단, 자체평가·논거 본문 등 자유 서술이 많은 섹션은 압축 효과 약 (0.7 정도).</li>
+<li><strong>본 프로젝트 적용</strong>: 패키지 1 통합 파일럿 청사진 1710~1920 줄 → 실제 773 줄 (약 45% 압축). 양식검증 청사진 200~300 줄 → 실제 282 줄 (압축 효과 약 함, citation·표 비중 높아 자유 서술 적음). 평균 압축률 약 50%.</li>
+<li><strong>적용 영역</strong>: 분량 청사진 산정이 필요한 모든 한국어 통합 산출물. brainstorming 의 분량 추정 + 작업 분할 (4.18·4.30) 시 청사진 × 0.5 보정 적용.</li>
+</ul>
+<hr />
+<h2 id="4">4. 신규 방법론 추가 절차<a class="headerlink" href="#4" title="Permanent link">¤</a></h2>
+<p>본 워크스페이스 또는 다른 프로젝트에서 새 방법론 발견 시:</p>
+<ol>
+<li>본 파일 §3 에 다음 번호로 추가 (4.29, 4.30, ...).</li>
+<li>항목 구조: <strong>요지</strong> + (왜·언제·어떻게·본 프로젝트 적용·적용 영역) 5 필드 권장.</li>
+<li>작업로그 §4 인덱스에 1 줄 요지 추가.</li>
+<li>해당 엔트리 본문에서 본 파일 §해당 항목 참조.</li>
+<li>분류 (§1.2) 5 군 중 적합한 군에 매핑. 새 군이 필요하면 신설.</li>
+</ol>
+<hr />
+<h2 id="5">5. 다른 프로젝트 적용 사례 (확장 영역)<a class="headerlink" href="#5" title="Permanent link">¤</a></h2>
+<p>본 문서를 다른 프로젝트에 이식한 사례를 누적 기록하는 영역. 도메인·산출물 유형·적용 결과를 1 단락씩 기록하여 본 방법론의 실효 검증 데이터로 활용.</p>
+<p>(향후 적용 사례 누적 예정)</p>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>방법론_총론.md</code></li>
+<li><strong>자산 군</strong>: 📚 참고 자산</li>
+<li><strong>slug 경로</strong>: <code>other/methodology.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../form-validation-dx/" class="md-footer__link md-footer__link--prev" aria-label="이전: 양식 검증 — DX 촉진 R&amp;D">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                양식 검증 — DX 촉진 R&D
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../graph/" class="md-footer__link md-footer__link--next" aria-label="다음: Cross-ref 그래프 (44 자산)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                Cross-ref 그래프 (44 자산)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

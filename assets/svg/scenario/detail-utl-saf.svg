@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="유틸리티·안전 (UTL+SAF) 시나리오 상세 — 5 카드 세로형"
+     class="zoomable">
+  <title>시나리오 상세 — 유틸리티·안전 (UTL-02·03 + SAF-01·02·03)</title>
+  <desc>유틸리티 (emerald) UTL-02 환경 모니터링 · UTL-03 컴프레서 효율 + 안전 (rose) SAF-01 PPE 비전 · SAF-02 위험작업 감지 · SAF-03 MSDS RAG 5 시나리오를 색상 분리하여 세로 stack 으로 시각화. 유틸 영역과 안전 영역의 시너지·연계 표시.</desc>
+
+  <defs>
+    <linearGradient id="utl-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="utl-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ECFDF5"/>
+      <stop offset="100%" stop-color="#D1FAE5"/>
+    </linearGradient>
+    <linearGradient id="saf-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF1F2"/>
+      <stop offset="100%" stop-color="#FECDD3"/>
+    </linearGradient>
+    <linearGradient id="utl-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+    <linearGradient id="saf-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#FDA4AF"/>
+    </linearGradient>
+    <filter id="utl-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#utl-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">유틸리티 · 안전</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.9)">SCN-UTL · SCN-SAF · 5 SCENARIOS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FEFCE8">에너지·환경·CBAM (emerald) + 중대재해·PPE·MSDS (rose) 결합</text>
+
+  <!-- 영역 라벨 -->
+  <g transform="translate(40, 110)">
+    <rect width="520" height="22" rx="4" fill="#10B981"/>
+    <text x="260" y="16" text-anchor="middle" class="ko" font-size="11" fill="white">UTL — 유틸리티·환경 (2 시나리오)</text>
+  </g>
+
+  <!-- UTL 카드 2 종 -->
+  <g filter="url(#utl-shadow)">
+    <g transform="translate(40, 138)">
+      <rect width="520" height="80" rx="10" fill="url(#utl-card)" stroke="#10B981" stroke-width="2"/>
+      <rect width="80" height="80" rx="10" fill="#10B981"/><rect x="70" width="10" height="80" fill="#10B981"/>
+      <text x="40" y="34" text-anchor="middle" class="en" font-size="11" fill="white">UTL-02</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">①</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#047857">환경 모니터링·CBAM 배출량</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">스택·CEMS · 회귀 + 배출 인벤토리 자동화</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#10B981">KPI: 보고 자동화 90% · CBAM 대응 · ROI 2.0 년</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
+    </g>
+
+    <g transform="translate(40, 226)">
+      <rect width="520" height="80" rx="10" fill="url(#utl-card)" stroke="#10B981" stroke-width="2"/>
+      <rect width="80" height="80" rx="10" fill="#10B981"/><rect x="70" width="10" height="80" fill="#10B981"/>
+      <text x="40" y="34" text-anchor="middle" class="en" font-size="11" fill="white">UTL-03</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">②</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#047857">컴프레서·용수 효율 최적화</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">압력·유량 · 이상탐지 + 강화학습 제어</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#10B981">KPI: 전력 -12% · 누설 검출 +60% · ROI 1.4 년</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">난이도 ★★ · 기간 4-6 개월 · TRL 7→9</text>
+    </g>
+  </g>
+
+  <!-- SAF 영역 라벨 -->
+  <g transform="translate(40, 320)">
+    <rect width="520" height="22" rx="4" fill="#F43F5E"/>
+    <text x="260" y="16" text-anchor="middle" class="ko" font-size="11" fill="white">SAF — 안전·중대재해·ESG (3 시나리오)</text>
+  </g>
+
+  <!-- SAF 카드 3 종 -->
+  <g filter="url(#utl-shadow)">
+    <g transform="translate(40, 348)">
+      <rect width="520" height="80" rx="10" fill="url(#saf-card)" stroke="#F43F5E" stroke-width="2"/>
+      <rect width="80" height="80" rx="10" fill="#F43F5E"/><rect x="70" width="10" height="80" fill="#F43F5E"/>
+      <text x="40" y="34" text-anchor="middle" class="en" font-size="11" fill="white">SAF-01</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★1</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#9F1239">PPE·안전장구 비전 검출</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">CCTV · YOLO + tracking · 헬멧·고글·장갑</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#F43F5E">KPI: 미착용 검출 +95% · 사고 -30% · ROI 1.2 년</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">난이도 ★★ · 기간 3-6 개월 · TRL 8→9</text>
+    </g>
+
+    <g transform="translate(40, 436)">
+      <rect width="520" height="80" rx="10" fill="url(#saf-card)" stroke="#F43F5E" stroke-width="2"/>
+      <rect width="80" height="80" rx="10" fill="#F43F5E"/><rect x="70" width="10" height="80" fill="#F43F5E"/>
+      <text x="40" y="34" text-anchor="middle" class="en" font-size="11" fill="white">SAF-02</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★2</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#9F1239">위험작업·접근 감지</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">밀폐공간·고소·중량물 · pose estimation + zone</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#F43F5E">KPI: 위반 알림 실시간 · 중대재해법 대응 · ROI 1.5 년</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
+    </g>
+
+    <g transform="translate(40, 524)">
+      <rect width="520" height="80" rx="10" fill="url(#saf-card)" stroke="#F43F5E" stroke-width="2"/>
+      <rect width="80" height="80" rx="10" fill="#F43F5E"/><rect x="70" width="10" height="80" fill="#F43F5E"/>
+      <text x="40" y="34" text-anchor="middle" class="en" font-size="11" fill="white">SAF-03</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">③</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#9F1239">MSDS·재해사례 RAG</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">MSDS PDF · 재해사례 DB · sLM (8B) + 임베딩</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#F43F5E">KPI: 검색시간 -80% · 화학물질 안전조회 즉시 · ROI 1.3 년</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">난이도 ★★ · 기간 4-6 개월 · TRL 7→9</text>
+    </g>
+  </g>
+
+  <!-- 시너지 -->
+  <g transform="translate(40, 620)">
+    <rect width="520" height="60" rx="8" fill="#FEF3C7" stroke="#FBBF24" stroke-width="2" filter="url(#utl-shadow)"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#92400E">UTL × SAF 시너지 — 모듈_중대재해.md + 모듈_CBAM.md 매핑</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">UTL-02 (CBAM) → ESG 보고 + SAF-03 (MSDS) → 화학사고 예방</text>
+    <text x="20" y="54" class="ko-r" font-size="9" fill="#92400E">SAF-01 + SAF-02 = 중대재해처벌법 제 4 조 안전조치 의무 충족</text>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(40, 690)">
+    <rect width="520" height="90" rx="8" fill="white" stroke="#10B981" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#047857">패키지 6 (유틸·ESG) 핵심 + 모든 패키지 부가 도입 가능</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ Quick Win: SAF-01 (PPE) + UTL-03 (컴프레서) — 6 개월 내 ROI</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ ESG·규제: UTL-02 (CBAM) + SAF-02·03 (중대재해법)</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#10B981">▸ 출처: 모듈_CBAM·중대재해 + 가이드_위험·외부검증</text>
+  </g>
+</svg>

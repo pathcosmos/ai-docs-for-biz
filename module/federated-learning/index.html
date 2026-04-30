@@ -1,0 +1,2994 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 모듈은 부산·경남 제조 클러스터(철강·자동차 부품·조선 기자재·뿌리산업 등)에서 **참여사 간 원천 데이터 공유 없이 공통 AI 모델을 학습·운영** 하기 위한 **연합학습(Federated Learning, FL)** 구축 개념을 사업계획서 여러 섹션에 삽입할 수 있도록 설계한 **크로스커팅 재사용 블록 세트** 이다. Track 1/2/3 의 고유…">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/module/federated-learning/">
+      
+      
+        <link rel="prev" href="../safety/">
+      
+      
+        <link rel="next" href="../oem-supply/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>모듈 — 연합학습·산단 공동 AI - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              모듈 — 연합학습·산단 공동 AI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 콘텐츠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제조 AI 도입 기초·아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §3·4 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-engine-cards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track2-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps 도입 기초·구성요소 7 종
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track2-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §6·7·8 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track3-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM·RAG 도입 기초·5 계층
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track3-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §4·5 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 6 패키지 통합 파일럿
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 6 패키지 통합 파일럿
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg1-steel-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 1 — 대기업 철강 다년 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg2-cold-rolled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 2 — 중견 냉연 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg3-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 3 — 특수강관 RAG 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg4-rubber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 4 — 고무 양산 OEM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg5-precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 5 — 정밀가공 SaaS 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg6-util-esg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 6 — 유틸·ESG·CBAM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시나리오 카탈로그 — 40 종 7 도메인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Top 5 (연속주조·압연·표면결함)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-phase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Phase 2 (압연·소둔 4 종)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-rub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    고무·폴리머 5 종 (배합·언더큐어)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-utl-saf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    유틸·안전 5 종 (CBAM·중대재해)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    특수강관 RAG (작업표준·정비이력)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧩 Cross-cutting 모듈
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧩 Cross-cutting 모듈
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CBAM 대응 (EU 탄소국경조정)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    중대재해 안전 (CCTV·웨어러블)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연합학습 (산업단지 공동 AI)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연합학습 (산업단지 공동 AI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 모듈 목적
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 삽입 지점 맵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 본문 블록 A~G
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 본문 블록 A~G">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-a-ai-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-A — 산단 공동 AI 의 거시적 필요성 (삽입: 1.2 거시환경)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-b-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-B — 중소 참여사의 데이터 한계 (삽입: 1.4 고객사 현황)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-c-41-to-be-43-46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-C — 연합학습 아키텍처 (삽입: 4.1 TO-BE / 4.3 데이터 유형 / 4.6 전체 파이프라인)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-d-51-54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-D — 참여사 온보딩·거버넌스 (삽입: 5.1 데이터 수집 / 5.4 기존 시스템 연동)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-e-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-E — 산단 전체 동반성장·상생 효과 (삽입: 6.2 정성효과)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-f-track-2-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-F — 연합 모델의 운영·드리프트 관리 (삽입: Track 2 MLOps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-g-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-G — 부록 FAQ (삽입: 부록)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 관련 시나리오·지원사업
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 관련 시나리오·지원사업">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-c-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 시나리오 카탈로그 확장 축 — C-5 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 연합학습 결합에 적합한 카탈로그 시나리오
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 지원사업 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 삽화·도식 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 유지보수 지침
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 확인 필요 항목
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oem-supply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OEM 공급망 정합 (자동차·조선·2 차전지)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../saas-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SaaS·클라우드 보안 (5 등급 민감도)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../guide/assembly/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 모듈 목적
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 삽입 지점 맵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 본문 블록 A~G
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 본문 블록 A~G">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-a-ai-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-A — 산단 공동 AI 의 거시적 필요성 (삽입: 1.2 거시환경)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-b-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-B — 중소 참여사의 데이터 한계 (삽입: 1.4 고객사 현황)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-c-41-to-be-43-46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-C — 연합학습 아키텍처 (삽입: 4.1 TO-BE / 4.3 데이터 유형 / 4.6 전체 파이프라인)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-d-51-54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-D — 참여사 온보딩·거버넌스 (삽입: 5.1 데이터 수집 / 5.4 기존 시스템 연동)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-e-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-E — 산단 전체 동반성장·상생 효과 (삽입: 6.2 정성효과)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-f-track-2-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-F — 연합 모델의 운영·드리프트 관리 (삽입: Track 2 MLOps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blk-fl-g-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLK-FL-G — 부록 FAQ (삽입: 부록)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 관련 시나리오·지원사업
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 관련 시나리오·지원사업">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-c-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 시나리오 카탈로그 확장 축 — C-5 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 연합학습 결합에 적합한 카탈로그 시나리오
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 지원사업 매핑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 삽화·도식 후보
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 유지보수 지침
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 확인 필요 항목
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../track/track1-index/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📦 콘텐츠
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../cbam/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    🧩 Cross-cutting 모듈
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">module</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="ai">모듈 — 연합학습·산단 공동 AI<a class="headerlink" href="#ai" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 20 분 읽기</span></p>
+<figure>
+  <img alt="모듈 — 연합학습·산단 공동 AI" src="../../assets/svg/module/federated-learning.svg" />
+<br />
+<figcaption>Cross-cutting 모듈 인포그래픽 — 결합 영역 시각</figcaption>
+</figure>
+<h2 id="1">1. 모듈 목적<a class="headerlink" href="#1" title="Permanent link">¤</a></h2>
+<p>본 모듈은 부산·경남 제조 클러스터(철강·자동차 부품·조선 기자재·뿌리산업 등)에서 <strong>참여사 간 원천 데이터 공유 없이 공통 AI 모델을 학습·운영</strong> 하기 위한 <strong>연합학습(Federated Learning, FL)</strong> 구축 개념을 사업계획서 여러 섹션에 삽입할 수 있도록 설계한 <strong>크로스커팅 재사용 블록 세트</strong> 이다. Track &frac12;/3 의 고유 목차에 종속되지 않으며, 거시환경(1.2)부터 MLOps(Track 2)·부록 FAQ 까지 다수 섹션에 끼워 넣어도 논리적 단절 없이 정합되도록 100~300 자 단위의 자립 블록으로 구성하였다.</p>
+<p>본 모듈이 선제적으로 다루는 쟁점은 단순 "데이터 안 모으면 된다" 수준을 넘어 (1) <strong>모델 업데이트(gradient·weight)의 역공학 리스크</strong>, (2) <strong>차등 프라이버시(Differential Privacy) 기반 노이즈 주입·프라이버시 예산 관리</strong>, (3) <strong>참여사 간 계약·법적 책임 분담 및 영업비밀 보존 거버넌스</strong> 까지의 3 대 축을 포함한다. 이를 통해 대중소상생·디지털 경남·뿌리산업 첨단화·전사적 DX 등 "데이터 공유 없는 협력" 요건이 강조되는 공고에 일관되게 대응한다.</p>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><strong>플레이스홀더 범례</strong> — <code>[수치]</code> 참여사 수·정확도·통신량 등 수치, <code>[조건]</code> 보안 등급·산단 명·지원사업 요건, <code>[기술스택]</code> Flower/NVFlare/TFF/PySyft 등 프레임워크, <code>[고객사]</code> 주관 고객사, <code>[공정]</code> 대상 공정명, <code>[기간]</code> 기간.</p>
+</details>
+<hr />
+<h2 id="2">2. 삽입 지점 맵<a class="headerlink" href="#2" title="Permanent link">¤</a></h2>
+<table>
+<thead>
+<tr>
+<th>삽입 위치</th>
+<th>블록 ID</th>
+<th>블록명</th>
+<th>분량</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Track 1 1.2 거시환경</td>
+<td><strong>BLK-FL-A</strong></td>
+<td>산단 공동 AI 의 거시적 필요성</td>
+<td>1 문단</td>
+</tr>
+<tr>
+<td>Track 1 1.4 고객사 현황</td>
+<td><strong>BLK-FL-B</strong></td>
+<td>중소 참여사의 데이터 한계</td>
+<td>1 문단</td>
+</tr>
+<tr>
+<td>Track 1 4.x TO-BE (4.&frac14;.&frac34;.6)</td>
+<td><strong>BLK-FL-C</strong></td>
+<td>연합학습 아키텍처</td>
+<td>2 문단</td>
+</tr>
+<tr>
+<td>Track 1 5.x 구축 (5.&#8533;.4)</td>
+<td><strong>BLK-FL-D</strong></td>
+<td>참여사 온보딩·거버넌스</td>
+<td>1~2 문단</td>
+</tr>
+<tr>
+<td>Track 1 6.2 정성효과</td>
+<td><strong>BLK-FL-E</strong></td>
+<td>산단 전체 동반성장·상생 효과</td>
+<td>1 문단</td>
+</tr>
+<tr>
+<td>Track 2 MLOps</td>
+<td><strong>BLK-FL-F</strong></td>
+<td>연합 모델의 운영·드리프트 관리</td>
+<td>1 문단</td>
+</tr>
+<tr>
+<td>부록 (공통)</td>
+<td><strong>BLK-FL-G</strong></td>
+<td>FAQ — 보안·영업비밀·법적 책임</td>
+<td>0.5 페이지</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>블록 ID 는 본문 내 편집 이력·변형 버전 관리 시 참조 키로 사용한다. 동일 블록을 복수 사업에 재사용할 때는 수치·참여사 범위·기술 스택 플레이스홀더만 교체한다.</p>
+</blockquote>
+<hr />
+<h2 id="3-ag">3. 본문 블록 A~G<a class="headerlink" href="#3-ag" title="Permanent link">¤</a></h2>
+<h3 id="blk-fl-a-ai-12">BLK-FL-A — 산단 공동 AI 의 거시적 필요성 (삽입: 1.2 거시환경)<a class="headerlink" href="#blk-fl-a-ai-12" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: 거시환경 서술 말미에 "산단·클러스터 단위의 협력형 AI" 라는 정책적 흐름을 1 문단으로 추가, 후속 블록 B·C 로 연결하는 교량.</li>
+<li><strong>초안 (문어체)</strong>:</li>
+</ul>
+<blockquote>
+<p>제조 AI 의 경쟁력은 단일 기업의 데이터 규모를 넘어 <strong>산단·클러스터 단위의 축적된 공정 지식</strong> 에서 창출되는 국면에 진입하고 있다. 특히 부산·경남 제조 클러스터는 철강·자동차 부품·조선 기자재·뿌리산업이 지리적으로 집적되어 있어, 개별 중소기업이 단독으로는 확보하기 어려운 다품종·다조건 데이터가 클러스터 차원에서는 풍부하게 존재한다. 그러나 영업비밀 보호와 데이터 주권 이슈로 인해 원천 데이터를 중앙 서버에 통합하는 전통적 방식은 현실적으로 불가능하며, 이에 따라 <strong>참여사의 데이터를 이동시키지 않고 모델만 공유·학습</strong> 하는 <strong>연합학습(Federated Learning) 기반 협력형 AI</strong> 가 대중소상생·디지털 경남·뿌리산업 첨단화 등 최근 지원사업 공고에서 "데이터 공유 없는 협력" 요건으로 명시되고 있다.</p>
+</blockquote>
+<ul>
+<li><strong>키워드·수치</strong>: 산단·클러스터, 데이터 주권, 연합학습, 영업비밀, <span class="placeholder-tag" data-placeholder="수치">[수치]</span>개 참여사 규모, "데이터 공유 없는 협력".</li>
+<li><strong>대체 문구 옵션</strong>:</li>
+<li>(R&amp;D 색채 강화) "… 산단 차원의 공동 AI 자산 축적은 국가 제조 경쟁력 확보의 기반 인프라로 제시되고 있다."</li>
+<li>(ESG 색채 강화) "… 데이터 주권과 영업비밀 보호는 ESG 의 거버넌스(G) 축과 직접 연계된다."</li>
+</ul>
+<hr />
+<h3 id="blk-fl-b-14">BLK-FL-B — 중소 참여사의 데이터 한계 (삽입: 1.4 고객사 현황)<a class="headerlink" href="#blk-fl-b-14" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: 고객사 현황의 "구조적 문제" 블렛에 <strong>단독 학습 불가능성</strong> 을 별도 항목으로 추가, 연합학습 도입 당위성의 미시적 근거 제공.</li>
+<li><strong>초안 (문어체)</strong>:</li>
+</ul>
+<blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 및 부산·경남 제조 클러스터 내 중소 참여사 대다수는 단일 공장 기준 연간 확보 가능한 공정 데이터가 불량·이벤트·희소 조건(고난이도 재질·특수 사양)에 대해 AI 학습에 요구되는 최소 표본 규모(<span class="placeholder-tag" data-placeholder="수치">[수치]</span>건)에 미달하는 <strong>데이터 희소성 구조</strong> 에 놓여 있다. 특히 이상탐지·예지보전·표면결함 분류 등 불량 라벨 수가 절대적으로 적은 문제에서는 단일 기업의 데이터만으로 학습한 모델이 <strong>과적합·일반화 실패</strong> 로 이어지는 한계가 반복 관찰된다. 반면 원재료·설비·공정 특성이 유사한 클러스터 내 다른 참여사의 데이터를 <strong>원본 노출 없이 공동 학습 자원으로 활용</strong> 할 수 있다면, 단독으로는 도달 불가능한 표본 규모·다양성을 확보할 수 있어, 연합학습 기반 협력 구조가 중소 참여사의 AI 전환에 사실상 유일한 현실적 경로로 부각된다.</p>
+</blockquote>
+<ul>
+<li><strong>키워드·수치</strong>: 데이터 희소성, 최소 표본 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>건, 과적합·일반화 실패, 불량 라벨 희소, 공동 학습 자원.</li>
+<li><strong>대체 문구 옵션</strong>:</li>
+<li>(정밀가공 업종) "… 치수·공차 이상 사례가 연 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>건 미만으로 발생해 단독 학습 표본이 부족하며 …"</li>
+<li>(고무·폴리머 업종) "… 배합·경화 조건의 희소 불량 패턴이 개별 공장 기준 연 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>건 수준에 불과해 …"</li>
+</ul>
+<hr />
+<h3 id="blk-fl-c-41-to-be-43-46">BLK-FL-C — 연합학습 아키텍처 (삽입: 4.1 TO-BE / 4.3 데이터 유형 / 4.6 전체 파이프라인)<a class="headerlink" href="#blk-fl-c-41-to-be-43-46" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: TO-BE 아키텍처 또는 전체 파이프라인 다이어그램 직전·직후에 배치되어 연합학습 구조를 정의하는 본문 블록. 2 문단 구성.</li>
+<li><strong>초안 (문어체)</strong>:</li>
+</ul>
+<blockquote>
+<p>본 사업에서 도입하는 <strong>연합학습(Federated Learning) 아키텍처</strong> 는 각 참여사 내부에 배포되는 <strong>로컬 학습 클라이언트</strong> 와, 참여사 외부(주관기관 또는 중립 클라우드)에 위치하는 <strong>중앙 집계 서버(Aggregator)</strong> 로 구성된다. 각 참여사는 자사 공정 데이터를 자체 경계 안에 보관한 상태로 로컬 모델을 학습하며, 외부로 송신되는 것은 원천 데이터가 아닌 <strong>모델 파라미터 업데이트(가중치·그래디언트)</strong> 에 국한된다. 중앙 서버는 수신한 업데이트를 FedAvg·FedProx 등 <strong>집계 알고리즘</strong> 을 통해 결합하여 <strong>글로벌 모델</strong> 을 갱신하고, 갱신된 글로벌 모델을 다시 참여사에 배포함으로써 라운드 단위 학습 사이클을 반복한다. 기술 스택은 [기술스택] 을 기반으로 하되, 참여사 수·네트워크 조건·보안 등급에 따라 조합을 조정한다.</p>
+<p>모델 업데이트 자체에서도 역공학을 통한 학습 데이터 복원 위험이 알려져 있으므로, 본 아키텍처에는 <strong>차등 프라이버시(Differential Privacy, DP)</strong> 기반 노이즈 주입, <strong>보안 집계(Secure Aggregation)</strong> 프로토콜, <strong>참여사별 프라이버시 예산(ε·δ) 관리</strong> 가 기본 포함된다. 업데이트 송신 구간은 TLS 암호화와 상호 인증을 적용하며, 중앙 서버는 개별 참여사의 업데이트를 그대로 열람할 수 없도록 <strong>다자간 계산(MPC)</strong> 또는 <strong>동형암호(HE)</strong> 옵션을 병행한다. 이로써 "원천 데이터 미이동 + 업데이트 역공학 방지 + 집계 서버 신뢰 최소화" 의 3 중 방어선이 형성되어, 영업비밀과 데이터 주권이 기술적으로 담보된 상태에서 클러스터 공동 모델이 성장하는 구조를 갖는다.</p>
+</blockquote>
+<ul>
+<li><strong>키워드·수치</strong>: 로컬 클라이언트, 중앙 집계 서버(Aggregator), FedAvg·FedProx, 글로벌 모델, 라운드 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>회, 차등 프라이버시 ε=<span class="placeholder-tag" data-placeholder="수치">[수치]</span>, 보안 집계, TLS, MPC·동형암호.</li>
+<li><strong>대체 문구 옵션</strong>:</li>
+<li>(경량 버전) 두 번째 문단을 "… 차등 프라이버시 및 보안 집계를 선택 적용한다." 1 문장으로 축약.</li>
+<li>(교차 사일로 강조) "본 구조는 스마트폰 기반 교차 디바이스(cross-device) 연합학습이 아닌, 참여사 단위의 <strong>교차 사일로(cross-silo) 연합학습</strong> 으로 설계된다." 삽입.</li>
+</ul>
+<hr />
+<h3 id="blk-fl-d-51-54">BLK-FL-D — 참여사 온보딩·거버넌스 (삽입: 5.1 데이터 수집 / 5.4 기존 시스템 연동)<a class="headerlink" href="#blk-fl-d-51-54" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: 구축 단계 서술에 <strong>참여사 모집·온보딩·규약 서명·데이터 스키마 정합화</strong> 절차를 명시, 거버넌스 실행력을 입증.</li>
+<li><strong>초안 (문어체)</strong>:</li>
+</ul>
+<blockquote>
+<p>연합학습 기반 공동 모델의 품질은 참여사 간 <strong>데이터 스키마·라벨 정의·단위 체계의 정합성</strong> 에 결정적으로 의존하므로, 본 사업은 참여사 온보딩을 4 단계(① 참여의향 확인·사전심사 → ② 표준 스키마·라벨 정의서 공유 및 로컬 매핑 → ③ 보안·프라이버시 규약 서명 → ④ 파일럿 라운드 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>회 검증)로 구조화한다. 각 참여사에는 로컬 학습 클라이언트([기술스택] 기반)와 데이터 전처리 모듈이 동일 컨테이너 이미지로 배포되며, 참여사 내부의 MES·SCADA·PLC 데이터와는 읽기 전용 커넥터로 연동되어 <strong>원천 시스템의 운영 영향 최소화</strong> 원칙을 유지한다.</p>
+<p>거버넌스 차원에서는 <strong>운영위원회(주관기관 + 참여사 대표 + 외부 감리)</strong> 를 구성하여 (1) 참여·탈퇴 조건, (2) 모델 기여도 평가 및 성과 배분 원칙, (3) 프라이버시 예산·보안 사고 대응 절차, (4) 글로벌 모델의 <strong>지식재산권 귀속 및 상업적 이용 범위</strong> 를 성문화한 <strong>참여사간 협약서(Consortium Agreement)</strong> 를 체결한다. 협약서는 영업비밀 보호 의무, 학습 종료 후 로컬 가중치 폐기 의무, 이탈 시 기여분 처리 방식 등을 포함하며, 국내 개인정보보호법·산업기술보호법·부정경쟁방지법과의 정합성을 사전 법률 검토(확인 필요)하여 반영한다.</p>
+</blockquote>
+<ul>
+<li><strong>키워드·수치</strong>: 온보딩 4 단계, 스키마 정합화, 컨테이너 배포, 운영위원회, 참여사간 협약서, 기여도 평가, IP 귀속, 산업기술보호법.</li>
+<li><strong>대체 문구 옵션</strong>:</li>
+<li>(대중소상생 맥락) "대기업 [조건] 이 모델 주도권을 갖고 중소 참여사가 데이터 기여자로 참여하는 비대칭 구조에 맞춰, 기여도 평가는 <strong>Shapley 값 기반 정량화</strong> 로 투명성을 확보한다." 추가.</li>
+<li>(디지털 경남 맥락) "경남테크노파크 (확인 필요) 를 중립 집계 서버 운영 주체로 지정하여 참여사 간 신뢰를 확보한다." 추가.</li>
+</ul>
+<hr />
+<h3 id="blk-fl-e-62">BLK-FL-E — 산단 전체 동반성장·상생 효과 (삽입: 6.2 정성효과)<a class="headerlink" href="#blk-fl-e-62" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: 정성적 기대효과에 "단일 기업 효과를 넘는 산단·지역 차원 파급" 을 1 문단으로 추가.</li>
+<li><strong>초안 (문어체)</strong>:</li>
+</ul>
+<blockquote>
+<p>본 사업이 구축하는 연합학습 기반 공동 AI 는 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 단독의 성과를 넘어, 부산·경남 제조 클러스터 내 중소 참여사가 <strong>원천 데이터 공유 없이도 대기업급 AI 모델의 품질</strong> 에 근접할 수 있는 <strong>디지털 동반성장 인프라</strong> 로 확장된다. 희소 불량·특수 조건에 대한 학습 표본이 클러스터 차원에서 축적됨에 따라 이상탐지·품질예측 성능이 참여사 평균 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>% 향상되고, 신규 참여사는 파일럿 라운드 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>회만으로 글로벌 모델의 편익을 수혈받을 수 있어 AI 도입 진입 장벽이 근본적으로 낮아진다. 이는 단일 기업 단위의 디지털 격차를 완화하고, 산단 전체의 평균 AI 성숙도를 끌어올리는 <strong>수평적 상생 구조</strong> 로 작동하여 대중소상생·지역 혁신클러스터 정책 목표와 직접 정합한다.</p>
+</blockquote>
+<ul>
+<li><strong>키워드·수치</strong>: 디지털 동반성장, 평균 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>% 향상, 참여사 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>개, 디지털 격차 완화, 수평적 상생, 지역 혁신클러스터.</li>
+<li><strong>대체 문구 옵션</strong>:</li>
+<li>(수출·글로벌 강조) "… 클러스터 공동 모델 자체를 산단 공동 수출자산으로 활용하는 장기 비전과도 연결된다."</li>
+</ul>
+<hr />
+<h3 id="blk-fl-f-track-2-mlops">BLK-FL-F — 연합 모델의 운영·드리프트 관리 (삽입: Track 2 MLOps)<a class="headerlink" href="#blk-fl-f-track-2-mlops" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: MLOps 섹션에 <strong>연합 모델 특유의 운영 난점</strong> — 참여사별 드리프트, 라운드 스케줄, 클라이언트 가용성 — 을 1 문단으로 명시.</li>
+<li><strong>초안 (문어체)</strong>:</li>
+</ul>
+<blockquote>
+<p>연합학습 모델은 단일 사이트 모델 대비 <strong>참여사별 데이터 분포 편이(non-IID)</strong>, <strong>클라이언트 가용성 변동</strong>, <strong>라운드 간 통신 비용</strong> 이라는 3 대 운영 난점을 추가로 갖는다. 본 사업의 MLOps 는 이에 대응하여 (1) 참여사별 로컬 모델과 글로벌 모델의 <strong>성능·드리프트 지표를 분리 모니터링</strong> 하는 대시보드, (2) 드리프트 탐지 시 자동으로 <strong>부분 재학습 라운드</strong> 를 트리거하는 규칙 엔진, (3) 일부 참여사의 일시적 미참여를 허용하는 <strong>비동기 집계(Asynchronous FedAvg)</strong> 옵션, (4) 라운드별 차등 프라이버시 예산 소진 현황과 통신량 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>GB 를 추적하는 <strong>프라이버시·리소스 대시보드</strong> 를 포함한다. 이로써 모델 품질 저하와 프라이버시 예산 고갈이 조기에 감지되어 공동 모델의 지속 가능성이 담보된다.</p>
+</blockquote>
+<ul>
+<li><strong>키워드·수치</strong>: non-IID, 클라이언트 가용성, 통신 비용 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>GB, 드리프트 분리 모니터링, 비동기 FedAvg, 프라이버시 예산 ε 추적, 부분 재학습.</li>
+<li><strong>대체 문구 옵션</strong>:</li>
+<li>(Flower/NVFlare 특정 스택) "Flower (확인 필요) 의 Strategy API 를 활용해 FedAvg·FedProx·FedAdam 을 시나리오별로 분기 적용한다." 추가.</li>
+</ul>
+<hr />
+<h3 id="blk-fl-g-faq">BLK-FL-G — 부록 FAQ (삽입: 부록)<a class="headerlink" href="#blk-fl-g-faq" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>용도</strong>: 심사위원·참여사 법무팀이 흔히 제기하는 질문에 대한 공식 답변 초안. 사업계획서 부록 또는 별첨 Q&amp;A 로 삽입(약 0.5 페이지).</li>
+</ul>
+<p><strong>Q1. 원천 데이터가 외부로 나가지 않는다고 하는데, 모델 업데이트에서 학습 데이터가 복원될 가능성은 없는가?</strong></p>
+<blockquote>
+<p>이론적으로는 가중치·그래디언트 업데이트에 대해 <strong>membership inference · model inversion · gradient leakage 공격</strong> 이 연구되어 왔으며, 특히 배치 크기가 작거나 공격자가 여러 라운드 업데이트를 관찰할 수 있는 경우 부분적 복원 위험이 존재한다. 본 사업은 이에 대응하여 (1) <strong>차등 프라이버시(DP-SGD)</strong> 기반 노이즈 주입으로 개별 샘플의 영향을 수학적으로 상한 처리하고, (2) <strong>보안 집계(Secure Aggregation)</strong> 로 중앙 서버조차 개별 참여사의 업데이트를 복원할 수 없도록 하며, (3) 프라이버시 예산(ε·δ) 을 라운드별로 누적 추적해 상한 도달 시 학습을 중단하는 3 중 방어선을 적용한다.</p>
+</blockquote>
+<p><strong>Q2. 차등 프라이버시 노이즈가 커지면 모델 성능이 떨어지지 않는가? 어떻게 절충하는가?</strong></p>
+<blockquote>
+<p>DP 노이즈 강도는 프라이버시 예산 ε 값으로 조절되며, ε 이 작을수록 강한 보호 대신 성능 손실이 발생하는 <strong>프라이버시-유용성 트레이드오프(Privacy-Utility Trade-off)</strong> 가 존재한다. 본 사업은 파일럿 라운드에서 ε ∈ [조건] 구간을 스캔해 참여사 합의 하에 <strong>운영 ε 기본값</strong> 을 확정하고, 이상탐지·품질예측 등 민감도가 낮은 과제와 공정설계 추천 등 민감도가 높은 과제에 대해 <strong>과제별 차등 ε</strong> 을 적용한다. (구체 ε·δ 값은 확인 필요.)</p>
+</blockquote>
+<p><strong>Q3. 한 참여사가 악의적으로 오염된 업데이트를 보내 글로벌 모델을 훼손하면 어떻게 되는가?</strong></p>
+<blockquote>
+<p><strong>모델 포이즈닝(Model Poisoning) · 백도어 공격</strong> 리스크이며, 본 사업은 (1) Krum · Median · Trimmed-Mean 등 <strong>비잔틴 강건 집계(Byzantine-Robust Aggregation)</strong> 알고리즘을 기본 채택하고, (2) 업데이트 이상치 탐지 규칙을 중앙 서버에 장착하며, (3) 참여사 협약서에 <strong>데이터·모델 무결성 보증 의무 및 위반 시 제재</strong> 조항을 성문화한다.</p>
+</blockquote>
+<p><strong>Q4. 참여사의 영업비밀·지식재산권은 어떻게 보호되며, 공동 모델의 소유권은 누구에게 있는가?</strong></p>
+<blockquote>
+<p>원천 데이터는 각 참여사 경계 내에 잔존하므로 영업비밀 직접 유출 경로는 차단된다. 글로벌 모델의 <strong>지식재산권 귀속·상업적 이용 범위</strong> 는 참여사간 협약서(Consortium Agreement)에 명시하며, 본 사업에서는 "공동 귀속 + 내부 비상업적 이용 자유 + 외부 상업화 시 별도 합의" 원칙을 기본값으로 제안한다. 단, 산업기술보호법·부정경쟁방지법·개인정보보호법상 구체 요건은 사전 법률 검토(확인 필요)로 확정한다.</p>
+</blockquote>
+<p><strong>Q5. 특정 참여사가 중도 이탈하면 이미 학습된 공동 모델에 그 참여사의 기여분이 남아 있어 문제가 되지 않는가?</strong></p>
+<blockquote>
+<p><strong>기계 비학습(Machine Unlearning)</strong> · 참여사 기여분 제거 연구가 활발하나 완전한 제거는 기술적으로 난제이다. 본 사업은 협약서에 (1) 이탈 통지 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 전 사전 고지 의무, (2) 이탈 시점 이후 라운드 참여 중단, (3) 필요 시 해당 참여사 제외 재학습 조항을 명시하고, 실무적으로는 <strong>기여분 제거 재학습 비용</strong> 을 이탈 참여사와 잔류 참여사 간 분담하는 방식을 기본 옵션으로 제시한다.</p>
+</blockquote>
+<p><strong>Q6. 사고(프라이버시 침해·데이터 유출·모델 오작동) 발생 시 법적 책임은 누가 지는가?</strong></p>
+<blockquote>
+<p>사고 유형별로 귀책 주체가 달라지므로 협약서에 <strong>책임 매트릭스(Liability Matrix)</strong> 를 포함한다. 예를 들어, 참여사 로컬 환경에서 발생한 데이터 유출은 해당 참여사 책임, 중앙 집계 서버의 운영 과실은 주관기관 책임, 알고리즘 설계 결함은 수행기관 책임으로 구분하며, 공동 책임 구간(예: 집계 알고리즘의 프라이버시 보증 불충분)은 책임 비율을 사전 합의한다. <strong>배상 책임 보험 가입</strong> 및 <strong>면책 조항</strong> 의 구체 범위는 사전 법률 검토(확인 필요)로 확정한다.</p>
+</blockquote>
+<hr />
+<h2 id="4">4. 관련 시나리오·지원사업<a class="headerlink" href="#4" title="Permanent link">¤</a></h2>
+<h3 id="41-c-5">4.1 시나리오 카탈로그 확장 축 — C-5 매핑<a class="headerlink" href="#41-c-5" title="Permanent link">¤</a></h3>
+<ul>
+<li><code>scenario/catalog.md</code> <strong>부록 C-5 연합학습·프라이버시 보존 AI</strong> 가 본 모듈의 1 차 확장 축.</li>
+<li>관련 인접 축: <strong>C-4 공급망·대중소 상생 AI</strong> (협력사 재고·품질 가시성 공유 플랫폼 — 연합학습 기반), <strong>C-3 생성형 AI 기반 제조 설계</strong> (제조 특화 sLM 의 연합학습 파인튜닝 확장 여지).</li>
+</ul>
+<h3 id="411">4.1.1 연합학습 결합에 적합한 카탈로그 시나리오<a class="headerlink" href="#411" title="Permanent link">¤</a></h3>
+<p>본 모듈은 특정 단일 시나리오 대응이 아닌 <strong>기존 시나리오에 "산단 공동 학습" 레이어를 덧씌우는</strong> 구조이다. 데이터 희소성이 심하거나 원재료·설비·공정 특성이 여러 참여사 간에 유사한 시나리오가 주 결합 후보이다.</p>
+<table>
+<thead>
+<tr>
+<th>카탈로그 시나리오</th>
+<th>결합 가치</th>
+<th>주 사용 블록</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a></strong> 설비 예지보전 (압연기 롤·베어링·구동부)</td>
+<td>고장 라벨 절대적으로 희소 — 산단 공동 학습 시 표본 규모 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>배 확대 가능</td>
+<td>BLK-FL-B (데이터 희소성), BLK-FL-C (아키텍처), BLK-FL-E (동반성장)</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a></strong> 표면결함 비전 검사</td>
+<td>신규 결함 유형이 한 공장에 1~2건/년 수준 — 연합학습으로 클래스 다양성 확보</td>
+<td>BLK-FL-B, BLK-FL-C</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a></strong> 비파괴검사 UT/ECT 자동 판정</td>
+<td>결함 신호 라벨 희소 + 공급사별 재질 차이 — 클러스터 공동 라벨 집합 유리</td>
+<td>BLK-FL-B, BLK-FL-C</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a></strong> 배합 분산도 예측</td>
+<td>원료 배합비 변동이 참여사별 다양 — 공동 모델이 일반화 성능 향상</td>
+<td>BLK-FL-B, BLK-FL-E</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-rub-05" title="고무 제품 외관 비전 검사 (표면 결함·이물)" class="scn-link">SCN-RUB-05</a></strong> 고무 외관 비전 검사</td>
+<td>결함 데이터 부족 (Self-supervised 사전학습 이후에도) — 연합학습 보완</td>
+<td>BLK-FL-B, BLK-FL-C</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a></strong> CNC 공구 마모·파손 예지</td>
+<td>중소 정밀가공사 다수 참여 시 공구·재료 조합 다양성 확보</td>
+<td>BLK-FL-A, BLK-FL-B</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a></strong> 용접 비드 비전·파라미터 최적화</td>
+<td>로봇 용접 조건·결함 데이터의 참여사 간 보완</td>
+<td>BLK-FL-B, BLK-FL-F</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-mlo-02" title="피쳐 스토어 및 모델 레지스트리 구축" class="scn-link">SCN-MLO-02</a></strong> 피쳐 스토어·모델 레지스트리</td>
+<td>산단 공동 플랫폼의 인프라 축 — 연합학습 집계 서버와 통합 운영</td>
+<td>BLK-FL-C, BLK-FL-D, BLK-FL-F</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a>~04</strong> 전 LLM·RAG 시나리오</td>
+<td>제조 특화 sLM 의 <strong>도메인 연합 파인튜닝</strong> — 영업비밀 보존한 공동 모델</td>
+<td>BLK-FL-A (거시), BLK-FL-C (FL 구조) + Track 3 결합</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>본 표는 "어떤 기존 시나리오가 연합학습 구조 위에서 가장 큰 효용을 얻는가" 를 판정하는 1 차 참조. 사업계획서 작성 시 고객사 공정 특성·데이터 성숙도·참여사 구성에 따라 우선순위를 재조정한다.</p>
+</blockquote>
+<h3 id="42">4.2 지원사업 매핑<a class="headerlink" href="#42" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>지원사업</th>
+<th>본 모듈 적용 포인트</th>
+<th>우선 결합 블록</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>대중소상생 (LG·삼성·포스코 AI 트랙)</strong></td>
+<td>대기업 플랫폼 + 중소 참여사 데이터 기여의 비대칭 연합 구조. 기여도 평가·IP 귀속 조항이 공고 요구사항과 직접 정합.</td>
+<td>BLK-FL-A, D, E, G</td>
+</tr>
+<tr>
+<td><strong>2026 디지털 기업 in 경남</strong></td>
+<td>경남테크노파크(확인 필요) 중립 집계 서버 구도. 지식그래프·RDBMS 와 연합학습 병행.</td>
+<td>BLK-FL-A, C, D, F</td>
+</tr>
+<tr>
+<td><strong>뿌리산업 첨단화</strong></td>
+<td>열처리·표면처리·주조 뿌리기업 간 희소 불량 데이터 공동 학습. C-5 + C-4 결합.</td>
+<td>BLK-FL-B, C, E</td>
+</tr>
+<tr>
+<td><strong>제조AI특화 스마트공장</strong></td>
+<td>단일 공장 고도화 중심이라 기본 범위 바깥이지만, 2 단계 확장 시나리오로 본 모듈을 별첨 형태로 제시 가능.</td>
+<td>BLK-FL-A, B (별첨)</td>
+</tr>
+<tr>
+<td><strong>전사적 DX 촉진 R&amp;D</strong></td>
+<td>다년 R&amp;D 성격상 연합학습 연구개발 과제로 직접 편입 가능(Byzantine 강건성·DP 예산 최적화 등 심화 주제).</td>
+<td>BLK-FL-C, F, G</td>
+</tr>
+<tr>
+<td><strong>클라우드 종합솔루션 지원사업 (SaaS)</strong></td>
+<td>중립 SaaS 집계 서버 제공자로서 CSP(네이버클라우드 등) 연계 가점.</td>
+<td>BLK-FL-C, D</td>
+</tr>
+</tbody>
+</table>
+<p>상세 공고 조건·예산·신청 시기는 <code>other/support-programs.md</code> 참조.</p>
+<hr />
+<h2 id="5">5. 삽화·도식 후보<a class="headerlink" href="#5" title="Permanent link">¤</a></h2>
+<table>
+<thead>
+<tr>
+<th>도식 ID</th>
+<th>삽화명</th>
+<th>배치 지점</th>
+<th>형식</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FIG-FL-1</td>
+<td><strong>연합학습 전체 아키텍처 다이어그램</strong> (로컬 클라이언트 N 개 ↔ 중앙 집계 서버 ↔ 글로벌 모델 배포)</td>
+<td>BLK-FL-C 1 문단 직후</td>
+<td>Mermaid flowchart + 원본 데이터 경계선 하이라이트</td>
+</tr>
+<tr>
+<td>FIG-FL-2</td>
+<td><strong>참여사 네트워크 토폴로지</strong> (부산·경남 클러스터 지도 + 참여사 노드 + 집계 서버 중립 위치)</td>
+<td>BLK-FL-A 또는 BLK-FL-E 직후</td>
+<td>지도형 인포그래픽</td>
+</tr>
+<tr>
+<td>FIG-FL-3</td>
+<td><strong>모델 집계 라운드 시퀀스 다이어그램</strong> (Round t: 배포 → 로컬 학습 → 업데이트 송신 → 보안 집계 → 글로벌 모델 갱신)</td>
+<td>BLK-FL-C 2 문단 또는 BLK-FL-F 근처</td>
+<td>Sequence diagram</td>
+</tr>
+<tr>
+<td>FIG-FL-4</td>
+<td><strong>거버넌스 구조도</strong> (운영위원회 + 주관기관 + 참여사 대표 + 외부 감리 + 법률 자문)</td>
+<td>BLK-FL-D 직후</td>
+<td>조직도 / 계층 다이어그램</td>
+</tr>
+<tr>
+<td>FIG-FL-5</td>
+<td><strong>프라이버시 방어선 3 중 구조</strong> (DP 노이즈 + 보안 집계 + TLS·MPC)</td>
+<td>BLK-FL-C 2 문단 또는 BLK-FL-G Q1 직후</td>
+<td>동심원 / 레이어 다이어그램</td>
+</tr>
+<tr>
+<td>FIG-FL-6</td>
+<td><strong>프라이버시-유용성 트레이드오프 곡선</strong> (ε vs 모델 정확도)</td>
+<td>BLK-FL-G Q2 직후</td>
+<td>라인 차트 개념도</td>
+</tr>
+<tr>
+<td>FIG-FL-7</td>
+<td><strong>책임 매트릭스</strong> (사고 유형 × 책임 주체)</td>
+<td>BLK-FL-G Q6 직후</td>
+<td>매트릭스 표</td>
+</tr>
+</tbody>
+</table>
+<p>Mermaid 예시 (FIG-FL-1 골격):</p>
+<h2 id="_1"><img alt="참여사 A 경계 (다이어그램 1)" src="../../assets/diagrams/federated-learning/diagram-1.svg" /><a class="headerlink" href="#_1" title="Permanent link">¤</a></h2>
+<h2 id="6">6. 유지보수 지침<a class="headerlink" href="#6" title="Permanent link">¤</a></h2>
+<p>본 모듈은 다음 조건 변경 시 지정 블록을 수정한다.</p>
+<table>
+<thead>
+<tr>
+<th>변경 트리거</th>
+<th>수정 대상 블록</th>
+<th>조치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>참여사 수·규모 변경</td>
+<td>BLK-FL-A, B, D, E / FIG-FL-2</td>
+<td><code>[수치]</code> 참여사 수·표본 규모 교체, 토폴로지 재작성</td>
+</tr>
+<tr>
+<td>기술 스택 교체(Flower ↔ NVFlare ↔ TFF ↔ PySyft)</td>
+<td>BLK-FL-C, D, F</td>
+<td><code>[기술스택]</code> 플레이스홀더 일괄 교체, 프레임워크별 특이 옵션(API 용어) 조정</td>
+</tr>
+<tr>
+<td>보안 등급 상향(기밀·민간 → 공공·국방급)</td>
+<td>BLK-FL-C, D, G / FIG-FL-5</td>
+<td>MPC·HE 기본화, DP ε 하향, 책임 매트릭스 강화</td>
+</tr>
+<tr>
+<td>지원사업 공고 개정</td>
+<td>4.2 지원사업 매핑 표 / BLK-FL-A</td>
+<td><code>other/support-programs.md</code> 최신본과 정합성 재검토</td>
+</tr>
+<tr>
+<td>법령 개정(개인정보보호법·산업기술보호법·AI기본법 등)</td>
+<td>BLK-FL-D 협약서 조항, BLK-FL-G Q4/Q6</td>
+<td>사전 법률 검토 재실시, 관련 문장의 "(확인 필요)" 해소</td>
+</tr>
+<tr>
+<td>참여 업종 변경(철강 → 고무·폴리머 → 뿌리·정밀가공)</td>
+<td>BLK-FL-B 대체 문구, 4.2 지원사업 매핑</td>
+<td>업종별 희소 불량 사례·지원사업 우선순위 교체</td>
+</tr>
+<tr>
+<td>집계 알고리즘 변경(FedAvg → FedProx → FedAdam → Krum 등)</td>
+<td>BLK-FL-C 1 문단, BLK-FL-F</td>
+<td>알고리즘명 교체, 비잔틴 강건성 서술 조정</td>
+</tr>
+<tr>
+<td>프라이버시 예산 정책 변경</td>
+<td>BLK-FL-C 2 문단, BLK-FL-G Q2, FIG-FL-6</td>
+<td>ε·δ 운영값 재확정, 트레이드오프 곡선 갱신</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7">7. 확인 필요 항목<a class="headerlink" href="#7" title="Permanent link">¤</a></h2>
+<p>본 모듈 내에서 사용자(또는 후속 업데이트)가 1 차 자료로 확정해야 하는 "(확인 필요)" 항목.</p>
+<ol>
+<li><strong>대중소상생(LG·삼성·포스코 AI 트랙) 2026 공고의 연합학습·데이터 공유 구체 요건</strong> — 대기업 플랫폼 필수 연계 여부, 참여사 IP 귀속 표준 조항 유무. (BLK-FL-A·BLK-FL-D 인용 문구 확정 근거)</li>
+<li><strong>2026 디지털 기업 in 경남 공고의 주관기관 지정 방식</strong> — 경남테크노파크가 중립 집계 서버 운영 주체로 공식 지정되는지. (BLK-FL-D 대체 문구 근거)</li>
+<li><strong>뿌리산업 첨단화 2026 공고의 뿌리기업 확인증 요건 및 참여사 자격 조건</strong>. (4.2 매핑 표 근거)</li>
+<li><strong>국내 연합학습 관련 법령·가이드라인</strong> — 개인정보보호법(가명처리·결합), 산업기술보호법, 부정경쟁방지법, AI 기본법(제정/시행 여부), 개인정보위·KISA 연합학습 가이드라인 최신판. (BLK-FL-D 협약서, BLK-FL-G Q4·Q6 근거)</li>
+<li><strong>참여사간 협약서(Consortium Agreement) 표준 양식</strong> — 국내 산단 공동 AI 사례의 표준 템플릿 존재 여부 및 조항 수준. (BLK-FL-D 근거)</li>
+<li><strong>기여도 평가 기법(Shapley 값 기반 등)의 표준 운영 사례</strong> — 국내외 연합학습 사업에서 실제 채택된 평가식·성과 배분 비율. (BLK-FL-D 대체 문구 근거)</li>
+<li><strong>운영 ε·δ 권장 구간</strong> — 제조 공정 데이터에 대한 국내 산업별 DP 운영 기본값 가이드(개인정보위·NIA 등 발간 자료). (BLK-FL-G Q2 근거)</li>
+<li><strong>배상 책임 보험 상품</strong> — 국내 AI·데이터 사고 관련 책임 보험 상품의 적용 범위 및 한도. (BLK-FL-G Q6 근거)</li>
+<li><strong>집계 서버 인프라의 국산 CSP 연계 조건</strong> — 네이버클라우드·KT클라우드 등의 보안 집계·TEE(Trusted Execution Environment) 서비스 지원 현황. (FIG-FL-1, 지원사업 5 매핑 근거)</li>
+<li><strong>Flower/NVFlare/TFF/PySyft 등 기술 스택의 상용 레퍼런스 비교</strong> — 국내 제조 산단 도입 사례 유무, 한국어 문서 지원 수준. (BLK-FL-C·BLK-FL-F 기술 스택 선택 근거)</li>
+</ol>
+<hr />
+<blockquote>
+<p><strong>본 모듈 사용 원칙</strong> — 각 블록은 100~300 자의 자립 단위로 설계되었으므로, 대상 사업계획서의 논조·분량 제약에 맞춰 블록 단위로 삽입·삭제·재배열할 수 있다. 실명 기업·구체 수치는 원칙적으로 사용하지 않으며, "부산·경남 제조 클러스터", "중소 참여사", "<span class="placeholder-tag" data-placeholder="수치">[수치]</span>개 참여사" 등 범위 표현을 유지한다. 영업비밀·차등 프라이버시·법적 책임의 3 대 쟁점은 본 모듈이 직접 다루며, 사업계획서 어디에 삽입되더라도 이 3 축이 하나라도 누락되지 않도록 BLK-FL-C·D·G 중 최소 1 개 이상을 반드시 포함하는 것을 권장한다.</p>
+</blockquote>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>모듈_연합학습_산단공동.md</code></li>
+<li><strong>자산 군</strong>: 🧩 Cross-cutting 모듈</li>
+<li><strong>slug 경로</strong>: <code>module/federated-learning.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../safety/" class="md-footer__link md-footer__link--prev" aria-label="이전: 중대재해 안전 (CCTV·웨어러블)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                중대재해 안전 (CCTV·웨어러블)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../oem-supply/" class="md-footer__link md-footer__link--next" aria-label="다음: OEM 공급망 정합 (자동차·조선·2 차전지)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                OEM 공급망 정합 (자동차·조선·2 차전지)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

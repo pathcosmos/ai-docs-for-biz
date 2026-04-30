@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="특수강관 RAG 시나리오 상세 — 3 카드 세로형"
+     class="zoomable">
+  <title>시나리오 상세 — 특수강관 RAG (STL-07 + LLM-01 + LLM-02)</title>
+  <desc>특수강관 도메인 3 시나리오 — STL-07 비파괴 검사 (UT/MT/PT) + LLM-01 작업지시서 RAG + LLM-02 장애 응답 RAG — 의 모델·KPI·도입난이도·기간을 RAG 양축 강조 세로 stack 으로 시각화. 다품종 소량 + 고품질 인증 (ASME·API) 컨텍스트.</desc>
+
+  <defs>
+    <linearGradient id="sp-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <linearGradient id="sp-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0FDFA"/>
+      <stop offset="100%" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="sp-rag-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CCFBF1"/>
+      <stop offset="100%" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <linearGradient id="sp-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#99F6E4"/>
+    </linearGradient>
+    <filter id="sp-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F0FDFA"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#sp-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">특수강관 RAG 양축</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.9)">PKG-3 · 3 SCENARIOS · RAG-CENTRIC</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#F0FDFA">YCP특수강 · 다품종 소량 + ASME·API 인증 — 9 개월 RAG 통합</text>
+
+  <!-- STL-07 NDT 카드 -->
+  <g filter="url(#sp-shadow)">
+    <g transform="translate(40, 120)">
+      <rect width="520" height="120" rx="10" fill="url(#sp-card)" stroke="#14B8A6" stroke-width="2"/>
+      <rect width="80" height="120" rx="10" fill="#14B8A6"/><rect x="70" width="10" height="120" fill="#14B8A6"/>
+      <text x="40" y="42" text-anchor="middle" class="en" font-size="11" fill="white">STL-07</text>
+      <text x="40" y="68" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">①</text>
+      <text x="40" y="92" text-anchor="middle" class="ko-r" font-size="9" fill="white">NDT</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#0F766E">비파괴 검사 자동 판정</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">UT (초음파) · MT (자분) · PT (침투) · X-ray</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#0D9488">CNN 분류 + 회귀 (결함 깊이/길이) — 시그널 + 이미지</text>
+      <text x="100" y="72" class="ko-r" font-size="9" fill="#14B8A6">KPI: 판독 시간 -60% · 미검 -40% · 검사원 1 명/교대 절감</text>
+      <rect x="100" y="82" width="380" height="6" rx="3" fill="#CCFBF1"/>
+      <rect x="100" y="82" width="280" height="6" rx="3" fill="url(#sp-bar)"/>
+      <text x="100" y="102" class="ko-r" font-size="9" fill="#475569">난이도 ★★★★ · 기간 9-12 개월 · TRL 5→7 · ROI 2.0 년</text>
+    </g>
+
+    <!-- LLM-01 RAG 카드 (강조) -->
+    <g transform="translate(40, 252)">
+      <rect width="520" height="120" rx="10" fill="url(#sp-rag-card)" stroke="#0F766E" stroke-width="3"/>
+      <rect width="80" height="120" rx="10" fill="#0F766E"/><rect x="70" width="10" height="120" fill="#0F766E"/>
+      <text x="40" y="42" text-anchor="middle" class="en" font-size="11" fill="white">LLM-01</text>
+      <text x="40" y="68" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★1</text>
+      <text x="40" y="92" text-anchor="middle" class="ko-r" font-size="9" fill="#5EEAD4">RAG-A</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#134E4A">작업지시서·SOP·도면 RAG ★</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">SOP·작업표준 + 도면·재질성적서 (Mill Cert)</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#0F766E">sLM 8B + 한국어 임베딩 + 권한·보안 (제품별 격리)</text>
+      <text x="100" y="72" class="ko-r" font-size="9" fill="#14B8A6">KPI: 검색 시간 -75% · 신입 OJT -30% · 작업 오류 -25%</text>
+      <rect x="100" y="82" width="380" height="6" rx="3" fill="#CCFBF1"/>
+      <rect x="100" y="82" width="200" height="6" rx="3" fill="url(#sp-bar)"/>
+      <text x="100" y="102" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 4-6 개월 · TRL 7→9 · ROI 1.4 년</text>
+    </g>
+
+    <!-- LLM-02 장애 RAG 카드 -->
+    <g transform="translate(40, 384)">
+      <rect width="520" height="120" rx="10" fill="url(#sp-rag-card)" stroke="#0F766E" stroke-width="3"/>
+      <rect width="80" height="120" rx="10" fill="#0F766E"/><rect x="70" width="10" height="120" fill="#0F766E"/>
+      <text x="40" y="42" text-anchor="middle" class="en" font-size="11" fill="white">LLM-02</text>
+      <text x="40" y="68" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★2</text>
+      <text x="40" y="92" text-anchor="middle" class="ko-r" font-size="9" fill="#5EEAD4">RAG-B</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#134E4A">장애·이상 대응 지식 검색 ★</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">설비 알람 로그 + 정비 보고서 + 베테랑 인터뷰</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#0F766E">알람 → 유사 사례 검색 → 조치 가이드 생성 (LLM)</text>
+      <text x="100" y="72" class="ko-r" font-size="9" fill="#14B8A6">KPI: MTTR -35% · 베테랑 의존 -50% · 야간 긴급 호출 -40%</text>
+      <rect x="100" y="82" width="380" height="6" rx="3" fill="#CCFBF1"/>
+      <rect x="100" y="82" width="240" height="6" rx="3" fill="url(#sp-bar)"/>
+      <text x="100" y="102" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6 개월 · TRL 6→8 · ROI 1.6 년</text>
+    </g>
+  </g>
+
+  <!-- RAG 양축 강조 다이어그램 (520~640) -->
+  <g transform="translate(40, 524)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#14B8A6" stroke-width="2" filter="url(#sp-shadow)"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#0F766E">RAG 양축 — 작업 표준화 + 장애 대응 통합 지식 플랫폼</text>
+    <!-- LLM-01 box -->
+    <g transform="translate(20, 35)">
+      <rect width="220" height="55" rx="6" fill="#CCFBF1" stroke="#0F766E" stroke-width="1"/>
+      <text x="110" y="20" text-anchor="middle" class="ko" font-size="11" fill="#134E4A">LLM-01 RAG-A (사전)</text>
+      <text x="110" y="36" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">SOP · 도면 · 성적서 · 표준</text>
+      <text x="110" y="48" text-anchor="middle" class="ko-r" font-size="9" fill="#0F766E">▸ 신입 OJT · 작업 일관성</text>
+    </g>
+    <!-- arrow -->
+    <text x="265" y="68" text-anchor="middle" class="ko" font-size="16" fill="#0F766E">⇄</text>
+    <!-- LLM-02 box -->
+    <g transform="translate(280, 35)">
+      <rect width="220" height="55" rx="6" fill="#CCFBF1" stroke="#0F766E" stroke-width="1"/>
+      <text x="110" y="20" text-anchor="middle" class="ko" font-size="11" fill="#134E4A">LLM-02 RAG-B (사후)</text>
+      <text x="110" y="36" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">알람 · 정비 · 베테랑 지식</text>
+      <text x="110" y="48" text-anchor="middle" class="ko-r" font-size="9" fill="#0F766E">▸ MTTR · 긴급 대응</text>
+    </g>
+  </g>
+
+  <!-- 종합 -->
+  <g transform="translate(40, 638)">
+    <rect width="520" height="50" rx="6" fill="#FBBF24" filter="url(#sp-shadow)"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#0F172A">패키지 3 (특수강관 4 — STL-07·08·11 + LLM-01) · 9 개월 통합</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#0F172A">평균 ROI 1.7 년 · 트랙 3 (RAG) 중심 + 트랙 1 (NDT) 부가</text>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(40, 698)">
+    <rect width="520" height="82" rx="8" fill="white" stroke="#14B8A6" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#0F766E">RAG 도입 핵심 — 보안·인증·다품종 컨텍스트</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ ASME·API 인증 추적성: 도면 버전 + 재질성적서 자동 매칭</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ 다품종 소량: 제품별 권한 격리 + 임베딩 인덱스 분리</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#14B8A6">▸ 출처: 사업계획서_패키지3_특수강관_파일럿.md §3·5·7</text>
+  </g>
+</svg>

@@ -1,0 +1,2258 @@
+/* extra.css — Pretendard 폰트 + 색상 팔레트 + 한국어 가독성 */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+:root {
+  --md-text-font: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --md-code-font: 'D2Coding', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* 한국어 본문 line-height 보강 */
+.md-typeset {
+  font-feature-settings: "kern" 1;
+  word-break: keep-all;
+  line-height: 1.7;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  word-break: keep-all;
+  font-weight: 700;
+}
+
+/* 출처 인용 박스 강조 */
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-accent-fg-color);
+  background: rgba(var(--md-default-fg-color--lightest), 0.04);
+  padding: 0.5em 0.9em;
+  margin: 0.6em 0;
+}
+
+.md-typeset blockquote p:first-child {
+  margin-top: 0;
+}
+
+.md-typeset blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* 표 가독성 보강 */
+.md-typeset table:not([class]) {
+  font-size: 0.85em;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+/* 카드 그리드 */
+.md-typeset .grid.cards {
+  margin: 1em 0;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.4rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 플레이스홀더 강조 (Stage 2 hooks 활성 후 효과) */
+.md-content [data-placeholder],
+.md-content code:has-text('[고객사]') {
+  background: rgba(245, 127, 23, 0.12);
+  border: 1px dashed #F57F17;
+  border-radius: 3px;
+  padding: 0 4px;
+  font-family: var(--md-code-font);
+  color: #E65100;
+  font-size: 0.92em;
+}
+
+/* =============================================================================
+   Phase E9 Stage 2 보강 — 사용자 피드백 #2·#3 대응
+   사이드바 활성 항목 강조 + 브레드크럼 + 페이지 정리
+   ============================================================================= */
+
+/* 사이드바 활성 항목 — 그라데이션 + 좌측 보더 + 굵은 글씨 */
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg, rgba(63, 81, 181, 0.10), transparent);
+  border-left: 3px solid var(--md-primary-fg-color);
+  font-weight: 700;
+  padding-left: calc(0.6rem - 3px);
+  border-radius: 0 4px 4px 0;
+}
+
+/* 사이드바 섹션 헤더 (9 분류 그룹) — 더 굵게·간격 확보 */
+.md-nav__title {
+  font-weight: 800;
+  font-size: 0.78rem;
+  text-transform: none;
+  color: var(--md-primary-fg-color);
+  margin-top: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+/* 사이드바 항목 간격 — 한국어 줄 간격 보강 */
+.md-nav__item {
+  padding-block: 0.05rem;
+}
+
+.md-nav__link {
+  word-break: keep-all;
+  line-height: 1.5;
+}
+
+/* 브레드크럼 영역 — 페이지 상단 위치 강조 */
+.md-content__inner > nav.md-path,
+.md-path {
+  background: rgba(63, 81, 181, 0.05);
+  border-radius: 0.4rem;
+  padding: 0.4em 0.8em;
+  margin-bottom: 0.8em;
+  font-size: 0.78em;
+  border-left: 3px solid var(--md-primary-fg-color);
+}
+
+.md-path__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  align-items: center;
+}
+
+.md-path__item {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-path__item:not(:last-child)::after {
+  content: " › ";
+  margin-left: 0.4em;
+  color: var(--md-default-fg-color--lighter);
+}
+
+.md-path__item:last-child {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* 페이지 하단 prev/next (navigation.footer) — 간격·시각 보강 */
+.md-footer__inner.md-grid {
+  padding-block: 1rem;
+}
+
+.md-footer__link {
+  border-radius: 0.4rem;
+  transition: background 0.2s ease;
+}
+
+.md-footer__link:hover {
+  background: rgba(63, 81, 181, 0.08);
+}
+
+.md-footer__direction {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.md-footer__title {
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+/* TOC (우측) — 한국어 가독성 + 활성 항목 강조 */
+.md-nav--secondary .md-nav__title {
+  background: rgba(63, 81, 181, 0.08);
+  padding: 0.5em 0.8em;
+  border-radius: 0.4rem;
+  margin-bottom: 0.4em;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+
+/* 페이지 제목 (H1) — 강조 보강 */
+.md-typeset h1 {
+  background: linear-gradient(90deg, var(--md-primary-fg-color), transparent 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* admonition (callout) — tip 박스 시각 강화 */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-left: 4px solid var(--md-accent-fg-color);
+}
+
+/* 페이지 본문 좌우 padding — 한국어 가독성 */
+.md-content__inner {
+  padding-inline: 1rem;
+}
+
+/* 모바일 반응형 — 사이드바 라벨 줄바꿈 */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__link {
+    font-size: 0.85rem;
+    padding-block: 0.4em;
+  }
+  .md-path {
+    font-size: 0.72em;
+  }
+}
+
+/* =============================================================================
+   Phase E9 Stage 2 — Copy 버튼 + Lightbox (사용자 피드백 추가 #4·#5·#6 대응)
+   ============================================================================= */
+
+/* H2/H3 섹션의 우측 끝 Copy 버튼 */
+.md-typeset h2,
+.md-typeset h3 {
+  position: relative;
+  padding-right: 6rem; /* Copy 버튼 자리 확보 */
+}
+
+.copy-block-btn {
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--md-accent-fg-color);
+  color: white;
+  border: 0;
+  border-radius: 0.3rem;
+  padding: 0.18rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  z-index: 5;
+  font-family: var(--md-text-font);
+}
+
+/* 헤더에 hover 또는 포커스 시 Copy 버튼 표시 */
+.md-typeset h2:hover .copy-block-btn,
+.md-typeset h3:hover .copy-block-btn,
+.copy-block-btn:focus,
+.md-typeset .md-typeset__table:hover .copy-block-btn,
+.md-typeset blockquote:hover .copy-block-btn {
+  opacity: 1;
+}
+
+.copy-block-btn:hover {
+  background: var(--md-primary-fg-color);
+}
+
+.copy-block-btn--success {
+  background: #2E7D32 !important;
+}
+
+/* 표·blockquote 의 인라인 Copy 버튼 — 우측 상단 */
+.copy-block-btn--inline {
+  top: 0.4rem;
+  right: 0.4rem;
+  transform: none;
+  font-size: 0.62rem;
+  padding: 0.15rem 0.4rem;
+}
+
+/* 모바일 — Copy 버튼 항상 표시 (hover 미작동) */
+@media (hover: none) {
+  .copy-block-btn {
+    opacity: 0.85;
+  }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lightbox-fade-in 0.2s ease;
+}
+
+@keyframes lightbox-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-container {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 98vw;       /* 92vw → 98vw — 화면 거의 풀폭 */
+  max-height: 88vh;      /* 85vh → 88vh */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: white;
+  border-radius: 0.4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  cursor: zoom-in;
+  user-select: none;
+  transition: transform 0.15s ease-out;
+  transform-origin: center center;
+}
+
+/* 줌 표시 배지 */
+.lightbox-zoom-badge {
+  background: rgba(255, 255, 255, 0.92);
+  color: #1565C0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-family: var(--md-text-font);
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  min-width: 68px;
+  justify-content: center;
+}
+
+/* 사용 안내 — overlay 하단 1 줄 */
+.lightbox-hint {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.78rem;
+  font-family: var(--md-text-font);
+  text-align: center;
+  letter-spacing: 0.01em;
+  padding: 0.3rem 1rem;
+  max-width: 90vw;
+  word-break: keep-all;
+}
+
+.lightbox-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.lightbox-btn {
+  background: white;
+  color: #333;
+  border: 0;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--md-text-font);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.lightbox-btn:hover {
+  background: var(--md-accent-fg-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.lightbox-btn--download {
+  background: var(--md-primary-fg-color);
+  color: white;
+}
+
+.lightbox-btn--download:hover {
+  background: var(--md-accent-fg-color);
+}
+
+/* 본문 이미지 hover 시 zoom 커서 */
+.lightbox-trigger {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-trigger:hover {
+  opacity: 0.92;
+}
+
+/* SVG inline 그림 (figure) 시각 정리 */
+.md-typeset figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+
+.md-typeset figure svg.zoomable,
+.md-typeset figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+}
+
+.md-typeset figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light);
+  font-style: normal;
+}
+
+/* 다운로드 안내 아이콘 (figure 우상단 hint) */
+.md-typeset figure {
+  position: relative;
+}
+
+.md-typeset figure::after {
+  content: "🔍 클릭하여 확대·다운로드";
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 0.3rem;
+  font-size: 0.7em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.md-typeset figure:hover::after {
+  opacity: 1;
+}
+
+/* =============================================================================
+   D3 Cross-reference 그래프 (graph.md 페이지)
+   ============================================================================= */
+
+#crossref-graph .crossref-graph-svg {
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+
+.crossref-stats {
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  font-family: var(--md-text-font);
+}
+
+.crossref-legend {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.75rem;
+}
+
+.crossref-legend .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.crossref-legend .legend-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* =============================================================================
+   Phase E10-1 — UX 정비 (사용자 피드백 "어지럽고 산만")
+   ============================================================================= */
+
+/* 워크스페이스 메타 약화 (.meta-marker — Phase·엔트리·방법론·에이전트 ID) */
+.md-content .meta-marker {
+  color: var(--md-default-fg-color--lighter);
+  font-size: 0.82em;
+  opacity: 0.55;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 1px dotted var(--md-default-fg-color--lightest);
+  padding: 0 1px;
+  cursor: help;
+}
+
+.md-content .meta-marker:hover {
+  opacity: 0.85;
+}
+
+/* Hero SVG max-height — 기존 ~480px 대비 50% 축소 */
+.md-typeset figure svg.zoomable,
+.md-typeset figure img {
+  max-height: 280px;
+  width: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* H1 그라데이션 텍스트 제거 — 가독성 우선 단색 + 두꺼운 좌측 보더 */
+.md-typeset h1 {
+  background: none;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  color: var(--md-primary-fg-color);
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  border-left: 5px solid var(--md-primary-fg-color);
+  padding: 0.2em 0 0.2em 0.6em;
+  margin-bottom: 0.8em;
+  font-size: 1.95em;
+}
+
+/* 페이지 정보 details (메타 collapsible) — wrap_meta_blockquote 의 산출 */
+.md-typeset details.info[open],
+.md-typeset details.info {
+  border-left: 3px solid var(--md-default-fg-color--lighter);
+  background: var(--md-code-bg-color);
+  font-size: 0.88em;
+}
+
+.md-typeset details.info > summary {
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  background: transparent;
+  padding-block: 0.4em;
+}
+
+.md-typeset details.info > summary::before {
+  content: none; /* 기존 admonition 아이콘 제거 */
+}
+
+/* Paste-ready admonition — 신규 'copy' 타입 (사용자 main use case) */
+.md-typeset .admonition.copy,
+.md-typeset details.copy {
+  border-left: 5px solid #F57F17;
+  background: rgba(245, 127, 23, 0.04);
+  position: relative;
+  margin: 1em 0;
+}
+
+.md-typeset .admonition.copy > .admonition-title,
+.md-typeset details.copy > summary {
+  background: rgba(245, 127, 23, 0.12);
+  color: #E65100;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(245, 127, 23, 0.2);
+}
+
+.md-typeset .admonition.copy > .admonition-title::before,
+.md-typeset details.copy > summary::before {
+  content: "📋";
+  margin-right: 0.5em;
+  font-size: 1.1em;
+}
+
+/* 페이지 footer "이 페이지 정보" details (개발자용 메타) */
+.md-typeset details.meta-footer {
+  margin-top: 2em;
+  border-left: 3px solid var(--md-default-fg-color--lightest);
+  background: var(--md-code-bg-color);
+  font-size: 0.82em;
+}
+
+.md-typeset details.meta-footer > summary {
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+}
+
+/* 페이지 본문 viewport 비율 개선 — 상단 여백 줄임 */
+.md-content__inner > h1:first-child {
+  margin-top: 0.4em;
+}
+
+/* 출처 인용 (`> [출처: ...]`) — 시각 약화 (메타 성격) */
+.md-typeset blockquote p:first-child:has(a[href*=".md"]):only-child,
+.md-typeset blockquote:only-child {
+  font-size: 0.85em;
+  opacity: 0.75;
+  border-left-color: var(--md-default-fg-color--lighter);
+}
+
+/* 사이드바 그룹 헤더 좌측 보더 강조 (그룹 시각 분리) */
+.md-nav__title {
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 0.5rem;
+}
+
+/* 모바일 반응형 — 메타 marker hover 비활성 */
+@media (hover: none) {
+  .md-content .meta-marker:hover {
+    opacity: 0.55;
+  }
+}
+
+/* =============================================================================
+   Phase E10-2 — 홈 redesign + 3 giant button (사용자 여정 진입)
+   ============================================================================= */
+
+/* 홈 페이지 — H1 가운데 정렬 + 부드러운 강조 */
+.md-content article > h1:first-of-type {
+  text-align: center;
+  border-left: none;
+  border-bottom: 3px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5em;
+  font-size: 2.4em;
+  font-weight: 800;
+}
+
+/* 홈 hero figure 가운데 정렬 + 약한 그림자 */
+.md-content article > p > .md-typeset__svg,
+.md-content article > figure:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em auto 2em;
+}
+
+/* 3 giant button (홈) — 카드 형태 강조 */
+.md-typeset .grid.cards > ul > li:has(.md-button) {
+  text-align: center;
+  padding-block: 1.5em;
+  border-radius: 0.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:has(.md-button):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(63, 81, 181, 0.15);
+}
+
+.md-typeset .md-button {
+  margin-top: 0.5em;
+  font-weight: 700;
+}
+
+.md-typeset .md-button.md-button--primary {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+.md-typeset .md-button.md-button--primary:hover {
+  background: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  transform: translateX(2px);
+}
+
+/* accent-text — 아이콘 강조 색상 */
+.accent-text {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* 홈 통계 그리드 — 2열 정렬 */
+.md-content article > .grid:not(.cards) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6em 1.5em;
+  margin: 1.5em 0;
+  padding: 1em;
+  background: var(--md-code-bg-color);
+  border-radius: 0.4rem;
+  font-size: 0.9em;
+}
+
+.md-content article > .grid:not(.cards) p {
+  margin: 0;
+}
+
+.md-content article > .grid:not(.cards) code {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--md-primary-fg-color);
+  background: transparent;
+  padding: 0;
+  margin-right: 0.3em;
+}
+
+/* =============================================================================
+   Phase E10-5 — 홈 페이지 미니멀화 (사용자 "첫 페이지부터 어지럽다" 직접 대응)
+   ============================================================================= */
+
+/* 홈 페이지 본문 max-width 좁힘 — 한 화면 안에 핵심 안내만 */
+.md-content article:has(.home-cta) {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-block: 2em;
+}
+
+/* 홈 H1 — 더 큼·가운데 + 단순 */
+.md-content article:has(.home-cta) > h1:first-of-type {
+  text-align: center;
+  font-size: 2.6em;
+  border: none;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+  font-weight: 800;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+/* 홈 본문 첫 단락 — 부드러운 강조 */
+.md-content article:has(.home-cta) > p:first-of-type {
+  font-size: 1.1em;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 2em;
+  line-height: 1.7;
+}
+
+/* 홈 H2 — 가운데 정렬 + 큰 강조 (CTA 안내) */
+.md-content article:has(.home-cta) > h2 {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  margin: 2em 0 1em;
+  border: none;
+  border-left: none;
+  padding: 0;
+}
+
+.md-content article:has(.home-cta) > h2 strong {
+  background: var(--md-accent-fg-color);
+  color: white;
+  padding: 0.1em 0.5em;
+  border-radius: 0.3rem;
+  font-weight: 800;
+}
+
+/* 홈 giant button (1 차 CTA) */
+.home-cta {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+.home-giant-btn {
+  font-size: 1.3em !important;
+  padding: 1em 2em !important;
+  font-weight: 800 !important;
+  border-radius: 0.6rem !important;
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color)) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(63, 81, 181, 0.25) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+  letter-spacing: -0.01em;
+}
+
+.home-giant-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(63, 81, 181, 0.4) !important;
+  color: white !important;
+}
+
+/* 홈 H3 (2 차 진입점) — 단순 */
+.md-content article:has(.home-cta) > h3 {
+  font-size: 1.05em;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin: 2.5em 0 1em;
+  text-align: center;
+  border: none;
+  padding: 0;
+}
+
+/* 홈 본문 link list (2 차 진입) — 간격 보강 */
+.md-content article:has(.home-cta) > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.md-content article:has(.home-cta) > ul > li {
+  padding: 0.6em 0.8em;
+  margin-block: 0.4em;
+  border-radius: 0.4rem;
+  background: var(--md-code-bg-color);
+  transition: background 0.15s ease;
+  font-size: 0.95em;
+}
+
+.md-content article:has(.home-cta) > ul > li:hover {
+  background: rgba(63, 81, 181, 0.08);
+}
+
+.md-content article:has(.home-cta) > ul > li > .md-button {
+  margin-left: 0.5em;
+  font-size: 0.85em;
+}
+
+/* 홈 hr 단순 */
+.md-content article:has(.home-cta) > hr {
+  border: 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  margin: 2em 0;
+}
+
+/* =============================================================================
+   Phase E10-3 — 읽기 시간 배지 + 페이지 footer 메타
+   ============================================================================= */
+
+/* 읽기 시간 배지 — H1 직후 작은 inline */
+.reading-time-badge {
+  display: inline-block;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 0.2em 0.7em;
+  border-radius: 1em;
+  margin: 0.2em 0 0.8em 0;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 페이지 footer 메타 details — 항상 닫힌 상태 (개발자 명시 클릭 시만 펼침) */
+.md-typeset details[class~="note"]:has(summary:contains("이 페이지 정보")),
+.md-typeset details > summary:has-text("이 페이지 정보") {
+  margin-top: 2em;
+  font-size: 0.85em;
+}
+
+/* =============================================================================
+   Phase E11-1 — TOC 좌·우 정비 (사용자 4 호소 #1·#2)
+   우측 H3 숨김 + 사이드바 4 그룹 헤더 강조 + SVG 세로형 대비
+   ============================================================================= */
+
+/* 우측 TOC — H3 이하 숨김 (H2 만 표시, pkg1 기준 55 → 9 항목) */
+.md-nav--secondary .md-nav__list .md-nav__list {
+  display: none;
+}
+
+/* 우측 TOC — 최대 높이 제한 + 스크롤 (긴 페이지 대비) */
+.md-nav--secondary .md-nav__list {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-default-fg-color--lightest) transparent;
+}
+
+.md-nav--secondary .md-nav__list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.md-nav--secondary .md-nav__list::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 2px;
+}
+
+/* 우측 TOC 제목 보강 — "On this page" 영문 → 시각 강조 */
+.md-nav--secondary > .md-nav__title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5em;
+  padding: 0.6em 0.5em;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  text-transform: none;
+}
+
+/* 우측 TOC H2 항목 — 적당한 간격 + 가독성 */
+.md-nav--secondary .md-nav__link {
+  padding: 0.35em 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+  background: none;
+  border-left: none;
+}
+
+/* 좌측 사이드바 4 그룹 헤더 — 더 강한 시각 분리 */
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--md-primary-fg-color);
+  padding: 0.7em 0.6em 0.5em;
+  letter-spacing: -0.01em;
+}
+
+/* 사이드바 sub-그룹 (4 그룹 안의 nested) 들여쓰기 단순화 */
+.md-nav--lifted .md-nav .md-nav .md-nav {
+  padding-left: 0.5em;
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+  margin-left: 0.4em;
+}
+
+/* [E14-Fix] SVG 이미지 정책 전면 재정의 (사용자 호소 "세로로 너무 큼")
+   - 일반 figure: 90% 폭 + 여백 + 적절한 max-height
+   - 세로형 디자인 SVG (600×800): 620×850 (정확한 viewBox 표시)
+   - mmdc 다이어그램 (다양한 viewBox): max-width 760px + max-height 540px (강제 제한)
+   - 홈 hero: 700×600
+   - 진단 C 보고: L910 selector 가 L503 의 280px override 문제 해결 */
+.md-typeset figure svg,
+.md-typeset figure img,
+.md-typeset .md-content figure svg.zoomable,
+.md-typeset .md-content figure img.zoomable,
+.md-typeset .hero-svg-wrap svg,
+.md-typeset .hero-svg-wrap img,
+.md-typeset img[src$=".svg"] {
+  max-width: 100%;
+  max-height: 720px;     /* 무제한 → 720px 강제 제한 (사용자 "세로 너무 큼" 호소) */
+  width: auto;
+  height: auto;
+  margin: 1.5em auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 세로형 디자인 SVG (assets/svg/, viewBox 600×800) */
+.md-typeset figure img[src*="/svg/"],
+.md-typeset img[src*="/svg/"]:not([src*="/diagrams/"]) {
+  max-width: 620px;      /* 720px → 620px (viewBox 600 + 여백) */
+  max-height: 850px;
+}
+
+/* mmdc 변환 다이어그램 (가로형 위주, viewBox 200~2900px 광범위) */
+.md-typeset img[src*="/diagrams/"] {
+  max-width: 760px !important;   /* 100% → 760px (본문 폭 가득 차게 안 늘어남) */
+  max-height: 540px !important;  /* none → 540px (사용자 호소 핵심 fix) */
+  width: auto !important;
+  height: auto !important;
+}
+
+/* hero SVG (홈) — 본문 폭 절반 */
+.md-content article:has(.home-cta) figure svg,
+.md-content article:has(.home-cta) figure img {
+  max-width: 700px !important;
+  max-height: 600px !important;
+}
+
+/* 모바일 추가 제한 (640px 이하) */
+@media screen and (max-width: 40em) {
+  .md-typeset img[src*="/diagrams/"] {
+    max-width: 100% !important;
+    max-height: 400px !important;
+  }
+  .md-typeset figure img[src*="/svg/"],
+  .md-typeset img[src*="/svg/"]:not([src*="/diagrams/"]) {
+    max-width: 100%;
+    max-height: 600px;
+  }
+}
+
+/* 모바일 — TOC 양쪽 비활성 시 본문 폭 정상 */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--secondary {
+    display: none;
+  }
+}
+
+/* =============================================================================
+   Phase E12-A — 현대적 SaaS 디자인 시스템 (Linear · Vercel · Stripe 톤)
+   ----------------------------------------------------------------------------
+   사용자 피드백 — 기본 Material 톤 (딥블루+틸+앰버) → Indigo·Violet·Pink 그라데이션,
+   slate neutral, glassmorphism, 정교 다층 shadow, 한국어 본문 가독성 우선.
+   기존 Phase E10·E11 hooks selector (--active, .lightbox-, .placeholder-tag,
+   .admonition.copy, .meta-marker, .home-cta, .home-giant-btn, .reading-time-badge)
+   는 1 줄도 변경 안 함 (보존). 이하 ~500 줄은 끝에 적층.
+   ============================================================================= */
+
+:root {
+  /* === Indigo · Violet primary scale === */
+  --color-indigo-50:  #EEF2FF;
+  --color-indigo-100: #E0E7FF;
+  --color-indigo-200: #C7D2FE;
+  --color-indigo-400: #818CF8;
+  --color-indigo-500: #6366F1;
+  --color-indigo-600: #4F46E5;
+  --color-indigo-700: #4338CA;
+  --color-indigo-800: #3730A3;
+  --color-indigo-900: #312E81;
+
+  --color-violet-500: #8B5CF6;
+  --color-pink-500:   #EC4899;
+  --color-cyan-500:   #06B6D4;
+
+  /* === Slate (neutral) === */
+  --color-slate-50:   #F8FAFC;
+  --color-slate-100:  #F1F5F9;
+  --color-slate-200:  #E2E8F0;
+  --color-slate-300:  #CBD5E1;
+  --color-slate-400:  #94A3B8;
+  --color-slate-500:  #64748B;
+  --color-slate-600:  #475569;
+  --color-slate-700:  #334155;
+  --color-slate-800:  #1E293B;
+  --color-slate-900:  #0F172A;
+  --color-slate-950:  #020617;
+
+  /* === Accent === */
+  --color-emerald-500: #10B981;
+  --color-amber-500:   #F59E0B;
+  --color-rose-500:    #F43F5E;
+
+  /* === Brand gradients === */
+  --grad-brand:      linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  --grad-brand-soft: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(236,72,153,0.04) 100%);
+  --grad-cool:       linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+  --grad-warm:       linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
+
+  /* === Shadows (정교 다층) === */
+  --shadow-xs: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08), 0 2px 4px -2px rgba(15,23,42,0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15,23,42,0.10), 0 4px 6px -4px rgba(15,23,42,0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(15,23,42,0.12), 0 8px 10px -6px rgba(15,23,42,0.08);
+  --shadow-glow-indigo: 0 0 0 1px rgba(99,102,241,0.16), 0 8px 24px -4px rgba(99,102,241,0.32);
+
+  /* === Radius === */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* === Spacing === */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+
+  /* === Typography scale === */
+  --font-size-xs:   0.78rem;
+  --font-size-sm:   0.87rem;
+  --font-size-base: 1rem;
+  --font-size-lg:   1.13rem;
+  --font-size-xl:   1.31rem;
+  --font-size-2xl:  1.69rem;
+  --font-size-3xl:  2.13rem;
+  --font-size-4xl:  2.75rem;
+
+  /* === Easing === */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* === MkDocs Material 토큰 override (라이트) ============================ */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        var(--color-indigo-600);
+  --md-primary-fg-color--light: var(--color-indigo-400);
+  --md-primary-fg-color--dark:  var(--color-indigo-800);
+  --md-accent-fg-color:         var(--color-violet-500);
+  --md-accent-fg-color--transparent: rgba(139, 92, 246, 0.1);
+  --md-typeset-a-color:         var(--color-indigo-600);
+}
+
+/* === 본문 typography 계층 — H1~H3 + 단락 ============================== */
+.md-typeset h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--color-slate-900);
+  margin: 0 0 0.6em;
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.md-typeset h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+  color: var(--color-slate-900);
+  margin: 1.8em 0 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid transparent;
+  border-image: var(--grad-brand) 1;
+  border-image-slice: 1;
+}
+
+.md-typeset h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.3;
+  color: var(--color-slate-800);
+  margin: 1.6em 0 0.6em;
+}
+
+.md-typeset h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-slate-700);
+  margin: 1.4em 0 0.5em;
+}
+
+.md-typeset p {
+  font-size: var(--font-size-lg);
+  line-height: 1.75;
+  color: var(--color-slate-700);
+  margin: 0 0 1em;
+}
+
+.md-typeset p + p {
+  margin-top: 1.4em;
+}
+
+.md-typeset h2 + p { margin-top: 0.6em; }
+.md-typeset h3 + p { margin-top: 0.4em; }
+.md-typeset table + p,
+.md-typeset p + table { margin-top: 1.5em; }
+.md-typeset figure { margin: 2em auto; }
+
+/* === blockquote — glassmorphism + gradient bar ======================== */
+.md-typeset blockquote {
+  position: relative;
+  background: rgba(99, 102, 241, 0.04);
+  border-left: 3px solid transparent;
+  border-image: var(--grad-brand) 1;
+  border-image-slice: 1;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 0.85em 1.1em;
+  margin: 1em 0;
+  color: var(--color-slate-700);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-xs);
+}
+
+/* nested 인용 (출처 표기) — 더 흐린 톤 + subtle gradient bar */
+.md-typeset blockquote blockquote {
+  background: rgba(139, 92, 246, 0.05);
+  border-left-width: 2px;
+  font-size: 0.95em;
+  color: var(--color-slate-600);
+}
+
+/* === 표 — rounded + gradient header ================================== */
+.md-typeset table:not([class]) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-slate-200);
+  font-size: 0.9em;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--grad-brand);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  padding: 0.75em 1em;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.7em 1em;
+  border-top: 1px solid var(--color-slate-100);
+  color: var(--color-slate-700);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background: var(--color-slate-50);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background: rgba(99, 102, 241, 0.04);
+}
+
+/* === 카드 그리드 — hover 강화 ========================================= */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  padding: var(--space-lg);
+  transition:
+    transform 250ms var(--ease-out),
+    box-shadow 250ms var(--ease-out),
+    border-color 250ms var(--ease-out);
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-indigo-400);
+}
+
+/* === admonition — glassmorphism + gradient left bar =================== */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+  border-left: 4px solid transparent;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-image: var(--grad-cool) 1;
+  border-image-slice: 1;
+  border-left-width: 4px;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-image: linear-gradient(135deg, #10B981 0%, #06B6D4 100%) 1;
+  border-image-slice: 1;
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-image: var(--grad-warm) 1;
+  border-image-slice: 1;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-image: linear-gradient(135deg, #F43F5E 0%, #EC4899 100%) 1;
+  border-image-slice: 1;
+}
+
+/* copy admonition (E10·E11 hook 의존성 보존 + 보강) */
+.md-typeset .admonition.copy {
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #F59E0B 0%, #F43F5E 100%) 1;
+  border-image-slice: 1;
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.06) 0%,
+    rgba(244, 63, 94, 0.04) 100%);
+}
+
+/* === Hover · focus 14 종 ============================================== */
+
+/* 본문 링크 — gradient underline grow */
+.md-typeset a:not(.md-button):not(.md-nav__link) {
+  color: var(--color-indigo-600);
+  text-decoration: none;
+  background-image: var(--grad-brand);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 200ms var(--ease-out), color 200ms var(--ease-out);
+}
+
+.md-typeset a:not(.md-button):not(.md-nav__link):hover {
+  color: var(--color-indigo-700);
+  background-size: 100% 2px;
+}
+
+/* 사이드바 active — gradient subtle + 좌측 gradient border (E10 hook 보존) */
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.10) 0%,
+    rgba(139, 92, 246, 0.04) 60%,
+    transparent 100%);
+  font-weight: 700;
+}
+
+/* inline code — slate-100 + indigo-700 */
+.md-typeset code {
+  background: var(--color-slate-100);
+  color: var(--color-indigo-700);
+  border-radius: var(--radius-sm);
+  padding: 0.1em 0.4em;
+  font-size: 0.92em;
+  font-weight: 500;
+  border: 1px solid var(--color-slate-200);
+}
+
+.md-typeset pre code {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+}
+
+.md-typeset pre {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* md-button — primary indigo gradient */
+.md-typeset .md-button {
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  transition: all 200ms var(--ease-out);
+  border: 1px solid var(--color-slate-200);
+}
+
+.md-typeset .md-button--primary {
+  background: var(--grad-brand);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-indigo);
+  color: #fff;
+}
+
+.md-typeset .md-button:not(.md-button--primary):hover {
+  border-color: var(--color-indigo-400);
+  background: rgba(99, 102, 241, 0.04);
+  color: var(--color-indigo-700);
+}
+
+/* 헤더 (md-header) — 살짝 glass */
+.md-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-xs);
+  color: var(--color-slate-900);
+}
+
+[data-md-color-scheme="default"] .md-header {
+  color: var(--color-slate-900);
+}
+
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-search__input {
+  color: var(--color-slate-900);
+}
+
+[data-md-color-scheme="default"] .md-search__input::placeholder {
+  color: var(--color-slate-500);
+}
+
+/* === 세로형 레이아웃 정리 =========================================== */
+:root {
+  --md-grid: 76rem;       /* [E12-Fix-3] 60rem → 76rem (~1216px) — 사용자 "본문 폭 좁음" 호소 */
+}
+
+.md-grid {
+  max-width: 76rem;
+}
+
+/* === 페이지 진입 애니메이션 ========================================== */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardStaggerIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes admonitionSlideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.md-content article {
+  animation: pageFadeIn 400ms var(--ease-out);
+}
+
+.md-typeset .grid.cards > ul > li {
+  animation: cardStaggerIn 450ms var(--ease-out) both;
+}
+
+.md-typeset .grid.cards > ul > li:nth-child(2) { animation-delay: 60ms; }
+.md-typeset .grid.cards > ul > li:nth-child(3) { animation-delay: 120ms; }
+.md-typeset .grid.cards > ul > li:nth-child(4) { animation-delay: 180ms; }
+.md-typeset .grid.cards > ul > li:nth-child(5) { animation-delay: 240ms; }
+.md-typeset .grid.cards > ul > li:nth-child(6) { animation-delay: 300ms; }
+
+.md-typeset .admonition,
+.md-typeset details {
+  animation: admonitionSlideIn 350ms var(--ease-out) both;
+}
+
+/* hero gradient (홈·index 의 home-cta 영역) — 부드러운 shift */
+.md-content article:has(.home-cta) h1 {
+  background: var(--grad-brand);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    pageFadeIn 400ms var(--ease-out),
+    heroGradientShift 8s linear infinite;
+}
+
+/* prefers-reduced-motion — 모션 비활성 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === 다크 모드 (slate-based) ========================================== */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:        var(--color-slate-950);
+  --md-default-bg-color--light: var(--color-slate-900);
+  --md-default-fg-color:        var(--color-slate-100);
+  --md-default-fg-color--light: var(--color-slate-300);
+  --md-default-fg-color--lighter: var(--color-slate-400);
+  --md-default-fg-color--lightest: var(--color-slate-700);
+
+  --md-primary-fg-color:        var(--color-indigo-500);
+  --md-primary-fg-color--light: var(--color-indigo-400);
+  --md-primary-fg-color--dark:  var(--color-indigo-700);
+  --md-accent-fg-color:         var(--color-violet-500);
+  --md-typeset-a-color:         var(--color-indigo-400);
+
+  --md-code-bg-color:           var(--color-slate-800);
+  --md-code-fg-color:           var(--color-slate-100);
+
+  /* 다크 그림자 — rgba(0,0,0,0.5) 기반 */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.40), 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.50), 0 2px 4px -2px rgba(0,0,0,0.40);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.55), 0 4px 6px -4px rgba(0,0,0,0.45);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.60), 0 8px 10px -6px rgba(0,0,0,0.50);
+  --shadow-glow-indigo: 0 0 0 1px rgba(99,102,241,0.32), 0 8px 24px -4px rgba(99,102,241,0.45);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--color-slate-50);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: var(--color-slate-100);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--color-slate-200);
+}
+
+[data-md-color-scheme="slate"] .md-typeset p {
+  color: var(--color-slate-300);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  background: rgba(99, 102, 241, 0.10);
+  color: var(--color-slate-200);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote blockquote {
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--color-slate-400);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  background: var(--color-slate-900);
+  border-top-color: var(--color-slate-800);
+  color: var(--color-slate-200);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
+  background: var(--color-slate-800);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover td {
+  background: rgba(99, 102, 241, 0.12);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+  background: var(--color-slate-900);
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--color-indigo-400);
+  background: var(--color-slate-800);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: var(--color-slate-800);
+  color: var(--color-indigo-200);
+  border-color: var(--color-slate-700);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(2, 6, 23, 0.85);
+  color: var(--color-slate-100);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:not(.md-button):not(.md-nav__link) {
+  color: var(--color-indigo-400);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:not(.md-button):not(.md-nav__link):hover {
+  color: var(--color-indigo-200);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.20) 0%,
+    rgba(139, 92, 246, 0.08) 60%,
+    transparent 100%);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.copy {
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.10) 0%,
+    rgba(244, 63, 94, 0.06) 100%);
+}
+
+/* =========================== Phase E12-A 끝 ============================== */
+
+/* =============================================================================
+   Phase E12-D — 사이드바 콘텐츠 그룹 정리 (사용자 "왼쪽 메뉴 꼬라지" 호소)
+   문제: 콘텐츠 그룹 안 25 항목 일괄 노출 + 간격 넓음 + 시각 위계 약함
+   해결: 항목 간격 축소·sub-그룹 헤더 시각 차별·active 그룹만 강조 펼침
+   ============================================================================= */
+
+/* 좌측 사이드바 — 항목 간격 압축 (현재 너무 넓음) */
+.md-nav__item {
+  padding: 0;
+}
+
+.md-nav__list .md-nav__list .md-nav__item {
+  margin: 0;
+}
+
+/* 사이드바 항목 link — 간격 축소·폰트 약간 줄임 */
+.md-sidebar--primary .md-nav__link {
+  padding: 0.32em 0.6em;
+  margin: 0.05em 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  border-radius: 6px;
+  transition: background 0.18s var(--ease-out, ease), color 0.18s var(--ease-out, ease);
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  background: var(--color-indigo-50, rgba(99, 102, 241, 0.06));
+  color: var(--color-indigo-700, #4338CA);
+}
+
+/* sub-그룹 헤더 (🔧 기술 트랙·📦 통합 파일럿·🎯 시나리오·모듈) — 시각 위계 명확화 */
+.md-nav--lifted .md-nav .md-nav .md-nav__title,
+.md-nav--lifted label.md-nav__link.md-nav__container {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--color-slate-700, #334155);
+  text-transform: none;
+  letter-spacing: -0.005em;
+  padding: 0.55em 0.6em 0.3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.04) 0%,
+    transparent 80%);
+  border-left: 2px solid var(--color-indigo-200, #C7D2FE);
+  border-radius: 0 6px 6px 0;
+  letter-spacing: -0.005em;
+}
+
+/* 1 그룹 헤더 (🚀 시작·📦 콘텐츠·📋 운영·참고·📌 메타) — 더 강한 시각 강조 */
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--lifted > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--color-indigo-700, #4338CA);
+  padding: 0.7em 0.6em 0.35em;
+  margin-top: 0.6em;
+  letter-spacing: -0.012em;
+  border-left: 3px solid var(--color-indigo-500, #6366F1);
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.08) 0%,
+    transparent 60%);
+  border-radius: 0 8px 8px 0;
+}
+
+/* sub-그룹 안 항목 들여쓰기 정리 (단일 단계만 들여쓰기, 다중 단계 회피) */
+.md-nav--lifted .md-nav .md-nav .md-nav .md-nav__link {
+  padding-left: 1em;
+  font-size: 0.81rem;
+  color: var(--color-slate-700, #334155);
+}
+
+/* 활성 항목 — 더 명확한 강조 (Phase E11-1 의 단순 좌측 보더 → gradient + glow) */
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.16) 0%,
+    rgba(139, 92, 246, 0.06) 60%,
+    transparent 100%);
+  color: var(--color-indigo-700, #4338CA);
+  border-left: 3px solid var(--color-indigo-500, #6366F1);
+  font-weight: 700;
+  padding-left: calc(0.6em - 3px);
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 2px rgba(99, 102, 241, 0.08);
+}
+
+/* 비활성 sub-그룹 — 항목 시각 약화 (active 그룹만 부각) */
+.md-nav--lifted > .md-nav__list > .md-nav__item--section:not(:has(.md-nav__link--active))
+  > nav.md-nav > .md-nav__list .md-nav__link {
+  color: var(--color-slate-600, #475569);
+}
+
+/* 사이드바 전체 좌·우 padding 축소 (1 화면에 더 많은 항목) */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-slate-300, #CBD5E1) transparent;
+}
+
+.md-sidebar--primary .md-sidebar__inner {
+  padding: 0.6rem 0.4rem;
+}
+
+/* sub-그룹 사이 separator (시각 분리) */
+.md-nav--lifted .md-nav__item--section + .md-nav__item--section {
+  margin-top: 0.4em;
+  padding-top: 0.4em;
+  border-top: 1px dashed var(--color-slate-200, #E2E8F0);
+}
+
+/* 다크 모드 호환 */
+[data-md-color-scheme="slate"] .md-nav--lifted > .md-nav__list > .md-nav__item--section > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--lifted > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  color: var(--color-indigo-400, #818CF8);
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.18) 0%,
+    transparent 60%);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link {
+  color: var(--color-slate-300, #CBD5E1);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link:hover {
+  background: rgba(99, 102, 241, 0.16);
+  color: var(--color-indigo-200, #C7D2FE);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.28) 0%,
+    rgba(139, 92, 246, 0.10) 60%,
+    transparent 100%);
+  color: var(--color-indigo-200, #C7D2FE);
+}
+
+/* =========================== Phase E12-D 끝 ============================== */
+
+/* =============================================================================
+   Phase E14-B — SCN ID 자동 hyperlink 시각 (사용자 "낯선 ID 표 친화" 호소)
+   ============================================================================= */
+
+a.scn-link {
+  color: var(--color-indigo-600, #4F46E5);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-indigo-400, #818CF8);
+  padding: 0 1px;
+  transition: color 0.15s var(--ease-out, ease), border-bottom-color 0.15s var(--ease-out, ease), background 0.15s;
+  white-space: nowrap;
+}
+
+a.scn-link:hover {
+  color: var(--color-indigo-700, #4338CA);
+  border-bottom-color: var(--color-indigo-600, #4F46E5);
+  background: var(--color-indigo-50, rgba(99, 102, 241, 0.06));
+  border-radius: 3px;
+}
+
+a.scn-link:focus-visible {
+  outline: 2px solid var(--color-indigo-500, #6366F1);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* 다크 모드 호환 */
+[data-md-color-scheme="slate"] a.scn-link {
+  color: var(--color-indigo-300, #A5B4FC);
+  border-bottom-color: var(--color-indigo-400, #818CF8);
+}
+
+[data-md-color-scheme="slate"] a.scn-link:hover {
+  color: var(--color-indigo-200, #C7D2FE);
+  background: rgba(99, 102, 241, 0.16);
+}
+
+/* =========================== Phase E14-B 끝 ============================== */
+
+/* =============================================================================
+   Phase E16 — 본문 자동 생성 페이지 (generate.md)
+   ============================================================================= */
+
+.generate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 60em) {
+  .generate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.generate-form-col,
+.generate-result-col {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+  border-radius: var(--radius-lg, 14px);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.06));
+}
+
+.generate-form-col h3,
+.generate-result-col h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0.8em !important;
+  font-size: 1.05rem;
+  color: var(--color-indigo-700, #4338CA);
+}
+
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+
+.form-fields label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-slate-700, #334155);
+  margin-bottom: -0.3em;
+}
+
+.form-fields input {
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 8px;
+  padding: 0.5em 0.75em;
+  font-family: var(--md-text-font);
+  font-size: 0.92rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  transition: border-color 0.15s var(--ease-out, ease), box-shadow 0.15s var(--ease-out, ease);
+}
+
+.form-fields input:focus {
+  border-color: var(--color-indigo-500, #6366F1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+  outline: none;
+}
+
+.form-fields input::placeholder {
+  color: var(--color-slate-300, #CBD5E1);
+  font-weight: 400;
+}
+
+.blk-controls,
+.output-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.8em 0;
+  flex-wrap: wrap;
+}
+
+.blk-controls button,
+.output-controls button {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  background: var(--md-default-bg-color);
+  color: var(--color-slate-700, #334155);
+  font-family: var(--md-text-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s var(--ease-out, ease);
+}
+
+.blk-controls button:hover,
+.output-controls button:hover {
+  background: var(--color-indigo-50, #EEF2FF);
+  border-color: var(--color-indigo-400, #818CF8);
+  color: var(--color-indigo-700, #4338CA);
+}
+
+.blk-controls button.primary {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  color: white;
+  border: 0;
+  padding: 0.5em 1.5em;
+}
+
+.blk-controls button.primary:hover {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.32);
+  transform: translateY(-1px);
+}
+
+.blk-checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.4rem 1rem;
+  margin: 1em 0;
+  padding: 1rem;
+  background: var(--color-slate-50, #F8FAFC);
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+}
+
+.blk-checklist .blk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.12s var(--ease-out, ease);
+}
+
+.blk-checklist .blk-item:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.blk-checklist .blk-item input {
+  margin-top: 0.2em;
+  accent-color: var(--color-indigo-500, #6366F1);
+}
+
+.blk-checklist .blk-item span {
+  font-size: 0.85rem;
+  color: var(--color-slate-700, #334155);
+  line-height: 1.4;
+}
+
+#output {
+  width: 100%;
+  min-height: 380px;
+  font-family: var(--md-code-font, monospace);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 8px;
+  padding: 1em;
+  background: var(--color-slate-50, #F8FAFC);
+  color: var(--md-default-fg-color);
+  resize: vertical;
+}
+
+#output:focus {
+  border-color: var(--color-indigo-500, #6366F1);
+  outline: none;
+}
+
+.output-meta {
+  margin-top: 0.6em;
+  font-size: 0.78rem;
+  color: var(--color-slate-500, #64748B);
+}
+
+.output-meta .warn {
+  color: var(--color-amber-600, #D97706);
+  font-weight: 600;
+}
+
+.error-message {
+  margin: 1em 0;
+  padding: 0.8em 1em;
+  color: var(--color-rose-500, #F43F5E);
+  font-size: 0.85rem;
+}
+
+.error-message:empty {
+  display: none;
+}
+
+/* 다크 모드 */
+[data-md-color-scheme="slate"] .generate-form-col,
+[data-md-color-scheme="slate"] .generate-result-col {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .form-fields input,
+[data-md-color-scheme="slate"] #output {
+  background: var(--color-slate-950, #020617);
+  border-color: var(--color-slate-600, #475569);
+  color: var(--color-slate-100, #F1F5F9);
+}
+
+[data-md-color-scheme="slate"] .blk-checklist {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+.blk-controls button.primary.ai {
+  background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+}
+
+.blk-controls button.primary.ai:hover {
+  background: linear-gradient(135deg, #059669 0%, #0891B2 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.32);
+}
+
+.ai-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 1em 0;
+  padding: 1rem;
+  background: var(--color-slate-50, #F8FAFC);
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+}
+
+.ai-controls label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-slate-700, #334155);
+  white-space: nowrap;
+}
+
+.ai-controls input[type="password"] {
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 6px;
+  padding: 0.5em 0.7em;
+  font-family: var(--md-code-font, monospace);
+  font-size: 0.85rem;
+}
+
+.ai-controls input[type="password"]:focus {
+  border-color: var(--color-emerald-500, #10B981);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.16);
+}
+
+.ai-controls button {
+  padding: 0.5em 0.9em;
+  border-radius: 6px;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  background: var(--md-default-bg-color);
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ai-controls button:hover {
+  border-color: var(--color-rose-500, #F43F5E);
+  color: var(--color-rose-500, #F43F5E);
+}
+
+.ai-status {
+  margin: 0.6em 0;
+  padding: 0.5em 0.8em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-slate-600, #475569);
+  border-radius: 6px;
+  min-height: 1.2em;
+}
+
+.ai-status:not(:empty) {
+  background: var(--color-slate-50, #F8FAFC);
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+}
+
+[data-md-color-scheme="slate"] .ai-controls {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .ai-controls input[type="password"] {
+  background: var(--color-slate-950, #020617);
+  border-color: var(--color-slate-600, #475569);
+  color: var(--color-slate-100, #F1F5F9);
+}
+
+/* === Phase E16 Stage 3 — 4 모드 + 패키지 카드 + § 트리 + 검색 === */
+
+.asset-stats {
+  font-size: 0.85rem;
+  color: var(--color-slate-500, #64748B);
+  text-align: center;
+  margin: 0.5em 0 1em;
+  padding: 0.4em 0.8em;
+  background: var(--color-indigo-50, #EEF2FF);
+  border-radius: 6px;
+  border: 1px solid var(--color-indigo-200, #C7D2FE);
+}
+
+.selected-count {
+  margin-left: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-indigo-600, #4F46E5);
+  padding: 0.4em 0.8em;
+  background: var(--color-indigo-50, #EEF2FF);
+  border-radius: 6px;
+}
+
+/* 모드 탭 */
+.generate-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 1.5em 0 0.8em;
+  flex-wrap: wrap;
+}
+
+.generate-tabs button {
+  padding: 0.6em 1.2em;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  background: var(--md-default-bg-color);
+  color: var(--color-slate-700, #334155);
+  border-radius: 8px;
+  font-family: var(--md-text-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s var(--ease-out, ease);
+}
+
+.generate-tabs button:hover {
+  border-color: var(--color-indigo-400, #818CF8);
+  color: var(--color-indigo-700, #4338CA);
+}
+
+.generate-tabs button.active {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.32);
+}
+
+/* 패키지 카드 (⚡ 빠른) */
+.pkg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1em 0;
+}
+
+.pkg-card {
+  padding: 1.1rem;
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(--md-default-bg-color);
+  transition: all 0.18s var(--ease-out, ease);
+}
+
+.pkg-card:hover {
+  border-color: var(--color-indigo-400, #818CF8);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(15, 23, 42, 0.08));
+}
+
+.pkg-card.selected {
+  border-color: var(--color-indigo-500, #6366F1);
+  background: var(--color-indigo-50, #EEF2FF);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+}
+
+.pkg-card-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-indigo-700, #4338CA);
+  margin-bottom: 0.4em;
+}
+
+.pkg-card-sub {
+  font-size: 0.8rem;
+  color: var(--color-slate-600, #475569);
+  margin-bottom: 0.6em;
+}
+
+.pkg-card-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-slate-500, #64748B);
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  background: var(--color-slate-100, #F1F5F9);
+  border-radius: 4px;
+}
+
+/* § 트리 */
+.section-tree {
+  margin: 1em 0;
+}
+
+.section-group {
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  background: var(--md-default-bg-color);
+  overflow: hidden;
+}
+
+.section-group summary {
+  padding: 0.7em 1em;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-indigo-700, #4338CA);
+  cursor: pointer;
+  background: var(--color-slate-50, #F8FAFC);
+  border-bottom: 1px solid transparent;
+  list-style: none;
+}
+
+.section-group summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 0.7em;
+  transition: transform 0.15s;
+  color: var(--color-indigo-500, #6366F1);
+}
+
+.section-group[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.section-group[open] summary {
+  border-bottom-color: var(--color-slate-200, #E2E8F0);
+}
+
+.section-block-list {
+  padding: 0.5em 1em;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+/* 카테고리 배지 */
+.cat-badge {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 0.4em;
+  letter-spacing: 0.04em;
+}
+
+.cat-badge.cat-track   { background: #E0E7FF; color: #4338CA; }
+.cat-badge.cat-package { background: #FCE7F3; color: #BE185D; }
+.cat-badge.cat-scenario { background: #FEF3C7; color: #B45309; }
+.cat-badge.cat-guide   { background: #D1FAE5; color: #047857; }
+.cat-badge.cat-module  { background: #E0F2FE; color: #0369A1; }
+
+/* 블록 미리보기 */
+.blk-preview {
+  font-size: 0.78rem;
+  color: var(--color-slate-500, #64748B);
+  margin-top: 0.2em;
+  padding-left: 0.3em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* 자유 검색 */
+.search-input {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 8px;
+  font-family: var(--md-text-font);
+  font-size: 0.95rem;
+  background: var(--md-default-bg-color);
+  margin-bottom: 1em;
+}
+
+.search-input:focus {
+  border-color: var(--color-indigo-500, #6366F1);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+}
+
+.search-results {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.search-hint {
+  padding: 0.5em 0;
+  font-size: 0.85rem;
+  color: var(--color-slate-500, #64748B);
+  font-weight: 600;
+}
+
+/* 다크 모드 */
+[data-md-color-scheme="slate"] .pkg-card {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .pkg-card:hover,
+[data-md-color-scheme="slate"] .pkg-card.selected {
+  background: rgba(99, 102, 241, 0.10);
+}
+
+[data-md-color-scheme="slate"] .section-group {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .section-group summary {
+  background: var(--color-slate-800, #1E293B);
+}
+
+[data-md-color-scheme="slate"] .search-input {
+  background: var(--color-slate-950, #020617);
+  border-color: var(--color-slate-600, #475569);
+}
+
+/* =========================== Phase E16 Stage 3 끝 ============================== */

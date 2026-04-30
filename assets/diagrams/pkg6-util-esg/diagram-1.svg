@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="유틸·ESG 인적 의존성 리스크 — BLK 공통 패턴 — 암묵지·환경 약품비">
+  <title>유틸·ESG 인적 의존성 리스크</title>
+  <desc>유틸·ESG 영역의 인적 의존성 (베테랑·Excel·작업자 경험) → 현장 운영 판단 → 작업자 편차·에너지 원단위 산포 → 환경 약품비 누수 → 구조적 리스크</desc>
+  <defs>
+    <linearGradient id="g_pkg6_d1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803D"/><stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="g_pkg6_d1_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F0FDF4"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_pkg6_d1)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">PKG 6 · TACIT KNOWLEDGE × ESG RISK</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">유틸·ESG 인적 의존성 리스크</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">BLK 공통 패턴 — 암묵지·환경 약품비</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">베테랑 + Excel + 작업자</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">3 입력 의존</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">현장 운영 판단</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">암묵지 전수</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">공정 설정값 결정</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">변수 (수치)종 동시 조작</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">작업자 간 편차</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">±(수치)% 차이</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">에너지 원단위 산포</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">kWh/N㎥ 변동</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">환경 약품비 누수</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">(수치)% 추가 소비</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">구조적 리스크</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">이탈·퇴직 시 즉각 마비</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#86EFAC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_pkg6_d1_card)" stroke="#86EFAC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_pkg6_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#14532D">AI 해결: 5.2-f RAG</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#166534">암묵지 형식지화</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §3.1 사업 배경 (PKG 6 유틸·ESG)</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합: BLK-T1-3.1 인적 의존 + BLK-CBAM-C 데이터 단절</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">5.2-a (유사사례) + 5.2-f (RAG 형식지화)</text>
+</svg>

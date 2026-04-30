@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="도식 (도식 1) — Lv.0 · Lv.1 · Lv.2">
+  <title>도식 (도식 1)</title>
+  <desc>도식 의 1번 도식 — 7 단계</desc>
+  <defs>
+    <linearGradient id="g_auto_catalog_1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="g_auto_catalog_1_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F8FAFC"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_auto_catalog_1)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">DIAGRAM · DIAGRAM 1</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">도식 (도식 1)</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">Lv.0 · Lv.1 · Lv.2</text>
+  <!-- 카드 stack 7 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">Lv.0</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155">엑셀·수기</text>
+  </g>
+  <text x="300" y="186" text-anchor="middle" font-size="10" fill="#94A3B8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 188)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">Lv.1</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155">일부 수집</text>
+  </g>
+  <text x="300" y="264" text-anchor="middle" font-size="10" fill="#94A3B8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 266)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">Lv.2</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155">빅데이터</text>
+  </g>
+  <text x="300" y="342" text-anchor="middle" font-size="10" fill="#94A3B8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 344)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">중소</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155"></text>
+  </g>
+  <text x="300" y="420" text-anchor="middle" font-size="10" fill="#94A3B8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 422)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">중견</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155"></text>
+  </g>
+  <text x="300" y="498" text-anchor="middle" font-size="10" fill="#94A3B8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 500)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">고객사 접촉</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155"></text>
+  </g>
+  <text x="300" y="576" text-anchor="middle" font-size="10" fill="#94A3B8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 578)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_catalog_1_card)" stroke="#94A3B8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_catalog_1)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#0F172A">규모?</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#334155"></text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 본문 paste 가능</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">노드 7 단계 — 직각 화살표 흐름</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">디자인 SVG (Phase E15 정책) · 600×800 portrait</text>
+</svg>

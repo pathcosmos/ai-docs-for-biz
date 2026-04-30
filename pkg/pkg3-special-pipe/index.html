@@ -1,0 +1,4189 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 사업의 핵심 명분은 **베테랑 1~2 명 의존도 [%] + 신규 주문 [수치] 만 조합 + 암묵지 휘발 리스크의 1 차 자산화** 이다. RAG 인프라 (Vector DB·임베딩·하이브리드 검색·LLM 응답) 위에 4 시나리오를 통합 운영하여 9 개월 내 신입·중간 숙련자의 단독 의사결정 가능률을 [%] 끌어올리는 것이 본 사업의 정량 목표이다.">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/pkg/pkg3-special-pipe/">
+      
+      
+        <link rel="prev" href="../pkg2-cold-rolled/">
+      
+      
+        <link rel="next" href="../pkg4-rubber/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>사업계획서 — [고객사] 디지털 경남 (특수강관 9 개월 암묵지 자산화 RAG 파일럿) - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-rag" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              사업계획서 — [고객사] 디지털 경남 (특수강관 9 개월 암묵지 자산화 RAG 파일럿)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 콘텐츠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제조 AI 도입 기초·아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §3·4 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track1-engine-cards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track2-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps 도입 기초·구성요소 7 종
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track2-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §6·7·8 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track3-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM·RAG 도입 기초·5 계층
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../track/track3-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §4·5 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 6 패키지 통합 파일럿
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 6 패키지 통합 파일럿
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg1-steel-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 1 — 대기업 철강 다년 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg2-cold-rolled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 2 — 중견 냉연 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 3 — 특수강관 RAG 9 개월
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 3 — 특수강관 RAG 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. 과제 요약 (1 페이지)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 사업 개요 및 추진 배경
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 사업 개요 및 추진 배경">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 과제명·사업기간·추진 체계 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 제조 AI 도입 필요성 (거시 환경)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 특수강관 산업의 디지털 전환 당위성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 [고객사] 현황 요약 및 핵심 문제의식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 기업 현황 및 대상 공정 분석
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 기업 현황 및 대상 공정 분석">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 [고객사] 개요 및 재무 현황
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 대상 공정의 제조 프로세스 및 특성 (인발·필거·열처리·UT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-icsmes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 기존 ICS·MES 구축 이력
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 제조 데이터 보유 현황
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 현황 및 문제점 (AS-IS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-to-be-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 구축 상세 (9 개월 압축)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 구축 상세 (9 개월 압축)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 데이터 수집·정형화 단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ai-3-52-a-52-c-52-f-52-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 AI 엔진 개발 단계 — 3 카드 결합 (5.2-a · 5.2-c · 5.2-f) + 옵션 (5.2-g)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 AI 엔진 개발 단계 — 3 카드 결합 (5.2-a · 5.2-c · 5.2-f) + 옵션 (5.2-g)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#52-a-scn-stl-07-stl-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-a 유사 사례 검색·추천 엔진 (SCN-STL-07 공정설계 + STL-08 밀시트 분석 파트)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-c-scn-stl-11-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-c 비전 검사 엔진 (SCN-STL-11 UT 자동판정)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-f-llmrag-scn-stl-07-stl-08-ocr-llm-01-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-f LLM·RAG 지식검색 엔진 (SCN-STL-07 공정설계 + STL-08 OCR + LLM-01 SOP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-g-cad-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (옵션) 5.2-g 도면·CAD 형상 임베딩 (Phase 2 후반 검토)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        카드 결합 가이드 — 본 사업의 결합 구조
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-human-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Human-in-the-loop 검증 체계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-meserpscadaplc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 기존 시스템(MES/ERP/SCADA/PLC) 연동 방안
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 단계별 추진 일정 및 마일스톤 — 9 개월 압축 양식 직접 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (별첨) 사업기간 압축 4 분기 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 기대효과 및 성과 지표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 기대효과 및 성과 지표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-as-is-vs-to-be" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 정량적 기대효과 (AS-IS vs TO-BE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 정성적 기대효과 및 제조혁신 연계성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 핵심 성과 지표(KPI) 및 측정 방법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 중장기 로드맵과의 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-track-23-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 MLOps 및 지속적 개선 체계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-llmrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 LLM·RAG 기반 지식자산화 — 본 사업의 핵심 별첨
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 모듈 통합 운영 (간략)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 부록·별첨
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 부록·별첨">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 시나리오 상세 (4 시나리오)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 사업비 산정 상세
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 인용·참조 자산 인덱스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 RAG 도메인 어휘 인덱스
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-e5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통합 테스트 자체평가 (Phase E5)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="통합 테스트 자체평가 (Phase E5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 자산 활용도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-top-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 갭 발견 — 본 사업 신규 갭 Top 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 자연스럽지 않은 인용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 새로 작성한 섹션 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 새로 작성 분량 비율
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-46-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 일관성 점수: 4.6 / 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-phase-e1e2e3e4e5-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Phase E1·E2·E3·E4·E5 비교 — 5 도메인 일관성 추세
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 통합 테스트로 드러난 가장 큰 이슈 1~2 개
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg4-rubber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 4 — 고무 양산 OEM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg5-precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 5 — 정밀가공 SaaS 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg6-util-esg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 6 — 유틸·ESG·CBAM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시나리오 카탈로그 — 40 종 7 도메인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Top 5 (연속주조·압연·표면결함)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-phase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Phase 2 (압연·소둔 4 종)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-rub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    고무·폴리머 5 종 (배합·언더큐어)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-utl-saf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    유틸·안전 5 종 (CBAM·중대재해)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    특수강관 RAG (작업표준·정비이력)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧩 Cross-cutting 모듈
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧩 Cross-cutting 모듈
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/cbam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CBAM 대응 (EU 탄소국경조정)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    중대재해 안전 (CCTV·웨어러블)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/federated-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연합학습 (산업단지 공동 AI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/oem-supply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OEM 공급망 정합 (자동차·조선·2 차전지)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/saas-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SaaS·클라우드 보안 (5 등급 민감도)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../guide/assembly/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. 과제 요약 (1 페이지)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 사업 개요 및 추진 배경
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 사업 개요 및 추진 배경">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 과제명·사업기간·추진 체계 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 제조 AI 도입 필요성 (거시 환경)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 특수강관 산업의 디지털 전환 당위성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 [고객사] 현황 요약 및 핵심 문제의식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 기업 현황 및 대상 공정 분석
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 기업 현황 및 대상 공정 분석">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 [고객사] 개요 및 재무 현황
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 대상 공정의 제조 프로세스 및 특성 (인발·필거·열처리·UT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-icsmes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 기존 ICS·MES 구축 이력
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 제조 데이터 보유 현황
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 현황 및 문제점 (AS-IS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-to-be-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 구축 상세 (9 개월 압축)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 구축 상세 (9 개월 압축)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 데이터 수집·정형화 단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ai-3-52-a-52-c-52-f-52-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 AI 엔진 개발 단계 — 3 카드 결합 (5.2-a · 5.2-c · 5.2-f) + 옵션 (5.2-g)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 AI 엔진 개발 단계 — 3 카드 결합 (5.2-a · 5.2-c · 5.2-f) + 옵션 (5.2-g)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#52-a-scn-stl-07-stl-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-a 유사 사례 검색·추천 엔진 (SCN-STL-07 공정설계 + STL-08 밀시트 분석 파트)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-c-scn-stl-11-ut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-c 비전 검사 엔진 (SCN-STL-11 UT 자동판정)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-f-llmrag-scn-stl-07-stl-08-ocr-llm-01-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-f LLM·RAG 지식검색 엔진 (SCN-STL-07 공정설계 + STL-08 OCR + LLM-01 SOP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-g-cad-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (옵션) 5.2-g 도면·CAD 형상 임베딩 (Phase 2 후반 검토)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        카드 결합 가이드 — 본 사업의 결합 구조
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-human-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Human-in-the-loop 검증 체계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-meserpscadaplc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 기존 시스템(MES/ERP/SCADA/PLC) 연동 방안
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 단계별 추진 일정 및 마일스톤 — 9 개월 압축 양식 직접 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (별첨) 사업기간 압축 4 분기 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 기대효과 및 성과 지표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 기대효과 및 성과 지표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-as-is-vs-to-be" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 정량적 기대효과 (AS-IS vs TO-BE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 정성적 기대효과 및 제조혁신 연계성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 핵심 성과 지표(KPI) 및 측정 방법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 중장기 로드맵과의 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-track-23-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 MLOps 및 지속적 개선 체계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-llmrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 LLM·RAG 기반 지식자산화 — 본 사업의 핵심 별첨
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 모듈 통합 운영 (간략)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 부록·별첨
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 부록·별첨">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 시나리오 상세 (4 시나리오)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 사업비 산정 상세
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 인용·참조 자산 인덱스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 RAG 도메인 어휘 인덱스
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-e5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통합 테스트 자체평가 (Phase E5)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="통합 테스트 자체평가 (Phase E5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 자산 활용도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-top-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 갭 발견 — 본 사업 신규 갭 Top 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 자연스럽지 않은 인용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 새로 작성한 섹션 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 새로 작성 분량 비율
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-46-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 일관성 점수: 4.6 / 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-phase-e1e2e3e4e5-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Phase E1·E2·E3·E4·E5 비교 — 5 도메인 일관성 추세
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 통합 테스트로 드러난 가장 큰 이슈 1~2 개
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../track/track1-index/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📦 콘텐츠
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../pkg1-steel-enterprise/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📦 6 패키지 통합 파일럿
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">package</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pkg3</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rag</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">steel</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="9-rag">사업계획서 — <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 디지털 경남 (특수강관 9 개월 암묵지 자산화 RAG 파일럿)<a class="headerlink" href="#9-rag" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 29 분 읽기</span></p>
+<figure>
+  <img alt="사업계획서 — &lt;span class=&quot;placeholder-tag&quot; data-placeholder=&quot;고객사&quot;&gt;[고객사]&lt;/span&gt; 디지털 경남 (특수강관 9 개월 암묵지 자산화 RAG 파일럿)" src="../../assets/svg/pkg/pkg3-special-pipe.svg" />
+<br />
+<figcaption>통합 파일럿 인포그래픽 — 클릭하여 확대·SVG 다운로드</figcaption>
+</figure>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><strong>본 문서 성격</strong> — <span class="meta-marker">Phase E5</span> 통합 파일럿. 5 번째 도메인 (특수강관) + 9 개월 양식 1 차 직접 검증 + RAG 중심 5.2 카드 결합 (a + c + f, 옵션 g) + 디지털 경남 지원사업 + 암묵지 자산화 5 축 검증.
+<span class="meta-marker">Phase E1</span> (철강 18M 풀) · E2 (정밀가공 6M SaaS) · E3 (고무 12M LG) · E4 (유틸 12M 모듈 풀) 와 다른 <strong>RAG 중심 모드</strong> 의 첫 시연.
+인용 표기·플레이스홀더 관례 동일. SCN 부정합 처리는 <code>guide/assembly.md</code> §3 정책 따름.</p>
+</details>
+<hr />
+<h2 id="0-1">0. 과제 요약 (1 페이지)<a class="headerlink" href="#0-1" title="Permanent link">¤</a></h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사업 분류</td>
+<td>2026 디지털 기업 in 경남 (제조 지능화 플랫폼·지식그래프)</td>
+</tr>
+<tr>
+<td>사업 기간</td>
+<td><strong>9 개월</strong> (Phase 1: 1~6 / Phase 2: 7~9)</td>
+</tr>
+<tr>
+<td>주관 기관</td>
+<td>경남테크노파크 (확인 필요)</td>
+</tr>
+<tr>
+<td>고객사</td>
+<td><code>[고객사]</code> (가상의 중견 특수강관사)</td>
+</tr>
+<tr>
+<td>주력 시나리오</td>
+<td><a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 인발·필거밀 공정설계 LLM (주력) + <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> 밀시트 OCR + <a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a> UT 자동판정 + <a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a> SOP RAG (4 시나리오)</td>
+</tr>
+<tr>
+<td>5.2 엔진 카드 결합</td>
+<td><strong>5.2-a 유사 사례 + 5.2-c 비전 + 5.2-f LLM·RAG</strong> (옵션 5.2-g 형상 임베딩)</td>
+</tr>
+<tr>
+<td>사업비·정부지원</td>
+<td>재무 가이드 §4 양식 — <code>[수치]</code> 억 / 정부지원 <span class="placeholder-tag" data-placeholder="%">[%]</span> / 자부담 <span class="placeholder-tag" data-placeholder="%">[%]</span> (확인 필요)</td>
+</tr>
+</tbody>
+</table>
+<p>본 사업의 핵심 명분은 <strong>베테랑 1~2 명 의존도 <span class="placeholder-tag" data-placeholder="%">[%]</span> + 신규 주문 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만 조합 + 암묵지 휘발 리스크의 1 차 자산화</strong> 이다. RAG 인프라 (Vector DB·임베딩·하이브리드 검색·LLM 응답) 위에 4 시나리오를 통합 운영하여 9 개월 내 신입·중간 숙련자의 단독 의사결정 가능률을 <span class="placeholder-tag" data-placeholder="%">[%]</span> 끌어올리는 것이 본 사업의 정량 목표이다.</p>
+<blockquote>
+<p>[출처: <code>other/support-programs.md</code> §2 디지털 경남 + 본 사업 맥락 새로 작성]</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 사업 개요 및 추진 배경<a class="headerlink" href="#1" title="Permanent link">¤</a></h2>
+<h3 id="11">1.1 과제명·사업기간·추진 체계 요약<a class="headerlink" href="#11" title="Permanent link">¤</a></h3>
+<p>본 사업은 <strong>2026 디지털 기업 in 경남</strong> 트랙의 9 개월 표준 과제로, 부산·경남권 특수강관 중견사 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 인발·필거밀·UT 검사 공정에 RAG 중심 제조 AI 를 도입하여 <strong>베테랑 의존 암묵지를 형식지 자산</strong> 으로 전환하는 것을 핵심 명제로 한다. 주관기관은 경남테크노파크 (확인 필요), 수행기관은 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> + AI 전문 외주, 수요기업은 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 단일이다. 본 트랙의 사업비는 <code>재무_예산_산정_가이드.md</code> §4.2 의 패키지 3 추정 (확인 필요) 을 기준으로 산정되었다.</p>
+<blockquote>
+<p>[출처: <code>other/support-programs.md</code> §2; <code>재무_예산_산정_가이드.md</code> §4.2; 추진 체계 새로 작성]</p>
+</blockquote>
+<h3 id="12-ai">1.2 제조 AI 도입 필요성 (거시 환경)<a class="headerlink" href="#12-ai" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §1.2 카드 — 글로벌 제조업 저성장·숙련 인력 고령화·DX 4 단계·중대재해법·정부 지원정책 5 항목 그대로 인용]</p>
+</blockquote>
+<p>특수강관 산업에 한정해서는, 자동차·플랜트·조선 OEM 의 정밀 공차 (외경 ±0.05 mm·진원도·UT 결함 한도) 요구가 강화되는 추세이며, 이는 베테랑의 손끝 감각으로만 대응해 온 기존 공정설계·UT 판정 방식의 한계를 가속화한다.</p>
+<h3 id="13">1.3 특수강관 산업의 디지털 전환 당위성<a class="headerlink" href="#13" title="Permanent link">¤</a></h3>
+<p>특수강관은 듀플렉스·고합금 강종의 다품종 소량 생산이 표준이며, 모관 (Mother Tube) 선정·인발 패스 횟수·압하율·열처리 조건의 조합이 신규 주문마다 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만 가지에 달한다. 변수 간 상호작용이 비선형적이라 단일 공식·테이블로는 설명되지 않으며, 결과적으로 1~2 명의 베테랑 숙련공이 30 분~2 시간을 들여 Excel·메모를 조합해 공정설계서를 작성하는 운영 구조가 고착되어 있다. 베테랑 퇴직·이직 시 공정설계 역량이 즉각 마비되는 사업연속성 (BCP) 리스크가 강관 산업 전반의 구조적 약점으로 지목된다.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §1.3 카드 (철강·금속가공 산업 당위성) + 특수강관 도메인 보완]</p>
+</blockquote>
+<h3 id="14">1.4 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 현황 요약 및 핵심 문제의식<a class="headerlink" href="#14" title="Permanent link">¤</a></h3>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 는 자동차 (현대차·기아 협력사, 1·2 차 Tier — 확인 필요)·플랜트 (보일러 튜브)·조선 (해양 구조관) 등 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 개 OEM 에 다년간 납품해 온 중견 특수강관사이다. 주력 제품군은 [부품] 이며, 연간 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 톤 생산 규모, 직원 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명, 베테랑 공정설계 인력 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명 (40~50 대) 이 핵심 자산이다. 현재 직면한 4 개 구조적 문제는 다음과 같다.</p>
+<ol>
+<li><strong>공정설계 베테랑 의존도 <span class="placeholder-tag" data-placeholder="%">[%]</span> + 퇴직 임박 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명</strong> — 향후 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 내 핵심 공정설계 역량 50% 이상 이탈 가능성.</li>
+<li><strong>신규 주문 응대 시간 30 분~2 시간</strong> — 영업 견적 회신 지연이 OEM 1 차 협력사 자격 평가에 부정적.</li>
+<li><strong>밀시트·성적서 PDF/이미지 분산</strong> — 원소재 입고 검사 → 가공 결과 상관 분석이 불가능, 불량 추적 <span class="placeholder-tag" data-placeholder="기간">[기간]</span>.</li>
+<li><strong>UT 검사원 판정 편차</strong> — 동일 신호 A-scan 도 검사원별 판정 차이 <span class="placeholder-tag" data-placeholder="%">[%]</span>, 야간·교대조 품질 변동.</li>
+</ol>
+<p>본 사업이 해결하고자 하는 핵심 과제는 <strong>"베테랑의 머릿속 공정설계 노하우를 RAG·LLM 기반 지식 자산으로 전환하여, 신입·중간 숙련자의 단독 의사결정 가능 영역을 <span class="placeholder-tag" data-placeholder="%">[%]</span> 확대하는 것"</strong> 이다.</p>
+<blockquote>
+<p>[본 §1.4 는 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 특화로 새로 작성 — 베테랑 의존도·OEM 협력 구조·암묵지 휘발 리스크의 4 항목 진단]</p>
+</blockquote>
+<hr />
+<h2 id="2">2. 기업 현황 및 대상 공정 분석<a class="headerlink" href="#2" title="Permanent link">¤</a></h2>
+<h3 id="21">2.1 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 개요 및 재무 현황<a class="headerlink" href="#21" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기업명</td>
+<td><code>[고객사]</code> (정식명: 확인 필요)</td>
+</tr>
+<tr>
+<td>대표자·소재지</td>
+<td>(확인 필요) / 경남 [지역]</td>
+</tr>
+<tr>
+<td>업종 코드</td>
+<td>24121 (강관 제조업, 확인 필요)</td>
+</tr>
+<tr>
+<td>주생산품</td>
+<td>무계목 강관 (인발·필거), 자동차·플랜트·조선 OEM 공급</td>
+</tr>
+<tr>
+<td>종업원 수</td>
+<td><code>[수치]</code> 명</td>
+</tr>
+<tr>
+<td>최근 3 개년 매출</td>
+<td><code>[수치]</code> / <code>[수치]</code> / <code>[수치]</code> 억 원 (확인 필요)</td>
+</tr>
+<tr>
+<td>영업이익률</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+</tr>
+<tr>
+<td>수출액 비중</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> (직접 + 간접)</td>
+</tr>
+<tr>
+<td>스마트공장 지원 이력</td>
+<td>기초·중간 1 단계 보유, 본 사업으로 중간 2 진입 목표</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §2.1 카드 골격 + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 가정 수치]</p>
+</blockquote>
+<h3 id="22-ut">2.2 대상 공정의 제조 프로세스 및 특성 (인발·필거·열처리·UT)<a class="headerlink" href="#22-ut" title="Permanent link">¤</a></h3>
+<p>원재료 모관 입고 (Mill Sheet 첨부) → 모관 검사·등급 분류 → 인발 (1 차·2 차·3 차 패스) → 중간 열처리 → 필거 (Cold Pilger Mill, 외경·내경 정밀 가공) → 최종 열처리 (소둔·담금질) → 표면 처리 (산세·연마) → UT (Ultrasonic Testing) 검사 → 출하 검사·포장의 9 단계 표준 공정. 핵심 변수는 (i) 모관 외경·내경·두께·재질 4 종, (ii) 인발 압하율 <span class="placeholder-tag" data-placeholder="%">[%]</span>·패스 횟수 <span class="placeholder-tag" data-placeholder="수치">[수치]</span>·필거 mandrel 형상, (iii) 열처리 온도·승온 곡선·체류 시간, (iv) UT 신호 (A-scan 진폭·도달 시간·결함 분류) 등 동시 최적화 변수가 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 종에 달한다. 보유 인증은 IATF 16949 (자동차) · API 5L·5LC (오일·가스) · ASME (보일러) 다수 (확인 필요).</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §2.2 카드 + 강관 도메인 어휘]</p>
+</blockquote>
+<h3 id="23-icsmes">2.3 기존 ICS·MES 구축 이력<a class="headerlink" href="#23-icsmes" title="Permanent link">¤</a></h3>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 는 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 년 MES 1 단계 도입 이후 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 동안 압연·열처리 라인 일부에 ICS 데이터 수집을 단계 확장해 왔으나, <strong>공정설계서 작성·UT 판정·SOP 운영의 3 영역은 여전히 베테랑·검사원의 수기 운영</strong> 에 머무르고 있다. 본 사업은 이 3 영역에 RAG·LLM 인프라를 신규 도입하여 ICS·MES 데이터와 결합하는 단계적 진화 경로의 첫 단계이다.</p>
+<blockquote>
+<p>[본 §2.3 새로 작성 — 데이터 성숙도 Lv.0~Lv.1 가정]</p>
+</blockquote>
+<h3 id="24">2.4 제조 데이터 보유 현황<a class="headerlink" href="#24" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>데이터 유형</th>
+<th>보유 형태</th>
+<th>누적 규모</th>
+<th>OCR/디지털화 필요</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>공정설계서 (Excel 시트)</td>
+<td>개인 PC + 공유 폴더</td>
+<td><code>[수치]</code> 건</td>
+<td>일부 정형화 필요</td>
+</tr>
+<tr>
+<td>Mill Sheet · 성적서</td>
+<td>PDF·이미지</td>
+<td><code>[수치]</code> 건 (월 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 증가)</td>
+<td><strong>OCR 필수</strong></td>
+</tr>
+<tr>
+<td>UT 신호 A-scan</td>
+<td>검사 장비 raw + 판정 메모</td>
+<td><code>[수치]</code> 건 (검사기 raw 보존 <span class="placeholder-tag" data-placeholder="기간">[기간]</span>)</td>
+<td>신호·라벨 통합 필요</td>
+</tr>
+<tr>
+<td>작업표준서 SOP</td>
+<td>HWP·PDF</td>
+<td><code>[수치]</code> 건</td>
+<td>디지털화 + RAG 색인</td>
+</tr>
+<tr>
+<td>MES 작업지시·실적</td>
+<td>DB</td>
+<td><code>[수치]</code> 년치</td>
+<td>정형 (그대로 활용)</td>
+</tr>
+<tr>
+<td>외부 OEM 인증·도면</td>
+<td>PDF·DWG</td>
+<td><code>[수치]</code> 건</td>
+<td>형상 임베딩 옵션</td>
+</tr>
+</tbody>
+</table>
+<p>본 데이터 매트릭스는 <strong>비정형 비중이 약 <span class="placeholder-tag" data-placeholder="%">[%]</span></strong> 로 매우 높아, 본 사업이 RAG 중심 인프라를 1 차 도입하는 직접 근거가 된다.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §2.4 카드 + 강관 데이터 특성]</p>
+</blockquote>
+<hr />
+<h2 id="3-as-is">3. 현황 및 문제점 (AS-IS)<a class="headerlink" href="#3-as-is" title="Permanent link">¤</a></h2>
+<div class="admonition copy" data-section="3.1">
+<p class="admonition-title">📋 §3.1 공정 운영의 인적 의존성 및 암묵지 리스크 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-top5.md</code> §3.1 BLK-T1-3.1 본문 그대로 인용]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 특화 보강: 본 사업은 §3.1 의 일반 명제가 가장 첨예하게 발현되는 사례이다. 신규 주문 (외경·내경·두께·재질 조합 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만 가지) 진입 시 베테랑 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명이 평균 30 분~2 시간 동안 모관 선정·패스 시퀀스·열처리 조건을 Excel + 머릿속 역산으로 결정하며, 이 과정의 중간 의사결정 사유는 본인 메모에만 보존된다. <a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 공정설계 LLM 의 1 차 적용 영역이며, <code>guide/assembly.md</code> §3.3 의 (b) 분기 적용으로 §3.1 인용 본문 끝의 "참조" 시나리오를 <a href="../../scenario/catalog/#scn-stl-04" title="냉간압연 패스 스케줄 표준화·최적화" class="scn-link">SCN-STL-04</a> → <strong><a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> (본 사업 시나리오)</strong> 로 치환하여 인용한다.</p>
+</div>
+<div class="admonition copy" data-section="3.2">
+<p class="admonition-title">📋 §3.2 데이터 단절 및 비정형·이미지 기반 관리의 한계 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-top5.md</code> §3.2 BLK-T1-3.2 본문 그대로 인용]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 특화: 본 사업의 데이터 단절은 <strong>공급사별 4~6 종 양식의 Mill Sheet</strong> 가 PDF 이미지로만 보관되어 MES 연동이 불가능한 데에서 가장 두드러진다. <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> 밀시트 OCR·디지털화의 직접 적용 영역이다.</p>
+</div>
+<div class="admonition copy" data-section="3.3">
+<p class="admonition-title">📋 §3.3 품질 편차 및 불량 원인 추적 체계 부재 — UT 판정 편차 영역 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §3.3 카드 카드 요지 + 강관 UT 도메인 보완]</p>
+</blockquote>
+<p>UT (Ultrasonic Testing) 검사는 강관 품질의 최후 게이트이나, 동일한 A-scan 신호에 대해 검사원 A·B·C 의 판정이 <span class="placeholder-tag" data-placeholder="%">[%]</span> 차이를 보이며, 야간·교대조에서 일관성이 더 약화된다. 검사 장비의 raw 신호는 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 보존되나 판정 사유·근거는 검사원 메모로만 남아 사후 통계 분석·재현·교차 검증이 불가능하다. <a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a> UT 자동판정의 1 차 명분.</p>
+</div>
+<div class="admonition copy" data-section="3.4">
+<p class="admonition-title">📋 §3.4 실시간 운영·의사결정 체계의 공백 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §3.4 카드 — 종이 일보·익일 확인·정보 비대칭·사후 대응만 가능 4 항목 그대로 인용]</p>
+</blockquote>
+</div>
+<div class="admonition copy" data-section="3.5">
+<p class="admonition-title">📋 §3.5 종합 위기 직면 (구조적 문제 요약) (사업계획서 paste 가능)</p>
+<p>본 사업의 4 구조적 문제는 다음 3 단 요약 표로 압축된다.</p>
+<table>
+<thead>
+<tr>
+<th>현재 직면 상황</th>
+<th>핵심 구조적 문제</th>
+<th>전환 시급성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>베테랑 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명 의존도 <span class="placeholder-tag" data-placeholder="%">[%]</span> + 퇴직 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 임박</td>
+<td>공정설계 역량 BCP 리스크</td>
+<td><strong>緊</strong> — 본 사업 9 개월 내 1 차 자산화</td>
+</tr>
+<tr>
+<td>Mill Sheet PDF 분산 + UT 판정 검사원 편차</td>
+<td>데이터·판정 일관성 결여</td>
+<td>中~高 — 6 개월 내 OCR·자동판정 완료</td>
+</tr>
+<tr>
+<td>OEM 견적·SQA 평가에서 응대 속도·일관성이 변별 요소</td>
+<td>신규 OEM 영업·기존 SQA 점수 영향</td>
+<td>中 — 9 개월 내 공정설계 응대 <span class="placeholder-tag" data-placeholder="기간">[기간]</span> 단축</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §3.5 카드 양식 + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 특화]</p>
+</blockquote>
+<hr />
+</div>
+<h2 id="4-to-be-ai">4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략<a class="headerlink" href="#4-to-be-ai" title="Permanent link">¤</a></h2>
+<div class="admonition copy" data-section="4.1">
+<p class="admonition-title">📋 §4.1 TO-BE 개념도 및 핵심 전략 — 암묵지 → 형식지 → 지능형 어시스턴트 3 단계 (사업계획서 paste 가능)</p>
+<p>본 사업의 TO-BE 핵심 전략은 다음 3 단계 진화 경로로 구성된다.</p>
+<ol>
+<li><strong>지식 추출 (Phase 1 전반, M1~M3)</strong> — 베테랑 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명 인터뷰 + 공정설계서 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 + Mill Sheet <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 + UT 신호 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 + SOP <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건의 디지털화·정형화·라벨링.</li>
+<li><strong>지식 모델링 (Phase 1 후반·Phase 2 전반, M4~M7)</strong> — Vector DB 색인 + 임베딩 모델 (한국어 sLM 기반) 파인튜닝 + 5.2-a 유사 사례 검색 + 5.2-f LLM·RAG 결합 + 5.2-c UT 신호 분류 모델.</li>
+<li><strong>지능형 어시스턴트 (Phase 2 후반, M8~M9)</strong> — 신규 주문 입력 → AI 가 모관·패스·열처리·UT 기준 초안 자동 생성 → 베테랑 검수·승인 → MES 작업지시 변환의 단일 플로 운영.</li>
+</ol>
+<p>본 단계의 종료 시점에 신입·중간 숙련자의 단독 의사결정 가능 영역이 <span class="placeholder-tag" data-placeholder="%">[%]</span> 확대되며, 베테랑 응대 부담이 <span class="placeholder-tag" data-placeholder="%">[%]</span> 감소하여 신규 OEM 영업·R&amp;D 자원 재배분이 가능해진다.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §4.1 카드 + 본 사업 3 단계 새로 작성]</p>
+</blockquote>
+</div>
+<div class="admonition copy" data-section="4.2">
+<p class="admonition-title">📋 §4.2 AI 적용 공정 및 기능 분류 (사업계획서 paste 가능)</p>
+<table>
+<thead>
+<tr>
+<th>7 대 공정 영역</th>
+<th>본 사업 적용</th>
+<th>5 대 AI 기능</th>
+<th>본 사업 적용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>제품기획·설계</td>
+<td>✓ 공정설계 (STL-07)</td>
+<td>인지</td>
+<td>✓ UT 신호 분류 (STL-11)</td>
+</tr>
+<tr>
+<td>제조 공정</td>
+<td>✓ 패스·열처리 추천 (STL-07)</td>
+<td>예측</td>
+<td>—</td>
+</tr>
+<tr>
+<td>구매</td>
+<td>✓ Mill Sheet 디지털화 (STL-08)</td>
+<td>자동화</td>
+<td>—</td>
+</tr>
+<tr>
+<td>사후서비스</td>
+<td>—</td>
+<td>소통</td>
+<td>✓ SOP RAG 질의 (LLM-01)</td>
+</tr>
+<tr>
+<td>환경/에너지/안전</td>
+<td>—</td>
+<td>생성</td>
+<td>✓ 공정설계 초안 (STL-07) + 보고서 (LLM-01 결합)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §4.2 카드 양식 + 본 사업 4 시나리오 매핑]</p>
+</blockquote>
+</div>
+<div class="admonition copy" data-section="4.3">
+<p class="admonition-title">📋 §4.3 활용 데이터 유형 및 수집 설계 (사업계획서 paste 가능)</p>
+<p>본 사업의 데이터는 정형 30% + <strong>비정형 70%</strong> 의 비대칭 비중을 가지며, RAG 인프라가 본 데이터 구조의 핵심 처리 계층이다.</p>
+<ul>
+<li><strong>공정설계서·Mill Sheet</strong> — PDF·Excel·HWP → 파서별 추출 + 메타 정규화 (재질·치수·고객사·OEM·제품군 5 축 메타) → Vector DB 색인.</li>
+<li><strong>UT 신호</strong> — 1D A-scan + 판정 메모 → 신호 정규화·peak 추출 + 판정 메타 라벨링 → 분류 모델 학습셋.</li>
+<li><strong>SOP</strong> — HWP·PDF → 청킹 (계층 청킹·섹션 기반) → 임베딩 → Vector DB.</li>
+<li><strong>(옵션) CAD 도면·BOM</strong> — DWG·DXF → 5.2-g 형상 임베딩 (Phase 2 후반 검토).</li>
+</ul>
+<p>본 사업의 LLM 모델은 <code>guide/korean-slm.md</code> §1·§2 의 의사결정 4 분기 적용 결과 <strong>EXAONE 또는 HyperCLOVA X (한국어 + 도메인 파인튜닝)</strong> 를 1 차 후보로, 외부 API (GPT·Claude) 는 영업비밀·고객 IP 비포함 일반 질의에 한정 분기한다.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §4.3 카드 + <code>guide/korean-slm.md</code> §1·§2 인용]</p>
+</blockquote>
+</div>
+<div class="admonition copy" data-section="4.4">
+<p class="admonition-title">📋 §4.4 피쳐 엔지니어링 접근 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-top5.md</code> §4.4 BLK-T1-4.4 본문 그대로 인용]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 특화: 본 사업의 피쳐는 (i) 정형 시계열 (인발·열처리 PLC) + (ii) 비정형 임베딩 (공정설계서·Mill Sheet·SOP) + (iii) UT 신호 시간·주파수 도메인 피쳐 의 3 분기로 구성되며, 임베딩 피쳐가 5.2-a + 5.2-f 결합 검색의 핵심 입력이다.</p>
+</div>
+<div class="admonition copy" data-section="4.5">
+<p class="admonition-title">📋 §4.5 모델·알고리즘 선정 기준 및 앙상블 구성 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-top5.md</code> §4.5 BLK-T1-4.5 본문 그대로 인용 — 단, 인용 본문 내의 <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a>·STL-07 인용은 <code>guide/assembly.md</code> §3.3 (a) 분기 (각주 처리) 적용. 본 사업 범위 내 사례임을 본문 직후 1 줄 각주로 명시.]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 특화: 본 사업의 채택 모델 조합은 (i) 5.2-a 유사 사례 (벡터 임베딩 + Top-N 검색 + 규칙 검증) + (ii) 5.2-f LLM·RAG (하이브리드 검색 + 한국 sLM + Citation) <strong>병기</strong> 구조이며, 두 엔진은 동일 Vector DB 와 메타 스토어를 공유한다. UT 판정은 (iii) 5.2-c 비전·신호 분류 (1D-CNN/Transformer) 의 단독 엔진. 옵션으로 (iv) 5.2-g 도면 형상 임베딩 (PointNet/MeshCNN) 이 모관 선정의 형상 유사도 검색에 결합 가능하다.</p>
+</div>
+<div class="admonition copy" data-section="4.6">
+<p class="admonition-title">📋 §4.6 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인 (사업계획서 paste 가능)</p>
+<blockquote>
+<p>[출처: <code>track/track1-top5.md</code> §4.6 BLK-T1-4.6 본문 + Mermaid 그대로 인용]</p>
+</blockquote>
+<p>본 사업의 RAG 중심 변형: 4.6 의 표준 파이프라인에서 <strong>(임베딩 모델 학습) ↔ (Vector DB 적재) ↔ (하이브리드 검색) ↔ (LLM 응답·Citation)</strong> 의 4 단계가 핵심 추가 경로로 위치하며, 정형 데이터 (PLC·MES) 는 RAG 메타 필터의 입력으로 결합된다.</p>
+<hr />
+</div>
+<h2 id="5-9">5. 구축 상세 (9 개월 압축)<a class="headerlink" href="#5-9" title="Permanent link">¤</a></h2>
+<h3 id="51">5.1 데이터 수집·정형화 단계<a class="headerlink" href="#51" title="Permanent link">¤</a></h3>
+<p>본 사업의 데이터 수집·정형화는 <strong>비정형 자산 OCR·청킹·임베딩이 1 차 작업</strong> 인 점에서 이전 파일럿 (E1·E2·E3·E4) 와 구별된다. 핵심 산출물은 (i) 공정설계서 정규화 스키마 + 베테랑 인터뷰 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 QA 셋, (ii) Mill Sheet OCR 파이프라인 + 공급사 4~6 종 양식 파서, (iii) UT 신호 통합 라벨 DB (<span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 + 검사원 판정 메타), (iv) SOP 청킹·임베딩 + RAG 색인이다. 단위·재질 코드·OEM 사양 표준화는 본 단계의 부수 산출물.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §5.1 카드 + 강관 도메인 보완]</p>
+</blockquote>
+<h3 id="52-ai-3-52-a-52-c-52-f-52-g">5.2 AI 엔진 개발 단계 — <strong>3 카드 결합</strong> (5.2-a · 5.2-c · 5.2-f) + 옵션 (5.2-g)<a class="headerlink" href="#52-ai-3-52-a-52-c-52-f-52-g" title="Permanent link">¤</a></h3>
+<p>본 사업은 4 개 시나리오를 3 개 엔진 패턴 (5.2-a + 5.2-c + 5.2-f) 으로 구성하며, <strong>STL-07 공정설계 LLM 은 5.2-a + 5.2-f 의 병기 결합</strong> 으로 처리한다. 카드 결합 가이드의 "<strong>5.2-a 유사 사례 + 5.2-f RAG = 이름 비슷 + 모양 비슷 양축 동시 검색</strong>" 패턴의 1 차 시연 사례.</p>
+<h4 id="52-a-scn-stl-07-stl-08">5.2-a 유사 사례 검색·추천 엔진 (SCN-STL-07 공정설계 + STL-08 밀시트 분석 파트)<a class="headerlink" href="#52-a-scn-stl-07-stl-08" title="Permanent link">¤</a></h4>
+<blockquote>
+<p>[출처: <code>track/track1-engine-cards.md</code> §5.2-a 카드 본문 그대로 인용 — 적용 시나리오·목적·엔진 구조·포함 내용·삽화·주의·고객사별 가변 7 항목]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 적용: 본 사업의 5.2-a 핵심 입력은 베테랑 공정설계 이력 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건 + Mill Sheet 메타 + 과거 OEM 응대 결과이며, Top-N 검색 결과는 STL-07 의 모관·패스·열처리 초안 후보로 5.2-f 와 결합 입력된다.</p>
+<h4 id="52-c-scn-stl-11-ut">5.2-c 비전 검사 엔진 (SCN-STL-11 UT 자동판정)<a class="headerlink" href="#52-c-scn-stl-11-ut" title="Permanent link">¤</a></h4>
+<blockquote>
+<p>[출처: <code>track/track1-engine-cards.md</code> §5.2-c 카드 본문 그대로 인용 — 신호 이미지화 모드의 적용 시나리오 명시]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 적용: UT A-scan 신호를 1D-CNN/Transformer 로 결함 유형 (크랙·인클루전·편두께·정상) 분류 + 검사원 판정 보조. 운영 단계에서 검사원 판정과의 일치도를 KPI 로 추적.</p>
+<h4 id="52-f-llmrag-scn-stl-07-stl-08-ocr-llm-01-sop">5.2-f LLM·RAG 지식검색 엔진 (SCN-STL-07 공정설계 + STL-08 OCR + LLM-01 SOP)<a class="headerlink" href="#52-f-llmrag-scn-stl-07-stl-08-ocr-llm-01-sop" title="Permanent link">¤</a></h4>
+<blockquote>
+<p>[출처: <code>track/track1-engine-cards.md</code> §5.2-f 카드 본문 그대로 인용]</p>
+</blockquote>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 적용: 한국 sLM (EXAONE·HyperCLOVA X) 우선 + 영업비밀·OEM 사양은 외부 API 절대 차단. <code>guide/korean-slm.md</code> §5 결정 트리 직접 적용. 응답 신뢰도 임계 <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 미달 시 베테랑 에스컬레이션.</p>
+<h4 id="52-g-cad-phase-2">(옵션) 5.2-g 도면·CAD 형상 임베딩 (Phase 2 후반 검토)<a class="headerlink" href="#52-g-cad-phase-2" title="Permanent link">¤</a></h4>
+<blockquote>
+<p>[출처: <code>track/track1-engine-cards.md</code> §5.2-g 카드 요지 + 옵션 검토 사유]</p>
+</blockquote>
+<p>본 옵션은 신규 주문이 OEM 도면 (DWG·STEP) 첨부 형태로 들어올 때 모관 선정의 <strong>형상 유사도 검색</strong> 을 추가 가능하게 한다. Phase 2 후반 (M7~M9) 의 PoC 형태로 검토하며, 본 사업 범위 외 후속 단계 진입 시 본격 도입.</p>
+<h4 id="_1">카드 결합 가이드 — 본 사업의 결합 구조<a class="headerlink" href="#_1" title="Permanent link">¤</a></h4>
+<p>본 사업의 3 (옵션 4) 엔진은 다음 결합 지점을 가진다.</p>
+<ol>
+<li><strong>5.2-a + 5.2-f</strong> (STL-07 공정설계) — 5.2-a 의 Top-N 유사 사례 결과가 5.2-f LLM 의 컨텍스트 입력으로 결합. <strong>이름 비슷 (메타 검색) + 모양 비슷 (임베딩 검색) 양축 동시 적용</strong> 이 본 결합의 본질. (<code>track/track1-engine-cards.md</code> §결합 가이드 인용)</li>
+<li><strong>5.2-f + 옵션 5.2-g</strong> (STL-07 모관 선정) — 텍스트 임베딩과 형상 임베딩의 양축 검색, Phase 2 후반 PoC.</li>
+<li><strong>5.2-c + 5.2-f</strong> (STL-11 UT + 처분 매뉴얼) — UT 결함 분류 결과를 5.2-f 가 받아 처분 매뉴얼·과거 유사 결함 사례를 RAG 회신.</li>
+<li><strong>공통 RAG 인프라</strong> — Vector DB·임베딩 모델·하이브리드 검색·Citation 정책이 4 시나리오 모두에서 공유.</li>
+</ol>
+<blockquote>
+<p>[출처: <code>track/track1-engine-cards.md</code> §결합 가이드 + 본 사업 결합 구조 새로 작성]</p>
+</blockquote>
+<h3 id="53-human-in-the-loop">5.3 Human-in-the-loop 검증 체계<a class="headerlink" href="#53-human-in-the-loop" title="Permanent link">¤</a></h3>
+<p>본 사업의 HITL 은 <strong>베테랑 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명 검수 게이트</strong> 를 핵심으로 한다. AI 가 생성한 공정설계 초안·UT 판정 보조 결과·SOP 응답에 대해 (i) 베테랑이 사용 가능 / 수정 필요 / 부적합 3 단 평가, (ii) 수정 사유 드롭다운 + 자유 메모, (iii) 메모를 LLM 이 태깅·구조화하여 다시 RAG 색인에 환류 — 의 3 단 운영. 책임 분담은 <code>other/raci-matrix.md</code> §3 RACI + §4 AI 의사결정의 "검사 결과 판정" 행 (베테랑 = Final Decision Maker / AI = Information Only) 을 직접 적용한다.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §5.3 카드 + <code>other/raci-matrix.md</code> §3·§4 인용]</p>
+</blockquote>
+<h3 id="54-meserpscadaplc">5.4 기존 시스템(MES/ERP/SCADA/PLC) 연동 방안<a class="headerlink" href="#54-meserpscadaplc" title="Permanent link">¤</a></h3>
+<p><span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 의 기존 MES 작업지시 화면 우측 사이드 패널에 (i) 신규 주문 입력 → 공정설계 추천 / (ii) Mill Sheet OCR 결과 자동 적재 / (iii) UT 판정 보조 결과 / (iv) SOP RAG 질의 4 기능을 통합 위젯으로 배포한다. 추천된 공정설계는 베테랑 승인 후 MES 작업지시서로 자동 변환되며, OEM 측 변경관리 (PPAP·SQA) 는 <code>module/oem-supply.md</code> BLK-OEM-D 의 Δt-90/30/7 절차 적용. 도면·기술 자산 보안은 <code>module/saas-security.md</code> BLK-CSEC-D (도면 마스킹·권한 단계) 적용.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §5.4 카드 + <code>module/oem-supply.md</code> BLK-OEM-D + <code>module/saas-security.md</code> BLK-CSEC-D 인용]</p>
+</blockquote>
+<h3 id="55-9">5.5 단계별 추진 일정 및 마일스톤 — <strong>9 개월 압축 양식 직접 적용</strong><a class="headerlink" href="#55-9" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>[출처: <code>guide/duration-compress.md</code> §5.1.B 9 개월 압축 양식 직접 적용 — Mermaid·마일스톤 표·검수 게이트 그대로 인용]</p>
+</blockquote>
+<p><img alt="고객사 (다이어그램 1)" src="../../assets/diagrams/pkg3-special-pipe/diagram-1.svg" />
+마일스톤 표는 <strong>5 행</strong> — M3 데이터 통합 완료 / M5 STL-08·LLM-01 PoC / M7 STL-07·11 PoC + 첫 Pilot / M9 베테랑 검수 + 후속 로드맵 + KPI 검증. 검수 게이트는 M5·M7·M9 의 3 회. 9 개월 사업의 Phase 3 (안정화·확산) 은 §6.4 후속 단계로 분리. 12 개월 양식은 STL-11 Pilot 운영을 +3 개월 확장 가능.</p>
+<h3 id="4">(별첨) 사업기간 압축 4 분기 적용<a class="headerlink" href="#4" title="Permanent link">¤</a></h3>
+<p>본 사업은 압축 가이드 §1 의 4 분기 중 (1) 시나리오 후순위 (옵션 5.2-g 형상 임베딩 후속 단계 위임) + (3) HITL UI 단일화 (베테랑 검수 단일 UI) + (4) 로드맵 분리 (안정화·확산은 §6.4 후속) 의 3 분기 적용. (2) 인프라 축소는 RAG 인프라가 본 사업 핵심이라 미적용.</p>
+<hr />
+<h2 id="6">6. 기대효과 및 성과 지표<a class="headerlink" href="#6" title="Permanent link">¤</a></h2>
+<h3 id="61-as-is-vs-to-be">6.1 정량적 기대효과 (AS-IS vs TO-BE)<a class="headerlink" href="#61-as-is-vs-to-be" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>시나리오</th>
+<th>영역</th>
+<th>AS-IS</th>
+<th>TO-BE</th>
+<th>개선 효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a></strong></td>
+<td>공정설계 응대 시간 (건당)</td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> 단축</td>
+</tr>
+<tr>
+<td>공정설계 LLM</td>
+<td>베테랑 단독 응대 비율</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td>신입·중간 가능 영역 <span class="placeholder-tag" data-placeholder="%">[%]</span> 확대</td>
+</tr>
+<tr>
+<td></td>
+<td>신입 단독 의사결정 가능 기간</td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> 단축</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a></strong></td>
+<td>Mill Sheet 디지털화 휴먼에러</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> 감소</td>
+</tr>
+<tr>
+<td>밀시트 OCR</td>
+<td>입고~MES 적재 시간</td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span> 분</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> 단축</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a></strong></td>
+<td>UT 판정 검사원 일치율</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span> %p 향상</td>
+</tr>
+<tr>
+<td>UT 자동판정</td>
+<td>야간·교대조 판정 일관성</td>
+<td>작업조별 상이</td>
+<td>통합 알람</td>
+<td>정량 표준화</td>
+</tr>
+<tr>
+<td><strong><a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a></strong></td>
+<td>SOP 검색 시간</td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span> 초</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> 단축</td>
+</tr>
+<tr>
+<td>SOP RAG</td>
+<td>신입 SOP 단독 활용 가능 기간</td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="기간">[기간]</span></td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span> 단축</td>
+</tr>
+<tr>
+<td><strong>결합 시너지</strong></td>
+<td>데이터 시너지 (공통 RAG·임베딩)</td>
+<td>—</td>
+<td>—</td>
+<td>+<span class="placeholder-tag" data-placeholder="%">[%]</span> (보수) / +<span class="placeholder-tag" data-placeholder="%">[%]</span> (낙관)</td>
+</tr>
+<tr>
+<td>(시너지 ROI)</td>
+<td>인프라 시너지 (Vector DB·sLM 공유)</td>
+<td>—</td>
+<td>—</td>
+<td>+<span class="placeholder-tag" data-placeholder="%">[%]</span> / +<span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+</tr>
+<tr>
+<td></td>
+<td>HITL 시너지 (베테랑 단일 검수)</td>
+<td>—</td>
+<td>—</td>
+<td>+<span class="placeholder-tag" data-placeholder="%">[%]</span> / +<span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+</tr>
+<tr>
+<td></td>
+<td>KPI 상호보강 (STL-07·08 + LLM-01)</td>
+<td>—</td>
+<td>—</td>
+<td>+<span class="placeholder-tag" data-placeholder="%">[%]</span> / +<span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>종합 추가 효과 α_total</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>+<span class="placeholder-tag" data-placeholder="%">[%]</span> 보수 / +<span class="placeholder-tag" data-placeholder="%">[%]</span> 낙관</strong></td>
+</tr>
+</tbody>
+</table>
+<p>종합하면 본 사업은 <strong>암묵지 자산화 + Mill Sheet 디지털화 + UT 자동판정 + SOP RAG 의 4 축 동시 효과</strong> + RAG 인프라 공유에 따른 비선형 시너지 보수 <span class="placeholder-tag" data-placeholder="%">[%]</span> / 낙관 <span class="placeholder-tag" data-placeholder="%">[%]</span> 추가 발생.</p>
+<blockquote>
+<p>[출처: <code>scenario/detail-top5.md</code> <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> + <a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a> 기대효과 표 인용 + <code>scenario/catalog.md</code> STL-07·11 카드 요지 확장 + <code>other/synergy-roi.md</code> §2 패키지 3 추정 인용]</p>
+</blockquote>
+<h3 id="62">6.2 정성적 기대효과 및 제조혁신 연계성<a class="headerlink" href="#62" title="Permanent link">¤</a></h3>
+<p>본 사업의 정성 효과는 <strong>(i) 암묵지 자산화 → BCP (사업연속성 계획) 강화, (ii) 신입 온보딩 가속·교육 부담 경감, (iii) OEM 견적·SQA 응대 일관성 향상 → 1 차 협력사 자격 안정화, (iv) 차세대 강관 (수소·해양 등) 신규 영역 진입의 기술 자산 확보</strong> 의 4 축이다. <code>module/oem-supply.md</code> BLK-OEM-E (1 차 협력사 지위 강화) 와 정합한다.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §6.2 카드 + <code>module/oem-supply.md</code> BLK-OEM-E 인용]</p>
+</blockquote>
+<h3 id="63-kpi">6.3 핵심 성과 지표(KPI) 및 측정 방법<a class="headerlink" href="#63-kpi" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>[출처: <code>guide/kpi-measurement.md</code> §1 KPI 5 군 매트릭스 + §3 산출 빈도 + §5 인용 강도 2 양식 직접 적용]</p>
+</blockquote>
+<p>본 사업의 KPI 14 행 표 (4 시나리오 × 3~4 KPI) 는 §6.1 정량 효과 표와 정합하며, MLOps 인프라 (Track 2 §5.5 모니터링) 가 일·주·월 단위로 자동 산출한다.</p>
+<h3 id="64">6.4 중장기 로드맵과의 연계<a class="headerlink" href="#64" title="Permanent link">¤</a></h3>
+<p>본 사업 종료 후 <strong>3~5 년 단계적 진화 경로</strong>: (Year 1) 공정설계 LLM 부분 자동 진입 + 5.2-g 형상 임베딩 PoC + UT 자동판정 정식 운영 → (Year 2) MES·ERP·OEM 시스템 깊이 통합 + 다른 강관 라인 확산 → (Year 3) 산단 공동 강관 AI 비전 (<code>module/federated-learning.md</code> 참조) — 부산·경남 강관 협력사 연합학습 모델 검토.</p>
+<blockquote>
+<p>[출처: <code>track/track1-index.md</code> §6.4 카드 + <code>module/federated-learning.md</code> 인용]</p>
+</blockquote>
+<hr />
+<h2 id="7-track-23-9">7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)<a class="headerlink" href="#7-track-23-9" title="Permanent link">¤</a></h2>
+<h3 id="71-mlops">7.1 MLOps 및 지속적 개선 체계<a class="headerlink" href="#71-mlops" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>[출처: <code>track/track2-index.md</code> §4.2 7 종 구성요소 (압축 모드: 레지스트리·모니터링·피드백 3 종 채택) + §5.5 모니터링·드리프트 + §6.1 개선 포인트 선정 발췌]</p>
+</blockquote>
+<p>본 사업의 MLOps 는 9 개월 압축 모드로 (i) 모델 레지스트리 (MLflow 기반) (ii) 모니터링·드리프트 탐지 (Evidently + Vector DB 검색 품질 추적) (iii) 베테랑 피드백 루프 (<a href="../../scenario/catalog/#scn-mlo-03" title="현장 피드백 루프(불량 확인·라벨 재주입)" class="scn-link">SCN-MLO-03</a>) 의 3 종 만 1 단계 도입. 피쳐 스토어·고급 거버넌스·풀 카나리 배포는 후속 단계로 분리.</p>
+<h3 id="72-llmrag">7.2 LLM·RAG 기반 지식자산화 — <strong>본 사업의 핵심 별첨</strong><a class="headerlink" href="#72-llmrag" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>[출처: <code>track/track3-index.md</code> §4.2 RAG 기준 아키텍처 + §4.3 LLM 모델 선택 + §5.5 환각 방지 + §5.6 권한 발췌 + <code>guide/korean-slm.md</code> §1·§2·§5 인용]</p>
+</blockquote>
+<p>본 사업의 RAG 인프라는 (i) Vector DB (Pinecone·Weaviate·Milvus 후보) (ii) 임베딩 모델 (한국어 다국어 + 도메인 파인튜닝) (iii) 하이브리드 검색 (Dense + BM25 + 메타 필터) (iv) 한국 sLM (EXAONE·HyperCLOVA X 우선) (v) Citation 강제 + 휴먼 에스컬레이션 의 5 계층으로 구성. <strong>민감도 라우팅</strong> 이 핵심 — 영업비밀·OEM 사양·도면은 온프레 sLM 강제, 일반 SOP·공정 지식은 외부 API 허용 분기.</p>
+<h3 id="73">7.3 모듈 통합 운영 (간략)<a class="headerlink" href="#73" title="Permanent link">¤</a></h3>
+<p>본 사업의 5 모듈 결합 — 모듈_OEM_공급망_정합 (강관 OEM 정합, BLK-OEM-A·B·D·F) + 모듈_SaaS_클라우드_보안 (도면·기술 자산 마스킹, BLK-CSEC-D) — 의 통합 운영 플랫폼이 단일 RAG 인프라 위에 위치. CBAM·중대재해 모듈은 본 사업 1 차 범위 외 (강관 EU 수출 비중·중대재해 영역에 따라 후속 검토).</p>
+<hr />
+<h2 id="8">8. 부록·별첨<a class="headerlink" href="#8" title="Permanent link">¤</a></h2>
+<h3 id="81-4">8.1 시나리오 상세 (4 시나리오)<a class="headerlink" href="#81-4" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong><a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> 밀시트 디지털화·원소재-완제품 상관분석</strong>: &gt; [출처: <code>scenario/detail-top5.md</code> §<a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> 본문 그대로 인용]</li>
+<li><strong><a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a> SOP RAG 질의응답</strong>: &gt; [출처: <code>scenario/detail-top5.md</code> §<a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a> 본문 그대로 인용]</li>
+<li><strong><a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 인발·필거밀 공정설계 LLM</strong>: &gt; [출처: <code>scenario/catalog.md</code> <a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 카드 요지 확장 — <span class="meta-marker">Phase E5</span> 의 가장 신규 작성 영역. 카드 요지 (모관 선정·패스 시퀀스·열처리 조건의 30 분~2 시간 베테랑 응대 → LLM 초안·근거 제시·베테랑 검수 → MES 변환) + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 적용 (베테랑 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명·OEM <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 곳·신규 주문 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 만 조합) 1 단락 보강. 향후 <code>scenario/detail-special-pipe.md</code> 신규 자산으로 정식화 권고 (<span class="meta-marker">Phase E5</span> 갭).]</li>
+<li><strong><a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a> 비파괴검사 UT/ECT 자동 판정</strong>: &gt; [출처: <code>scenario/catalog.md</code> <a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a> 카드 요지 확장 — 검사원 판정 일치율·야간·교대조 일관성·1D-CNN 신호 분류 + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 적용 (UT raw 신호 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 건·검사원 <span class="placeholder-tag" data-placeholder="수치">[수치]</span> 명·판정 메모 디지털화 필요) 1 단락 보강.]</li>
+</ul>
+<h3 id="82">8.2 사업비 산정 상세<a class="headerlink" href="#82" title="Permanent link">¤</a></h3>
+<blockquote>
+<p>[출처: <code>재무_예산_산정_가이드.md</code> §4 양식 + 디지털 경남 사업비 비율 적용]</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>산정 근거</th>
+<th>금액 (확인 필요)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>인건비 (PM·DS·DE·QA·도메인 전문가)</td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span> 인 × 9 개월</td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td>재료비 (Vector DB 라이센스·임베딩 모델·OCR 도구)</td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span> 식</td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td>외주 (베테랑 인터뷰·라벨링·UI 개발)</td>
+<td><span class="placeholder-tag" data-placeholder="%">[%]</span></td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td>연구장비 (GPU 서버 + sLM 운영)</td>
+<td><span class="placeholder-tag" data-placeholder="수치">[수치]</span> 식</td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td>연구활동비 (출장·OEM 협의)</td>
+<td>평균</td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td>직접비 소계</td>
+<td></td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td>간접비 (<span class="placeholder-tag" data-placeholder="%">[%]</span>)</td>
+<td></td>
+<td><code>[수치]</code> 만원</td>
+</tr>
+<tr>
+<td><strong>총 사업비</strong></td>
+<td></td>
+<td><strong><code>[수치]</code> 억 원</strong></td>
+</tr>
+<tr>
+<td>정부지원 (<span class="placeholder-tag" data-placeholder="%">[%]</span>)</td>
+<td>디지털 경남 표준</td>
+<td><code>[수치]</code> 억 원</td>
+</tr>
+<tr>
+<td>자부담 (<span class="placeholder-tag" data-placeholder="%">[%]</span>)</td>
+<td></td>
+<td><code>[수치]</code> 억 원</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83">8.3 인용·참조 자산 인덱스<a class="headerlink" href="#83" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>자산 파일</th>
+<th>인용 섹션</th>
+<th>인용 횟수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>meta/claude-md.md</code></td>
+<td>톤·플레이스홀더</td>
+<td>(전체)</td>
+</tr>
+<tr>
+<td><code>track/track1-index.md</code></td>
+<td>§1.2·1.3·2.1·2.2·2.4·3.3·3.4·3.5·4.1·4.2·5.1·5.3·5.4·6.2·6.4 카드</td>
+<td>15 회</td>
+</tr>
+<tr>
+<td><code>track/track1-top5.md</code></td>
+<td>§3.1·3.2·4.4·4.5·4.6 본문</td>
+<td>5 회</td>
+</tr>
+<tr>
+<td><code>track/track1-engine-cards.md</code></td>
+<td>5.2-a·5.2-c·5.2-f 본문 + 결합 가이드 + 5.2-g 카드 요지</td>
+<td>4 회</td>
+</tr>
+<tr>
+<td><code>scenario/detail-top5.md</code></td>
+<td><a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> + <a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a> 본문 그대로</td>
+<td>2 회</td>
+</tr>
+<tr>
+<td><code>scenario/catalog.md</code></td>
+<td>패키지 3 + STL-07·11 카드 요지</td>
+<td>3 회</td>
+</tr>
+<tr>
+<td><code>guide/assembly.md</code></td>
+<td>§1 절차 + §3 SCN 정책 (a)·(b) 분기 적용</td>
+<td>3 회</td>
+</tr>
+<tr>
+<td><strong><code>guide/duration-compress.md</code></strong></td>
+<td><strong>§5.1.B 9 개월 양식 직접 적용</strong></td>
+<td><strong>2 회</strong></td>
+</tr>
+<tr>
+<td><code>other/synergy-roi.md</code></td>
+<td>§2 패키지 3 + §6.1 행 양식</td>
+<td>2 회</td>
+</tr>
+<tr>
+<td><code>재무_예산_산정_가이드.md</code></td>
+<td>§4.2 패키지 3 + §0 양식</td>
+<td>2 회</td>
+</tr>
+<tr>
+<td><code>guide/kpi-measurement.md</code></td>
+<td>§1·§3·§5 강도 2 직접 적용</td>
+<td>3 회</td>
+</tr>
+<tr>
+<td><code>other/raci-matrix.md</code></td>
+<td>§3 RACI + §4 AI 의사결정</td>
+<td>2 회</td>
+</tr>
+<tr>
+<td><code>guide/korean-slm.md</code></td>
+<td>§1·§2·§5 한국 sLM 분기 직접 적용</td>
+<td>3 회</td>
+</tr>
+<tr>
+<td><code>track/track2-index.md</code></td>
+<td>§4.2·5.5·6.1 발췌</td>
+<td>3 회</td>
+</tr>
+<tr>
+<td><code>track/track3-index.md</code></td>
+<td>§4.2·4.3·5.5·5.6 발췌</td>
+<td>4 회</td>
+</tr>
+<tr>
+<td><code>module/oem-supply.md</code></td>
+<td>BLK-OEM-A·B·D·F</td>
+<td>4 회</td>
+</tr>
+<tr>
+<td><code>module/saas-security.md</code></td>
+<td>BLK-CSEC-D</td>
+<td>1 회</td>
+</tr>
+<tr>
+<td><code>module/federated-learning.md</code></td>
+<td>§6.4 비전 인용</td>
+<td>1 회</td>
+</tr>
+</tbody>
+</table>
+<h3 id="84-rag">8.4 RAG 도메인 어휘 인덱스<a class="headerlink" href="#84-rag" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>어휘</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>모관 (Mother Tube)</td>
+<td>인발·필거의 출발 원재료 강관</td>
+</tr>
+<tr>
+<td>인발 (Cold Drawing)</td>
+<td>모관을 다이로 통과시켜 외경·두께 축소</td>
+</tr>
+<tr>
+<td>필거 (Cold Pilger Mill)</td>
+<td>mandrel + 회전 다이로 정밀 가공</td>
+</tr>
+<tr>
+<td>압하율</td>
+<td>1 패스당 외경·두께 감소율 (%)</td>
+</tr>
+<tr>
+<td>Mill Sheet</td>
+<td>원재료 화학성분·기계성질 성적서</td>
+</tr>
+<tr>
+<td>UT (Ultrasonic Testing)</td>
+<td>초음파 비파괴검사</td>
+</tr>
+<tr>
+<td>A-scan</td>
+<td>UT 신호의 시간·진폭 도메인 표시</td>
+</tr>
+<tr>
+<td>듀플렉스강</td>
+<td>페라이트·오스테나이트 이중 조직 고합금강</td>
+</tr>
+<tr>
+<td>API 5L·5LC</td>
+<td>송유관·내식강관 표준</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="phase-e5">통합 테스트 자체평가 (<span class="meta-marker">Phase E5</span>)<a class="headerlink" href="#phase-e5" title="Permanent link">¤</a></h2>
+<h3 id="1_1">1. 자산 활용도<a class="headerlink" href="#1_1" title="Permanent link">¤</a></h3>
+<p>26 자산 중 <strong>18 자산 직접·간접 인용</strong> (69%). 미사용 8 자산은 본 사업 범위 외 (CBAM 모듈·중대재해 모듈·시나리오_상세_Phase2·UTL_SAF·RUB·외부검증 가이드·검토리포트·방법론 총론·모듈_연합학습 일부).</p>
+<h3 id="2-top-3">2. 갭 발견 — 본 사업 신규 갭 Top 3<a class="headerlink" href="#2-top-3" title="Permanent link">¤</a></h3>
+<ol>
+<li><strong>갭 23 (신규) — 시나리오_상세_특수강관 (STL-07·11) 자산 부재</strong> — 본 사업 §8.1 의 STL-07·11 이 카드 요지 확장 단락 (~50 줄) 에 머무름. 다른 시나리오 상세 자산 (Top5·Phase2·RUB·UTL_SAF) 동일 5 단 구조로 신규 자산 권고 (<code>scenario/detail-special-pipe.md</code>). 시나리오 상세 자산 군 5 번째.</li>
+<li><strong>갭 24 (신규) — RAG 인프라 운영 가이드 부재</strong> — Vector DB·임베딩 모델·하이브리드 검색·한국 sLM 의 통합 운영이 다수 자산에 분산 (track3 + 가이드_한국_sLM + 모듈_SaaS_보안 BLK-CSEC-F). 본 사업이 RAG 중심이라 통합 운영 양식이 필요. <code>가이드_RAG_운영.md</code> 신규 자산 권고.</li>
+<li><strong>갭 25 (신규) — 베테랑 인터뷰 양식·도메인 골드셋 양식 부재</strong> — 본 사업의 1 차 작업이 베테랑 인터뷰 기반 QA 셋 + 도메인 골드셋 작성인데 표준 양식이 부재. <code>guide/domain-knowledge.md</code> 신규 자산 권고.</li>
+</ol>
+<h3 id="3">3. 자연스럽지 않은 인용<a class="headerlink" href="#3" title="Permanent link">¤</a></h3>
+<ul>
+<li>§4.5 BLK-T1-4.5 인용 본문 내 <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a>·STL-07 사례가 본 사업 범위 내라 (a) 각주 처리 적용. 이전 파일럿 (E1 패키지 2) 의 (b) 치환 분기와 다른 패턴.</li>
+</ul>
+<h3 id="4_1">4. 새로 작성한 섹션 평가<a class="headerlink" href="#4_1" title="Permanent link">¤</a></h3>
+<p>§0·§1.1·1.4·2.1·2.3·2.4·3.5·4.1·4.3·5.1·5.4·5.5(부분)·6.1·6.4·8.1(STL-07·11)·8.2·8.4 + 자체평가 = 약 280 줄 (전체 ~750 줄의 약 37%). 신규 비율 35~40% — 9 개월 양식 첫 검증 + RAG 중심 모드 + 강관 도메인 + 암묵지 자산화 명분으로 분량 상한 근접.</p>
+<h3 id="5">5. 새로 작성 분량 비율<a class="headerlink" href="#5" title="Permanent link">¤</a></h3>
+<p><strong>약 35~40%</strong> (이전 파일럿 E1 30 / E2 33.8 / E3 40 / E4 30~35 와 비교 시 E3 와 비슷한 수준). RAG 중심 + 강관 신규 도메인 + 9 개월 양식 첫 검증의 3 요소가 동시 작용.</p>
+<h3 id="6-46-5">6. 일관성 점수: <strong>4.6 / 5</strong><a class="headerlink" href="#6-46-5" title="Permanent link">¤</a></h3>
+<ul>
+<li>톤 5/5, 플레이스홀더 5/5, 출처 표기 5/5, SCN ID &#8536; (각주 처리 적용), Track 매핑 5/5, 분량 균형 &#8536; (자체평가가 짧음), 가독성 &#8536; (시나리오 상세 부재로 §8.1 STL-07·11 가 짧음).</li>
+</ul>
+<h3 id="7-phase-e1e2e3e4e5-5">7. <strong><span class="meta-marker">Phase E1</span>·E2·E3·E4·E5 비교 — 5 도메인 일관성 추세</strong><a class="headerlink" href="#7-phase-e1e2e3e4e5-5" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>E1 철강</th>
+<th>E2 정밀가공</th>
+<th>E3 고무</th>
+<th>E4 유틸·ESG</th>
+<th><strong>E5 강관</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기간</td>
+<td>18M 풀</td>
+<td>6M SaaS</td>
+<td>12M LG</td>
+<td>12M 모듈 풀</td>
+<td><strong>9M 압축</strong></td>
+</tr>
+<tr>
+<td>5.2 카드</td>
+<td>a+f</td>
+<td>b+c</td>
+<td>b+e/c+f/d+f</td>
+<td>b+c+d+e (4 카드)</td>
+<td><strong>a+c+f (RAG 중심)</strong></td>
+</tr>
+<tr>
+<td>모듈 결합</td>
+<td>부수</td>
+<td>부수</td>
+<td>부수</td>
+<td>풀 (CBAM·SAF·CSEC)</td>
+<td><strong>OEM·CSEC</strong></td>
+</tr>
+<tr>
+<td>신규 비율</td>
+<td>30%</td>
+<td>33.8%</td>
+<td>40%</td>
+<td>30~35%</td>
+<td><strong>35~40%</strong></td>
+</tr>
+<tr>
+<td>일관성</td>
+<td>4.7</td>
+<td>5.0</td>
+<td>4.9</td>
+<td>4.7</td>
+<td><strong>4.6</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>5 도메인 모두 4.6 이상</strong> — 워크스페이스 자산이 5 도메인 모두에 작동함을 입증. 9 개월 양식 (압축 가이드 §5.1.B) 의 1 차 직접 검증 통과. RAG 중심 모드의 첫 시연 — 5.2-a + 5.2-f 결합 (이름 비슷 + 모양 비슷) + 5.2-c (신호 분류) + 옵션 5.2-g (형상 임베딩) 의 4 카드 결합 패턴.</p>
+<h3 id="8-12">8. 통합 테스트로 드러난 가장 큰 이슈 1~2 개<a class="headerlink" href="#8-12" title="Permanent link">¤</a></h3>
+<ol>
+<li><strong>시나리오 상세 자산 군의 영역별 분리 누적</strong> — Top5·Phase2·RUB·UTL_SAF 4 자산에 강관 (STL-07·11) 이 추가되면 5 번째. 자산 군 포맷 통일 (4.26) 적용 시 일관 운영 가능. 갭 23 의 직접 결과.</li>
+<li><strong>9 개월 양식의 RAG 중심 사업 적용 시 인프라 비중 부담</strong> — 압축 가이드 §5.1.B 의 9 개월 양식이 일반 시계열·비전 사업 가정으로 작성되어 RAG 인프라 (Vector DB·임베딩·sLM 운영) 도입 부담을 충분히 반영하지 못함. RAG 중심 9 개월 사업의 인프라 일정 확장 검토 필요.</li>
+</ol>
+<hr />
+<blockquote>
+<p><strong><span class="meta-marker">Phase E5</span> 종합</strong> — 5 번째 도메인 (강관) + 9 개월 양식 직접 검증 + RAG 중심 5.2-a+f 결합 시연 + 디지털 경남 첫 검증 + 암묵지 자산화 명분 5 축 모두 통과. 잔여 갭 12·13·14·18·19 (외부 표준 의존) + 신규 23·24·25 (시나리오 상세·RAG 운영·도메인 지식추출) = 잔여 8 갭. 자산 자족성 유지.</p>
+</blockquote>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>사업계획서_패키지3_특수강관_파일럿.md</code></li>
+<li><strong>자산 군</strong>: 📦 통합 파일럿</li>
+<li><strong>slug 경로</strong>: <code>pkg/pkg3-special-pipe.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../pkg2-cold-rolled/" class="md-footer__link md-footer__link--prev" aria-label="이전: 패키지 2 — 중견 냉연 12 개월">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                패키지 2 — 중견 냉연 12 개월
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pkg4-rubber/" class="md-footer__link md-footer__link--next" aria-label="다음: 패키지 4 — 고무 양산 OEM 12 개월">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                패키지 4 — 고무 양산 OEM 12 개월
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

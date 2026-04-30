@@ -1,0 +1,1527 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/meta/claude-md/">
+      
+      
+        <link rel="prev" href="../worklog/">
+      
+      
+        <link rel="next" href="../review-report/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>CLAUDE.md - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metaclaude-mdmd" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLAUDE.md
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../track/track1-index/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../guide/assembly/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📌 메타 (개발자용)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worklog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    작업 로그 (#1~#46)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAUDE.md (프로젝트 지침)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAUDE.md (프로젝트 지침)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-project-actually-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What this project actually is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실무 컨텍스트 — 고객·작성 흐름
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-goals-three-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production goals (three tracks)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-reference-pdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with the reference PDFs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output expectations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        작업 로그 유지 규약 (필독 · 필수 준수)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-not-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What NOT to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-development-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build &amp; Development Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../review-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    검토 리포트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-project-actually-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What this project actually is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실무 컨텍스트 — 고객·작성 흐름
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-goals-three-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production goals (three tracks)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-reference-pdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with the reference PDFs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output expectations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        작업 로그 유지 규약 (필독 · 필수 준수)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-not-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What NOT to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-development-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build &amp; Development Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../worklog/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📌 메타 (개발자용)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">meta</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="metaclaude-mdmd">meta/claude-md.md<a class="headerlink" href="#metaclaude-mdmd" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 13 분 읽기</span></p>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<h2 id="what-this-project-actually-is">What this project actually is<a class="headerlink" href="#what-this-project-actually-is" title="Permanent link">¤</a></h2>
+<p>This is <strong>not a software codebase</strong> — it is a Korean-language <strong>content-authoring workspace</strong> for producing reusable material (본문 문구 + 삽화/도식) that can be pasted into Korean government-funded manufacturing-AI 사업계획서 / 사업신청서 / 수행계획서 / 연구개발계획서.</p>
+<ul>
+<li>No source code, no build system, no tests, no git.</li>
+<li>The working tree contains only <strong>6 reference PDFs</strong> — real filed business plans from other companies (YCP, 코리녹스, 동연에스엔티, 화승알엔에이, 통합형 클라우드화, 전사적 DX 촉진). They are <strong>exemplars</strong>, not templates to copy verbatim.</li>
+<li>The two listed working directories (<code>/Volumes/EXDATA/temp_git/ai-docs-for-biz</code> and <code>/Users/lanco/exdata/temp_git/ai-docs-for-biz</code>) point at the same content — use either.</li>
+</ul>
+<h2 id="_1">실무 컨텍스트 — 고객·작성 흐름<a class="headerlink" href="#_1" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>주요 고객사</strong>: 철강 및 부산·경남권 제조업체. 규모 편차가 크다 (대기업급 ~ 중소).</li>
+<li>예: 화승, YCP특수강, 코리녹스, 코렌스, 대한제강, 한국철강 등</li>
+<li>업종 범위는 철강·금속가공(연속주조·압연·열처리·표면처리 등)을 중심으로, 고무·폴리머, 정밀가공 등 부산경남 제조업 전반. 예시·공정명은 가급적 이쪽 현장에 실제로 존재하는 것을 고른다.</li>
+<li>이들 고객사의 사업계획서 작성 업무가 <strong>상시</strong> 발생하며, 최근 <strong>AI 적용 관련 요청이 크게 늘어남</strong> — 본 워크스페이스가 만들어진 직접적 이유.</li>
+<li><strong>작성 접근 방식 — 공통 자산 + 시나리오 특화</strong>:</li>
+<li>AI 관련 <strong>공통 본문·삽화</strong>(아래 3대 트랙 기반)를 먼저 축적,</li>
+<li>고객사·공정·지원사업 성격에 맞춰 **시나리오 몇 가지**를 정의,</li>
+<li>각 시나리오별로 **특화된 문서 내용 + 삽화**를 파생시켜 사업계획서에 투입.</li>
+<li>따라서 생성물은 "특정 사업계획서용 원고"가 아니라 **재조합 가능한 모듈**로 설계한다.</li>
+<li>섹션·문단 단위로 자립적이어야 하고,</li>
+<li>고객사명·공정명·수치는 플레이스홀더(<code>[고객사]</code>, <code>[공정]</code>, <code>[수치]</code>) 형태로 남겨 두면 재활용이 쉽다.</li>
+<li>특정 고객사 전용 문구는 파일명·섹션 헤더에 해당 고객사를 명시해 공통 자산과 섞이지 않도록 분리한다.</li>
+</ul>
+<h2 id="production-goals-three-tracks">Production goals (three tracks)<a class="headerlink" href="#production-goals-three-tracks" title="Permanent link">¤</a></h2>
+<p>Everything you write should slot into one of three tracks. Outputs in each track must be <strong>self-contained, reusable passages + accompanying 삽화/도식 자료</strong> written in Korean formal 사업계획서 어투.</p>
+<p><strong>Track 1 — 제조 AI 서두/본문 (Manufacturing AI general narrative)</strong>
+- 제조업·공장·공정에서 AI 도입 필요성, 기대효과
+- 활용 가능한 데이터 유형: 시계열 센서 데이터, 설비/장비 로그, MES/SCADA/PLC 데이터, 비전 이미지 등
+- 피쳐 선정·엔지니어링 접근
+- 모델·앙상블 선정 기준 (e.g. LSTM/Transformer/XGBoost/이상탐지/앙상블 조합)
+- 데이터 수집 → 피쳐 → 모델링 → 현장 적용·운영까지의 일련 과정 서술
+- 삽화: 아키텍처 다이어그램, 데이터 파이프라인, 모델 구조도, 현장 적용 플로우</p>
+<p><strong>Track 2 — MLOps 구축 및 지속적 개선</strong>
+- MLOps 구성의 일반적 방법·전제 조건 (CI/CD for ML, 모델 레지스트리, 피쳐 스토어, 모니터링 등)
+- 지속적 개선 루프에 사업계획서에 넣을 수 있는 문구·도식
+- <strong>개선 포인트 선정 노하우</strong> — 성능 저하 탐지, 데이터 드리프트, 재학습 트리거, 피드백 수집 등
+- 삽화: MLOps 파이프라인도, 모니터링 대시보드 개념도, 개선 사이클 다이어그램</p>
+<p><strong>Track 3 — LLM + RAG 공정 적용</strong>
+- 제조 현장에서 LLM과 RAG을 활용할 수 있는 시나리오 (작업지시서 검색, 장애 대응 지식 검색, 표준 작업 문서 QA, 비정형 공정 지식 활용 등)
+- 관련 데이터 수집·구성 방법 (문서 표준화, 청킹 전략, 임베딩·벡터스토어 구성, 권한·보안)
+- 삽화: RAG 아키텍처, 데이터 수집·전처리·인덱싱 플로우, 프롬프트/응답 예시 도식</p>
+<h2 id="working-with-the-reference-pdfs">Working with the reference PDFs<a class="headerlink" href="#working-with-the-reference-pdfs" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>All 6 PDFs exceed 10 pages</strong> (37, 41, 67, 71, 74, 150). The <code>Read</code> tool requires the <code>pages</code> parameter for any of them — reading without it will fail. Start with a small range (e.g. <code>pages: "1-10"</code>) and expand.</li>
+<li>Filenames are Korean and contain spaces/brackets — always quote paths in Bash.</li>
+<li>Each PDF represents a different government/대기업 지원사업 format (스마트공장, 디지털 경남, 대중소상생, 전사적 DX, 클라우드 지원사업). Structure, depth, and emphasis differ; do not assume one layout.</li>
+<li>Treat them as <strong>source material for patterns and phrasing</strong>, not text to reproduce. Avoid copying sentences verbatim — extract patterns (목차 구성, 논리 전개, 표·도식 종류, 수치 제시 방식) and write fresh prose.</li>
+</ul>
+<h2 id="output-expectations">Output expectations<a class="headerlink" href="#output-expectations" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>Language: Korean.</strong> The target deliverable is Korean business-plan copy. Write body text in formal 국문 (문어체), not conversational Korean and not English unless the user explicitly asks.</li>
+<li>Prefer producing <strong>drafts as Markdown files in this directory</strong> so the user can review/edit before transplanting into their .hwp / .docx / .pptx. Do not create files unless asked, but when asked, put them at the repo root (flat structure matches what's here).</li>
+<li>삽화/도식: describe them as Markdown diagrams (Mermaid where appropriate), ASCII sketches, or structured tables. The user will re-draw in their real document — clarity of structure and labels matters more than rendering.</li>
+<li>When the user's request maps clearly to one of the three tracks, name the track you're writing for so reuse across plans is easier.</li>
+</ul>
+<h2 id="_2">작업 로그 유지 규약 (필독 · 필수 준수)<a class="headerlink" href="#_2" title="Permanent link">¤</a></h2>
+<p>본 워크스페이스에는 <strong><code>meta/worklog.md</code></strong> 파일이 존재한다. 이 파일은 프로젝트 전 기간에 걸친 작업 과정·판단 근거·사용자 의사결정을 상세히 기록하여, (1) 다른 프로젝트에 방법론을 응용하고, (2) 다른 작업자(사람 또는 다른 세션의 AI)가 이어받아 수행할 수 있도록 한다.</p>
+<p><strong>모든 세션·모든 작업자는 다음 규약을 반드시 준수한다.</strong></p>
+<ol>
+<li><strong>갱신 의무</strong>: 아래에 해당하는 작업을 수행한 경우 <strong>같은 턴 안에서</strong> <code>meta/worklog.md</code> 섹션 3(진행 연대기) 에 엔트리를 추가한다.</li>
+<li>새 파일 생성·삭제</li>
+<li>기존 파일의 의미 있는 수정 (오탈자 수정 제외)</li>
+<li>사용자 의사결정 수신</li>
+<li>계획·방향 전환 또는 Phase 전환</li>
+<li>스킬·에이전트 호출을 수반한 작업</li>
+<li>사용자가 중요 맥락·고객 정보·용어 정의를 제공한 경우</li>
+<li><strong>엔트리 형식</strong>: <code>meta/worklog.md</code> 섹션 1.2 의 8 필드 템플릿을 따른다 — 맥락 / 사용자 요청 원문 요지 / AI 수행 / 판단 근거 / 사용자 의사결정 / 산출물 / 배운 점·재사용 포인트 / 다음 단계.</li>
+<li><strong>원문 인용</strong>: 사용자 발언은 <strong>짧은 직접 인용</strong> 한 줄 이상 포함 (요약은 의도 왜곡의 주범).</li>
+<li><strong>"왜" 기재</strong>: "무엇을 했다" 보다 "왜 그렇게 했다" 를 더 정성 있게. 이 문서의 가치는 이식성에 있고, 이식성의 원천은 판단 근거다.</li>
+<li><strong>파일 목록·미결 항목 동기화</strong>: 파일이 추가·삭제되면 <code>meta/worklog.md</code> 섹션 2.7 (파일 목록) 과 섹션 5 (미결 항목) 를 함께 갱신한다.</li>
+<li><strong>방법론 추출</strong>: 재사용 가치가 있는 패턴을 발견하면 <code>meta/worklog.md</code> 섹션 4 (방법론 추출) 에도 추가한다.</li>
+<li><strong>프로젝트 종료 시까지 유지</strong>: 작업 종료 · 인계 · 재개 시에도 본 규약은 불변.</li>
+</ol>
+<p>본 로그가 없거나 양식이 바뀐 상태로 발견되면, 먼저 <code>meta/worklog.md</code> 를 복구·표준화한 뒤에야 다른 작업을 진행한다.</p>
+<h2 id="what-not-to-do">What NOT to do<a class="headerlink" href="#what-not-to-do" title="Permanent link">¤</a></h2>
+<ul>
+<li>Do not treat this as a code project — there is nothing to build, lint, or test.</li>
+<li>Do not initialize git, create package manifests, or scaffold directories unless the user asks.</li>
+<li>Do not invent statistics, company names, or specific project outcomes from the reference PDFs without first reading the relevant pages.</li>
+<li>Do not default to English. The user's deliverable is Korean.</li>
+<li><strong>Do not skip the <code>meta/worklog.md</code> update</strong> when the criteria above apply — skipping breaks handoff for the next worker/session.</li>
+</ul>
+<!-- slaminar:begin:overview -->
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¤</a></h2>
+<p><strong>ai-docs-for-biz</strong> — 한국어 제조 AI 사업계획서 작성을 위한 누적 콘텐츠 워크스페이스. 부산·경남권 철강·금속·고무·정밀가공 제조업체를 고객사로 하는 정부지원 R&amp;D·스마트공장·CBAM·디지털 경남 사업 신청서·수행계획서·연구개발계획서 작성에 재사용 가능한 모듈형 자산 (44 마크다운 / 17,816 줄 / Mermaid 115 블록 / 인용 출처 274 회) 을 제공한다.</p>
+<ul>
+<li><strong>Primary content:</strong> 한국어 마크다운 — Track 1·2·3 본문 + 6 패키지 통합 파일럿 + 11 운영 가이드 + 5 cross-cutting 모듈 + 시나리오 카탈로그 (40 시나리오) + 36 방법론.</li>
+<li><strong>Secondary infrastructure (<span class="meta-marker">Phase E9</span>, 2026-04):</strong> Python — MkDocs Material 기반 HTML 문서화 + GitHub Pages 배포 파이프라인 (<code>build_src.py</code> + <code>hooks/</code> + <code>mkdocs.yml</code>).</li>
+<li><strong>Pattern:</strong> Knowledge base + reusable content modules (콘텐츠 작성 워크스페이스 + 정적 문서 사이트). 단일 정의된 사업계획서를 만들지 않고 재조합 가능한 모듈을 누적.</li>
+<li><strong>Maturity:</strong> <span class="meta-marker">Phase A</span>~E8 완료 (자산 누적·운영 모드 진입) + <span class="meta-marker">Phase E9</span> 진행 중 (HTML 시각 문서화).</li>
+</ul>
+<!-- slaminar:end:overview -->
+<!-- slaminar:begin:commands -->
+<h2 id="build-development-commands">Build &amp; Development Commands<a class="headerlink" href="#build-development-commands" title="Permanent link">¤</a></h2>
+<p><strong>HTML 문서화 (<span class="meta-marker">Phase E9</span> — MkDocs Material)</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 1. 가상환경 + 의존성 설치 (1 회)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># 2. 원본 .md 44 종 → docs/ 영문 slug 복사 (mkdocs build 직전 매번)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>python<span class="w"> </span>build_src.py
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># 3. 로컬 빌드 (정적 사이트 site/ 생성)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>mkdocs<span class="w"> </span>build
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># 4. 로컬 프리뷰 (http://127.0.0.1:8000)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>mkdocs<span class="w"> </span>serve
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># 5. GitHub Pages 수동 배포 (CI/CD 미사용 시)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>mkdocs<span class="w"> </span>gh-deploy<span class="w"> </span>--force
+</span></code></pre></div>
+<p><strong>자동 배포</strong>: <code>main</code> branch 에 push → <code>.github/workflows/deploy.yml</code> 가 build_src + mkdocs build + gh-deploy 자동 실행. <strong>단 GitHub Pages 활성화는 repo Settings 1 회 수동 (private repo 는 Pro plan 필요)</strong>.</p>
+<p><strong>git 커밋·푸시 표준 (<span class="meta-marker">방법론 4.27</span>)</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 양 원격 (GitHub + Yona) 단일 명령 push 설정 (1 회)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>--add<span class="w"> </span>--push<span class="w"> </span>origin<span class="w"> </span>https://github.com/pathcosmos/ai-docs-for-biz.git
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>--add<span class="w"> </span>--push<span class="w"> </span>origin<span class="w"> </span>http://git.dkpia.com:9000/IoT/ai-docs-for-biz.git
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># 이후 push 는 1 명령으로 양 원격 동시 동기화</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div>
+<p><strong>콘텐츠 작성 워크플로</strong>: 작업로그 #N 엔트리 추가 + 8 필드 양식 (맥락·요청·수행·근거·결정·산출물·배움·다음) → 단일 커밋 → 양 원격 푸시.</p>
+<!-- slaminar:end:commands -->
+<!-- slaminar:begin:architecture -->
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">¤</a></h2>
+<p><strong>9 자산 군 + 빌드 인프라</strong> 의 이중 구조 — 콘텐츠 자산 (워크스페이스 root) + HTML 빌드 파이프라인 (<span class="meta-marker">Phase E9</span>).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ai-docs-for-biz/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── (워크스페이스 root) — 한글 .md 44 종 운영 자산 + 작업로그·meta/claude-md.md
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── track1·2·3_*.md (8) — 3 트랙 본문 (목차·Top5·5.2 카드)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   ├── 시나리오_*.md (6) — 카탈로그 + 상세 5 (Top5·Phase2·RUB·UTL_SAF·특수강관)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├── 사업계획서_패키지[1-6]_*_파일럿.md (6) — 6 통합 파일럿 (사업 패턴)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   ├── 가이드_*.md (11) — 운영 가이드 (KPI·재무·외부검증·RAG·도메인지식·sLM·압축·조립·컨설팅·TRL·위험)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│   ├── 모듈_*.md (5) — Cross-cutting (CBAM·중대재해·연합학습·OEM·SaaS)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   ├── 시너지_ROI_모델·책임_분담_매트릭스·양식검증_DX촉진_R&amp;D·방법론_총론·운영_모드_Quickstart 등 (5)
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   ├── meta/worklog.md (#01~#N 엔트리) — 8 필드 진행 연대기
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│   └── (참고 PDF 6 종 — verbatim 차용 금지, 패턴 추출용)
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>├── (HTML 인프라 — Phase E9) ─── Python·MkDocs ───
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>│   ├── mkdocs.yml — Material 테마·ko 검색·Mermaid·9 분류 자동 nav
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>│   ├── slug_map.yml — 한글 → 영문 slug 매핑 테이블 (44 항목)
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>│   ├── build_src.py — 원본 → docs/ 복사 스크립트
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>│   ├── hooks/ — Python 훅 (inject_frontmatter·slug_rewrite + Stage 2·3 추가 예정)
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>│   ├── docs/ — 빌드 입력 (영문 slug 복사본 + index·graph·filter + stylesheets·javascripts)
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>│   └── .github/workflows/deploy.yml — Actions 자동 배포 (gh-pages branch)
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>│
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>└── (빌드 산출물 — gitignore) site/ + .venv/ + .serena/
+</span></code></pre></div>
+<p><strong>중요 원칙 — 단방향 빌드</strong>: 원본 .md 자산은 일절 수정 금지. <code>build_src.py</code> 가 원본 → <code>docs/</code> 영문 slug 복사. 콘텐츠 변경은 항상 root .md 에서, HTML 빌드는 자동 동기화.</p>
+<p><strong>Cross-reference 망</strong>: 274 인용 출처 표기 (<code>&gt; [출처: 파일명 §섹션]</code>) 가 자산 간 의존성을 형성. 운영 가이드 11 자산 cross-reference 망이 핵심 (재무 §10 → 컨설팅 §4·6 / KPI §10 → TRL §5 / 책임 §10 → 컨설팅·위험 등).</p>
+<!-- slaminar:end:architecture -->
+<!-- slaminar:begin:conventions -->
+<h2 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>본문 언어</strong>: <strong>한국어 formal 문어체</strong> (사업계획서 어투). 영어는 사용자가 명시 요청 시에만.</li>
+<li><strong>플레이스홀더 관례 (<span class="meta-marker">방법론 4.8</span>)</strong>: <code>[고객사]</code>·<code>[공정]</code>·<code>[수치]</code>·<code>[기간]</code>·<code>[%]</code> — 고객사 변경 시 일괄 치환 가능. 특정 고객사 전용 문구는 파일명·섹션 헤더에 해당 고객사 명시.</li>
+<li><strong>자산 군 포맷 통일 (<span class="meta-marker">방법론 4.26</span>)</strong>: 운영 가이드 11 자산 모두 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 답습. 새 자산 추가 시 첫 자산 포맷 따르기.</li>
+<li><strong>인용 출처 표기 표준</strong>: <code>&gt; [출처: 파일명 §섹션]</code> 매 본문 섹션 말미. 부분 발췌 인용은 "발췌·요약" 명시.</li>
+<li><strong>자산 명명 규약</strong>: <code>가이드_X.md</code> (운영 가이드) / <code>사업계획서_패키지N_도메인_파일럿.md</code> (통합 파일럿) / <code>시나리오_상세_X.md</code> (시나리오 상세) / <code>모듈_X.md</code> (cross-cutting) / <code>track[1-3]_*.md</code> (트랙 본문) — 일관 패턴 유지.</li>
+<li><strong>커밋 스타일</strong>: Conventional Commits (<code>feat:</code>·<code>docs:</code>·<code>chore:</code>·<code>refactor:</code>) + Korean body. 양 원격 (GitHub + Yona) 단일 push (<span class="meta-marker">방법론 4.27</span>).</li>
+<li><strong>작업로그 8 필드 엔트리</strong>: 맥락·사용자 요청 원문 요지·AI 수행·판단 근거·사용자 의사결정·산출물·배운 점·다음 단계. 사용자 발언 직접 인용 1 줄 이상.</li>
+<li><strong>방법론 추출</strong>: 재사용 가치 발견 시 <code>other/methodology.md</code> §3 본문 + <code>meta/worklog.md</code> §4 인덱스 동시 추가 (<span class="meta-marker">방법론 4.29</span>).</li>
+<li><strong>빌드 산출물 gitignore</strong>: <code>.venv/</code>·<code>site/</code>·<code>.serena/</code>·<code>__pycache__/</code>·<code>*.pyc</code> — 자동 생성물 trace 차단.</li>
+</ul>
+<!-- slaminar:end:conventions -->
+<!-- slaminar:begin:dependencies -->
+<h2 id="key-dependencies">Key Dependencies<a class="headerlink" href="#key-dependencies" title="Permanent link">¤</a></h2>
+<p><strong>Python (<span class="meta-marker">Phase E9</span> HTML 인프라 — <code>requirements.txt</code>)</strong>:
+- <code>mkdocs&gt;=1.6</code> — 정적 사이트 생성기 (Markdown → HTML)
+- <code>mkdocs-material&gt;=9.5</code> — Material 테마 (한국어 검색·Mermaid 통합·카드 그리드·tags 플러그인)
+- <code>pymdown-extensions&gt;=10.7</code> — superfences (Mermaid 커스텀 fence)·details·tabbed·tasklist·highlight 등 마크다운 확장
+- <code>PyYAML&gt;=6.0</code> — <code>slug_map.yml</code> 로딩 (build_src.py + slug_rewrite hook)</p>
+<p><strong>JavaScript CDN (런타임 — 빌드 시 다운로드 안 됨)</strong>:
+- <code>mermaid@11</code> (CDN unpkg) — Mermaid 다이어그램 렌더링 (115 블록)
+- <code>D3.js@7</code> (CDN, Stage 3 활성 예정) — Cross-reference 인터랙티브 그래프</p>
+<p><strong>웹폰트 (CDN)</strong>:
+- <code>Pretendard@1.3.9</code> (jsDelivr) — 한국어 가독성 + dynamic subset (페이지당 사용 글자만 다운로드)</p>
+<p><strong>외부 reference (workspace 내 PDF 6 종)</strong>:
+- 6 정부지원 사업 양식 PDF (37·41·67·71·74·150 페이지) — patterns and phrasing 차용 출처. meta/claude-md.md §"Working with the reference PDFs" 규약 준수 (verbatim 차용 금지).</p>
+<p><strong>선택 도입 (slaminar 추천 도구 — Step 7 사용자 결정)</strong>:
+- <code>promptfoo</code> (60 score) — LLM 프롬프트 평가 (Track 3 LLM·RAG 자산과 일부 정합)
+- 그 외 <code>tdd-guard</code>·<code>test-kitchen</code> 등은 본 워크스페이스 (콘텐츠 작성 + 정적 빌드) 에 부합도 낮음.</p>
+<!-- slaminar:end:dependencies -->
+
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>CLAUDE.md</code></li>
+<li><strong>자산 군</strong>: 📌 메타</li>
+<li><strong>slug 경로</strong>: <code>meta/claude-md.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../worklog/" class="md-footer__link md-footer__link--prev" aria-label="이전: 작업 로그 (#1~#46)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                작업 로그 (#1~#46)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../review-report/" class="md-footer__link md-footer__link--next" aria-label="다음: 검토 리포트">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                검토 리포트
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

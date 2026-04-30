@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="3D 스캔 치수 검사·SPC 조기경보 — 9 단계 포인트클라우드 → ERP 적재">
+  <title>3D 스캔 치수 검사·SPC 조기경보</title>
+  <desc>3D 스캐너 포인트클라우드 + CMM + CAD 도면 정합, EfficientNet+PointNet+ICP 비전 모델 치수 편차 자동 산출, ERP 처분 + Active Learning</desc>
+  <defs>
+    <linearGradient id="g_pkg5_d2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/><stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="g_pkg5_d2_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#F0F9FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_pkg5_d2)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">PKG 5 · DIAGRAM 2 · 3D SCAN INSPECTION · SPC</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">3D 스캔 치수 검사·SPC 조기경보</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">9 단계 포인트클라우드 → ERP 적재</text>
+  <!-- 카드 stack 9 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">3D 스캐너</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">포인트클라우드 입력</text>
+  </g>
+  <text x="300" y="173" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 175)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">클라우드 적재·정합</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">CAD 도면 매칭</text>
+  </g>
+  <text x="300" y="238" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 240)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">CMM 측정 결과</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">정밀 좌표 측정</text>
+  </g>
+  <text x="300" y="303" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 305)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">CAD 설계 도면</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">기준 형상 비교</text>
+  </g>
+  <text x="300" y="368" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 370)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">비전 모델</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">EfficientNet + PointNet + ICP</text>
+  </g>
+  <text x="300" y="433" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 435)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">치수 편차 산출</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">설계 허용치 대비 자동</text>
+  </g>
+  <text x="300" y="498" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 500)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">합격·재검사·불량</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">이벤트 트리거 분류</text>
+  </g>
+  <text x="300" y="563" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 565)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">ERP 검사 결과 적재</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">처분 기록 자동</text>
+  </g>
+  <text x="300" y="628" text-anchor="middle" font-size="10" fill="#7DD3FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 630)">
+    <rect x="48" y="0" width="472" height="57" rx="8" fill="url(#g_pkg5_d2_card)" stroke="#7DD3FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="28" r="14" fill="url(#g_pkg5_d2)"/>
+    <text x="56" y="32" text-anchor="middle" fill="white" font-size="11" font-weight="700">9</text>
+    <text x="90" y="24" font-size="11" font-weight="700" fill="#0C4A6E">검사원 검토 라벨링</text>
+    <text x="90" y="40" font-size="9" font-weight="500" fill="#075985">Active Learning · 클라우드</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §SCN-MET-03 치수 검사 자동화 paste 가능</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합 5.2 카드: 5.2-c (비전 검사) + 5.2-g (CAD 임베딩)</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">Active Learning 환류 + ERP 처분 기록</text>
+</svg>

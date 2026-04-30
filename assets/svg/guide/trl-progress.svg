@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="TRL 진척 관리 가이드 — TRL 4·5~6·7~8 3 단계 직렬 세로형 인포그래픽"
+     class="zoomable">
+  <title>TRL 진척 관리 가이드 (세로형) — 다년 R&amp;D 단계별 기술 성숙도</title>
+  <desc>다년 R&amp;D 양식이 강제하는 TRL 단계별 진척 관리 (TRL 4 → 5~6 → 7~8 직렬) 와 단계별 추진 목표 (1단계 컨설팅 보고서·2단계 1년차 시작품·2단계 2년차 통합 플랫폼) + 가이드 군 통일 세로형 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="trl-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="trl-step" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="trl-final" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="trl-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#trl-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">TRL 진척 관리 가이드</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">TRL PROGRESS — 3 STAGES</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">다년 R&amp;D 양식 강제 — TRL 4 → 5~6 → 7~8 직렬</text>
+
+  <!-- 세로 타임라인 라인 -->
+  <line x1="80" y1="140" x2="80" y2="650" stroke="#6366F1" stroke-width="3" stroke-dasharray="6 4" opacity="0.4"/>
+
+  <!-- Stage 1 — TRL 4 (1단계 9 개월) -->
+  <g transform="translate(40, 130)">
+    <circle cx="40" cy="40" r="28" fill="url(#trl-step)" filter="url(#trl-shadow)"/>
+    <text x="40" y="38" text-anchor="middle" class="ko" font-size="11" fill="white" font-weight="900">TRL</text>
+    <text x="40" y="52" text-anchor="middle" class="ko" font-size="14" fill="white" font-weight="900">4</text>
+    <g transform="translate(95, 0)" filter="url(#trl-shadow)">
+      <rect width="425" height="160" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">1단계 · 역량 분석 + 컨설팅 (9 개월)</text>
+      <text x="410" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">FEASIBILITY</text>
+      <text x="14" y="48" class="ko-r" font-size="11" fill="#475569">목표 — 실험실 환경 검증 (TRL 4)</text>
+      <text x="14" y="66" class="ko-r" font-size="10" fill="#64748B">▸ 도메인 인터뷰 + 베테랑 100 문항</text>
+      <text x="14" y="82" class="ko-r" font-size="10" fill="#64748B">▸ 데이터 수집·정제 + PoC 모델 (정확도 [%])</text>
+      <text x="14" y="98" class="ko-r" font-size="10" fill="#64748B">▸ 컨설팅 보고서 + 2단계 사업계획 작성</text>
+      <text x="14" y="118" class="ko" font-size="10" fill="#6366F1">산출물 — 컨설팅 보고서 + 시나리오 카탈로그</text>
+      <text x="14" y="138" class="ko" font-size="9" fill="#D97706">→ 위탁 강도 L2 혼합 (40~60 %)</text>
+      <text x="14" y="152" class="ko" font-size="9" fill="#D97706">→ KPI G1 R&amp;D + G5 모델 측정</text>
+    </g>
+  </g>
+
+  <!-- Stage 2 — TRL 5~6 (2단계 1년차) -->
+  <g transform="translate(40, 305)">
+    <circle cx="40" cy="40" r="28" fill="url(#trl-step)" filter="url(#trl-shadow)"/>
+    <text x="40" y="38" text-anchor="middle" class="ko" font-size="11" fill="white" font-weight="900">TRL</text>
+    <text x="40" y="52" text-anchor="middle" class="ko" font-size="11" fill="white" font-weight="900">5~6</text>
+    <g transform="translate(95, 0)" filter="url(#trl-shadow)">
+      <rect width="425" height="160" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">2단계 1년차 · 시작품 개발 (12 개월)</text>
+      <text x="410" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">PROTOTYPE</text>
+      <text x="14" y="48" class="ko-r" font-size="11" fill="#475569">목표 — 모의·유사 환경 검증 (TRL 5~6)</text>
+      <text x="14" y="66" class="ko-r" font-size="10" fill="#64748B">▸ 시작품 개발 (모델 + UI + 인프라)</text>
+      <text x="14" y="82" class="ko-r" font-size="10" fill="#64748B">▸ 단위 공정 적용 + KPI 측정 (불량률 -[%])</text>
+      <text x="14" y="98" class="ko-r" font-size="10" fill="#64748B">▸ 외부검증 RACI 통과 + 골드셋 평가</text>
+      <text x="14" y="118" class="ko" font-size="10" fill="#6366F1">산출물 — 시작품 + 검증 보고서 + 특허 [건]</text>
+      <text x="14" y="138" class="ko" font-size="9" fill="#D97706">→ 위탁 강도 L1 자체 우선 (15~25 %)</text>
+      <text x="14" y="152" class="ko" font-size="9" fill="#D97706">→ KPI G2 현장 + G5 모델 측정</text>
+    </g>
+  </g>
+
+  <!-- Stage 3 — TRL 7~8 (2단계 2년차) -->
+  <g transform="translate(40, 480)">
+    <circle cx="40" cy="40" r="28" fill="url(#trl-step)" filter="url(#trl-shadow)"/>
+    <text x="40" y="38" text-anchor="middle" class="ko" font-size="11" fill="white" font-weight="900">TRL</text>
+    <text x="40" y="52" text-anchor="middle" class="ko" font-size="11" fill="white" font-weight="900">7~8</text>
+    <g transform="translate(95, 0)" filter="url(#trl-shadow)">
+      <rect width="425" height="160" rx="10" fill="white" stroke="#6366F1" stroke-width="2"/>
+      <rect width="425" height="26" rx="10" fill="#6366F1"/>
+      <rect y="20" width="425" height="6" fill="#6366F1"/>
+      <text x="14" y="18" class="ko" font-size="12" fill="white">2단계 2년차 · 통합 플랫폼 (12 개월)</text>
+      <text x="410" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">PILOT</text>
+      <text x="14" y="48" class="ko-r" font-size="11" fill="#475569">목표 — 실증 환경 시연 (TRL 7~8)</text>
+      <text x="14" y="66" class="ko-r" font-size="10" fill="#64748B">▸ 통합 플랫폼 구축 (전 공정 + MLOps)</text>
+      <text x="14" y="82" class="ko-r" font-size="10" fill="#64748B">▸ 현장 운영 + ROI 측정 ([수치] 만원)</text>
+      <text x="14" y="98" class="ko-r" font-size="10" fill="#64748B">▸ 기술이전 + 사업화 + 고객사 확장</text>
+      <text x="14" y="118" class="ko" font-size="10" fill="#6366F1">산출물 — 통합 플랫폼 + 사업화 + 매출 [수치]</text>
+      <text x="14" y="138" class="ko" font-size="9" fill="#D97706">→ 위탁 강도 L1 자체 (사내 R&amp;D 주도)</text>
+      <text x="14" y="152" class="ko" font-size="9" fill="#D97706">→ KPI G3 재무 + G4 거버넌스 측정</text>
+    </g>
+  </g>
+
+  <!-- 강조 박스 (660~680) -->
+  <g transform="translate(40, 658)">
+    <rect width="520" height="22" rx="6" fill="url(#trl-final)"/>
+    <text x="14" y="15" class="ko" font-size="10" fill="white">3 단계 직렬 — 1단계 통과 → 2단계 1년차 → 2단계 2년차 (역행 불가)</text>
+  </g>
+
+  <!-- cross-reference 박스 (685~785) -->
+  <g transform="translate(40, 685)">
+    <rect width="520" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#D97706">cross-reference · TRL 3 단계 + 위탁 강도 + KPI 5 군</text>
+    <g font-size="9" class="ko-r" fill="#475569">
+      <text x="14" y="38">▸ TRL 4 (PoC) → TRL 5~6 (시작품) → TRL 7~8 (실증·사업화) 직렬 의무</text>
+      <text x="14" y="54">▸ §10 cross-reference — KPI §10 (단계별 산출물) + 컨설팅 §4·6 (위탁)</text>
+      <text x="14" y="70">▸ 단계별 산출물 — 컨설팅 보고서 → 시작품·특허 → 통합 플랫폼·매출</text>
+      <text x="14" y="88" fill="#6366F1" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
+    </g>
+  </g>
+</svg>

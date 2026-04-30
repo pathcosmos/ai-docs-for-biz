@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="모듈 — OEM 공급망 정합 7 블록 세로 카드">
+  <title>OEM 공급망 정합 모듈 — 자동차·조선·2 차전지 7 블록</title>
+  <desc>자동차·조선·2 차전지 OEM 1·2 차 공급망 정합 모듈의 7 블록(A 노출도·B 인증·C 변경관리·D PPAP 정합·E 신뢰성·F KPI·G 용어) 을 위에서 아래로 시각화. 패키지 4·5 cross-ref.</desc>
+
+  <defs>
+    <linearGradient id="oe-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="oe-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="oe-star" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <filter id="oe-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <rect width="600" height="100" fill="url(#oe-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">OEM SUPPLY-CHAIN · IATF 16949 · PPAP · VDA 6.3 · APQP · MSA</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">OEM 공급망 정합</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">7 블록 · 자동차 · 조선 · 2 차전지 · 변경관리 4M</text>
+
+  <!-- A 노출도 -->
+  <g transform="translate(40, 118)" filter="url(#oe-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-A · OEM 노출도</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#92400E">현대차·기아·VW·Toyota / HHI·삼성중공업 / LGES·SDI</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">Tier 1·2 협력사 — 화승알엔에이·코렌스·코리녹스·YCP특수강 등</text>
+  </g>
+
+  <!-- B 인증 보유 -->
+  <g transform="translate(40, 200)" filter="url(#oe-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-B · 인증 보유 현황</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#92400E">IATF 16949 · ISO/TS 22163 · API Q1 · NORSOK</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">SQA 점수 [수치] · 등급 유지 의무 · 매년 갱신 심사</text>
+  </g>
+
+  <!-- C 변경관리 공백 -->
+  <g transform="translate(40, 282)" filter="url(#oe-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-C · 변경관리 공백</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#92400E">4M (Man · Machine · Material · Method) 변경 추적</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">설비·소재 변경 시 PPAP 재제출 · 미통보 적발 시 라인 정지·페널티</text>
+  </g>
+
+  <!-- D PPAP 정합 (★) -->
+  <g transform="translate(40, 364)" filter="url(#oe-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#DC2626" stroke-width="2"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-star)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-star)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-D · PPAP 정합 ★</text>
+    <text x="490" y="18" text-anchor="end" class="en" font-size="9" fill="white">CORE</text>
+    <text x="14" y="50" class="ko" font-size="14" fill="#92400E">PPAP Level 2/3 자동 생성 — APQP·FMEA·MSA</text>
+    <text x="14" y="68" class="ko-r" font-size="10" fill="#475569">5.2-b 비전 + 5.2-c 이상탐지 → 검사 데이터 자동 채움</text>
+    <text x="14" y="84" class="ko-r" font-size="9" fill="#64748B">PPAP 18 항목 · Cpk·Ppk · 게이지 R&amp;R · 컨트롤 플랜 자동화</text>
+  </g>
+
+  <!-- E 신뢰성 -->
+  <g transform="translate(40, 464)" filter="url(#oe-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-E · 신뢰성·정성효과</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#92400E">필드 클레임 [%] 감소 · OEM 신뢰도 향상</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">PPM [수치] 개선 · 등급 상향 · 다중 OEM 동시 대응 가능</text>
+  </g>
+
+  <!-- F KPI -->
+  <g transform="translate(40, 546)" filter="url(#oe-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-F · KPI 체계 (PPM·SQA·OTD)</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#92400E">PPM · SQA 점수 · OTD · 클레임율 4 축</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">실시간 대시보드 → 월간·분기 리뷰 자동 보고서 생성</text>
+  </g>
+
+  <!-- G 용어집 -->
+  <g transform="translate(40, 628)" filter="url(#oe-shadow)">
+    <rect width="520" height="74" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="26" rx="8" fill="url(#oe-card)"/>
+    <rect y="16" width="520" height="10" fill="url(#oe-card)"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">BLK-OEM-G · 용어·표준</text>
+    <text x="14" y="48" class="ko" font-size="13" fill="#92400E">PPAP·APQP·FMEA·MSA·SPC 5 핸드북 매핑</text>
+    <text x="14" y="66" class="ko-r" font-size="10" fill="#475569">VDA 6.3·IATF 16949 · OEM 별 차이 표 · 변경관리 절차</text>
+  </g>
+
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 720)" filter="url(#oe-shadow)">
+    <rect width="540" height="68" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#92400E">cross-ref — 패키지 4 (고무양산 OEM) · 패키지 5 (정밀가공 SaaS) · 갭 17 해소</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">SaaS 보안 D (IP 마스킹) + 연합학습 모듈과 결합 가능 · 다중 OEM 동시 대응</text>
+    <text x="14" y="54" class="ko-r" font-size="9" fill="#64748B">→ 사업계획서 §1.2·1.4·4.3·5.x·6.2·7.2 + 부록 7 삽입 지점</text>
+  </g>
+</svg>

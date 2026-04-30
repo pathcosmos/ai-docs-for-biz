@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="6 패키지 매칭 의사결정 — 규모 × 도메인 × 사업기간 → 적정 패키지">
+  <title>6 패키지 매칭 의사결정</title>
+  <desc>귀사 규모 (대기업·중견·중소) × 다년 R&D 여부 × 주력 도메인 (철강·고무·정밀가공·유틸 ESG) 의 3 분기로 6 통합 파일럿 패키지 (1~6) 중 적정 매칭</desc>
+  <defs>
+    <linearGradient id="g_demo_by_pkg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="g_demo_by_pkg_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FAF5FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#FAF5FF"/>
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_demo_by_pkg)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">BY-PACKAGE · DECISION TREE</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">6 패키지 매칭 의사결정</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">규모 × 도메인 × 사업기간 → 적정 패키지</text>
+  <g transform="translate(120, 120)">
+    <rect width="360" height="64" rx="10" fill="url(#g_demo_by_pkg)" stroke="#A78BFA" stroke-width="1" filter="url(#shadow)"/>
+    <text x="180" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="white">Q1. 귀사 규모는?</text>
+    <text x="180" y="50" text-anchor="middle" font-size="10" font-weight="500" fill="rgba(255,255,255,0.9)">대기업 5조+ / 중견 1~5천억 / 중소 수백억</text>
+  </g>
+  <text x="300" y="200" text-anchor="middle" font-size="14" fill="#A78BFA">▼</text>
+  <g transform="translate(120, 215)">
+    <rect width="360" height="64" rx="10" fill="url(#g_demo_by_pkg)" stroke="#A78BFA" stroke-width="1" filter="url(#shadow)"/>
+    <text x="180" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="white">Q2. 다년 R&D? 주력 도메인?</text>
+    <text x="180" y="50" text-anchor="middle" font-size="10" font-weight="500" fill="rgba(255,255,255,0.9)">예 33개월+ / 아니오 단년</text>
+  </g>
+  <text x="300" y="295" text-anchor="middle" font-size="14" fill="#A78BFA">▼</text>
+  <g transform="translate(60, 330)">
+    <rect width="230" height="76" rx="10" fill="url(#g_demo_by_pkg_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="115" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#3B0764">철강 냉연·압연</text>
+    <text x="115" y="48" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">대기업·중견 다년</text>
+    <text x="115" y="64" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">→ 패키지 1·2</text>
+  </g>
+  <g transform="translate(310, 330)">
+    <rect width="230" height="76" rx="10" fill="url(#g_demo_by_pkg_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="115" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#3B0764">특수강관 + 암묵지</text>
+    <text x="115" y="48" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">중견 RAG 중심</text>
+    <text x="115" y="64" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">→ 패키지 3</text>
+  </g>
+  <g transform="translate(60, 420)">
+    <rect width="230" height="76" rx="10" fill="url(#g_demo_by_pkg_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="115" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#3B0764">고무·폴리머 양산</text>
+    <text x="115" y="48" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">OEM 공급</text>
+    <text x="115" y="64" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">→ 패키지 4</text>
+  </g>
+  <g transform="translate(310, 420)">
+    <rect width="230" height="76" rx="10" fill="url(#g_demo_by_pkg_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="115" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#3B0764">유틸·환경·ESG</text>
+    <text x="115" y="48" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">CBAM·중대재해</text>
+    <text x="115" y="64" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">→ 패키지 6</text>
+  </g>
+  <text x="300" y="525" text-anchor="middle" font-size="14" fill="#A78BFA">▼</text>
+  <g transform="translate(30, 540)">
+    <rect width="125" height="56" rx="8" fill="white" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="62.5" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#3B0764">전사적 DX R&D</text>
+    <text x="62.5" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">다년·대기업</text>
+    <text x="62.5" y="50" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">패키지 1</text>
+  </g>
+  <g transform="translate(170, 540)">
+    <rect width="125" height="56" rx="8" fill="white" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="62.5" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#3B0764">스마트공장 고도화</text>
+    <text x="62.5" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">중견·12 개월</text>
+    <text x="62.5" y="50" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">패키지 2·5</text>
+  </g>
+  <g transform="translate(310, 540)">
+    <rect width="125" height="56" rx="8" fill="white" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="62.5" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#3B0764">디지털 경남</text>
+    <text x="62.5" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">중견·9 개월</text>
+    <text x="62.5" y="50" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">패키지 3·6</text>
+  </g>
+  <g transform="translate(450, 540)">
+    <rect width="125" height="56" rx="8" fill="white" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="62.5" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#3B0764">정밀가공 SaaS</text>
+    <text x="62.5" y="38" text-anchor="middle" font-size="9" font-weight="500" fill="#6B21A8">중소·9 개월</text>
+    <text x="62.5" y="50" text-anchor="middle" font-size="9" font-weight="600" fill="#A78BFA">패키지 5</text>
+  </g>
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 by-package.md — 6 패키지 비교 매트릭스 본문</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">사업 매칭 후 해당 패키지의 §3·§4·§5 본문 paste</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">패키지 1 (대기업 R&D) ~ 패키지 6 (유틸·ESG·CBAM)</text>
+</svg>

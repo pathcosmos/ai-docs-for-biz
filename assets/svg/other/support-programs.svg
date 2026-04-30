@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="지원사업 공고 — 6 종 세로 카드형"
+     class="zoomable">
+  <title>지원사업 공고 (세로형) — 6 종 정부·대중소 상생 사업</title>
+  <desc>제조 AI 사업계획서 적용 가능한 6 종 정부·대중소 상생 지원사업 카드 — 전사적 DX 촉진 R&D · 스마트공장 (스마트제조혁신) · 디지털 경남 · 대중소상생 (대기업 매칭) · 통합형 클라우드화 · CBAM·ESG 대응 — 의 예산·기간·매칭률·핵심 요구사항을 세로 stack 으로 시각화.</desc>
+
+  <defs>
+    <linearGradient id="sup-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="sup-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="100%" stop-color="#EDE9FE"/>
+    </linearGradient>
+    <filter id="sup-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#FAFAF9"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#sup-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">지원사업 공고 매핑</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">6 GOVERNMENT · CORP-MATCHING PROGRAMS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#EDE9FE">패키지 1~6 매핑 + 공고 일정·매칭률·요구 양식</text>
+
+  <!-- 6 카드 stack -->
+  <g filter="url(#sup-shadow)">
+    <!-- 1. 전사적 DX 촉진 R&D -->
+    <g transform="translate(40, 120)">
+      <rect width="520" height="90" rx="10" fill="url(#sup-card)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="90" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="90" fill="#8B5CF6"/>
+      <text x="40" y="36" text-anchor="middle" class="en" font-size="10" fill="white">DX-RND</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">①</text>
+      <text x="40" y="76" text-anchor="middle" class="ko-r" font-size="9" fill="white">2026</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#5B21B6">전사적 DX 촉진 R&amp;D</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">예산 30~50 억 · 기간 36 개월 · 매칭 35% (정부 65%)</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#7C3AED">전사 DX 비전·로드맵 + 데이터 거버넌스 + 트랙 1·2·3 통합</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">매핑: 패키지 6 (유틸·ESG) · 양식 검증 7 단계 필수</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#A78BFA">▸ 양식검증_DX촉진_R&amp;D.md 적용</text>
+    </g>
+
+    <!-- 2. 스마트공장 -->
+    <g transform="translate(40, 220)">
+      <rect width="520" height="90" rx="10" fill="url(#sup-card)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="90" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="90" fill="#8B5CF6"/>
+      <text x="40" y="36" text-anchor="middle" class="en" font-size="10" fill="white">SMART</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">②</text>
+      <text x="40" y="76" text-anchor="middle" class="ko-r" font-size="9" fill="white">상시</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#5B21B6">스마트제조혁신 (스마트공장)</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">예산 1~6 억 · 기간 12 개월 · 매칭 30~50% (등급별)</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#7C3AED">기초·고도화 1·2 단계 · MES·MOM·AI 연계 + KPI 4 종 의무</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">매핑: 패키지 2·4·5 (압연·고무·정밀가공) · KAMP·MES 연동</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#A78BFA">▸ 가이드_KPI 4 KPI 적용 (생산성·품질·납기·원가)</text>
+    </g>
+
+    <!-- 3. 디지털 경남 -->
+    <g transform="translate(40, 320)">
+      <rect width="520" height="90" rx="10" fill="url(#sup-card)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="90" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="90" fill="#8B5CF6"/>
+      <text x="40" y="36" text-anchor="middle" class="en" font-size="10" fill="white">GN-DGT</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">③</text>
+      <text x="40" y="76" text-anchor="middle" class="ko-r" font-size="9" fill="white">분기</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#5B21B6">디지털 경남 (경남도)</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">예산 0.5~3 억 · 기간 9~12 개월 · 매칭 30%</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#7C3AED">경남 소재 제조업체 한정 · AI·DX 도입 + 일자리 창출</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">매핑: 패키지 4 (고무) · 5 (정밀가공) · 부산경남 거점 적합</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#A78BFA">▸ 화승·코렌스·코리녹스 등 reference</text>
+    </g>
+
+    <!-- 4. 대중소 상생 -->
+    <g transform="translate(40, 420)">
+      <rect width="520" height="90" rx="10" fill="url(#sup-card)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="90" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="90" fill="#8B5CF6"/>
+      <text x="40" y="36" text-anchor="middle" class="en" font-size="10" fill="white">CO-OP</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">④</text>
+      <text x="40" y="76" text-anchor="middle" class="ko-r" font-size="9" fill="white">상시</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#5B21B6">대중소 상생 (대기업 매칭)</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">예산 5~20 억 · 기간 24 개월 · 매칭 40% (대기업 30%·중소 10%)</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#7C3AED">대기업 (POSCO·현대제철 등) 협력 의무 · OEM 데이터 권한 분리</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">매핑: 패키지 1 (대기업철강 9) · 모듈_OEM 적용</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#A78BFA">▸ YCP·대한제강 reference + 책임_분담_매트릭스</text>
+    </g>
+
+    <!-- 5. 통합형 클라우드화 -->
+    <g transform="translate(40, 520)">
+      <rect width="520" height="90" rx="10" fill="url(#sup-card)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="90" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="90" fill="#8B5CF6"/>
+      <text x="40" y="36" text-anchor="middle" class="en" font-size="10" fill="white">CLOUD</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">⑤</text>
+      <text x="40" y="76" text-anchor="middle" class="ko-r" font-size="9" fill="white">2026</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#5B21B6">통합형 클라우드화</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">예산 3~10 억 · 기간 18 개월 · 매칭 30%</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#7C3AED">SaaS·PaaS 전환 + MLOps 클라우드 인프라 + 데이터 호스팅</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">매핑: 모듈_SaaS · 트랙 2 (MLOps) · 멀티테넌트 권한 분리</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#A78BFA">▸ NIPA·KISA 참조 양식 + 가이드_조립 적용</text>
+    </g>
+
+    <!-- 6. CBAM·ESG -->
+    <g transform="translate(40, 620)">
+      <rect width="520" height="90" rx="10" fill="url(#sup-card)" stroke="#8B5CF6" stroke-width="2"/>
+      <rect width="80" height="90" rx="10" fill="#8B5CF6"/><rect x="70" width="10" height="90" fill="#8B5CF6"/>
+      <text x="40" y="36" text-anchor="middle" class="en" font-size="10" fill="white">CBAM</text>
+      <text x="40" y="58" text-anchor="middle" class="ko" font-size="16" fill="white" font-weight="900">⑥</text>
+      <text x="40" y="76" text-anchor="middle" class="ko-r" font-size="9" fill="white">2026</text>
+      <text x="100" y="22" class="ko" font-size="13" fill="#5B21B6">CBAM·ESG 대응</text>
+      <text x="100" y="38" class="ko-r" font-size="10" fill="#475569">예산 1~5 억 · 기간 12~24 개월 · 매칭 30%</text>
+      <text x="100" y="54" class="ko-r" font-size="9" fill="#7C3AED">EU CBAM 인증 + 탄소 배출량 산정·보고 자동화 + 환경 IoT</text>
+      <text x="100" y="70" class="ko-r" font-size="9" fill="#475569">매핑: 패키지 6 (유틸·ESG) · 모듈_CBAM · UTL-02 시나리오</text>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#A78BFA">▸ 철강 수출 기업 (한국철강·대한제강 등) 우선 적용</text>
+    </g>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(40, 720)">
+    <rect width="520" height="60" rx="8" fill="white" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#5B21B6">사업 선택 기준 — 규모 · 매칭 · 일정 · 산업 적합성</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ 대기업 매칭 가능 → ④ ① / 중견 단독 → ② ⑤ / 경남 소재 → ③ / ESG 부담 → ⑥</text>
+    <text x="20" y="54" class="ko-r" font-size="9" fill="#A78BFA">▸ 출처: 사업계획서_패키지[1-6]_*_파일럿.md + 양식검증_DX촉진_R&amp;D.md</text>
+  </g>
+</svg>

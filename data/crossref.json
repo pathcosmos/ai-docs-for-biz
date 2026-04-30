@@ -1,0 +1,518 @@
+{
+  "nodes": [
+    {
+      "id": "track/track1-index",
+      "label": "Track 1 — 제조 AI 서두/본문 공통 본문 목차",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track1-index/",
+      "filename": "track1_공통본문_목차.md"
+    },
+    {
+      "id": "track/track1-top5",
+      "label": "Track 1 — 공통 재사용 Top 5 블록 실문…",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track1-top5/",
+      "filename": "track1_본문_공통Top5.md"
+    },
+    {
+      "id": "track/track1-engine-cards",
+      "label": "Track 1 — 5.2 AI 엔진 변형 카드",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track1-engine-cards/",
+      "filename": "track1_5.2_AI엔진_변형카드.md"
+    },
+    {
+      "id": "track/track2-index",
+      "label": "Track 2 — MLOps 구축 및 지속적 개선 …",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track2-index/",
+      "filename": "track2_공통본문_목차.md"
+    },
+    {
+      "id": "track/track2-top5",
+      "label": "Track 2 — 공통 재사용 Top 5 블록 실문…",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track2-top5/",
+      "filename": "track2_본문_공통Top5.md"
+    },
+    {
+      "id": "track/track3-index",
+      "label": "Track 3 — LLM·RAG 공정 적용 공통 본…",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track3-index/",
+      "filename": "track3_공통본문_목차.md"
+    },
+    {
+      "id": "track/track3-top5",
+      "label": "Track 3 — 공통 재사용 Top 5 블록 실문…",
+      "group": "track",
+      "group_label": "Track 본문",
+      "url": "/track/track3-top5/",
+      "filename": "track3_본문_공통Top5.md"
+    },
+    {
+      "id": "scenario/catalog",
+      "label": "제조 AI 시나리오 카탈로그",
+      "group": "scenario",
+      "group_label": "시나리오",
+      "url": "/scenario/catalog/",
+      "filename": "시나리오_카탈로그.md"
+    },
+    {
+      "id": "scenario/detail-top5",
+      "label": "시나리오 상세 — 재사용성 Top 5",
+      "group": "scenario",
+      "group_label": "시나리오",
+      "url": "/scenario/detail-top5/",
+      "filename": "시나리오_상세_Top5.md"
+    },
+    {
+      "id": "scenario/detail-phase2",
+      "label": "시나리오 상세 — Phase 2 (패키지 2 잔여 …",
+      "group": "scenario",
+      "group_label": "시나리오",
+      "url": "/scenario/detail-phase2/",
+      "filename": "시나리오_상세_Phase2.md"
+    },
+    {
+      "id": "scenario/detail-rub",
+      "label": "시나리오 상세 — RUB (고무·폴리머)",
+      "group": "scenario",
+      "group_label": "시나리오",
+      "url": "/scenario/detail-rub/",
+      "filename": "시나리오_상세_RUB.md"
+    },
+    {
+      "id": "scenario/detail-utl-saf",
+      "label": "시나리오 상세 — UTL·SAF (유틸·환경·안전)",
+      "group": "scenario",
+      "group_label": "시나리오",
+      "url": "/scenario/detail-utl-saf/",
+      "filename": "시나리오_상세_UTL_SAF.md"
+    },
+    {
+      "id": "scenario/detail-special-pipe",
+      "label": "시나리오 상세 — 특수강관 (STL-07·STL-11)",
+      "group": "scenario",
+      "group_label": "시나리오",
+      "url": "/scenario/detail-special-pipe/",
+      "filename": "시나리오_상세_특수강관.md"
+    },
+    {
+      "id": "pkg/pkg1-steel-enterprise",
+      "label": "사업계획서 — 패키지 1 (대기업 철강 전사 AI …",
+      "group": "pkg",
+      "group_label": "통합 파일럿",
+      "url": "/pkg/pkg1-steel-enterprise/",
+      "filename": "사업계획서_패키지1_대기업철강_파일럿.md"
+    },
+    {
+      "id": "pkg/pkg2-cold-rolled",
+      "label": "사업계획서 — [고객사] 제조AI특화 스마트공장 (…",
+      "group": "pkg",
+      "group_label": "통합 파일럿",
+      "url": "/pkg/pkg2-cold-rolled/",
+      "filename": "사업계획서_패키지2_중견냉연_파일럿.md"
+    },
+    {
+      "id": "pkg/pkg3-special-pipe",
+      "label": "사업계획서 — [고객사] 디지털 경남 (특수강관 9…",
+      "group": "pkg",
+      "group_label": "통합 파일럿",
+      "url": "/pkg/pkg3-special-pipe/",
+      "filename": "사업계획서_패키지3_특수강관_파일럿.md"
+    },
+    {
+      "id": "pkg/pkg4-rubber",
+      "label": "사업계획서 — [고객사] 대중소상생 LG AI 트랙…",
+      "group": "pkg",
+      "group_label": "통합 파일럿",
+      "url": "/pkg/pkg4-rubber/",
+      "filename": "사업계획서_패키지4_고무양산_파일럿.md"
+    },
+    {
+      "id": "pkg/pkg5-precision",
+      "label": "사업계획서 — [고객사] 클라우드 종합솔루션 지원사…",
+      "group": "pkg",
+      "group_label": "통합 파일럿",
+      "url": "/pkg/pkg5-precision/",
+      "filename": "사업계획서_패키지5_정밀가공중소_파일럿.md"
+    },
+    {
+      "id": "pkg/pkg6-util-esg",
+      "label": "사업계획서 — [고객사] 스마트공장 고도화 + ES…",
+      "group": "pkg",
+      "group_label": "통합 파일럿",
+      "url": "/pkg/pkg6-util-esg/",
+      "filename": "사업계획서_패키지6_유틸ESG_파일럿.md"
+    },
+    {
+      "id": "guide/quickstart",
+      "label": "운영 모드 Quick-Start (1 페이지 요약)",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/quickstart/",
+      "filename": "운영_모드_Quickstart.md"
+    },
+    {
+      "id": "guide/assembly",
+      "label": "사업계획서 조립 가이드",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/assembly/",
+      "filename": "사업계획서_조립_가이드.md"
+    },
+    {
+      "id": "guide/finance-budget",
+      "label": "재무·예산 산정 가이드",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/finance-budget/",
+      "filename": "가이드_재무_예산_산정.md"
+    },
+    {
+      "id": "guide/duration-compress",
+      "label": "사업 기간 압축 가이드",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/duration-compress/",
+      "filename": "사업기간_압축_가이드.md"
+    },
+    {
+      "id": "guide/kpi-measurement",
+      "label": "가이드 — KPI 측정·산출·검증 표준",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/kpi-measurement/",
+      "filename": "가이드_KPI_측정.md"
+    },
+    {
+      "id": "guide/external-validation",
+      "label": "가이드 — 외부 검증 운영 (TMS·CEMS·CBA…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/external-validation/",
+      "filename": "가이드_외부검증_운영.md"
+    },
+    {
+      "id": "guide/rag-infra",
+      "label": "가이드 — RAG 인프라 운영 (Vector DB·…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/rag-infra/",
+      "filename": "가이드_RAG_인프라_운영.md"
+    },
+    {
+      "id": "guide/domain-knowledge",
+      "label": "가이드 — 도메인 지식추출 (베테랑 인터뷰·도메인 …",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/domain-knowledge/",
+      "filename": "가이드_도메인_지식추출.md"
+    },
+    {
+      "id": "guide/korean-slm",
+      "label": "가이드 — 한국 sLM 활용 (LG EXAONE·삼…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/korean-slm/",
+      "filename": "가이드_한국_sLM_활용.md"
+    },
+    {
+      "id": "guide/consulting-outsource",
+      "label": "가이드 — 컨설팅 위탁 운영 (다년 R&D 1단계 …",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/consulting-outsource/",
+      "filename": "가이드_컨설팅_위탁_운영.md"
+    },
+    {
+      "id": "guide/trl-progress",
+      "label": "가이드 — TRL 진척 관리 (다년 R&D 단계별 …",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/trl-progress/",
+      "filename": "가이드_TRL_진척_관리.md"
+    },
+    {
+      "id": "guide/risk-matrix",
+      "label": "가이드 — 위험관리 매트릭스 (다년 R&D 단계 가…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/risk-matrix/",
+      "filename": "가이드_위험관리_매트릭스.md"
+    },
+    {
+      "id": "module/cbam",
+      "label": "모듈 — CBAM(탄소국경조정제도) 대응 크로스커팅…",
+      "group": "module",
+      "group_label": "Cross-cutting 모듈",
+      "url": "/module/cbam/",
+      "filename": "모듈_CBAM_대응.md"
+    },
+    {
+      "id": "module/safety",
+      "label": "모듈 — 중대재해·산업안전 AI (크로스커팅 재사용…",
+      "group": "module",
+      "group_label": "Cross-cutting 모듈",
+      "url": "/module/safety/",
+      "filename": "모듈_중대재해_안전.md"
+    },
+    {
+      "id": "module/federated-learning",
+      "label": "모듈 — 연합학습·산단 공동 AI",
+      "group": "module",
+      "group_label": "Cross-cutting 모듈",
+      "url": "/module/federated-learning/",
+      "filename": "모듈_연합학습_산단공동.md"
+    },
+    {
+      "id": "module/oem-supply",
+      "label": "모듈 — 자동차 OEM 공급망 정합 (크로스커팅 재…",
+      "group": "module",
+      "group_label": "Cross-cutting 모듈",
+      "url": "/module/oem-supply/",
+      "filename": "모듈_OEM_공급망_정합.md"
+    },
+    {
+      "id": "module/saas-security",
+      "label": "모듈 — SaaS·클라우드 보안 거버넌스 (크로스커…",
+      "group": "module",
+      "group_label": "Cross-cutting 모듈",
+      "url": "/module/saas-security/",
+      "filename": "모듈_SaaS_클라우드_보안.md"
+    },
+    {
+      "id": "other/synergy-roi",
+      "label": "시너지 ROI 모델 — 패키지별 결합 효과 정량화",
+      "group": "other",
+      "group_label": "기타 자산",
+      "url": "/other/synergy-roi/",
+      "filename": "시너지_ROI_모델.md"
+    },
+    {
+      "id": "other/raci-matrix",
+      "label": "책임 분담 매트릭스 — HITL · MLO-03 ·…",
+      "group": "other",
+      "group_label": "기타 자산",
+      "url": "/other/raci-matrix/",
+      "filename": "책임_분담_매트릭스.md"
+    },
+    {
+      "id": "other/support-programs",
+      "label": "지원사업 공고 스냅샷 — 2026",
+      "group": "other",
+      "group_label": "기타 자산",
+      "url": "/other/support-programs/",
+      "filename": "지원사업_공고_스냅샷_2026.md"
+    },
+    {
+      "id": "other/form-validation-dx",
+      "label": "양식검증 — 전사적 DX 촉진 R&D (붙임2 v2…",
+      "group": "other",
+      "group_label": "기타 자산",
+      "url": "/other/form-validation-dx/",
+      "filename": "양식검증_DX촉진_R&D.md"
+    },
+    {
+      "id": "other/methodology",
+      "label": "방법론 총론 — AI 협업 콘텐츠 생산·운영 패턴",
+      "group": "other",
+      "group_label": "기타 자산",
+      "url": "/other/methodology/",
+      "filename": "방법론_총론.md"
+    },
+    {
+      "id": "meta/worklog",
+      "label": "작업 진행 기록 (Project Work Log)",
+      "group": "meta",
+      "group_label": "메타",
+      "url": "/meta/worklog/",
+      "filename": "작업로그.md"
+    },
+    {
+      "id": "meta/claude-md",
+      "label": "CLAUDE.md",
+      "group": "meta",
+      "group_label": "메타",
+      "url": "/meta/claude-md/",
+      "filename": "CLAUDE.md"
+    },
+    {
+      "id": "meta/review-report",
+      "label": "Phase A·B·C 완료 시점 전체 교차 리뷰 리포트",
+      "group": "meta",
+      "group_label": "메타",
+      "url": "/meta/review-report/",
+      "filename": "검토리포트_2026-04-24.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "track/track2-top5",
+      "target": "track/track2-index",
+      "weight": 5
+    },
+    {
+      "source": "track/track3-top5",
+      "target": "track/track3-index",
+      "weight": 5
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "other/form-validation-dx",
+      "weight": 35
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "scenario/catalog",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "module/cbam",
+      "weight": 3
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "module/safety",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "guide/domain-knowledge",
+      "weight": 2
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "guide/assembly",
+      "weight": 5
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "guide/kpi-measurement",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "guide/external-validation",
+      "weight": 2
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "module/oem-supply",
+      "weight": 2
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "track/track1-engine-cards",
+      "weight": 3
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "track/track2-index",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "guide/rag-infra",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg1-steel-enterprise",
+      "target": "other/synergy-roi",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "other/support-programs",
+      "weight": 2
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "track/track1-index",
+      "weight": 13
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "track/track1-top5",
+      "weight": 5
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "track/track1-engine-cards",
+      "weight": 6
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "scenario/detail-top5",
+      "weight": 3
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "track/track2-index",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "track/track3-index",
+      "weight": 1
+    },
+    {
+      "source": "pkg/pkg2-cold-rolled",
+      "target": "scenario/catalog",
+      "weight": 2
+    },
+    {
+      "source": "guide/assembly",
+      "target": "track/track1-index",
+      "weight": 1
+    },
+    {
+      "source": "guide/assembly",
+      "target": "track/track1-top5",
+      "weight": 1
+    },
+    {
+      "source": "guide/assembly",
+      "target": "scenario/catalog",
+      "weight": 1
+    },
+    {
+      "source": "guide/assembly",
+      "target": "track/track2-index",
+      "weight": 1
+    },
+    {
+      "source": "guide/assembly",
+      "target": "module/cbam",
+      "weight": 1
+    },
+    {
+      "source": "guide/finance-budget",
+      "target": "other/form-validation-dx",
+      "weight": 1
+    },
+    {
+      "source": "guide/kpi-measurement",
+      "target": "other/form-validation-dx",
+      "weight": 1
+    },
+    {
+      "source": "other/raci-matrix",
+      "target": "other/form-validation-dx",
+      "weight": 1
+    }
+  ],
+  "stats": {
+    "node_count": 44,
+    "edge_count": 31,
+    "total_citations": 109
+  }
+}

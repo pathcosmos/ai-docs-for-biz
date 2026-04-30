@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="BLK-T1-4.4 피쳐 엔지니어링 접근 — 3 축 (도메인·자동·메타) → 다단계 선정 → 피쳐 스토어">
+  <title>BLK-T1-4.4 피쳐 엔지니어링 접근</title>
+  <desc>원시 데이터 (PLC·MES·비전·문서) → 3 축 피쳐 생성 (도메인·자동·메타) → 후보 풀 (수백~수천) → 다단계 선정 (상관·MI·SHAP) → 채택 피쳐셋 → 피쳐 스토어 → 모델 입력 + Track 2 연계</desc>
+  <defs>
+    <linearGradient id="g_t1_top5_d3_flowgrid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3730A3"/><stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="g_t1_top5_d3_flowgrid_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <marker id="arrow_g_t1_top5_d3_flowgrid" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#A5B4FC"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#EEF2FF"/>
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_t1_top5_d3_flowgrid)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">TRACK 1 · BLK-T1-4.4 · FEATURE ENGINEERING</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">BLK-T1-4.4 피쳐 엔지니어링 접근</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">3 축 (도메인·자동·메타) → 다단계 선정 → 피쳐 스토어</text>
+  <g transform="translate(30, 110)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">원시 데이터</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">PLC · MES · 비전 · 문서</text>
+  </g>
+  <path d="M 290 158 L 290 168 L 116 168 L 116 178" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 178)">
+    <rect width="172" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="86" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">도메인 피쳐</text>
+    <text x="86" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">롤링통계·차분·누적</text>
+  </g>
+  <g transform="translate(214, 178)">
+    <rect width="172" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="86" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">자동 피쳐 생성</text>
+    <text x="86" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">tsfresh · featuretools</text>
+  </g>
+  <g transform="translate(398, 178)">
+    <rect width="172" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="86" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">메타 피쳐</text>
+    <text x="86" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">재질·레시피·설비ID</text>
+  </g>
+  <path d="M 116 226 L 116 236 L 300 236 L 300 246" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <path d="M 300 226 L 300 236 L 300 236 L 300 246" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <path d="M 484 226 L 484 236 L 300 236 L 300 246" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 246)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">피쳐 후보 풀</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">수백~수천 개</text>
+  </g>
+  <path d="M 290 294 L 290 304 L 300 304 L 300 314" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 314)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">상관·다중공선성 제거</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">1단계 선정</text>
+  </g>
+  <path d="M 290 362 L 290 372 L 300 372 L 300 382" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 382)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">상호정보량 평가</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">2단계 (비선형 관계)</text>
+  </g>
+  <path d="M 290 430 L 290 440 L 300 440 L 300 450" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 450)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">SHAP 기여도 선별</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">3단계 (모델 기반)</text>
+  </g>
+  <path d="M 290 498 L 290 508 L 300 508 L 300 518" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 518)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">채택 피쳐셋</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">최종 입력 피쳐</text>
+  </g>
+  <path d="M 290 566 L 290 576 L 300 576 L 300 586" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 586)">
+    <rect width="520" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="260" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">피쳐 스토어</text>
+    <text x="260" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">학습·추론 일관성</text>
+  </g>
+  <path d="M 290 634 L 290 644 L 162 644 L 162 654" fill="none" stroke="#A5B4FC" stroke-width="1.2" marker-end="url(#arrow_g_t1_top5_d3_flowgrid)"/>
+  <g transform="translate(30, 654)">
+    <rect width="264" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="132" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">모델 입력</text>
+    <text x="132" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">Track 1 학습 파이프라인</text>
+  </g>
+  <g transform="translate(306, 654)">
+    <rect width="264" height="48" rx="8" fill="url(#g_t1_top5_d3_flowgrid_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <text x="132" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#312E81">Track 2 MLOps</text>
+    <text x="132" y="36" text-anchor="middle" font-size="9" font-weight="500" fill="#3730A3">SCN-MLO-02 연계</text>
+  </g>
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §4.4 본문 paste 가능 (Track 1 BLK-T1-4.4)</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합 5.2 카드: 5.2-b (시계열 피쳐) + 5.2-d (피쳐 스토어 일관성)</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">Track 2 SCN-MLO-02 피쳐 스토어 + 모델 레지스트리 결합</text>
+</svg>

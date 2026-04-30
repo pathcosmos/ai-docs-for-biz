@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="BLK-T1-3.2 데이터 단절·비정형 한계 — 정형/비정형 단절 + 양식 비표준">
+  <title>BLK-T1-3.2 데이터 단절·비정형 한계</title>
+  <desc>정형 시스템 (MES·SCADA·PLC) 과 비정형 원천 (성적서·Excel·HWP·교대 일지) 의 양식 비표준 단절 → 통합 분석 불가 → 데이터 자산 망실</desc>
+  <defs>
+    <linearGradient id="g_t1_top5_d2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3730A3"/><stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="g_t1_top5_d2_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#EEF2FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_t1_top5_d2)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">TRACK 1 · BLK-T1-3.2 · DATA FRAGMENTATION</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">BLK-T1-3.2 데이터 단절·비정형 한계</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">정형/비정형 단절 + 양식 비표준</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">정형 시스템</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">MES·SCADA·PLC·ERP</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">비정형 원천</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">성적서·도면·교대 일지</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">성적서 스캔 PDF</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">OCR 미적용</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">공정설계 Excel</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">분산·미관리</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">작업표준서 HWP/PDF</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">양식 비표준</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">교대 일지 수기</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">디지털화 부재</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">단절 지점</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">정형↔비정형 상호 참조 불가</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_t1_top5_d2_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_t1_top5_d2)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">양식 비표준</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">통합 분석 불가능</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §3.2 사업 배경 paste 가능 (Track 1)</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합 5.2 카드: 5.2-f (LLM·RAG 비정형) + 5.2-c (비전 OCR)</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">BLK-T1-3.1 인적 의존 + BLK-T2-3.2 모니터링 부재</text>
+</svg>

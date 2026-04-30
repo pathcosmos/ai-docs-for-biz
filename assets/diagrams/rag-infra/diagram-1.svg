@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="RAG 통합 운영 5 계층 아키텍처 — 수집·임베딩·검색·생성·감사 표준">
+  <title>RAG 통합 운영 5 계층 아키텍처</title>
+  <desc>문서 수집·정제 → 임베딩 → 검색 → 생성 → 감사·운영 5 계층의 표준 데이터 흐름. 권한·민감도 게이트 + Track 2 모니터링 + BLK-CSEC-F 라우팅 결합</desc>
+  <defs>
+    <linearGradient id="g_rag_d1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338CA"/><stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="g_rag_d1_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#EEF2FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_rag_d1)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">RAG INFRA · 5-LAYER STANDARD</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">RAG 통합 운영 5 계층 아키텍처</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">수집·임베딩·검색·생성·감사 표준</text>
+  <!-- 카드 stack 8 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">1. 문서 수집·정제</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">OCR·파서·청킹·메타</text>
+  </g>
+  <text x="300" y="181" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 183)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">2. 임베딩</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">멀티뷰·파인튜닝</text>
+  </g>
+  <text x="300" y="254" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 256)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">권한·민감도 게이트</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">BLK-CSEC-F 라우팅</text>
+  </g>
+  <text x="300" y="327" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 329)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">3. 검색</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">Dense + BM25 + Rerank</text>
+  </g>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 402)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">4. 생성</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">sLM (가이드 §1 LLM)</text>
+  </g>
+  <text x="300" y="473" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 475)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">응답 + Citation</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">근거 강제·환각 방지</text>
+  </g>
+  <text x="300" y="546" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 548)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">5. 감사·운영</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">로그·드리프트·피드백</text>
+  </g>
+  <text x="300" y="619" text-anchor="middle" font-size="10" fill="#A5B4FC" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 621)">
+    <rect x="48" y="0" width="472" height="65" rx="8" fill="url(#g_rag_d1_card)" stroke="#A5B4FC" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="32" r="14" fill="url(#g_rag_d1)"/>
+    <text x="56" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#312E81">재인덱싱·재학습 환류</text>
+    <text x="90" y="44" font-size="9" font-weight="500" fill="#3730A3">Track 2 §5.5 트리거</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 RAG 인프라 운영 가이드 §3 통합 5 계층</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합: track3 §4.2 RAG 7 단계 + sLM 가이드 §1·§5</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">BLK-CSEC-F 민감도 라우팅 + Track 2 §5.5 모니터링</text>
+</svg>

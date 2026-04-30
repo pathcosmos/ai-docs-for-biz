@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="양식 검증 7 단계 — DX 촉진 R&D 세로형"
+     class="zoomable">
+  <title>양식 검증 7 단계 (세로형) — 전사적 DX 촉진 R&D 사업계획서</title>
+  <desc>전사적 DX 촉진 R&D 사업계획서 양식 검증 7 단계 — 표지·요약 · 비전·로드맵 · 추진체계·RACI · 데이터 거버넌스 · 모델·기술 (트랙 1·2·3) · KPI·재무·ROI · 위험·법무·검증 — 의 점검 항목·필수 양식·통과 기준을 세로 stack 으로 시각화. 단계별 산출물 매핑.</desc>
+
+  <defs>
+    <linearGradient id="fv-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="fv-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <filter id="fv-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#fv-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">양식 검증 7 단계</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">DX-RND PROPOSAL · 7 STAGES</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#E0E7FF">전사적 DX 촉진 R&amp;D — 67 페이지 양식 → 7 단계 검증 워크플로</text>
+
+  <!-- 7 단계 카드 stack (각 75px) -->
+  <g filter="url(#fv-shadow)">
+    <!-- 1 -->
+    <g transform="translate(40, 118)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">1</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">표지·요약 · 사업 개요</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">조직·CEO·연락처 · 1 페이지 요약 · 한 줄 임팩트</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: 양식 일치율 100% · 요약 200 자 이내 · 핵심 KPI 3 종 표기</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: 표지·요약 — track1_서두 §1 적용</text>
+    </g>
+    <!-- 2 -->
+    <g transform="translate(40, 200)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">2</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">비전·로드맵 · 전사 DX 전략</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">3-5 년 비전 · 단계 (1·2·3 차년) · 마일스톤 매트릭스</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: AS-IS / TO-BE 비교 · 단계별 산출물 명시 · 측정 가능 목표</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: 로드맵 — 가이드_TRL §3·5 + 시너지_ROI §3</text>
+    </g>
+    <!-- 3 -->
+    <g transform="translate(40, 282)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">3</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">추진체계 · RACI · 외부 파트너</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">조직도 + RACI 매트릭스 · 외부 자문·검증 기관</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: 7 영역 RACI 완성 · 1 영역 1 A · 외부 검증 기관 1 종 이상</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: RACI — 책임_분담_매트릭스 + 가이드_외부검증</text>
+    </g>
+    <!-- 4 -->
+    <g transform="translate(40, 364)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">4</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">데이터 거버넌스 · 인프라</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">데이터 카탈로그 · 보안·권한 · 클라우드·온프렘 결정</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: 8 데이터 도메인 분류 · 보안 등급 · OEM 권한 격리</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: 데이터 표 — 가이드_도메인지식 + 모듈_OEM</text>
+    </g>
+    <!-- 5 -->
+    <g transform="translate(40, 446)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">5</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">모델·기술 · 트랙 1·2·3 통합</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">트랙별 모델·MLOps·LLM·RAG · 시나리오 9~12 종 매핑</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: 시나리오 카탈로그 매핑 · TRL 5→7→9 · 트랙 균형</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: 기술 본문 — track1·2·3 + 시나리오 카탈로그</text>
+    </g>
+    <!-- 6 -->
+    <g transform="translate(40, 528)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">6</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">KPI · 재무 · ROI 산출</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">4 KPI (생산·품질·납기·원가) + 3 년 ROI · 매칭 비율</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: KPI 측정 baseline · 재무 모델 시너지 가산 · ROI 1.5~2.0 년</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: KPI·재무 — 가이드_KPI + 가이드_재무 + 시너지_ROI</text>
+    </g>
+    <!-- 7 -->
+    <g transform="translate(40, 610)">
+      <rect width="520" height="72" rx="8" fill="url(#fv-card)" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="40" cy="36" r="22" fill="#6366F1"/>
+      <text x="40" y="42" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">7</text>
+      <text x="80" y="22" class="ko" font-size="13" fill="#3730A3">위험·법무·외부 검증 · 결격 회피</text>
+      <text x="80" y="38" class="ko-r" font-size="10" fill="#475569">위험 매트릭스 · IP·라이선스 · 중대재해법 · 결격 사유</text>
+      <text x="80" y="54" class="ko-r" font-size="9" fill="#6366F1">통과: 위험 5 종 + 완화 · 외부 검증 1 종 · 결격 0 건</text>
+      <text x="80" y="68" class="ko-r" font-size="9" fill="#94A3B8">산출: 위험·검증 — 가이드_위험 + 모듈_중대재해 + 가이드_외부검증</text>
+    </g>
+  </g>
+
+  <!-- 통과 게이트 -->
+  <g transform="translate(40, 692)" filter="url(#fv-shadow)">
+    <rect width="520" height="50" rx="6" fill="#FBBF24"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#0F172A">최종 통과 게이트 — 7 단계 모두 통과 시 제출 승인</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#0F172A">단계별 1 회 누락 = 보완 / 2 단계 이상 누락 = 재작성</text>
+  </g>
+  <g transform="translate(40, 750)">
+    <rect width="520" height="36" rx="6" fill="white" stroke="#6366F1" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="14" class="ko-r" font-size="10" fill="#3730A3">▸ 출처: 양식검증_DX촉진_R&amp;D.md §3·5·7 — 67 페이지 PDF 분석 기반</text>
+    <text x="20" y="28" class="ko-r" font-size="9" fill="#6366F1">▸ 운영_모드_Quickstart §4 — 첫 신청 시 7 단계 순서 권고</text>
+  </g>
+</svg>

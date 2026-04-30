@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="고무·폴리머 RUB 시나리오 상세 — 5 카드 세로형"
+     class="zoomable">
+  <title>시나리오 상세 — 고무·폴리머 (RUB-01·02·03·04·05)</title>
+  <desc>고무·폴리머 도메인 5 시나리오 — RUB-01 압출 두께 · RUB-02 가류 시간 · RUB-03 배합 안정 · RUB-04 검사 자동 · RUB-05 사출 결함 분류 — 의 모델·KPI·도입난이도·기간을 5 카드 세로 stack 으로 시각화.</desc>
+
+  <defs>
+    <linearGradient id="rub-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="rub-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="rub-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FCD34D"/>
+    </linearGradient>
+    <filter id="rub-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#FFFBEB"/>
+
+  <!-- 헤더 -->
+  <rect width="600" height="100" fill="url(#rub-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">고무·폴리머 RUB</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.9)">SCN-RUB · 5 SCENARIOS</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FFF7ED">화승·고무 양산 라인 — 배합·압출·가류·사출·검사 풀라인</text>
+
+  <!-- 5 시나리오 카드 stack -->
+  <g filter="url(#rub-shadow)">
+    <g transform="translate(40, 120)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-01</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★1</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">압출 두께·외경 안정화</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">압출기 압력·온도·속도 · LSTM + PID 협조</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 두께 편차 -45% · 폐기율 -30% · ROI 1.4 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="280" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
+    </g>
+
+    <g transform="translate(40, 222)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-02</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★2</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">가류 시간·온도 최적화</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">가류 프로파일 · 회귀 + 강화학습</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 사이클타임 -12% · 미가류 불량 -50% · ROI 1.6 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="240" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6-9 개월 · TRL 6→8</text>
+    </g>
+
+    <g transform="translate(40, 324)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-03</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">③</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">배합 균질도·물성 예측</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">컴파운드 레시피 + Mooney 점도 · GBM 회귀</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 물성 산포 -25% · 시험 횟수 -40% · ROI 2.0 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="200" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★★ · 기간 9-12 개월 · TRL 5→7</text>
+    </g>
+
+    <g transform="translate(40, 426)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-04</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">④</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">자동 검사·치수 측정</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">3D 스캔·라인스캔 · CNN 분류 + 회귀</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 검사 인력 -2 명 · 오검 -55% · ROI 1.3 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="180" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★ · 기간 4-6 개월 · TRL 7→9</text>
+    </g>
+
+    <g transform="translate(40, 528)">
+      <rect width="520" height="92" rx="10" fill="url(#rub-card)" stroke="#F59E0B" stroke-width="2"/>
+      <rect width="80" height="92" rx="10" fill="#F59E0B"/><rect x="70" width="10" height="92" fill="#F59E0B"/>
+      <text x="40" y="38" text-anchor="middle" class="en" font-size="11" fill="white">RUB-05</text>
+      <text x="40" y="62" text-anchor="middle" class="ko" font-size="18" fill="white" font-weight="900">★5</text>
+      <text x="100" y="22" class="ko" font-size="14" fill="#92400E">사출 결함 분류 (비전)</text>
+      <text x="100" y="40" class="ko-r" font-size="10" fill="#475569">사출품 표면 · YOLO + EfficientNet 앙상블</text>
+      <text x="100" y="56" class="ko-r" font-size="9" fill="#D97706">KPI: 검출률 98% · 클레임 -40% · ROI 1.5 년</text>
+      <rect x="100" y="65" width="380" height="6" rx="3" fill="#FEF3C7"/>
+      <rect x="100" y="65" width="220" height="6" rx="3" fill="url(#rub-bar)"/>
+      <text x="100" y="84" class="ko-r" font-size="9" fill="#475569">난이도 ★★★ · 기간 6 개월 · TRL 7→9</text>
+    </g>
+  </g>
+
+  <!-- 종합 -->
+  <g transform="translate(40, 640)">
+    <rect width="520" height="50" rx="6" fill="#FB923C" filter="url(#rub-shadow)"/>
+    <text x="20" y="22" class="ko" font-size="13" fill="#FFF7ED">5 시나리오 풀라인 — 평균 ROI 1.6 년 · 패키지 4 (고무양산) 핵심</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#FFF7ED">화승알엔에이 reference + 부산경남 고무 양산업체 적용 가능</text>
+  </g>
+
+  <!-- 하단 -->
+  <g transform="translate(40, 700)">
+    <rect width="520" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#92400E">도입 우선순위 — 빠른 가시성 → 깊이 있는 최적화</text>
+    <text x="20" y="40" class="ko-r" font-size="10" fill="#475569">▸ Phase 1: RUB-04 (검사) + RUB-05 (사출 비전) — 6 개월 내 가시화</text>
+    <text x="20" y="56" class="ko-r" font-size="10" fill="#475569">▸ Phase 2: RUB-01 (압출) + RUB-02 (가류) — 라인 안정화</text>
+    <text x="20" y="72" class="ko-r" font-size="10" fill="#D97706">▸ Phase 3: RUB-03 (배합 R&D) — 신소재 개발 연계</text>
+  </g>
+</svg>

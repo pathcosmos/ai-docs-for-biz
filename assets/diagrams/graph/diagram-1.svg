@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="44 자산 분류 트리 — Cross-reference 그래프 — 정적 fallback">
+  <title>44 자산 분류 트리</title>
+  <desc>44 자산을 7 분류 (Track 본문·시나리오·6 패키지·11 운영가이드·5 모듈·기타·메타) 로 분류한 트리 구조 — D3 force-directed 그래프의 정적 fallback</desc>
+  <defs>
+    <linearGradient id="g_graph_d1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="g_graph_d1_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FAF5FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#FAF5FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_graph_d1)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">GRAPH · 44 ASSETS · CLASSIFICATION TREE</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">44 자산 분류 트리</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">Cross-reference 그래프 — 정적 fallback</text>
+  <!-- 카드 stack 10 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">44 자산 ROOT</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">워크스페이스 전체</text>
+  </g>
+  <text x="300" y="166" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 168)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">Track 본문 8 종</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">Track 1·2·3 + 핵심 5 블록</text>
+  </g>
+  <text x="300" y="224" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 226)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">시나리오 6 종</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">카탈로그 + 상세 5 (Top5·Phase2·RUB·UTL·SAF·특수강관)</text>
+  </g>
+  <text x="300" y="282" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 284)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">6 패키지 파일럿</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">대기업 철강·중견 냉연·특수강관·고무·정밀가공·유틸 ESG</text>
+  </g>
+  <text x="300" y="340" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 342)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">11 운영 가이드</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">조립·재무·압축·KPI·외부검증·RAG·도메인·sLM·컨설팅·TRL·위험</text>
+  </g>
+  <text x="300" y="398" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 400)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">5 Cross-cutting 모듈</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">CBAM·중대재해·연합학습·OEM·SaaS 보안</text>
+  </g>
+  <text x="300" y="456" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 458)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">기타 자산 5 종</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">시너지 ROI·RACI·지원사업·양식검증·방법론</text>
+  </g>
+  <text x="300" y="514" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 516)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">메타 3 종</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">작업로그·CLAUDE.md·검토 리포트</text>
+  </g>
+  <text x="300" y="572" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 574)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">9</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">Track 1 — 제조 AI</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">생산·품질·예지보전</text>
+  </g>
+  <text x="300" y="630" text-anchor="middle" font-size="10" fill="#A78BFA" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 632)">
+    <rect x="48" y="0" width="472" height="50" rx="8" fill="url(#g_graph_d1_card)" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="25" r="14" fill="url(#g_graph_d1)"/>
+    <text x="56" y="29" text-anchor="middle" fill="white" font-size="11" font-weight="700">10</text>
+    <text x="90" y="21" font-size="11" font-weight="700" fill="#3B0764">Track 2 — MLOps</text>
+    <text x="90" y="37" font-size="9" font-weight="500" fill="#6B21A8">모니터링·재학습·거버넌스</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 Cross-reference 그래프 — D3 force-directed 인터랙티브</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">44 자산 + 109 인용 출처 표기 (build_crossref.py)</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">graph.md 페이지 D3 인터랙티브 + 본 정적 fallback</text>
+</svg>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="시나리오 — 고무·폴리머 (도식 9) — 충족 · 미달 · 조도 모니터링 센서">
+  <title>시나리오 — 고무·폴리머 (도식 9)</title>
+  <desc>시나리오 — 고무·폴리머 의 9번 도식 — 6 단계</desc>
+  <defs>
+    <linearGradient id="g_auto_detail-rub_9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="g_auto_detail-rub_9_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#FFFBEB"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_auto_detail-rub_9)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">SCN · RUBBER · DIAGRAM 9</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">시나리오 — 고무·폴리머 (도식 9)</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">충족 · 미달 · 조도 모니터링 센서</text>
+  <!-- 카드 stack 6 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_detail-rub_9_card)" stroke="#FBBF24" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_detail-rub_9)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#78350F">충족</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#92400E"></text>
+  </g>
+  <text x="300" y="186" text-anchor="middle" font-size="10" fill="#FBBF24" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 188)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_detail-rub_9_card)" stroke="#FBBF24" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_detail-rub_9)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#78350F">미달</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#92400E"></text>
+  </g>
+  <text x="300" y="264" text-anchor="middle" font-size="10" fill="#FBBF24" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 266)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_detail-rub_9_card)" stroke="#FBBF24" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_detail-rub_9)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#78350F">조도 모니터링 센서</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#92400E"></text>
+  </g>
+  <text x="300" y="342" text-anchor="middle" font-size="10" fill="#FBBF24" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 344)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_detail-rub_9_card)" stroke="#FBBF24" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_detail-rub_9)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#78350F">신뢰도 임계?</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#92400E"></text>
+  </g>
+  <text x="300" y="420" text-anchor="middle" font-size="10" fill="#FBBF24" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 422)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_detail-rub_9_card)" stroke="#FBBF24" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_detail-rub_9)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#78350F">자동 판정</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#92400E"></text>
+  </g>
+  <text x="300" y="498" text-anchor="middle" font-size="10" fill="#FBBF24" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 500)">
+    <rect x="48" y="0" width="472" height="70" rx="8" fill="url(#g_auto_detail-rub_9_card)" stroke="#FBBF24" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="35" r="14" fill="url(#g_auto_detail-rub_9)"/>
+    <text x="56" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="31" font-size="11" font-weight="700" fill="#78350F">라벨 환류</text>
+    <text x="90" y="47" font-size="9" font-weight="500" fill="#92400E"></text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 고무 시나리오 paste 가능</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">노드 6 단계 — 직각 화살표 흐름</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">디자인 SVG (Phase E15 정책) · 600×800 portrait</text>
+</svg>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="AI 사업계획서 자산 허브 — 3 트랙 + 6 패키지 + 11 가이드 세로형 개요"
+     class="zoomable">
+  <title>AI 사업계획서 자산 허브 홈 (세로형)</title>
+  <desc>한국어 제조 AI 사업계획서 자산 허브의 전체 구조를 위에서 아래로 시각화한 히어로 일러스트. 상단 헤더 + 3 트랙 본문 카드 + 6 패키지 통합 파일럿 mini 카드 + 11 운영 가이드 인디케이터 + 하단 통계 (44 자산·274 인용·91 다이어그램).</desc>
+
+  <defs>
+    <linearGradient id="hh-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="hh-t1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="hh-t2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="hh-t3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="hh-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="hh-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 상단 헤더 (~100px) -->
+  <rect width="600" height="120" fill="url(#hh-header)"/>
+  <text x="300" y="42" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">KOREAN MANUFACTURING AI REFERENCE</text>
+  <text x="300" y="74" text-anchor="middle" class="ko" font-size="22" fill="white">AI 사업계획서 자산 허브</text>
+  <text x="300" y="100" text-anchor="middle" class="ko-r" font-size="12" fill="rgba(255,255,255,0.92)">철강·금속·고무·정밀가공 부산경남 제조업 모듈형 자산</text>
+
+  <!-- 중간 영역: 3 트랙 카드 (위→아래) -->
+  <g transform="translate(30, 145)" filter="url(#hh-shadow)">
+    <rect width="540" height="80" rx="8" fill="white"/>
+    <rect width="10" height="80" rx="3" fill="url(#hh-t1)"/>
+    <text x="28" y="28" class="ko" font-size="14" fill="#6366F1">Track 1 · 제조 AI 본문</text>
+    <text x="28" y="48" class="ko-r" font-size="10" fill="#475569">시계열·비전·이상탐지·예지보전·자동보정 — 5.2 AI 엔진 카드 6 종</text>
+    <text x="28" y="65" class="ko-r" font-size="9" fill="#64748B">데이터 → 피쳐 → 모델링 → 현장 적용 파이프라인</text>
+    <rect x="470" y="50" width="55" height="18" rx="4" fill="#EEF2FF"/>
+    <text x="497" y="63" text-anchor="middle" class="ko" font-size="9" fill="#6366F1">8 페이지</text>
+  </g>
+
+  <g transform="translate(30, 235)" filter="url(#hh-shadow)">
+    <rect width="540" height="80" rx="8" fill="white"/>
+    <rect width="10" height="80" rx="3" fill="url(#hh-t2)"/>
+    <text x="28" y="28" class="ko" font-size="14" fill="#8B5CF6">Track 2 · MLOps 지속 개선</text>
+    <text x="28" y="48" class="ko-r" font-size="10" fill="#475569">레지스트리·피쳐스토어·서빙·모니터링·재학습·거버넌스 7 모듈</text>
+    <text x="28" y="65" class="ko-r" font-size="9" fill="#64748B">CI/CD for ML · CT · CM 폐쇄 루프 (재학습 트리거)</text>
+    <rect x="470" y="50" width="55" height="18" rx="4" fill="#F5F3FF"/>
+    <text x="497" y="63" text-anchor="middle" class="ko" font-size="9" fill="#8B5CF6">2 페이지</text>
+  </g>
+
+  <g transform="translate(30, 325)" filter="url(#hh-shadow)">
+    <rect width="540" height="80" rx="8" fill="white"/>
+    <rect width="10" height="80" rx="3" fill="url(#hh-t3)"/>
+    <text x="28" y="28" class="ko" font-size="14" fill="#06B6D4">Track 3 · LLM·RAG 공정 적용</text>
+    <text x="28" y="48" class="ko-r" font-size="10" fill="#475569">수집·청킹·임베딩·검색·생성·감사 RAG 5 계층 + 한국 sLM</text>
+    <text x="28" y="65" class="ko-r" font-size="9" fill="#64748B">SOP QA · 장애 대응 · 비정형 지식 형식지화</text>
+    <rect x="470" y="50" width="55" height="18" rx="4" fill="#ECFEFF"/>
+    <text x="497" y="63" text-anchor="middle" class="ko" font-size="9" fill="#06B6D4">2 페이지</text>
+  </g>
+
+  <!-- 6 패키지 mini-cards row (3x2 그리드) -->
+  <g transform="translate(30, 425)">
+    <text x="0" y="-5" class="ko" font-size="12" fill="#0F172A">6 패키지 통합 파일럿</text>
+    <g transform="translate(0, 6)" filter="url(#hh-shadow)">
+      <rect x="0" y="0" width="173" height="44" rx="6" fill="white"/>
+      <rect x="0" y="0" width="6" height="44" rx="2" fill="#F59E0B"/>
+      <text x="14" y="18" class="ko" font-size="10" fill="#0F172A">P1 대기업철강</text>
+      <text x="14" y="34" class="ko-r" font-size="9" fill="#64748B">9 시나리오 · 773 줄</text>
+
+      <rect x="183" y="0" width="173" height="44" rx="6" fill="white"/>
+      <rect x="183" y="0" width="6" height="44" rx="2" fill="#F59E0B"/>
+      <text x="197" y="18" class="ko" font-size="10" fill="#0F172A">P2 중견냉연</text>
+      <text x="197" y="34" class="ko-r" font-size="9" fill="#64748B">6 시나리오 · 128 KB</text>
+
+      <rect x="366" y="0" width="174" height="44" rx="6" fill="white"/>
+      <rect x="366" y="0" width="6" height="44" rx="2" fill="#F59E0B"/>
+      <text x="380" y="18" class="ko" font-size="10" fill="#0F172A">P3 특수강관</text>
+      <text x="380" y="34" class="ko-r" font-size="9" fill="#64748B">4 시나리오 · 476 줄</text>
+    </g>
+    <g transform="translate(0, 56)" filter="url(#hh-shadow)">
+      <rect x="0" y="0" width="173" height="44" rx="6" fill="white"/>
+      <rect x="0" y="0" width="6" height="44" rx="2" fill="#F59E0B"/>
+      <text x="14" y="18" class="ko" font-size="10" fill="#0F172A">P4 고무양산</text>
+      <text x="14" y="34" class="ko-r" font-size="9" fill="#64748B">5 시나리오 · 178 KB</text>
+
+      <rect x="183" y="0" width="173" height="44" rx="6" fill="white"/>
+      <rect x="183" y="0" width="6" height="44" rx="2" fill="#F59E0B"/>
+      <text x="197" y="18" class="ko" font-size="10" fill="#0F172A">P5 정밀가공</text>
+      <text x="197" y="34" class="ko-r" font-size="9" fill="#64748B">6 시나리오 · 129 KB</text>
+
+      <rect x="366" y="0" width="174" height="44" rx="6" fill="white"/>
+      <rect x="366" y="0" width="6" height="44" rx="2" fill="#F59E0B"/>
+      <text x="380" y="18" class="ko" font-size="10" fill="#0F172A">P6 유틸·ESG</text>
+      <text x="380" y="34" class="ko-r" font-size="9" fill="#64748B">5 시나리오 · 857 줄</text>
+    </g>
+  </g>
+
+  <!-- 11 운영 가이드 인디케이터 -->
+  <g transform="translate(30, 555)">
+    <text x="0" y="-5" class="ko" font-size="12" fill="#0F172A">11 운영 가이드 (8 장 + 4 분기 + 강도 3 단)</text>
+    <rect x="0" y="0" width="540" height="56" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <g transform="translate(12, 18)" font-size="9.5" class="ko-r" fill="#475569">
+      <text x="0" y="0">KPI</text>
+      <text x="48" y="0">재무</text>
+      <text x="96" y="0">외부검증</text>
+      <text x="160" y="0">RAG</text>
+      <text x="200" y="0">도메인</text>
+      <text x="252" y="0">sLM</text>
+      <text x="296" y="0">압축</text>
+      <text x="340" y="0">조립</text>
+      <text x="384" y="0">컨설팅</text>
+      <text x="440" y="0">TRL</text>
+      <text x="476" y="0">위험</text>
+    </g>
+    <text x="12" y="46" class="ko-r" font-size="9" fill="#64748B">cross-reference 274 인용 · 자산 간 의존성 망</text>
+  </g>
+
+  <!-- 5 모듈 (cross-cutting) -->
+  <g transform="translate(30, 632)">
+    <text x="0" y="-5" class="ko" font-size="12" fill="#0F172A">5 cross-cutting 모듈</text>
+    <rect x="0" y="0" width="540" height="38" rx="6" fill="#EEF2FF"/>
+    <g transform="translate(12, 24)" font-size="10" class="ko" fill="#4F46E5">
+      <text x="0" y="0">CBAM</text>
+      <text x="80" y="0">중대재해</text>
+      <text x="180" y="0">연합학습</text>
+      <text x="290" y="0">OEM</text>
+      <text x="380" y="0">SaaS</text>
+    </g>
+  </g>
+
+  <!-- 하단 통계 박스 (~120px) -->
+  <g transform="translate(30, 692)" filter="url(#hh-shadow)">
+    <rect width="540" height="86" rx="8" fill="url(#hh-accent)"/>
+    <text x="270" y="22" text-anchor="middle" class="ko" font-size="11" fill="#0F172A">자산 누적 현황</text>
+    <g transform="translate(0, 38)" text-anchor="middle">
+      <text x="108" y="0" class="ko" font-size="22" fill="#0F172A">44</text>
+      <text x="108" y="18" class="ko-r" font-size="10" fill="#0F172A">자산</text>
+      <text x="270" y="0" class="ko" font-size="22" fill="#0F172A">274</text>
+      <text x="270" y="18" class="ko-r" font-size="10" fill="#0F172A">인용</text>
+      <text x="432" y="0" class="ko" font-size="22" fill="#0F172A">91</text>
+      <text x="432" y="18" class="ko-r" font-size="10" fill="#0F172A">다이어그램</text>
+    </g>
+    <text x="270" y="78" text-anchor="middle" class="ko-r" font-size="9" fill="#0F172A">17,816 줄 · 36 방법론 · 40 시나리오 · Paste-Ready</text>
+  </g>
+</svg>

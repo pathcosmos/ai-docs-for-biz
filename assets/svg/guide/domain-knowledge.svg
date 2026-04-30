@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="도메인 지식추출 가이드 — 인터뷰 5 단계 + 100 문항 5 군 세로형 인포그래픽"
+     class="zoomable">
+  <title>도메인 지식추출 가이드 (세로형) — 베테랑 인터뷰 5 단계 + 100 문항 5 군</title>
+  <desc>베테랑 암묵지 → 형식지 자산화 → 평가 골드셋 → 운영 회귀의 5 단계 매트릭스 (인터뷰·관찰·프로토타입·검증·전이) + 100 문항 5 군 (도메인·이상·작업조 비교·시나리오·신규) 막대 차트 + 가이드 군 통일 세로형 인포그래픽.</desc>
+
+  <defs>
+    <linearGradient id="dk-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="dk-step" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="dk-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="dk-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: 'Pretendard', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 (100px) -->
+  <rect width="600" height="100" fill="url(#dk-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="ko" font-size="22" fill="white">도메인 지식추출 가이드</text>
+  <text x="300" y="62" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">DOMAIN KNOWLEDGE — 5 STEPS + 100 Q</text>
+  <text x="300" y="84" text-anchor="middle" class="ko-r" font-size="11" fill="#FDE68A">베테랑 암묵지 → 형식지 자산화 5 단계</text>
+
+  <!-- 5 단계 카드 (130~410) — 세로 -->
+  <g transform="translate(40, 130)">
+    <!-- Step 1 -->
+    <g transform="translate(0, 0)" filter="url(#dk-shadow)">
+      <rect width="520" height="50" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="18" fill="url(#dk-step)"/>
+      <text x="30" y="30" text-anchor="middle" class="ko" font-size="13" fill="white" font-weight="900">1</text>
+      <text x="58" y="22" class="ko" font-size="12" fill="#1E293B">인터뷰 설계</text>
+      <text x="58" y="38" class="ko-r" font-size="9" fill="#64748B">100 문항 5 군 분류 + 베테랑 추천 + 일정 협의</text>
+      <text x="510" y="30" text-anchor="end" class="ko" font-size="10" fill="#6366F1">→ 인터뷰 §3</text>
+    </g>
+    <!-- Step 2 -->
+    <g transform="translate(0, 56)" filter="url(#dk-shadow)">
+      <rect width="520" height="50" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="18" fill="url(#dk-step)"/>
+      <text x="30" y="30" text-anchor="middle" class="ko" font-size="13" fill="white" font-weight="900">2</text>
+      <text x="58" y="22" class="ko" font-size="12" fill="#1E293B">현장 관찰·녹취</text>
+      <text x="58" y="38" class="ko-r" font-size="9" fill="#64748B">베테랑 작업 동행 + 음성 녹취 + 타임라인 기록</text>
+      <text x="510" y="30" text-anchor="end" class="ko" font-size="10" fill="#6366F1">→ 관찰 §4</text>
+    </g>
+    <!-- Step 3 -->
+    <g transform="translate(0, 112)" filter="url(#dk-shadow)">
+      <rect width="520" height="50" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="18" fill="url(#dk-step)"/>
+      <text x="30" y="30" text-anchor="middle" class="ko" font-size="13" fill="white" font-weight="900">3</text>
+      <text x="58" y="22" class="ko" font-size="12" fill="#1E293B">QA 프로토타입</text>
+      <text x="58" y="38" class="ko-r" font-size="9" fill="#64748B">QA 셋 200 쌍 추출 + RAG 프로토타입 응답 비교</text>
+      <text x="510" y="30" text-anchor="end" class="ko" font-size="10" fill="#6366F1">→ 프로토 §5</text>
+    </g>
+    <!-- Step 4 -->
+    <g transform="translate(0, 168)" filter="url(#dk-shadow)">
+      <rect width="520" height="50" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="18" fill="url(#dk-step)"/>
+      <text x="30" y="30" text-anchor="middle" class="ko" font-size="13" fill="white" font-weight="900">4</text>
+      <text x="58" y="22" class="ko" font-size="12" fill="#1E293B">베테랑 검증</text>
+      <text x="58" y="38" class="ko-r" font-size="9" fill="#64748B">골드셋 평가 + 베테랑 정확도 / 시간 비교 + 채택률</text>
+      <text x="510" y="30" text-anchor="end" class="ko" font-size="10" fill="#6366F1">→ 검증 §6</text>
+    </g>
+    <!-- Step 5 -->
+    <g transform="translate(0, 224)" filter="url(#dk-shadow)">
+      <rect width="520" height="50" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="18" fill="url(#dk-step)"/>
+      <text x="30" y="30" text-anchor="middle" class="ko" font-size="13" fill="white" font-weight="900">5</text>
+      <text x="58" y="22" class="ko" font-size="12" fill="#1E293B">운영 전이·회귀</text>
+      <text x="58" y="38" class="ko-r" font-size="9" fill="#64748B">사내 표준 적용 + 운영 회귀 + 신입 교육 활용</text>
+      <text x="510" y="30" text-anchor="end" class="ko" font-size="10" fill="#6366F1">→ 전이 §7</text>
+    </g>
+  </g>
+
+  <!-- 100 문항 5 군 막대 차트 (430~600) -->
+  <g transform="translate(40, 430)" filter="url(#dk-shadow)">
+    <rect width="520" height="170" rx="10" fill="white" stroke="#E2E8F0"/>
+    <rect width="520" height="26" rx="10" fill="#6366F1"/>
+    <rect y="20" width="520" height="6" fill="#6366F1"/>
+    <text x="14" y="18" class="ko" font-size="12" fill="white">100 문항 5 군 분류 — 베테랑 인터뷰</text>
+    <text x="506" y="18" text-anchor="end" class="en" font-size="9" fill="rgba(255,255,255,0.85)">5 GROUPS</text>
+
+    <!-- 막대 차트 -->
+    <g transform="translate(40, 50)">
+      <!-- 도메인 25 -->
+      <rect x="0" y="60" width="80" height="60" fill="url(#dk-bar)"/>
+      <text x="40" y="55" text-anchor="middle" class="ko" font-size="11" fill="#6366F1">25</text>
+      <text x="40" y="135" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">도메인</text>
+      <text x="40" y="148" text-anchor="middle" class="ko-r" font-size="8" fill="#64748B">공정·설비</text>
+      <!-- 이상 25 -->
+      <rect x="95" y="60" width="80" height="60" fill="url(#dk-bar)"/>
+      <text x="135" y="55" text-anchor="middle" class="ko" font-size="11" fill="#6366F1">25</text>
+      <text x="135" y="135" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">이상·고장</text>
+      <text x="135" y="148" text-anchor="middle" class="ko-r" font-size="8" fill="#64748B">조기경보</text>
+      <!-- 작업조 비교 20 -->
+      <rect x="190" y="72" width="80" height="48" fill="url(#dk-bar)"/>
+      <text x="230" y="67" text-anchor="middle" class="ko" font-size="11" fill="#6366F1">20</text>
+      <text x="230" y="135" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">작업조 비교</text>
+      <text x="230" y="148" text-anchor="middle" class="ko-r" font-size="8" fill="#64748B">교대 차이</text>
+      <!-- 시나리오 20 -->
+      <rect x="285" y="72" width="80" height="48" fill="url(#dk-bar)"/>
+      <text x="325" y="67" text-anchor="middle" class="ko" font-size="11" fill="#6366F1">20</text>
+      <text x="325" y="135" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">시나리오</text>
+      <text x="325" y="148" text-anchor="middle" class="ko-r" font-size="8" fill="#64748B">대응 매뉴얼</text>
+      <!-- 신규 10 -->
+      <rect x="380" y="96" width="80" height="24" fill="url(#dk-bar)" opacity="0.7"/>
+      <text x="420" y="91" text-anchor="middle" class="ko" font-size="11" fill="#6366F1">10</text>
+      <text x="420" y="135" text-anchor="middle" class="ko-r" font-size="9" fill="#475569">신규</text>
+      <text x="420" y="148" text-anchor="middle" class="ko-r" font-size="8" fill="#64748B">교육 활용</text>
+    </g>
+  </g>
+
+  <!-- 강조 박스 (610~670) -->
+  <g transform="translate(40, 610)" filter="url(#dk-shadow)">
+    <rect width="520" height="60" rx="10" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+    <text x="20" y="22" class="ko" font-size="12" fill="#4338CA">총 100 문항 — 5 군 균형 분포 + 베테랑 [수치]명 인터뷰 표준</text>
+    <text x="20" y="40" class="ko-r" font-size="9" fill="#475569">평균 인터뷰 [기간] · 골드셋 200 쌍 추출 · QA 회귀 분기별 갱신</text>
+    <text x="20" y="55" class="ko" font-size="9" fill="#6366F1">→ Track 3 RAG QA 셋 + 한국 sLM 평가 골드셋 활용</text>
+  </g>
+
+  <!-- cross-reference 박스 (685~785) -->
+  <g transform="translate(40, 685)">
+    <rect width="520" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#D97706">cross-reference · 5 단계 + 100 문항 + RAG 프로토타입</text>
+    <g font-size="9" class="ko-r" fill="#475569">
+      <text x="14" y="38">▸ 5 단계 — 인터뷰 → 관찰 → 프로토타입 → 검증 → 전이 (직렬 의무)</text>
+      <text x="14" y="54">▸ 5 군 — 도메인 25 / 이상 25 / 작업조 비교 20 / 시나리오 20 / 신규 10</text>
+      <text x="14" y="70">▸ §10 cross-reference — Track 3 RAG QA 셋 + sLM 평가 골드셋 활용</text>
+      <text x="14" y="88" fill="#6366F1" font-weight="700">▸ 8 장 구조 + 4 분기 의사결정 + 강도 3 단계 (방법론 4.26 자산 군 통일)</text>
+    </g>
+  </g>
+</svg>

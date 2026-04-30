@@ -1,0 +1,2440 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 가이드는 다년 R&D 사업의 **단계 가로지름 위험** (단계 종료 시점 결과 미달·차기 단계 진입 평가 부정합·외부 환경 변화에 따른 협약 변경 등) 을 단일 매트릭스로 결집한다. 단년 R&D·12 개월 표준 사업의 위험은 단일 시점 (사업 종료 평가) 에 대응하면 충분하나, 다년 R&D 의 위험은 단계 종료 평가 + 차기 단계 진입 게이트 + 외부…">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/guide/risk-matrix/">
+      
+      
+        <link rel="prev" href="../trl-progress/">
+      
+      
+        <link rel="next" href="../../other/synergy-roi/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>가이드 — 위험관리 매트릭스 (다년 R&D 단계 가로지름 위험) - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rd" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              가이드 — 위험관리 매트릭스 (다년 R&D 단계 가로지름 위험)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../track/track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../track/track1-index/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영·참고
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 운영 가이드 (작성 실무)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 본문 조립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance-budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    재무·예산 산정 (5 비목)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duration-compress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업기간 압축 (단계+연차)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpi-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPI 측정 (5 군 정량)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    외부검증 운영 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rag-infra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG 인프라 운영 (5 계층)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도메인 지식추출 (인터뷰 5 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../korean-slm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    한국 sLM 활용 (7 모델 매트릭스)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consulting-outsource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    컨설팅 위탁 (강도 3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trl-progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TRL 진척 관리 (3 단계)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위험 매트릭스
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위험 매트릭스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 가이드 개요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 위험 매트릭스 정의
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 위험 매트릭스 정의">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 6 컬럼 구조
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-vs-rd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 단년 vs 다년 R&amp;D 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 4 분기 의사결정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 4 분기 의사결정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 위험 식별 시점 분기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 위험 평가 분기 (가능성 × 영향도 매트릭스)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 대응 전략 분기 (회피·완화·전이·수용)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 위험 모니터링 + 단계 평가 시점 갱신 분기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 강도 3 단계 (낮음·중간·높음)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 위험 카테고리 7 군
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-1-r-0107-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 사례 — 동국산업 패키지 1 의 R-01~07 7 위험
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cross-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. cross-reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 적용 가능 양식
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 참고 자료
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 참고 자료
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/synergy-roi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시너지 ROI 모델
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/raci-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    책임 분담 매트릭스 (RACI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/support-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지원사업 공고 스냅샷
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/form-validation-dx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    양식 검증 — DX 촉진 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    방법론 총론 (47 방법론)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 인터랙티브 도구
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔗 인터랙티브 도구
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-ref 그래프 (44 자산)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    태그 필터
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 가이드 개요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 위험 매트릭스 정의
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 위험 매트릭스 정의">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 6 컬럼 구조
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-vs-rd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 단년 vs 다년 R&amp;D 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 4 분기 의사결정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 4 분기 의사결정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 위험 식별 시점 분기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 위험 평가 분기 (가능성 × 영향도 매트릭스)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 대응 전략 분기 (회피·완화·전이·수용)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 위험 모니터링 + 단계 평가 시점 갱신 분기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 강도 3 단계 (낮음·중간·높음)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 위험 카테고리 7 군
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-1-r-0107-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 사례 — 동국산업 패키지 1 의 R-01~07 7 위험
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cross-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. cross-reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 적용 가능 양식
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영·참고
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../assembly/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📋 운영 가이드 (작성 실무)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">guide</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="rd">가이드 — 위험관리 매트릭스 (다년 R&amp;D 단계 가로지름 위험)<a class="headerlink" href="#rd" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 13 분 읽기</span></p>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><span class="meta-marker">Phase E7</span> 자체평가 갭 #16 해소. 다년 R&amp;D 양식 (전사적 DX 촉진 R&amp;D·글로벌 협력 R&amp;D·산학협력 R&amp;D 등) 의 <strong>단계 가로지름 위험</strong> (단계 결과 미달·단계 평가 부정합·후속 단계 협약 변경 등) 을 표준화한 자산. 단년 R&amp;D·12 개월 표준 사업의 단일 시점 위험과 분리되며, 다년 R&amp;D 의 구조적 특성 (단계 종료 평가 + 차기 단계 진입 게이트) 에 정합한다. 운영 가이드 군의 <strong>11 번째</strong> 멤버 (<code>other/synergy-roi.md</code> · <code>guide/duration-compress.md</code> · <code>재무_예산_산정_가이드.md</code> · <code>guide/korean-slm.md</code> · <code>guide/kpi-measurement.md</code> · <code>guide/external-validation.md</code> · <code>guide/rag-infra.md</code> · <code>guide/domain-knowledge.md</code> · <code>guide/assembly.md</code> · <code>guide/consulting-outsource.md</code> 에 이은 자산). 4.26 자산 군 포맷 통일 — 8 장 구조 (위험 매트릭스 정의 → 4 분기 의사결정 → 강도 3 단계 → 위험 카테고리 7 군 → 사례 → cross-reference → 적용 양식 → 한계).</p>
+</details>
+<blockquote>
+<p>플레이스홀더 범례 — <code>[고객사]</code> 고객사명, <code>[수치]</code> 수치, <code>[%]</code> 비율, <code>[기간]</code> 기간, <code>[단계]</code> 단계 식별자, <code>[위탁기관]</code> 위탁·외부 기관명, <code>[법령-2026]</code> 시점 변동 법령·고시·가이드라인 태그. <strong>(확인 필요)</strong> 항목은 §7 cross-reference 의 결합 가이드를 참조한다 — 위험 발생 가능성·영향도 정량 기준은 도메인·고객사 별 변동 영역.</p>
+<p>본 가이드의 직접 근거 — <code>양식검증_DX촉진_R&amp;D.md</code> §7 갭 #16 (다년 R&amp;D 위험관리 매트릭스 자산 부재); <code>pkg/pkg1-steel-enterprise.md</code> §5.5 (R-01~07 7 위험의 1 차 시연); <code>module/oem-supply.md</code> §위험 매트릭스 (단년 위험 매트릭스의 변형 적용 근거); <code>guide/external-validation.md</code> §1 (외부 검증 7 주체의 위험 카테고리 ⑥ 결합); <code>guide/kpi-measurement.md</code> §1.3 (위험 발생 가능성 정량화의 KPI 결합).</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 가이드 개요<a class="headerlink" href="#1" title="Permanent link">¤</a></h2>
+<p>본 가이드는 다년 R&amp;D 사업의 <strong>단계 가로지름 위험</strong> (단계 종료 시점 결과 미달·차기 단계 진입 평가 부정합·외부 환경 변화에 따른 협약 변경 등) 을 단일 매트릭스로 결집한다. 단년 R&amp;D·12 개월 표준 사업의 위험은 단일 시점 (사업 종료 평가) 에 대응하면 충분하나, 다년 R&amp;D 의 위험은 단계 종료 평가 + 차기 단계 진입 게이트 + 외부 환경 변화의 3 시점 가로지름이 발생하므로, 단년 위험 매트릭스 (<code>module/oem-supply.md</code> §위험) 의 단순 차용으로는 자산 부재가 발생한다 — 이것이 갭 #16 의 정의이다.</p>
+<p>본 가이드의 사용자는 다년 R&amp;D 사업계획서의 §5.5 (위험관리 매트릭스) · §6.2 (단계별 진척 관리) · §8 (부록 위험 대응) 본문을 작성하는 PM·기획자이며, 본 가이드의 §2 위험 매트릭스 정의 + §3 4 분기 의사결정 + §4 강도 3 단계 + §5 위험 카테고리 7 군 + §6 사례를 결합 인용하여 사업계획서 본문을 자급한다.</p>
+<hr />
+<h2 id="2">2. 위험 매트릭스 정의<a class="headerlink" href="#2" title="Permanent link">¤</a></h2>
+<p>본 가이드의 표준 위험 매트릭스는 <strong>6 컬럼</strong> 으로 구성된다 — (i) 위험 ID, (ii) 단계, (iii) 위험 유형, (iv) 발생 가능성, (v) 영향도, (vi) 대응 방안. 본 6 컬럼은 패키지 1 §5.5 의 1 차 시연 양식을 표준화한 것이며, 다년 R&amp;D 의 단계 가로지름 특성을 컬럼 (ii) (단계) 에 명시함으로써 단년 위험 매트릭스와 분리된다.</p>
+<h3 id="21-6">2.1 6 컬럼 구조<a class="headerlink" href="#21-6" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>컬럼</th>
+<th>정의</th>
+<th>단년 R&amp;D 와의 차이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(i) 위험 ID</strong></td>
+<td>R-01·R-02… 형식 일련 번호. 사업계획서 §5.5 본문에서 인덱스로 사용</td>
+<td>(동일)</td>
+</tr>
+<tr>
+<td><strong>(ii) 단계</strong></td>
+<td>1 단계·2 단계 1 년차·2 단계 2 년차·전 단계 등. 다년 R&amp;D 의 단계 식별자</td>
+<td><strong>다년 R&amp;D 신규 컬럼</strong> — 단년 R&amp;D 는 본 컬럼 부재</td>
+</tr>
+<tr>
+<td><strong>(iii) 위험 유형</strong></td>
+<td>§5 의 7 카테고리 중 1 개 + 자유 서술. 위험의 본질 명시</td>
+<td>(동일하나 §5 카테고리 ① ②  는 다년 R&amp;D 신규)</td>
+</tr>
+<tr>
+<td><strong>(iv) 발생 가능성</strong></td>
+<td>低·中·高 의 3 단계. 정량 기준은 §7 cross-reference 의 KPI 가이드 결합</td>
+<td>(동일)</td>
+</tr>
+<tr>
+<td><strong>(v) 영향도</strong></td>
+<td>低·中·高 의 3 단계. 단계 가로지름 위험은 <strong>차기 단계 진입 차단</strong> 시 高</td>
+<td><strong>다년 R&amp;D 신규 정의</strong> — 단계 진입 차단 = 高 강제</td>
+</tr>
+<tr>
+<td><strong>(vi) 대응 방안</strong></td>
+<td>회피·완화·전이·수용 4 전략 중 1 개 + 구체 절차. §3.3 분기 직접 결합</td>
+<td>(동일)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-vs-rd">2.2 단년 vs 다년 R&amp;D 비교<a class="headerlink" href="#22-vs-rd" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>단년 R&amp;D</strong> — 12 개월 단일 시점 평가. 위험 매트릭스의 컬럼 (ii) (단계) 가 부재하거나 "전 기간" 단일값. 위험 ID 는 통상 5~7 개. 대응 방안은 사업 종료 시점 1 회 평가에 정합.</li>
+<li><strong>다년 R&amp;D (본 가이드 적용)</strong> — 24~36 개월 다 단계 평가 (1 단계 컨설팅·2 단계 본 사업 1·2 년차 등). 컬럼 (ii) 의 단계 식별자 필수. 위험 ID 는 7~10+ 개 (단계 가로지름 위험이 추가). 대응 방안은 단계 종료 평가 + 차기 단계 진입 게이트의 2 시점에 분리 정합.</li>
+</ul>
+<blockquote>
+<p>본 가이드의 매트릭스는 <strong>§5 위험 카테고리 7 군</strong> 의 ① ~ ⑦ 을 컬럼 (iii) 위험 유형의 1 차 분류로 사용하며, 다년 R&amp;D 의 단계 가로지름 특성은 ① 컨설팅 결과 정합성 + ⑥ 외부 환경 변화의 2 카테고리에 집중된다.</p>
+</blockquote>
+<hr />
+<h2 id="3-4">3. 4 분기 의사결정<a class="headerlink" href="#3-4" title="Permanent link">¤</a></h2>
+<p>본 가이드의 핵심 의사결정 도구는 위험관리 운영을 4 차원으로 직교 분기시키는 결정 매트릭스이다. 4 분기는 mutually exclusive 하게 설계되어 사업계획서 §5.5 본문에서 1 분기씩 단독 인용 가능하며, 동시에 4 분기를 모두 거치면 단일 위험에 대한 대응 패턴이 결정된다.</p>
+<h3 id="31">3.1 위험 식별 시점 분기<a class="headerlink" href="#31" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>사업 착수 시점 (T0)</strong> — 사업계획서 작성 시 식별. §5 의 7 카테고리 중 ① ~ ⑦ 의 일반 위험 + 도메인 특화 위험을 망라. 본 가이드의 1 차 적용 시점.</li>
+<li><strong>단계 종료 시점 (T1·T2…)</strong> — 1 단계·2 단계 1 년차 종료 시점에 차기 단계 위험을 재식별. 단계 결과·외부 환경 변화·신규 위탁 분산을 반영. <strong>다년 R&amp;D 신규 시점</strong> — 단년 R&amp;D 는 본 시점 부재.</li>
+<li><strong>상시 (이벤트 발생 시)</strong> — 외부 환경 변화 (CBAM 일정·법령 개정·OEM 가이드라인) · 핵심 인력 이탈 · 위탁기관 결과 미달 발생 시 즉시 식별.</li>
+</ul>
+<h3 id="32">3.2 위험 평가 분기 (가능성 × 영향도 매트릭스)<a class="headerlink" href="#32" title="Permanent link">¤</a></h3>
+<p>발생 가능성 (低·中·高) × 영향도 (低·中·高) 의 3×3 매트릭스 = 9 칸. 본 가이드는 9 칸을 <strong>4 군</strong> 으로 묶어 대응 강도 결정의 입력으로 사용한다.</p>
+<ul>
+<li><strong>즉시 회피·완화 (가능성 高 × 영향도 高·中)</strong> — 비상 계획 수립 + 분기 단위 모니터링 + 사업 협약 변경 옵션 사전 마련.</li>
+<li><strong>사전 완화 (가능성 中 × 영향도 高·中, 가능성 高 × 영향도 低)</strong> — 단계 종료 전 사전 검증 + 백업 옵션 사전 확보. 패키지 1 §5.5 의 R-01·R-02·R-03 이 본 영역.</li>
+<li><strong>모니터링 (가능성 中 × 영향도 低, 가능성 低 × 영향도 中·高)</strong> — 단계 종료 시점 점검 + 발생 시 즉시 대응 절차. 패키지 1 §5.5 의 R-07 (핵심 인력 이탈) 이 본 영역.</li>
+<li><strong>수용 (가능성 低 × 영향도 低)</strong> — 본 매트릭스에 등록하되 별도 대응 자원 미투입.</li>
+</ul>
+<h3 id="33">3.3 대응 전략 분기 (회피·완화·전이·수용)<a class="headerlink" href="#33" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>회피 (Avoid)</strong> — 위험 원인 자체 제거. 위탁기관 변경·기술 스택 교체 등. 영향도 高 + 사전 식별 가능 위험에 적용.</li>
+<li><strong>완화 (Mitigate)</strong> — 발생 가능성·영향도 축소. 단계 종료 전 사전 검증 + HITL + 이중 안전망. <strong>다년 R&amp;D 의 1 차 권장 전략</strong> (단계 가로지름 위험의 70% 이상이 본 전략 적용).</li>
+<li><strong>전이 (Transfer)</strong> — 위험을 외부에 이전. 위탁 계약의 차기년도 재계약 옵션 (R-03) · 보험 · 협약 변경 조항 (R-06).</li>
+<li><strong>수용 (Accept)</strong> — 위험 발생 시 사후 대응. 가능성 低 × 영향도 低 + 대응 비용이 위험 영향을 초과하는 경우.</li>
+</ul>
+<h3 id="34">3.4 위험 모니터링 + 단계 평가 시점 갱신 분기<a class="headerlink" href="#34" title="Permanent link">¤</a></h3>
+<ul>
+<li><strong>분기 1 회</strong> — §5 의 7 카테고리 위험을 분기 운영위원회 (Track 2 §6.5 정합) 안건으로 점검. <code>guide/kpi-measurement.md</code> §1.3·§1.4 의 거버넌스 KPI 가 직접 입력.</li>
+<li><strong>단계 종료 시점</strong> — 단계 결과 평가 + 차기 단계 위험 매트릭스 갱신 + R-01~ 의 위험 ID 추가·종료 처리. <strong>다년 R&amp;D 신규 시점</strong> — 본 가이드의 핵심 차별 영역.</li>
+<li><strong>이벤트 발생 시</strong> — 외부 환경 변화·핵심 인력 이탈·위탁기관 결과 미달 발생 시 즉시 매트릭스 갱신 + 비상 계획 발동.</li>
+</ul>
+<blockquote>
+<p>4 분기 직교성 자기평가 — 3.1 (식별 시점) 은 시간 차원, 3.2 (평가) 는 강도 차원, 3.3 (전략) 은 대응 차원, 3.4 (모니터링 갱신) 는 운영 차원으로 차원이 분리되어 mutually exclusive. 4 분기를 직렬로 거치면 단일 위험에 대한 대응 패턴 (T0 식별 → 즉시 회피·완화 → 완화 전략 → 분기 모니터링) 이 결정.</p>
+</blockquote>
+<hr />
+<h2 id="4-3">4. 강도 3 단계 (낮음·중간·높음)<a class="headerlink" href="#4-3" title="Permanent link">¤</a></h2>
+<p>본 가이드의 위험관리 운영 강도는 사업 규모·다년 차수·외부 검증 주체 수에 따라 3 단계로 차등 적용된다.</p>
+<table>
+<thead>
+<tr>
+<th>강도</th>
+<th>위험 ID 수</th>
+<th>운영 양식</th>
+<th>적합 사업</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>낮음</strong></td>
+<td>5 위험 식별</td>
+<td>6 컬럼 표 1 개 + 사업계획서 §5.5 1 단락</td>
+<td>24 개월 산학협력 R&amp;D · 다년 시범사업</td>
+</tr>
+<tr>
+<td><strong>중간</strong></td>
+<td>7~10 위험 식별 + 대응 방안</td>
+<td>6 컬럼 표 + §3.3 대응 전략 분기 인용 + 분기 모니터링 절차</td>
+<td>36 개월 다년 R&amp;D (글로벌 협력 R&amp;D 등)</td>
+</tr>
+<tr>
+<td><strong>높음</strong></td>
+<td>10+ 위험 + 정량 영향도 + 비상계획 KPI</td>
+<td>6 컬럼 표 + §3 4 분기 풀 인용 + 비상 계획서 + KPI 임계 <span class="placeholder-tag" data-placeholder="임계">[임계]</span> 명시 + 운영위원회 분기 안건</td>
+<td>36+ 개월 전사적 DX 촉진 R&amp;D · 대중소상생 다년 트랙</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>낮음</strong> — 패키지 1 §5.5 의 R-01~05 5 위험 수준. 단계 가로지름 위험의 핵심 5 종 (① 컨설팅 정합성·② 통신 호환성·③ 위탁 결과 미달·④ AI 정확도 KPI 미달·⑤ 인터페이스 누락) 을 식별. 낮음 강도는 사업계획서 §5.5 분량 1~2 페이지.</li>
+<li><strong>중간</strong> — 패키지 1 §5.5 의 R-01~07 7 위험 수준 + 외부 환경·핵심 인력 영역 보강. §5 의 7 카테고리 모두 1 위험 이상 식별 권고. 분기 모니터링 절차 명시. 사업계획서 §5.5 분량 2~4 페이지.</li>
+<li><strong>높음</strong> — §5 의 7 카테고리 + 도메인 특화 위험 (CBAM·CSAP·OEM 등) 합산 10+ 위험. 비상 계획서 (회피·완화·전이·수용 4 전략 별 절차) + KPI 임계 정량 명시 + 운영위원회 분기 안건 + 외부 검증 4 자 자문 (<code>guide/external-validation.md</code> §3 4 자 자문 결합). 사업계획서 §5.5 분량 4~8 페이지.</li>
+</ul>
+<hr />
+<h2 id="5-7">5. 위험 카테고리 7 군<a class="headerlink" href="#5-7" title="Permanent link">¤</a></h2>
+<p>본 가이드의 표준 위험 카테고리는 <strong>7 군</strong> 이며, 패키지 1 §5.5 의 R-01~07 7 위험을 1 차 시연 양식으로 일반화한 것이다. 7 군은 mutually exclusive 하게 설계되어 컬럼 (iii) 위험 유형의 1 차 분류로 사용된다.</p>
+<table>
+<thead>
+<tr>
+<th>카테고리</th>
+<th>정의</th>
+<th>1 차 시연 (패키지 1)</th>
+<th>결합 가이드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① 컨설팅 결과 정합성</strong></td>
+<td>1 단계 컨설팅 결과의 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 현장 정합성 미흡</td>
+<td>R-01</td>
+<td><code>guide/consulting-outsource.md</code></td>
+</tr>
+<tr>
+<td><strong>② 통신 호환성 (PLC·HMI 이기종)</strong></td>
+<td>PLC 메이커 (Siemens·BECKHOFF 등) · HMI · MES 의 통신 호환성 한계</td>
+<td>R-02</td>
+<td><code>track/track1-engine-cards.md</code> §5.2-d</td>
+</tr>
+<tr>
+<td><strong>③ 위탁기관 결과 미달</strong></td>
+<td>위탁기관 (소둔 알고리즘 · 비전 검사 등) 결과 미달</td>
+<td>R-03</td>
+<td><code>guide/consulting-outsource.md</code></td>
+</tr>
+<tr>
+<td><strong>④ AI 모델 정확도 KPI 미달</strong></td>
+<td>AI 모델의 정확도·재현율·F1·환각률 KPI 목표 미달</td>
+<td>R-04</td>
+<td><code>guide/kpi-measurement.md</code> §1.3</td>
+</tr>
+<tr>
+<td><strong>⑤ 다 위탁 분산 인터페이스 누락</strong></td>
+<td>6 종 위탁 분산의 인터페이스 누락·중복·정합성 결손</td>
+<td>R-05</td>
+<td><code>other/raci-matrix.md</code></td>
+</tr>
+<tr>
+<td><strong>⑥ 외부 환경 변화</strong></td>
+<td>CBAM 시행 일정·법령 개정·OEM 가이드라인 출시 등 외부 변화</td>
+<td>R-06</td>
+<td><code>guide/external-validation.md</code> §1·§7</td>
+</tr>
+<tr>
+<td><strong>⑦ 핵심 인력 이탈</strong></td>
+<td>책임자·신규 청년 채용·도메인 베테랑의 이탈</td>
+<td>R-07</td>
+<td><code>guide/domain-knowledge.md</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>7 군 MECE 자기평가 — ① 은 컨설팅 차원, ② 는 인프라 차원, ③ 은 위탁 차원, ④ 는 모델 차원, ⑤ 는 인터페이스 차원, ⑥ 은 외부 환경 차원, ⑦ 은 인력 차원으로 차원이 분리. 채움도 — 7 군 모두 패키지 1 §5.5 의 1 위험 이상 시연을 보유하며, 결합 가이드의 명시로 단일 위험의 대응 절차가 결합 가이드에 자급된다.</p>
+</blockquote>
+<hr />
+<h2 id="6-1-r-0107-7">6. 사례 — 동국산업 패키지 1 의 R-01~07 7 위험<a class="headerlink" href="#6-1-r-0107-7" title="Permanent link">¤</a></h2>
+<p>본 가이드의 1 차 시연은 <code>pkg/pkg1-steel-enterprise.md</code> §5.5 의 R-01~07 7 위험이다. 본 사례는 다년 R&amp;D (전사적 DX 촉진 R&amp;D · 2 단계 4 년차) 의 강도 <strong>중간</strong> 운영 양식을 시연한다.</p>
+<table>
+<thead>
+<tr>
+<th>위험 ID</th>
+<th>단계</th>
+<th>위험 유형</th>
+<th>발생 가능성</th>
+<th>영향도</th>
+<th>대응 방안</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01</td>
+<td>1 단계</td>
+<td>컨설팅 결과의 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 현장 정합성 미흡 (카테고리 ①)</td>
+<td>中</td>
+<td>高</td>
+<td><strong>완화</strong> — 1 단계 종료 전 <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 자체 검증 + 컨설팅사 추가 작업 청구 조항</td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>2 단계 1 년차</td>
+<td>PLC 메이커 통신 호환성 한계 (카테고리 ②)</td>
+<td>中</td>
+<td>高</td>
+<td><strong>완화</strong> — OPC-UA 산업표준 + IoT 함체 자체 제작 백업</td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>2 단계 1 년차</td>
+<td>위탁기관 (소둔 알고리즘) 결과 미달 (카테고리 ③)</td>
+<td>中</td>
+<td>中</td>
+<td><strong>전이</strong> — 단계 종료 전 1 차 검수 + 미달 시 차기년도 재계약 옵션</td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>2 단계 2 년차</td>
+<td>AI 모델 정확도 KPI 목표 미달 (카테고리 ④)</td>
+<td>中</td>
+<td>中</td>
+<td><strong>완화</strong> — 5.2-e 자동 보정 폐쇄 루프 + 데이터 추가 수집 + 위탁기관 협업</td>
+</tr>
+<tr>
+<td>R-05</td>
+<td>2 단계 2 년차</td>
+<td>6 종 위탁 분산의 인터페이스 누락 (카테고리 ⑤)</td>
+<td>高</td>
+<td>中</td>
+<td><strong>완화</strong> — 위탁기관 통합 회의 (분기 1 회) + <span class="placeholder-tag" data-placeholder="고객사">[고객사]</span> 통합 PM 1 명 전담</td>
+</tr>
+<tr>
+<td>R-06</td>
+<td>2 단계 2 년차</td>
+<td>EU CBAM 본격 시행 일정 변경 (카테고리 ⑥)</td>
+<td>中</td>
+<td>中</td>
+<td><strong>전이</strong> — SAF-02 시나리오의 인증 데이터 자동화 본질 (시기 무관) + 시점 변경 시 협약 변경</td>
+</tr>
+<tr>
+<td>R-07</td>
+<td>전 단계</td>
+<td>핵심 인력 (책임자·신규 청년 채용) 이탈 (카테고리 ⑦)</td>
+<td>低</td>
+<td>中</td>
+<td><strong>완화</strong> — 인건비 책정 적정성 + 신규 청년 채용 (의무·추가) 정책 활용</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>본 사례는 §5 의 7 카테고리 모두 1 위험 시연 + §3.3 의 4 대응 전략 중 3 (회피 부재·완화·전이·수용 부재) 을 적용한 강도 중간 운영의 표준 양식이다. R-01·R-02 는 §3.2 의 사전 완화 군 (中 × 高) · R-03·R-04·R-06 은 사전 완화 군 (中 × 中) · R-05 는 즉시 회피·완화 군 (高 × 中) · R-07 은 모니터링 군 (低 × 中) 에 위치.</p>
+<p>[출처: <code>pkg/pkg1-steel-enterprise.md</code> §5.5 (다년 R&amp;D 위험관리 매트릭스 1 차 시연)]</p>
+</blockquote>
+<hr />
+<h2 id="7-cross-reference">7. cross-reference<a class="headerlink" href="#7-cross-reference" title="Permanent link">¤</a></h2>
+<p>본 가이드는 다음 자산과 직접 결합된다.</p>
+<table>
+<thead>
+<tr>
+<th>결합 자산</th>
+<th>결합 지점</th>
+<th>결합 효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guide/kpi-measurement.md</code> §1.3·§1.4</td>
+<td>§2 컬럼 (iv) 발생 가능성 정량화 + §3.4 분기 모니터링</td>
+<td>위험 발생 가능성의 KPI 정량 기준 + 거버넌스 KPI 직접 입력</td>
+</tr>
+<tr>
+<td><code>재무_예산_산정_가이드.md</code> §3</td>
+<td>§3.3 대응 전략의 회피·완화 비용 산정</td>
+<td>대응 자원 투입 비용의 단위 비용 직접 결합</td>
+</tr>
+<tr>
+<td><code>guide/external-validation.md</code> §1·§7</td>
+<td>§5 카테고리 ⑥ 외부 환경 변화 + 강도 높음의 4 자 자문</td>
+<td>CBAM·KOSHA·CSAP·OEM 의 외부 환경 변화 위험 결합</td>
+</tr>
+<tr>
+<td><code>other/raci-matrix.md</code></td>
+<td>§5 카테고리 ⑤ 다 위탁 분산 인터페이스 누락</td>
+<td>본부·운영자·EHS·SI 4 자 권한 분배의 직접 결합</td>
+</tr>
+<tr>
+<td><code>양식검증_DX촉진_R&amp;D.md</code> §7 갭 #16</td>
+<td>본 가이드의 정의 근거</td>
+<td>갭 #16 자산 부재의 직접 해소</td>
+</tr>
+<tr>
+<td><code>pkg/pkg1-steel-enterprise.md</code> §5.5</td>
+<td>본 가이드의 1 차 시연</td>
+<td>R-01~07 7 위험의 강도 중간 표준 양식</td>
+</tr>
+<tr>
+<td><code>module/oem-supply.md</code> §위험 매트릭스</td>
+<td>단년 위험 매트릭스의 변형 적용 근거</td>
+<td>6 컬럼 구조의 단년 → 다년 확장 근거</td>
+</tr>
+<tr>
+<td><code>guide/consulting-outsource.md</code></td>
+<td>§5 카테고리 ① ③ (컨설팅·위탁 결과)</td>
+<td>컨설팅·위탁의 운영 절차 결합</td>
+</tr>
+<tr>
+<td><code>guide/domain-knowledge.md</code></td>
+<td>§5 카테고리 ⑦ 핵심 인력 이탈</td>
+<td>베테랑 도메인 지식 추출의 인력 이탈 1 차 방어선</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>자산 결합도 자기평가 — 본 가이드의 8 장이 9 개 자산과 모두 명시적 결합 지점을 보유. 특히 KPI 가이드 (§1.3 정량화) · 외부검증 가이드 (§1 카테고리 ⑥) · 책임_분담 매트릭스 (§5 카테고리 ⑤) 의 3 자산은 결합 인용 필수 (단독 인용 불가) 영역.</p>
+</blockquote>
+<hr />
+<h2 id="8">8. 적용 가능 양식<a class="headerlink" href="#8" title="Permanent link">¤</a></h2>
+<p>본 가이드는 <strong>다년 R&amp;D 양식</strong> 에 적용 가능하다. 단년 R&amp;D · 12 개월 표준 사업 · 6·9 개월 압축 사업은 단년 위험 매트릭스 (<code>module/oem-supply.md</code> §위험) 가 적합하며 본 가이드의 §2 컬럼 (ii) 단계는 부재한다.</p>
+<ul>
+<li><strong>전사적 DX 촉진 R&amp;D</strong> (24~36 개월 2 단계) — 강도 중간 또는 높음. §6 패키지 1 사례가 직접 적용. 1 단계 컨설팅 + 2 단계 본 사업의 단계 가로지름 위험 (R-01·R-03) 이 핵심.</li>
+<li><strong>글로벌 협력 R&amp;D</strong> (24~36 개월 다 단계 + 해외 협력기관) — 강도 중간. 카테고리 ③ 위탁기관 결과 미달의 해외 협력기관 변형 위험이 추가. 환율·해외 정책·협약 변경의 카테고리 ⑥ 외부 환경 변화 위험이 비중 高.</li>
+<li><strong>산학협력 R&amp;D</strong> (24 개월 다 단계 + 대학·연구기관 협력) — 강도 낮음 또는 중간. 카테고리 ⑦ 핵심 인력 이탈의 학생 연구원·교수 이동 변형 위험이 추가. 산학협력 특유의 IP 분배·기술이전 위험은 별도 항목으로 추가 (본 가이드 §5 의 7 카테고리에 포함되지 않으므로 본 가이드 단독 인용 시 결손).</li>
+<li><strong>대중소상생 다년 트랙</strong> (24~36 개월 + 대기업 멘토 + 중소기업 수혜) — 강도 중간 또는 높음. 카테고리 ⑤ 다 위탁 분산 인터페이스 누락의 대·중소 인터페이스 변형 위험이 비중 高.</li>
+</ul>
+<blockquote>
+<p>본 가이드는 <strong>프레임</strong> 이며, 구체 위험 발생 가능성·영향도 정량 기준은 도메인·고객사·시점별 변동. (확인 필요) 표기를 무시하고 인용 시 위험 평가의 정합성 손실. 본 가이드의 §6 사례는 1 차 시연이며, 다년 R&amp;D 사례 누적에 따라 §5 카테고리 7 군의 추가·세분화 또는 강도 3 단계의 임계 갱신이 후속 사이클에 발생할 수 있다. 본 가이드는 운영 가이드 군의 11 번째 멤버로서 4.26 자산 군 포맷 통일 (8 장 구조 + 4 분기 + 강도 3 단계) 을 준용하며, 후속 가이드 작성 시 본 포맷의 직접 차용을 권장한다.</p>
+</blockquote>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>가이드_위험관리_매트릭스.md</code></li>
+<li><strong>자산 군</strong>: 📋 운영 가이드</li>
+<li><strong>slug 경로</strong>: <code>guide/risk-matrix.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../trl-progress/" class="md-footer__link md-footer__link--prev" aria-label="이전: TRL 진척 관리 (3 단계)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                TRL 진척 관리 (3 단계)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../other/synergy-roi/" class="md-footer__link md-footer__link--next" aria-label="다음: 시너지 ROI 모델">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                시너지 ROI 모델
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2636 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="본 문서는 `track1_공통본문_목차.md` 의 5.2 절 "AI 엔진 개발 단계" 를 **시나리오별 교체 블록** 으로 분산한 카드 모음이다. 단일 서술 대신 엔진 패턴 6종을 제공하여, 대상 시나리오(카탈로그 `시나리오_카탈로그.md` 의 `SCN-XXX` 카드)에 맞는 카드를 선택·조합해 본문 5.2 절을 채울 수 있도록 한다.">
+      
+      
+        <meta name="author" content="ai-docs-for-biz workspace">
+      
+      
+        <link rel="canonical" href="https://pathcosmos.github.io/ai-docs-for-biz/track/track1-engine-cards/">
+      
+      
+        <link rel="prev" href="../track1-top5/">
+      
+      
+        <link rel="next" href="../track2-index/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Track 1 — 5.2 AI 엔진 변형 카드 - AI 사업계획서 자산 허브</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#track-1-52-ai" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-header__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI 사업계획서 자산 허브
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Track 1 — 5.2 AI 엔진 변형 카드
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="다크 모드 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="라이트 모드 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🚀 시작
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../track1-index/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📦 콘텐츠
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/assembly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 운영·참고
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/worklog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📌 메타 (개발자용)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI 사업계획서 자산 허브" class="md-nav__button md-logo" aria-label="AI 사업계획서 자산 허브" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI 사업계획서 자산 허브
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pathcosmos/ai-docs-for-biz" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pathcosmos/ai-docs-for-biz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start-here/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 시작
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 콘텐츠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 콘텐츠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 제조 AI (생산·품질·예지보전)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track1-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제조 AI 도입 기초·아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track1-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §3·4 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 엔진 6 종 카드 (시계열·비전·이상탐지·강화·RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        문서 목적
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        변형 카드 매트릭스 (시나리오 × 엔진 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-a 유사 사례 검색·추천 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-b 시계열 품질·이탈 예측 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-c 비전 검사 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-d 예지보전 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-e 공정 최적화·제어 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-f-llmrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-f LLM·RAG 지식검색 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-g-cad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-g 도면·CAD 형상 임베딩 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        변형 카드 결합 가이드
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        유지보수 지침
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ MLOps (모니터링·재학습·거버넌스)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track2-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps 도입 기초·구성요소 7 종
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track2-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §6·7·8 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    💬 LLM·RAG (작업표준·정비이력 검색)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track3-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM·RAG 도입 기초·5 계층
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../track3-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사업계획서 §4·5 본문 5 블록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 6 패키지 통합 파일럿
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📦 6 패키지 통합 파일럿
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg1-steel-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 1 — 대기업 철강 다년 R&D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg2-cold-rolled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 2 — 중견 냉연 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg3-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 3 — 특수강관 RAG 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg4-rubber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 4 — 고무 양산 OEM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg5-precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 5 — 정밀가공 SaaS 9 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pkg/pkg6-util-esg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    패키지 6 — 유틸·ESG·CBAM 12 개월
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 시나리오 상세 (40 종 카탈로그)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시나리오 카탈로그 — 40 종 7 도메인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-top5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Top 5 (연속주조·압연·표면결함)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-phase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    철강 Phase 2 (압연·소둔 4 종)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-rub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    고무·폴리머 5 종 (배합·언더큐어)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-utl-saf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    유틸·안전 5 종 (CBAM·중대재해)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/detail-special-pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    특수강관 RAG (작업표준·정비이력)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧩 Cross-cutting 모듈
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧩 Cross-cutting 모듈
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/cbam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CBAM 대응 (EU 탄소국경조정)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    중대재해 안전 (CCTV·웨어러블)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/federated-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연합학습 (산업단지 공동 AI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/oem-supply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OEM 공급망 정합 (자동차·조선·2 차전지)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/saas-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SaaS·클라우드 보안 (5 등급 민감도)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../guide/assembly/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 운영·참고
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../meta/worklog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📌 메타 (개발자용)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        문서 목적
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        변형 카드 매트릭스 (시나리오 × 엔진 패턴)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-a 유사 사례 검색·추천 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-b 시계열 품질·이탈 예측 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-c 비전 검사 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-d 예지보전 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-e 공정 최적화·제어 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-f-llmrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-f LLM·RAG 지식검색 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-g-cad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2-g 도면·CAD 형상 임베딩 엔진
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        변형 카드 결합 가이드
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        유지보수 지침
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    홈
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../track1-index/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📦 콘텐츠
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../track1-index/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    🤖 제조 AI (생산·품질·예지보전)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">manufacturing-ai</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">track</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">track1</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="track-1-52-ai">Track 1 — 5.2 AI 엔진 변형 카드<a class="headerlink" href="#track-1-52-ai" title="Permanent link">¤</a></h1>
+<p><span class="reading-time-badge">📖 약 13 분 읽기</span></p>
+<figure>
+  <img alt="Track 1 — 5.2 AI 엔진 변형 카드" src="../../assets/svg/track/track1-engine-cards.svg" />
+<br />
+<figcaption>Track 본문 시각 — 클릭하여 확대·SVG 다운로드 (벡터, 해상도 무제한)</figcaption>
+</figure>
+<h2 id="_1">문서 목적<a class="headerlink" href="#_1" title="Permanent link">¤</a></h2>
+<p>본 문서는 <code>track/track1-index.md</code> 의 5.2 절 "AI 엔진 개발 단계" 를 <strong>시나리오별 교체 블록</strong> 으로 분산한 카드 모음이다. 단일 서술 대신 엔진 패턴 6종을 제공하여, 대상 시나리오(카탈로그 <code>scenario/catalog.md</code> 의 <code>SCN-XXX</code> 카드)에 맞는 카드를 선택·조합해 본문 5.2 절을 채울 수 있도록 한다.</p>
+<p>복수 시나리오를 결합하는 사업의 경우 복수 카드를 병기하되, 각 카드는 섹션 넘버 <code>5.2-a ~ 5.2-f</code> 를 부여해 재참조가 가능하도록 한다.</p>
+<details class="info">
+<summary>ℹ️ 페이지 정보 (워크스페이스 메타)</summary>
+<p><strong>플레이스홀더 범례</strong> — <code>[고객사]</code> 고객사명, <code>[공정]</code> 대상 공정명, <code>[수치]</code> 수치, <code>[기간]</code> 기간, <code>[%]</code> 비율.
+특정 고객사 전용 문구는 공통 자산과 분리되며, 본 문서는 고정 공통 블록 기준으로 작성됨.</p>
+</details>
+<hr />
+<h2 id="_2">변형 카드 매트릭스 (시나리오 × 엔진 패턴)<a class="headerlink" href="#_2" title="Permanent link">¤</a></h2>
+<table>
+<thead>
+<tr>
+<th>엔진 패턴</th>
+<th>카드 ID</th>
+<th>대표 시나리오 (카탈로그)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>유사 사례 검색·추천</td>
+<td>5.2-a</td>
+<td><a href="../../scenario/catalog/#scn-stl-04" title="냉간압연 패스 스케줄 표준화·최적화" class="scn-link">SCN-STL-04</a>, 07, 08, <a href="../../scenario/catalog/#scn-met-05" title="단조·절단·절곡 공정 최적 설정 추천" class="scn-link">SCN-MET-05</a>, 07</td>
+</tr>
+<tr>
+<td>시계열 품질·이탈 예측</td>
+<td>5.2-b</td>
+<td><a href="../../scenario/catalog/#scn-stl-01" title="연속주조 블룸/슬라브 품질 예측" class="scn-link">SCN-STL-01</a>, 03, 05, 12, <a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a>, 04, <a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a></td>
+</tr>
+<tr>
+<td>비전 검사</td>
+<td>5.2-c</td>
+<td><a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a>, 11, <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a>, 03, 06, <a href="../../scenario/catalog/#scn-rub-02" title="압출(Extrusion) 라인 치수·표면 실시간 검사·제어" class="scn-link">SCN-RUB-02</a>, 05, <a href="../../scenario/catalog/#scn-saf-01" title="중대재해법 대응 위험요소 AI 감지 (CCTV·웨어러블)" class="scn-link">SCN-SAF-01</a></td>
+</tr>
+<tr>
+<td>예지보전</td>
+<td>5.2-d</td>
+<td><a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a>, <a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a>, <a href="../../scenario/catalog/#scn-utl-02" title="컴프레서·보일러 효율 관리 및 누기·누증 탐지" class="scn-link">SCN-UTL-02</a></td>
+</tr>
+<tr>
+<td>공정 최적화·제어</td>
+<td>5.2-e</td>
+<td><a href="../../scenario/catalog/#scn-stl-02" title="전기로 전력·전극 소모 최적화" class="scn-link">SCN-STL-02</a>, 06, <a href="../../scenario/catalog/#scn-met-04" title="도금·도장·산세 공정 조건 최적화" class="scn-link">SCN-MET-04</a>, <a href="../../scenario/catalog/#scn-rub-03" title="가류(Curing) 시간·온도 최적화" class="scn-link">SCN-RUB-03</a>, <a href="../../scenario/catalog/#scn-utl-01" title="공장 에너지(전력·가스·증기) 최적화·피크 관리" class="scn-link">SCN-UTL-01</a>, 05</td>
+</tr>
+<tr>
+<td>LLM·RAG 지식검색</td>
+<td>5.2-f</td>
+<td><a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a>~04, <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a>, <a href="../../scenario/catalog/#scn-met-07" title="공구·금형 관리 RAG (이력·교체 주기·재생 노하우)" class="scn-link">SCN-MET-07</a>, <a href="../../scenario/catalog/#scn-saf-03" title="화학물질·MSDS 지능 관리" class="scn-link">SCN-SAF-03</a></td>
+</tr>
+<tr>
+<td>도면·CAD 형상 임베딩</td>
+<td>5.2-g</td>
+<td><a href="../../scenario/catalog/#scn-llm-04" title="설계자산(CAD 도면·엔지니어링 문서) 지능 검색" class="scn-link">SCN-LLM-04</a> (형상 모드), <a href="../../scenario/catalog/#scn-met-03" title="치수 검사 자동화 (3D 스캔·비전 측정)" class="scn-link">SCN-MET-03</a> (CAD 비교), <a href="../../scenario/catalog/#scn-met-05" title="단조·절단·절곡 공정 최적 설정 추천" class="scn-link">SCN-MET-05</a> (잠재)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>시나리오 카드에 복수 트랙 매핑이 있을 경우 해당 엔진 패턴을 병기해 작성한다. 예: <a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 은 5.2-a + 5.2-f 병기.</p>
+</blockquote>
+<hr />
+<h2 id="52-a">5.2-a 유사 사례 검색·추천 엔진<a class="headerlink" href="#52-a" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-stl-04" title="냉간압연 패스 스케줄 표준화·최적화" class="scn-link">SCN-STL-04</a> 냉간압연 패스 스케줄 표준화·최적화 (주; 5.2-e 와 결합 가능), <a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 인발·필거밀 공정설계 LLM, <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> 원소재-완제품 상관(분석 파트), <a href="../../scenario/catalog/#scn-met-05" title="단조·절단·절곡 공정 최적 설정 추천" class="scn-link">SCN-MET-05</a> 단조·절단·절곡 설정 추천, <a href="../../scenario/catalog/#scn-met-07" title="공구·금형 관리 RAG (이력·교체 주기·재생 노하우)" class="scn-link">SCN-MET-07</a> 공구·금형 관리 RAG</li>
+<li><strong>목적</strong>: 과거 성공 이력(사양 - 설정 - 결과) 을 지식베이스로 축적하고, 신규 주문·작업 투입 시 유사 사례에 기반해 초기 설계·설정 초안을 자동 생성하며 숙련자의 의사결정을 보조한다.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>유사 케이스 검색 모듈: 재질·치수·형상 피쳐를 결합한 벡터 임베딩 + 조건 필터(재질군·치수 허용 범위)</li>
+<li>추천 모듈: Top-N 과거 사례를 통계 집계 또는 LLM 요약으로 정리해 추천 레시피 N개를 제시</li>
+<li>규칙 검증 모듈: 허용 압하율 · 설비 용량 한계 · 열처리 온도 범위 · 공차 한계 등 물리·설비 제약 체크</li>
+<li>출력 정보 설계: 추천 공정 경로 / 조건 범위 / 참조 유사 오더 / 예상 수율·품질</li>
+<li><strong>포함 내용</strong>:</li>
+<li>벡터 임베딩 전략 (재질 코드 · 치수 · 형상 피쳐 결합 방식)</li>
+<li>Top-N 유사도 임계값 및 복수 후보 제시 원칙</li>
+<li>물리·설비 제약 검증 룰셋 관리 방식</li>
+<li>LLM 요약·근거 표시 (유사 사례 ID · 성적서 · 공정설계서 페이지 링크)</li>
+<li>신규 완료 오더 자동 편입을 통한 데이터 플라이휠</li>
+<li><strong>삽화·도식 후보</strong>: 엔진 내부 모듈 다이어그램(검색 → 추천 → 검증 → 출력), 주문서 입력 → 유사 사례 Top-N → 추천 레시피 UI 목업, 근거 문서 인용 표시 예시.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="주문·사양 입력 재질/치수/형상 (다이어그램 1)" src="../../assets/diagrams/track1-engine-cards/diagram-1.svg" />
+- <strong>주의·선행조건</strong>: 과거 이력의 구조화(재질 · 치수 · 공정 파라미터 · 품질 결과 일관 스키마) 선행. 자유 텍스트 주석은 OCR·정제 후 편입. 숙련자 검수 루프(5.3 HITL) 와 필수 결합.
+- <strong>고객사별 가변 여부</strong>: 업종별 교체 — 철강(레시피 추천) vs 단조·절단(설정 추천) vs 공구·금형(재생 노하우).</p>
+<hr />
+<h2 id="52-b">5.2-b 시계열 품질·이탈 예측 엔진<a class="headerlink" href="#52-b" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-stl-01" title="연속주조 블룸/슬라브 품질 예측" class="scn-link">SCN-STL-01</a> 연주 품질, <a href="../../scenario/catalog/#scn-stl-03" title="열간압연 두께·폭 편차 실시간 예측" class="scn-link">SCN-STL-03</a> 열연 두께·폭, <a href="../../scenario/catalog/#scn-stl-05" title="냉간압연 실시간 두께 예측·이탈 조기경보" class="scn-link">SCN-STL-05</a> 냉연 두께 조기경보, <a href="../../scenario/catalog/#scn-stl-12" title="강재 수요 예측·생산 스케줄링" class="scn-link">SCN-STL-12</a> 강재 수요 예측·APS 스케줄링, <a href="../../scenario/catalog/#scn-rub-01" title="배합(Banbury·Mixer) 분산도 품질 예측" class="scn-link">SCN-RUB-01</a> 배합 분산도, <a href="../../scenario/catalog/#scn-rub-04" title="사출·성형 공정 불량 예측 및 조건 추천" class="scn-link">SCN-RUB-04</a> 사출 불량, <a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a> 공구 마모 신호</li>
+<li><strong>목적</strong>: 공정 시계열 신호를 실시간 추론해 품질 이탈을 사전에 예측·경보하고, 필요 시 피드포워드 조치 힌트를 작업자에게 제공한다.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>데이터 수집·동기화: PLC / Historian → 스트림 버퍼 (초 · 10Hz · 100Hz 등 혼합)</li>
+<li>피쳐 블록: 슬라이딩 윈도우 통계, 스탠드·설비별 기여도, 재질·레시피 메타 결합</li>
+<li>예측 모델: 지연·정확도 요구에 따라 1D-CNN / LSTM / Transformer 선택</li>
+<li>이탈 판정 모듈: 목표 대비 σ 임계 + 추세 기반 조기 경보 트리거</li>
+<li>피드포워드 출력: HMI 경보 + 조작 변수 제안값 (텐션·속도·온도 등)</li>
+<li><strong>포함 내용</strong>:</li>
+<li>센서 수집 주기와 모델 입력 윈도우 설계</li>
+<li>재질·레시피별 조건부 모델 분기 또는 조건 피쳐 삽입 전략</li>
+<li>σ · PSI 등 조기 경보 임계 설정 원칙</li>
+<li>엣지·서버 이원 배포 (추론 지연 &lt; 100 ms 요구 시 엣지)</li>
+<li>성능 KPI: 예측 정확도, 조기 경보 리드타임, False Alarm Rate</li>
+<li><strong>삽화·도식 후보</strong>: 스트림 파이프라인(Edge → Historian → Inference → HMI), 실시간 예측 vs 실측 오버레이, 스탠드·설비별 기여도 SHAP 바차트, 조기 경보 타임라인.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="PLC/Historian 10~100Hz 태그 (다이어그램 2)" src="../../assets/diagrams/track1-engine-cards/diagram-2.svg" />
+- <strong>주의·선행조건</strong>: PLC 태그 표준화·시간 동기(NTP), 목표 품질 실측 라벨 확보, 추론 지연 요구 확정. Track 2 드리프트 탐지(<a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>) 와 결합 필수.
+- <strong>고객사별 가변 여부</strong>: 업종·공정별 교체 — 센서 종류 · 예측 대상 · 판정 임계 모두 다름.</p>
+<hr />
+<h2 id="52-c">5.2-c 비전 검사 엔진<a class="headerlink" href="#52-c" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-stl-10" title="표면결함 비전 검사 (강판·강관)" class="scn-link">SCN-STL-10</a> 표면결함 비전, <a href="../../scenario/catalog/#scn-stl-11" title="비파괴검사(UT/ECT) 결과 AI 자동 판정" class="scn-link">SCN-STL-11</a> UT/ECT 자동판정(신호 이미지화), <a href="../../scenario/catalog/#scn-met-02" title="용접 비드 비전 검사 및 파라미터 최적화" class="scn-link">SCN-MET-02</a> 용접 비드, <a href="../../scenario/catalog/#scn-met-03" title="치수 검사 자동화 (3D 스캔·비전 측정)" class="scn-link">SCN-MET-03</a> 3D 치수 검사, <a href="../../scenario/catalog/#scn-met-06" title="조립 라인 작업자 행동 인식·안전 감지" class="scn-link">SCN-MET-06</a> 작업자 행동 인식, <a href="../../scenario/catalog/#scn-rub-02" title="압출(Extrusion) 라인 치수·표면 실시간 검사·제어" class="scn-link">SCN-RUB-02</a> 압출 표면·치수, <a href="../../scenario/catalog/#scn-rub-05" title="고무 제품 외관 비전 검사 (표면 결함·이물)" class="scn-link">SCN-RUB-05</a> 고무 외관, <a href="../../scenario/catalog/#scn-saf-01" title="중대재해법 대응 위험요소 AI 감지 (CCTV·웨어러블)" class="scn-link">SCN-SAF-01</a> 안전 영상</li>
+<li><strong>목적</strong>: 이미지·영상·포인트클라우드 기반 비전 AI로 결함 검출, 치수 측정, 행동 인식 등을 자동화하여 육안 검사 한계를 극복한다.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>촬영·조명 설계: 라인스캔 / 에어리어 / 다각도 / 3D 구조광 선택, 조도 균일성 확보</li>
+<li>라벨링·사전학습: 소량 라벨 + Self-supervised Pretraining 또는 Synthetic Data 보강</li>
+<li>모델: 분류(EfficientNet · ViT), 탐지(YOLO · DETR), 세그멘테이션(U-Net · Mask2Former), Pose/Action Recognition</li>
+<li>후처리: 결함 등급 매핑, CAD·설계 허용치 대비 편차 산출, 이벤트 트리거</li>
+<li>엣지 배포: GPU 엣지 노드, PLC·라인 컨트롤러 인터페이스</li>
+<li><strong>포함 내용</strong>:</li>
+<li>검출 대상 클래스 정의 (결함 유형 · 중대도 등급 · 치수 편차)</li>
+<li>라벨 수량 확보 로드맵 (Pre-train → Fine-tune → Active Learning)</li>
+<li>오검출 허용 기준 (Recall 우선 vs Precision 우선)</li>
+<li>Confusion Matrix · Class-level 지표로 성능 검증</li>
+<li>신규 결함 유형 추가 시 재학습 파이프라인</li>
+<li><strong>삽화·도식 후보</strong>: 비전 시스템 설치도(카메라·조명·이송 구조), 결함 유형 갤러리(정상 / 의심 / 불량 샘플), 세그멘테이션 오버레이, Confusion Matrix, 등급별 후처리 플로우.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="카메라 라인스캔/3D 구조광 (다이어그램 3)" src="../../assets/diagrams/track1-engine-cards/diagram-3.svg" />
+- <strong>주의·선행조건</strong>: 조명·이송 속도 고정이 핵심 (조명 변동은 모델 재학습 원인 1위). 개인정보 리스크 높은 시나리오(CCTV·작업자 촬영) 는 노사 합의·마스킹 선행.
+- <strong>고객사별 가변 여부</strong>: 업종·설비별 교체 + 신규 결함 클래스는 고객사 생산 품목별 커스텀.</p>
+<hr />
+<h2 id="52-d">5.2-d 예지보전 엔진<a class="headerlink" href="#52-d" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-stl-09" title="설비 예지보전 (압연기 롤·베어링·구동부)" class="scn-link">SCN-STL-09</a> 압연기 예지보전, <a href="../../scenario/catalog/#scn-met-01" title="CNC 공구 마모·파손 예지" class="scn-link">SCN-MET-01</a> CNC 공구 (일부 결합), <a href="../../scenario/catalog/#scn-utl-02" title="컴프레서·보일러 효율 관리 및 누기·누증 탐지" class="scn-link">SCN-UTL-02</a> 컴프레서·보일러 누기·누증 감시 (자체 진단 파트)</li>
+<li><strong>목적</strong>: 설비 건전성(Health)을 지속 감시하고 이상 징후를 조기 탐지해 잔여수명(RUL)을 추정함으로써 과잉 정비와 돌발 고장의 양극단을 동시에 피한다.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>수집: 진동 가속도·속도, 모터 전류·전압, 윤활유 온도·압력, AE(Acoustic Emission)</li>
+<li>특징 추출: FFT / Envelope / Cepstrum, 통계 모멘트, Order Tracking</li>
+<li>이상탐지 모델: Autoencoder · Isolation Forest · OneClassSVM — 정상 상태 학습 기반</li>
+<li>RUL 추정: Survival Analysis, LSTM Regression, Hazard Function</li>
+<li>CMMS 연동: 임계 초과 시 워크오더 자동 생성, 부품·예비재고 연계</li>
+<li><strong>포함 내용</strong>:</li>
+<li>"정상 상태 데이터" 확보 전략 (고장 라벨 희소성 대응)</li>
+<li>설비 개체별 모델링 vs 군집 모델링 선택 기준</li>
+<li>알람 피로도 관리 (임계 계층화, 스누즈·자동 무시 룰)</li>
+<li>정비 이력과의 양방향 피드백 (정비 결과 → 모델 재학습 라벨)</li>
+<li><strong>삽화·도식 후보</strong>: 예지보전 아키텍처(센서 → 엣지 → TSDB → 모델 → CMMS), 진동 스펙트로그램, RUL 곡선, 건전성 지수 트렌드, 알람 에스컬레이션 플로우.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="진동·전류·AE 센서 ≥1kHz 수집 (다이어그램 4)" src="../../assets/diagrams/track1-engine-cards/diagram-4.svg" />
+- <strong>주의·선행조건</strong>: 진동·전류 고주파 수집 인프라 (≥ 1 kHz 권장), 기계별 고장 모드 도메인 지식, CMMS 자유 텍스트 정제·표준화.
+- <strong>고객사별 가변 여부</strong>: 설비 종류별 교체 (회전기 · 왕복동 · 유압 · 전동 등).</p>
+<hr />
+<h2 id="52-e">5.2-e 공정 최적화·제어 엔진<a class="headerlink" href="#52-e" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-stl-02" title="전기로 전력·전극 소모 최적화" class="scn-link">SCN-STL-02</a> EAF 전력·전극 최적화(RL), <a href="../../scenario/catalog/#scn-stl-06" title="열처리(소둔·담금질) 로 내 적재·온도 프로파일 최적화" class="scn-link">SCN-STL-06</a> 소둔 적재·온도 프로파일, <a href="../../scenario/catalog/#scn-met-04" title="도금·도장·산세 공정 조건 최적화" class="scn-link">SCN-MET-04</a> 도금 조건, <a href="../../scenario/catalog/#scn-rub-03" title="가류(Curing) 시간·온도 최적화" class="scn-link">SCN-RUB-03</a> 가류 시간·온도, <a href="../../scenario/catalog/#scn-utl-01" title="공장 에너지(전력·가스·증기) 최적화·피크 관리" class="scn-link">SCN-UTL-01</a> 에너지 피크 관리, <a href="../../scenario/catalog/#scn-utl-05" title="물류·창고 크레인·지게차 동선 최적화" class="scn-link">SCN-UTL-05</a> 크레인·지게차 동선</li>
+<li><strong>목적</strong>: 조작 변수 공간에서 목적 함수(수율 · 에너지 · 사이클 타임) 를 최적화하는 추천·제어 엔진. 예측을 넘어 <strong>의사결정</strong> 을 출력한다.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>환경 모델링: 물리 기반 + 데이터 기반 하이브리드 (Process Model · Digital Twin)</li>
+<li>최적화 알고리즘: 베이지안 최적화(BO · 샘플 희소), 강화학습(RL · 시뮬레이터 필수), 물리 제약 통합 수학 최적화(MILP · NLP)</li>
+<li>안전 레이어: Safe RL · 제약 BO — 허용 범위를 벗어나는 제안 차단</li>
+<li>추천·제어 인터페이스: 오픈루프(작업자 승인) 또는 클로즈드루프(DCS 연동)</li>
+<li><strong>포함 내용</strong>:</li>
+<li>오픈루프 vs 클로즈드루프 선택 기준 (안전 · 책임 귀속)</li>
+<li>시뮬레이터·디지털트윈 구축 선행 필요성 (특히 RL)</li>
+<li>목적 함수 설계 (다목적 가중치 · 파레토 전선)</li>
+<li>A/B 검증 프레임 (챔피언 · 챌린저 동시 운영)</li>
+<li><strong>삽화·도식 후보</strong>: 최적화 루프 다이어그램 (관측 → 추정 → 최적화 → 실행 → 피드백), 제안 vs 현행 조작 프로파일 비교, 시뮬레이터 UI 스케치, 파레토 전선 그래프.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="관측 PLC/MES 상태 (다이어그램 5)" src="../../assets/diagrams/track1-engine-cards/diagram-5.svg" />
+- <strong>주의·선행조건</strong>: RL은 반드시 시뮬레이터 또는 오프라인 안전 평가 체계 선행. 제어 통합 시 책임·법적 이슈 및 안전 PLC 연동 필요. Track 2(MLOps) 의 챔피언·챌린저(<a href="../../scenario/catalog/#scn-mlo-01" title="모델 운영 감시·드리프트 탐지·자동 재학습" class="scn-link">SCN-MLO-01</a>) 와 필수 결합.
+- <strong>고객사별 가변 여부</strong>: 공정·목적 함수별 전면 교체. 오픈 / 클로즈드 루프 선택은 고객사 수용성에 따라 분기.</p>
+<hr />
+<h2 id="52-f-llmrag">5.2-f LLM·RAG 지식검색 엔진<a class="headerlink" href="#52-f-llmrag" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-llm-01" title="표준작업지시서(SOP)·작업표준 RAG 질의응답" class="scn-link">SCN-LLM-01</a> SOP RAG, <a href="../../scenario/catalog/#scn-llm-02" title="설비 장애 대응 지식 검색·권고 (eCMMS 통합)" class="scn-link">SCN-LLM-02</a> 장애 RAG, <a href="../../scenario/catalog/#scn-llm-03" title="품질·불량 보고서 자동 작성" class="scn-link">SCN-LLM-03</a> 불량 보고서 자동 작성, <a href="../../scenario/catalog/#scn-llm-04" title="설계자산(CAD 도면·엔지니어링 문서) 지능 검색" class="scn-link">SCN-LLM-04</a> 도면 지능 검색, <a href="../../scenario/catalog/#scn-stl-08" title="Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석" class="scn-link">SCN-STL-08</a> 밀시트 OCR, <a href="../../scenario/catalog/#scn-met-07" title="공구·금형 관리 RAG (이력·교체 주기·재생 노하우)" class="scn-link">SCN-MET-07</a> 공구·금형 RAG, <a href="../../scenario/catalog/#scn-saf-03" title="화학물질·MSDS 지능 관리" class="scn-link">SCN-SAF-03</a> MSDS RAG, <a href="../../scenario/catalog/#scn-stl-07" title="인발·필거밀 공정설계 LLM 지능화" class="scn-link">SCN-STL-07</a> 공정설계 LLM (5.2-a 와 병기)</li>
+<li><strong>목적</strong>: 비정형 기업 지식(문서 · 도면 · 이력) 을 LLM 과 검색 엔진으로 연결해 현장 실무자의 질문에 <strong>근거 제시 답변</strong> 또는 문서 초안을 생성한다.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>문서 수집·정제: SOP · 매뉴얼 · CMMS 이력 · 도면 · MSDS → 파서별 (PDF · HWP · DWG · 이미지 OCR) 추출</li>
+<li>청킹·임베딩: 문서 특성별 전략 (계층 청킹 · 섹션 기반 · 토픽 기반), 멀티뷰 임베딩</li>
+<li>검색기: 하이브리드 (Dense + BM25 + 메타 필터), Re-ranker 로 상위 정제</li>
+<li>LLM 응답: 근거 문서 · 페이지 · 문단 인용, 확인 필요 시 휴먼 에스컬레이션</li>
+<li>권한·보안: 문서 접근권한 동기화, 민감 정보 마스킹, 외부 LLM 여부에 따른 온프레미스 · 하이브리드 라우팅</li>
+<li><strong>포함 내용</strong>:</li>
+<li>청킹 전략 결정 기준 (문서 구조 · 평균 문단 길이 · 쿼리 유형)</li>
+<li>모델 선택: 외부 API(보안 협의 선행) vs 온프레미스 sLM · EXAONE · HyperCLOVA</li>
+<li>환각 방지: 근거 없는 답변 거부 정책, Citation 강제, 답변 신뢰도 스코어</li>
+<li>피드백 수집 UI (답변 품질 평가 → 문서 보강·재학습 루프)</li>
+<li><strong>삽화·도식 후보</strong>: RAG 파이프라인 (수집 · 임베딩 · 검색 · 생성 · 감사), 대화 UI 목업, 인용 표시 예시, 권한·보안 아키텍처.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="문서 소스 SOP/도면/CMMS/MSDS (다이어그램 6)" src="../../assets/diagrams/track1-engine-cards/diagram-6.svg" />
+- <strong>주의·선행조건</strong>: 문서 디지털화·표준화가 가장 큰 선행 작업. 민감도 평가 후 외부 LLM 사용 가능 여부 사전 결정. HRM · AD 권한과의 연동 필요.
+- <strong>고객사별 가변 여부</strong>: 공통 템플릿 + 문서 소스 · 권한 구성만 교체. LLM 모델 선택은 고객사 보안 정책에 따라 교체.</p>
+<hr />
+<h2 id="52-g-cad">5.2-g 도면·CAD 형상 임베딩 엔진<a class="headerlink" href="#52-g-cad" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>적용 시나리오</strong>: <a href="../../scenario/catalog/#scn-llm-04" title="설계자산(CAD 도면·엔지니어링 문서) 지능 검색" class="scn-link">SCN-LLM-04</a> CAD 도면 지능 검색 (형상 모드, 5.2-f 텍스트 모드와 병기), <a href="../../scenario/catalog/#scn-met-03" title="치수 검사 자동화 (3D 스캔·비전 측정)" class="scn-link">SCN-MET-03</a> 3D 치수 검사 (CAD 비교 모드), 잠재 <a href="../../scenario/catalog/#scn-met-05" title="단조·절단·절곡 공정 최적 설정 추천" class="scn-link">SCN-MET-05</a> 단조·절단·절곡 설정 추천 (제품 형상 기반 유사 사례 검색)</li>
+<li><strong>목적</strong>: CAD 도면 (DWG/DXF/STEP/IFC) 의 기하·형상 정보를 형상 벡터 임베딩으로 변환하여, 텍스트·메타 검색이 닿지 않는 <strong>형상 유사 검색·치수 비교·제품군 분류</strong> 를 가능하게 한다. 5.2-f 의 텍스트·OCR 모드와 병기 시 "이름이 비슷한 부품" 과 "모양이 비슷한 부품" 을 동시 검색.</li>
+<li><strong>엔진 구조</strong>:</li>
+<li>도면 수집·파싱: DWG/DXF (AutoCAD 라이브러리·ODA File Converter), STEP/IGES/IFC (OpenCASCADE·pythonocc), 메쉬 (.obj·.stl·.ply)</li>
+<li>형상 표현 변환: 3D 메쉬 ↔ 포인트클라우드 ↔ B-Rep (Boundary Representation) ↔ 복셀 (Voxel)</li>
+<li>형상 임베딩 모델: PointNet++/DGCNN (포인트클라우드), MeshCNN (메쉬), GraphSAGE (B-Rep 그래프), 또는 멀티뷰 렌더링 → CNN</li>
+<li>형상 검색: 형상 벡터 코사인 유사도 + 메타 필터 (재질·치수·도면 카테고리), Re-ranker 로 정밀 정렬</li>
+<li>CAD 비교 모드: 신규 도면 ↔ 표준 도면의 형상·치수 차분 (ICP 정합 후 잔차 분석)</li>
+<li><strong>포함 내용</strong>:</li>
+<li>도면 파일 포맷별 파서 매트릭스 (DWG·DXF·STEP·IGES·IFC·OBJ·STL·PLY)</li>
+<li>형상 표현 선택 기준 (정밀도·계산비용·임베딩 모델 호환성)</li>
+<li>형상 임베딩 모델 후보 (도메인 사전학습 가능 여부·라이선스)</li>
+<li>5.2-f 텍스트 임베딩과의 결합 라우팅 (질의 유형별 가중치)</li>
+<li>도면 IP·영업비밀 보호 (마스킹·접근 권한·외부 LLM 제한)</li>
+<li><strong>삽화·도식 후보</strong>: 형상 임베딩 파이프라인 (도면 → 메쉬·포인트 → 임베딩 → 벡터스토어), 5.2-f·5.2-g 병기 검색 결과 비교 UI 목업, B-Rep 그래프 임베딩 개념도, CAD 비교 잔차 시각화.</li>
+<li><strong>삽화 (Mermaid 초안)</strong>:</li>
+</ul>
+<p><img alt="CAD 도면 DWG/STEP/IFC (다이어그램 7)" src="../../assets/diagrams/track1-engine-cards/diagram-7.svg" />
+- <strong>주의·선행조건</strong>: CAD 라이브러리 라이선스 (특히 DWG·STEP) 확보 필요. 형상 임베딩 모델은 도메인 사전학습 데이터 (ABC dataset, ShapeNet 등) 로 초기화 후 사내 도면으로 파인튜닝 권장. 도면의 IP·영업비밀 민감도가 5.2-f 보다 높음 — 외부 임베딩 API 사용은 정밀 도면에 부적합.
+- <strong>고객사별 가변 여부</strong>: 도메인별 교체 — 정밀가공 (부품 형상), 단조·절단 (제품 외곽), 건축·플랜트 (IFC). 형상 임베딩 모델·파인튜닝 데이터셋이 도메인별로 상이.</p>
+<hr />
+<h2 id="_3">변형 카드 결합 가이드<a class="headerlink" href="#_3" title="Permanent link">¤</a></h2>
+<ul>
+<li><strong>단일 시나리오</strong>: 해당 카드 1장을 5.2 본문에 투입.</li>
+<li><strong>복수 시나리오 결합</strong>: 카드 병기 후 말미에 "엔진 간 데이터 · 피드백 공유 지점" 1 문단 추가.</li>
+<li>예: <code>5.2-b</code> 예측 + <code>5.2-e</code> 최적화 — 예측 엔진 출력이 최적화 엔진의 제약·상태 입력이 됨.</li>
+<li>예: <code>5.2-c</code> 비전 + <code>5.2-f</code> RAG — 결함 등급 판정 후 처분 매뉴얼을 RAG 로 자동 회신.</li>
+<li>예: <code>5.2-d</code> 예지보전 + <code>5.2-f</code> RAG — 이상 탐지 알람 시 과거 유사 장애 이력·조치 매뉴얼 자동 추천.</li>
+<li>예: <code>5.2-d</code> 예지보전 + <code>5.2-e</code> 최적화·제어 — <strong>자동 보정 폐쇄 루프</strong>. 5.2-d 가 설비 건전성 이상 징후 탐지 시 5.2-e 의 최적화 엔진이 즉시 조작 변수 (회전수·압력·유량) 를 자동 조정하여 정비 전 단계에서 효율 회복. 보일러·컴프레서·발전 설비에서 1 차 적용 (<span class="meta-marker">Phase E4</span> 패키지 6 유틸·ESG 사례). 안전 PLC 의 허용 범위 내에서만 자동 조정, 범위 초과 시 작업자 알람·수동 모드 전환.</li>
+<li>예: <code>5.2-f</code> 텍스트 RAG + <code>5.2-g</code> 형상 임베딩 — 도면 검색에서 "이름이 비슷" + "모양이 비슷" 양축 동시 검색. 사용자 질의 유형 (텍스트 / 도면 첨부) 에 따른 라우팅 또는 결과 병합 가중.</li>
+<li><strong>Track 2 연계 공통 요구</strong>: 모든 카드는 Track 2 MLOps(<code>SCN-MLO-01 ~ 03</code>) 와 결합하여 운영 단계 진입이 전제된다. 5.2 본문에서 "운영·모니터링 상세는 Track 2 섹션 참조" 1 문단을 필수로 첨부.</li>
+</ul>
+<h2 id="_4">유지보수 지침<a class="headerlink" href="#_4" title="Permanent link">¤</a></h2>
+<ul>
+<li>신규 시나리오 추가 시 본 6개 패턴 중 어디에 속하는지 먼저 판정. 어느 패턴에도 속하지 않는 경우에만 신규 카드 <code>5.2-g</code> 를 신설.</li>
+<li>각 카드의 구체 수치(추론 지연 · 주파수 등) 는 사업계획서 작성 시점에 확정하며, 본 문서에서는 권장값만 표기한다.</li>
+<li>카탈로그 <code>scenario/catalog.md</code> 의 시나리오 ID 가 변경될 경우 본 문서의 "적용 시나리오" 블록을 함께 갱신.</li>
+</ul>
+<details class="note">
+<summary>📌 이 페이지 정보 (개발자용)</summary>
+<ul>
+<li><strong>원본 파일</strong>: <code>track1_5.2_AI엔진_변형카드.md</code></li>
+<li><strong>자산 군</strong>: 🔧 기술 트랙</li>
+<li><strong>slug 경로</strong>: <code>track/track1-engine-cards.md</code></li>
+<li><strong>워크스페이스 정책</strong>: 원본 .md 수정 0 — hooks 로만 시각 변환</li>
+<li><strong>자산 자족성 정상화</strong>: Phase E7 완료 (잔여 외부 갭 4)</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../track1-top5/" class="md-footer__link md-footer__link--prev" aria-label="이전: 사업계획서 §3·4 본문 5 블록">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                사업계획서 §3·4 본문 5 블록
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../track2-index/" class="md-footer__link md-footer__link--next" aria-label="다음: MLOps 도입 기초·구성요소 7 종">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                MLOps 도입 기초·구성요소 7 종
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pathcosmos/ai-docs-for-biz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.path", "navigation.footer", "navigation.prune", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/copy-block.js"></script>
+      
+        <script src="../../javascripts/lightbox.js"></script>
+      
+        <script src="../../javascripts/graph.js"></script>
+      
+        <script src="../../javascripts/generate-template.js"></script>
+      
+    
+  </body>
+</html>

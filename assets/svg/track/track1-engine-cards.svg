@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="Track 1 — 5.2 AI 엔진 6 종 카드 (시계열·비전·이상탐지·자동보정·LLM·앙상블)">
+  <title>Track 1 — §5.2 AI Engine Cards · 6 Engines</title>
+  <desc>5.2-a 시계열, 5.2-b 비전, 5.2-c 이상탐지·예지보전, 5.2-d 자동보정 폐쇄루프, 5.2-e LLM·RAG, 5.2-f 다모델 앙상블 6 엔진을 위에서 아래로 카드화.</desc>
+
+  <defs>
+    <linearGradient id="t1e-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="t1e-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <rect width="600" height="100" fill="url(#t1e-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">TRACK 1 · §5.2 · AI ENGINE CARDS</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">AI 엔진 6 종 카드</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">시계열 · 비전 · 이상탐지 · 자동보정 · LLM·RAG · 앙상블</text>
+
+  <!-- 5.2-a 시계열 -->
+  <g transform="translate(40, 118)" filter="url(#t1e-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="6" height="92" rx="0" fill="#6366F1"/>
+    <text x="22" y="26" class="ko" font-size="11" fill="#6366F1">5.2-a</text>
+    <text x="22" y="50" class="ko" font-size="14" fill="#0F172A">시계열</text>
+    <text x="22" y="70" class="ko-r" font-size="10" fill="#475569">압연 두께·온도 예측 · 인발 압력·속도 제어</text>
+    <text x="22" y="86" class="ko-r" font-size="9" fill="#64748B">LSTM · Transformer · TFT · 멀티 변수 시계열</text>
+  </g>
+
+  <!-- 5.2-b 비전 -->
+  <g transform="translate(40, 224)" filter="url(#t1e-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="6" height="92" rx="0" fill="#8B5CF6"/>
+    <text x="22" y="26" class="ko" font-size="11" fill="#8B5CF6">5.2-b</text>
+    <text x="22" y="50" class="ko" font-size="14" fill="#0F172A">비전 (표면 결함)</text>
+    <text x="22" y="70" class="ko-r" font-size="10" fill="#475569">스크래치·핀홀·이물·치수 미스 탐지</text>
+    <text x="22" y="86" class="ko-r" font-size="9" fill="#64748B">CNN · Segmentation · YOLO · 비전 트랜스포머</text>
+  </g>
+
+  <!-- 5.2-c 이상탐지 -->
+  <g transform="translate(40, 330)" filter="url(#t1e-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="6" height="92" rx="0" fill="#10B981"/>
+    <text x="22" y="26" class="ko" font-size="11" fill="#10B981">5.2-c</text>
+    <text x="22" y="50" class="ko" font-size="14" fill="#0F172A">이상탐지 · 예지보전</text>
+    <text x="22" y="70" class="ko-r" font-size="10" fill="#475569">RUL 추정 · 베어링 진동 · FFT 스펙트럼 분석</text>
+    <text x="22" y="86" class="ko-r" font-size="9" fill="#64748B">Isolation Forest · Autoencoder · One-class SVM</text>
+  </g>
+
+  <!-- 5.2-d 자동보정 -->
+  <g transform="translate(40, 436)" filter="url(#t1e-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="6" height="92" rx="0" fill="#F59E0B"/>
+    <text x="22" y="26" class="ko" font-size="11" fill="#F59E0B">5.2-d</text>
+    <text x="22" y="50" class="ko" font-size="14" fill="#0F172A">자동 보정 폐쇄 루프</text>
+    <text x="22" y="70" class="ko-r" font-size="10" fill="#475569">MPC · 파라미터 자동 보정 · setpoint 최적화</text>
+    <text x="22" y="86" class="ko-r" font-size="9" fill="#64748B">RL · Bayesian Opt · MES/SCADA 폐쇄루프</text>
+  </g>
+
+  <!-- 5.2-e LLM·RAG -->
+  <g transform="translate(40, 542)" filter="url(#t1e-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="6" height="92" rx="0" fill="#06B6D4"/>
+    <text x="22" y="26" class="ko" font-size="11" fill="#06B6D4">5.2-e</text>
+    <text x="22" y="50" class="ko" font-size="14" fill="#0F172A">LLM · RAG 결합</text>
+    <text x="22" y="70" class="ko-r" font-size="10" fill="#475569">작업지시 · 장애 대응 · MSDS · SOP 검색·요약</text>
+    <text x="22" y="86" class="ko-r" font-size="9" fill="#64748B">한국 sLM (HyperCLOVA·Solar·EXAONE) · Citation 강제</text>
+  </g>
+
+  <!-- 5.2-f 앙상블 -->
+  <g transform="translate(40, 648)" filter="url(#t1e-shadow)">
+    <rect width="520" height="92" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="6" height="92" rx="0" fill="#475569"/>
+    <text x="22" y="26" class="ko" font-size="11" fill="#475569">5.2-f</text>
+    <text x="22" y="50" class="ko" font-size="14" fill="#0F172A">다모델 앙상블</text>
+    <text x="22" y="70" class="ko-r" font-size="10" fill="#475569">XGBoost + LSTM + 룰 결합 · 메타 러너</text>
+    <text x="22" y="86" class="ko-r" font-size="9" fill="#64748B">Stacking · Voting · 신뢰도 가중 평균</text>
+  </g>
+
+  <!-- 하단 cross-ref -->
+  <g transform="translate(30, 750)" filter="url(#t1e-shadow)">
+    <rect width="540" height="40" rx="8" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+    <text x="14" y="18" class="ko" font-size="10" fill="#4338CA">결합 가이드 · 각 카드 = 적용 시나리오 + 알고리즘 + 입력 데이터 + KPI 4 단</text>
+    <text x="14" y="32" class="ko-r" font-size="9" fill="#475569">→ 시나리오 카탈로그 40 종 · 패키지 1~6 본문 · 사업계획서 §5.2 직접 paste</text>
+  </g>
+</svg>

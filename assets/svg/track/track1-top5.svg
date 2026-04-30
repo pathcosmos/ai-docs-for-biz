@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="Track 1 — 사업계획서 §3·4 본문 5 블록 세로 카드">
+  <title>Track 1 — Top 5 Reusable Blocks (BLK-T1-3.1·3.2·4.4·4.5·4.6)</title>
+  <desc>제조 AI Track 1 의 5 핵심 재사용 블록 — 인적 의존·암묵지, 데이터 단절, 피쳐 엔지니어링, 모델·앙상블, E2E 파이프라인을 위에서 아래로 시각화한 카드.</desc>
+
+  <defs>
+    <linearGradient id="t1t-header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="t1t-card" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="t1t-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .ko { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 700; }
+      .ko-r { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; }
+      .en { font-family: Pretendard, system-ui, -apple-system, sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <rect width="600" height="800" fill="#F8FAFC"/>
+
+  <!-- 헤더 100px -->
+  <rect width="600" height="100" fill="url(#t1t-header)"/>
+  <text x="300" y="38" text-anchor="middle" class="en" font-size="11" fill="rgba(255,255,255,0.85)">TRACK 1 · TOP 5 REUSABLE BLOCKS</text>
+  <text x="300" y="68" text-anchor="middle" class="ko" font-size="22" fill="white">Track 1 — 사업계획서 §3·4 본문</text>
+  <text x="300" y="88" text-anchor="middle" class="ko-r" font-size="11" fill="rgba(255,255,255,0.9)">암묵지·데이터 단절·피쳐·모델·E2E 5 블록 직접 투입</text>
+
+  <!-- BLK-T1-3.1 -->
+  <g transform="translate(40, 120)" filter="url(#t1t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t1t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t1t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T1-3.1</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§3.1 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#4338CA">인적 의존성 · 암묵지 리스크</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">베테랑 의존, 노하우 사장 · 신규 채용 어려움</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §3.1 직접 paste</text>
+  </g>
+
+  <!-- BLK-T1-3.2 -->
+  <g transform="translate(40, 244)" filter="url(#t1t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t1t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t1t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T1-3.2</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§3.2 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#4338CA">데이터 단절 · 비정형 한계</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">MES · SCADA · PLC 사일로 · ERP 연계 부재</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §3.2 직접 paste</text>
+  </g>
+
+  <!-- BLK-T1-4.4 -->
+  <g transform="translate(40, 368)" filter="url(#t1t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t1t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t1t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T1-4.4</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§4.4 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#4338CA">피쳐 엔지니어링 접근</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">슬라이딩 윈도 · 푸리에 · 도메인 피쳐 결합</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §4.4 직접 paste</text>
+  </g>
+
+  <!-- BLK-T1-4.5 -->
+  <g transform="translate(40, 492)" filter="url(#t1t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t1t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t1t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T1-4.5</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§4.5 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#4338CA">모델 · 앙상블 선정 기준</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">LSTM · Transformer · XGBoost · 이상탐지 결합</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §4.5 직접 paste</text>
+  </g>
+
+  <!-- BLK-T1-4.6 -->
+  <g transform="translate(40, 616)" filter="url(#t1t-shadow)">
+    <rect width="520" height="100" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="520" height="32" rx="8" fill="url(#t1t-card)"/>
+    <rect y="20" width="520" height="12" fill="url(#t1t-card)"/>
+    <text x="14" y="22" class="ko" font-size="13" fill="white">BLK-T1-4.6</text>
+    <text x="450" y="22" text-anchor="end" class="en" font-size="10" fill="rgba(255,255,255,0.9)">§4.6 · 600~1,200 자</text>
+    <text x="14" y="56" class="ko" font-size="14" fill="#4338CA">데이터 → 현장 적용 E2E 파이프라인</text>
+    <text x="14" y="76" class="ko-r" font-size="10" fill="#475569">수집 · 피쳐 · 모델 · 운영 일관 흐름 · MES/ERP 연동</text>
+    <text x="14" y="92" class="ko-r" font-size="9" fill="#64748B">2~3 문단 + Mermaid 1 → 사업계획서 §4.6 직접 paste</text>
+  </g>
+
+  <!-- 하단 cross-reference 박스 (~120px) -->
+  <g transform="translate(30, 740)" filter="url(#t1t-shadow)">
+    <rect width="540" height="50" rx="8" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+    <text x="14" y="20" class="ko" font-size="11" fill="#4338CA">paste 위치 · 사업계획서 §3·4 본문</text>
+    <text x="14" y="38" class="ko-r" font-size="9" fill="#475569">5 블록 × 약 800 자 평균 = 약 4,000 자 · Mermaid 5 블록 · 플레이스홀더 [고객사]·[공정] 6 종</text>
+  </g>
+</svg>

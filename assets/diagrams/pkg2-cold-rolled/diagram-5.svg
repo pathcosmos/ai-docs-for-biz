@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img"
+     aria-label="RAG 장애 대응 검색 — 12 단계 SOP·CMMS 지식 검색 + sLM 라우팅">
+  <title>RAG 장애 대응 검색</title>
+  <desc>SOP·도면·CMMS 문서를 청킹·임베딩 후 벡터스토어 적재, 하이브리드 검색·Re-rank·민감도 라우팅 후 sLM 또는 외부 LLM 응답</desc>
+  <defs>
+    <linearGradient id="g_pkg2_d5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3730A3"/><stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="g_pkg2_d5_card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "Pretendard", system-ui, -apple-system, sans-serif; }
+  </style>
+  <rect width="600" height="800" fill="#EEF2FF"/>
+  <!-- 헤더 100px -->
+  <rect x="0" y="0" width="600" height="100" fill="url(#g_pkg2_d5)"/>
+  <text x="40" y="40" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="2">PKG 2 · DIAGRAM 5 · RAG TROUBLESHOOTING</text>
+  <text x="40" y="68" font-size="20" font-weight="800" fill="white">RAG 장애 대응 검색</text>
+  <text x="40" y="88" font-size="11" font-weight="500" fill="rgba(255,255,255,0.85)">12 단계 SOP·CMMS 지식 검색 + sLM 라우팅</text>
+  <!-- 카드 stack 12 개 -->
+  <g class="card" transform="translate(0, 110)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">1</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">문서 소스</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">SOP·도면·CMMS·MSDS</text>
+  </g>
+  <text x="300" y="164" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 166)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">2</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">파서·OCR</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">PDF/HWP/DWG 처리</text>
+  </g>
+  <text x="300" y="220" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 222)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">3</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">청킹·임베딩</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">멀티뷰 (원문·요약·키워드)</text>
+  </g>
+  <text x="300" y="276" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 278)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">4</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">벡터스토어</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">Pinecone / Weaviate</text>
+  </g>
+  <text x="300" y="332" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 334)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">5</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">사용자 질의</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">현장 HMI / 태블릿</text>
+  </g>
+  <text x="300" y="388" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 390)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">6</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">하이브리드 검색</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">Dense + BM25 + 메타</text>
+  </g>
+  <text x="300" y="444" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 446)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">7</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">Re-ranker</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">Top-N 정밀 정렬</text>
+  </g>
+  <text x="300" y="500" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 502)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">8</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">민감도 라우팅</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">BLK-CSEC-F ①~⑤ 게이트</text>
+  </g>
+  <text x="300" y="556" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 558)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">9</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">온프레 sLM</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">EXAONE / HyperCLOVA</text>
+  </g>
+  <text x="300" y="612" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 614)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">10</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">외부 LLM API</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">GPT / Claude (민감도 ①·②)</text>
+  </g>
+  <text x="300" y="668" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 670)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">11</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">응답 + Citation</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">근거 강제·환각 방지</text>
+  </g>
+  <text x="300" y="724" text-anchor="middle" font-size="10" fill="#818CF8" opacity="0.6">▼</text>
+  <g class="card" transform="translate(0, 726)">
+    <rect x="48" y="0" width="472" height="48" rx="8" fill="url(#g_pkg2_d5_card)" stroke="#818CF8" stroke-width="0.8" filter="url(#shadow)"/>
+    <circle cx="56" cy="24" r="14" fill="url(#g_pkg2_d5)"/>
+    <text x="56" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="700">12</text>
+    <text x="90" y="20" font-size="11" font-weight="700" fill="#1E1B4B">피드백·감사 로그</text>
+    <text x="90" y="36" font-size="9" font-weight="500" fill="#475569">문서 보강 환류 루프</text>
+  </g>
+  <!-- 하단 cross-reference 120px -->
+  <rect x="40" y="690" width="520" height="80" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+  <text x="60" y="715" font-size="11" font-weight="700" fill="#4338CA">📌 사업계획서 §SCN-LLM-02 장애대응 RAG paste 가능</text>
+  <text x="60" y="735" font-size="10" font-weight="500" fill="#475569">결합 5.2 카드: 5.2-f (LLM·RAG) + sLM 가이드 §1·§5</text>
+  <text x="60" y="752" font-size="10" font-weight="500" fill="#475569">RAG 인프라 가이드 §3 통합 5 계층 + BLK-CSEC-F 라우팅</text>
+</svg>
