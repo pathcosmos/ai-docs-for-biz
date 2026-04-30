@@ -1934,4 +1934,87 @@ a.scn-link:focus-visible {
   border-color: var(--color-slate-700, #334155);
 }
 
+.blk-controls button.primary.ai {
+  background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+}
+
+.blk-controls button.primary.ai:hover {
+  background: linear-gradient(135deg, #059669 0%, #0891B2 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.32);
+}
+
+.ai-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 1em 0;
+  padding: 1rem;
+  background: var(--color-slate-50, #F8FAFC);
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+}
+
+.ai-controls label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-slate-700, #334155);
+  white-space: nowrap;
+}
+
+.ai-controls input[type="password"] {
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 6px;
+  padding: 0.5em 0.7em;
+  font-family: var(--md-code-font, monospace);
+  font-size: 0.85rem;
+}
+
+.ai-controls input[type="password"]:focus {
+  border-color: var(--color-emerald-500, #10B981);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.16);
+}
+
+.ai-controls button {
+  padding: 0.5em 0.9em;
+  border-radius: 6px;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  background: var(--md-default-bg-color);
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ai-controls button:hover {
+  border-color: var(--color-rose-500, #F43F5E);
+  color: var(--color-rose-500, #F43F5E);
+}
+
+.ai-status {
+  margin: 0.6em 0;
+  padding: 0.5em 0.8em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-slate-600, #475569);
+  border-radius: 6px;
+  min-height: 1.2em;
+}
+
+.ai-status:not(:empty) {
+  background: var(--color-slate-50, #F8FAFC);
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+}
+
+[data-md-color-scheme="slate"] .ai-controls {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .ai-controls input[type="password"] {
+  background: var(--color-slate-950, #020617);
+  border-color: var(--color-slate-600, #475569);
+  color: var(--color-slate-100, #F1F5F9);
+}
+
 /* =========================== Phase E16 끝 ============================== */

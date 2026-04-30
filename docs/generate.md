@@ -74,12 +74,42 @@ hide:
 <div class="blk-controls" markdown="1">
 <button id="btn-select-all" type="button">☑ 모두 선택</button>
 <button id="btn-clear-all" type="button">☐ 모두 해제</button>
-<button id="btn-generate" type="button" class="primary">🔄 생성하기</button>
+<button id="btn-generate" type="button" class="primary">🔄 단순 치환 생성</button>
+<button id="btn-ai-generate" type="button" class="primary ai">🤖 AI 다듬기 (Gemini)</button>
 </div>
 
 <div id="blk-checklist" class="blk-checklist"></div>
 
 <div id="error-message" class="error-message"></div>
+
+#### 🤖 AI 다듬기 (선택) — Gemini 1.5 Flash
+
+??? warning "API 키 입력 — 보안 안내 (펼치기)"
+
+    Google Gemini API (무료 1M 토큰/일) 를 사용하여 본문을 사업계획서 어투로 자연스럽게 다듬습니다.
+
+    **API 키 발급 방법**:
+    1. https://aistudio.google.com/apikey 접속
+    2. **Get API key** → **Create API key** 클릭
+    3. 발급된 키 복사 → 아래 입력 필드 붙여넣기
+
+    **보안**:
+    - 키는 **귀하의 브라우저 localStorage 에만 저장** (서버 0)
+    - 페이지 재로드 시 자동 복원
+    - **🔓 키 삭제** 클릭 시 즉시 제거
+    - 키 노출 의심 시 즉시 https://aistudio.google.com/apikey 에서 회전 (재발급)
+
+    **사용량**:
+    - gemini-1.5-flash: 무료 1,500 RPM · 1M 토큰/일
+    - 사업계획서 1 회 생성 ≈ 5,000~20,000 토큰 → 일일 50~200 회 사용 가능
+
+<div class="ai-controls" markdown="1">
+<label for="input-api-key">Gemini API 키 (선택)</label>
+<input id="input-api-key" type="password" placeholder="AIzaSy..." autocomplete="off" />
+<button id="btn-clear-key" type="button">🔓 키 삭제</button>
+</div>
+
+<div id="ai-status" class="ai-status"></div>
 
 </div>
 
