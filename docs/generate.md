@@ -16,15 +16,15 @@ hide:
 
 ---
 
-<div id="generate-form" data-templates-path="data/templates.json">
+<div id="generate-form" data-templates-path="../data/templates.json" markdown="1">
 
-<div class="generate-grid" markdown="span">
+<div class="generate-grid" markdown="1">
 
-<div class="generate-form-col" markdown="span">
+<div class="generate-form-col" markdown="1">
 
-### ① 업체 정보 입력
+#### ① 업체 정보 입력
 
-<div class="form-fields">
+<div class="form-fields" markdown="1">
 <label for="input-고객사">고객사명</label>
 <input id="input-고객사" type="text" placeholder="예: 동국제강(주)" />
 
@@ -52,11 +52,11 @@ hide:
 
 </div>
 
-<div class="generate-result-col" markdown="span">
+<div class="generate-result-col" markdown="1">
 
-### ③ 생성 결과
+#### ③ 생성 결과
 
-<div class="output-controls">
+<div class="output-controls" markdown="1">
 <button id="btn-copy" type="button">📋 복사</button>
 <button id="btn-download" type="button">⬇ 다운로드 (.md)</button>
 </div>
@@ -69,9 +69,9 @@ hide:
 
 </div>
 
-### ② BLK 블록 선택 (Track 1·2·3 핵심 15)
+#### ② BLK 블록 선택 (Track 1·2·3 핵심 15)
 
-<div class="blk-controls">
+<div class="blk-controls" markdown="1">
 <button id="btn-select-all" type="button">☑ 모두 선택</button>
 <button id="btn-clear-all" type="button">☐ 모두 해제</button>
 <button id="btn-generate" type="button" class="primary">🔄 생성하기</button>
