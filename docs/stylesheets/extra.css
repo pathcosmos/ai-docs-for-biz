@@ -2017,4 +2017,242 @@ a.scn-link:focus-visible {
   color: var(--color-slate-100, #F1F5F9);
 }
 
-/* =========================== Phase E16 끝 ============================== */
+/* === Phase E16 Stage 3 — 4 모드 + 패키지 카드 + § 트리 + 검색 === */
+
+.asset-stats {
+  font-size: 0.85rem;
+  color: var(--color-slate-500, #64748B);
+  text-align: center;
+  margin: 0.5em 0 1em;
+  padding: 0.4em 0.8em;
+  background: var(--color-indigo-50, #EEF2FF);
+  border-radius: 6px;
+  border: 1px solid var(--color-indigo-200, #C7D2FE);
+}
+
+.selected-count {
+  margin-left: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-indigo-600, #4F46E5);
+  padding: 0.4em 0.8em;
+  background: var(--color-indigo-50, #EEF2FF);
+  border-radius: 6px;
+}
+
+/* 모드 탭 */
+.generate-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 1.5em 0 0.8em;
+  flex-wrap: wrap;
+}
+
+.generate-tabs button {
+  padding: 0.6em 1.2em;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  background: var(--md-default-bg-color);
+  color: var(--color-slate-700, #334155);
+  border-radius: 8px;
+  font-family: var(--md-text-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s var(--ease-out, ease);
+}
+
+.generate-tabs button:hover {
+  border-color: var(--color-indigo-400, #818CF8);
+  color: var(--color-indigo-700, #4338CA);
+}
+
+.generate-tabs button.active {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.32);
+}
+
+/* 패키지 카드 (⚡ 빠른) */
+.pkg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1em 0;
+}
+
+.pkg-card {
+  padding: 1.1rem;
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(--md-default-bg-color);
+  transition: all 0.18s var(--ease-out, ease);
+}
+
+.pkg-card:hover {
+  border-color: var(--color-indigo-400, #818CF8);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(15, 23, 42, 0.08));
+}
+
+.pkg-card.selected {
+  border-color: var(--color-indigo-500, #6366F1);
+  background: var(--color-indigo-50, #EEF2FF);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+}
+
+.pkg-card-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-indigo-700, #4338CA);
+  margin-bottom: 0.4em;
+}
+
+.pkg-card-sub {
+  font-size: 0.8rem;
+  color: var(--color-slate-600, #475569);
+  margin-bottom: 0.6em;
+}
+
+.pkg-card-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-slate-500, #64748B);
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  background: var(--color-slate-100, #F1F5F9);
+  border-radius: 4px;
+}
+
+/* § 트리 */
+.section-tree {
+  margin: 1em 0;
+}
+
+.section-group {
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  background: var(--md-default-bg-color);
+  overflow: hidden;
+}
+
+.section-group summary {
+  padding: 0.7em 1em;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-indigo-700, #4338CA);
+  cursor: pointer;
+  background: var(--color-slate-50, #F8FAFC);
+  border-bottom: 1px solid transparent;
+  list-style: none;
+}
+
+.section-group summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 0.7em;
+  transition: transform 0.15s;
+  color: var(--color-indigo-500, #6366F1);
+}
+
+.section-group[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.section-group[open] summary {
+  border-bottom-color: var(--color-slate-200, #E2E8F0);
+}
+
+.section-block-list {
+  padding: 0.5em 1em;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+/* 카테고리 배지 */
+.cat-badge {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 0.4em;
+  letter-spacing: 0.04em;
+}
+
+.cat-badge.cat-track   { background: #E0E7FF; color: #4338CA; }
+.cat-badge.cat-package { background: #FCE7F3; color: #BE185D; }
+.cat-badge.cat-scenario { background: #FEF3C7; color: #B45309; }
+.cat-badge.cat-guide   { background: #D1FAE5; color: #047857; }
+.cat-badge.cat-module  { background: #E0F2FE; color: #0369A1; }
+
+/* 블록 미리보기 */
+.blk-preview {
+  font-size: 0.78rem;
+  color: var(--color-slate-500, #64748B);
+  margin-top: 0.2em;
+  padding-left: 0.3em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* 자유 검색 */
+.search-input {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 8px;
+  font-family: var(--md-text-font);
+  font-size: 0.95rem;
+  background: var(--md-default-bg-color);
+  margin-bottom: 1em;
+}
+
+.search-input:focus {
+  border-color: var(--color-indigo-500, #6366F1);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+}
+
+.search-results {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.search-hint {
+  padding: 0.5em 0;
+  font-size: 0.85rem;
+  color: var(--color-slate-500, #64748B);
+  font-weight: 600;
+}
+
+/* 다크 모드 */
+[data-md-color-scheme="slate"] .pkg-card {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .pkg-card:hover,
+[data-md-color-scheme="slate"] .pkg-card.selected {
+  background: rgba(99, 102, 241, 0.10);
+}
+
+[data-md-color-scheme="slate"] .section-group {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .section-group summary {
+  background: var(--color-slate-800, #1E293B);
+}
+
+[data-md-color-scheme="slate"] .search-input {
+  background: var(--color-slate-950, #020617);
+  border-color: var(--color-slate-600, #475569);
+}
+
+/* =========================== Phase E16 Stage 3 끝 ============================== */
