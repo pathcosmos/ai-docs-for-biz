@@ -9,11 +9,12 @@ Thumbs.db
 *.tmp
 ~$*
 
-# 참고 PDF — 외부 GitHub public 전환 (2026-04-29, 엔트리 #39):
-# 6 PDF 는 타 회사 IP (저작권·기밀) 로 외부 공개 부적합.
+# 참고 외부 IP 자료 (PDF + .hwp) — 외부 GitHub public 전환 (2026-04-29, 엔트리 #39 / 2026-04-30 .hwp 추가, 엔트리 #54):
+# 참고 자료 (타 회사 사업신청서 PDF·한글파일) 는 IP (저작권·기밀) 로 외부 공개 부적합.
 # git filter-repo 로 history 에서 일괄 제거 + 본 .gitignore 로 재포함 차단.
 # working tree 에는 보존 (참고 자료용 — git 추적 외).
 *.pdf
+*.hwp
 
 # === HTML 문서화 (Phase E9) ===
 # Python 가상환경
