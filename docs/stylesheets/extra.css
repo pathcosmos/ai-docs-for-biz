@@ -1726,3 +1726,212 @@ a.scn-link:focus-visible {
 }
 
 /* =========================== Phase E14-B 끝 ============================== */
+
+/* =============================================================================
+   Phase E16 — 본문 자동 생성 페이지 (generate.md)
+   ============================================================================= */
+
+.generate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 60em) {
+  .generate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.generate-form-col,
+.generate-result-col {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+  border-radius: var(--radius-lg, 14px);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.06));
+}
+
+.generate-form-col h3,
+.generate-result-col h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0.8em !important;
+  font-size: 1.05rem;
+  color: var(--color-indigo-700, #4338CA);
+}
+
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+
+.form-fields label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-slate-700, #334155);
+  margin-bottom: -0.3em;
+}
+
+.form-fields input {
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 8px;
+  padding: 0.5em 0.75em;
+  font-family: var(--md-text-font);
+  font-size: 0.92rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  transition: border-color 0.15s var(--ease-out, ease), box-shadow 0.15s var(--ease-out, ease);
+}
+
+.form-fields input:focus {
+  border-color: var(--color-indigo-500, #6366F1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+  outline: none;
+}
+
+.form-fields input::placeholder {
+  color: var(--color-slate-300, #CBD5E1);
+  font-weight: 400;
+}
+
+.blk-controls,
+.output-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.8em 0;
+  flex-wrap: wrap;
+}
+
+.blk-controls button,
+.output-controls button {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  background: var(--md-default-bg-color);
+  color: var(--color-slate-700, #334155);
+  font-family: var(--md-text-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s var(--ease-out, ease);
+}
+
+.blk-controls button:hover,
+.output-controls button:hover {
+  background: var(--color-indigo-50, #EEF2FF);
+  border-color: var(--color-indigo-400, #818CF8);
+  color: var(--color-indigo-700, #4338CA);
+}
+
+.blk-controls button.primary {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  color: white;
+  border: 0;
+  padding: 0.5em 1.5em;
+}
+
+.blk-controls button.primary:hover {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.32);
+  transform: translateY(-1px);
+}
+
+.blk-checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.4rem 1rem;
+  margin: 1em 0;
+  padding: 1rem;
+  background: var(--color-slate-50, #F8FAFC);
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200, #E2E8F0);
+}
+
+.blk-checklist .blk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.12s var(--ease-out, ease);
+}
+
+.blk-checklist .blk-item:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.blk-checklist .blk-item input {
+  margin-top: 0.2em;
+  accent-color: var(--color-indigo-500, #6366F1);
+}
+
+.blk-checklist .blk-item span {
+  font-size: 0.85rem;
+  color: var(--color-slate-700, #334155);
+  line-height: 1.4;
+}
+
+#output {
+  width: 100%;
+  min-height: 380px;
+  font-family: var(--md-code-font, monospace);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border: 1px solid var(--color-slate-300, #CBD5E1);
+  border-radius: 8px;
+  padding: 1em;
+  background: var(--color-slate-50, #F8FAFC);
+  color: var(--md-default-fg-color);
+  resize: vertical;
+}
+
+#output:focus {
+  border-color: var(--color-indigo-500, #6366F1);
+  outline: none;
+}
+
+.output-meta {
+  margin-top: 0.6em;
+  font-size: 0.78rem;
+  color: var(--color-slate-500, #64748B);
+}
+
+.output-meta .warn {
+  color: var(--color-amber-600, #D97706);
+  font-weight: 600;
+}
+
+.error-message {
+  margin: 1em 0;
+  padding: 0.8em 1em;
+  color: var(--color-rose-500, #F43F5E);
+  font-size: 0.85rem;
+}
+
+.error-message:empty {
+  display: none;
+}
+
+/* 다크 모드 */
+[data-md-color-scheme="slate"] .generate-form-col,
+[data-md-color-scheme="slate"] .generate-result-col {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+[data-md-color-scheme="slate"] .form-fields input,
+[data-md-color-scheme="slate"] #output {
+  background: var(--color-slate-950, #020617);
+  border-color: var(--color-slate-600, #475569);
+  color: var(--color-slate-100, #F1F5F9);
+}
+
+[data-md-color-scheme="slate"] .blk-checklist {
+  background: var(--color-slate-900, #0F172A);
+  border-color: var(--color-slate-700, #334155);
+}
+
+/* =========================== Phase E16 끝 ============================== */
