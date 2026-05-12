@@ -189,6 +189,16 @@ nav:
           - 컨설팅 위탁 (강도 3 단계): guide/consulting-outsource.md
           - TRL 진척 관리 (3 단계): guide/trl-progress.md
           - 위험 매트릭스: guide/risk-matrix.md
+      - 🧭 9 섹션 생성 가이드:
+          - §1 현황 — 회사 프로필: guide/company-profile.md
+          - §2 문제인식 — 문제 식별 매트릭스: guide/problem-matrix.md
+          - §3 개선방향 — KPI 분해: guide/kpi-breakdown.md
+          - §4 수행방향 — 수행 로드맵: guide/execution-roadmap.md
+          - §5 AI 적용 — 시나리오 ROI: guide/scenario-roi.md
+          - §6 데이터·변수 — 데이터 명세: guide/data-spec.md
+          - §7 모델·학습 — 모델 선정: guide/model-training.md
+          - §8 적용·배포 — 배포 방안: guide/deployment-plan.md
+          - §9 MLOps loop — 거버넌스: guide/mlops-ritual.md
       - 📚 참고 자료:
           - 시너지 ROI 모델: other/synergy-roi.md
           - 책임 분담 매트릭스 (RACI): other/raci-matrix.md

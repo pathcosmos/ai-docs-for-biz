@@ -84,6 +84,15 @@ GUIDE_SECTION_MAP = {
     "trl-progress": "§ TRL 진척",
     "risk-matrix": "§ 위험 매트릭스",
     "quickstart": "§ Quick-Start",
+    "company-profile": "§1 현황",
+    "problem-matrix": "§2 문제인식",
+    "kpi-breakdown": "§3 개선방향",
+    "execution-roadmap": "§4 수행방향",
+    "scenario-roi": "§5 AI 적용",
+    "data-spec": "§6 데이터·변수",
+    "model-training": "§7 모델·학습",
+    "deployment-plan": "§8 적용·배포",
+    "mlops-ritual": "§9 MLOps loop",
 }
 
 # 모듈 → 사업계획서 § 매핑
@@ -380,10 +389,13 @@ def on_pre_build(config):
     for scn_slug in ["detail-top5", "detail-phase2", "detail-rub", "detail-utl-saf", "detail-special-pipe"]:
         all_templates.update(extract_scenarios(docs_dir / "scenario" / f"{scn_slug}.md", scn_slug))
 
-    # 4. 운영 가이드 11
+    # 4. 운영 가이드 + 9 섹션 생성 가이드
     for guide_slug in ["assembly", "finance-budget", "duration-compress", "kpi-measurement",
                        "external-validation", "rag-infra", "domain-knowledge", "korean-slm",
-                       "consulting-outsource", "trl-progress", "risk-matrix", "quickstart"]:
+                       "consulting-outsource", "trl-progress", "risk-matrix", "quickstart",
+                       "company-profile", "problem-matrix", "kpi-breakdown", "execution-roadmap",
+                       "scenario-roi", "data-spec", "model-training", "deployment-plan",
+                       "mlops-ritual"]:
         all_templates.update(extract_guide(docs_dir / "guide" / f"{guide_slug}.md", guide_slug))
 
     # 5. 5 모듈

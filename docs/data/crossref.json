@@ -249,6 +249,78 @@
       "filename": "가이드_위험관리_매트릭스.md"
     },
     {
+      "id": "guide/company-profile",
+      "label": "가이드 — 회사 프로필 템플릿 (BLK-COMPAN…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/company-profile/",
+      "filename": "가이드_회사_프로필_템플릿.md"
+    },
+    {
+      "id": "guide/problem-matrix",
+      "label": "가이드 — 문제 식별 매트릭스 (BLK-PROB-01)",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/problem-matrix/",
+      "filename": "가이드_문제_식별_매트릭스.md"
+    },
+    {
+      "id": "guide/kpi-breakdown",
+      "label": "가이드 — 개선 KPI 분해 (BLK-GOAL-01)",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/kpi-breakdown/",
+      "filename": "가이드_개선_KPI_분해.md"
+    },
+    {
+      "id": "guide/execution-roadmap",
+      "label": "가이드 — 사업 수행 로드맵 (BLK-EXEC-01…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/execution-roadmap/",
+      "filename": "가이드_사업_수행_로드맵.md"
+    },
+    {
+      "id": "guide/scenario-roi",
+      "label": "가이드 — 시나리오 ROI 분석 (BLK-APPLI…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/scenario-roi/",
+      "filename": "가이드_시나리오_ROI_분석.md"
+    },
+    {
+      "id": "guide/data-spec",
+      "label": "가이드 — 데이터 명세 + 변수 구조 (BLK-DA…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/data-spec/",
+      "filename": "가이드_데이터_명세_변수_구조.md"
+    },
+    {
+      "id": "guide/model-training",
+      "label": "가이드 — 모델 선정 + 학습 기법 (BLK-MOD…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/model-training/",
+      "filename": "가이드_모델_선정_학습_기법.md"
+    },
+    {
+      "id": "guide/deployment-plan",
+      "label": "가이드 — 적용·배포 방안 (BLK-TRAIN-01…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/deployment-plan/",
+      "filename": "가이드_적용_배포_방안.md"
+    },
+    {
+      "id": "guide/mlops-ritual",
+      "label": "가이드 — MLOps 거버넌스 리츄얼 (BLK-ML…",
+      "group": "guide",
+      "group_label": "운영 가이드",
+      "url": "/guide/mlops-ritual/",
+      "filename": "가이드_MLOps_거버넌스_리츄얼.md"
+    },
+    {
       "id": "module/cbam",
       "label": "모듈 — CBAM(탄소국경조정제도) 대응 크로스커팅…",
       "group": "module",
@@ -511,7 +583,7 @@
     }
   ],
   "stats": {
-    "node_count": 44,
+    "node_count": 53,
     "edge_count": 31,
     "total_citations": 109
   }
