@@ -7,8 +7,7 @@ document$.subscribe(function () {
   form.dataset.initialized = 'true';
 
   const PLACEHOLDERS = ['고객사', '공정', '수치', '기간', '%', 'LLM모델', '벡터스토어', '임계'];
-  const STORAGE_KEY = 'gemini_api_key';
-  const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
+  const MAX_LLM_CHARS = 12000;
 
   // 패키지별 권장 묶음 (도메인별 시나리오 + Track + 가이드 자동 묶음)
   const PKG_BUNDLES = {
@@ -307,95 +306,56 @@ document$.subscribe(function () {
     updateMeta(result, selected, inputs);
   });
 
-  // 10. API 키 localStorage
-  const apiKeyInput = document.getElementById('input-api-key');
-  if (apiKeyInput) {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) apiKeyInput.value = saved;
-    apiKeyInput.addEventListener('change', () => {
-      const v = apiKeyInput.value.trim();
-      if (v) localStorage.setItem(STORAGE_KEY, v);
-      else localStorage.removeItem(STORAGE_KEY);
+  // 10. LLM Worker endpoint localStorage
+  const endpointInput = document.getElementById('input-llm-endpoint');
+  if (endpointInput && window.AiDocsLLM) {
+    endpointInput.value = window.AiDocsLLM.getEndpoint(form);
+    endpointInput.addEventListener('change', () => {
+      window.AiDocsLLM.saveEndpoint(endpointInput.value.trim());
     });
   }
 
-  document.getElementById('btn-clear-key').addEventListener('click', () => {
-    if (apiKeyInput) apiKeyInput.value = '';
-    localStorage.removeItem(STORAGE_KEY);
-    const status = document.getElementById('ai-status');
-    if (status) status.textContent = '🔓 API 키 삭제됨';
-  });
-
-  async function callGemini(apiKey, prompt) {
-    const url = `${GEMINI_URL}?key=${encodeURIComponent(apiKey)}`;
-    const response = await fetch(url, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.6, maxOutputTokens: 8192, topP: 0.9 },
-      }),
+  const clearEndpointBtn = document.getElementById('btn-clear-endpoint');
+  if (clearEndpointBtn) {
+    clearEndpointBtn.addEventListener('click', () => {
+      if (endpointInput) endpointInput.value = '';
+      if (window.AiDocsLLM) window.AiDocsLLM.saveEndpoint('');
+      const status = document.getElementById('ai-status');
+      if (status) status.textContent = '🔓 Worker endpoint 삭제됨';
     });
-    if (!response.ok) {
-      const errText = await response.text();
-      throw new Error(`Gemini ${response.status}: ${errText.slice(0, 200)}`);
-    }
-    const data = await response.json();
-    if (data.error) throw new Error('Gemini: ' + data.error.message);
-    const candidate = data.candidates && data.candidates[0];
-    if (!candidate) throw new Error('Gemini candidates 0');
-    if (candidate.finishReason === 'SAFETY') throw new Error('Gemini SAFETY 차단');
-    const parts = candidate.content && candidate.content.parts;
-    if (!parts || parts.length === 0) throw new Error('Gemini parts 0');
-    return parts[0].text;
-  }
-
-  function buildAIPrompt(rawText, inputs) {
-    const inputDesc = Object.entries(inputs)
-      .map(([k, v]) => `- [${k}] = ${v}`)
-      .join('\n') || '(입력 정보 없음 — 플레이스홀더 그대로 유지)';
-    return `당신은 한국어 정부지원 R&D 사업계획서 작성 전문가입니다. 아래 본문 초안을 다듬어 주세요:
-
-【작업 지침】
-1. 본문의 \`[고객사]·[공정]·[수치]\` 등 플레이스홀더 중 아래 입력 정보가 있는 것은 자연스럽게 치환
-2. 한국어 사업계획서 formal 문어체 (~한다·~된다 종결, 명사형 표현 적극 활용) 일관 적용
-3. 단락 간 논리 흐름 자연스럽게 (현황 → 문제 → 해결 → 기대효과)
-4. 의미 보존 — 원본 내용 추가·삭제 0, 표현·문체만 정렬
-5. 제목 (## 헤딩) 그대로 유지
-6. 출력은 다듬어진 마크다운 본문만
-
-【사용자 입력 정보】
-${inputDesc}
-
-【본문 초안】
-${rawText}
-
-【다듬어진 본문】
-`;
   }
 
   // 11. AI 다듬기
   document.getElementById('btn-ai-generate').addEventListener('click', async () => {
-    const apiKey = (apiKeyInput && apiKeyInput.value.trim()) || localStorage.getItem(STORAGE_KEY);
     const status = document.getElementById('ai-status');
     const output = document.getElementById('output');
-    if (!apiKey) { if (status) status.textContent = '⚠ API 키를 입력하세요.'; return; }
+    if (!window.AiDocsLLM) { if (status) status.textContent = '⚠ LLM client 로드 실패'; return; }
+    const endpoint = (endpointInput && endpointInput.value.trim()) || window.AiDocsLLM.getEndpoint(form);
+    if (!endpoint) { if (status) status.textContent = '⚠ Cloudflare Worker endpoint 를 입력하세요.'; return; }
+    window.AiDocsLLM.saveEndpoint(endpoint);
     const inputs = collectInputs();
     const selected = getCheckedBlocks();
     if (selected.length === 0) { if (status) status.textContent = '⚠ 블록을 1 개 이상 선택하세요.'; return; }
 
     const rawText = buildOutput(selected, inputs);
-    if (rawText.length > 100000) {
-      if (status) status.textContent = '⚠ 본문 너무 큼 (' + rawText.length + ' 자) — 블록 줄이세요.';
+    if (rawText.length > MAX_LLM_CHARS) {
+      if (status) status.textContent = '⚠ 본문 너무 큼 (' + rawText.length.toLocaleString() + ' 자) — Phase 1 한도 ' + MAX_LLM_CHARS.toLocaleString() + ' 자. 블록을 줄이세요.';
       return;
     }
-    if (status) status.textContent = '🤖 Gemini 호출 중... (' + rawText.length.toLocaleString() + ' 자)';
+    if (status) status.textContent = '🤖 Cloudflare Worker 호출 중... (' + rawText.length.toLocaleString() + ' 자)';
     output.value = rawText + '\n\n---\n\n[AI 다듬기 진행 중...]';
 
     try {
-      const ai = await callGemini(apiKey, buildAIPrompt(rawText, inputs));
-      output.value = ai.trim();
+      const ai = await window.AiDocsLLM.call({
+        endpoint,
+        mode: 'polish',
+        text: rawText,
+        inputs,
+        metadata: { selectedIds: selected },
+      });
+      output.value = ai.text.trim();
       updateMeta(output.value, selected, inputs);
-      if (status) status.textContent = '✅ Gemini AI 완료';
+      if (status) status.textContent = '✅ AI 완료' + (ai.model ? ' (' + ai.model + ')' : '');
     } catch (err) {
       if (status) status.textContent = '❌ ' + err.message;
       output.value = rawText + '\n\n---\n\n[AI 실패: ' + err.message + ']';

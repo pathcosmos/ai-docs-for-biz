@@ -1,0 +1,21 @@
+name = "ai-docs-for-biz-llm"
+main = "src/index.js"
+compatibility_date = "2026-05-12"
+workers_dev = true
+preview_urls = false
+
+[observability]
+enabled = true
+
+[secrets]
+required = ["GEMINI_API_KEY"]
+
+[vars]
+GEMINI_MODEL = "gemini-2.5-flash"
+ALLOWED_ORIGINS = "https://ai-docs-for-biz.pages.dev,https://pathcosmos.github.io,http://127.0.0.1:8000,http://localhost:8000"
+CF_ACCOUNT_ID = "e76ab5c95e0dd49f6b0836f7b22a4f10"
+CF_GATEWAY_ID = "ai-docs-for-biz"
+
+# Configure these outside git:
+# - GEMINI_API_KEY: wrangler secret put GEMINI_API_KEY
+# - CF_AIG_TOKEN: optional authenticated gateway token

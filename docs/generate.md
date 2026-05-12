@@ -19,7 +19,7 @@ hide:
 
 ---
 
-<div id="generate-form" data-templates-path="../data/templates.json" markdown="1">
+<div id="generate-form" data-templates-path="../data/templates.json" data-llm-endpoint="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/llm" markdown="1">
 
 <div class="generate-grid" markdown="1">
 
@@ -120,34 +120,37 @@ hide:
 <button id="btn-select-all" type="button">☑ 모두 선택</button>
 <button id="btn-clear-all" type="button">☐ 모두 해제</button>
 <button id="btn-generate" type="button" class="primary">🔄 단순 치환</button>
-<button id="btn-ai-generate" type="button" class="primary ai">🤖 AI 다듬기 (Gemini)</button>
+<button id="btn-ai-generate" type="button" class="primary ai">🤖 AI 다듬기 (Worker)</button>
 </div>
 
 <div id="error-message" class="error-message"></div>
 
-#### 🤖 AI 다듬기 (선택) — Gemini 1.5 Flash
+#### 🤖 AI 다듬기 (선택) — Gemini + Cloudflare Worker
 
-??? warning "API 키 입력 — 보안 안내 (펼치기)"
+??? warning "Worker endpoint 설정 — 보안 안내 (펼치기)"
 
-    Google Gemini API (무료 1M 토큰/일) 를 사용하여 본문을 사업계획서 어투로 자연스럽게 다듬습니다.
+    Cloudflare Worker 가 Gemini API 키를 서버 측 secret 으로 보관하고, 브라우저는 Worker 의 `/api/llm` endpoint 만 호출합니다.
 
-    **API 키 발급**: https://aistudio.google.com/apikey → **Get API key** → **Create API key**
+    **배포 준비**:
+    - `worker/wrangler.toml` 기준으로 Worker 를 배포합니다.
+    - `GEMINI_API_KEY`, `CF_ACCOUNT_ID`, `CF_GATEWAY_ID` 는 Cloudflare Worker secret 으로 등록합니다.
+    - 선택적으로 authenticated AI Gateway 를 쓰는 경우 `CF_AIG_TOKEN` 도 secret 으로 등록합니다.
 
     **보안**:
-    - 키는 **귀하의 브라우저 localStorage 에만 저장** (서버 0)
-    - 페이지 재로드 시 자동 복원
-    - **🔓 키 삭제** 클릭 시 즉시 제거
-    - 노출 의심 시 즉시 https://aistudio.google.com/apikey 에서 회전
+    - Gemini API 키는 브라우저에 입력하거나 저장하지 않습니다.
+    - 이 페이지에는 Worker endpoint URL 만 저장됩니다.
+    - endpoint 는 브라우저 `localStorage` 에 저장되어 페이지 재로드 시 복원됩니다.
+    - **🔓 endpoint 삭제** 클릭 시 저장값을 제거합니다.
 
     **사용량**:
-    - gemini-1.5-flash: 1,500 RPM · 1M 토큰/일 무료
-    - 사업계획서 1 회 ≈ 5,000~50,000 토큰 → 일일 20~200 회 사용 가능
-    - 본문 100,000 자 초과 시 자동 차단 (에러 회피)
+    - 기본 모델은 `gemini-2.5-flash` 입니다.
+    - Phase 1 은 단일 polish 호출만 지원합니다.
+    - 본문 12,000 자 초과 시 차단합니다. 블록 단위 chunking 은 후속 단계에서 구현합니다.
 
 <div class="ai-controls" markdown="1">
-<label for="input-api-key">Gemini API 키</label>
-<input id="input-api-key" type="password" placeholder="AIzaSy..." autocomplete="off" />
-<button id="btn-clear-key" type="button">🔓 키 삭제</button>
+<label for="input-llm-endpoint">Cloudflare Worker endpoint</label>
+<input id="input-llm-endpoint" type="url" placeholder="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/llm" autocomplete="off" />
+<button id="btn-clear-endpoint" type="button">🔓 endpoint 삭제</button>
 </div>
 
 <div id="ai-status" class="ai-status"></div>

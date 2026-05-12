@@ -22,8 +22,15 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Node / Wrangler dependencies
+node_modules/
+
 # MkDocs 빌드 출력
 site/
 
 # Serena 메모리 (운영 자산 외)
 .serena/
+
+# Cloudflare Worker local secrets / env files
+.dev.vars*
+.env*

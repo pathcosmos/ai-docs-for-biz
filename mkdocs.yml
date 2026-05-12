@@ -1,6 +1,6 @@
 site_name: AI 사업계획서 자산 허브
 site_description: 한국어 제조 AI 사업계획서 작성을 위한 누적 자산 (44 마크다운, 9 분류, 36 방법론)
-site_url: https://pathcosmos.github.io/ai-docs-for-biz/
+site_url: https://ai-docs-for-biz.pages.dev/
 site_author: ai-docs-for-biz workspace
 repo_url: https://github.com/pathcosmos/ai-docs-for-biz
 repo_name: pathcosmos/ai-docs-for-biz
@@ -123,6 +123,7 @@ extra_javascript:
   - javascripts/copy-block.js   # 헤더·표·blockquote 단위 Copy 버튼 (paste-ready)
   - javascripts/lightbox.js     # 이미지·SVG 클릭 → 확대 + 다운로드 (고해상도)
   - javascripts/graph.js        # D3 force-directed cross-reference 그래프 (graph.md)
+  - javascripts/llm-client.js    # [E17-1] Cloudflare Worker /api/llm 호출 래퍼
   - javascripts/generate-template.js  # [E16-2] 본문 자동 생성 폼 (generate.md)
 
 # =============================================================================
