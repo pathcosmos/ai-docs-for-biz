@@ -1,6 +1,17 @@
 (function () {
   const STORAGE_KEY = 'ai_docs_agent_state_v1';
   const RESULT_KEY = 'ai_docs_agent_last_result_v1';
+  const SECTION_CONTEXT_IDS = [
+    'GUIDE-COMPANY-PROFILE-§3',
+    'GUIDE-PROBLEM-MATRIX-§3',
+    'GUIDE-KPI-BREAKDOWN-§3',
+    'GUIDE-EXECUTION-ROADMAP-§3',
+    'GUIDE-SCENARIO-ROI-§3',
+    'GUIDE-DATA-SPEC-§3',
+    'GUIDE-MODEL-TRAINING-§3',
+    'GUIDE-DEPLOYMENT-PLAN-§3',
+    'GUIDE-MLOPS-RITUAL-§3',
+  ];
 
   const app = document.getElementById('agent-app');
   if (!app) return;
@@ -21,9 +32,14 @@
 
   let currentStep = 1;
   let finalMarkdown = '';
+  let templateContextPromise = null;
 
   function defaultEndpoint() {
     return app.dataset.agentEndpoint || '';
+  }
+
+  function templateIndexPath() {
+    return app.dataset.templateIndexPath || '../data/templates_index.json';
   }
 
   function setStatus(message, tone) {
@@ -74,7 +90,7 @@
     });
   }
 
-  function collectPayload() {
+  function collectPayload(templateContext) {
     const profile = {};
     const fields = Array.from(form.querySelectorAll('[name]'));
     fields.forEach(field => {
@@ -82,7 +98,30 @@
       if (!value || field.name === 'settings.endpoint') return;
       assignPath(profile, field.name, value);
     });
-    return { profile };
+    const payload = { profile };
+    if (templateContext && Object.keys(templateContext).length > 0) {
+      payload.template_context = templateContext;
+    }
+    return payload;
+  }
+
+  async function loadTemplateContext() {
+    if (!templateContextPromise) {
+      templateContextPromise = fetch(templateIndexPath(), { cache: 'force-cache' })
+        .then(response => {
+          if (!response.ok) throw new Error(`templates_index.json HTTP ${response.status}`);
+          return response.json();
+        })
+        .then(index => {
+          const context = {};
+          SECTION_CONTEXT_IDS.forEach(id => {
+            if (index && index[id]) context[id] = index[id];
+          });
+          return context;
+        })
+        .catch(() => ({}));
+    }
+    return templateContextPromise;
   }
 
   function saveState() {
@@ -211,12 +250,14 @@
       return;
     }
     resetOutput();
+    setStatus('컨텍스트 로딩 중', 'running');
+    const payload = collectPayload(await loadTemplateContext());
     setStatus('요청 중', 'running');
     const endpoint = fieldValue(endpointInput) || defaultEndpoint();
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(collectPayload()),
+      body: JSON.stringify(payload),
     });
     if (!response.ok) {
       const error = await response.json().catch(() => ({ error: response.statusText }));

@@ -1,15 +1,15 @@
 import { callGeminiText, geminiModel, requireGeminiEnv } from './gemini.js';
 
 const SECTION_DEFS = [
-  ['§1', '현황', 'BLK-COMPANY-01', '회사 프로필과 기존 시스템 현황을 정리한다.'],
-  ['§2', '문제인식', 'BLK-PROB-01', '운영·데이터·지식·제어 관점의 AS-IS 문제를 정리한다.'],
-  ['§3', '개선방향', 'BLK-GOAL-01', '핵심 KPI와 단계별 개선 목표를 제시한다.'],
-  ['§4', '수행방향', 'BLK-EXEC-01·02', 'phase 로드맵, 역할, 예산, 위험 대응을 정리한다.'],
-  ['§5', 'AI 적용 포인트', 'BLK-APPLIC-01', '선정 시나리오, ROI, 시너지 구조를 정리한다.'],
-  ['§6', '데이터·변수', 'BLK-DATA-01', '핸들링 데이터, X/y, 전처리, 분할, 거버넌스를 명세한다.'],
-  ['§7', '모델·학습', 'BLK-MODEL-01', '모델 후보, 학습 전략, 검증 지표, 리스크를 정리한다.'],
-  ['§8', '적용·배포', 'BLK-TRAIN-01·02', '배포 아키텍처, 운영 통합, HITL, 교육을 정리한다.'],
-  ['§9', 'MLOps loop', 'BLK-MLOPS-01·02', '모니터링, 드리프트, 재학습, 운영 리듬을 정리한다.'],
+  ['§1', '현황', 'BLK-COMPANY-01', '회사 프로필과 기존 시스템 현황을 정리한다.', ['GUIDE-COMPANY-PROFILE-§3']],
+  ['§2', '문제인식', 'BLK-PROB-01', '운영·데이터·지식·제어 관점의 AS-IS 문제를 정리한다.', ['GUIDE-PROBLEM-MATRIX-§3']],
+  ['§3', '개선방향', 'BLK-GOAL-01', '핵심 KPI와 단계별 개선 목표를 제시한다.', ['GUIDE-KPI-BREAKDOWN-§3']],
+  ['§4', '수행방향', 'BLK-EXEC-01·02', 'phase 로드맵, 역할, 예산, 위험 대응을 정리한다.', ['GUIDE-EXECUTION-ROADMAP-§3']],
+  ['§5', 'AI 적용 포인트', 'BLK-APPLIC-01', '선정 시나리오, ROI, 시너지 구조를 정리한다.', ['GUIDE-SCENARIO-ROI-§3']],
+  ['§6', '데이터·변수', 'BLK-DATA-01', '핸들링 데이터, X/y, 전처리, 분할, 거버넌스를 명세한다.', ['GUIDE-DATA-SPEC-§3']],
+  ['§7', '모델·학습', 'BLK-MODEL-01', '모델 후보, 학습 전략, 검증 지표, 리스크를 정리한다.', ['GUIDE-MODEL-TRAINING-§3']],
+  ['§8', '적용·배포', 'BLK-TRAIN-01·02', '배포 아키텍처, 운영 통합, HITL, 교육을 정리한다.', ['GUIDE-DEPLOYMENT-PLAN-§3']],
+  ['§9', 'MLOps loop', 'BLK-MLOPS-01·02', '모니터링, 드리프트, 재학습, 운영 리듬을 정리한다.', ['GUIDE-MLOPS-RITUAL-§3']],
 ];
 
 const DOMAIN_BY_INDUSTRY = {
@@ -73,12 +73,13 @@ function makePlan(profile) {
 
 function makeOutline(plan) {
   return {
-    sections: SECTION_DEFS.map(([id, title, guide, intent], index) => ({
+    sections: SECTION_DEFS.map(([id, title, guide, intent, contextIds], index) => ({
       index: index + 1,
       id,
       title,
       guide,
       intent,
+      context_ids: contextIds,
       blocks_to_cite: [guide],
       ascii_slots: [],
     })),
@@ -102,7 +103,28 @@ function compactProfileJson(profile) {
   return JSON.stringify(profile, null, 2).slice(0, 6000);
 }
 
-function buildSectionPrompt(profile, outlineSection, plan) {
+function compactTemplateContext(templateContext, outlineSection) {
+  const entries = (outlineSection.context_ids || [])
+    .map(id => [id, templateContext?.[id]])
+    .filter(([, entry]) => entry && typeof entry === 'object')
+    .map(([id, entry]) => {
+      const title = typeof entry.title === 'string' ? entry.title.slice(0, 160) : '';
+      const section = typeof entry.section === 'string' ? entry.section.slice(0, 80) : '';
+      const tags = Array.isArray(entry.tags) ? entry.tags.slice(0, 8).join(', ') : '';
+      const preview = typeof entry.preview === 'string' ? entry.preview.slice(0, 900) : '';
+      return [
+        `- id: ${id}`,
+        title ? `  title: ${title}` : '',
+        section ? `  section: ${section}` : '',
+        tags ? `  tags: ${tags}` : '',
+        preview ? `  preview: ${preview}` : '',
+      ].filter(Boolean).join('\n');
+    });
+
+  return entries.length > 0 ? entries.join('\n') : '(제공된 compact index context 없음)';
+}
+
+function buildSectionPrompt(profile, outlineSection, plan, templateContext = {}) {
   return `당신은 한국어 정부지원 R&D 사업계획서 작성 전문가입니다. 아래 입력을 바탕으로 사업계획서의 단일 섹션만 작성하세요.
 
 【작성 대상】
@@ -120,6 +142,10 @@ function buildSectionPrompt(profile, outlineSection, plan) {
 4. 확인되지 않은 수치나 회사별 고유 사실은 지어내지 말고 "[확인 필요]" 로 표시합니다.
 5. 섹션 끝에는 반드시 "> [출처: ${outlineSection.guide}]" 를 포함합니다.
 6. 다른 섹션 제목은 만들지 않습니다.
+
+【생성 가이드 compact context】
+아래 context는 섹션 구조와 표현 패턴 참고용입니다. 원문 전체가 아니므로 회사별 사실·수치는 사용자 입력만 기준으로 작성합니다.
+${compactTemplateContext(templateContext, outlineSection)}
 
 【사용자 입력 JSON】
 ${compactProfileJson(profile)}
@@ -150,11 +176,11 @@ function deterministicSectionResult(profile, outlineSection, plan, startedAt = D
   };
 }
 
-async function llmSectionResult(profile, outlineSection, plan, env, fetchImpl) {
+async function llmSectionResult(profile, outlineSection, plan, env, fetchImpl, templateContext) {
   const startedAt = Date.now();
   try {
     const gemini = await callGeminiText({
-      prompt: buildSectionPrompt(profile, outlineSection, plan),
+      prompt: buildSectionPrompt(profile, outlineSection, plan, templateContext),
       env,
       fetchImpl,
       generationConfig: {
@@ -184,7 +210,7 @@ async function llmSectionResult(profile, outlineSection, plan, env, fetchImpl) {
   }
 }
 
-async function writeSections({ profile, outline, plan, mode, env, fetchImpl, send }) {
+async function writeSections({ profile, outline, plan, mode, env, fetchImpl, send, templateContext }) {
   if (mode !== 'llm') {
     return outline.sections.map(outlineSection => {
       send('section_start', { section: outlineSection.id, at: new Date().toISOString() });
@@ -206,7 +232,7 @@ async function writeSections({ profile, outline, plan, mode, env, fetchImpl, sen
       send('section_done', result);
       return result;
     }
-    const result = await llmSectionResult(profile, outlineSection, plan, env, fetchImpl);
+    const result = await llmSectionResult(profile, outlineSection, plan, env, fetchImpl, templateContext);
     if (result.fallback_reason) {
       send('section_fallback', { section: outlineSection.id, reason: result.fallback_reason });
     }
@@ -265,6 +291,9 @@ export async function handleAgentGenerate(request, env, fetchImpl, origin, corsH
   }
 
   const profile = payload.profile || {};
+  const templateContext = payload.template_context && typeof payload.template_context === 'object'
+    ? payload.template_context
+    : {};
   const mode = writerMode(profile);
   if (!['deterministic', 'llm'].includes(mode)) {
     return Response.json({ error: 'invalid_writer_mode' }, { status: 400, headers: corsHeaders(origin, env) });
@@ -306,7 +335,7 @@ export async function handleAgentGenerate(request, env, fetchImpl, origin, corsH
           partial: { section_count: outline.sections.length, ascii_slot_count: 0 },
         });
 
-        const sections = await writeSections({ profile, outline, plan, mode, env, fetchImpl, send });
+        const sections = await writeSections({ profile, outline, plan, mode, env, fetchImpl, send, templateContext });
 
         send('stage_start', { stage: 'validate', at: new Date().toISOString() });
         const validation = {

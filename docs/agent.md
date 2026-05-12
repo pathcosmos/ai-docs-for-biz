@@ -7,7 +7,7 @@ hide:
 
 # Agent 자동 작성
 
-<div id="agent-app" class="agent-app" data-agent-endpoint="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/agent/generate" markdown="1">
+<div id="agent-app" class="agent-app" data-agent-endpoint="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/agent/generate" data-template-index-path="../data/templates_index.json" markdown="1">
 
 <div class="agent-layout" markdown="1">
 

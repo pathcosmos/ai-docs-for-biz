@@ -250,6 +250,18 @@ describe('handleRequest', () => {
             writer_mode: 'llm',
           },
         },
+        template_context: {
+          'GUIDE-COMPANY-PROFILE-§3': {
+            title: '회사 프로필 본문 템플릿',
+            section: '§3',
+            preview: '회사 현황은 시스템 보유 현황과 공정 범위를 함께 서술한다.',
+          },
+          'GUIDE-DATA-SPEC-§3': {
+            title: '데이터 명세 본문 템플릿',
+            section: '§3',
+            preview: '데이터 명세는 raw source, X 후보, y target을 구분한다.',
+          },
+        },
       }),
       { ...env, AGENT_MAX_LLM_SECTIONS: '9' },
       async (url, init) => {
@@ -283,7 +295,9 @@ describe('handleRequest', () => {
     assert.equal(fetchCalls[0].init.headers['x-goog-api-key'], 'test-gemini-key');
     assert.equal(fetchCalls[0].init.headers['cf-aig-collect-log-payload'], 'false');
     assert.match(fetchCalls[0].prompt, /BLK-COMPANY-01/);
+    assert.match(fetchCalls[0].prompt, /회사 현황은 시스템 보유 현황과 공정 범위를 함께 서술한다/);
     assert.match(fetchCalls[5].prompt, /BLK-DATA-01/);
+    assert.match(fetchCalls[5].prompt, /데이터 명세는 raw source, X 후보, y target을 구분한다/);
 
     const complete = events.find(item => item.event === 'complete');
     assert.ok(complete);
