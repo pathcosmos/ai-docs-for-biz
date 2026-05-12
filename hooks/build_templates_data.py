@@ -163,6 +163,15 @@ def make_preview(body: str, n: int = 80) -> str:
     return plain[:n] + ("…" if len(plain) > n else "")
 
 
+def make_compact_index(templates: dict) -> dict:
+    """LLM 매핑용 compact index. body 는 절대 포함하지 않는다."""
+    fields = ("title", "category", "section", "package", "domain", "tags", "preview")
+    return {
+        block_id: {key: block.get(key) for key in fields}
+        for block_id, block in templates.items()
+    }
+
+
 # ============================================================================
 # 자산별 추출 함수
 # ============================================================================
@@ -410,10 +419,16 @@ def on_pre_build(config):
         encoding="utf-8",
     )
 
+    index_output = docs_dir / "data" / "templates_index.json"
+    index_output.write_text(
+        json.dumps(make_compact_index(all_templates), ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+
     # 통계
     by_cat = {}
     for blk in all_templates.values():
         by_cat[blk["category"]] = by_cat.get(blk["category"], 0) + 1
 
     cat_summary = " · ".join(f"{k}: {v}" for k, v in sorted(by_cat.items()))
-    print(f"[build_templates_data] {len(all_templates)} 블록 → data/templates.json ({cat_summary})")
+    print(f"[build_templates_data] {len(all_templates)} 블록 → data/templates.json + data/templates_index.json ({cat_summary})")

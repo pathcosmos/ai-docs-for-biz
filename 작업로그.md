@@ -157,11 +157,18 @@
 | `가이드_시나리오_ROI_분석.md` (BLK-APPLIC-01) | Phase E19 Phase 0 #7. §5 (AI 적용 포인트) 시나리오 선정 근거 + 비용·효과 정량화 + 시너지 매핑. 8 장 구조 — 4 범주 (선정·비용·효과·시너지) + 3 Tier 16 필드 + §5.1~§5.6 6 절 본문 + 표 5 종 (선정·투자·효과·ROI·시너지) + 보수/낙관 분기 + 6 도메인 예시. 시나리오_카탈로그 40 SCN + 시너지_ROI_모델 §1·6 + 가이드_재무_예산_산정 §3 답습. 운영 가이드 군 18 번째. | 신설 (엔트리 #69 / Phase E19 #7) | ~200 |
 | `가이드_적용_배포_방안.md` (BLK-TRAIN-01·02) | Phase E19 Phase 0 #8. §8 (적용·배포 방안) 배포 아키텍처 (edge·on-prem·cloud) + 운영 통합 + HITL workflow + 교육 커리큘럼 + 변화관리·인수인계. 8 장 구조 — 5 범주 (아키텍처·통합·HITL·교육·변화관리) + 3 Tier 16 필드 + §8.1~§8.5 5 절 본문 + ASCII 도식 2 종 (3 단 배포·HITL workflow) + 교육 3 단. track2 BLK-T2-4.4 + SCN-MLO-03 + 가이드_도메인_지식추출 답습. 운영 가이드 군 19 번째. | 신설 (엔트리 #69 / Phase E19 #8) | ~230 |
 | `가이드_MLOps_거버넌스_리츄얼.md` (BLK-MLOPS-01·02) | Phase E19 Phase 0 #9 (마지막). §9 (MLOps loop) 3 층 모니터링 + 드리프트 (PSI·KS) + 자동 재학습 트리거 + 챔피언·챌린저 SOP + 5 리츄얼 (월·분기·연·HITL 주·외부 감사). 8 장 구조 — 5 범주 (Monitoring·Drift·Retraining·Champion-Challenger·Governance) + 3 Tier 17 필드 + §9.1~§9.5 5 절 본문 + ASCII 도식 2 종 (드리프트·챔피언승급) + 표 3 종. track2 §5.5·6.1·6.3·6.5 + SCN-MLO-01·02·03 답습. 운영 가이드 군 20 번째. **Phase 0 콘텐츠 갭 9 종 완료**. | 신설 (엔트리 #69 / Phase E19 #9) | ~250 |
+| `자동화_Agent_UI_개발계획.md` | Phase E19 Phase 1·2·3 (Worker Agent + 전용 UI + Section Writers × 9) 구현 직전 상세 사양. 10 절 본문 — Context·Orchestrator·6 Stages 명세·9 Section Writers 매핑·SSE Wire Protocol·Compact Index·Stepper 5 단계 UI·API Schema·Day 단위 일정·검증/위험. 사용자 결정 3 항 (Section Writer 완전 병렬·Stepper UI·ASCII Phase 4 분리) 반영. **메타 진단 자산 군 12 번째**. 작성 당시에는 코드 작성 금지였고, 엔트리 #72 에서 Phase 1 MVP 일부 구현으로 전환. | 신설 (엔트리 #70 / Phase E19 / Phase 1·2·3 사양) | ~480 |
+| `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택 (Gemini / 빠른 골격) 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) | 144 |
+| `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) | 283 |
+| `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) | 203 |
+| `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
+| `worker/src/agent.js` | `POST /api/agent/generate` SSE Agent — Tier 1 회사명 검증, Planner·Outline·9 Section·Validate·Compile 이벤트 스트림, deterministic fallback, `writer_mode=llm` 시 Gemini Section Writer 호출. Free tier 기본은 `AGENT_MAX_LLM_SECTIONS=5` 로 제한. | 신설 (엔트리 #72) + Gemini Section Writer (엔트리 #73) + Free tier cap (엔트리 #74) | 356 |
+| `worker/src/gemini.js` | Cloudflare AI Gateway / Google AI Studio 공용 호출 모듈 — env 검증, Gateway URL 생성, payload logging off 헤더, authenticated gateway token, Gemini text parse. `/api/llm` 과 Agent Section Writer 가 공유. | 신설 (엔트리 #73) | 71 |
 | `worker/package.json` | Cloudflare Worker 하위 프로젝트 스크립트 (`test`, `deploy:dry-run`, `deploy`) + Wrangler devDependency 선언. | 신설 (엔트리 #61) | 13 |
 | `worker/package-lock.json` | Worker npm lockfile — Wrangler 4.90.0 및 의존성 고정. | 신설 (엔트리 #63) | 1502 |
-| `worker/wrangler.toml` | Cloudflare Worker 배포 설정 — main·compatibility_date·workers_dev·preview_urls·observability·required secrets·기본 Gemini 모델·origin allowlist·AI Gateway vars. | 신설 (엔트리 #61) + 배포 설정 확정 (엔트리 #62·#63) | 21 |
-| `worker/src/index.js` | `POST /api/llm` 보안 프록시 — Cloudflare AI Gateway Google AI Studio 경유 Gemini polish 호출, CORS allowlist, mode/size 가드, payload logging 미저장 헤더. | 신설 (엔트리 #61) | 227 |
-| `worker/test/index.test.js` | Worker Node test suite — origin 차단, CORS, 미구현 mode, size limit, Gateway 호출 헤더·URL·응답 파싱 검증. | 신설 (엔트리 #61) | 144 |
+| `worker/wrangler.toml` | Cloudflare Worker 배포 설정 — main·compatibility_date·workers_dev·preview_urls·observability·required secrets·기본 Gemini 모델·origin allowlist·AI Gateway vars·Free tier 용 `AGENT_MAX_LLM_SECTIONS=5`. Free plan 미지원 `limits.cpu_ms` 는 엔트리 #74 에서 제거. | 신설 (엔트리 #61) + 배포 설정 확정 (엔트리 #62·#63) + Agent 운영 보강 (엔트리 #72·#74) | 22 |
+| `worker/src/index.js` | Worker 라우터 — 기존 `POST /api/llm` 보안 프록시 보존 + 신규 `POST /api/agent/generate` SSE Agent 라우트 연결. Gateway 호출은 `worker/src/gemini.js` 로 공용화. | 신설 (엔트리 #61) + Agent route 추가 (엔트리 #72) + Gateway 공용화 (엔트리 #73) | 175 |
+| `worker/test/index.test.js` | Worker Node test suite — 기존 LLM proxy 검증 + Agent Tier 1 거부·SSE 9 섹션 complete 이벤트 + Gemini Section Writer Gateway 호출·payload logging off·LLM 섹션 cap 검증. | 신설 (엔트리 #61) + Agent 테스트 추가 (엔트리 #72·#73·#74) | 342 |
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
@@ -2950,6 +2957,197 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 - **다음 단계**:
   - strict 빌드 완전 통과를 원하면 기존 링크 경고 2 건 (`filter.md`·`scenario/catalog.md`) 별도 수정.
   - 생성 UI에서 "9 섹션 생성 가이드" 블록을 별도 탭/필터로 노출하려면 `docs/javascripts/generate-template.js` 의 section grouping 보강 필요.
+
+---
+
+#### 엔트리 #71 — strict 빌드 복구: filter·scenario 링크 정리 (2026-05-12)
+
+- **맥락**: 엔트리 #70 후 non-strict 빌드는 성공했으나 `mkdocs build --strict` 는 기존 링크 경고 2 건 때문에 실패. 사용자가 "개발 진행하자" 라고 요청하여 즉시 strict 빌드 실패를 재현하고 원인 링크를 정리.
+- **사용자 요청 (원문)**: *"개발 진행하자"*
+- **AI 수행**:
+  1. `.venv/bin/python -m mkdocs build --strict` 실행으로 실패 재현 — `filter.md` 의 `tags.md` 링크, `scenario/catalog.md` 의 `./other/support-programs.md` 상대 링크 경고 확인.
+  2. `docs/filter.md` 의 존재하지 않는 `tags.md` 링크를 실제 생성 데이터 `data/templates.json` 링크로 교체.
+  3. `시나리오_카탈로그.md` 의 지원사업 스냅샷 링크를 `../지원사업_공고_스냅샷_2026.md` 로 조정. slug rewrite 후 `../other/support-programs.md` 가 되어 `docs/scenario/catalog.md` 기준 정상 경로가 됨.
+  4. `python3 build_src.py` 재실행 — 원본 카탈로그 변경을 `docs/scenario/catalog.md` 로 동기화.
+  5. `.venv/bin/python -m mkdocs build --strict` 재실행.
+- **검증 결과**:
+  - strict 빌드 exit 0. 기존 WARNING 2 건 제거.
+  - `build_templates_data` 결과 유지 — **348 블록** (`guide: 174 · module: 35 · package: 45 · scenario: 79 · track: 15`).
+  - `build_crossref` 결과 유지 — 노드 53 · 엣지 31 · 인용 109.
+  - 남은 메시지는 `blocks.md` line-anchor 관련 INFO 와 `meta/worklog.md` 의 `svg` relative link INFO 로, strict 실패 조건이 아님.
+- **산출물**:
+  - `docs/filter.md`
+  - `시나리오_카탈로그.md`
+  - `docs/scenario/catalog.md` (build_src 동기화)
+  - `site/` (strict 빌드 산출물 갱신)
+- **다음 단계**:
+  - 생성 UI의 §1~§9 생성 가이드 그룹 필터 노출.
+  - 이후 커밋·푸시 및 Cloudflare Pages 재배포 가능.
+
+---
+
+#### 엔트리 #70 — Phase E19 Phase 1·2·3 상세 개발 계획서 신설 (코드 작성 미진입) (2026-05-12)
+
+- **맥락**: Phase 0 (콘텐츠 갭 9 종, #66~#69, commit `99a60ee`) 완료 후 사용자가 Phase 1·2·3 (Worker Agent + 전용 UI + Section Writers × 9) 의 상세 개발 계획을 요청. 명시 — "실제 개발 말고 계획까지만 세워 줘 별도 md 파일로 저장해주면 돼". 본 엔트리는 별도 md 산출물 작성 + 코드 작성 진입 차단.
+- **사용자 요청 (원문 인용)**:
+  1. *"자동 작성 UI·Agent 개발 상세 계획 작성해 줘"*
+  2. *"실제 개발 말고 계획까지만 세워 줘 별도 md 파일로 저장해주면 돼"*
+- **AI 수행**:
+  1. Plan mode 재진입 → 기존 plan 파일 (`ai-effervescent-dijkstra.md`) Phase 1·2·3 high-level 골격 확인
+  2. 현 워크스페이스 baseline 점검 — `worker/src/index.js` 227 줄·`docs/javascripts/llm-client.js` 58 줄·`docs/data/templates.json` 1.2 MB
+  3. AskUserQuestion 3 항 — Section Writer 호출 방식 / UI 폼 구조 / ASCII 시점 → 사용자 응답 = 완전 병렬 / Stepper 5 단계 / Phase 4 분리
+  4. plan 파일에 §11 (Phase 1·2·3 산출물 신설) 절 추가 — 산출물 경로·목차·작성 후 절차·코드 작성 금지 명시
+  5. ExitPlanMode → 사용자 승인
+  6. `자동화_Agent_UI_개발계획.md` 신설 — 약 480 줄, 10 절 본문
+     - §1 Context (위치·결정·자산 매트릭스·비목표)
+     - §2 Worker Agent Orchestrator (모듈 골격·SSE 라우트·ReadableStream 사양·Cloudflare 한도 정합)
+     - §3 6 Stages 상세 명세 (각 stage 의 입력·prompt·출력·timeout·SSE 이벤트 + Stage 3 Promise.all × 9 설계 + 6 Stage 타이밍 추정)
+     - §4 9 Section Writers 매핑 표 (§N → prompt 파일·가이드 BLK·키워드·profile 부분집합) + system prompt 표준 골격
+     - §5 SSE Wire Protocol (7 이벤트 schema + 시퀀스 + reconnect 정책)
+     - §6 Compact Index 빌더 (build_templates_index.py 사양)
+     - §7 Stepper 5 단계 UI 사양 (HTML 구조·7 모듈 분해·CSS 클래스·localStorage·Tier 1 거부)
+     - §8 POST /api/agent/generate API Schema (5 Step 합산 99 필드 + Error Code 표)
+     - §9 개발 일정 분해 (Day 1-30, Phase 1·2·3 각 2 주)
+     - §10 검증·위험·한계 (테스트·CF Worker 한계·한국어 압축 토큰 비용·fallback·확인 필요 5 항)
+  7. `작업로그.md §2.7` 등재 (메타 진단 자산 군 12 번째)
+  8. 본 엔트리 #70 신설
+- **판단 근거**:
+  - **별도 md 산출물 선택의 합리성** — plan 파일 (`~/.claude/plans/`) 은 Claude Code 내부 위치, 사용자 검토·재방문 어려움. 워크스페이스 메타 자산 (`자동화_시스템_구현_가능성_진단.md` 12 번째 답습) 으로 두면 (a) git 추적 (b) 사용자 직접 검토 (c) Phase 1 착수 시 직접 참조 가능
+  - **Phase 1·2·3 통합 1 문서 vs Phase 별 3 문서** — 통합 1 문서 선택. 9 Section Writers 매핑 표 (§4) 와 SSE Wire Protocol (§5) 가 Worker (Phase 1) 와 UI (Phase 2) 의 contract 인터페이스 — 분리하면 contract 가 분산되어 변경 시 동기화 비용 증가
+  - **사용자 결정 3 항 반영의 핵심성** — 완전 병렬 (Promise.all × 9, §3.3) / Stepper 5 단계 (§7) / ASCII Phase 4 분리 (§3.4 placeholder 만) — 3 결정이 전체 문서 구조의 1 차 입력
+  - **코드 작성 진입 명시적 차단** — plan 파일 §11 의 "위 산출물 외 작업 명시적 금지" 절 + 본 md 의 §1.4 "비목표" + 부록 마지막 줄 모두 명시. 사용자 명시 "실제 개발 말고 계획까지만" 의 강 제약 코드화
+  - **Cloudflare Worker CPU time 30 초 한도 위반 가능성 사전 노출** — §10.2 위험 표에서 Paid Unbound 필수 명시. Phase 1 Day 1 착수 전 사용자 인지 확보 (비용 ↑)
+- **사용자 의사결정**:
+  - AskUserQuestion 3 항 모두 권장안 채택 (완전 병렬 / Stepper 5 단계 / Phase 4 분리)
+  - plan 승인 (ExitPlanMode 응답 "User has approved your plan")
+  - **본 문서 후속 결정 대기** — Phase 1 Day 1 착수 여부·시점·Cloudflare Paid 전환 여부
+- **산출물**:
+  - `/Volumes/EXDATA/temp_git/ai-docs-for-biz/자동화_Agent_UI_개발계획.md` (약 480 줄, 10 절)
+  - `작업로그.md §2.7` 신규 자산 등재 (메타 진단 자산 12 번째)
+  - 본 작업로그 엔트리 #70
+  - **워크스페이스 기존 자산 무수정** — 코드 0 줄 작성
+- **배운 점·재사용 포인트**:
+  - **방법론 후보 4.100 — 코드 작성 직전 상세 사양 별도 md 패턴**: 큰 구현 (~ 6 주 / 1,500+ 줄 코드) 직전에 (a) 함수·class·schema·API contract·테스트 사양을 1 md 로 모아 (b) 사용자가 코드 진입 전 일괄 검토 (c) Phase 별 Day 단위 일정 분해. plan 파일 (Claude 내부) 과 별도 워크스페이스 md (git 추적) 의 이중 산출. 다른 큰 자동화 개발 (수 주 단위) 에 답습 가능
+  - **방법론 후보 4.101 — Promise.all × N 완전 병렬 + Outline 사전 결합 패턴**: N 개 독립 LLM 호출의 일관성을 보장하는 표준 — (a) 사전 Outline LLM 호출 1 회로 N 개 호출의 공통 컨텍스트 (키워드·placeholder·블록 ID·기대 형식) 합의 (b) N 개 호출은 outline 합의를 받아 독립 작성 (c) 결합 검증은 Validator (Stage 5) 가 사후 보정. 9 Section Writer 외 다른 N 병렬 시스템 (예: 10 챕터 보고서·5 부서 RACI·8 KPI 분석) 에 답습 가능
+  - **방법론 후보 4.102 — SSE Wire Protocol 7 이벤트 표준**: 자동 작성 시스템의 SSE 이벤트 분류 (connected·stage_start·stage_done·section_start·section_done·validation·complete·error) 가 단일·다중 stage + 병렬·직렬 호출 + 검증·완료·오류 모두 cover. 다른 진행 스트림 자동화 (보고서·계획서·QA) 에 답습 가능
+  - **9 가이드 system prompt 1:1 주입 패턴** — Section Writer N 의 system prompt = 가이드 N 의 §3 본문 절 템플릿. system prompt 가 코드 변경 없이 가이드 갱신만으로 업데이트 가능. 콘텐츠와 코드 분리 원칙 (방법론 4.93 통합 인덱스 답습)
+- **다음 단계**:
+  - **즉시 사용자 결정 필요**: 본 개발계획서 검토 후 (a) Phase 1 Day 1 착수 여부 (b) Cloudflare Workers Paid Unbound 전환 여부 (~ $5/월 + 사용량) (c) Phase 1·2·3 통합 6 주 일정 승인 여부
+  - **단기 작업 후보 (Phase 1 Day 1-10 착수 시)**: §9.1 표의 Day 1-10 항목 — `worker/src/agent.js` 골격 + SSE 응답 빌더 → 라우트 분기 → Planner·Outline·Compiler stage + Gemini 다중 prompt + Worker 내 templates 조회 + compact index 빌더 → end-to-end dummy 9 outline 산출
+  - **중기 작업 후보**: Phase 2 (Day 11-20) Stepper UI → Phase 3 (Day 21-30) 9 Section Writer + Validator + 6 도메인 검증
+  - **방법론 후보 4.100·4.101·4.102** + 이전 4.82~4.99 합산 21 종 정식 채택 — Phase 3 MVP 완료 시 일괄 채택 권장
+
+---
+
+#### 엔트리 #72 — Phase E19 Agent MVP 구현: `/agent` Stepper UI + Worker SSE 골격 + compact index (2026-05-12)
+
+- **맥락**: 엔트리 #70 의 `자동화_Agent_UI_개발계획.md` 검토 후 사용자가 "Implement the plan" 을 지시. 전체 Phase 1·2·3 6 주 범위를 한 번에 완성하면 위험이 커지므로, 첫 구현 단위는 실제 end-to-end 로 동작하는 **Phase 1 MVP** 로 축소했다. 기존 `/generate` 와 `/api/llm` 은 유지하고, 신규 `/agent` 페이지와 `/api/agent/generate` SSE 라우트만 추가했다.
+- **사용자 요청 (원문)**: *"Implement the plan."*
+- **AI 수행**:
+  1. Worker 테스트를 먼저 작성 — Agent 입력 누락 시 400 반환, 정상 입력 시 SSE complete 이벤트와 9 섹션 Markdown 생성 검증.
+  2. `worker/src/agent.js` 신설 — `connected → planner → outline → section_start/done × 9 → validate → compile → complete` 이벤트를 흘리는 결정적 Agent MVP 구현.
+  3. `worker/src/index.js` 에 `/api/agent/generate` 라우트 연결. 기존 `/api/llm` polish 프록시는 보존.
+  4. `hooks/build_templates_data.py` 에 `templates_index.json` 생성 로직 추가. `templates.json` 의 `body` 필드는 제외하고 id·title·category·domain·tags·section·preview 만 유지.
+  5. `docs/agent.md` + `docs/javascripts/agent-ui.js` + `docs/stylesheets/agent.css` 신설 — 5 단계 Stepper UI, localStorage 임시 저장, POST SSE stream parser, 진행 로그·섹션 preview·최종 Markdown 출력 구현.
+  6. `mkdocs.yml` 에 `/agent` nav, CSS, JS 추가.
+  7. `worker/wrangler.toml` 에 Agent SSE 용 `limits.cpu_ms = 300000` 보강.
+- **검증 결과**:
+  - TDD red 확인 — 신규 Worker 테스트 2 건 작성 직후 `npm test` 에서 404 로 실패.
+  - 구현 후 `worker/` 에서 `npm test` 통과 — **8 tests, 0 fail**.
+  - `.venv/bin/python -m mkdocs build --strict` 통과 — `templates.json` + `templates_index.json` 생성, strict exit 0.
+  - `npm run deploy:dry-run` 통과 — Wrangler 4.90.0 이 번들·바인딩·`limits.cpu_ms` 설정을 수용. 샌드박스 때문에 `/Users/lanco/Library/Preferences/.wrangler/logs` 파일 쓰기 EPERM 메시지가 출력됐지만 프로세스 exit 0 및 `--dry-run: exiting now` 확인.
+  - compact index 점검 — `jq length docs/data/templates.json docs/data/templates_index.json` 결과 348 / 348, `jq '[.[] | has("body")] | any' docs/data/templates_index.json` 결과 `false`, 파일 크기 141,866 bytes.
+- **판단 근거**:
+  - 계획서의 "Section Writer × 9 완전 병렬 LLM" 은 비용·지연·검증 리스크가 크므로 첫 MVP 는 deterministic writer 로 구현했다. UI·SSE contract·9 섹션 조립·검증 루프가 먼저 안정화되어야 Gemini 병렬 Writer 를 붙일 때 파급을 줄일 수 있다.
+  - 기존 `/generate` 를 즉시 폐기하지 않았다. 현재 사용자에게 검증된 수동 조립 경로가 있고, 신규 `/agent` 는 생성 품질 검증 전까지 병행 운용이 현실적이다.
+  - `templates_index.json` 은 목표 50~80 KB 보다 큰 141 KB 이지만 `body` 제거와 minified JSON 으로 1.46 MB 본문 전송은 차단했다. 100 KB 이하가 필요하면 다음 사이클에서 preview 길이 절단 또는 nullable 필드 제거로 줄인다.
+- **산출물**:
+  - 신규: `worker/src/agent.js`, `docs/agent.md`, `docs/javascripts/agent-ui.js`, `docs/stylesheets/agent.css`, `docs/data/templates_index.json`
+  - 수정: `worker/src/index.js`, `worker/test/index.test.js`, `worker/wrangler.toml`, `hooks/build_templates_data.py`, `mkdocs.yml`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - **방법론 후보 4.103 — Agent MVP contract-first 패턴**: LLM 품질을 바로 붙이기 전에 UI·SSE event schema·검증·컴파일 output contract 를 deterministic mock/worker 로 고정한다. 이후 LLM writer 는 contract 내부 구현만 교체하면 된다.
+  - **방법론 후보 4.104 — 기존 생성기 병행 운용 패턴**: 새 자동화 UI 가 기존 수동 조립 UI 를 대체하더라도, 검증 전 즉시 삭제하지 않고 `/generate` 와 `/agent` 를 병행 운영한다. 사용자 업무 중단 없이 품질 비교와 rollback 이 가능하다.
+- **다음 단계**:
+  - Cloudflare Worker 실제 배포 (`worker/` 에서 `npm run deploy`) 후 `/agent` 페이지가 배포 Worker 와 스트림 연결되는지 브라우저 실검증.
+  - Phase 3 착수 시 `worker/src/agent.js` 내부 deterministic section writer 를 Gemini 병렬 Section Writer × 9 로 교체하고, compact index 100 KB 이하 축소 여부 결정.
+  - 커밋 전 작업로그 번호 중복 (#70 두 건) 정리는 별도 문서 정리 태스크로 분리 권장. 이번 엔트리는 #72 로 추가해 충돌 확산을 막았다.
+
+---
+
+#### 엔트리 #73 — Agent Gemini Section Writer × 9 병렬 호출 연결 (2026-05-12)
+
+- **맥락**: 엔트리 #72 로 `/agent` UI 와 Worker SSE contract 는 연결됐지만, 섹션 본문은 deterministic 골격이었다. 사용자가 "ok 다음 진행" 으로 후속 개발을 승인했으므로, 다음 위험 단위인 **Gemini Section Writer × 9 병렬 호출** 을 최소 범위로 붙였다.
+- **사용자 요청 (원문)**: *"ok 다음 진행"*
+- **AI 수행**:
+  1. TDD red 작성 — `writer_mode=llm` 요청 시 Gateway fetch 가 9 회 호출되고, 각 LLM 응답이 최종 Markdown 에 들어가며, `cf-aig-collect-log-payload: false` 헤더가 유지되어야 한다는 테스트 추가.
+  2. `worker/src/gemini.js` 신설 — `/api/llm` polish 와 Agent Section Writer 가 공유하는 Gemini Gateway 호출 모듈로 분리.
+  3. `worker/src/index.js` 의 기존 Gemini 호출 로직을 공용 모듈 사용으로 축소. `/api/llm` 기존 테스트는 그대로 통과.
+  4. `worker/src/agent.js` 에 `writer_mode` 분기 추가 — 기본은 `deterministic`, UI 는 `llm` 을 기본 선택. `llm` 모드에서는 9 섹션을 `Promise.all` 로 병렬 호출한다.
+  5. 각 섹션 prompt 에 섹션 ID·제목·가이드 BLK·도메인·패키지·시나리오·사용자 profile JSON 을 주입하고, Markdown 단일 섹션만 반환하도록 제한했다.
+  6. Gemini 섹션 호출 실패 시 해당 섹션만 deterministic fallback 으로 대체하고 `section_fallback` SSE 이벤트를 송신한다. 전체 문서 생성은 계속 진행한다.
+  7. `/agent` UI Step 4 에 작성 엔진 선택 (Gemini / 빠른 골격) 을 추가하고, fallback 이벤트를 진행 상태 warning 으로 표시한다.
+- **검증 결과**:
+  - red 확인 — 신규 테스트 작성 직후 `npm test` 실패: fetch 호출 수 0 vs 기대 9.
+  - 구현 후 `worker/` 에서 `npm test` 통과 — **9 tests, 0 fail**.
+  - `node --check` 통과 — `worker/src/agent.js`, `worker/src/index.js`, `worker/src/gemini.js`, `docs/javascripts/agent-ui.js`.
+  - `.venv/bin/python -m mkdocs build --strict` 통과 — strict exit 0, `templates.json`/`templates_index.json` 재생성.
+  - `npm run deploy:dry-run` 통과 — Wrangler 4.90.0 번들 크기 22.71 KiB / gzip 6.54 KiB. 샌드박스 홈 디렉터리 로그 파일 EPERM 메시지는 동일하게 출력됐지만 프로세스 exit 0 및 `--dry-run: exiting now` 확인.
+- **판단 근거**:
+  - LLM mode 를 API 기본값으로 강제하지 않았다. 기존 테스트·수동 호출·장애 대응을 위해 API 기본은 deterministic 으로 유지하고, UI 에서만 Gemini 를 기본 선택하게 했다.
+  - Section Writer 실패를 전체 실패로 처리하지 않았다. 사업계획서 9 섹션 중 1 개 섹션 Gateway 오류 때문에 전체 작성이 중단되면 UX 와 비용이 나쁘므로, 섹션 단위 fallback + validation meta 의 `fallback_count` 로 드러내는 방식을 택했다.
+  - Gateway 호출 모듈을 분리했다. `/api/llm` 과 `/api/agent/generate` 가 같은 보안 헤더·URL·token 처리 규칙을 써야 payload logging off 와 authenticated gateway 정책이 어긋나지 않는다.
+- **산출물**:
+  - 신규: `worker/src/gemini.js`
+  - 수정: `worker/src/agent.js`, `worker/src/index.js`, `worker/test/index.test.js`, `docs/agent.md`, `docs/javascripts/agent-ui.js`, `docs/stylesheets/agent.css`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - **방법론 후보 4.105 — API 기본 안전값 + UI 기본 고성능값 분리 패턴**: API 기본은 deterministic 처럼 비용·장애 리스크가 낮은 모드로 두고, 검증된 사용자 UI 에서만 LLM 모드를 기본 선택한다. 자동화 품질과 운영 안전을 동시에 확보한다.
+  - **방법론 후보 4.106 — 섹션 단위 LLM fallback 패턴**: N 병렬 LLM 호출에서 일부 실패를 전체 실패로 전파하지 않고, 실패 섹션만 deterministic fallback 으로 대체 + fallback_count 를 메타에 남긴다. 긴 보고서·계획서 생성에서 부분 장애 내성이 높다.
+- **다음 단계**:
+  - 실제 Cloudflare Worker 배포 후 `/agent` 에서 Gemini 9 회 병렬 호출이 Cloudflare AI Gateway 로그·rate limit 과 맞는지 실검증.
+  - prompt 품질 보강 — 9 가이드의 §3 템플릿 본문을 실제 prompt context 로 주입하거나, `templates_index.json` 기반으로 섹션별 후보 블록 preview 를 함께 넣는 단계가 필요하다.
+  - 비용·지연 측정 — 1 회 Agent 생성당 Gateway 호출 9 회이므로 무료/저비용 운영 한도, AI Gateway rate limit, fallback_count 기준 알림을 정해야 한다.
+
+---
+
+#### 엔트리 #74 — Cloudflare Worker 실배포 + Gemini Free tier 운영 cap 적용 (2026-05-12)
+
+- **맥락**: 엔트리 #73 까지 로컬 테스트와 dry-run 은 통과했지만 실제 Cloudflare 배포와 공개 URL 검증이 남아 있었다. 사용자가 "ok next" 로 다음 단계 진행을 승인했으므로 Worker 배포, 공개 SSE 호출, Gemini 운영 한도 확인을 수행했다.
+- **사용자 요청 (원문)**: *"ok next"*
+- **AI 수행**:
+  1. `npm run deploy` 를 Cloudflare token 없이 실행 → Wrangler OAuth cache 로는 비대화형 배포 불가 확인.
+  2. 사용자가 앞서 제공한 Cloudflare token 을 `CLOUDFLARE_API_TOKEN` 으로 단일 명령에만 주입해 Worker 배포 시도.
+  3. 1 차 배포 실패 원인 확인 — Cloudflare API code `100328`: Free plan 에서는 `limits.cpu_ms` 설정 불가.
+  4. `worker/wrangler.toml` 의 `[limits] cpu_ms = 300000` 제거 후 재배포 성공.
+  5. 공개 Worker URL `https://ai-docs-for-biz-llm.pathcosmos.workers.dev` 에 deterministic mode SSE POST 호출 → HTTP 200, `complete` 이벤트, 9 섹션, `fallback_count: 0` 확인.
+  6. 공개 Worker URL 에 `writer_mode=llm` 실호출 → HTTP 200 이지만 Gemini free tier quota 로 일부 섹션 429 발생. Worker fallback 이 동작해 `complete` 는 성공, `fallback_count: 3`, `usage.total_calls: 6`, `usage.total_tokens: 20141` 확인.
+  7. 운영 기본값 보정 — `AGENT_MAX_LLM_SECTIONS=5` env var 추가, `worker/src/agent.js` 에 LLM section cap 적용. 5 개 초과 섹션은 Gemini 호출 없이 deterministic fallback 처리.
+  8. cap 검증 테스트 추가 — env limit 5 일 때 fetch 5 회, `section_fallback` 4 회, `fallback_count: 4`, `usage.total_calls: 5`.
+  9. cap 반영본 Worker 재배포 성공. 배포 Version ID `85a75c04-c6d8-4ab2-bdf6-3975ca98ed1f`.
+  10. `python3 build_src.py` + `.venv/bin/python -m mkdocs build --strict` 로 정적 사이트 재빌드.
+  11. Cloudflare Pages direct deploy 실행 — `/agent/`, `agent-ui.js`, `agent.css` 공개 URL HTTP 200 확인.
+  12. Wrangler Pages deploy 가 repo 루트에 `.wrangler/cache/pages.json` 로컬 캐시를 생성해 `.gitignore` 에 `.wrangler/` 추가.
+- **검증 결과**:
+  - `worker/` `npm test` 통과 — **10 tests, 0 fail**.
+  - `node --check` 통과 — `worker/src/agent.js`, `worker/src/gemini.js`, `worker/src/index.js`.
+  - Cloudflare Worker 배포 성공 — `Uploaded ai-docs-for-biz-llm`, trigger URL `https://ai-docs-for-biz-llm.pathcosmos.workers.dev`.
+  - 공개 deterministic SSE 호출 성공 — HTTP 200, `phase-one-deterministic`, `section_count: 9`, `fallback_count: 0`.
+  - 공개 LLM SSE 호출 성공 — HTTP 200, `phase-two-llm-sections`, `section_count: 9`, quota 초과 섹션은 fallback 으로 완료. 이 실측을 근거로 Free tier cap 을 적용.
+  - Cloudflare Pages 배포 성공 — production `https://ai-docs-for-biz.pages.dev/agent/` HTTP 200, JS/CSS asset HTTP 200.
+- **판단 근거**:
+  - Cloudflare Free plan 에서 CPU limit 설정은 배포 자체를 막으므로 제거가 필수. Worker wall time 은 네트워크 대기 중심이고 CPU 부하는 낮아 Free plan 에서도 우선 운영 가능하다고 판단했다.
+  - Gemini free tier 는 9 병렬 호출을 안정적으로 받지 못했다. UI 기본을 Gemini 로 유지하되 Worker env 로 LLM 호출 상한을 5 로 제한하면 즉시 429 를 줄이고, 나머지 섹션은 fallback 으로 문서를 완성할 수 있다.
+  - Free tier cap 은 env var 로 뺐다. 추후 유료 Gemini/Cloudflare plan 으로 전환하면 `AGENT_MAX_LLM_SECTIONS=9` 로 올리고 재배포하면 된다.
+- **산출물**:
+  - 수정: `.gitignore`, `worker/wrangler.toml`, `worker/src/agent.js`, `worker/test/index.test.js`, `작업로그.md`
+  - 배포: Cloudflare Worker `ai-docs-for-biz-llm` Version ID `85a75c04-c6d8-4ab2-bdf6-3975ca98ed1f`
+  - 배포: Cloudflare Pages `ai-docs-for-biz` production `/agent/` 반영
+- **배운 점·재사용 포인트**:
+  - **방법론 후보 4.107 — Free tier 실측 후 운영 cap 적용 패턴**: 로컬 mock 테스트만으로 LLM 병렬도를 확정하지 말고, 실제 provider quota 를 1 회 실측한 뒤 env 기반 cap 으로 운영 기본값을 낮춘다. 유료 전환 시 cap 만 올리는 방식이 안전하다.
+  - **방법론 후보 4.108 — 배포 실패 원인 계층 분리 패턴**: token 권한·Cloudflare plan·provider quota 를 분리해 본다. 본 사례는 token 문제 아님, 1 차는 Worker plan 설정 문제, 2 차는 Gemini free tier quota 문제였다.
+- **다음 단계**:
+  - 공개 `/agent` 페이지에서 브라우저 수동 검증 — Stepper 입력, Gemini 기본 작성, fallback warning 표시, 최종 Markdown copy/download.
+  - Gemini 유료 plan 또는 rate limit 상향 전까지 `AGENT_MAX_LLM_SECTIONS=5` 유지 권장.
+  - 다음 개발 단위는 `templates_index.json` 기반 섹션별 후보 preview 주입 또는 Gemini 호출 queue/backoff 둘 중 하나.
 
 ---
 

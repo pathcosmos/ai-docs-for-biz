@@ -1,0 +1,203 @@
+.agent-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.agent-workspace,
+.agent-output {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  background: var(--md-default-bg-color);
+}
+
+.agent-stepper {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.35rem;
+  padding: 0;
+  margin: 0 0 1rem;
+  list-style: none;
+}
+
+.agent-step {
+  min-height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+  background: rgba(127, 127, 127, 0.04);
+}
+
+.agent-step.is-active {
+  color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  background: rgba(63, 81, 181, 0.09);
+}
+
+.agent-step.is-done {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
+.agent-panel {
+  display: none;
+}
+
+.agent-panel.is-active {
+  display: block;
+}
+
+.agent-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.agent-fields label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.agent-fields input,
+.agent-fields select,
+.agent-fields textarea,
+.agent-output textarea {
+  width: 100%;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  padding: 0.55rem 0.65rem;
+  font: inherit;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.agent-fields textarea {
+  resize: vertical;
+}
+
+.agent-invalid {
+  border-color: #c62828 !important;
+  box-shadow: 0 0 0 2px rgba(198, 40, 40, 0.12);
+}
+
+.agent-actions,
+.agent-submit,
+.agent-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.agent-actions button,
+.agent-submit button,
+.agent-result-actions button {
+  min-height: 2.25rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  padding: 0.45rem 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.agent-actions button:disabled,
+.agent-result-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.agent-primary {
+  background: var(--md-primary-fg-color) !important;
+  border-color: var(--md-primary-fg-color) !important;
+  color: var(--md-primary-bg-color) !important;
+}
+
+.agent-status {
+  margin-top: 0.75rem;
+  min-height: 2rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 0.3rem;
+  background: rgba(127, 127, 127, 0.07);
+  font-size: 0.85rem;
+}
+
+.agent-status[data-tone="error"] {
+  color: #b71c1c;
+  background: rgba(198, 40, 40, 0.1);
+}
+
+.agent-status[data-tone="done"] {
+  color: #1b5e20;
+  background: rgba(46, 125, 50, 0.1);
+}
+
+.agent-progress {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.agent-progress-item {
+  border-left: 3px solid var(--md-default-fg-color--lightest);
+  padding: 0.35rem 0.55rem;
+  font-size: 0.82rem;
+  background: rgba(127, 127, 127, 0.05);
+}
+
+.agent-progress-item[data-state="running"] {
+  border-color: var(--md-primary-fg-color);
+}
+
+.agent-progress-item[data-state="done"] {
+  border-color: var(--md-accent-fg-color);
+}
+
+.agent-progress-item[data-state="warning"] {
+  border-color: #f9a825;
+}
+
+.agent-partials {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.agent-partial {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  padding: 0.35rem 0.55rem;
+}
+
+.agent-partial pre {
+  white-space: pre-wrap;
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+}
+
+.agent-output textarea {
+  min-height: 28rem;
+  resize: vertical;
+  font-family: var(--md-code-font);
+  font-size: 0.78rem;
+}
+
+@media screen and (max-width: 900px) {
+  .agent-layout,
+  .agent-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-stepper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

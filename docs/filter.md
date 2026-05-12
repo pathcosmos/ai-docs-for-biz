@@ -16,6 +16,6 @@ description: "4 축 (패키지·도메인·지원사업·자산 유형) 필터�
 | **지원사업** | dx-rd · smart-factory · digital-gyeongnam · cbam |
 | **자산 유형** | track · scenario · package · guide · module · other · meta |
 
-## 임시 — 태그별 자산 (MkDocs Material 내장 tags 플러그인 사용)
+## 임시 — 생성 블록 데이터
 
-[→ 모든 태그](tags.md) (자동 생성 페이지)
+[→ 생성 블록 데이터](data/templates.json)

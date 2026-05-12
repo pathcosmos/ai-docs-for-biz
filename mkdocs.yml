@@ -116,6 +116,7 @@ hooks:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/agent.css
 
 extra_javascript:
   # [E11-2] mermaid.js CDN 제거 (~720KB gzip) — 99 mermaid 블록 모두 정적 SVG 변환 완료
@@ -125,6 +126,7 @@ extra_javascript:
   - javascripts/graph.js        # D3 force-directed cross-reference 그래프 (graph.md)
   - javascripts/llm-client.js    # [E17-1] Cloudflare Worker /api/llm 호출 래퍼
   - javascripts/generate-template.js  # [E16-2] 본문 자동 생성 폼 (generate.md)
+  - javascripts/agent-ui.js      # [E19-1] Agent 5-step UI + SSE 수신
 
 # =============================================================================
 # Navigation — 사이드바 친화 라벨링 (Phase E9 Stage 2 보강, 사용자 피드백 #2 대응)
@@ -139,6 +141,7 @@ nav:
       - 처음 사용자 — 5 분 안내: start-here.md
       - 📋 사업계획서 본문 15 블록 (paste-ready): blocks.md
       - 📝 본문 자동 생성 (업체 정보 입력 → paste): generate.md
+      - Agent 자동 작성 (9 섹션 초안): agent.md
       - 6 패키지 매칭 — 우리 회사는 어디?: by-package.md
       - 사업계획서 작성 Quick-Start: guide/quickstart.md
 
