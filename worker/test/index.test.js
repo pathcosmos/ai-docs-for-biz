@@ -119,7 +119,7 @@ describe('handleRequest', () => {
       request({
         mode: 'polish',
         text: '## 제목\n\n[고객사]의 [공정] 개선',
-        inputs: { 고객사: '동국제강', 공정: '후판 압연' },
+        inputs: { 고객사: '동국산업(주)', 공정: '냉간 압연' },
         metadata: {},
       }),
       env,
@@ -130,7 +130,7 @@ describe('handleRequest', () => {
           candidates: [
             {
               content: {
-                parts: [{ text: '## 제목\n\n동국제강의 후판 압연 개선' }],
+                parts: [{ text: '## 제목\n\n동국산업(주)의 냉간 압연 개선' }],
               },
             },
           ],
@@ -145,7 +145,7 @@ describe('handleRequest', () => {
     assert.equal(fetchInit.headers['x-goog-api-key'], 'test-gemini-key');
     assert.equal(fetchInit.headers['cf-aig-collect-log-payload'], 'false');
     assert.deepEqual(await response.json(), {
-      text: '## 제목\n\n동국제강의 후판 압연 개선',
+      text: '## 제목\n\n동국산업(주)의 냉간 압연 개선',
       model: 'gemini-2.5-flash',
       usage: { promptTokenCount: 10, candidatesTokenCount: 5 },
     });
@@ -189,9 +189,9 @@ describe('handleRequest', () => {
       agentRequest({
         profile: {
           step1_company: {
-            company: '동국제강',
+            company: '동국산업(주)',
             industry: 'STL',
-            process: '후판 압연',
+            process: '냉간 압연',
             scale: '중견',
           },
           step2_business: {
@@ -219,7 +219,7 @@ describe('handleRequest', () => {
 
     const complete = events.find(item => item.event === 'complete');
     assert.ok(complete);
-    assert.match(complete.data.final_md, /# 동국제강 AI 사업계획서/);
+    assert.match(complete.data.final_md, /# 동국산업\(주\) AI 사업계획서/);
     assert.doesNotMatch(complete.data.final_md, /^---/);
     assert.doesNotMatch(complete.data.final_md, /\[출처:/);
     assert.doesNotMatch(complete.data.final_md, /BLK-/);
@@ -240,9 +240,9 @@ describe('handleRequest', () => {
       agentRequest({
         profile: {
           step1_company: {
-            company: '동국제강',
+            company: '동국산업(주)',
             industry: 'STL',
-            process: '후판 압연',
+            process: '냉간 압연',
             scale: '중견',
           },
           step2_business: {
@@ -330,9 +330,9 @@ describe('handleRequest', () => {
       agentRequest({
         profile: {
           step1_company: {
-            company: '동국제강',
+            company: '동국산업(주)',
             industry: 'STL',
-            process: '후판 압연',
+            process: '냉간 압연',
             scale: '중견',
           },
           step2_business: { duration_months: 12, form_type: '단년' },

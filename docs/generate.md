@@ -29,7 +29,7 @@ hide:
 
 <div class="form-fields" markdown="1">
 <label for="input-고객사">고객사명</label>
-<input id="input-고객사" type="text" placeholder="예: 동국제강(주)" />
+<input id="input-고객사" type="text" placeholder="예: 동국산업(주)" />
 
 <label for="input-공정">대상 공정</label>
 <input id="input-공정" type="text" placeholder="예: 후판 압연·소둔" />

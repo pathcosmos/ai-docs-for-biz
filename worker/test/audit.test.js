@@ -7,7 +7,7 @@ import { buildSlots, composeFromLibrary } from '../src/library.js';
 function fullDocument(domain = 'STL') {
   const profile = {
     step1_company: {
-      company: '동국제강',
+      company: '동국산업(주)',
       industry: domain,
       scale: '중견',
     },
@@ -16,7 +16,7 @@ function fullDocument(domain = 'STL') {
   const slots = buildSlots(profile, plan);
   const sections = ['§1', '§2', '§3', '§4', '§5', '§6', '§7', '§8', '§9']
     .map(section => composeFromLibrary(section, slots));
-  return `# 동국제강 AI 사업계획서\n\n${sections.join('\n\n')}\n`;
+  return `# 동국산업(주) AI 사업계획서\n\n${sections.join('\n\n')}\n`;
 }
 
 describe('runAudit', () => {

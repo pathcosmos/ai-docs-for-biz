@@ -26,7 +26,7 @@ hide:
 <section class="agent-panel is-active" data-step="1" aria-labelledby="agent-step-1">
 <h2 id="agent-step-1">회사</h2>
 <div class="agent-fields">
-  <label>고객사명 <input name="step1_company.company" data-required="true" autocomplete="organization" placeholder="동국제강" /></label>
+  <label>고객사명 <input name="step1_company.company" data-required="true" autocomplete="organization" placeholder="동국산업(주)" /></label>
   <label>업종 <select name="step1_company.industry" data-required="true">
     <option value="">선택</option>
     <option value="STL">철강</option>
