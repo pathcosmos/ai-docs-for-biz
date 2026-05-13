@@ -168,9 +168,9 @@
 | `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리, 엔트리 #79 에서 10 도메인 dropdown + audit matrix 영역 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) + 10 도메인/audit matrix (엔트리 #79) | 156 |
 | `docs/assemble.md` | `/assemble/` 4 단계 조립형 작성기 페이지 — 도메인·시나리오·블록/§ 배치·회사/사업 입력 후 Worker `/api/assemble` 로 9 섹션 본문 생성. 엔트리 #86 에서 MkDocs raw HTML island 를 깨던 `markdown="1"` 제거, 엔트리 #87 에서 stepper 구조와 SVG 크기 안전장치 보강. | 신설 (엔트리 #82·#83) + raw HTML 렌더 보정 (엔트리 #86) + layout hardening (엔트리 #87) | 132 |
 | `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가, 엔트리 #79 에서 `complete.audit` 6 축 matrix 렌더링과 localStorage 복원을 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) + structured audit matrix (엔트리 #79) | 404 |
-| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM guard, 엔트리 #87 에서 내부 ID 표시 제거와 placeholder default slot 수집을 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) + display/default 보정 (엔트리 #87) | 832 |
+| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM guard, 엔트리 #87 에서 내부 ID 표시 제거와 placeholder default slot 수집, 엔트리 #88 에서 Step 3 블록 클릭 시 선택·섹션 매핑 강조를 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) + display/default 보정 (엔트리 #87) + Step 3 UX 보정 (엔트리 #88) | 863 |
 | `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이, 엔트리 #79 에서 6 축 audit matrix table 스타일 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) + audit matrix (엔트리 #79) | 236 |
-| `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. 엔트리 #86 에서 shell/overflow, 엔트리 #87 에서 centered tabs, MkDocs SVG image override, stepper raw element styling 을 보강. | 신설 (엔트리 #82·#83) + layout 보정 (엔트리 #86·#87) | 587 |
+| `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. 엔트리 #86 에서 shell/overflow, 엔트리 #87 에서 centered tabs, MkDocs SVG image override, stepper raw element styling, 엔트리 #88 에서 블록 catalog 페이지 스크롤과 active mapping highlight 를 보강. | 신설 (엔트리 #82·#83) + layout 보정 (엔트리 #86·#87) + Step 3 UX 보정 (엔트리 #88) | 678 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
 | `docs/data/scenario_index.json` | 65 시나리오 compact card index — 정식 40 + 후보 25, 8 필드 카드 shape. `/assemble` Step 2 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_index.py`) | 67 KB |
 | `docs/data/scenario_block_map.json` | 65 SCN → 추천 block list map — 각 SCN 14 후보, section/category/score 포함. `/assemble` Step 3 추천 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_map.py`) | 188 KB |
@@ -193,7 +193,7 @@
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
 | `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore, placeholder default slot, 내부 ID display cleanup 검증. | 신설 (엔트리 #82) + display/default 회귀 (엔트리 #87) | 143 |
-| `tests/assemble-markup.test.mjs` | `/assemble` Markdown/CSS source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되는 문제, stepper 구조, app viewport sizing, SVG 크기 override, tab center alignment 방지. | 신설 (엔트리 #86) + layout 회귀 (엔트리 #87) | 28 |
+| `tests/assemble-markup.test.mjs` | `/assemble` Markdown/CSS source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되는 문제, stepper 구조, app viewport sizing, SVG 크기 override, tab center alignment, Step 3 catalog 내부 스크롤 재발과 선택 mapping 강조 누락 방지. | 신설 (엔트리 #86) + layout 회귀 (엔트리 #87) + Step 3 UX 회귀 (엔트리 #88) | 42 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
 | `작업로그.md` | 본 문서 (§4 본문 → `방법론_총론.md` 분리 후 인덱스만 유지) | 진행 중 | — |
 | (참고 PDF 6종) | 외부 사례 자료 | 변경 없음 | — |
@@ -3535,6 +3535,34 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - MkDocs 같은 문서 시스템 안의 app surface 는 전역 문서 이미지/list 규칙과 충돌하므로, 앱 전용 selector 는 충분한 specificity 와 회귀 테스트를 가져야 한다.
   - 사용자가 보는 선택 UI 에서는 내부 stable ID 를 검색/전송 key 로만 쓰고 display label 에서는 제거해야 한다. ID 는 payload contract, label 은 작업자 인지 부하를 낮추는 별도 계층이다.
   - placeholder 를 default 로 쓰는 정책은 필드군별로 제한해야 한다. 예시값 placeholder 는 default 로 쓸 수 있지만, 정량 슬롯의 key placeholder 는 데이터가 아니다.
+
+#### 엔트리 #88 — `/assemble` Step 3 블록 선택 UX 보정: 페이지 스크롤 + 매핑 강조 (2026-05-13)
+
+- **맥락**: 사용자가 `/assemble/` 의 "블록·섹션" 단계에서 왼쪽 블록 목록 스크롤이 너무 짧고, 왼쪽 블록을 클릭해 오른쪽 선택 항목/섹션에 매핑될 때 변화가 눈에 띄지 않는다고 지적했다.
+- **사용자 요청 (원문 요지)**: *"블록,섹션 쪽에서 블록 쪽 항목들이 왼쪽에 스크롤이 너무 짧은데 페이지를 넘어갈 때만 스크롤 나오면 되는데 그리고 왼쪽 블록 항목을 찍으면 오른쪽 선택 항목에 맵핑된다면 눈에 띄게 특별해주면 좋겠는데"*
+- **AI 수행**:
+  1. `tests/assemble-markup.test.mjs` 에 Step 3 catalog 가 `max-height`/`overflow:auto` 를 갖지 않고, active mapping 표시 CSS/JS hook 이 존재해야 한다는 회귀 테스트를 추가했다.
+  2. `docs/stylesheets/assemble.css` 의 `.assemble-catalog` 내부 스크롤 제한을 제거하고 `overflow: visible` 로 바꿔 긴 블록 목록은 페이지 전체 스크롤을 따르게 했다.
+  3. `docs/javascripts/assemble-ui.js` 에 `highlightedBlock` 상태와 1.6초 flash timer 를 추가했다. 왼쪽 block row 또는 제목을 클릭하면 즉시 `addBlock(id)` 가 실행되고, active block 이 cart 와 section assignment 에 반영된다.
+  4. 오른쪽 선택 영역 상단에 `.assemble-active-map` 을 추가해 "현재 선택 + §번호 + 블록 제목" 을 별도 강조 패널로 표시하고, selected cart item·section slot·section pill·left block row 에 active/flash data attribute 를 부여했다.
+  5. CSS 에 active border, inset accent, pulse animation, `prefers-reduced-motion` guard 를 추가해 매핑 위치가 보이되 접근성 설정을 존중하도록 했다.
+- **판단 근거**:
+  - Step 3 는 추천 블록 수가 많아 내부 list scroll 을 만들면 사용자 입장에서는 왼쪽 list·오른쪽 section·페이지 세 겹 스크롤을 동시에 다루게 된다. 문서형 작성기에서는 catalog 자체가 페이지 흐름으로 길어지고, 브라우저의 단일 page scroll 을 쓰는 편이 예측 가능하다.
+  - 블록 클릭은 "선택만 변경" 보다 "선택 cart 에 추가 + 해당 섹션 슬롯 위치 강조" 가 사용자의 기대와 더 가깝다. 따라서 title click 과 row click 을 모두 `addBlock(id)` 로 통일했다.
+  - 강조는 오른쪽 한 곳만 바꾸면 발견성이 낮으므로 left row, current map panel, cart item, section slot, section pill 을 같은 active state 로 묶었다.
+- **사용자 의사결정**: 내부 스크롤 제거와 클릭 시 오른쪽 매핑 강조를 명시 요청했다.
+- **검증 결과**:
+  - `node --test tests/assemble-markup.test.mjs` — RED 확인 후 PASS, 3 tests / 0 fail
+  - `node --check docs/javascripts/assemble-ui.js` — PASS
+  - `node --test tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs` — PASS, 9 tests / 0 fail
+  - `.venv/bin/mkdocs build --strict` — PASS
+  - CDP browser flow (`http://127.0.0.1:8000/assemble/?v=step3verify...`) — Step 3 진입 후 첫 블록 클릭, `catalogOverflow=visible`, `catalogMaxHeight=none`, `.assemble-active-map` 존재, active row/cart/section/pill 각 1 개 확인. 스크린샷: `/private/tmp/assemble-step3-map.png`.
+- **산출물**: `docs/javascripts/assemble-ui.js`, `docs/stylesheets/assemble.css`, `tests/assemble-markup.test.mjs`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - 긴 catalog + 오른쪽 배치 UI 는 nested scroll 보다 page scroll 이 안정적이다. nested scroll 은 좁은 panel 안에서만 탐색하게 만들어 선택과 배치의 공간 관계를 끊는다.
+  - 클릭 결과가 다른 영역에 반영되는 UI 는 source·target·intermediate summary 를 동시에 강조해야 사용자가 "어디로 갔는지" 를 즉시 이해한다.
+- **다음 단계**:
+  - Pages 재배포 후 공개 `/assemble/` Step 3 에서 같은 흐름을 재확인한다.
 
 ---
 

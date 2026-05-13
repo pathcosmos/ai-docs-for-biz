@@ -358,6 +358,8 @@
     let templatesIndex = {};
     let fullTemplatesPromise = null;
     let finalMarkdown = '';
+    let highlightedBlock = '';
+    let highlightTimer = null;
 
     function scenarioIndexPath() {
       return app.dataset.scenarioIndexPath || '../data/scenario_index.json';
@@ -494,8 +496,15 @@
         state.sectionAssignment[targetSection].push(id);
       }
       state.activeBlock = id;
+      highlightedBlock = id;
       saveState();
       renderStepThree();
+      if (highlightTimer) clearTimeout(highlightTimer);
+      highlightTimer = setTimeout(() => {
+        if (highlightedBlock !== id) return;
+        highlightedBlock = '';
+        renderStepThree();
+      }, 1600);
     }
 
     function removeBlock(id) {
@@ -505,6 +514,7 @@
         if (state.sectionAssignment[section].length === 0) delete state.sectionAssignment[section];
       });
       if (state.activeBlock === id) state.activeBlock = '';
+      if (highlightedBlock === id) highlightedBlock = '';
       saveState();
       renderStepThree();
     }
@@ -538,16 +548,18 @@
           row.className = 'assemble-block-row';
           row.draggable = true;
           row.dataset.active = state.activeBlock === id ? 'true' : 'false';
+          row.dataset.selected = state.selectedBlocks.includes(id) ? 'true' : 'false';
+          row.dataset.flash = highlightedBlock === id ? 'true' : 'false';
           row.addEventListener('dragstart', event => event.dataTransfer.setData('text/plain', id));
+          row.addEventListener('click', event => {
+            if (event.target.closest('button')) return;
+            addBlock(id);
+          });
           const title = document.createElement('button');
           title.type = 'button';
           title.className = 'assemble-block-title';
           title.textContent = blockTitle(id, templatesIndex);
-          title.addEventListener('click', () => {
-            state.activeBlock = id;
-            saveState();
-            renderStepThree();
-          });
+          title.addEventListener('click', () => addBlock(id));
           const meta = document.createElement('div');
           meta.className = 'assemble-block-meta';
           meta.append(badge(categoryLabel(item.category || 'block')), badge(normalizeSection(item.section) || '미배치'));
@@ -567,9 +579,25 @@
 
     function renderCart() {
       clear(els.cart);
+      if (state.activeBlock) {
+        const active = document.createElement('div');
+        active.className = 'assemble-active-map';
+        active.dataset.selected = state.selectedBlocks.includes(state.activeBlock) ? 'true' : 'false';
+        active.dataset.flash = highlightedBlock === state.activeBlock ? 'true' : 'false';
+        active.append(
+          badge('현재 선택'),
+          badge(normalizeSection(templatesIndex[state.activeBlock]?.section) || '미배치'),
+        );
+        const title = document.createElement('strong');
+        title.textContent = blockTitle(state.activeBlock, templatesIndex);
+        active.appendChild(title);
+        els.cart.appendChild(active);
+      }
       state.selectedBlocks.forEach(id => {
         const item = document.createElement('div');
         item.className = 'assemble-cart-item';
+        item.dataset.active = state.activeBlock === id ? 'true' : 'false';
+        item.dataset.flash = highlightedBlock === id ? 'true' : 'false';
         item.append(badge(normalizeSection(templatesIndex[id]?.section) || '미배치'));
         const title = document.createElement('span');
         title.textContent = blockTitle(id, templatesIndex);
@@ -588,6 +616,7 @@
       SECTION_IDS.forEach(section => {
         const box = document.createElement('section');
         box.className = 'assemble-section-slot';
+        box.dataset.active = (state.sectionAssignment[section] || []).includes(state.activeBlock) ? 'true' : 'false';
         box.addEventListener('dragover', event => event.preventDefault());
         box.addEventListener('drop', event => {
           event.preventDefault();
@@ -605,6 +634,8 @@
         (state.sectionAssignment[section] || []).forEach(id => {
           const pill = document.createElement('span');
           pill.className = 'assemble-section-pill';
+          pill.dataset.active = state.activeBlock === id ? 'true' : 'false';
+          pill.dataset.flash = highlightedBlock === id ? 'true' : 'false';
           pill.textContent = blockTitle(id, templatesIndex);
           pill.append(button('×', 'assemble-icon-button', () => removeBlock(id)));
           list.appendChild(pill);

@@ -26,3 +26,17 @@ test('assemble stylesheet does not size the app from viewport while inside docs 
   assert.match(css, /\.md-typeset\s+img\.assemble-mark\[src\$="\.svg"\]\s*\{[^}]*width:[^;]+!important/s);
   assert.match(css, /\.md-typeset\s+img\.assemble-mark\[src\$="\.svg"\]\s*\{[^}]*max-width:[^;]+!important/s);
 });
+
+test('assemble block catalog uses page scrolling and makes click-to-selection mapping visible', () => {
+  const css = fs.readFileSync(new URL('../docs/stylesheets/assemble.css', import.meta.url), 'utf8');
+  const js = fs.readFileSync(new URL('../docs/javascripts/assemble-ui.js', import.meta.url), 'utf8');
+
+  const catalogRule = css.match(/\.assemble-catalog\s*\{(?<body>[^}]*)\}/s)?.groups.body || '';
+  assert.doesNotMatch(catalogRule, /max-height\s*:/);
+  assert.doesNotMatch(catalogRule, /overflow\s*:\s*auto/);
+  assert.match(catalogRule, /overflow\s*:\s*visible/);
+  assert.match(css, /\.assemble-active-map\s*\{/);
+  assert.match(css, /\.assemble-cart-item\[data-active="true"\]/);
+  assert.match(css, /\.assemble-section-slot\[data-active="true"\]/);
+  assert.match(js, /title\.addEventListener\('click',\s*\(\)\s*=>\s*addBlock\(id\)\);/);
+});
