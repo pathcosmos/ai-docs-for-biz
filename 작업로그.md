@@ -163,26 +163,36 @@
 | `가이드_조립_공통과수시.md` | 공통문구(LAYER A) + 수시 슬롯 사전 + 상황별 변형을 이어붙이는 조립 절차 가이드. | 신설 (엔트리 #78) | ~210 |
 | `점검_체크리스트_가상10종.md` | 10 도메인 가상 사업계획서 cross-check 매트릭스와 보정 루프. 자동 lint 로 잡히지 않는 의미·문체 점검용. | 신설 (엔트리 #78) | ~150 |
 | `사업계획서_가상_10종/` | 10 도메인 × 규모별 가상 사업계획서 fixture 디렉터리. LAYER A 변형 발굴·lint 입력·인계용 견본. | 신설 (엔트리 #78) | 10 파일 |
+| `hooks/build_scenario_index.py` | MkDocs pre-build hook — `시나리오_카탈로그.md` 40 정식 카드 + `사전_슬롯과_도메인_10종.md` §3 후보 25 행을 같은 8 필드 scenario index 로 정규화. 65 미만이면 빌드 실패. | 신설 (엔트리 #80) | 149 |
+| `hooks/build_scenario_map.py` | MkDocs pre-build hook — `scenario_index.json` + `templates_index.json` 으로 SCN별 추천 블록 맵 생성. 도메인·트랙·category·tag·section relevance score + core guide fallback. | 신설 (엔트리 #80) | 207 |
 | `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리, 엔트리 #79 에서 10 도메인 dropdown + audit matrix 영역 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) + 10 도메인/audit matrix (엔트리 #79) | 156 |
+| `docs/assemble.md` | `/assemble/` 4 단계 조립형 작성기 페이지 — 도메인·시나리오·블록/§ 배치·회사/사업 입력 후 Worker `/api/assemble` 로 9 섹션 본문 생성. | 신설 (엔트리 #82·#83) | 131 |
 | `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가, 엔트리 #79 에서 `complete.audit` 6 축 matrix 렌더링과 localStorage 복원을 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) + structured audit matrix (엔트리 #79) | 404 |
+| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. | 신설 (엔트리 #82·#83) | 740 |
 | `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이, 엔트리 #79 에서 6 축 audit matrix table 스타일 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) + audit matrix (엔트리 #79) | 236 |
+| `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. | 신설 (엔트리 #82·#83) | 474 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
+| `docs/data/scenario_index.json` | 65 시나리오 compact card index — 정식 40 + 후보 25, 8 필드 카드 shape. `/assemble` Step 2 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_index.py`) | 67 KB |
+| `docs/data/scenario_block_map.json` | 65 SCN → 추천 block list map — 각 SCN 14 후보, section/category/score 포함. `/assemble` Step 3 추천 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_map.py`) | 188 KB |
 | `worker/src/agent.js` | `POST /api/agent/generate` SSE Agent — Tier 1 회사명 검증, Planner·Outline·9 Section·Validate·Compile 이벤트 스트림, deterministic fallback, `writer_mode=llm` 시 Gemini Section Writer 호출. Free tier 기본은 `AGENT_MAX_LLM_SECTIONS=5` 로 제한. 엔트리 #75 에서 섹션별 guide compact context prompt 주입, 엔트리 #76 에서 `final_md` 클린 본문 + `audit_md` 검토 리포트 분리, 엔트리 #79 에서 출처 ID 전면 비노출·structured audit complete payload 를 추가. | 신설 (엔트리 #72) + Gemini Section Writer (엔트리 #73) + Free tier cap (엔트리 #74) + compact context prompt (엔트리 #75) + clean final/audit (엔트리 #76) + source-free audit (엔트리 #79) | 485 |
 | `worker/src/library.js` | LAYER A 재사용 블록 라이브러리 — 9 섹션 완성문장, 10 도메인 프로필, scale fallback, `buildSlots`·`composeFromLibrary`. 엔트리 #79 에서 사용자 명시 정량 입력이 scale fallback 보다 우선하도록 병합 순서와 UI alias 처리를 보강. | 신설 (엔트리 #77) + 10 도메인/scale 확장 (엔트리 #78 후속) + override 보강 (엔트리 #79) | 536 |
 | `worker/src/audit.js` | Worker 런타임용 6 축 자동 검증 모듈 — slot·placeholder·§1~§9 헤더·섹션 균형·도메인 cross·메타 누출 검사. `tools/lint_plan.py` 기준을 JS 로 이식. | 신설 (엔트리 #79) | 152 |
+| `worker/src/assemble.js` | `POST /api/assemble` deterministic assembler — request 검증, section normalization, block body cleanup/fill, §1~§9 fallback, audit JSON/Markdown 반환. `mode:"llm"` 은 501. | 신설 (엔트리 #81) | 279 |
 | `worker/src/gemini.js` | Cloudflare AI Gateway / Google AI Studio 공용 호출 모듈 — env 검증, Gateway URL 생성, payload logging off 헤더, authenticated gateway token, Gemini text parse. `/api/llm` 과 Agent Section Writer 가 공유. | 신설 (엔트리 #73) | 71 |
 | `worker/package.json` | Cloudflare Worker 하위 프로젝트 스크립트 (`test`, `deploy:dry-run`, `deploy`) + Wrangler devDependency 선언. | 신설 (엔트리 #61) | 13 |
 | `worker/package-lock.json` | Worker npm lockfile — Wrangler 4.90.0 및 의존성 고정. | 신설 (엔트리 #63) | 1502 |
 | `worker/wrangler.toml` | Cloudflare Worker 배포 설정 — main·compatibility_date·workers_dev·preview_urls·observability·required secrets·기본 Gemini 모델·origin allowlist·AI Gateway vars·Free tier 용 `AGENT_MAX_LLM_SECTIONS=5`. Free plan 미지원 `limits.cpu_ms` 는 엔트리 #74 에서 제거. | 신설 (엔트리 #61) + 배포 설정 확정 (엔트리 #62·#63) + Agent 운영 보강 (엔트리 #72·#74) | 22 |
-| `worker/src/index.js` | Worker 라우터 — 기존 `POST /api/llm` 보안 프록시 보존 + 신규 `POST /api/agent/generate` SSE Agent 라우트 연결. Gateway 호출은 `worker/src/gemini.js` 로 공용화. | 신설 (엔트리 #61) + Agent route 추가 (엔트리 #72) + Gateway 공용화 (엔트리 #73) | 175 |
+| `worker/src/index.js` | Worker 라우터 — 기존 `POST /api/llm` 보안 프록시 보존 + `POST /api/agent/generate` SSE Agent + `POST /api/assemble` deterministic assembler 라우트 연결. Gateway 호출은 `worker/src/gemini.js` 로 공용화. | 신설 (엔트리 #61) + Agent route 추가 (엔트리 #72) + Gateway 공용화 (엔트리 #73) + assemble route (엔트리 #81) | 183 |
 | `worker/test/index.test.js` | Worker Node test suite — 기존 LLM proxy 검증 + Agent Tier 1 거부·SSE 9 섹션 complete 이벤트 + Gemini Section Writer Gateway 호출·payload logging off·LLM 섹션 cap·compact context prompt 주입·최종 본문/audit 분리 검증. 엔트리 #79 에서 BLK/TEST/출처 ID 비노출과 `complete.audit` 검증을 추가. | 신설 (엔트리 #61) + Agent 테스트 추가 (엔트리 #72·#73·#74·#75·#76) + source-free audit 검증 (엔트리 #79) | 372 |
 | `worker/test/library.test.js` | LAYER A library 단위 테스트 — 10 도메인 × 3 규모 슬롯, scale alias/fallback, 사용자 명시값 override, UI step2 alias, 9 섹션 슬롯 잔존 0, STL/CAS 회귀 검증. | 신설 (엔트리 #79) | 175 |
 | `worker/test/audit.test.js` | Worker 6 축 audit 단위 테스트 — 정상 9 섹션 PASS, 슬롯·placeholder·섹션 누락·cross·meta 위반 FAIL fixture. | 신설 (엔트리 #79) | 50 |
+| `worker/test/assemble.test.js` | Worker `/api/assemble` Node test suite — invalid JSON/method/mode/domain/scenario, 자동·명시 section assignment, block cleanup, 10 도메인 fallback audit PASS 검증. | 신설 (엔트리 #81) | 213 |
 | `tools/lint_plan.py` | Python 표준 라이브러리 기반 6 축 사업계획서 lint — 엔트리 #79 에서 placeholder regex 를 JS audit 과 동기화. | 신설 (엔트리 #78) + regex 동기화 (엔트리 #79) | 319 |
 | `tools/generate_plan.py` | Local CLI 9 섹션 사업계획서 생성기 — `라이브러리_공통문구_9섹션.md` + `사전_슬롯과_도메인_10종.md` 를 파싱해 paste-ready Markdown 생성 후 `lint_plan.py` 실행. | 신설 (엔트리 #79) | 286 |
 | `tools/test_generate_plan.py` | Local CLI smoke test — STL/중견 샘플 생성, §1~§9·slot/source/placeholder 제거, lint 통과 검증. | 신설 (엔트리 #79) | 61 |
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
+| `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore 검증. | 신설 (엔트리 #82) | 100 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
 | `작업로그.md` | 본 문서 (§4 본문 → `방법론_총론.md` 분리 후 인덱스만 유지) | 진행 중 | — |
 | (참고 PDF 6종) | 외부 사례 자료 | 변경 없음 | — |
@@ -3360,6 +3370,123 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 
 ---
 
+#### 엔트리 #80 — 시나리오 인덱스 + SCN→블록 맵 빌드 파이프라인 (2026-05-13)
+
+- **맥락**: `/assemble/` 은 사용자가 내부 블록 ID 를 직접 알 필요 없이 도메인과 시나리오부터 선택해야 한다. 기존 `시나리오_카탈로그.md` 의 정식 시나리오와 `사전_슬롯과_도메인_10종.md` §3 의 신규 25 후보를 같은 데이터 구조로 묶는 compact index 가 필요했다.
+- **AI 수행**:
+  1. `hooks/build_scenario_index.py` 신설 — `시나리오_카탈로그.md` 의 카드와 `사전_슬롯과_도메인_10종.md` §3 후보 table 을 파싱해 `docs/data/scenario_index.json` 을 생성한다. 후보 table 은 `대상 공정`·`고통점`·`AI 해결`·`데이터 소스`·`트랙 매핑`·`적합 규모`·`기대효과`·`삽화` 의 8 필드 카드로 정규화했다.
+  2. `hooks/build_scenario_map.py` 신설 — `scenario_index.json` 과 `docs/data/templates_index.json` 을 입력으로 `docs/data/scenario_block_map.json` 을 생성한다. 점수는 도메인 match, track match, scenario prefix, template category, tags, section relevance 를 합산한다.
+  3. `mkdocs.yml` hooks 에 두 스크립트를 등록했다. `build_templates_data.py` 가 먼저 template index 를 만들고, 그 뒤 scenario index/map 이 이어진다.
+- **검증 결과**:
+  - `python3 hooks/build_scenario_index.py` — PASS, 65 scenarios 생성
+  - `python3 hooks/build_scenario_map.py` — PASS, 65 scenarios / 최소 14 blocks per scenario
+  - Node validation — PASS, `scenario_count: 65`, `map_count: 65`, `bad: 0`, `min: 14`
+- **산출물**: `hooks/build_scenario_index.py`, `hooks/build_scenario_map.py`, `docs/data/scenario_index.json`, `docs/data/scenario_block_map.json`, `mkdocs.yml`
+- **배운 점·재사용 포인트**:
+  - 정식 카드와 후보 table 이 섞여 있어도 generator 단계에서 canonical card 로 맞추면 UI 는 하나의 데이터 모델만 다루면 된다.
+  - 추천 mapping 은 완벽한 의미 매칭보다 "최소 유효 블록 수 보장 + core guide fallback" 이 중요하다. 작성기 초기 화면에서 빈 추천이 나오면 사용 흐름이 끊긴다.
+
+---
+
+#### 엔트리 #81 — Worker `POST /api/assemble` deterministic assembler (2026-05-13)
+
+- **맥락**: 기존 `/api/agent/generate` 는 SSE Agent 와 Gemini section writer 를 포함해 interactive 작성에는 유용하지만, `/assemble/` 의 v1 목표는 선택한 블록을 즉시 9 섹션 사업계획서로 조립하는 deterministic API 다. Gemini 보강은 후속 단계로 분리하고, `mode: "llm"` 은 명시적으로 미구현 응답을 반환하도록 했다.
+- **AI 수행**:
+  1. `worker/src/assemble.js` 신설 — request validation, slot 병합, section assignment, block body cleanup, 9 섹션 fallback, audit 실행, response packaging 을 담당한다.
+  2. `worker/src/index.js` 에 `POST /api/assemble` route 를 `/api/llm` 보다 앞에 등록했다. 비 POST 는 `405 method_not_allowed`, JSON parse 실패는 `400 invalid_json`, `mode: "llm"` 은 `501 not_implemented` 로 응답한다.
+  3. section normalize 규칙을 구현했다. `§1`, `§1 현황`, `§1.2` 는 `§1`, `§0` 은 `§1`, `§10` 은 `§4`, `§1~§9` 밖은 unassigned 로 처리한다.
+  4. block 정렬 priority 는 `track > guide > scenario > module > package` 로 고정했다. explicit `section_assignment` 가 있으면 block context 의 section 보다 우선한다.
+  5. final body 는 항상 `# {company} AI 사업계획서` 와 `## §1`~`## §9` exactly 로 출력한다. 선택 block 이 없는 section 은 `composeFromLibrary(sectionId, slots)` fallback 을 사용한다.
+  6. final output cleanup 은 `> [출처: ...]`, `BLK-*`, `TEST-*`, frontmatter, generator/meta wording 을 제거하고, `{{slot}}`, `[고객사]`, `[공정]`, `[기간]`, `[수치]`, `[%]` 를 deterministic 값 또는 `[확인 필요]` 로 채운다.
+- **검증 결과**:
+  - `cd worker && npm test` — PASS, 66 tests / 0 fail
+  - 신규 `worker/test/assemble.test.js` — invalid method/json/mode/domain/scenarios, LLM 501, auto section mapping, explicit assignment override, block cleanup, 10 domains fallback audit PASS 검증
+- **산출물**: `worker/src/assemble.js`, `worker/src/index.js`, `worker/test/assemble.test.js`
+- **배운 점·재사용 포인트**:
+  - deterministic assembler 는 "선택 block 우선 + 빈 section 은 LAYER A fallback" 구조가 안정적이다. 사용자가 적게 골라도 항상 완성 9 섹션을 반환한다.
+  - UI 가 선택 block body 만 보낼 때 Worker 는 거대한 template bundle 없이 audit-backed 작성 API 를 유지할 수 있다.
+
+---
+
+#### 엔트리 #82 — `/assemble/` UI Step 1~2: 도메인·시나리오 선택 (2026-05-13)
+
+- **맥락**: `/assemble/` 의 첫 화면은 기존 `/generate` 의 단일 form 보다 "무엇을 만들지" 를 먼저 고르는 방식이어야 한다. 10 도메인 card 와 선택 도메인 기반 scenario card 가 필요했다.
+- **AI 수행**:
+  1. `docs/assemble.md` 신설 — 4 step app surface 를 만들고, endpoint/data path 를 HTML data attribute 로 지정했다.
+  2. `docs/javascripts/assemble-ui.js` 신설 — `document$.subscribe` 로 MkDocs navigation 과 호환되게 초기화하고, `scenario_index.json`, `scenario_block_map.json`, `templates_index.json` 을 로드한다.
+  3. Step 1 은 10 도메인 card 를 렌더링한다. Step 2 는 선택 도메인 scenario 와 cross-cutting `MLO`, `LLM`, `SAF` scenario 를 함께 보여준다.
+  4. pure helper 를 `globalThis.AiDocsAssemble` 로 export 했다. Node test 에서 `normalizeSection`, `assignBlocksToSections`, `buildPayload`, `restoreState`, `loadFavorites` 를 브라우저 없이 검증할 수 있다.
+- **검증 결과**:
+  - `node --check docs/javascripts/assemble-ui.js` — PASS
+  - `node --test tests/llm-client.test.mjs tests/assemble-ui.test.mjs` — PASS, 9 tests / 0 fail
+- **산출물**: `docs/assemble.md`, `docs/javascripts/assemble-ui.js`, `tests/assemble-ui.test.mjs`
+- **배운 점·재사용 포인트**:
+  - MkDocs SPA navigation 에서 page script 는 전역 한 번 실행보다 `document$.subscribe` 기반 idempotent init 이 안전하다.
+  - UI helper 를 전역 pure API 로 노출하면 별도 bundler 없이도 Node 내장 test 로 핵심 payload logic 을 검증할 수 있다.
+
+---
+
+#### 엔트리 #83 — `/assemble/` UI Step 3~4: 블록 cart·섹션 슬롯·payload 조립 (2026-05-13)
+
+- **맥락**: scenario 선택 뒤 사용자는 추천 block 을 검토하고, 필요하면 §1~§9 section slot 에 직접 배치해야 한다. desktop drag/drop 과 mobile tap 동작을 모두 지원해야 한다.
+- **AI 수행**:
+  1. Step 3 에 block catalog, selected cart, favorites, §1~§9 section slot 을 구현했다. desktop 은 HTML5 drag/drop, mobile 은 선택 block 을 누르고 section 의 "선택 블록 추가" button 으로 이동한다.
+  2. favorites 는 `ai_docs_assemble_favorites_v1`, 작업 state 는 `ai_docs_assemble_state_v1` 로 저장한다. 마지막 assemble 결과는 `ai_docs_assemble_last_result_v1` 에 보관한다.
+  3. Step 4 에 회사/공정/규모/사업 기간/예산/정부지원율 field 와 advanced quantitative slot accordion 을 추가했다. quantitative key 는 `QUANT_SLOT_KEYS` 기준으로 유지한다.
+  4. assemble 시점에만 `templates.json` 을 fetch 하고, 선택 block body 만 `block_context` 로 추려 `https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/assemble` 에 POST 한다.
+  5. `docs/stylesheets/assemble.css` 를 추가하고 `mkdocs.yml` 에 CSS/JS/nav 를 등록했다. `/assemble/` 은 시작 nav group 에서 `/generate/`, `/agent/` 보다 위에 배치했다.
+- **검증 결과**:
+  - `node --check docs/javascripts/assemble-ui.js` — PASS
+  - `node --test tests/llm-client.test.mjs tests/assemble-ui.test.mjs` — PASS, payload canonical shape 와 localStorage restore 검증
+  - `.venv/bin/mkdocs build --strict` — PASS, `/assemble/` page 포함 build 성공
+- **산출물**: `docs/assemble.md`, `docs/javascripts/assemble-ui.js`, `docs/stylesheets/assemble.css`, `mkdocs.yml`
+- **배운 점·재사용 포인트**:
+  - 정적 index 는 항상 preload 하고, 대형 body JSON 은 최종 action 에서 lazy load 해야 초기 UI 응답성과 Worker payload 크기 양쪽을 지킬 수 있다.
+  - drag/drop 만으로는 mobile 작성 흐름이 끊기므로 같은 상태 변경을 tap 기반 control 로도 제공해야 한다.
+
+---
+
+#### 엔트리 #84 — `/generate`·`/agent` deprecation banner + deploy dry-run (2026-05-13)
+
+- **맥락**: `/assemble/` 이 신규 권장 진입점이지만 기존 `/generate/`, `/agent/` 는 호환성을 위해 유지한다. redirect 없이 경고 banner 로만 이동을 안내한다.
+- **AI 수행**:
+  1. `docs/generate.md` 와 `docs/agent.md` 의 H1 직후에 `/assemble/` 권장 banner 를 추가했다.
+  2. `mkdocs.yml` nav 에 `/assemble/` 을 시작 group 최상단에 등록했다.
+  3. Cloudflare deploy 는 실제 실행하지 않았다. 본 턴에서는 dry-run 으로 Worker bundle 가능성과 bindings 만 확인했다.
+- **검증 결과**:
+  - `.venv/bin/mkdocs build --strict` — PASS, 기존 `/assemble/` absolute link INFO 는 strict 실패가 아님
+  - `cd worker && env XDG_CONFIG_HOME=/private/tmp/wrangler-config npm run deploy:dry-run` — PASS, Wrangler 4.90.0, Total Upload 111.88 KiB / gzip 27.98 KiB, `--dry-run: exiting now.`
+- **산출물**: `docs/generate.md`, `docs/agent.md`, `mkdocs.yml`
+- **배운 점·재사용 포인트**:
+  - 기존 entrypoint 를 즉시 redirect 하지 않으면 사용자 bookmark 와 회귀 테스트를 보존하면서 새 작성 흐름으로 이동시킬 수 있다.
+  - Wrangler 가 사용자 home 아래 log 를 쓰다 permission warning 을 낼 수 있어, sandbox 환경에서는 `XDG_CONFIG_HOME=/private/tmp/wrangler-config` 를 지정한 dry-run 이 더 재현 가능하다.
+
+---
+
+#### 엔트리 #85 — `/assemble` E2E 검증 + 방법론 closeout (2026-05-13)
+
+- **맥락**: `/assemble/` v1 은 route, static data hooks, browser UI, Worker API, audit 를 모두 건드리므로 build/test/dry-run 을 한 번에 닫고 방법론을 남겨야 한다.
+- **AI 수행**:
+  1. `방법론_총론.md` 에 4.41 "시나리오 우선 조립 인덱스 패턴" 과 4.42 "클라이언트 선택 본문 전송 패턴" 을 추가했다.
+  2. `작업로그.md` §2.7 파일 목록과 방법론 index 를 `/assemble/` 신규 파일 기준으로 갱신했다.
+  3. `python3 build_src.py` 로 `docs/meta/worklog.md`, `docs/other/methodology.md` 등 generated docs 를 root source 와 동기화한다.
+- **검증 결과**:
+  - `python3 build_src.py` — PASS
+  - `.venv/bin/mkdocs build --strict` — PASS
+  - `cd worker && npm test` — PASS, 66 tests / 0 fail
+  - `node --check docs/javascripts/assemble-ui.js` — PASS
+  - `node --test tests/llm-client.test.mjs tests/assemble-ui.test.mjs` — PASS, 9 tests / 0 fail
+  - `cd worker && env XDG_CONFIG_HOME=/private/tmp/wrangler-config npm run deploy:dry-run` — PASS
+- **남은 확인**:
+  - 실제 Worker deploy 와 Pages deploy 는 사용자 승인 후 수행한다.
+  - 공개 URL 기준 browser flow (`STL → SCN-STL-04 + SCN-MLO-01 → selected blocks → assemble → audit PASS`) 는 deploy 후 확인한다.
+  - `/agent/` 와 `/generate/` 의 banner visual check 는 Pages deploy 후 확인한다.
+- **배운 점·재사용 포인트**:
+  - static docs site + serverless API 구조에서는 "build hook data generation", "browser helper unit test", "Worker API unit test", "dry-run deploy" 를 같은 closeout 묶음으로 확인해야 누락이 적다.
+  - v1 에서 LLM path 를 501 로 닫아 두면 deterministic path 의 품질·회귀를 먼저 고정하고, Gemini 보강은 별도 risk 단위로 진행할 수 있다.
+
+---
+
 ### 🔄 다음 세션 인계 — Phase E18 (YCP 사업계획서 작성 지원, 진행 중) ⭐ 우선
 
 본 세션 (2026-04-30 ~ 05-01) 에서 YCP 사업계획서 AI 부분 Task·MM 산정안을 작성. **다음 세션 첫 작업 후보**:
@@ -3559,6 +3686,8 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 | 4.38 | 신규 도메인 코드 vs 본문 분리 갱신법 | DOMAIN_PROFILE 코드 갱신은 별 단계, 본문 (사전 + 변형안) 먼저 검증. 코드는 Cloudflare 재배포 동반이므로 단일 변경 단위 분리 (엔트리 #78) |
 | 4.39 | lint cross-cutting 허용 임계 (3 단어) | 도메인 cross 검사 strict (0 단어) = false positive 폭증, 4 단어 fail 임계가 자연 균형. RAG·MLOps·HITL 등 cross-cutting 어휘 정상 통과 (엔트리 #78) |
 | 4.40 | 제출 표면 source-free / 내부 구조화 audit | 최종 본문·검토 리포트·UI matrix 에 `BLK-*`·`TEST-*`·`[출처:]` 미노출, 품질 정보만 구조화 audit 로 분리 (엔트리 #79) |
+| 4.41 | 시나리오 우선 조립 인덱스 | 도메인 → 시나리오 → 추천 블록 → §1~§9 배치 순서로 자산 ID 진입 비용을 낮춘다 (엔트리 #80~#83) |
+| 4.42 | 클라이언트 선택 본문 전송 | compact index 는 정적 사이트, 선택 block body 만 Worker 로 전송해 1.46MB 템플릿 번들링을 피한다 (엔트리 #81~#83) |
 
 **상세 본문**: `/Volumes/EXDATA/temp_git/ai-docs-for-biz/방법론_총론.md` §3 의 동일 번호 항목 참조.
 
@@ -3675,6 +3804,29 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 - 대상: Cloudflare Worker `/api/agent/generate` 의 LLM path 출력을 `tools/lint_plan.py` 동일 기준으로 검증.
 - 동반: lint 의 출력 JSON 을 LAYER B metric DB 에 적재하는 파이프라인 (선택).
 - 완료 기준: 10 도메인 × LLM 가다듬기 출력 모두 lint 6 축 PASS.
+
+### 5.8 /assemble 통합 조립 후속 작업 (엔트리 #80~#85)
+
+#### H1. 실제 Worker·Pages 배포
+- 현재 상태: Worker `npm run deploy:dry-run` PASS, Pages `mkdocs build --strict` PASS.
+- 남은 작업: 사용자 승인 후 Worker deploy 와 Pages deploy 실행.
+- 완료 기준: `https://ai-docs-for-biz.pages.dev/assemble/` 200, Worker `/api/assemble` 200.
+
+#### H2. 공개 URL browser flow 검증
+- 절차: `/assemble/` → `STL` 선택 → `SCN-STL-04` + `SCN-MLO-01` 선택 → 추천 block cart 확인 → 일부 block 을 §1~§9 로 배치 → 회사/사업 slot 입력 → assemble.
+- 완료 기준: final Markdown 이 `# {company} AI 사업계획서` 와 `## §1`~`## §9` 를 포함하고, audit PASS, `BLK-*`·`TEST-*`·`[출처:]` 비노출.
+
+#### H3. 기존 entrypoint banner visual check
+- 대상: `/agent/`, `/generate/`.
+- 완료 기준: deprecation banner 가 보이고 기존 기능은 redirect 없이 유지.
+
+#### H4. `mode: "llm"` Gemini 보강
+- 현재 상태: `/api/assemble` v1 은 deterministic only. `mode: "llm"` 요청은 `501 not_implemented`.
+- 후속 방향: 선택 block context + LAYER A fallback 을 prompt evidence 로 사용하는 Gemini 보강 단계 설계. deterministic audit 는 유지하고, LLM 은 section별 문체/맥락 보강 역할만 맡긴다.
+
+#### H5. 시나리오 후보 정식 카탈로그 등록
+- 현재 상태: `scenario_index.json` 은 `사전_슬롯과_도메인_10종.md` §3 의 신규 25 후보를 자동 포함한다.
+- 남은 작업: `시나리오_카탈로그.md` 에 SCN-CAS/HEA/PLT/SHP/ASM 후보 25 개를 정식 절로 등록하고, 목차·지원사업 매칭과 동기화.
 
 ---
 

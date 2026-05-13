@@ -1,0 +1,6502 @@
+{
+  "SCN-ASM-01": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 29,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-MEASUREMENT-§9",
+      "score": 22,
+      "title": "가이드 kpi-measurement §9. 추후 보강 후보",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-EXECUTION-ROADMAP-§5",
+      "score": 21,
+      "title": "가이드 execution-roadmap §5. 사업계획서 §4 인용·작성 강도 3 단계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 20,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 20,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-ASM-02": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 29,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-MEASUREMENT-§9",
+      "score": 22,
+      "title": "가이드 kpi-measurement §9. 추후 보강 후보",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-EXECUTION-ROADMAP-§5",
+      "score": 21,
+      "title": "가이드 execution-roadmap §5. 사업계획서 §4 인용·작성 강도 3 단계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 20,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    }
+  ],
+  "SCN-ASM-03": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 29,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-MEASUREMENT-§9",
+      "score": 22,
+      "title": "가이드 kpi-measurement §9. 추후 보강 후보",
+      "section": "§6",
+      "category": "guide"
+    }
+  ],
+  "SCN-ASM-04": [
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-RAG-INFRA-§3",
+      "score": 27,
+      "title": "가이드 rag-infra §3. 통합 운영 5 계층 아키텍처",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§5",
+      "score": 25,
+      "title": "가이드 korean-slm §5. 라우팅 임계 설계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§9",
+      "score": 25,
+      "title": "가이드 korean-slm §9. 자산 결합 요약",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-MEASUREMENT-§9",
+      "score": 22,
+      "title": "가이드 kpi-measurement §9. 추후 보강 후보",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-EXECUTION-ROADMAP-§5",
+      "score": 21,
+      "title": "가이드 execution-roadmap §5. 사업계획서 §4 인용·작성 강도 3 단계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-02/AI_해결",
+      "score": 20,
+      "title": "SCN-LLM-02 AI 해결 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AS-IS",
+      "score": 20,
+      "title": "SCN-LLM-02 AS-IS — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/기대효과",
+      "score": 20,
+      "title": "SCN-LLM-02 기대효과 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 20,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-ASM-05": [
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 56,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 56,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-RAG-INFRA-§3",
+      "score": 26,
+      "title": "가이드 rag-infra §3. 통합 운영 5 계층 아키텍처",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§5",
+      "score": 25,
+      "title": "가이드 korean-slm §5. 라우팅 임계 설계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§9",
+      "score": 25,
+      "title": "가이드 korean-slm §9. 자산 결합 요약",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-MEASUREMENT-§9",
+      "score": 23,
+      "title": "가이드 kpi-measurement §9. 추후 보강 후보",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-EXECUTION-ROADMAP-§5",
+      "score": 21,
+      "title": "가이드 execution-roadmap §5. 사업계획서 §4 인용·작성 강도 3 단계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-DOMAIN-KNOWLEDGE-§7",
+      "score": 19,
+      "title": "가이드 domain-knowledge §7. 확인 필요 항목 (시점·산업 변동 영역)",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-CAS-01": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 57,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-CAS-02": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 20,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-BREAKDOWN-§3",
+      "score": 19,
+      "title": "가이드 kpi-breakdown §3. §3 본문 5 절 템플릿",
+      "section": "§3",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 19,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-CAS-03": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-CAS-04": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 20,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-BREAKDOWN-§3",
+      "score": 19,
+      "title": "가이드 kpi-breakdown §3. §3 본문 5 절 템플릿",
+      "section": "§3",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 19,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-CAS-05": [
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-RAG-INFRA-§3",
+      "score": 27,
+      "title": "가이드 rag-infra §3. 통합 운영 5 계층 아키텍처",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§5",
+      "score": 25,
+      "title": "가이드 korean-slm §5. 라우팅 임계 설계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§9",
+      "score": 25,
+      "title": "가이드 korean-slm §9. 자산 결합 요약",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-01/AI_해결",
+      "score": 20,
+      "title": "SCN-LLM-01 AI 해결 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/적용_맥락",
+      "score": 20,
+      "title": "SCN-LLM-01 적용 맥락 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-BREAKDOWN-§3",
+      "score": 19,
+      "title": "가이드 kpi-breakdown §3. §3 본문 5 절 템플릿",
+      "section": "§3",
+      "category": "guide"
+    }
+  ],
+  "SCN-HEA-01": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 38,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 37,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/기대효과",
+      "score": 37,
+      "title": "SCN-STL-06 기대효과 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 37,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-HEA-02": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 36,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 35,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/기대효과",
+      "score": 35,
+      "title": "SCN-STL-06 기대효과 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 35,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 27,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 27,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-11/적용_맥락",
+      "score": 27,
+      "title": "SCN-STL-11 적용 맥락 — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-HEA-03": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 58,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 36,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 35,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/기대효과",
+      "score": 35,
+      "title": "SCN-STL-06 기대효과 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 35,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 27,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 27,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-11/적용_맥락",
+      "score": 27,
+      "title": "SCN-STL-11 적용 맥락 — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-HEA-04": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 56,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 56,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 36,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 35,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/기대효과",
+      "score": 35,
+      "title": "SCN-STL-06 기대효과 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 35,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-HEA-05": [
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 36,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 35,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/기대효과",
+      "score": 35,
+      "title": "SCN-STL-06 기대효과 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 35,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 28,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-RAG-INFRA-§3",
+      "score": 27,
+      "title": "가이드 rag-infra §3. 통합 운영 5 계층 아키텍처",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 27,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-11/적용_맥락",
+      "score": 27,
+      "title": "SCN-STL-11 적용 맥락 — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§5",
+      "score": 25,
+      "title": "가이드 korean-slm §5. 라우팅 임계 설계",
+      "section": "§4",
+      "category": "guide"
+    }
+  ],
+  "SCN-LLM-01": [
+    {
+      "id": "SCN-LLM-01/적용_맥락",
+      "score": 172,
+      "title": "SCN-LLM-01 적용 맥락 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/AI_해결",
+      "score": 171,
+      "title": "SCN-LLM-01 AI 해결 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/기대효과",
+      "score": 170,
+      "title": "SCN-LLM-01 기대효과 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/AS-IS",
+      "score": 169,
+      "title": "SCN-LLM-01 AS-IS — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 103,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 73,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 73,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 73,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 72,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "SCN-LLM-02/AI_해결",
+      "score": 67,
+      "title": "SCN-LLM-02 AI 해결 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AS-IS",
+      "score": 67,
+      "title": "SCN-LLM-02 AS-IS — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/기대효과",
+      "score": 67,
+      "title": "SCN-LLM-02 기대효과 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/적용_맥락",
+      "score": 58,
+      "title": "SCN-MLO-03 적용 맥락 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-LLM-02": [
+    {
+      "id": "SCN-LLM-02/AS-IS",
+      "score": 170,
+      "title": "SCN-LLM-02 AS-IS — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 170,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/기대효과",
+      "score": 169,
+      "title": "SCN-LLM-02 기대효과 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AI_해결",
+      "score": 168,
+      "title": "SCN-LLM-02 AI 해결 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 103,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 73,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 73,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 72,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 72,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "SCN-LLM-01/AI_해결",
+      "score": 66,
+      "title": "SCN-LLM-01 AI 해결 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/AS-IS",
+      "score": 66,
+      "title": "SCN-LLM-01 AS-IS — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/기대효과",
+      "score": 66,
+      "title": "SCN-LLM-01 기대효과 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-LLM-01 적용 맥락 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 59,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    }
+  ],
+  "SCN-LLM-03": [
+    {
+      "id": "BLK-T3-5.5",
+      "score": 103,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 73,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 73,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 72,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 72,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "SCN-LLM-01/AI_해결",
+      "score": 66,
+      "title": "SCN-LLM-01 AI 해결 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/AS-IS",
+      "score": 66,
+      "title": "SCN-LLM-01 AS-IS — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/기대효과",
+      "score": 66,
+      "title": "SCN-LLM-01 기대효과 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-LLM-01 적용 맥락 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AI_해결",
+      "score": 66,
+      "title": "SCN-LLM-02 AI 해결 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AS-IS",
+      "score": 66,
+      "title": "SCN-LLM-02 AS-IS — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/기대효과",
+      "score": 66,
+      "title": "SCN-LLM-02 기대효과 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/적용_맥락",
+      "score": 57,
+      "title": "SCN-MLO-03 적용 맥락 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-LLM-04": [
+    {
+      "id": "BLK-T3-5.5",
+      "score": 103,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 74,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 73,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 72,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 72,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "SCN-LLM-01/기대효과",
+      "score": 67,
+      "title": "SCN-LLM-01 기대효과 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AS-IS",
+      "score": 67,
+      "title": "SCN-LLM-02 AS-IS — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/기대효과",
+      "score": 67,
+      "title": "SCN-LLM-02 기대효과 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/AI_해결",
+      "score": 66,
+      "title": "SCN-LLM-01 AI 해결 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/AS-IS",
+      "score": 66,
+      "title": "SCN-LLM-01 AS-IS — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-LLM-01 적용 맥락 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/AI_해결",
+      "score": 66,
+      "title": "SCN-LLM-02 AI 해결 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/적용_맥락",
+      "score": 57,
+      "title": "SCN-MLO-03 적용 맥락 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-MET-01": [
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 56,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 56,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 56,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 53,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 48,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 48,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    }
+  ],
+  "SCN-MET-02": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 57,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 56,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 56,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 56,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 52,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 47,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 47,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    }
+  ],
+  "SCN-MET-03": [
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 56,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 56,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 53,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 48,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 47,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§3",
+      "score": 39,
+      "title": "pkg5-precision §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§6",
+      "score": 39,
+      "title": "pkg5-precision §6. 기대효과 및 성과 지표",
+      "section": "§6",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§1",
+      "score": 36,
+      "title": "pkg5-precision §1. 사업 개요 및 추진 배경",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§7",
+      "score": 36,
+      "title": "pkg5-precision §7. Track 2·3 연계 (별첨 — 6 개월 압축이라 핵심만)",
+      "section": "§7",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§8",
+      "score": 35,
+      "title": "pkg5-precision §8. 부록·별첨",
+      "section": "§8",
+      "category": "package"
+    }
+  ],
+  "SCN-MET-04": [
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 56,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 56,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 56,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 52,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 47,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 47,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    }
+  ],
+  "SCN-MET-05": [
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 56,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 56,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 56,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 56,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 52,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 47,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 47,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    }
+  ],
+  "SCN-MET-06": [
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 56,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 56,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 56,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 56,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 52,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 47,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 47,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    }
+  ],
+  "SCN-MET-07": [
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "PKG-PKG5-§0",
+      "score": 52,
+      "title": "pkg5-precision §0. 과제 요약 (1 페이지)",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§4",
+      "score": 47,
+      "title": "pkg5-precision §4. 목표 모습 (TO-BE) 및 제조 AI 도입 전략",
+      "section": "§4",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§5",
+      "score": 47,
+      "title": "pkg5-precision §5. 구축 상세 (6 개월 압축)",
+      "section": "§5",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§2",
+      "score": 44,
+      "title": "pkg5-precision §2. 기업 현황 및 대상 공정 분석",
+      "section": "§2",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§3",
+      "score": 39,
+      "title": "pkg5-precision §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§6",
+      "score": 39,
+      "title": "pkg5-precision §6. 기대효과 및 성과 지표",
+      "section": "§6",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§7",
+      "score": 36,
+      "title": "pkg5-precision §7. Track 2·3 연계 (별첨 — 6 개월 압축이라 핵심만)",
+      "section": "§7",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§1",
+      "score": 35,
+      "title": "pkg5-precision §1. 사업 개요 및 추진 배경",
+      "section": "§1",
+      "category": "package"
+    },
+    {
+      "id": "PKG-PKG5-§8",
+      "score": 35,
+      "title": "pkg5-precision §8. 부록·별첨",
+      "section": "§8",
+      "category": "package"
+    }
+  ],
+  "SCN-MLO-01": [
+    {
+      "id": "BLK-T2-4.2",
+      "score": 107,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 104,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 75,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 74,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 73,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§1",
+      "score": 70,
+      "title": "가이드 mlops-ritual §1. 분류 — MLOps loop 5 범주",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§8",
+      "score": 69,
+      "title": "가이드 mlops-ritual §8. 모델 한계·재사용 포인트",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-MLO-03/AI_해결",
+      "score": 69,
+      "title": "SCN-MLO-03 AI 해결 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§7",
+      "score": 68,
+      "title": "가이드 mlops-ritual §7. (확인 필요) 항목",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§7",
+      "score": 65,
+      "title": "pkg3-special-pipe §7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)",
+      "section": "§7",
+      "category": "package"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 65,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§5",
+      "score": 60,
+      "title": "가이드 mlops-ritual §5. 사업계획서 §9 인용·작성 강도 3 단계",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "BLK-FL-F",
+      "score": 60,
+      "title": "BLK-FL-F — 연합 모델의 운영·드리프트 관리 (삽입: Track 2 MLOps)",
+      "section": "§3",
+      "category": "module"
+    },
+    {
+      "id": "SCN-MLO-03/적용_맥락",
+      "score": 60,
+      "title": "SCN-MLO-03 적용 맥락 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-MLO-02": [
+    {
+      "id": "BLK-T2-4.2",
+      "score": 106,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 104,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 74,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 72,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 72,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "SCN-MLO-03/AI_해결",
+      "score": 67,
+      "title": "SCN-MLO-03 AI 해결 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "PKG-PKG3-§7",
+      "score": 66,
+      "title": "pkg3-special-pipe §7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)",
+      "section": "§7",
+      "category": "package"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§1",
+      "score": 65,
+      "title": "가이드 mlops-ritual §1. 분류 — MLOps loop 5 범주",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§7",
+      "score": 65,
+      "title": "가이드 mlops-ritual §7. (확인 필요) 항목",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§8",
+      "score": 65,
+      "title": "가이드 mlops-ritual §8. 모델 한계·재사용 포인트",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 64,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-FL-F",
+      "score": 59,
+      "title": "BLK-FL-F — 연합 모델의 운영·드리프트 관리 (삽입: Track 2 MLOps)",
+      "section": "§3",
+      "category": "module"
+    },
+    {
+      "id": "SCN-MLO-03/적용_맥락",
+      "score": 59,
+      "title": "SCN-MLO-03 적용 맥락 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/AS-IS",
+      "score": 58,
+      "title": "SCN-MLO-03 AS-IS — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-MLO-03": [
+    {
+      "id": "SCN-MLO-03/AI_해결",
+      "score": 170,
+      "title": "SCN-MLO-03 AI 해결 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/적용_맥락",
+      "score": 162,
+      "title": "SCN-MLO-03 적용 맥락 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/AS-IS",
+      "score": 161,
+      "title": "SCN-MLO-03 AS-IS — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-MLO-03/기대효과",
+      "score": 161,
+      "title": "SCN-MLO-03 기대효과 — 현장 피드백 루프 (불량 확인·라벨 재주입)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 105,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 104,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 74,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 73,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 73,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§1",
+      "score": 66,
+      "title": "가이드 mlops-ritual §1. 분류 — MLOps loop 5 범주",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§7",
+      "score": 66,
+      "title": "가이드 mlops-ritual §7. (확인 필요) 항목",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§8",
+      "score": 66,
+      "title": "가이드 mlops-ritual §8. 모델 한계·재사용 포인트",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§7",
+      "score": 65,
+      "title": "pkg3-special-pipe §7. Track 2·3 연계 (별첨 — 9 개월 압축이라 핵심만)",
+      "section": "§7",
+      "category": "package"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 64,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    }
+  ],
+  "SCN-PLT-01": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 57,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 28,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 27,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 27,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 27,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-PLT-02": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 27,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 26,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 26,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 26,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/AI_해결",
+      "score": 26,
+      "title": "SCN-RUB-05 AI 해결 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/AS-IS",
+      "score": 26,
+      "title": "SCN-RUB-05 AS-IS — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/기대효과",
+      "score": 26,
+      "title": "SCN-RUB-05 기대효과 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/적용_맥락",
+      "score": 26,
+      "title": "SCN-RUB-05 적용 맥락 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 26,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-PLT-03": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 27,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 26,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 26,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    }
+  ],
+  "SCN-PLT-04": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 27,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 26,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 26,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 26,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/AI_해결",
+      "score": 26,
+      "title": "SCN-RUB-05 AI 해결 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/AS-IS",
+      "score": 26,
+      "title": "SCN-RUB-05 AS-IS — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/기대효과",
+      "score": 26,
+      "title": "SCN-RUB-05 기대효과 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/적용_맥락",
+      "score": 26,
+      "title": "SCN-RUB-05 적용 맥락 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 26,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-PLT-05": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 27,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 27,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 26,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-RUB-01": [
+    {
+      "id": "SCN-RUB-01/적용_맥락",
+      "score": 173,
+      "title": "SCN-RUB-01 적용 맥락 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AI_해결",
+      "score": 170,
+      "title": "SCN-RUB-01 AI 해결 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AS-IS",
+      "score": 170,
+      "title": "SCN-RUB-01 AS-IS — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/기대효과",
+      "score": 169,
+      "title": "SCN-RUB-01 기대효과 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 75,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 67,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/적용_맥락",
+      "score": 67,
+      "title": "SCN-RUB-05 적용 맥락 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-03 AI 해결 — 가류(Curing) 시간·온도 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-03 AS-IS — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-03 기대효과 — 가류(Curing) 시간·온도 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-04 AI 해결 — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-RUB-02": [
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 172,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 171,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 168,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 168,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 74,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AS-IS",
+      "score": 68,
+      "title": "SCN-RUB-01 AS-IS — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AI_해결",
+      "score": 67,
+      "title": "SCN-RUB-01 AI 해결 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/AS-IS",
+      "score": 67,
+      "title": "SCN-RUB-04 AS-IS — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/적용_맥락",
+      "score": 67,
+      "title": "SCN-RUB-05 적용 맥락 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-01 기대효과 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-01 적용 맥락 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-03 AI 해결 — 가류(Curing) 시간·온도 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-03 AS-IS — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-03 기대효과 — 가류(Curing) 시간·온도 최적화",
+      "section": "§6",
+      "category": "scenario"
+    }
+  ],
+  "SCN-RUB-03": [
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 177,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AI_해결",
+      "score": 169,
+      "title": "SCN-RUB-03 AI 해결 — 가류(Curing) 시간·온도 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/기대효과",
+      "score": 169,
+      "title": "SCN-RUB-03 기대효과 — 가류(Curing) 시간·온도 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AS-IS",
+      "score": 168,
+      "title": "SCN-RUB-03 AS-IS — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/AS-IS",
+      "score": 67,
+      "title": "SCN-RUB-04 AS-IS — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-01 AI 해결 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-01 AS-IS — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-01 기대효과 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-01 적용 맥락 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-04 AI 해결 — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-RUB-04": [
+    {
+      "id": "SCN-RUB-04/AI_해결",
+      "score": 169,
+      "title": "SCN-RUB-04 AI 해결 — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/AS-IS",
+      "score": 167,
+      "title": "SCN-RUB-04 AS-IS — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/기대효과",
+      "score": 166,
+      "title": "SCN-RUB-04 기대효과 — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 74,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-01 AI 해결 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-01 AS-IS — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-01 기대효과 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-01 적용 맥락 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-03 AI 해결 — 가류(Curing) 시간·온도 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-03 AS-IS — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-RUB-05": [
+    {
+      "id": "SCN-RUB-05/AI_해결",
+      "score": 168,
+      "title": "SCN-RUB-05 AI 해결 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/AS-IS",
+      "score": 168,
+      "title": "SCN-RUB-05 AS-IS — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/적용_맥락",
+      "score": 167,
+      "title": "SCN-RUB-05 적용 맥락 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-05/기대효과",
+      "score": 166,
+      "title": "SCN-RUB-05 기대효과 — 고무 제품 외관 비전 검사 (표면 결함·이물)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-03/적용_맥락",
+      "score": 74,
+      "title": "SCN-RUB-03 적용 맥락 — 가류(Curing) 시간·온도 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-04/AI_해결",
+      "score": 67,
+      "title": "SCN-RUB-04 AI 해결 — 사출·성형 공정 불량 예측 및 조건 추천",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-01 AI 해결 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-01 AS-IS — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-01 기대효과 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-01/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-01 적용 맥락 — 배합(Banbury·Mixer) 분산도 품질 예측",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AI_해결",
+      "score": 66,
+      "title": "SCN-RUB-02 AI 해결 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/AS-IS",
+      "score": 66,
+      "title": "SCN-RUB-02 AS-IS — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/기대효과",
+      "score": 66,
+      "title": "SCN-RUB-02 기대효과 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-RUB-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-RUB-02 적용 맥락 — 압출(Extrusion) 라인 치수·표면 실시간 검사·제어",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-SAF-01": [
+    {
+      "id": "SCN-SAF-01/적용_맥락",
+      "score": 170,
+      "title": "SCN-SAF-01 적용 맥락 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/AI_해결",
+      "score": 168,
+      "title": "SCN-SAF-01 AI 해결 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/AS-IS",
+      "score": 168,
+      "title": "SCN-SAF-01 AS-IS — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/기대효과",
+      "score": 168,
+      "title": "SCN-SAF-01 기대효과 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-SAF-D",
+      "score": 58,
+      "title": "BLK-SAF-D — 안전 AI 아키텍처(CCTV 비전 · 웨어러블 IoT · MSDS RAG 3축)",
+      "section": "§1",
+      "category": "module"
+    },
+    {
+      "id": "SCN-SAF-02/AI_해결",
+      "score": 57,
+      "title": "SCN-SAF-02 AI 해결 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/AS-IS",
+      "score": 57,
+      "title": "SCN-SAF-02 AS-IS — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/기대효과",
+      "score": 57,
+      "title": "SCN-SAF-02 기대효과 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/적용_맥락",
+      "score": 57,
+      "title": "SCN-SAF-02 적용 맥락 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 57,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 57,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-SAF-C",
+      "score": 56,
+      "title": "BLK-SAF-C — 사전 징후 감지·기록 부재 리스크 (AS-IS)",
+      "section": "§1",
+      "category": "module"
+    }
+  ],
+  "SCN-SAF-02": [
+    {
+      "id": "SCN-SAF-02/적용_맥락",
+      "score": 164,
+      "title": "SCN-SAF-02 적용 맥락 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/AI_해결",
+      "score": 162,
+      "title": "SCN-SAF-02 AI 해결 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/AS-IS",
+      "score": 161,
+      "title": "SCN-SAF-02 AS-IS — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/기대효과",
+      "score": 161,
+      "title": "SCN-SAF-02 기대효과 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-CBAM-D",
+      "score": 146,
+      "title": "BLK-CBAM-D — 제품 단위 배출량 산정 엔진",
+      "section": "§3",
+      "category": "module"
+    },
+    {
+      "id": "SCN-SAF-01/AI_해결",
+      "score": 65,
+      "title": "SCN-SAF-01 AI 해결 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/AS-IS",
+      "score": 65,
+      "title": "SCN-SAF-01 AS-IS — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/기대효과",
+      "score": 65,
+      "title": "SCN-SAF-01 기대효과 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/적용_맥락",
+      "score": 65,
+      "title": "SCN-SAF-01 적용 맥락 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-SAF-D",
+      "score": 57,
+      "title": "BLK-SAF-D — 안전 AI 아키텍처(CCTV 비전 · 웨어러블 IoT · MSDS RAG 3축)",
+      "section": "§1",
+      "category": "module"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 57,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    }
+  ],
+  "SCN-SAF-03": [
+    {
+      "id": "BLK-SAF-F",
+      "score": 156,
+      "title": "BLK-SAF-F — 사고이력·안전매뉴얼·MSDS RAG (Track 3 본문)",
+      "section": "§1",
+      "category": "module"
+    },
+    {
+      "id": "SCN-SAF-01/AI_해결",
+      "score": 65,
+      "title": "SCN-SAF-01 AI 해결 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/AS-IS",
+      "score": 65,
+      "title": "SCN-SAF-01 AS-IS — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/기대효과",
+      "score": 65,
+      "title": "SCN-SAF-01 기대효과 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-01/적용_맥락",
+      "score": 65,
+      "title": "SCN-SAF-01 적용 맥락 — 중대재해 위험요소 AI 감지 (CCTV·웨어러블)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/AI_해결",
+      "score": 57,
+      "title": "SCN-SAF-02 AI 해결 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/AS-IS",
+      "score": 57,
+      "title": "SCN-SAF-02 AS-IS — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/기대효과",
+      "score": 57,
+      "title": "SCN-SAF-02 기대효과 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-SAF-02/적용_맥락",
+      "score": 57,
+      "title": "SCN-SAF-02 적용 맥락 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-SAF-D",
+      "score": 56,
+      "title": "BLK-SAF-D — 안전 AI 아키텍처(CCTV 비전 · 웨어러블 IoT · MSDS RAG 3축)",
+      "section": "§1",
+      "category": "module"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    }
+  ],
+  "SCN-SHP-01": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 20,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-BREAKDOWN-§3",
+      "score": 19,
+      "title": "가이드 kpi-breakdown §3. §3 본문 5 절 템플릿",
+      "section": "§3",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 19,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-SHP-02": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-SHP-03": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "PKG-PKG3-§3",
+      "score": 20,
+      "title": "pkg3-special-pipe §3. 현황 및 문제점 (AS-IS)",
+      "section": "§3",
+      "category": "package"
+    },
+    {
+      "id": "SCN-SAF-02/AI_해결",
+      "score": 20,
+      "title": "SCN-SAF-02 AI 해결 — 탄소배출 모니터링·CBAM 신고 자동화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-BREAKDOWN-§3",
+      "score": 19,
+      "title": "가이드 kpi-breakdown §3. §3 본문 5 절 템플릿",
+      "section": "§3",
+      "category": "guide"
+    }
+  ],
+  "SCN-SHP-04": [
+    {
+      "id": "BLK-T3-4.2",
+      "score": 57,
+      "title": "BLK-T3-4.2 — RAG 기준 아키텍처 — 5 계층",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.2",
+      "score": 57,
+      "title": "BLK-T3-5.2 — 청킹 전략 — 계층·섹션·토픽·멀티뷰",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.1",
+      "score": 56,
+      "title": "BLK-T3-3.1 — 문서 포맷 이질성 및 검색 불가 상태",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-3.2",
+      "score": 56,
+      "title": "BLK-T3-3.2 — 숙련자 암묵지 의존 및 지식 이전 실패",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T3-5.5",
+      "score": 56,
+      "title": "BLK-T3-5.5 — LLM 응답 생성 — 환각 방지·근거 인용·거부 정책",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-RAG-INFRA-§3",
+      "score": 27,
+      "title": "가이드 rag-infra §3. 통합 운영 5 계층 아키텍처",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§5",
+      "score": 25,
+      "title": "가이드 korean-slm §5. 라우팅 임계 설계",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KOREAN-SLM-§9",
+      "score": 25,
+      "title": "가이드 korean-slm §9. 자산 결합 요약",
+      "section": "§4",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-02/적용_맥락",
+      "score": 20,
+      "title": "SCN-LLM-02 적용 맥락 — 설비 장애 대응 지식 검색·권고 (eCMMS 통합)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 20,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 20,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "GUIDE-DATA-SPEC-§3",
+      "score": 19,
+      "title": "가이드 data-spec §3. §6 본문 7 절 템플릿",
+      "section": "§6",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-KPI-BREAKDOWN-§3",
+      "score": 19,
+      "title": "가이드 kpi-breakdown §3. §3 본문 5 절 템플릿",
+      "section": "§3",
+      "category": "guide"
+    },
+    {
+      "id": "SCN-LLM-01/AI_해결",
+      "score": 19,
+      "title": "SCN-LLM-01 AI 해결 — 표준작업지시서(SOP) RAG 질의응답",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-SHP-05": [
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.6",
+      "score": 57,
+      "title": "BLK-T1-4.6 — 데이터 → 피쳐 → 모델링 → 현장 적용 전체 파이프라인",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-5.5",
+      "score": 57,
+      "title": "BLK-T2-5.5 — 인프라·데이터·성능 3 층 모니터링 및 드리프트 탐지 체계",
+      "section": "§5",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.5",
+      "score": 56,
+      "title": "BLK-T1-4.5 — 모델·알고리즘 선정 기준 및 앙상블 구성",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 56,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.2",
+      "score": 56,
+      "title": "BLK-T2-4.2 — MLOps 핵심 7 종 구성요소 모듈 인벤토리",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-4.4",
+      "score": 56,
+      "title": "BLK-T2-4.4 — 엣지·온프레미스·클라우드 3 단 참조 아키텍처",
+      "section": "§4",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-6.1",
+      "score": 56,
+      "title": "BLK-T2-6.1 — 개선 포인트 선정 노하우 — 어디를 왜 먼저 고칠 것인가",
+      "section": "§6",
+      "category": "track"
+    },
+    {
+      "id": "GUIDE-MLOPS-RITUAL-§3",
+      "score": 26,
+      "title": "가이드 mlops-ritual §3. §9 본문 5 절 템플릿",
+      "section": "§9",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-SCENARIO-ROI-§6",
+      "score": 25,
+      "title": "가이드 scenario-roi §6. 다른 자산과의 결합 패턴",
+      "section": "§5",
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-QUICKSTART-§5",
+      "score": 22,
+      "title": "가이드 quickstart §5. 자산 인용 + 자체평가",
+      "section": null,
+      "category": "guide"
+    },
+    {
+      "id": "GUIDE-ASSEMBLY-§3",
+      "score": 21,
+      "title": "가이드 assembly §3. SCN ID 부정합 처리 정책",
+      "section": null,
+      "category": "guide"
+    }
+  ],
+  "SCN-STL-01": [
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 67,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 66,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 57,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-02": [
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 75,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 67,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 67,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 67,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 66,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 66,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 60,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-03": [
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 77,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 68,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 68,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 66,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 66,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 58,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-04": [
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 182,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 170,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 169,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 169,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 76,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 68,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 66,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 66,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 66,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-08/AI_해결",
+      "score": 59,
+      "title": "SCN-STL-08 AI 해결 — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-05": [
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 178,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 171,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 171,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 168,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 75,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 67,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 66,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 66,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 66,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 58,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-06": [
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 170,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AS-IS",
+      "score": 161,
+      "title": "SCN-STL-06 AS-IS — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 160,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/기대효과",
+      "score": 160,
+      "title": "SCN-STL-06 기대효과 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 74,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 66,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 66,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 66,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 66,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-07": [
+    {
+      "id": "SCN-STL-07/적용_맥락",
+      "score": 162,
+      "title": "SCN-STL-07 적용 맥락 — 인발·필거밀 공정설계 LLM 지능화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-07/AI_해결",
+      "score": 161,
+      "title": "SCN-STL-07 AI 해결 — 인발·필거밀 공정설계 LLM 지능화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-07/AS-IS",
+      "score": 161,
+      "title": "SCN-STL-07 AS-IS — 인발·필거밀 공정설계 LLM 지능화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-07/기대효과",
+      "score": 161,
+      "title": "SCN-STL-07 기대효과 — 인발·필거밀 공정설계 LLM 지능화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 74,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 66,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 66,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-08": [
+    {
+      "id": "SCN-STL-08/AI_해결",
+      "score": 166,
+      "title": "SCN-STL-08 AI 해결 — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-08/AS-IS",
+      "score": 166,
+      "title": "SCN-STL-08 AS-IS — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-08/적용_맥락",
+      "score": 166,
+      "title": "SCN-STL-08 적용 맥락 — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-08/기대효과",
+      "score": 165,
+      "title": "SCN-STL-08 기대효과 — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "PKG-PKG3-§8",
+      "score": 139,
+      "title": "pkg3-special-pipe §8. 부록·별첨",
+      "section": "§8",
+      "category": "package"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 66,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 66,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-09": [
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 173,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 170,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 170,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 169,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 57,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-10": [
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 67,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-08/적용_맥락",
+      "score": 58,
+      "title": "SCN-STL-08 적용 맥락 — Mill Sheet·성적서 OCR·디지털화 및 원소재-완제품 상관분석",
+      "section": "§3",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-11": [
+    {
+      "id": "SCN-STL-11/기대효과",
+      "score": 162,
+      "title": "SCN-STL-11 기대효과 — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-11/AS-IS",
+      "score": 161,
+      "title": "SCN-STL-11 AS-IS — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-11/적용_맥락",
+      "score": 161,
+      "title": "SCN-STL-11 적용 맥락 — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-11/AI_해결",
+      "score": 160,
+      "title": "SCN-STL-11 AI 해결 — 비파괴검사 UT/ECT 자동 판정",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 75,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 75,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 67,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-STL-12": [
+    {
+      "id": "SCN-STL-04/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-04 적용 맥락 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/적용_맥락",
+      "score": 73,
+      "title": "SCN-STL-05 적용 맥락 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/적용_맥락",
+      "score": 66,
+      "title": "SCN-STL-09 적용 맥락 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-04 AI 해결 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-04 AS-IS — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-04/기대효과",
+      "score": 65,
+      "title": "SCN-STL-04 기대효과 — 냉간압연 패스 스케줄 표준화·최적화",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-05 AI 해결 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-05 AS-IS — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-05/기대효과",
+      "score": 65,
+      "title": "SCN-STL-05 기대효과 — 냉간압연 실시간 두께 예측·이탈 조기경보",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/적용_맥락",
+      "score": 65,
+      "title": "SCN-STL-06 적용 맥락 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AI_해결",
+      "score": 65,
+      "title": "SCN-STL-09 AI 해결 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/AS-IS",
+      "score": 65,
+      "title": "SCN-STL-09 AS-IS — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-09/기대효과",
+      "score": 65,
+      "title": "SCN-STL-09 기대효과 — 설비 예지보전 (압연기 롤·베어링·구동부)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-STL-06/AI_해결",
+      "score": 57,
+      "title": "SCN-STL-06 AI 해결 — 열처리(소둔) 로 내 적재·온도 프로파일 최적화",
+      "section": "§4",
+      "category": "scenario"
+    }
+  ],
+  "SCN-UTL-01": [
+    {
+      "id": "SCN-UTL-01/AS-IS",
+      "score": 176,
+      "title": "SCN-UTL-01 AS-IS — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/적용_맥락",
+      "score": 176,
+      "title": "SCN-UTL-01 적용 맥락 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AI_해결",
+      "score": 175,
+      "title": "SCN-UTL-01 AI 해결 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/기대효과",
+      "score": 175,
+      "title": "SCN-UTL-01 기대효과 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 66,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-UTL-02 적용 맥락 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-02 AI 해결 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-02 기대효과 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-03 AI 해결 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AS-IS",
+      "score": 65,
+      "title": "SCN-UTL-03 AS-IS — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-03 기대효과 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 65,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    }
+  ],
+  "SCN-UTL-02": [
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 168,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/적용_맥락",
+      "score": 168,
+      "title": "SCN-UTL-02 적용 맥락 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AI_해결",
+      "score": 167,
+      "title": "SCN-UTL-02 AI 해결 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/기대효과",
+      "score": 167,
+      "title": "SCN-UTL-02 기대효과 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AI_해결",
+      "score": 73,
+      "title": "SCN-UTL-01 AI 해결 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AS-IS",
+      "score": 73,
+      "title": "SCN-UTL-01 AS-IS — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/기대효과",
+      "score": 73,
+      "title": "SCN-UTL-01 기대효과 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/적용_맥락",
+      "score": 73,
+      "title": "SCN-UTL-01 적용 맥락 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-03 AI 해결 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AS-IS",
+      "score": 65,
+      "title": "SCN-UTL-03 AS-IS — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-03 기대효과 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 65,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    }
+  ],
+  "SCN-UTL-03": [
+    {
+      "id": "SCN-UTL-03/AI_해결",
+      "score": 169,
+      "title": "SCN-UTL-03 AI 해결 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 169,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AS-IS",
+      "score": 168,
+      "title": "SCN-UTL-03 AS-IS — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/기대효과",
+      "score": 168,
+      "title": "SCN-UTL-03 기대효과 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AI_해결",
+      "score": 73,
+      "title": "SCN-UTL-01 AI 해결 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AS-IS",
+      "score": 73,
+      "title": "SCN-UTL-01 AS-IS — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/기대효과",
+      "score": 73,
+      "title": "SCN-UTL-01 기대효과 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/적용_맥락",
+      "score": 73,
+      "title": "SCN-UTL-01 적용 맥락 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 66,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-UTL-02 적용 맥락 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-02 AI 해결 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-02 기대효과 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-4.4",
+      "score": 57,
+      "title": "BLK-T1-4.4 — 피쳐 엔지니어링 접근",
+      "section": "§4",
+      "category": "track"
+    }
+  ],
+  "SCN-UTL-04": [
+    {
+      "id": "SCN-UTL-01/AI_해결",
+      "score": 73,
+      "title": "SCN-UTL-01 AI 해결 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AS-IS",
+      "score": 73,
+      "title": "SCN-UTL-01 AS-IS — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/기대효과",
+      "score": 73,
+      "title": "SCN-UTL-01 기대효과 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/적용_맥락",
+      "score": 73,
+      "title": "SCN-UTL-01 적용 맥락 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 66,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/기대효과",
+      "score": 66,
+      "title": "SCN-UTL-02 기대효과 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-UTL-02 적용 맥락 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/기대효과",
+      "score": 66,
+      "title": "SCN-UTL-03 기대효과 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-02 AI 해결 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-03 AI 해결 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AS-IS",
+      "score": 65,
+      "title": "SCN-UTL-03 AS-IS — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 65,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    }
+  ],
+  "SCN-UTL-05": [
+    {
+      "id": "SCN-UTL-01/AI_해결",
+      "score": 74,
+      "title": "SCN-UTL-01 AI 해결 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AS-IS",
+      "score": 74,
+      "title": "SCN-UTL-01 AS-IS — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/기대효과",
+      "score": 74,
+      "title": "SCN-UTL-01 기대효과 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/적용_맥락",
+      "score": 74,
+      "title": "SCN-UTL-01 적용 맥락 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 66,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-UTL-02 적용 맥락 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-02 AI 해결 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-02 기대효과 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-03 AI 해결 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AS-IS",
+      "score": 65,
+      "title": "SCN-UTL-03 AS-IS — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-03 기대효과 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 65,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.1",
+      "score": 56,
+      "title": "BLK-T1-3.1 — 공정 운영의 인적 의존성 및 암묵지 리스크",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 56,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    }
+  ],
+  "SCN-UTL-06": [
+    {
+      "id": "SCN-UTL-01/AI_해결",
+      "score": 73,
+      "title": "SCN-UTL-01 AI 해결 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/AS-IS",
+      "score": 73,
+      "title": "SCN-UTL-01 AS-IS — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/기대효과",
+      "score": 73,
+      "title": "SCN-UTL-01 기대효과 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-01/적용_맥락",
+      "score": 73,
+      "title": "SCN-UTL-01 적용 맥락 — 공장 에너지(전력·가스·증기) 최적화·피크 관리",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AS-IS",
+      "score": 66,
+      "title": "SCN-UTL-02 AS-IS — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/적용_맥락",
+      "score": 66,
+      "title": "SCN-UTL-02 적용 맥락 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-02 AI 해결 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-02/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-02 기대효과 — 컴프레서·보일러 효율·누기·누증 탐지",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AI_해결",
+      "score": 65,
+      "title": "SCN-UTL-03 AI 해결 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§4",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/AS-IS",
+      "score": 65,
+      "title": "SCN-UTL-03 AS-IS — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/기대효과",
+      "score": 65,
+      "title": "SCN-UTL-03 기대효과 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§6",
+      "category": "scenario"
+    },
+    {
+      "id": "SCN-UTL-03/적용_맥락",
+      "score": 65,
+      "title": "SCN-UTL-03 적용 맥락 — 폐수·배출가스 이상 예측 (TMS·CEMS 사전 감지)",
+      "section": "§3",
+      "category": "scenario"
+    },
+    {
+      "id": "BLK-T1-3.2",
+      "score": 57,
+      "title": "BLK-T1-3.2 — 데이터 단절 및 비정형·이미지 기반 관리의 한계",
+      "section": "§3",
+      "category": "track"
+    },
+    {
+      "id": "BLK-T2-3.2",
+      "score": 57,
+      "title": "BLK-T2-3.2 — 모니터링 부재로 인한 후행적 모델 운영의 구조적 공백",
+      "section": "§3",
+      "category": "track"
+    }
+  ]
+}

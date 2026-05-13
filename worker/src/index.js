@@ -1,4 +1,5 @@
 import { handleAgentGenerate } from './agent.js';
+import { handleAssemble } from './assemble.js';
 import { callGeminiText, geminiModel, requireGeminiEnv } from './gemini.js';
 
 const MODE_LIMITS = {
@@ -98,6 +99,13 @@ export async function handleRequest(request, env, fetchImpl = fetch) {
       return jsonResponse({ error: 'method_not_allowed' }, 405, origin, env);
     }
     return handleAgentGenerate(request, env, fetchImpl, origin, corsHeaders);
+  }
+
+  if (url.pathname === '/api/assemble') {
+    if (request.method !== 'POST') {
+      return jsonResponse({ error: 'method_not_allowed' }, 405, origin, env);
+    }
+    return handleAssemble(request, env, origin, corsHeaders);
   }
 
   if (url.pathname !== '/api/llm') {

@@ -104,6 +104,8 @@ hooks:
   - hooks/wrap_paste_ready.py         # [E13-2] 시나리오 상세 + 패키지 §3·§4 paste-ready admonition wrap
   - hooks/linkify_scenario_id.py      # [E14-B] SCN-XXX-NN 자동 hyperlink + 시나리오명 tooltip
   - hooks/build_templates_data.py     # [E16-1] 빌드 시점 BLK 본문 → docs/data/templates.json (generate.md 입력)
+  - hooks/build_scenario_index.py     # [E20-1] 40 정식 + 25 후보 → docs/data/scenario_index.json
+  - hooks/build_scenario_map.py       # [E20-2] SCN → 추천 블록 맵 → docs/data/scenario_block_map.json
   - hooks/wrap_meta_blockquote.py     # [E10-1] H1 직후 메타 인용 → <details> collapsible 자동
   - hooks/filter_worklog.py           # [E10-3] 작업로그 페이지에 개발자용 안내 banner 주입
   - hooks/highlight_placeholders.py   # [고객사]·[수치]·[공정] 등 플레이스홀더 시각 강조
@@ -117,6 +119,7 @@ hooks:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/agent.css
+  - stylesheets/assemble.css
 
 extra_javascript:
   # [E11-2] mermaid.js CDN 제거 (~720KB gzip) — 99 mermaid 블록 모두 정적 SVG 변환 완료
@@ -127,6 +130,7 @@ extra_javascript:
   - javascripts/llm-client.js    # [E17-1] Cloudflare Worker /api/llm 호출 래퍼
   - javascripts/generate-template.js  # [E16-2] 본문 자동 생성 폼 (generate.md)
   - javascripts/agent-ui.js      # [E19-1] Agent 5-step UI + SSE 수신
+  - javascripts/assemble-ui.js   # [E20-3] Assemble 4-step deterministic 조립 UI
 
 # =============================================================================
 # Navigation — 사이드바 친화 라벨링 (Phase E9 Stage 2 보강, 사용자 피드백 #2 대응)
@@ -140,6 +144,7 @@ nav:
   - 🚀 시작:
       - 처음 사용자 — 5 분 안내: start-here.md
       - 📋 사업계획서 본문 15 블록 (paste-ready): blocks.md
+      - 조립형 작성기 (시나리오 → 블록 → 9 섹션): assemble.md
       - 📝 본문 자동 생성 (업체 정보 입력 → paste): generate.md
       - Agent 자동 작성 (9 섹션 초안): agent.md
       - 6 패키지 매칭 — 우리 회사는 어디?: by-package.md

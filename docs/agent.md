@@ -7,6 +7,9 @@ hide:
 
 # Agent 자동 작성
 
+!!! warning "새 작성 흐름 안내"
+    신규 작성은 [조립형 작성기](/assemble/) 를 우선 사용하세요. 이 페이지는 기존 Agent/SSE 흐름 호환용으로 유지됩니다.
+
 <div id="agent-app" class="agent-app" data-agent-endpoint="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/agent/generate" data-template-index-path="../data/templates_index.json" markdown="1">
 
 <div class="agent-layout" markdown="1">
