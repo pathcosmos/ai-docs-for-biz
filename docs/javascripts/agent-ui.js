@@ -27,11 +27,15 @@
   const progressEl = document.getElementById('agent-progress');
   const partialsEl = document.getElementById('agent-partials');
   const resultEl = document.getElementById('agent-result');
+  const auditResultEl = document.getElementById('agent-audit-result');
   const copyButton = document.getElementById('agent-copy');
   const downloadButton = document.getElementById('agent-download');
+  const copyAuditButton = document.getElementById('agent-copy-audit');
+  const downloadAuditButton = document.getElementById('agent-download-audit');
 
   let currentStep = 1;
   let finalMarkdown = '';
+  let auditMarkdown = '';
   let templateContextPromise = null;
 
   function defaultEndpoint() {
@@ -144,9 +148,13 @@
       const last = JSON.parse(localStorage.getItem(RESULT_KEY) || '{}');
       if (last.final_md) {
         finalMarkdown = last.final_md;
+        auditMarkdown = last.audit_md || '';
         resultEl.value = finalMarkdown;
+        auditResultEl.value = auditMarkdown;
         copyButton.disabled = false;
         downloadButton.disabled = false;
+        copyAuditButton.disabled = !auditMarkdown;
+        downloadAuditButton.disabled = !auditMarkdown;
       }
       setStep(Number(state.currentStep || 1));
     } catch {
@@ -157,11 +165,15 @@
 
   function resetOutput() {
     finalMarkdown = '';
+    auditMarkdown = '';
     progressEl.innerHTML = '';
     partialsEl.innerHTML = '';
     resultEl.value = '';
+    auditResultEl.value = '';
     copyButton.disabled = true;
     downloadButton.disabled = true;
+    copyAuditButton.disabled = true;
+    downloadAuditButton.disabled = true;
   }
 
   function upsertProgress(label, state) {
@@ -232,9 +244,13 @@
     }
     if (event === 'complete') {
       finalMarkdown = data.final_md || '';
+      auditMarkdown = data.audit_md || '';
       resultEl.value = finalMarkdown;
+      auditResultEl.value = auditMarkdown;
       copyButton.disabled = !finalMarkdown;
       downloadButton.disabled = !finalMarkdown;
+      copyAuditButton.disabled = !auditMarkdown;
+      downloadAuditButton.disabled = !auditMarkdown;
       localStorage.setItem(RESULT_KEY, JSON.stringify(data));
       setStatus('완료', 'done');
       return;
@@ -310,12 +326,27 @@
     setStatus('복사됨', 'done');
   });
 
+  copyAuditButton.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(auditMarkdown);
+    setStatus('검토 리포트 복사됨', 'done');
+  });
+
   downloadButton.addEventListener('click', () => {
     const blob = new Blob([finalMarkdown], { type: 'text/markdown;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = 'agent-business-plan.md';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  downloadAuditButton.addEventListener('click', () => {
+    const blob = new Blob([auditMarkdown], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'agent-generation-audit.md';
     a.click();
     URL.revokeObjectURL(url);
   });

@@ -158,17 +158,17 @@
 | `가이드_적용_배포_방안.md` (BLK-TRAIN-01·02) | Phase E19 Phase 0 #8. §8 (적용·배포 방안) 배포 아키텍처 (edge·on-prem·cloud) + 운영 통합 + HITL workflow + 교육 커리큘럼 + 변화관리·인수인계. 8 장 구조 — 5 범주 (아키텍처·통합·HITL·교육·변화관리) + 3 Tier 16 필드 + §8.1~§8.5 5 절 본문 + ASCII 도식 2 종 (3 단 배포·HITL workflow) + 교육 3 단. track2 BLK-T2-4.4 + SCN-MLO-03 + 가이드_도메인_지식추출 답습. 운영 가이드 군 19 번째. | 신설 (엔트리 #69 / Phase E19 #8) | ~230 |
 | `가이드_MLOps_거버넌스_리츄얼.md` (BLK-MLOPS-01·02) | Phase E19 Phase 0 #9 (마지막). §9 (MLOps loop) 3 층 모니터링 + 드리프트 (PSI·KS) + 자동 재학습 트리거 + 챔피언·챌린저 SOP + 5 리츄얼 (월·분기·연·HITL 주·외부 감사). 8 장 구조 — 5 범주 (Monitoring·Drift·Retraining·Champion-Challenger·Governance) + 3 Tier 17 필드 + §9.1~§9.5 5 절 본문 + ASCII 도식 2 종 (드리프트·챔피언승급) + 표 3 종. track2 §5.5·6.1·6.3·6.5 + SCN-MLO-01·02·03 답습. 운영 가이드 군 20 번째. **Phase 0 콘텐츠 갭 9 종 완료**. | 신설 (엔트리 #69 / Phase E19 #9) | ~250 |
 | `자동화_Agent_UI_개발계획.md` | Phase E19 Phase 1·2·3 (Worker Agent + 전용 UI + Section Writers × 9) 구현 직전 상세 사양. 10 절 본문 — Context·Orchestrator·6 Stages 명세·9 Section Writers 매핑·SSE Wire Protocol·Compact Index·Stepper 5 단계 UI·API Schema·Day 단위 일정·검증/위험. 사용자 결정 3 항 (Section Writer 완전 병렬·Stepper UI·ASCII Phase 4 분리) 반영. **메타 진단 자산 군 12 번째**. 작성 당시에는 코드 작성 금지였고, 엔트리 #72 에서 Phase 1 MVP 일부 구현으로 전환. | 신설 (엔트리 #70 / Phase E19 / Phase 1·2·3 사양) | ~480 |
-| `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택 (Gemini / 빠른 골격), 엔트리 #75 에서 compact index 경로 속성 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) | 144 |
-| `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩 후 Worker payload 주입 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) | 324 |
-| `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) | 203 |
+| `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) | 150 |
+| `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) | 355 |
+| `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) | 207 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
-| `worker/src/agent.js` | `POST /api/agent/generate` SSE Agent — Tier 1 회사명 검증, Planner·Outline·9 Section·Validate·Compile 이벤트 스트림, deterministic fallback, `writer_mode=llm` 시 Gemini Section Writer 호출. Free tier 기본은 `AGENT_MAX_LLM_SECTIONS=5` 로 제한. 엔트리 #75 에서 섹션별 guide compact context prompt 주입 추가. | 신설 (엔트리 #72) + Gemini Section Writer (엔트리 #73) + Free tier cap (엔트리 #74) + compact context prompt (엔트리 #75) | 385 |
+| `worker/src/agent.js` | `POST /api/agent/generate` SSE Agent — Tier 1 회사명 검증, Planner·Outline·9 Section·Validate·Compile 이벤트 스트림, deterministic fallback, `writer_mode=llm` 시 Gemini Section Writer 호출. Free tier 기본은 `AGENT_MAX_LLM_SECTIONS=5` 로 제한. 엔트리 #75 에서 섹션별 guide compact context prompt 주입, 엔트리 #76 에서 `final_md` 클린 본문 + `audit_md` 검토 리포트 분리. | 신설 (엔트리 #72) + Gemini Section Writer (엔트리 #73) + Free tier cap (엔트리 #74) + compact context prompt (엔트리 #75) + clean final/audit (엔트리 #76) | 432 |
 | `worker/src/gemini.js` | Cloudflare AI Gateway / Google AI Studio 공용 호출 모듈 — env 검증, Gateway URL 생성, payload logging off 헤더, authenticated gateway token, Gemini text parse. `/api/llm` 과 Agent Section Writer 가 공유. | 신설 (엔트리 #73) | 71 |
 | `worker/package.json` | Cloudflare Worker 하위 프로젝트 스크립트 (`test`, `deploy:dry-run`, `deploy`) + Wrangler devDependency 선언. | 신설 (엔트리 #61) | 13 |
 | `worker/package-lock.json` | Worker npm lockfile — Wrangler 4.90.0 및 의존성 고정. | 신설 (엔트리 #63) | 1502 |
 | `worker/wrangler.toml` | Cloudflare Worker 배포 설정 — main·compatibility_date·workers_dev·preview_urls·observability·required secrets·기본 Gemini 모델·origin allowlist·AI Gateway vars·Free tier 용 `AGENT_MAX_LLM_SECTIONS=5`. Free plan 미지원 `limits.cpu_ms` 는 엔트리 #74 에서 제거. | 신설 (엔트리 #61) + 배포 설정 확정 (엔트리 #62·#63) + Agent 운영 보강 (엔트리 #72·#74) | 22 |
 | `worker/src/index.js` | Worker 라우터 — 기존 `POST /api/llm` 보안 프록시 보존 + 신규 `POST /api/agent/generate` SSE Agent 라우트 연결. Gateway 호출은 `worker/src/gemini.js` 로 공용화. | 신설 (엔트리 #61) + Agent route 추가 (엔트리 #72) + Gateway 공용화 (엔트리 #73) | 175 |
-| `worker/test/index.test.js` | Worker Node test suite — 기존 LLM proxy 검증 + Agent Tier 1 거부·SSE 9 섹션 complete 이벤트 + Gemini Section Writer Gateway 호출·payload logging off·LLM 섹션 cap·compact context prompt 주입 검증. | 신설 (엔트리 #61) + Agent 테스트 추가 (엔트리 #72·#73·#74·#75) | 356 |
+| `worker/test/index.test.js` | Worker Node test suite — 기존 LLM proxy 검증 + Agent Tier 1 거부·SSE 9 섹션 complete 이벤트 + Gemini Section Writer Gateway 호출·payload logging off·LLM 섹션 cap·compact context prompt 주입·최종 본문/audit 분리 검증. | 신설 (엔트리 #61) + Agent 테스트 추가 (엔트리 #72·#73·#74·#75·#76) | 367 |
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
@@ -3187,6 +3187,46 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 - **다음 단계**:
   - 공개 `/agent` 브라우저 수동 검증 — 실제 폼 입력 후 요청 payload 에 `template_context` 9 항목이 포함되고 Gemini 응답 품질이 개선되는지 확인.
   - Gemini queue/backoff 는 아직 미구현. Free tier 에서는 `AGENT_MAX_LLM_SECTIONS=5` 를 유지하고, 유료 전환 후 9 섹션 전부 LLM 호출 + rate limit/backoff 를 재검토한다.
+
+---
+
+#### 엔트리 #76 — 최종 붙여넣기 본문과 생성 검토 리포트 분리 (2026-05-13)
+
+- **맥락**: 사용자가 실제 `/agent` 생성 결과 예시를 붙여 주며, YAML frontmatter·`BLK-*` 출처·`본 1차 MVP 초안` 문구·fallback 골격이 섞인 결과는 사업계획서에 바로 붙여넣기 어렵다고 지적했다. 사용자의 목표는 "바로 붙여넣기 가능한 완성 문장" 이며, 내부 출처·검증 정보는 별도 리포트로 분리해야 한다는 방향을 승인했다.
+- **사용자 요청 (원문)**: *"이런 식의 결과 말고 바로 붙여넣기 할 수 있는 형태의 완성된 문장을 원한다 ... 최종적으로 그런것들을 다 자연스럽게 이어붙여서 문맥을 완성할수 있게 해야 해 ... ok 그렇게 해야 해"*
+- **AI 수행**:
+  1. TDD red 작성 — Agent `complete.final_md` 에 YAML frontmatter, `[출처: ...]`, `BLK-*`, `본 1차 MVP 초안` 이 없어야 하고, 별도 `complete.audit_md` 에 생성기·출처·검증 정보가 남아야 한다는 테스트 추가.
+  2. `worker/src/agent.js` 에 `compileFinalMarkdown()` 과 `compileAuditMarkdown()` 을 분리. `final_md` 는 사용자가 붙여넣는 본문만, `audit_md` 는 생성일시·generator·domain·package·scenarios·validation·fallback·section source 표를 담는다.
+  3. deterministic fallback 문장에서 `본 1차 MVP 초안` 과 `BLK-* 생성 가이드` 표현을 제거하고, 확인되지 않은 수치·고유 사실은 `[확인 필요]` 로 표시한다는 일반 문장으로 교체.
+  4. `docs/agent.md` 에 검토 리포트 textarea 및 복사/다운로드 버튼 추가.
+  5. `docs/javascripts/agent-ui.js` 에 `audit_md` 상태·localStorage 복원·복사·다운로드 처리를 추가. 최종 본문 다운로드는 `agent-business-plan.md`, 검토 리포트 다운로드는 `agent-generation-audit.md` 로 분리.
+  6. `docs/stylesheets/agent.css` 에 검토 리포트 textarea 높이를 별도 지정.
+  7. `작업로그.md §2.7` 파일 목록의 변경 파일 설명과 라인 수를 동기화.
+- **검증 결과**:
+  - red 확인 — 테스트 추가 직후 `worker/` 에서 `npm test` 실패: 기존 `final_md` 가 `---` YAML frontmatter 와 `[출처: ...]` 를 포함해 AssertionError 발생.
+  - 구현 후 `worker/` 에서 `npm test` 통과 — **10 tests, 0 fail**.
+  - `node --check` 통과 — `docs/javascripts/agent-ui.js`, `worker/src/agent.js`, `worker/src/index.js`, `worker/src/gemini.js`.
+  - `git diff --check` 통과 — trailing whitespace 없음.
+  - `.venv/bin/python -m mkdocs build --strict` 통과 — strict exit 0, `templates.json`/`templates_index.json` 재생성.
+  - Cloudflare Worker 배포 성공 — Version ID `780faba8-ea30-4d74-afbc-03b4ffd8b95d`.
+  - Cloudflare Pages 배포 성공 — production `https://ai-docs-for-biz.pages.dev/agent/` HTTP 200.
+  - 공개 Worker deterministic SSE 호출 검증 — HTTP 200, `final_md` 는 frontmatter·`[출처:]`·`BLK-`·`본 1차 MVP 초안` 없음, `audit_md` 는 `# 생성 검토 리포트` 와 `BLK-COMPANY-01` 포함.
+  - 공개 Pages asset 검증 — `agent-ui.js` 와 `agent.css` HTTP 200, 배포된 HTML/JS 에 `agent-audit-result`, `audit_md`, `agent-generation-audit.md` 포함.
+- **판단 근거**:
+  - 본문에서 출처를 완전히 없애지 않고 숨긴다. 작성자가 검토할 수 있도록 `audit_md` 로 분리하므로 인용 추적성과 제출용 가독성을 동시에 확보한다.
+  - 이 패치는 출력 표면을 바꾸는 1 차 조치다. 사용자가 말한 "완성형 샘플 몇 개 → 재사용/재생성 분리 → 문맥 통합" 은 후속 품질 사이클로 분리하는 편이 안전하다.
+  - 현재 Gemini Free tier cap 때문에 §6~§9 가 fallback 되는 구조는 아직 남아 있다. 완전한 붙여넣기 품질을 위해서는 queue/backoff 또는 9 섹션 전부 LLM 생성 모드가 필요하다.
+- **산출물**:
+  - 수정: `worker/src/agent.js`, `worker/test/index.test.js`, `docs/agent.md`, `docs/javascripts/agent-ui.js`, `docs/stylesheets/agent.css`, `작업로그.md`
+  - 배포: Cloudflare Worker `ai-docs-for-biz-llm` Version ID `780faba8-ea30-4d74-afbc-03b4ffd8b95d`
+  - 배포: Cloudflare Pages `ai-docs-for-biz` production `/agent/` 반영
+- **배운 점·재사용 포인트**:
+  - **방법론 후보 4.111 — 제출 본문과 검토 메타 분리 패턴**: 사용자에게 보이는 `final_md` 는 붙여넣기 가능한 본문만 유지하고, YAML·출처·모델·fallback·검증 정보는 `audit_md` 로 분리한다. 자동 작성 시스템에서 사용성과 감사 가능성을 동시에 확보한다.
+  - **방법론 후보 4.112 — 생성 과정 문구 차단 패턴**: "초안", "MVP", "후속 단계" 같은 내부 개발 문구는 최종 문서에 노출하지 않는다. 필요 시 검토 리포트나 진행 UI 에만 표시한다.
+- **다음 단계**:
+  - 완성형 샘플 라이브러리 구축 — 대표 케이스 3~5 개를 실제 제출 문체로 작성하고, reusable paragraph 와 profile-dependent paragraph 를 분류한다.
+  - 문맥 통합 pass 구현 — §6 X/y 정의 → §7 모델 → §8 배포 → §9 MLOps 연결을 마지막에 재작성해 섹션 간 반복과 단절을 줄인다.
+  - Gemini Free tier cap 대응 — 9 섹션을 queue/backoff 로 순차 재시도하거나 품질 모드에서 `AGENT_MAX_LLM_SECTIONS=9` 를 사용할지 결정한다.
 
 ---
 

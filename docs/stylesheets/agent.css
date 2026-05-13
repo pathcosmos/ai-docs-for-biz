@@ -191,6 +191,10 @@
   font-size: 0.78rem;
 }
 
+.agent-output textarea.agent-audit-result {
+  min-height: 12rem;
+}
+
 @media screen and (max-width: 900px) {
   .agent-layout,
   .agent-fields {

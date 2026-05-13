@@ -220,6 +220,13 @@ describe('handleRequest', () => {
     const complete = events.find(item => item.event === 'complete');
     assert.ok(complete);
     assert.match(complete.data.final_md, /# 동국제강 AI 사업계획서/);
+    assert.doesNotMatch(complete.data.final_md, /^---/);
+    assert.doesNotMatch(complete.data.final_md, /\[출처:/);
+    assert.doesNotMatch(complete.data.final_md, /BLK-/);
+    assert.doesNotMatch(complete.data.final_md, /본 1차 MVP 초안/);
+    assert.match(complete.data.audit_md, /# 생성 검토 리포트/);
+    assert.match(complete.data.audit_md, /BLK-COMPANY-01/);
+    assert.match(complete.data.audit_md, /phase-one-deterministic/);
     assert.equal(complete.data.meta.section_count, 9);
     assert.equal(complete.data.meta.domain, 'STL');
   });
@@ -306,6 +313,10 @@ describe('handleRequest', () => {
     assert.equal(complete.data.usage.total_tokens, 1170);
     assert.match(complete.data.final_md, /Gemini section 1/);
     assert.match(complete.data.final_md, /Gemini section 9/);
+    assert.doesNotMatch(complete.data.final_md, /\[출처:/);
+    assert.doesNotMatch(complete.data.final_md, /^---/);
+    assert.match(complete.data.audit_md, /TEST-1/);
+    assert.match(complete.data.audit_md, /phase-two-llm-sections/);
   });
 
   it('caps Gemini section writers by environment limit and falls back for the rest', async () => {

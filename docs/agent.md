@@ -137,6 +137,12 @@ hide:
   <button id="agent-download" type="button" disabled>다운로드</button>
 </div>
 <textarea id="agent-result" readonly placeholder="결과 없음"></textarea>
+<h2>검토 리포트</h2>
+<div class="agent-result-actions">
+  <button id="agent-copy-audit" type="button" disabled>복사</button>
+  <button id="agent-download-audit" type="button" disabled>다운로드</button>
+</div>
+<textarea id="agent-audit-result" class="agent-audit-result" readonly placeholder="검토 리포트 없음"></textarea>
 </aside>
 
 </div>

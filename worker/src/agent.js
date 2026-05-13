@@ -93,7 +93,7 @@ function deterministicSectionMarkdown(profile, outlineSection, plan) {
     `## ${outlineSection.id} ${outlineSection.title}`,
     '',
     `${company}의 ${process} 사업계획서 ${outlineSection.title} 섹션은 ${outlineSection.intent}`,
-    `본 1차 MVP 초안은 ${outlineSection.guide} 생성 가이드와 ${plan.scenarios.join('·')} 시나리오 후보를 기준으로 작성되며, 후속 Section Writer 단계에서 세부 수치와 인용 블록 본문을 확장한다.`,
+    `입력된 회사·공정·데이터 정보를 기준으로 현장 적용 가능한 방향을 정리하며, 확인되지 않은 세부 수치와 고유 사실은 [확인 필요]로 표시한다.`,
     '',
     `> [출처: ${outlineSection.guide}]`,
   ].join('\n');
@@ -260,22 +260,64 @@ function summarizeUsage(sections, env) {
   };
 }
 
-function compileMarkdown(profile, plan, sections, validation, generator) {
+function cleanFinalSectionMarkdown(markdown) {
+  return markdown
+    .split('\n')
+    .filter(line => !line.trim().startsWith('> [출처:'))
+    .filter(line => !line.includes('본 1차 MVP 초안은'))
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
+function extractSourceMarkers(markdown) {
+  return markdown
+    .split('\n')
+    .map(line => line.trim())
+    .filter(line => line.startsWith('> [출처:') && line.endsWith(']'))
+    .map(line => line.replace(/^> \[출처:\s*/, '').replace(/\]$/, '').trim())
+    .filter(Boolean);
+}
+
+function tableCell(value) {
+  return String(value || '-').replaceAll('|', '\\|').replace(/\s+/g, ' ').trim();
+}
+
+function compileFinalMarkdown(profile, sections) {
   const company = companyName(profile);
-  const frontmatter = [
-    '---',
-    `generated_at: "${new Date().toISOString()}"`,
-    `generator: "${generator}"`,
-    `company: "${company.replaceAll('"', '\\"')}"`,
-    `domain: "${plan.domain}"`,
-    `package: "${plan.package}"`,
-    `scenarios: "${plan.scenarios.join(',')}"`,
-    `validation_score: ${validation.tone_score}`,
-    '---',
-    '',
-  ].join('\n');
   const title = `# ${company} AI 사업계획서`;
-  return `${frontmatter}${title}\n\n${sections.map(item => item.markdown).join('\n\n')}\n`;
+  const body = sections.map(item => cleanFinalSectionMarkdown(item.markdown)).join('\n\n');
+  return `${title}\n\n${body}\n`;
+}
+
+function compileAuditMarkdown(profile, plan, sections, validation, generator, usage, generatedAt) {
+  const company = companyName(profile);
+  const lines = [
+    '# 생성 검토 리포트',
+    '',
+    `- 생성일시: ${generatedAt}`,
+    `- generator: ${generator}`,
+    `- company: ${company}`,
+    `- domain: ${plan.domain}`,
+    `- package: ${plan.package}`,
+    `- scenarios: ${plan.scenarios.join(', ')}`,
+    `- validation_score: ${validation.tone_score}`,
+    `- fallback_count: ${validation.fallback_count}`,
+    `- model: ${usage.model}`,
+    `- llm_calls: ${usage.total_calls}`,
+    `- total_tokens: ${usage.total_tokens}`,
+    '',
+    '## 섹션별 출처·상태',
+    '',
+    '| 섹션 | 생성 방식 | 출처 | fallback reason |',
+    '|---|---|---|---|',
+  ].join('\n');
+  const rows = sections.map(section => {
+    const sourceMarkers = extractSourceMarkers(section.markdown);
+    const citations = sourceMarkers.length > 0 ? sourceMarkers : section.citations;
+    return `| ${tableCell(`${section.section} ${section.title}`)} | ${tableCell(section.source)} | ${tableCell(citations.join(', '))} | ${tableCell(section.fallback_reason)} |`;
+  });
+  return `${lines}\n${rows.join('\n')}\n`;
 }
 
 function encodeSse(event, data) {
@@ -350,10 +392,15 @@ export async function handleAgentGenerate(request, env, fetchImpl, origin, corsH
 
         send('stage_start', { stage: 'compile', at: new Date().toISOString() });
         const metaMode = mode === 'llm' ? 'phase-two-llm-sections' : 'phase-one-deterministic';
-        const finalMd = compileMarkdown(profile, plan, sections, validation, metaMode);
+        const generatedAt = new Date().toISOString();
+        const usage = summarizeUsage(sections, env);
+        const finalMd = compileFinalMarkdown(profile, sections);
+        const auditMd = compileAuditMarkdown(profile, plan, sections, validation, metaMode, usage, generatedAt);
         send('complete', {
           final_md: finalMd,
+          audit_md: auditMd,
           meta: {
+            generated_at: generatedAt,
             model: geminiModel(env),
             mode: metaMode,
             section_count: sections.length,
@@ -363,7 +410,7 @@ export async function handleAgentGenerate(request, env, fetchImpl, origin, corsH
             validation_score: validation.tone_score,
             fallback_count: validation.fallback_count,
           },
-          usage: summarizeUsage(sections, env),
+          usage,
         });
       } catch (error) {
         send('error', { stage: 'agent', code: 'worker_error', message: error.message });
