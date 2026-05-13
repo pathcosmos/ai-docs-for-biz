@@ -1,4 +1,5 @@
 import { callGeminiText, geminiModel, requireGeminiEnv } from './gemini.js';
+import { buildSlots, composeFromLibrary, libraryHasSection } from './library.js';
 
 const SECTION_DEFS = [
   ['§1', '현황', 'BLK-COMPANY-01', '회사 프로필과 기존 시스템 현황을 정리한다.', ['GUIDE-COMPANY-PROFILE-§3']],
@@ -87,15 +88,17 @@ function makeOutline(plan) {
 }
 
 function deterministicSectionMarkdown(profile, outlineSection, plan) {
+  if (libraryHasSection(outlineSection.id)) {
+    const slots = buildSlots(profile, plan);
+    const composed = composeFromLibrary(outlineSection.id, slots);
+    if (composed) return composed;
+  }
   const company = companyName(profile);
   const process = processName(profile);
   return [
     `## ${outlineSection.id} ${outlineSection.title}`,
     '',
-    `${company}의 ${process} 사업계획서 ${outlineSection.title} 섹션은 ${outlineSection.intent}`,
-    `입력된 회사·공정·데이터 정보를 기준으로 현장 적용 가능한 방향을 정리하며, 확인되지 않은 세부 수치와 고유 사실은 [확인 필요]로 표시한다.`,
-    '',
-    `> [출처: ${outlineSection.guide}]`,
+    `${company}의 ${process} ${outlineSection.title} 섹션은 ${outlineSection.intent}`,
   ].join('\n');
 }
 
@@ -125,11 +128,45 @@ function compactTemplateContext(templateContext, outlineSection) {
 }
 
 function buildSectionPrompt(profile, outlineSection, plan, templateContext = {}) {
-  return `당신은 한국어 정부지원 R&D 사업계획서 작성 전문가입니다. 아래 입력을 바탕으로 사업계획서의 단일 섹션만 작성하세요.
+  const slots = buildSlots(profile, plan);
+  const libraryBase = libraryHasSection(outlineSection.id)
+    ? composeFromLibrary(outlineSection.id, slots)
+    : null;
+
+  if (libraryBase) {
+    return `당신은 한국어 정부지원 R&D 사업계획서 작성 전문가입니다. 아래 **LAYER A 라이브러리 본문** 은 이미 완성문장이므로 본문 구조·문체·핵심 문장은 그대로 유지하고, **사용자 입력 정보를 반영하여 도메인 어휘를 더 구체적으로 보강** 하고 **${slots.company} 사업장 고유 특화 문장 1~2 개** 만 자연스럽게 삽입하세요. 사업계획서에 그대로 붙여넣을 수 있는 완성문 형태로 출력합니다.
 
 【작성 대상】
 - 섹션: ${outlineSection.id} ${outlineSection.title}
-- 생성 가이드: ${outlineSection.guide}
+- 회사: ${slots.company}
+- 도메인: ${plan.domain}
+- 공정: ${slots.process}
+- 패키지: ${plan.package}
+- 시나리오: ${plan.scenarios.join(', ')}
+
+【필수 규칙】
+1. 출력은 Markdown 본문만 반환합니다.
+2. 첫 줄은 반드시 "## ${outlineSection.id} ${outlineSection.title}" 제목으로 시작합니다.
+3. 한국어 formal 문어체 (~한다·~된다 종결) 를 유지합니다.
+4. 라이브러리 본문의 핵심 문장·논리 흐름·구조는 변경하지 않습니다.
+5. 보강 가능한 영역 — 도메인 특화 어휘 (${slots.facility}·${slots.product}·${slots.sensor_examples} 등) 의 더 구체적 예시, ${slots.company} 사업장 고유 특화 1~2 문장.
+6. 다음은 금지합니다 — "본 1차 MVP 초안", "후속 Section Writer 단계", "확장 예정" 같은 메타 문구. "[확인 필요]" 표기는 정량 수치에만 한정.
+7. 인용 출처 표기 (\`> [출처: ...]\`) 는 절대 추가하지 않습니다 (별도 검토 리포트로 분리됨).
+8. 다른 섹션 제목은 만들지 않습니다.
+
+【LAYER A 라이브러리 본문 (보강 base)】
+${libraryBase}
+
+【사용자 입력 JSON】
+${compactProfileJson(profile)}
+
+【보강 완성문】`;
+  }
+
+  return `당신은 한국어 정부지원 R&D 사업계획서 작성 전문가입니다. 아래 입력을 바탕으로 사업계획서의 단일 섹션만 작성하세요. 사업계획서에 그대로 붙여넣을 수 있는 완성문장으로 출력하며, "초안·확장 예정" 같은 메타 문구는 사용하지 않습니다.
+
+【작성 대상】
+- 섹션: ${outlineSection.id} ${outlineSection.title}
 - 작성 의도: ${outlineSection.intent}
 - 도메인: ${plan.domain}
 - 패키지 후보: ${plan.package}
@@ -138,14 +175,10 @@ function buildSectionPrompt(profile, outlineSection, plan, templateContext = {})
 【필수 규칙】
 1. 출력은 Markdown 본문만 반환합니다.
 2. 첫 줄은 반드시 "## ${outlineSection.id} ${outlineSection.title}" 제목으로 시작합니다.
-3. 한국어 formal 문어체 (~한다·~된다 종결)를 사용합니다.
-4. 확인되지 않은 수치나 회사별 고유 사실은 지어내지 말고 "[확인 필요]" 로 표시합니다.
-5. 섹션 끝에는 반드시 "> [출처: ${outlineSection.guide}]" 를 포함합니다.
+3. 한국어 formal 문어체 (~한다·~된다 종결) 를 사용합니다.
+4. 확인되지 않은 정량 수치만 "[확인 필요]" 로 표시합니다. 일반 도메인 지식·산업 통념은 그대로 서술합니다.
+5. 인용 출처 표기 (\`> [출처: ...]\`) 는 절대 추가하지 않습니다.
 6. 다른 섹션 제목은 만들지 않습니다.
-
-【생성 가이드 compact context】
-아래 context는 섹션 구조와 표현 패턴 참고용입니다. 원문 전체가 아니므로 회사별 사실·수치는 사용자 입력만 기준으로 작성합니다.
-${compactTemplateContext(templateContext, outlineSection)}
 
 【사용자 입력 JSON】
 ${compactProfileJson(profile)}
@@ -157,11 +190,7 @@ function normalizeSectionMarkdown(text, outlineSection) {
   const expectedHeading = `## ${outlineSection.id} ${outlineSection.title}`;
   const lines = text.trim().split('\n');
   const hasHeading = lines[0]?.startsWith('## ');
-  const withHeading = hasHeading ? text.trim() : `${expectedHeading}\n\n${text.trim()}`;
-  if (withHeading.includes('> [출처:')) {
-    return withHeading;
-  }
-  return `${withHeading}\n\n> [출처: ${outlineSection.guide}]`;
+  return hasHeading ? text.trim() : `${expectedHeading}\n\n${text.trim()}`;
 }
 
 function deterministicSectionResult(profile, outlineSection, plan, startedAt = Date.now()) {
