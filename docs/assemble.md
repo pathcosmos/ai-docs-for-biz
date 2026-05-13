@@ -12,12 +12,11 @@ hide:
   data-scenario-map-path="../data/scenario_block_map.json"
   data-template-index-path="../data/templates_index.json"
   data-templates-path="../data/templates.json"
-  data-assemble-endpoint="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/assemble"
-  markdown="1">
+  data-assemble-endpoint="https://ai-docs-for-biz-llm.pathcosmos.workers.dev/api/assemble">
 
-<div class="assemble-shell" markdown="1">
+<div class="assemble-shell">
 
-<section class="assemble-main" markdown="1">
+<section class="assemble-main">
 
 <ol class="assemble-stepper" aria-label="조립 단계">
   <li data-assemble-step="1" class="is-active">도메인</li>
@@ -26,31 +25,31 @@ hide:
   <li data-assemble-step="4">입력·조립</li>
 </ol>
 
-<section data-assemble-step-panel="1" class="assemble-panel" markdown="1">
-<div class="assemble-panel-head" markdown="1">
+<section data-assemble-step-panel="1" class="assemble-panel">
+<div class="assemble-panel-head">
   <h2>도메인</h2>
   <img src="../assets/svg/guide/assembly.svg" alt="" class="assemble-mark" loading="lazy" />
 </div>
 <div id="assemble-domain-grid" class="assemble-domain-grid"></div>
 </section>
 
-<section data-assemble-step-panel="2" class="assemble-panel" hidden markdown="1">
-<div class="assemble-panel-head" markdown="1">
+<section data-assemble-step-panel="2" class="assemble-panel" hidden>
+<div class="assemble-panel-head">
   <h2>시나리오</h2>
 </div>
 <div id="assemble-scenario-list" class="assemble-scenario-list"></div>
 </section>
 
-<section data-assemble-step-panel="3" class="assemble-panel" hidden markdown="1">
-<div class="assemble-builder" markdown="1">
-  <div class="assemble-catalog-pane" markdown="1">
+<section data-assemble-step-panel="3" class="assemble-panel" hidden>
+<div class="assemble-builder">
+  <div class="assemble-catalog-pane">
     <header>
       <h2>블록</h2>
       <input id="assemble-search" class="assemble-search" type="search" placeholder="검색" autocomplete="off" />
     </header>
     <div id="assemble-catalog" class="assemble-catalog"></div>
   </div>
-  <div class="assemble-cart-pane" markdown="1">
+  <div class="assemble-cart-pane">
     <h2>선택</h2>
     <div id="assemble-cart" class="assemble-cart"></div>
     <h2>섹션</h2>
@@ -59,7 +58,7 @@ hide:
 </div>
 </section>
 
-<section data-assemble-step-panel="4" class="assemble-panel" hidden markdown="1">
+<section data-assemble-step-panel="4" class="assemble-panel" hidden>
 <form id="assemble-fields" class="assemble-fields">
   <fieldset>
     <legend>회사</legend>
@@ -100,27 +99,27 @@ hide:
   </details>
 </form>
 
-<div class="assemble-submit-row" markdown="1">
+<div class="assemble-submit-row">
   <button id="assemble-submit" type="button" class="assemble-primary">본문 조립</button>
   <button id="assemble-reset" type="button">초기화</button>
 </div>
 </section>
 
-<div class="assemble-nav" markdown="1">
+<div class="assemble-nav">
   <button id="assemble-prev" type="button" disabled>이전</button>
   <button id="assemble-next" type="button" class="assemble-primary">다음</button>
 </div>
 
 </section>
 
-<aside class="assemble-output" aria-label="조립 결과" markdown="1">
+<aside class="assemble-output" aria-label="조립 결과">
   <h2>상태</h2>
   <div id="assemble-status" class="assemble-status" role="status">대기 중</div>
   <h2>Audit</h2>
   <div id="assemble-audit-matrix" class="assemble-audit-matrix"></div>
   <textarea id="assemble-audit" readonly placeholder="검토 리포트 없음"></textarea>
   <h2>본문</h2>
-  <div class="assemble-output-actions" markdown="1">
+  <div class="assemble-output-actions">
     <button id="assemble-copy" type="button" disabled>복사</button>
     <button id="assemble-download" type="button" disabled>다운로드</button>
   </div>

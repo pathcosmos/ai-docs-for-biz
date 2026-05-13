@@ -237,6 +237,40 @@
       quant: document.getElementById('assemble-quant-fields'),
     };
 
+    const requiredElements = [
+      'domainGrid',
+      'scenarioList',
+      'catalog',
+      'cart',
+      'sections',
+      'search',
+      'status',
+      'result',
+      'audit',
+      'auditMatrix',
+      'prev',
+      'next',
+      'submit',
+      'reset',
+      'copy',
+      'download',
+      'endpoint',
+      'form',
+      'quant',
+    ];
+    const missingElements = requiredElements.filter(key => !els[key]);
+    if (missingElements.length > 0) {
+      const message = `조립형 작성기 DOM 오류: ${missingElements.join(', ')}`;
+      app.dataset.assembleError = 'missing-elements';
+      app.replaceChildren();
+      const error = document.createElement('div');
+      error.className = 'assemble-status';
+      error.dataset.tone = 'error';
+      error.textContent = message;
+      app.appendChild(error);
+      return;
+    }
+
     let state = restoreState();
     let favorites = loadFavorites();
     let scenarioIndex = [];
