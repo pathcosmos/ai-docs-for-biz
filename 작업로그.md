@@ -3590,12 +3590,17 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - `cd worker && npm test` — PASS, 66 tests / 0 fail.
   - `.venv/bin/mkdocs build --strict` — PASS.
   - CDP browser flow (`http://127.0.0.1:8000/assemble/?v=toggle...`) — Step 3 에서 선택된 첫 block 재클릭 시 selected rows 11→10, cart items 11→10, section pills 11→10, active map false 확인. 미선택 block 재클릭 시 selected rows/cart/section pills 10→11, action label `해제`, active section 1 확인. 스크린샷: `/private/tmp/assemble-toggle-step3.png`.
+- **배포 결과**:
+  - `git push origin main` — GitHub `pathcosmos/ai-docs-for-biz` 와 Yona `IoT/ai-docs-for-biz` main 동기화 완료.
+  - `wrangler pages deploy site --project-name=ai-docs-for-biz --branch=main` — Pages direct deploy 완료. Preview: `https://612eac3a.ai-docs-for-biz.pages.dev`.
+  - 공개 `https://ai-docs-for-biz.pages.dev/assemble/` — HTTP 200 확인.
+  - 공개 JS asset marker 확인 — `toggleBlock(id)`, `toggleBlockSelection`, `addBlockToSelection`, `title click → toggleBlock(id)`, `담기`/`해제` label 반영.
 - **산출물**: `docs/javascripts/assemble-ui.js`, `tests/assemble-ui.test.mjs`, `tests/assemble-markup.test.mjs`, `작업로그.md`
 - **배운 점·재사용 포인트**:
   - 같은 "클릭" 이라도 catalog 선택과 section 배치의 의미를 분리해야 한다. 하나의 `addBlock()` 으로 모든 경로를 처리하면 UX 는 단순해 보이지만 해제·이동 같은 후속 행동이 막힌다.
   - 선택 UI 에서는 action label 을 상태와 맞춰 `담기`/`해제` 로 바꿔야 사용자가 토글 가능성을 인지한다.
 - **다음 단계**:
-  - Pages 재배포 후 공개 `/assemble/` asset marker 와 Step 3 토글 동작을 확인한다.
+  - 공개 URL 기준 수동 브라우저 확인에서 추가 Step 3 interaction 이슈가 발견되면 별도 회귀 테스트로 고정한다.
 
 ---
 
