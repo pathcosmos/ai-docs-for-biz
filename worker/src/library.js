@@ -43,7 +43,7 @@ const DOMAIN_PROFILE = {
     process_default: '냉간압연·연속소둔',
     sample_facility: '1ZHM·2ZHM·정밀압연·APL·BAF',
     sample_product: '스테인리스 SUS304·SUS316L 0.1~2.0 mm 박판',
-    sample_quality_target: '출측 두께 ±0.05 mm·평탄도 I-unit < [수치]',
+    sample_quality_target: '출측 두께 ±0.05 mm·평탄도 I-unit < 8',
     sample_kpi_label: '두께 편차·표면 결함',
     sensor_examples: '롤 포스·텐션·속도·게이지·압연유 온도',
     image_examples: '출측 표면 라인스캔 이미지·결함 패치',
@@ -57,7 +57,7 @@ const DOMAIN_PROFILE = {
     process_default: '정밀가공·단조·절단·절곡',
     sample_facility: 'CNC 머시닝센터·프레스·레이저 절단기',
     sample_product: '자동차·전자 부품용 정밀 금속 가공품',
-    sample_quality_target: '치수 공차 ±[수치] μm·표면 거칠기 Ra < [수치]',
+    sample_quality_target: '치수 공차 ±10 μm·표면 거칠기 Ra < 1.6',
     sample_kpi_label: '치수 편차·공구 마모·재가공률',
     sensor_examples: '주축 부하·진동·온도·절삭 토크',
     image_examples: '치수 측정 비전·표면 검사 이미지',
@@ -71,7 +71,7 @@ const DOMAIN_PROFILE = {
     process_default: '고무 배합·압출·가황',
     sample_facility: '밴버리 믹서·압출기·가황 프레스',
     sample_product: '자동차 OEM 1차 협력사 수준 고무 부품·가스켓·호스',
-    sample_quality_target: '경도 편차 ±[수치] HA·인장강도 [수치] MPa 이상',
+    sample_quality_target: '경도 편차 ±3 HA·인장강도 12 MPa 이상',
     sample_kpi_label: '배합 분산도·가황도·치수 불량률',
     sensor_examples: '믹서 토크·전력·온도·압출 압력·가황 온도 프로파일',
     image_examples: '제품 외관 검사·블리딩·기포 검출 이미지',
@@ -85,7 +85,7 @@ const DOMAIN_PROFILE = {
     process_default: '유틸리티 관리·환경·에너지',
     sample_facility: '보일러·압축기·냉동기·폐수 처리·집진',
     sample_product: '공장 전체 유틸리티 안정 공급 + 환경 규제 준수',
-    sample_quality_target: '에너지 원단위 [%] 절감·환경 측정값 법규 한도 [%] 이내',
+    sample_quality_target: '에너지 원단위 8 % 절감·환경 측정값 법규 한도 90 % 이내',
     sample_kpi_label: '에너지 효율·환경 측정·설비 가용도',
     sensor_examples: '전력·가스·증기·폐수 pH·SOx·NOx·먼지',
     image_examples: '굴뚝 영상·집진 필터 상태·누수 감시',
@@ -99,7 +99,7 @@ const DOMAIN_PROFILE = {
     process_default: '비정형 지식 자산 RAG·LLM 적용',
     sample_facility: 'SOP·작업표준서·CMMS·도면·매뉴얼 저장소',
     sample_product: '현장 작업자용 자연어 질의 응답·작업지시 자동 생성',
-    sample_quality_target: '응답 정확도 [%] 이상·환각률 [%] 이하·응답 시간 [수치] s 이내',
+    sample_quality_target: '응답 정확도 90 % 이상·환각률 5 % 이하·응답 시간 5 s 이내',
     sample_kpi_label: '응답 정확도·환각률·작업자 채택률',
     sensor_examples: '비정형 문서 메타데이터·검색 로그·작업자 정정 이력',
     image_examples: '도면 OCR·표 추출·다이어그램 이해',
@@ -109,7 +109,161 @@ const DOMAIN_PROFILE = {
     scenario_focus: 'SOP RAG·장애 대응 RAG·도면 검색·작업지시 자동 생성',
     veteran_areas: '장애 대응 노하우·교대 인수인계·작업표준서 작성',
   },
+  CAS: {
+    process_default: '연속주조·중력주조·전기로 출강',
+    sample_facility: '전기로·LF·VD·턴디시·몰드·연주기·주형',
+    sample_product: '자동차·조선용 슬라브·블룸·빌렛·중력주조 부품',
+    sample_quality_target: '슬라브 표면 결함 0.3 개/m 이하·내부 크랙 0·중심 편석 ≤ 1.2',
+    sample_kpi_label: '표면 결함·내부 크랙·중심 편석',
+    sensor_examples: '턴디시 온도·몰드 진동·주조 속도·2 차 냉각수 유량·용강 성분',
+    image_examples: '슬라브 표면 라인스캔·UT 검사 이미지·연주 단면 매크로',
+    cert_examples: 'IATF 16949·ISO 9001·KS D·ASTM A',
+    risk_examples: '중대재해처벌법·CBAM·환경규제(분진·소음)',
+    model_examples: 'XGBoost·LSTM·Transformer·CNN(표면 검사)·Isolation Forest',
+    scenario_focus: '슬라브 결함 예측·연주 속도 최적화·턴디시 온도 안정화',
+    veteran_areas: '턴디시 온도 판단·몰드 오실 조정·주조 속도 결정',
+  },
+  HEA: {
+    process_default: '가열로·연속소둔·진공 열처리·QT (퀜칭·템퍼링)',
+    sample_facility: '가스가열로·전기로·진공로·소둔로·QT 라인',
+    sample_product: '자동차 강판·기어·베어링·공구강용 열처리품',
+    sample_quality_target: '경도 편차 ±2 HRC·결정립도 ASTM 8 이상·잔류응력 80 MPa 이내',
+    sample_kpi_label: '경도 편차·결정립도·잔류응력',
+    sensor_examples: '노 내 온도·분위기 가스·냉각 속도·열전대 응답·진공도',
+    image_examples: '결정립 광학 현미경 이미지·표면 산화·뒤틀림 측정',
+    cert_examples: 'IATF 16949·ISO 9001·SAE AMS·KS D',
+    risk_examples: '중대재해처벌법·CBAM·에너지 다소비 규제·자동차 SQA',
+    model_examples: 'XGBoost·LSTM·물리 기반 시뮬레이션 결합 (PINN)·CNN',
+    scenario_focus: '경도 균일화 예측·결정립도 추정·열처리 조건 추천',
+    veteran_areas: '가열로 분위기 결정·QT 인출 시점 결정·결정립 판단',
+  },
+  PLT: {
+    process_default: '전기도금·아연도금·인산염피막·분체도장',
+    sample_facility: '전처리 라인·도금 셀·정류기·도장 부스·건조로',
+    sample_product: '자동차 차체·전자부품용 도금·도장 처리품',
+    sample_quality_target: '도금 두께 편차 ±2 μm·도장 외관 결함 1 % 이하·부착력 4B 이상',
+    sample_kpi_label: '도금 두께 편차·외관 결함·부착력',
+    sensor_examples: '도금조 온도·전류 밀도·pH·전도도·도금 시간',
+    image_examples: '도금 두께 SEM·외관 결함 비전·부착력 테이프 자국 이미지',
+    cert_examples: 'IATF 16949·ISO 9001·QUALICOAT·자동차 OEM 도장 인증',
+    risk_examples: '중대재해처벌법·환경규제(중금속 폐수·VOC)·자동차 SQA',
+    model_examples: 'XGBoost·CNN(외관)·AutoEncoder(이상)·강화학습(전류 제어)',
+    scenario_focus: '도금 두께 균일도 예측·전류 밀도 최적화·외관 결함 탐지',
+    veteran_areas: '도금조 보충 시점·정류기 전류 조정·외관 검사 판정',
+  },
+  SHP: {
+    process_default: '선각·블록·의장·도장·해양플랜트 모듈',
+    sample_facility: '선각 블록 라인·서브 어셈블리·도장 도크·해양 모듈 야드',
+    sample_product: '컨테이너선·LNG선 블록·해양플랜트 토프사이드 모듈',
+    sample_quality_target: '블록 정도 ±3 mm·용접 결함율 1 % 이하·도장 두께 250 μm 균일',
+    sample_kpi_label: '블록 정도·용접 결함·도장 균일도',
+    sensor_examples: '용접 전류·전압·아크 시간·구조해석 응답·환경 온습도',
+    image_examples: '용접 비드 외관·UT/RT 결함 이미지·도장 외관 검사',
+    cert_examples: 'KR·ABS·DNV·LR 선급·ISO 9001',
+    risk_examples: '중대재해처벌법·해양 환경 규제·선급 검사·납기 페널티',
+    model_examples: 'XGBoost·LSTM·CNN(용접 비드)·구조해석 surrogate',
+    scenario_focus: '용접 결함 예측·블록 정도 추정·도장 외관 검사',
+    veteran_areas: '용접 작업 자세·블록 매칭·도장 표면 판정',
+  },
+  ASM: {
+    process_default: '자동차부품 자동 조립·체결·검사 라인',
+    sample_facility: '컨베이어 라인·산업로봇·체결 토크 건·비전 검사 부스',
+    sample_product: '자동차 ECU·도어 모듈·서스펜션·시트 어셈블리',
+    sample_quality_target: '토크 정밀도 ±3 %·조립 오결합 0.5 % 이하·검사 통과율 98 % 이상',
+    sample_kpi_label: '토크 정밀도·오결합·검사 통과율',
+    sensor_examples: '토크·체결력·로봇 관절 위치·비전 검사 좌표·라인 속도',
+    image_examples: '조립 외관 비전·체결 자국·LDS 위치 측정 이미지',
+    cert_examples: 'IATF 16949·ISO 9001·자동차 OEM SQA·VDA 6.3',
+    risk_examples: '중대재해처벌법·자동차 SQA·리콜 책임·라인 정지 손실',
+    model_examples: 'XGBoost·CNN(체결 자국)·LSTM(라인 추세)·Isolation Forest',
+    scenario_focus: '토크 이상 탐지·조립 오결합 예방·검사 통과율 예측',
+    veteran_areas: '토크 이상 감지·라인 속도 조정·비전 검사 임계 결정',
+  },
 };
+
+// 사업 규모별 정량 슬롯 권장값 (사전_슬롯과_도메인_10종.md §1.3 + 가이드_조립_공통과수시.md §3)
+// 사용자 명시 입력이 우선, scale 은 fallback. 키는 한글 (사용자 step1.scale 입력) 과 영문 alias 동시 지원.
+const SCALE_PROFILE = {
+  '중소': {
+    total_budget_eok: '3',
+    govt_ratio_pct: '70',
+    private_ratio_pct: '30',
+    duration_months: '9',
+    trl_start: '4',
+    trl_target: '5',
+    veteran_count: '2~3',
+    spec_variance_pct: '10~15',
+    pdf_form_count: '8~15',
+    retention_period: '2 년',
+  },
+  '중견': {
+    total_budget_eok: '7',
+    govt_ratio_pct: '50',
+    private_ratio_pct: '50',
+    duration_months: '12',
+    trl_start: '5',
+    trl_target: '6',
+    veteran_count: '3~5',
+    spec_variance_pct: '8~12',
+    pdf_form_count: '10~20',
+    retention_period: '3 년',
+  },
+  '대기업': {
+    total_budget_eok: '22',
+    govt_ratio_pct: '40',
+    private_ratio_pct: '60',
+    duration_months: '24',
+    trl_start: '5',
+    trl_target: '7',
+    veteran_count: '10~15',
+    spec_variance_pct: '5~8',
+    pdf_form_count: '25~40',
+    retention_period: '5 년',
+  },
+};
+
+const SCALE_KEY_ALIAS = {
+  small: '중소',
+  mid: '중견',
+  large: '대기업',
+  '소': '중소',
+  '중': '중견',
+  '대': '대기업',
+};
+
+const QUANT_SLOT_KEYS = [
+  'veteran_count',
+  'variable_count',
+  'experience_years',
+  'spec_variance_pct',
+  'pdf_form_count',
+  'human_entry_minutes',
+  'human_error_pct',
+  'retention_period',
+  'kpi_quality_pct',
+  'kpi_productivity_pct',
+  'kpi_anomaly_accuracy_pct',
+  'kpi_fp_pct',
+  'kpi_fn_pct',
+  'total_budget_eok',
+  'govt_ratio_pct',
+  'private_ratio_pct',
+  'trl_start',
+  'trl_target',
+  'duration_months',
+  'ml_drift_psi_warn',
+  'ml_drift_psi_retrain',
+  'edge_latency_ms',
+  'hmi_latency_s',
+  'rag_latency_s',
+  'service_sla_pct',
+];
+
+function pickScale(scale) {
+  if (!scale) return null;
+  const normalized = SCALE_KEY_ALIAS[scale] || scale;
+  return SCALE_PROFILE[normalized] || null;
+}
 
 function pickDomain(industry) {
   return DOMAIN_PROFILE[industry] || DOMAIN_PROFILE.STL;
@@ -120,13 +274,91 @@ function formatScenarios(scenarios) {
   return scenarios.join('·');
 }
 
+function cleanNumericText(value) {
+  if (value === undefined || value === null) return '';
+  return String(value)
+    .replace(/,/g, '')
+    .replace(/백만원/g, '')
+    .replace(/억원/g, '')
+    .replace(/억 원/g, '')
+    .replace(/억/g, '')
+    .replace(/개월/g, '')
+    .replace(/%/g, '')
+    .trim();
+}
+
+function parseBudgetEok(value) {
+  const text = cleanNumericText(value);
+  if (!text) return '';
+  const numeric = Number.parseFloat(text);
+  if (!Number.isFinite(numeric)) return text;
+  if (String(value).includes('백만원')) {
+    return String(Number((numeric / 100).toFixed(1))).replace(/\.0$/, '');
+  }
+  return String(numeric).replace(/\.0$/, '');
+}
+
+function parseTrl(value) {
+  if (!value) return {};
+  const matches = String(value).match(/\d+/g) || [];
+  if (matches.length < 2) return {};
+  return { trl_start: matches[0], trl_target: matches[1] };
+}
+
+function valueFromProfile(profile, key) {
+  const business = profile?.step2_business || {};
+  const candidates = [
+    profile?.[key],
+    business?.[key],
+  ];
+  if (key === 'total_budget_eok') {
+    candidates.push(business.total_budget);
+  }
+  if (key === 'govt_ratio_pct') {
+    candidates.push(business.govt_ratio_pct, business.gov_pct);
+  }
+  if (key === 'private_ratio_pct') {
+    candidates.push(business.private_ratio_pct, business.private_pct);
+  }
+  if (key === 'duration_months') {
+    candidates.push(business.duration_months);
+  }
+
+  const found = candidates.find(value => value !== undefined && value !== null && String(value).trim() !== '');
+  if (found === undefined) return '';
+  return key === 'total_budget_eok' ? parseBudgetEok(found) : cleanNumericText(found);
+}
+
+function pickProfileSlots(profile) {
+  const explicit = {};
+  for (const key of QUANT_SLOT_KEYS) {
+    const value = valueFromProfile(profile, key);
+    if (value) explicit[key] = value;
+  }
+  Object.assign(explicit, parseTrl(profile?.trl || profile?.step2_business?.trl));
+  const govt = Number.parseFloat(explicit.govt_ratio_pct);
+  const privateRatio = Number.parseFloat(explicit.private_ratio_pct);
+  if (Number.isFinite(govt) && !Number.isFinite(privateRatio)) {
+    explicit.private_ratio_pct = String(Math.max(0, 100 - govt));
+  }
+  if (!Number.isFinite(govt) && Number.isFinite(privateRatio)) {
+    explicit.govt_ratio_pct = String(Math.max(0, 100 - privateRatio));
+  }
+  return explicit;
+}
+
 export function buildSlots(profile, plan) {
   const company = profile?.company || profile?.step1_company?.company || '[고객사]';
   const industry = profile?.industry || profile?.step1_company?.industry || plan?.domain || 'STL';
   const dp = pickDomain(industry);
   const process = profile?.process || profile?.step1_company?.process || dp.process_default;
+  const scale = profile?.scale || profile?.step1_company?.scale || null;
+  const scaleProfile = pickScale(scale) || {};
+  const profileSlots = pickProfileSlots(profile || {});
   return {
     ...DEFAULTS,
+    ...scaleProfile,
+    ...profileSlots,
     company,
     industry,
     process,

@@ -120,7 +120,7 @@ describe('handleRequest', () => {
         mode: 'polish',
         text: '## 제목\n\n[고객사]의 [공정] 개선',
         inputs: { 고객사: '동국제강', 공정: '후판 압연' },
-        metadata: { selectedIds: ['BLK-T1-3.1'] },
+        metadata: {},
       }),
       env,
       async (url, init) => {
@@ -225,8 +225,11 @@ describe('handleRequest', () => {
     assert.doesNotMatch(complete.data.final_md, /BLK-/);
     assert.doesNotMatch(complete.data.final_md, /본 1차 MVP 초안/);
     assert.match(complete.data.audit_md, /# 생성 검토 리포트/);
-    assert.match(complete.data.audit_md, /BLK-COMPANY-01/);
+    assert.doesNotMatch(complete.data.audit_md, /BLK-/);
+    assert.doesNotMatch(complete.data.audit_md, /\[출처:/);
     assert.match(complete.data.audit_md, /phase-one-deterministic/);
+    assert.equal(complete.data.audit.passed, true);
+    assert.equal(complete.data.audit.summary.pass_count, 6);
     assert.equal(complete.data.meta.section_count, 9);
     assert.equal(complete.data.meta.domain, 'STL');
   });
@@ -301,9 +304,9 @@ describe('handleRequest', () => {
     assert.equal(fetchCalls[0].url, 'https://gateway.ai.cloudflare.com/v1/account-123/gateway-abc/google-ai-studio/v1/models/gemini-2.5-flash:generateContent');
     assert.equal(fetchCalls[0].init.headers['x-goog-api-key'], 'test-gemini-key');
     assert.equal(fetchCalls[0].init.headers['cf-aig-collect-log-payload'], 'false');
-    assert.match(fetchCalls[0].prompt, /BLK-COMPANY-01/);
+    assert.doesNotMatch(fetchCalls[0].prompt, /BLK-/);
     assert.match(fetchCalls[0].prompt, /회사 현황은 시스템 보유 현황과 공정 범위를 함께 서술한다/);
-    assert.match(fetchCalls[5].prompt, /BLK-DATA-01/);
+    assert.doesNotMatch(fetchCalls[5].prompt, /BLK-/);
     assert.match(fetchCalls[5].prompt, /데이터 명세는 raw source, X 후보, y target을 구분한다/);
 
     const complete = events.find(item => item.event === 'complete');
@@ -314,8 +317,10 @@ describe('handleRequest', () => {
     assert.match(complete.data.final_md, /Gemini section 1/);
     assert.match(complete.data.final_md, /Gemini section 9/);
     assert.doesNotMatch(complete.data.final_md, /\[출처:/);
+    assert.doesNotMatch(complete.data.final_md, /TEST-/);
     assert.doesNotMatch(complete.data.final_md, /^---/);
-    assert.match(complete.data.audit_md, /TEST-1/);
+    assert.doesNotMatch(complete.data.audit_md, /TEST-/);
+    assert.doesNotMatch(complete.data.audit_md, /BLK-/);
     assert.match(complete.data.audit_md, /phase-two-llm-sections/);
   });
 

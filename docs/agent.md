@@ -34,6 +34,11 @@ hide:
     <option value="MET">정밀가공</option>
     <option value="UTL">유틸·ESG</option>
     <option value="LLM">LLM·RAG</option>
+    <option value="CAS">연속주조·주조</option>
+    <option value="HEA">열처리·소둔</option>
+    <option value="PLT">도금·표면처리</option>
+    <option value="SHP">조선·해양기자재</option>
+    <option value="ASM">자동차부품 조립</option>
   </select></label>
   <label>대상 공정 <input name="step1_company.process" data-required="true" placeholder="후판 압연" /></label>
   <label>기업 규모 <select name="step1_company.scale" data-required="true">
@@ -138,6 +143,7 @@ hide:
 </div>
 <textarea id="agent-result" readonly placeholder="결과 없음"></textarea>
 <h2>검토 리포트</h2>
+<div id="agent-audit-matrix" class="agent-audit-matrix"></div>
 <div class="agent-result-actions">
   <button id="agent-copy-audit" type="button" disabled>복사</button>
   <button id="agent-download-audit" type="button" disabled>다운로드</button>

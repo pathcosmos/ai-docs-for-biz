@@ -27,6 +27,7 @@
   const progressEl = document.getElementById('agent-progress');
   const partialsEl = document.getElementById('agent-partials');
   const resultEl = document.getElementById('agent-result');
+  const auditMatrixEl = document.getElementById('agent-audit-matrix');
   const auditResultEl = document.getElementById('agent-audit-result');
   const copyButton = document.getElementById('agent-copy');
   const downloadButton = document.getElementById('agent-download');
@@ -36,6 +37,7 @@
   let currentStep = 1;
   let finalMarkdown = '';
   let auditMarkdown = '';
+  let auditData = null;
   let templateContextPromise = null;
 
   function defaultEndpoint() {
@@ -94,6 +96,47 @@
     });
   }
 
+  function auditDetail(key, check) {
+    if (!check) return '-';
+    if (key === 'slot') return check.count ? `잔류 ${check.count}` : '잔류 없음';
+    if (key === 'placeholder') return check.count ? `잔류 ${check.count}` : '잔류 없음';
+    if (key === 'sectionHeaders') return check.missing && check.missing.length ? check.missing.join(', ') : '§1~§9';
+    if (key === 'balance') return `ratio ${check.balance_ratio}`;
+    if (key === 'cross') return `누출 ${check.total_leaks || 0}`;
+    if (key === 'meta') return check.count ? `누출 ${check.count}` : '누출 없음';
+    return check.pass ? '정상' : '점검 필요';
+  }
+
+  function renderAuditMatrix(audit) {
+    auditMatrixEl.innerHTML = '';
+    if (!audit || !audit.checks) return;
+    const labels = {
+      slot: '슬롯',
+      placeholder: '표기',
+      sectionHeaders: '섹션',
+      balance: '균형',
+      cross: '도메인',
+      meta: '메타',
+    };
+    const table = document.createElement('table');
+    table.innerHTML = '<thead><tr><th>축</th><th>결과</th><th>상세</th></tr></thead>';
+    const tbody = document.createElement('tbody');
+    Object.entries(audit.checks).forEach(([key, check]) => {
+      const row = document.createElement('tr');
+      row.dataset.pass = check.pass ? 'true' : 'false';
+      const axis = document.createElement('td');
+      axis.textContent = labels[key] || key;
+      const result = document.createElement('td');
+      result.textContent = check.pass ? 'PASS' : 'FAIL';
+      const detail = document.createElement('td');
+      detail.textContent = auditDetail(key, check);
+      row.append(axis, result, detail);
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+    auditMatrixEl.appendChild(table);
+  }
+
   function collectPayload(templateContext) {
     const profile = {};
     const fields = Array.from(form.querySelectorAll('[name]'));
@@ -149,8 +192,10 @@
       if (last.final_md) {
         finalMarkdown = last.final_md;
         auditMarkdown = last.audit_md || '';
+        auditData = last.audit || null;
         resultEl.value = finalMarkdown;
         auditResultEl.value = auditMarkdown;
+        renderAuditMatrix(auditData);
         copyButton.disabled = false;
         downloadButton.disabled = false;
         copyAuditButton.disabled = !auditMarkdown;
@@ -166,9 +211,11 @@
   function resetOutput() {
     finalMarkdown = '';
     auditMarkdown = '';
+    auditData = null;
     progressEl.innerHTML = '';
     partialsEl.innerHTML = '';
     resultEl.value = '';
+    auditMatrixEl.innerHTML = '';
     auditResultEl.value = '';
     copyButton.disabled = true;
     downloadButton.disabled = true;
@@ -245,8 +292,10 @@
     if (event === 'complete') {
       finalMarkdown = data.final_md || '';
       auditMarkdown = data.audit_md || '';
+      auditData = data.audit || null;
       resultEl.value = finalMarkdown;
       auditResultEl.value = auditMarkdown;
+      renderAuditMatrix(auditData);
       copyButton.disabled = !finalMarkdown;
       downloadButton.disabled = !finalMarkdown;
       copyAuditButton.disabled = !auditMarkdown;

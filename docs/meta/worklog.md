@@ -158,17 +158,29 @@
 | `가이드_적용_배포_방안.md` (BLK-TRAIN-01·02) | Phase E19 Phase 0 #8. §8 (적용·배포 방안) 배포 아키텍처 (edge·on-prem·cloud) + 운영 통합 + HITL workflow + 교육 커리큘럼 + 변화관리·인수인계. 8 장 구조 — 5 범주 (아키텍처·통합·HITL·교육·변화관리) + 3 Tier 16 필드 + §8.1~§8.5 5 절 본문 + ASCII 도식 2 종 (3 단 배포·HITL workflow) + 교육 3 단. track2 BLK-T2-4.4 + SCN-MLO-03 + 가이드_도메인_지식추출 답습. 운영 가이드 군 19 번째. | 신설 (엔트리 #69 / Phase E19 #8) | ~230 |
 | `가이드_MLOps_거버넌스_리츄얼.md` (BLK-MLOPS-01·02) | Phase E19 Phase 0 #9 (마지막). §9 (MLOps loop) 3 층 모니터링 + 드리프트 (PSI·KS) + 자동 재학습 트리거 + 챔피언·챌린저 SOP + 5 리츄얼 (월·분기·연·HITL 주·외부 감사). 8 장 구조 — 5 범주 (Monitoring·Drift·Retraining·Champion-Challenger·Governance) + 3 Tier 17 필드 + §9.1~§9.5 5 절 본문 + ASCII 도식 2 종 (드리프트·챔피언승급) + 표 3 종. track2 §5.5·6.1·6.3·6.5 + SCN-MLO-01·02·03 답습. 운영 가이드 군 20 번째. **Phase 0 콘텐츠 갭 9 종 완료**. | 신설 (엔트리 #69 / Phase E19 #9) | ~250 |
 | `자동화_Agent_UI_개발계획.md` | Phase E19 Phase 1·2·3 (Worker Agent + 전용 UI + Section Writers × 9) 구현 직전 상세 사양. 10 절 본문 — Context·Orchestrator·6 Stages 명세·9 Section Writers 매핑·SSE Wire Protocol·Compact Index·Stepper 5 단계 UI·API Schema·Day 단위 일정·검증/위험. 사용자 결정 3 항 (Section Writer 완전 병렬·Stepper UI·ASCII Phase 4 분리) 반영. **메타 진단 자산 군 12 번째**. 작성 당시에는 코드 작성 금지였고, 엔트리 #72 에서 Phase 1 MVP 일부 구현으로 전환. | 신설 (엔트리 #70 / Phase E19 / Phase 1·2·3 사양) | ~480 |
-| `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) | 150 |
-| `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) | 355 |
-| `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) | 207 |
+| `사전_슬롯과_도메인_10종.md` | LAYER A 슬롯 사전 — 39 슬롯 정의, 10 도메인 프로필, 신규 25 시나리오 후보. 엔트리 #79 에서 `sample_quality_target` 의 `[수치]`·`[%]` 잔여 placeholder 를 코드와 같은 구체값으로 동기화. | 신설 (엔트리 #78) + placeholder 제거 동기화 (엔트리 #79) | 270 |
+| `라이브러리_공통문구_9섹션.md` | `worker/src/library.js` LIBRARY 객체의 사람 친화 Markdown view — 9 섹션 공통 문구와 슬롯 일람. 코드가 권위이며 CLI 생성기가 §1~§9 본문을 파싱해 사용. | 신설 (엔트리 #78) | ~140 |
+| `가이드_조립_공통과수시.md` | 공통문구(LAYER A) + 수시 슬롯 사전 + 상황별 변형을 이어붙이는 조립 절차 가이드. | 신설 (엔트리 #78) | ~210 |
+| `점검_체크리스트_가상10종.md` | 10 도메인 가상 사업계획서 cross-check 매트릭스와 보정 루프. 자동 lint 로 잡히지 않는 의미·문체 점검용. | 신설 (엔트리 #78) | ~150 |
+| `사업계획서_가상_10종/` | 10 도메인 × 규모별 가상 사업계획서 fixture 디렉터리. LAYER A 변형 발굴·lint 입력·인계용 견본. | 신설 (엔트리 #78) | 10 파일 |
+| `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리, 엔트리 #79 에서 10 도메인 dropdown + audit matrix 영역 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) + 10 도메인/audit matrix (엔트리 #79) | 156 |
+| `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가, 엔트리 #79 에서 `complete.audit` 6 축 matrix 렌더링과 localStorage 복원을 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) + structured audit matrix (엔트리 #79) | 404 |
+| `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이, 엔트리 #79 에서 6 축 audit matrix table 스타일 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) + audit matrix (엔트리 #79) | 236 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
-| `worker/src/agent.js` | `POST /api/agent/generate` SSE Agent — Tier 1 회사명 검증, Planner·Outline·9 Section·Validate·Compile 이벤트 스트림, deterministic fallback, `writer_mode=llm` 시 Gemini Section Writer 호출. Free tier 기본은 `AGENT_MAX_LLM_SECTIONS=5` 로 제한. 엔트리 #75 에서 섹션별 guide compact context prompt 주입, 엔트리 #76 에서 `final_md` 클린 본문 + `audit_md` 검토 리포트 분리. | 신설 (엔트리 #72) + Gemini Section Writer (엔트리 #73) + Free tier cap (엔트리 #74) + compact context prompt (엔트리 #75) + clean final/audit (엔트리 #76) | 432 |
+| `worker/src/agent.js` | `POST /api/agent/generate` SSE Agent — Tier 1 회사명 검증, Planner·Outline·9 Section·Validate·Compile 이벤트 스트림, deterministic fallback, `writer_mode=llm` 시 Gemini Section Writer 호출. Free tier 기본은 `AGENT_MAX_LLM_SECTIONS=5` 로 제한. 엔트리 #75 에서 섹션별 guide compact context prompt 주입, 엔트리 #76 에서 `final_md` 클린 본문 + `audit_md` 검토 리포트 분리, 엔트리 #79 에서 출처 ID 전면 비노출·structured audit complete payload 를 추가. | 신설 (엔트리 #72) + Gemini Section Writer (엔트리 #73) + Free tier cap (엔트리 #74) + compact context prompt (엔트리 #75) + clean final/audit (엔트리 #76) + source-free audit (엔트리 #79) | 485 |
+| `worker/src/library.js` | LAYER A 재사용 블록 라이브러리 — 9 섹션 완성문장, 10 도메인 프로필, scale fallback, `buildSlots`·`composeFromLibrary`. 엔트리 #79 에서 사용자 명시 정량 입력이 scale fallback 보다 우선하도록 병합 순서와 UI alias 처리를 보강. | 신설 (엔트리 #77) + 10 도메인/scale 확장 (엔트리 #78 후속) + override 보강 (엔트리 #79) | 536 |
+| `worker/src/audit.js` | Worker 런타임용 6 축 자동 검증 모듈 — slot·placeholder·§1~§9 헤더·섹션 균형·도메인 cross·메타 누출 검사. `tools/lint_plan.py` 기준을 JS 로 이식. | 신설 (엔트리 #79) | 152 |
 | `worker/src/gemini.js` | Cloudflare AI Gateway / Google AI Studio 공용 호출 모듈 — env 검증, Gateway URL 생성, payload logging off 헤더, authenticated gateway token, Gemini text parse. `/api/llm` 과 Agent Section Writer 가 공유. | 신설 (엔트리 #73) | 71 |
 | `worker/package.json` | Cloudflare Worker 하위 프로젝트 스크립트 (`test`, `deploy:dry-run`, `deploy`) + Wrangler devDependency 선언. | 신설 (엔트리 #61) | 13 |
 | `worker/package-lock.json` | Worker npm lockfile — Wrangler 4.90.0 및 의존성 고정. | 신설 (엔트리 #63) | 1502 |
 | `worker/wrangler.toml` | Cloudflare Worker 배포 설정 — main·compatibility_date·workers_dev·preview_urls·observability·required secrets·기본 Gemini 모델·origin allowlist·AI Gateway vars·Free tier 용 `AGENT_MAX_LLM_SECTIONS=5`. Free plan 미지원 `limits.cpu_ms` 는 엔트리 #74 에서 제거. | 신설 (엔트리 #61) + 배포 설정 확정 (엔트리 #62·#63) + Agent 운영 보강 (엔트리 #72·#74) | 22 |
 | `worker/src/index.js` | Worker 라우터 — 기존 `POST /api/llm` 보안 프록시 보존 + 신규 `POST /api/agent/generate` SSE Agent 라우트 연결. Gateway 호출은 `worker/src/gemini.js` 로 공용화. | 신설 (엔트리 #61) + Agent route 추가 (엔트리 #72) + Gateway 공용화 (엔트리 #73) | 175 |
-| `worker/test/index.test.js` | Worker Node test suite — 기존 LLM proxy 검증 + Agent Tier 1 거부·SSE 9 섹션 complete 이벤트 + Gemini Section Writer Gateway 호출·payload logging off·LLM 섹션 cap·compact context prompt 주입·최종 본문/audit 분리 검증. | 신설 (엔트리 #61) + Agent 테스트 추가 (엔트리 #72·#73·#74·#75·#76) | 367 |
+| `worker/test/index.test.js` | Worker Node test suite — 기존 LLM proxy 검증 + Agent Tier 1 거부·SSE 9 섹션 complete 이벤트 + Gemini Section Writer Gateway 호출·payload logging off·LLM 섹션 cap·compact context prompt 주입·최종 본문/audit 분리 검증. 엔트리 #79 에서 BLK/TEST/출처 ID 비노출과 `complete.audit` 검증을 추가. | 신설 (엔트리 #61) + Agent 테스트 추가 (엔트리 #72·#73·#74·#75·#76) + source-free audit 검증 (엔트리 #79) | 372 |
+| `worker/test/library.test.js` | LAYER A library 단위 테스트 — 10 도메인 × 3 규모 슬롯, scale alias/fallback, 사용자 명시값 override, UI step2 alias, 9 섹션 슬롯 잔존 0, STL/CAS 회귀 검증. | 신설 (엔트리 #79) | 175 |
+| `worker/test/audit.test.js` | Worker 6 축 audit 단위 테스트 — 정상 9 섹션 PASS, 슬롯·placeholder·섹션 누락·cross·meta 위반 FAIL fixture. | 신설 (엔트리 #79) | 50 |
+| `tools/lint_plan.py` | Python 표준 라이브러리 기반 6 축 사업계획서 lint — 엔트리 #79 에서 placeholder regex 를 JS audit 과 동기화. | 신설 (엔트리 #78) + regex 동기화 (엔트리 #79) | 319 |
+| `tools/generate_plan.py` | Local CLI 9 섹션 사업계획서 생성기 — `라이브러리_공통문구_9섹션.md` + `사전_슬롯과_도메인_10종.md` 를 파싱해 paste-ready Markdown 생성 후 `lint_plan.py` 실행. | 신설 (엔트리 #79) | 286 |
+| `tools/test_generate_plan.py` | Local CLI smoke test — STL/중견 샘플 생성, §1~§9·slot/source/placeholder 제거, lint 통과 검증. | 신설 (엔트리 #79) | 61 |
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
@@ -3228,6 +3240,124 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - 문맥 통합 pass 구현 — §6 X/y 정의 → §7 모델 → §8 배포 → §9 MLOps 연결을 마지막에 재작성해 섹션 간 반복과 단절을 줄인다.
   - Gemini Free tier cap 대응 — 9 섹션을 queue/backoff 로 순차 재시도하거나 품질 모드에서 `AGENT_MAX_LLM_SECTIONS=9` 를 사용할지 결정한다.
 
+#### 엔트리 #77 — LAYER A 라이브러리 + composeFromLibrary 로 완성문장 deterministic 보장 (2026-05-12)
+
+- **맥락**: 엔트리 #76 에서 frontmatter·`[출처:]`·`본 1차 MVP 초안` 표면 메타는 제거했으나, deterministic 본문 자체가 여전히 `${company}의 ${process} 사업계획서 ${title} 섹션은 ${intent}` 골격 한 줄에 머물러 사용자가 "이런 식의 결과 말고 바로 붙여넣기 할 수 있는 형태" 라고 다시 지적했다. 본 세션은 사용자가 제시한 3 단계 워크플로 — (1) 완성형 예시 몇 개 → (2) 재사용 / 재생성 분리 → (3) 마지막 문맥 통합 — 를 LAYER A·B·C 모델로 구체화하여 코드와 콘텐츠 양쪽에 반영했다.
+- **사용자 요청 (원문)**: *"이런 식의 결과 말고 바로 붙여넣기 할 수 있는 형태의 완성된 문장을 원한다 ... 우선 전체적인 완성형을 몇 개 만들고 그 중 분리해서 재사용할 수 있는 것과 상황에 따라서 달라지거나 재생성해야 할 것들을 분리하고, 또 나중에 최종적으로 그런것들을 다 자연스럽게 이어붙여서 문맥을 완성할수 있게 해야 해, 이 생각에 동의하나?"*
+- **AI 수행**:
+  1. plan 모드에서 4 분기점 확정 — (i) 메타는 본문에서 완전 제거 + 별도 검토 리포트, (ii) `AGENT_MAX_LLM_SECTIONS=5` cap 은 유지하고 LAYER A 라이브러리로 deterministic path 도 완성문 보장, (iii) 도메인 샘플 3 종 (철강·고무·정밀가공), (iv) 라이브러리는 신규 파일 없이 기존 자산 (track1·2 Top5 + 가이드 KPI/TRL + 패키지 §1.3·1.4) 을 derive 한 in-code 라이브러리.
+  2. 신규 `worker/src/library.js` 작성 — 9 섹션 LAYER A prose (track1·2 Top5 + 패키지 §2 골격 기반), 5 도메인 (STL·MET·RUB·UTL·LLM) 별 어휘 매핑, `{{slot_*}}` 치환 함수 `composeFromLibrary`. 본문은 워크스페이스 골든 샘플로부터 derive 되었으며 원본 .md 자산은 수정하지 않음.
+  3. `worker/src/agent.js` patch — `deterministicSectionMarkdown` 을 `composeFromLibrary(sectionId, buildSlots(profile, plan))` 호출로 교체. LLM section prompt 도 LAYER A 본문을 base 로 받고 "도메인 어휘 보강 + 회사 특화 1~2 문장" 만 하도록 재설계 (LAYER B). `normalizeSectionMarkdown` 의 `> [출처:` 재주입 코드 제거.
+  4. 검증용 `/tmp/derive_samples.mjs` 실행 — 3 도메인 (철강·고무·정밀가공) 각각의 9 섹션 완성문장 .md 를 워크스페이스 root 에 저장. 메타 흔적 grep 검증 결과 `[확인 필요]·> [출처:·본 1차 MVP 초안·generated_at:·validation_score:·후속 Section Writer` 모두 0 매치.
+  5. `buildSlots` 의 `...DEFAULTS` spread 가 explicit `process` slot 을 덮어쓰던 버그 수정 — spread 를 객체 맨 앞으로 이동. KPI 슬롯 값 (`5 이하`, `90 이상`) 의 어미 중복 제거.
+- **사용자 의사결정**:
+  - 4 분기점 모두 추천안 채택 (메타 분리 / LAYER A 보장 / 3 도메인 / 기존 자산 derive).
+  - LAYER C 문맥 통합 LLM transition pass 는 보류 — 라이브러리가 9 섹션에 걸쳐 동일 슬롯 (`kpi_label`·`sensor_examples`·`scenarios`·`model_examples`) 을 일관 재사용하여 구조적 일관성을 자체 보장하므로, 추가 LLM 호출의 비용·복잡도 대비 가치가 낮다고 판단.
+- **판단 근거**:
+  - 라이브러리 본문은 워크스페이스의 검증된 골든 샘플 (`track1_본문_공통Top5.md`, `track2_본문_공통Top5.md`, `사업계획서_패키지[2-4]_*` §1.3·1.4·§3) 의 prose 를 derive 한 것이므로, 톤·구조·논리는 이미 작성자 검수를 통과한 자산을 답습한다. 새로 prose 를 짓지 않으므로 품질 회귀 위험이 낮다.
+  - `composeFromLibrary` 가 deterministic path 의 골격을 LAYER A 본문으로 치환함으로써, Gemini Free tier cap 에 의한 §6~§9 fallback 도 여전히 완성문장으로 출력된다. cap 상향 (token cost +80%) 없이 결과 품질을 끌어올리는 비대칭적 개선.
+  - LLM section prompt 가 LAYER A base + 회사 특화 보강만 요구하므로 LLM 출력의 구조 이탈·환각 위험이 감소하고, 동시에 응답 token 길이가 단축되어 비용도 감소한다.
+- **산출물**:
+  - 신규: `worker/src/library.js` (9 섹션 LAYER A prose + 5 도메인 매핑 + `composeFromLibrary`·`buildSlots`)
+  - 수정: `worker/src/agent.js` (`deterministicSectionMarkdown`·`buildSectionPrompt`·`normalizeSectionMarkdown` 3 곳)
+  - 신규: `사업계획서_샘플_철강_완성형.md`, `사업계획서_샘플_고무_완성형.md`, `사업계획서_샘플_정밀가공_완성형.md` (3 도메인 derive 결과, 각 11~12 KB / 9 섹션)
+- **검증 결과**:
+  - 3 도메인 샘플 모두 메타 흔적 0 매치 (`grep -cE '(\[확인 필요\]|> \[출처:|본 1차 MVP 초안|generated_at:|validation_score:|후속 Section Writer)' = 0`).
+  - `[공정]` placeholder 잔존 0 매치 (도메인별 process 값으로 정상 치환).
+  - `node --check worker/src/agent.js` 와 `worker/src/library.js` 통과.
+  - LLM 측 검증은 후속 수행 — 본 patch 는 worker 재배포 후 actual Gemini 호출에서 LAYER B 슬롯 보강 품질 확인 필요.
+- **배운 점·재사용 포인트**:
+  - **방법론 후보 4.113 — 골든 샘플 derive 형 in-code 라이브러리**: 워크스페이스에 이미 검증된 prose 자산이 있을 때, 그 자산을 코드 라이브러리로 derive 하면 원본 수정 없이 정적 generator 의 출력 품질을 단계적으로 끌어올릴 수 있다. JSON·DB 인덱싱 부담 없이 in-code 템플릿 리터럴 + slot 치환으로 충분.
+  - **방법론 후보 4.114 — LAYER A·B·C 3 층 분리 모델**: 자동 생성 시스템에서 (A) 도메인 비의존 표준문구를 정적 자산으로, (B) 시나리오·회사 특화 어휘를 LLM 슬롯으로, (C) 섹션 간 문맥 연결을 transition pass 로 분리하면, 각 층의 비용·품질·재사용성 트레이드오프를 독립적으로 최적화할 수 있다. 단 (C) 는 (A) 가 잘 구조화되어 슬롯 일관성을 자체 보장하면 보류 가능.
+  - **운영 관찰**: deterministic path 가 "skeleton placeholder + 메타 문구" 패턴으로 출발한 자동 생성기는, 사용자가 결과를 처음 보는 시점에서 "초안 흔적" 으로 인식하기 매우 쉽다. 초기 prototype 단계부터 deterministic path 의 본문도 완성문장으로 작성하는 것이 사용자 신뢰 곡선을 빠르게 끌어올린다.
+- **다음 단계**:
+  - Cloudflare Worker 재배포 + 실제 LLM 호출로 LAYER B 슬롯 보강 품질 측정 (Gemini 출력이 LAYER A 본문의 구조를 유지하는지 검증).
+  - 5 도메인 (UTL·LLM) 추가 derive 및 도메인 어휘 매핑 검토.
+  - LAYER C transition pass 의 필요성 재평가 — 실제 LLM 호출 후 섹션 간 단절이 드러나는지 관찰 후 결정.
+
+---
+
+#### 엔트리 #78 — 가상 사업계획서 10 도메인 × 공통/수시/조립/점검 4 분할 자산 구축 (2026-05-13)
+
+- **맥락**: 엔트리 #77 에서 LAYER A 라이브러리 (`worker/src/library.js`, 9 섹션 × 5 도메인 × 37 슬롯 deterministic 조립) 가 코드 레벨로 완성됐으나, (a) 도메인 5 종이 부산·경남 클러스터 실수요 대비 좁고, (b) 공통/수시 분리가 코드에만 존재해 사람 손 작업·인계 친화성 부족, (c) 조립 결과의 자기 모순·슬롯 누락 등을 점검할 자료·스크립트 없음 — 의 3 가지 한계가 남아 있었다. 사용자가 본 세션 진입 시 가상 10 종 작성 + 공통·수시·조립·점검 4 분할 자료 구축을 직접 요청했고, plan 모드에서 신규 5 도메인 추가 + 마크다운 우선 + 체크리스트 + lint 의 3 분기점이 확정됐다.
+- **사용자 요청 (원문)**: *"우선 가상의 사업계획서 ai 부분, 10 가지 종류 작성해 보자, 그걸 분리해서 공통적으로 쓸 문구와 때때로 수시로 생생할 부분, 그리고 그것들을 이어붙여서 전체 문맥을 완성하고 점검할 자료들을 만들어 보려고 해, 상세 계획 세워 줘"* + AskUserQuestion 답변: *"신규 도메인 추가 (총 10 도메인)"* / *"마크다운 자료 우선 (Recommended)"* / *"10 종 cross-자기검토 체크리스트, 자동 lint 스크립트 (LAYER B 와 연계)"*.
+- **AI 수행**: Plan 모드 5 단계 워크플로 — Phase 1 Explore 3 에이전트 병렬 (작업로그·자산 지도·LAYER A 구조) → Phase 2~3 직접 코드·견본 읽기 → Phase 4 AskUserQuestion 3 분기점 → Phase 5 ExitPlanMode → 구현 5 단계 (산출물 B → A → C × 10 → D → E + F).
+  1. **산출물 B 슬롯·10 도메인 사전** (`사전_슬롯과_도메인_10종.md`) — 39 슬롯 정의표 (식별 5 + 도메인 어휘 11 + 정량 22 + 시나리오 1) + 기존 5 + 신규 5 도메인 매트릭스 (CAS·HEA·PLT·SHP·ASM) + 신규 25 시나리오 ID 후보 + Mermaid 인접 관계도.
+  2. **산출물 A 공통 문구 라이브러리** (`라이브러리_공통문구_9섹션.md`) — `worker/src/library.js` LIBRARY 객체 line 161~277 의 9 섹션 prose 를 사람 친화 마크다운으로 derive (코드 권위 명시, 본 .md 는 view).
+  3. **산출물 C 가상 사업계획서 10 종** (`사업계획서_가상_10종/01_STL_중견.md` ~ `10_ASM_중견.md`) — 도메인 10 × 규모 분포 (대기업 2·중견 6·중소 2). 기존 5 도메인은 견본 derivation, 신규 5 도메인은 사전 §2.2 어휘 첫 적용. 각 파일 = 머리말 + §1~§9 + 조립 메타.
+  4. **산출물 D 조립 가이드** (`가이드_조립_공통과수시.md`) — 사람 5 단계 절차 + LAYER A 자동 절차 대응표 + 변형 우선순위 + 강도 3 단계 (light/standard/deep) + Mermaid 흐름도. 운영 가이드 11 종 컨벤션 (8 장 + 4 분기 + 강도 3 단계) 답습.
+  5. **산출물 E cross 체크리스트** (`점검_체크리스트_가상10종.md`) — 30 항목 × 10 도메인 = 300 셀 매트릭스 + cross-도메인 가로 비교 5 항목 + 보정 루프 + Lessons Learned 5 항목.
+  6. **산출물 F 자동 lint** (`tools/lint_plan.py`) — 6 축 검사 (slot·placeholder·9 섹션 헤더·길이 균형·도메인 cross 누출·메타 흔적). Python 표준 라이브러리만, 표·JSON 출력. 1 차 실행 결과 **10/10 PASS** (slot 0·placeholder 0·헤더 누락 0·균형 0.33·cross 누출 ≤1·메타 0).
+- **판단 근거**:
+  - 신규 5 도메인 픽업 = 부산·경남 클러스터 실수요 + LAYER A STL/MET 인접 공정 우선. SHP/ASM 대신 POL/FOR/FOD/LOG 도 가능했지만 클러스터 대표성과 도메인 결합 관계도 (Mermaid §2.3) 의 자연스러움을 우선.
+  - 산출물 분리 (A·B·C·D·E·F) = 운영 가이드 11 종 컨벤션 답습 + 단방향 빌드 (코드 → 마크다운 view → 견본 → 점검) 원칙. 코드 (library.js) 권위·마크다운 view 는 derivation·견본은 변형 발굴·체크리스트·lint 는 점검 — 역할 충돌 없음.
+  - 견본 3 종 (철강·고무·정밀가공) 과 가상 10 종 분리 = 견본은 LAYER A 권위 검증용 (수정 금지), 가상 10 종은 변형 발굴 + lint 입력. 둘을 합치면 견본 무결성이 깨짐.
+  - lint 의 도메인 cross 검사 = 4 단어 이상에서만 fail 허용. cross-cutting 어휘 (RAG·MLOps·HITL 등) 가 도메인 통합 시나리오에서 정상적으로 나타나므로 0 단어 strict 는 false positive 폭증. `--strict-cross` 옵션으로 1 단어부터 fail 도 가능.
+  - library.js 코드 반영 보류 = 신규 5 도메인의 본문 검증 먼저 (lint·체크리스트), 코드는 별 단계. 코드 변경은 Cloudflare 재배포·테스트가 동반되어 단일 변경 단위 원칙 위반 위험.
+- **사용자 의사결정**: AskUserQuestion 3 답변으로 도메인 축·산출 형태·점검 방식 확정. 본 세션은 plan 승인 후 단속없이 진행 ("As you answer the user's questions, you can use the following context" 시스템 안내로 사용자 직접 추가 입력 없음 — plan 의 scope 안에서 자율 실행).
+- **산출물**:
+  - **신규 마크다운 14 종** (총 약 6,000 줄):
+    - `사전_슬롯과_도메인_10종.md` (~330 줄)
+    - `라이브러리_공통문구_9섹션.md` (~140 줄)
+    - `사업계획서_가상_10종/01_STL_중견.md` ~ `10_ASM_중견.md` (10 파일, 각 ~80 줄)
+    - `가이드_조립_공통과수시.md` (~210 줄)
+    - `점검_체크리스트_가상10종.md` (~150 줄)
+  - **신규 디렉터리 2 종**: `사업계획서_가상_10종/` (10 파일), `tools/` (1 파일)
+  - **신규 Python 1 종**: `tools/lint_plan.py` (~280 줄, Python 표준 라이브러리만 — 6 축 검사 + 표/JSON 출력)
+  - **lint 1 차 실행 결과**: 10 / 10 PASS (검사 6 축 모두 통과). 도메인 cross 누출 ≤1 단어 = 인접 도메인·cross-cutting 허용 범위.
+- **배운 점·재사용 포인트**:
+  - **공통/수시/조립/점검 4 분할 패턴** — 이미 코드 (LAYER A) 가 있는 워크스페이스에서 사람·인계 친화성을 높이려면 (a) 코드 → 마크다운 view (산출물 A·B), (b) 변형 견본 (산출물 C), (c) 사람·자동 점검 (산출물 D·E·F) 의 4 분할이 효율적. 단일 마크다운으로 모두 다루면 14,000 줄 monolith 가 되고 부분 갱신·인계가 불가능.
+  - **신규 도메인 추가 시 코드 vs 본문 분리 갱신** — 코드 (library.js DOMAIN_PROFILE) 갱신은 별 단계, 본문 (사전 §2.2 + 가상안) 먼저. 코드 갱신은 Cloudflare 재배포·테스트가 동반되므로 본문 검증 후 진행해야 단일 변경 단위 원칙 위반 위험 회피.
+  - **lint 의 cross-cutting 허용 임계** — 도메인 cross 검사를 strict (0 단어) 로 두면 RAG·MLOps·HITL 등 정상 cross-cutting 어휘에 false positive 폭증. 3 단어 허용 (4 단어부터 fail) 이 자연 균형. 단 도메인 무결성이 중요한 사업 (예: 단일 도메인 대기업 R&D) 은 `--strict-cross` 옵션 사용.
+  - **deterministic 출력 검증 = 자동 lint × 사람 cross 매트릭스 2 단** — 자동 lint 는 슬롯·헤더·placeholder 등 기계 검증 가능 부분 6 축 / 사람 매트릭스 (10 도메인 × 30 항목) 는 의미·문체·수치 권장 범위. 둘이 보완 관계 — 하나로 통합 불가능.
+  - **신규 도메인 어휘 발굴 시 distinctive vocabulary 5 개** — DOMAIN_VOCAB (lint 의 cross 검사 사전) 는 도메인당 5 개의 매우 distinctive 한 단어만 등록. 일반 단어 (예: "온도", "압력") 는 false positive 의 주범. 도메인 고유 약어·설비명·상표명 (1ZHM·QUALICOAT·DNV 등) 우선.
+- **다음 단계**:
+  - **library.js DOMAIN_PROFILE 신규 5 도메인 추가 + 단위 테스트** (별 세션, Cloudflare 재배포 동반).
+  - **시나리오_카탈로그.md 정식 등록** — 신규 25 시나리오 ID (SCN-CAS-NN·SCN-HEA-NN·SCN-PLT-NN·SCN-SHP-NN·SCN-ASM-NN). 카탈로그 §1·부록 D 동시 갱신.
+  - **LAYER B 품질 측정** (작업로그 #77 의 다음 단계와 합류) — 본 lint 의 통계가 LAYER B 의 입력 metric 으로 활용. Gemini 출력이 LAYER A 본문 구조를 유지하는지 lint 동일 기준으로 검증.
+  - **점검 체크리스트 매트릭스 사람 채움** — 본 세션은 매트릭스 양식만 작성 (셀 비어 있음). 다음 세션 또는 사용자가 ✅/⚠/❌ 채움 → ❌ 0 까지 보정 루프.
+  - **방법론 추출 등록** (섹션 4) — 본 세션의 4 분할 패턴·신규 도메인 추가법·lint cross-cutting 임계는 다른 코드 + 콘텐츠 결합 워크스페이스에서 재사용 가치 큼.
+
+---
+
+#### 엔트리 #79 — 자동생성기 보완 구현: 10 도메인 코드 반영 + source-free audit + local CLI (2026-05-13)
+
+- **맥락**: 엔트리 #78 후속 인계 파일 `인계_자동생성기_보완_프롬프트.md` 는 자동생성기 잔여 갭 4 개를 명시했다. (1) 신규 5 도메인 CAS·HEA·PLT·SHP·ASM 코드 반영, (2) scale fallback 보다 사용자 명시 정량 슬롯 우선, (3) local CLI 부재, (4) Worker/UI 자동 audit 부재. 사용자는 처음에 "구현 상세 계획 세우고 진행" 을 요청했고, plan 확정 후 "출처 ID 다 제외" 로 정책을 재결정했다. 따라서 본 엔트리의 핵심 정책은 **제출·복사 표면의 source-free** 이다.
+- **사용자 요청 (원문)**: *"인계_자동생성기_보완_프롬프트.md, 해당 파일 참고해서 구현 상세 계획 세우고 진행해 줘"* → plan 수립 → 사용자 정정 *"아니야 출처 ID 다 제외 해"* → 최종 지시 *"Implement the plan."*
+- **AI 수행**:
+  1. `worker/src/library.js` 보강 — 10 도메인 `DOMAIN_PROFILE` 의 품질 목표에 남아 있던 `[수치]`·`[%]` 류 placeholder 를 구체값으로 정리하고, `QUANT_SLOT_KEYS`·`pickProfileSlots()`·`step2_business` alias 처리를 추가했다. 병합 순서는 `DEFAULTS → scaleProfile → profileSlots` 로 확정해 `total_budget_eok: "50"` 같은 사용자 명시값이 `대기업 → 22` fallback 에 덮이지 않는다.
+  2. `worker/src/audit.js` 신설 — `tools/lint_plan.py` 의 6 축 검사를 Worker 런타임 JS 로 이식했다. 축은 slot·placeholder·sectionHeaders·balance·cross·meta 이며, `runAudit(finalMd, domain)` 은 `{ passed, checks, summary }` 구조를 반환한다.
+  3. `worker/src/agent.js` 변경 — LLM 이 `> [출처: TEST-*]` 를 반환해도 `section_done` 전에 제거하고, `final_md`·`audit_md`·`complete.audit` 어디에도 `BLK-*`·`TEST-*`·`[출처:]` 가 노출되지 않도록 정리했다. compact context prompt 는 유지하되 `GUIDE-*` id line 은 제외하고 preview 중심으로 전달한다.
+  4. `/agent` UI 변경 — `docs/agent.md` 업종 dropdown 을 10 도메인으로 확장하고, `docs/javascripts/agent-ui.js` 가 `complete.audit` 6 축 matrix 를 렌더링·복원하도록 추가했다. `docs/stylesheets/agent.css` 에 audit table PASS/FAIL 스타일을 추가했다.
+  5. `tools/generate_plan.py` 신설 — Python 표준 라이브러리만으로 `라이브러리_공통문구_9섹션.md` + `사전_슬롯과_도메인_10종.md` 를 파싱해 9 섹션 paste-ready Markdown 을 생성한다. 기본적으로 `tools/lint_plan.py` 를 이어 실행한다.
+  6. 테스트 보강 — `worker/test/library.test.js` (10 도메인 × 3 규모 + override), `worker/test/audit.test.js` (6 축 PASS/FAIL), `tools/test_generate_plan.py` (CLI smoke + lint) 를 추가하고, `worker/test/index.test.js` 의 기존 BLK 기대값을 source-free 정책으로 수정했다.
+  7. 문서/방법론 갱신 — `사전_슬롯과_도메인_10종.md` 의 품질 목표 placeholder 를 코드와 동기화하고, `방법론_총론.md` §3 에 4.37~4.40 을 보강했다. 작업로그 §2.7 파일 목록도 신규 파일과 line count 기준으로 갱신했다.
+- **판단 근거**:
+  - 사용자가 "바로 붙여넣기 할 수 있는 형태" 를 반복 요구했으므로, 감사 가능성보다 제출 표면의 청결성이 우선이다. 내부 출처 ID 는 작성자에게도 산만한 신호가 되므로 audit 리포트에서도 제거하고, 품질 축만 보여주는 구조화 matrix 로 대체했다.
+  - `buildSlots()` 의 명시값 우선은 사용자가 UI/CLI 에서 이미 수치를 알고 입력하는 경우 가장 높은 신뢰도를 가져야 하기 때문이다. scale profile 은 권장 fallback 이지 override 권한이 없다.
+  - Worker audit 과 Python lint 는 같은 6 축 vocabulary·placeholder 기준을 공유하되, Worker 는 SSE complete payload 용 구조화 JSON 을 반환하고 Python 은 파일·디렉터리 검증용 CLI 를 유지한다. 실행 환경이 다르므로 코드 공유 대신 기준 동기화가 현실적이다.
+  - `tools/generate_plan.py` 는 JS Worker 코드를 직접 호출하지 않고 Markdown view 를 파싱한다. 로컬 문서 생성·배포 Worker 장애 시에도 같은 LAYER A 자산으로 산출물을 만들 수 있어 운영 복원력이 높다.
+- **검증 결과**:
+  - `node --check worker/src/agent.js` — PASS
+  - `node --check worker/src/library.js` — PASS
+  - `node --check worker/src/audit.js` — PASS
+  - `node --check docs/javascripts/agent-ui.js` — PASS
+  - `cd worker && npm test` — PASS, 59 tests / 6 suites / 0 fail
+  - `python3 tools/test_generate_plan.py` — PASS
+  - `mkdocs build --strict` — global command 는 PATH 에 없어 실패 (`command not found`), `python3 -m mkdocs` 도 module 없음. `.venv/bin/mkdocs build --strict` 는 PASS, Documentation built 약 3 초. 기존 `blocks.md` anchor 관련 INFO 만 출력되고 strict 실패로 승격되지 않음.
+- **산출물**:
+  - 신규: `worker/src/audit.js`, `worker/test/audit.test.js`, `tools/generate_plan.py`, `tools/test_generate_plan.py`
+  - 갱신: `worker/src/library.js`, `worker/src/agent.js`, `worker/test/index.test.js`, `worker/test/library.test.js`, `docs/agent.md`, `docs/javascripts/agent-ui.js`, `docs/stylesheets/agent.css`, `tools/lint_plan.py`, `사전_슬롯과_도메인_10종.md`, `방법론_총론.md`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - **source-free audit 패턴** — 제출 본문뿐 아니라 검토 리포트와 UI matrix 에서도 내부 출처 ID 를 제거해야 사용자 기대와 일치한다. 감사 정보는 "어디서 왔는가" 가 아니라 "품질 축이 통과했는가" 로 구조화한다.
+  - **fallback 은 신뢰도 최하위 계층** — DEFAULTS·scale profile·domain profile 은 모두 보조값이며, 사용자 입력이 있으면 항상 최우선이다. 이 우선순위는 Worker·CLI 양쪽에서 동일해야 한다.
+  - **Markdown view 기반 CLI** — JS 코드를 파싱하지 않아도, 코드 권위에서 derive 된 Markdown view 를 안정적으로 유지하면 로컬 CLI 가 독립 운영 경로가 된다. 단 view 와 코드의 동기화 책임이 생긴다.
+  - **audit 이 fixture 를 강제한다** — `[수치]` 같은 잔여 placeholder 가 audit 에서 fail 하도록 만들면, 도메인 사전도 실제 완성값 중심으로 압박된다. "나중에 채움" 문구를 줄이는 데 효과적이다.
+- **다음 단계**:
+  - Cloudflare Worker/Pages 재배포는 본 엔트리에서 실행하지 않았다. 테스트 통과 상태이므로 다음 배포 턴에서 Worker 배포 + Pages direct deploy + 공개 `/agent/` 확인을 수행하면 된다.
+  - `시나리오_카탈로그.md` 신규 25 시나리오 정식 등록은 여전히 별도 작업이다.
+  - LAYER B 실제 Gemini 품질 측정은 source-free audit 이 붙은 뒤 다시 진행해야 한다. 동일 profile 10 도메인 × deterministic/llm 비교가 다음 기준이다.
+
 ---
 
 ### 🔄 다음 세션 인계 — Phase E18 (YCP 사업계획서 작성 지원, 진행 중) ⭐ 우선
@@ -3423,6 +3553,12 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 | 4.32 | 다년 R&D 단계+연차 이중 구조 (분기 5 차원) | 단계 (TRL 분기) + 연차 (시간 분기) 이중 강제, 5 차원 (목표·예산·참여·위탁·TRL) 단계별 분리 |
 | 4.33 | filled vs blank 양식 분리 기준 (양식 PDF 활용 정책) | 양식 PDF 가 filled 사례일 때 양식 추출만 reference, 본문·데이터 verbatim 차용 금지 |
 | 4.34 | 한국어 정보 밀도 압축 효과 (청사진 분량 vs 실제 분량) | 청사진 × 0.5 ≈ 실제 한국어 분량 (문어체·표·다이어그램·citation-driven 결합) |
+| 4.35 | 골든 샘플 derive 형 in-code 라이브러리 | 검증된 prose 자산을 in-code 템플릿 + slot 치환으로 derive — 원본 수정 없이 generator 출력 품질 보장 |
+| 4.36 | LAYER A·B·C 3 층 분리 모델 | 자동 생성을 (A) 정적 표준문구 + (B) LLM 슬롯 보강 + (C) 문맥 통합으로 분리, 비용·품질·재사용성 독립 최적화 |
+| 4.37 | 공통/수시/조립/점검 4 분할 자산화 패턴 | 코드 자산을 (a) 마크다운 view + (b) 슬롯 사전 + (c) 변형 견본 + (d) 자동 lint × 사람 cross 매트릭스의 4 분할로 자산화, 14k 줄 monolith 회피 (엔트리 #78) |
+| 4.38 | 신규 도메인 코드 vs 본문 분리 갱신법 | DOMAIN_PROFILE 코드 갱신은 별 단계, 본문 (사전 + 변형안) 먼저 검증. 코드는 Cloudflare 재배포 동반이므로 단일 변경 단위 분리 (엔트리 #78) |
+| 4.39 | lint cross-cutting 허용 임계 (3 단어) | 도메인 cross 검사 strict (0 단어) = false positive 폭증, 4 단어 fail 임계가 자연 균형. RAG·MLOps·HITL 등 cross-cutting 어휘 정상 통과 (엔트리 #78) |
+| 4.40 | 제출 표면 source-free / 내부 구조화 audit | 최종 본문·검토 리포트·UI matrix 에 `BLK-*`·`TEST-*`·`[출처:]` 미노출, 품질 정보만 구조화 audit 로 분리 (엔트리 #79) |
 
 **상세 본문**: `/Volumes/EXDATA/temp_git/ai-docs-for-biz/방법론_총론.md` §3 의 동일 번호 항목 참조.
 
@@ -3516,6 +3652,29 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
 - 모든 턴: 본 로그 엔트리 추가.
 - 분기: `지원사업_공고_스냅샷_{YYYY}.md` 갱신.
 - 파일 구조 변경 시: CLAUDE.md 파일 목록·본 로그 섹션 2.7 동기화.
+
+### 5.7 4 분할 자산 (엔트리 #78) 후속 작업
+
+#### G1. library.js DOMAIN_PROFILE 신규 5 도메인 코드 반영
+- 대상: `worker/src/library.js` line 41~112 의 `DOMAIN_PROFILE` 객체에 CAS·HEA·PLT·SHP·ASM 5 도메인 추가.
+- 입력 자료: `사전_슬롯과_도메인_10종.md` §2.2 (12 항목 매트릭스).
+- 동반: 단위 테스트 추가 (`worker/test/library.test.js`) + Cloudflare Worker 재배포 + Pages UI 의 도메인 dropdown 갱신.
+- 완료 기준: composeFromLibrary('§1', buildSlots({industry:'CAS', ...})) 가 가상안 06_CAS_대기업.md §1 과 동일 출력.
+
+#### G2. 시나리오_카탈로그.md 신규 25 시나리오 정식 등록
+- 대상: `시나리오_카탈로그.md` §1 목차 + 신규 5 도메인 절 (1.8 SCN-CAS · 1.9 SCN-HEA · 1.10 SCN-PLT · 1.11 SCN-SHP · 1.12 SCN-ASM) + 부록 D 지원사업 매칭 갱신.
+- 입력 자료: `사전_슬롯과_도메인_10종.md` §3.1~§3.5 (각 도메인 5 시나리오).
+- 완료 기준: lint 의 도메인 cross 사전 (`DOMAIN_VOCAB`) 과 카탈로그 ID 가 1:1 정합.
+
+#### G3. 점검 체크리스트 매트릭스 사람 채움
+- 대상: `점검_체크리스트_가상10종.md` §1 의 30 항목 × 10 도메인 = 300 셀.
+- 절차: 각 셀에 ✅/⚠/❌ 채움 → ❌ 0 까지 보정 → lint 재실행.
+- 완료 기준: ❌ 0 + lint 10 / 10 PASS 유지.
+
+#### G4. LAYER B 품질 측정 (엔트리 #77 §"다음 단계" 와 합류)
+- 대상: Cloudflare Worker `/api/agent/generate` 의 LLM path 출력을 `tools/lint_plan.py` 동일 기준으로 검증.
+- 동반: lint 의 출력 JSON 을 LAYER B metric DB 에 적재하는 파이프라인 (선택).
+- 완료 기준: 10 도메인 × LLM 가다듬기 출력 모두 lint 6 축 PASS.
 
 ---
 

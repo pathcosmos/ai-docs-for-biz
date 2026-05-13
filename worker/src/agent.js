@@ -1,16 +1,17 @@
 import { callGeminiText, geminiModel, requireGeminiEnv } from './gemini.js';
+import { runAudit } from './audit.js';
 import { buildSlots, composeFromLibrary, libraryHasSection } from './library.js';
 
 const SECTION_DEFS = [
-  ['§1', '현황', 'BLK-COMPANY-01', '회사 프로필과 기존 시스템 현황을 정리한다.', ['GUIDE-COMPANY-PROFILE-§3']],
-  ['§2', '문제인식', 'BLK-PROB-01', '운영·데이터·지식·제어 관점의 AS-IS 문제를 정리한다.', ['GUIDE-PROBLEM-MATRIX-§3']],
-  ['§3', '개선방향', 'BLK-GOAL-01', '핵심 KPI와 단계별 개선 목표를 제시한다.', ['GUIDE-KPI-BREAKDOWN-§3']],
-  ['§4', '수행방향', 'BLK-EXEC-01·02', 'phase 로드맵, 역할, 예산, 위험 대응을 정리한다.', ['GUIDE-EXECUTION-ROADMAP-§3']],
-  ['§5', 'AI 적용 포인트', 'BLK-APPLIC-01', '선정 시나리오, ROI, 시너지 구조를 정리한다.', ['GUIDE-SCENARIO-ROI-§3']],
-  ['§6', '데이터·변수', 'BLK-DATA-01', '핸들링 데이터, X/y, 전처리, 분할, 거버넌스를 명세한다.', ['GUIDE-DATA-SPEC-§3']],
-  ['§7', '모델·학습', 'BLK-MODEL-01', '모델 후보, 학습 전략, 검증 지표, 리스크를 정리한다.', ['GUIDE-MODEL-TRAINING-§3']],
-  ['§8', '적용·배포', 'BLK-TRAIN-01·02', '배포 아키텍처, 운영 통합, HITL, 교육을 정리한다.', ['GUIDE-DEPLOYMENT-PLAN-§3']],
-  ['§9', 'MLOps loop', 'BLK-MLOPS-01·02', '모니터링, 드리프트, 재학습, 운영 리듬을 정리한다.', ['GUIDE-MLOPS-RITUAL-§3']],
+  ['§1', '현황', '회사 프로필과 기존 시스템 현황을 정리한다.', ['GUIDE-COMPANY-PROFILE-§3']],
+  ['§2', '문제인식', '운영·데이터·지식·제어 관점의 AS-IS 문제를 정리한다.', ['GUIDE-PROBLEM-MATRIX-§3']],
+  ['§3', '개선방향', '핵심 KPI와 단계별 개선 목표를 제시한다.', ['GUIDE-KPI-BREAKDOWN-§3']],
+  ['§4', '수행방향', 'phase 로드맵, 역할, 예산, 위험 대응을 정리한다.', ['GUIDE-EXECUTION-ROADMAP-§3']],
+  ['§5', 'AI 적용 포인트', '선정 시나리오, ROI, 시너지 구조를 정리한다.', ['GUIDE-SCENARIO-ROI-§3']],
+  ['§6', '데이터·변수', '핸들링 데이터, X/y, 전처리, 분할, 거버넌스를 명세한다.', ['GUIDE-DATA-SPEC-§3']],
+  ['§7', '모델·학습', '모델 후보, 학습 전략, 검증 지표, 리스크를 정리한다.', ['GUIDE-MODEL-TRAINING-§3']],
+  ['§8', '적용·배포', '배포 아키텍처, 운영 통합, HITL, 교육을 정리한다.', ['GUIDE-DEPLOYMENT-PLAN-§3']],
+  ['§9', 'MLOps loop', '모니터링, 드리프트, 재학습, 운영 리듬을 정리한다.', ['GUIDE-MLOPS-RITUAL-§3']],
 ];
 
 const DOMAIN_BY_INDUSTRY = {
@@ -19,6 +20,11 @@ const DOMAIN_BY_INDUSTRY = {
   RUB: { package: 'pkg4', scenarios: ['SCN-RUB-01', 'SCN-RUB-05', 'SCN-MLO-03'] },
   UTL: { package: 'pkg6', scenarios: ['SCN-UTL-01', 'SCN-UTL-02', 'SCN-SAF-01'] },
   LLM: { package: 'pkg3', scenarios: ['SCN-LLM-01', 'SCN-LLM-02', 'SCN-STL-08'] },
+  CAS: { package: 'pkg1', scenarios: ['SCN-CAS-01', 'SCN-CAS-02', 'SCN-CAS-04', 'SCN-MLO-01'] },
+  HEA: { package: 'pkg3', scenarios: ['SCN-HEA-01', 'SCN-HEA-02', 'SCN-HEA-04', 'SCN-MLO-02'] },
+  PLT: { package: 'pkg5', scenarios: ['SCN-PLT-01', 'SCN-PLT-02', 'SCN-PLT-03', 'SCN-PLT-05'] },
+  SHP: { package: 'pkg1', scenarios: ['SCN-SHP-01', 'SCN-SHP-02', 'SCN-SHP-04', 'SCN-MLO-01'] },
+  ASM: { package: 'pkg5', scenarios: ['SCN-ASM-01', 'SCN-ASM-02', 'SCN-ASM-03', 'SCN-ASM-04'] },
 };
 
 function profilePart(profile, key) {
@@ -74,14 +80,13 @@ function makePlan(profile) {
 
 function makeOutline(plan) {
   return {
-    sections: SECTION_DEFS.map(([id, title, guide, intent, contextIds], index) => ({
+    sections: SECTION_DEFS.map(([id, title, intent, contextIds], index) => ({
       index: index + 1,
       id,
       title,
-      guide,
       intent,
       context_ids: contextIds,
-      blocks_to_cite: [guide],
+      blocks_to_cite: [],
       ascii_slots: [],
     })),
   };
@@ -110,13 +115,12 @@ function compactTemplateContext(templateContext, outlineSection) {
   const entries = (outlineSection.context_ids || [])
     .map(id => [id, templateContext?.[id]])
     .filter(([, entry]) => entry && typeof entry === 'object')
-    .map(([id, entry]) => {
+    .map(([, entry]) => {
       const title = typeof entry.title === 'string' ? entry.title.slice(0, 160) : '';
       const section = typeof entry.section === 'string' ? entry.section.slice(0, 80) : '';
       const tags = Array.isArray(entry.tags) ? entry.tags.slice(0, 8).join(', ') : '';
       const preview = typeof entry.preview === 'string' ? entry.preview.slice(0, 900) : '';
       return [
-        `- id: ${id}`,
         title ? `  title: ${title}` : '',
         section ? `  section: ${section}` : '',
         tags ? `  tags: ${tags}` : '',
@@ -154,6 +158,9 @@ function buildSectionPrompt(profile, outlineSection, plan, templateContext = {})
 7. 인용 출처 표기 (\`> [출처: ...]\`) 는 절대 추가하지 않습니다 (별도 검토 리포트로 분리됨).
 8. 다른 섹션 제목은 만들지 않습니다.
 
+【참고 생성 가이드 요약】
+${compactTemplateContext(templateContext, outlineSection)}
+
 【LAYER A 라이브러리 본문 (보강 base)】
 ${libraryBase}
 
@@ -180,6 +187,9 @@ ${compactProfileJson(profile)}
 5. 인용 출처 표기 (\`> [출처: ...]\`) 는 절대 추가하지 않습니다.
 6. 다른 섹션 제목은 만들지 않습니다.
 
+【참고 생성 가이드 요약】
+${compactTemplateContext(templateContext, outlineSection)}
+
 【사용자 입력 JSON】
 ${compactProfileJson(profile)}
 
@@ -198,7 +208,7 @@ function deterministicSectionResult(profile, outlineSection, plan, startedAt = D
     section: outlineSection.id,
     title: outlineSection.title,
     markdown: deterministicSectionMarkdown(profile, outlineSection, plan),
-    citations: outlineSection.blocks_to_cite,
+    citations: [],
     placeholders_unfilled: [],
     duration_ms: Date.now() - startedAt,
     source: 'deterministic',
@@ -224,8 +234,8 @@ async function llmSectionResult(profile, outlineSection, plan, env, fetchImpl, t
     return {
       section: outlineSection.id,
       title: outlineSection.title,
-      markdown: normalizeSectionMarkdown(gemini.text, outlineSection),
-      citations: outlineSection.blocks_to_cite,
+      markdown: cleanFinalSectionMarkdown(normalizeSectionMarkdown(gemini.text, outlineSection)),
+      citations: [],
       placeholders_unfilled: [],
       duration_ms: Date.now() - startedAt,
       source: 'llm',
@@ -293,19 +303,11 @@ function cleanFinalSectionMarkdown(markdown) {
   return markdown
     .split('\n')
     .filter(line => !line.trim().startsWith('> [출처:'))
+    .filter(line => !/\b(?:BLK|TEST)-[A-Z0-9_.·-]+/.test(line))
     .filter(line => !line.includes('본 1차 MVP 초안은'))
     .join('\n')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
-}
-
-function extractSourceMarkers(markdown) {
-  return markdown
-    .split('\n')
-    .map(line => line.trim())
-    .filter(line => line.startsWith('> [출처:') && line.endsWith(']'))
-    .map(line => line.replace(/^> \[출처:\s*/, '').replace(/\]$/, '').trim())
-    .filter(Boolean);
 }
 
 function tableCell(value) {
@@ -319,7 +321,21 @@ function compileFinalMarkdown(profile, sections) {
   return `${title}\n\n${body}\n`;
 }
 
-function compileAuditMarkdown(profile, plan, sections, validation, generator, usage, generatedAt) {
+function auditMark(pass) {
+  return pass ? 'PASS' : 'FAIL';
+}
+
+function auditDetail(key, check) {
+  if (key === 'slot') return check.count > 0 ? `잔류 슬롯 ${check.unique.join(', ')}` : '잔류 슬롯 없음';
+  if (key === 'placeholder') return check.count > 0 ? `잔류 표기 ${check.unique.join(', ')}` : '잔류 표기 없음';
+  if (key === 'sectionHeaders') return check.missing.length > 0 ? `누락 ${check.missing.join(', ')}` : '§1~§9 확인';
+  if (key === 'balance') return `balance ratio ${check.balance_ratio}`;
+  if (key === 'cross') return `cross vocab ${check.total_leaks || 0}`;
+  if (key === 'meta') return check.count > 0 ? `메타 흔적 ${check.samples.join(', ')}` : '메타 흔적 없음';
+  return '-';
+}
+
+function compileAuditMarkdown(profile, plan, sections, validation, generator, usage, generatedAt, audit) {
   const company = companyName(profile);
   const lines = [
     '# 생성 검토 리포트',
@@ -336,16 +352,22 @@ function compileAuditMarkdown(profile, plan, sections, validation, generator, us
     `- llm_calls: ${usage.total_calls}`,
     `- total_tokens: ${usage.total_tokens}`,
     '',
-    '## 섹션별 출처·상태',
+    '## 6축 자동 검증',
     '',
-    '| 섹션 | 생성 방식 | 출처 | fallback reason |',
-    '|---|---|---|---|',
+    '| 축 | 결과 | 상세 |',
+    '|---|---|---|',
+    ...Object.entries(audit.checks).map(([key, check]) => (
+      `| ${tableCell(key)} | ${auditMark(check.pass)} | ${tableCell(auditDetail(key, check))} |`
+    )),
+    '',
+    '## 섹션별 생성 상태',
+    '',
+    '| 섹션 | 생성 방식 | fallback reason |',
+    '|---|---|---|',
   ].join('\n');
-  const rows = sections.map(section => {
-    const sourceMarkers = extractSourceMarkers(section.markdown);
-    const citations = sourceMarkers.length > 0 ? sourceMarkers : section.citations;
-    return `| ${tableCell(`${section.section} ${section.title}`)} | ${tableCell(section.source)} | ${tableCell(citations.join(', '))} | ${tableCell(section.fallback_reason)} |`;
-  });
+  const rows = sections.map(section => (
+    `| ${tableCell(`${section.section} ${section.title}`)} | ${tableCell(section.source)} | ${tableCell(section.fallback_reason)} |`
+  ));
   return `${lines}\n${rows.join('\n')}\n`;
 }
 
@@ -424,10 +446,12 @@ export async function handleAgentGenerate(request, env, fetchImpl, origin, corsH
         const generatedAt = new Date().toISOString();
         const usage = summarizeUsage(sections, env);
         const finalMd = compileFinalMarkdown(profile, sections);
-        const auditMd = compileAuditMarkdown(profile, plan, sections, validation, metaMode, usage, generatedAt);
+        const audit = runAudit(finalMd, plan.domain);
+        const auditMd = compileAuditMarkdown(profile, plan, sections, validation, metaMode, usage, generatedAt, audit);
         send('complete', {
           final_md: finalMd,
           audit_md: auditMd,
+          audit,
           meta: {
             generated_at: generatedAt,
             model: geminiModel(env),

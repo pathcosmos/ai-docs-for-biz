@@ -195,6 +195,35 @@
   min-height: 12rem;
 }
 
+.agent-audit-matrix {
+  margin-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.agent-audit-matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.agent-audit-matrix th,
+.agent-audit-matrix td {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.35rem 0.45rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.agent-audit-matrix tr[data-pass="true"] td:nth-child(2) {
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+.agent-audit-matrix tr[data-pass="false"] td:nth-child(2) {
+  color: #b71c1c;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 900px) {
   .agent-layout,
   .agent-fields {
