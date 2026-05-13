@@ -30,6 +30,21 @@
     'rag_latency_s',
     'service_sla_pct',
   ];
+  const PLACEHOLDER_DEFAULT_FIELDS = new Set([
+    'step1_company.company',
+    'step1_company.process',
+    'step2_business.duration_months',
+    'step2_business.total_budget',
+    'step2_business.gov_pct',
+  ]);
+  const CATEGORY_LABELS = {
+    track: '트랙',
+    guide: '가이드',
+    scenario: '시나리오',
+    module: '모듈',
+    package: '패키지',
+    block: '블록',
+  };
 
   const DOMAINS = [
     { id: 'STL', label: '철강·냉연', process: '냉간압연·연속소둔', scale: '중견' },
@@ -118,6 +133,53 @@
     };
   }
 
+  function trimValue(value) {
+    return value == null ? '' : String(value).trim();
+  }
+
+  function assignPath(target, path, value) {
+    const parts = path.split('.');
+    let cursor = target;
+    parts.forEach((part, index) => {
+      if (index === parts.length - 1) {
+        cursor[part] = value;
+        return;
+      }
+      cursor[part] = cursor[part] || {};
+      cursor = cursor[part];
+    });
+  }
+
+  function fieldSlotValue(field) {
+    const explicitValue = trimValue(field && field.value);
+    if (explicitValue) return explicitValue;
+    if (field && PLACEHOLDER_DEFAULT_FIELDS.has(field.name)) return trimValue(field.placeholder);
+    return '';
+  }
+
+  function collectSlotsFromFields(fields, currentDomain) {
+    const slots = {
+      step1_company: {},
+      step2_business: {},
+      quant: {},
+    };
+    Array.from(fields || []).forEach(field => {
+      if (!field || !field.name) return;
+      const value = fieldSlotValue(field);
+      if (!value) return;
+      if (field.name.startsWith('quant.')) {
+        slots.quant[field.name.replace('quant.', '')] = value;
+        return;
+      }
+      assignPath(slots, field.name, value);
+    });
+    if (!slots.step1_company.industry && currentDomain) slots.step1_company.industry = currentDomain;
+    return {
+      domain: slots.step1_company.industry || currentDomain || '',
+      slots,
+    };
+  }
+
   function restoreState(storage) {
     const target = storage || (typeof localStorage !== 'undefined' ? localStorage : null);
     if (!target) return defaultState();
@@ -173,13 +235,29 @@
     return item;
   }
 
+  function categoryLabel(value) {
+    return CATEGORY_LABELS[value] || value || '블록';
+  }
+
   function scenarioDomain(id) {
     const match = String(id || '').match(/^SCN-([A-Z]+)-/);
     return match ? match[1] : '';
   }
 
+  function stripInternalIds(value) {
+    return text(value)
+      .replace(/\b(?:SCN|BLK|TEST)-[A-Z0-9_.§-]+/g, '')
+      .replace(/\b(?:GUIDE|MODULE|PKG|TRACK)-[A-Z0-9_.§-]+/g, '')
+      .replace(/\s{2,}/g, ' ')
+      .replace(/^[\s:·—-]+|[\s:·—-]+$/g, '')
+      .trim();
+  }
+
   function scenarioTitle(item) {
-    return item.title || item.name || item.id;
+    const cleanTitle = stripInternalIds(item && (item.title || item.name));
+    if (cleanTitle) return cleanTitle;
+    const card = (item && item.card) || {};
+    return stripInternalIds(card['AI 해결'] || card['대상 공정']) || '시나리오';
   }
 
   function scenarioCardsForDomain(scenarios, domain) {
@@ -192,7 +270,9 @@
 
   function blockTitle(id, index) {
     const entry = index && index[id];
-    return entry && entry.title ? entry.title : id;
+    const cleanTitle = stripInternalIds(entry && entry.title);
+    if (cleanTitle) return cleanTitle;
+    return entry && entry.category ? `${categoryLabel(entry.category)} 블록` : '선택 블록';
   }
 
   function recommendedBlockIds(state, scenarioMap) {
@@ -388,7 +468,7 @@
         const body = document.createElement('span');
         body.className = 'assemble-scenario-body';
         const title = document.createElement('strong');
-        title.textContent = `${id} ${scenarioTitle(item)}`;
+        title.textContent = scenarioTitle(item);
         const meta = document.createElement('span');
         const cardData = item.card || {};
         meta.textContent = [cardData['대상 공정'], cardData['트랙 매핑'], cardData['적합 규모']]
@@ -462,7 +542,7 @@
           const title = document.createElement('button');
           title.type = 'button';
           title.className = 'assemble-block-title';
-          title.textContent = item.title || id;
+          title.textContent = blockTitle(id, templatesIndex);
           title.addEventListener('click', () => {
             state.activeBlock = id;
             saveState();
@@ -470,10 +550,10 @@
           });
           const meta = document.createElement('div');
           meta.className = 'assemble-block-meta';
-          meta.append(badge(item.category || 'block'), badge(normalizeSection(item.section) || '미배치'));
+          meta.append(badge(categoryLabel(item.category || 'block')), badge(normalizeSection(item.section) || '미배치'));
           if (favorites.includes(id)) meta.append(badge('즐겨찾기'));
           const preview = document.createElement('p');
-          preview.textContent = item.preview || '';
+          preview.textContent = stripInternalIds(item.preview || '');
           const actions = document.createElement('div');
           actions.className = 'assemble-inline-actions';
           actions.append(
@@ -540,19 +620,6 @@
       renderSections();
     }
 
-    function assignPath(target, path, value) {
-      const parts = path.split('.');
-      let cursor = target;
-      parts.forEach((part, index) => {
-        if (index === parts.length - 1) {
-          cursor[part] = value;
-          return;
-        }
-        cursor[part] = cursor[part] || {};
-        cursor = cursor[part];
-      });
-    }
-
     function renderQuantFields() {
       if (!els.quant || els.quant.dataset.rendered === 'true') return;
       els.quant.dataset.rendered = 'true';
@@ -588,23 +655,10 @@
     }
 
     function collectFormSlots() {
-      const slots = {
-        step1_company: {},
-        step2_business: {},
-      };
-      const quant = {};
-      Array.from(els.form.querySelectorAll('[name]')).forEach(field => {
-        const value = field.value.trim();
-        if (!value) return;
-        if (field.name.startsWith('quant.')) {
-          quant[field.name.replace('quant.', '')] = value;
-          return;
-        }
-        assignPath(slots, field.name, value);
-      });
-      state.domain = slots.step1_company.industry || state.domain;
-      state.slots = { ...slots, quant };
-      Object.assign(state.slots, quant);
+      const collected = collectSlotsFromFields(els.form ? els.form.querySelectorAll('[name]') : [], state.domain);
+      state.domain = collected.domain || state.domain;
+      state.slots = collected.slots;
+      Object.assign(state.slots, collected.slots.quant);
       saveState();
     }
 
@@ -758,8 +812,12 @@
     normalizeSection,
     assignBlocksToSections,
     buildPayload,
+    collectSlotsFromFields,
     restoreState,
     loadFavorites,
+    stripInternalIds,
+    scenarioTitle,
+    blockTitle,
   };
 
   if (typeof document$ !== 'undefined' && document$ && typeof document$.subscribe === 'function') {

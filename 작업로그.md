@@ -166,11 +166,11 @@
 | `hooks/build_scenario_index.py` | MkDocs pre-build hook — `시나리오_카탈로그.md` 40 정식 카드 + `사전_슬롯과_도메인_10종.md` §3 후보 25 행을 같은 8 필드 scenario index 로 정규화. 65 미만이면 빌드 실패. | 신설 (엔트리 #80) | 149 |
 | `hooks/build_scenario_map.py` | MkDocs pre-build hook — `scenario_index.json` + `templates_index.json` 으로 SCN별 추천 블록 맵 생성. 도메인·트랙·category·tag·section relevance score + core guide fallback. | 신설 (엔트리 #80) | 207 |
 | `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리, 엔트리 #79 에서 10 도메인 dropdown + audit matrix 영역 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) + 10 도메인/audit matrix (엔트리 #79) | 156 |
-| `docs/assemble.md` | `/assemble/` 4 단계 조립형 작성기 페이지 — 도메인·시나리오·블록/§ 배치·회사/사업 입력 후 Worker `/api/assemble` 로 9 섹션 본문 생성. 엔트리 #86 에서 MkDocs raw HTML island 를 깨던 `markdown="1"` 제거. | 신설 (엔트리 #82·#83) + raw HTML 렌더 보정 (엔트리 #86) | 130 |
+| `docs/assemble.md` | `/assemble/` 4 단계 조립형 작성기 페이지 — 도메인·시나리오·블록/§ 배치·회사/사업 입력 후 Worker `/api/assemble` 로 9 섹션 본문 생성. 엔트리 #86 에서 MkDocs raw HTML island 를 깨던 `markdown="1"` 제거, 엔트리 #87 에서 stepper 구조와 SVG 크기 안전장치 보강. | 신설 (엔트리 #82·#83) + raw HTML 렌더 보정 (엔트리 #86) + layout hardening (엔트리 #87) | 132 |
 | `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가, 엔트리 #79 에서 `complete.audit` 6 축 matrix 렌더링과 localStorage 복원을 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) + structured audit matrix (엔트리 #79) | 404 |
-| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM 누락 시 명시 오류 상태로 중단하는 guard 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) | 774 |
+| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM guard, 엔트리 #87 에서 내부 ID 표시 제거와 placeholder default slot 수집을 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) + display/default 보정 (엔트리 #87) | 832 |
 | `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이, 엔트리 #79 에서 6 축 audit matrix table 스타일 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) + audit matrix (엔트리 #79) | 236 |
-| `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. 엔트리 #86 에서 `/assemble` 전용 full-width shell, 상단 tab scale, overflow resilience 를 보강. | 신설 (엔트리 #82·#83) + layout 보정 (엔트리 #86) | 537 |
+| `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. 엔트리 #86 에서 shell/overflow, 엔트리 #87 에서 centered tabs, MkDocs SVG image override, stepper raw element styling 을 보강. | 신설 (엔트리 #82·#83) + layout 보정 (엔트리 #86·#87) | 587 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
 | `docs/data/scenario_index.json` | 65 시나리오 compact card index — 정식 40 + 후보 25, 8 필드 카드 shape. `/assemble` Step 2 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_index.py`) | 67 KB |
 | `docs/data/scenario_block_map.json` | 65 SCN → 추천 block list map — 각 SCN 14 후보, section/category/score 포함. `/assemble` Step 3 추천 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_map.py`) | 188 KB |
@@ -192,8 +192,8 @@
 | `tools/test_generate_plan.py` | Local CLI smoke test — STL/중견 샘플 생성, §1~§9·slot/source/placeholder 제거, lint 통과 검증. | 신설 (엔트리 #79) | 61 |
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
-| `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore 검증. | 신설 (엔트리 #82) | 100 |
-| `tests/assemble-markup.test.mjs` | `/assemble` Markdown source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되어 button/div 가 code block 으로 렌더링되는 문제 방지. | 신설 (엔트리 #86) | 12 |
+| `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore, placeholder default slot, 내부 ID display cleanup 검증. | 신설 (엔트리 #82) + display/default 회귀 (엔트리 #87) | 143 |
+| `tests/assemble-markup.test.mjs` | `/assemble` Markdown/CSS source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되는 문제, stepper 구조, app viewport sizing, SVG 크기 override, tab center alignment 방지. | 신설 (엔트리 #86) + layout 회귀 (엔트리 #87) | 28 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
 | `작업로그.md` | 본 문서 (§4 본문 → `방법론_총론.md` 분리 후 인덱스만 유지) | 진행 중 | — |
 | (참고 PDF 6종) | 외부 사례 자료 | 변경 없음 | — |
@@ -3509,6 +3509,32 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - MkDocs raw HTML island 에 `markdown="1"` 을 붙이면 nested app markup 이 부분적으로 Markdown code block 으로 변환될 수 있다. 복잡한 interactive app surface 는 Markdown 재파싱을 끄고 순수 HTML island 로 유지해야 한다.
   - build strict 는 HTML 구조가 의도대로 렌더링됐는지 보장하지 않는다. 핵심 DOM ID 와 escaped raw tag 여부를 정적 검증해야 한다.
   - UI runtime 은 필수 DOM element 를 초기에 검증하고, 누락 시 사용자에게 명확한 오류를 보여야 한다. null appendChild 는 원인 파악을 어렵게 만든다.
+
+---
+
+#### 엔트리 #87 — `/assemble` 디자인 재점검: 내부 ID 비노출 + 빈 입력 기본값 (2026-05-13)
+
+- **맥락**: 사용자가 로컬 `http://127.0.0.1:8000/assemble/` 기준 전체 디자인이 여전히 흐트러지고, `SCN-MLO-01` 같은 내부 ID 가 사용자 화면에 보여서는 안 된다고 지적했다. 또한 회사/사업 입력을 비워 두면 화면에 보이는 예시값이 실제 조립 입력값으로 사용되기를 요청했다.
+- **원인**:
+  - 기존 stepper 는 `ol/li` 기반이라 MkDocs 본문 list 스타일과 충돌 여지가 있었고, `extra.css` 의 일반 SVG 정책(`img[src$=".svg"]`) 이 `assembly.svg` 를 620px 급으로 키워 첫 화면을 밀어냈다.
+  - 시나리오 제목만 ID 제거 대상이었고, 블록 catalog title/preview 는 `GUIDE-*` 류 내부 ID 가 그대로 노출될 수 있었다.
+  - `collectFormSlots()` 는 빈 input 을 무조건 버려 placeholder 예시값(`동국산업(주)`, `12`, `600 백만원`, `50%`) 이 payload 로 들어가지 않았다.
+- **AI 수행**:
+  1. stepper 를 `div/span role=list` 구조로 바꾸고, `/assemble/` 전용 navigation/path 숨김·tabs center alignment·content width 를 CSS 로 고정했다.
+  2. `assembly.svg` 는 `width/height` 속성과 `.md-typeset img.assemble-mark[src$=".svg"]` important override 로 MkDocs 전역 SVG 정책보다 우선하게 했다.
+  3. `stripInternalIds()`, `scenarioTitle()`, `blockTitle()`, category label 매핑을 도입해 scenario/card/cart/catalog/pill display 에 `SCN-*`, `GUIDE-*`, `BLK-*`, `TEST-*` 등이 나오지 않게 했다.
+  4. `collectSlotsFromFields()` 를 추가해 회사/사업 기본 필드는 비었을 때 placeholder 를 값으로 사용하되, `quant.*` placeholder key 는 값으로 오인하지 않게 했다.
+- **검증 결과**:
+  - `node --check docs/javascripts/assemble-ui.js` — PASS
+  - `node --test tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs` — PASS, 8 tests / 0 fail
+  - `.venv/bin/mkdocs build --strict` — PASS
+  - Chrome screenshot `/private/tmp/assemble-fixed2-1440.png` — Stepper 가 4 columns 로 표시, 도메인 카드가 첫 화면에 노출, 우측 output panel clipping 없음, 상단 tabs center 정렬.
+  - CDP browser flow — `scenarioHasInternalId=false`, `blockHasInternalId=false`, 빈 입력 assemble payload 에 `company=동국산업(주)`, `duration_months=12`, `total_budget=600 백만원`, `gov_pct=50%`, status `Audit PASS`.
+- **산출물**: `docs/assemble.md`, `docs/javascripts/assemble-ui.js`, `docs/stylesheets/assemble.css`, `tests/assemble-ui.test.mjs`, `tests/assemble-markup.test.mjs`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - MkDocs 같은 문서 시스템 안의 app surface 는 전역 문서 이미지/list 규칙과 충돌하므로, 앱 전용 selector 는 충분한 specificity 와 회귀 테스트를 가져야 한다.
+  - 사용자가 보는 선택 UI 에서는 내부 stable ID 를 검색/전송 key 로만 쓰고 display label 에서는 제거해야 한다. ID 는 payload contract, label 은 작업자 인지 부하를 낮추는 별도 계층이다.
+  - placeholder 를 default 로 쓰는 정책은 필드군별로 제한해야 한다. 예시값 placeholder 는 default 로 쓸 수 있지만, 정량 슬롯의 key placeholder 는 데이터가 아니다.
 
 ---
 

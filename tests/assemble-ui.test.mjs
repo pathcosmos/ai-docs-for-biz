@@ -78,6 +78,49 @@ describe('AiDocsAssemble helpers', () => {
     });
   });
 
+  it('uses visible placeholder examples as default company and business slots', () => {
+    const { collectSlotsFromFields } = globalThis.AiDocsAssemble;
+    const fields = [
+      { name: 'step1_company.company', value: ' ', placeholder: '동국산업(주)' },
+      { name: 'step1_company.industry', value: 'STL', placeholder: '' },
+      { name: 'step1_company.process', value: '', placeholder: '냉간 압연' },
+      { name: 'step1_company.scale', value: '중견', placeholder: '' },
+      { name: 'step2_business.duration_months', value: '', placeholder: '12' },
+      { name: 'step2_business.total_budget', value: '650 백만원', placeholder: '600 백만원' },
+      { name: 'step2_business.gov_pct', value: '', placeholder: '50%' },
+      { name: 'quant.kpi_quality_pct', value: '', placeholder: 'kpi_quality_pct' },
+    ];
+
+    assert.deepEqual(collectSlotsFromFields(fields, 'STL'), {
+      domain: 'STL',
+      slots: {
+        step1_company: {
+          company: '동국산업(주)',
+          industry: 'STL',
+          process: '냉간 압연',
+          scale: '중견',
+        },
+        step2_business: {
+          duration_months: '12',
+          total_budget: '650 백만원',
+          gov_pct: '50%',
+        },
+        quant: {},
+      },
+    });
+  });
+
+  it('keeps internal scenario and block ids out of display labels', () => {
+    const { stripInternalIds, scenarioTitle, blockTitle } = globalThis.AiDocsAssemble;
+
+    assert.equal(stripInternalIds('SCN-MLO-01 모델 운영 감시'), '모델 운영 감시');
+    assert.equal(scenarioTitle({ id: 'SCN-MLO-01', title: 'SCN-MLO-01 모델 운영 감시·드리프트 탐지' }), '모델 운영 감시·드리프트 탐지');
+    assert.equal(blockTitle('GUIDE-COMPANY-PROFILE-§3', {
+      'GUIDE-COMPANY-PROFILE-§3': { title: 'GUIDE-COMPANY-PROFILE-§3 회사 프로필 본문', category: 'guide' },
+    }), '회사 프로필 본문');
+    assert.equal(blockTitle('GUIDE-MISSING', { 'GUIDE-MISSING': { category: 'guide' } }), '가이드 블록');
+  });
+
   it('restores persisted state defensively from localStorage', () => {
     const { restoreState, defaultState, STORAGE_KEY } = globalThis.AiDocsAssemble;
     const saved = {

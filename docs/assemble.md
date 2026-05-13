@@ -2,6 +2,8 @@
 title: "조립형 작성기"
 description: "시나리오와 블록을 골라 9 섹션 사업계획서 본문을 deterministic 방식으로 조립"
 hide:
+  - navigation
+  - path
   - toc
 ---
 
@@ -18,17 +20,17 @@ hide:
 
 <section class="assemble-main">
 
-<ol class="assemble-stepper" aria-label="조립 단계">
-  <li data-assemble-step="1" class="is-active">도메인</li>
-  <li data-assemble-step="2">시나리오</li>
-  <li data-assemble-step="3">블록·섹션</li>
-  <li data-assemble-step="4">입력·조립</li>
-</ol>
+<div class="assemble-stepper" role="list" aria-label="조립 단계">
+  <span role="listitem" data-assemble-step="1" class="is-active">도메인</span>
+  <span role="listitem" data-assemble-step="2">시나리오</span>
+  <span role="listitem" data-assemble-step="3">블록·섹션</span>
+  <span role="listitem" data-assemble-step="4">입력·조립</span>
+</div>
 
 <section data-assemble-step-panel="1" class="assemble-panel">
 <div class="assemble-panel-head">
   <h2>도메인</h2>
-  <img src="../assets/svg/guide/assembly.svg" alt="" class="assemble-mark" loading="lazy" />
+  <img src="../assets/svg/guide/assembly.svg" alt="" class="assemble-mark" width="96" height="56" loading="lazy" />
 </div>
 <div id="assemble-domain-grid" class="assemble-domain-grid"></div>
 </section>
