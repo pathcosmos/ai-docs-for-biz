@@ -38,5 +38,7 @@ test('assemble block catalog uses page scrolling and makes click-to-selection ma
   assert.match(css, /\.assemble-active-map\s*\{/);
   assert.match(css, /\.assemble-cart-item\[data-active="true"\]/);
   assert.match(css, /\.assemble-section-slot\[data-active="true"\]/);
-  assert.match(js, /title\.addEventListener\('click',\s*\(\)\s*=>\s*addBlock\(id\)\);/);
+  assert.match(js, /function\s+toggleBlock\(id\)/);
+  assert.match(js, /title\.addEventListener\('click',\s*\(\)\s*=>\s*toggleBlock\(id\)\);/);
+  assert.match(js, /state\.selectedBlocks\.includes\(id\)\s*\?\s*'해제'\s*:\s*'담기'/);
 });

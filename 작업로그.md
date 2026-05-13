@@ -168,7 +168,7 @@
 | `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리, 엔트리 #79 에서 10 도메인 dropdown + audit matrix 영역 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) + 10 도메인/audit matrix (엔트리 #79) | 156 |
 | `docs/assemble.md` | `/assemble/` 4 단계 조립형 작성기 페이지 — 도메인·시나리오·블록/§ 배치·회사/사업 입력 후 Worker `/api/assemble` 로 9 섹션 본문 생성. 엔트리 #86 에서 MkDocs raw HTML island 를 깨던 `markdown="1"` 제거, 엔트리 #87 에서 stepper 구조와 SVG 크기 안전장치 보강. | 신설 (엔트리 #82·#83) + raw HTML 렌더 보정 (엔트리 #86) + layout hardening (엔트리 #87) | 132 |
 | `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가, 엔트리 #79 에서 `complete.audit` 6 축 matrix 렌더링과 localStorage 복원을 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) + structured audit matrix (엔트리 #79) | 404 |
-| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM guard, 엔트리 #87 에서 내부 ID 표시 제거와 placeholder default slot 수집, 엔트리 #88 에서 Step 3 블록 클릭 시 선택·섹션 매핑 강조를 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) + display/default 보정 (엔트리 #87) + Step 3 UX 보정 (엔트리 #88) | 863 |
+| `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM guard, 엔트리 #87 에서 내부 ID 표시 제거와 placeholder default slot 수집, 엔트리 #88 에서 Step 3 블록 클릭 시 선택·섹션 매핑 강조, 엔트리 #89 에서 catalog 선택/해제 토글을 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) + display/default 보정 (엔트리 #87) + Step 3 UX 보정 (엔트리 #88·#89) | 909 |
 | `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이, 엔트리 #79 에서 6 축 audit matrix table 스타일 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) + audit matrix (엔트리 #79) | 236 |
 | `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. 엔트리 #86 에서 shell/overflow, 엔트리 #87 에서 centered tabs, MkDocs SVG image override, stepper raw element styling, 엔트리 #88 에서 블록 catalog 페이지 스크롤과 active mapping highlight 를 보강. | 신설 (엔트리 #82·#83) + layout 보정 (엔트리 #86·#87) + Step 3 UX 보정 (엔트리 #88) | 678 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
@@ -192,8 +192,8 @@
 | `tools/test_generate_plan.py` | Local CLI smoke test — STL/중견 샘플 생성, §1~§9·slot/source/placeholder 제거, lint 통과 검증. | 신설 (엔트리 #79) | 61 |
 | `docs/javascripts/llm-client.js` | Cloudflare Pages/GitHub Pages 브라우저 런타임의 Worker `/api/llm` 호출 래퍼 — endpoint 저장·오류 표준화. | 신설 (엔트리 #61) | 58 |
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
-| `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore, placeholder default slot, 내부 ID display cleanup 검증. | 신설 (엔트리 #82) + display/default 회귀 (엔트리 #87) | 143 |
-| `tests/assemble-markup.test.mjs` | `/assemble` Markdown/CSS source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되는 문제, stepper 구조, app viewport sizing, SVG 크기 override, tab center alignment, Step 3 catalog 내부 스크롤 재발과 선택 mapping 강조 누락 방지. | 신설 (엔트리 #86) + layout 회귀 (엔트리 #87) + Step 3 UX 회귀 (엔트리 #88) | 42 |
+| `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore, placeholder default slot, 내부 ID display cleanup, catalog block 선택/해제 토글과 explicit section move add-only 동작 검증. | 신설 (엔트리 #82) + display/default 회귀 (엔트리 #87) + toggle 회귀 (엔트리 #89) | 189 |
+| `tests/assemble-markup.test.mjs` | `/assemble` Markdown/CSS source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되는 문제, stepper 구조, app viewport sizing, SVG 크기 override, tab center alignment, Step 3 catalog 내부 스크롤 재발·선택 mapping 강조·toggle hook 누락 방지. | 신설 (엔트리 #86) + layout 회귀 (엔트리 #87) + Step 3 UX 회귀 (엔트리 #88·#89) | 44 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
 | `작업로그.md` | 본 문서 (§4 본문 → `방법론_총론.md` 분리 후 인덱스만 유지) | 진행 중 | — |
 | (참고 PDF 6종) | 외부 사례 자료 | 변경 없음 | — |
@@ -3568,6 +3568,34 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - 클릭 결과가 다른 영역에 반영되는 UI 는 source·target·intermediate summary 를 동시에 강조해야 사용자가 "어디로 갔는지" 를 즉시 이해한다.
 - **다음 단계**:
   - 공개 URL 기준 수동 브라우저 확인에서 추가 spacing/카피 이슈가 발견되면 별도 UI polish 단위로 처리한다.
+
+#### 엔트리 #89 — `/assemble` Step 3 블록 catalog 선택/해제 토글 보정 (2026-05-13)
+
+- **맥락**: 엔트리 #88 에서 왼쪽 블록 클릭을 `addBlock(id)` 로 연결해 선택 위치가 눈에 띄게 보이도록 했지만, 같은 블록을 다시 클릭해도 해제되지 않는 add-only 상태가 남았다. 사용자는 선택/비선택이 on/off 토글로 동작하기를 요청했다.
+- **사용자 요청 (원문 요지)**: *"블록,섹션 영역에서 블록 쪽에서 선택하는데, 선택과 비선택이 토글로 on/off 되면 좋겠다 ... 지금은 한 번 선택하면 해제가 안되네"*
+- **AI 수행**:
+  1. TDD 로 `tests/assemble-ui.test.mjs` 에 `toggleBlockSelection()` 회귀를 먼저 추가했다. 선택 전 block 클릭은 `selectedBlocks` 와 `sectionAssignment` 에 들어가고, 같은 block 재클릭은 두 곳에서 모두 제거되어야 한다.
+  2. 같은 테스트에 `addBlockToSelection()` explicit section move 회귀를 추가했다. 이미 선택된 block 을 오른쪽 § 슬롯으로 이동하는 동작은 해제가 아니라 재배치로 유지해야 하기 때문이다.
+  3. `tests/assemble-markup.test.mjs` 는 catalog title click 이 `toggleBlock(id)` 를 호출하고, 선택된 block 의 action label 이 `해제`, 미선택 block 의 action label 이 `담기` 인 source hook 을 검사하도록 갱신했다.
+  4. `docs/javascripts/assemble-ui.js` 에 pure helper `addBlockToSelection`, `removeBlockFromSelection`, `toggleBlockSelection` 을 추가해 `globalThis.AiDocsAssemble` 로 노출했다.
+  5. UI closure 내부는 `addBlock()` 은 section 이동/add-only, `toggleBlock()` 은 catalog 선택/해제로 분리했다. 왼쪽 row/title/담기·해제 button 은 `toggleBlock(id)`, 오른쪽 "선택 블록 추가" 와 drag/drop 은 기존 `addBlock(id, section)` 경로를 쓴다.
+- **판단 근거**:
+  - catalog 클릭과 section 이동은 사용자의 의도가 다르다. catalog 에서는 선택 상태를 토글해야 하지만, section 슬롯에서는 이미 선택된 block 을 다른 §로 옮기는 것이 목적이므로 add-only/move 동작이 맞다.
+  - 선택 해제 시에는 cart item 과 section pill 을 동시에 지워야 payload 의 `blocks` 와 `section_assignment` 가 엇갈리지 않는다.
+- **검증 결과**:
+  - RED: `node --test tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs` — `toggleBlockSelection is not a function`, `addBlockToSelection is not a function`, catalog handler 가 `addBlock` 인 점으로 실패 확인.
+  - GREEN: `node --test tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs` — PASS, 11 tests / 0 fail.
+  - `node --check docs/javascripts/assemble-ui.js` — PASS.
+  - `node --test tests/llm-client.test.mjs tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs` — PASS, 16 tests / 0 fail.
+  - `cd worker && npm test` — PASS, 66 tests / 0 fail.
+  - `.venv/bin/mkdocs build --strict` — PASS.
+  - CDP browser flow (`http://127.0.0.1:8000/assemble/?v=toggle...`) — Step 3 에서 선택된 첫 block 재클릭 시 selected rows 11→10, cart items 11→10, section pills 11→10, active map false 확인. 미선택 block 재클릭 시 selected rows/cart/section pills 10→11, action label `해제`, active section 1 확인. 스크린샷: `/private/tmp/assemble-toggle-step3.png`.
+- **산출물**: `docs/javascripts/assemble-ui.js`, `tests/assemble-ui.test.mjs`, `tests/assemble-markup.test.mjs`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - 같은 "클릭" 이라도 catalog 선택과 section 배치의 의미를 분리해야 한다. 하나의 `addBlock()` 으로 모든 경로를 처리하면 UX 는 단순해 보이지만 해제·이동 같은 후속 행동이 막힌다.
+  - 선택 UI 에서는 action label 을 상태와 맞춰 `담기`/`해제` 로 바꿔야 사용자가 토글 가능성을 인지한다.
+- **다음 단계**:
+  - Pages 재배포 후 공개 `/assemble/` asset marker 와 Step 3 토글 동작을 확인한다.
 
 ---
 

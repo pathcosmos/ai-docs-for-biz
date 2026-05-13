@@ -46,6 +46,52 @@ describe('AiDocsAssemble helpers', () => {
     });
   });
 
+  it('toggles catalog block selection on and off while keeping section assignments clean', () => {
+    const { toggleBlockSelection } = globalThis.AiDocsAssemble;
+    const templateIndex = {
+      A: { section: '§3.1', category: 'scenario' },
+      B: { section: '§4', category: 'guide' },
+    };
+    const state = {
+      selectedBlocks: [],
+      sectionAssignment: {},
+      activeBlock: '',
+    };
+
+    assert.equal(toggleBlockSelection(state, 'A', templateIndex), 'selected');
+    assert.deepEqual(state.selectedBlocks, ['A']);
+    assert.deepEqual(state.sectionAssignment, { '§3': ['A'] });
+    assert.equal(state.activeBlock, 'A');
+
+    assert.equal(toggleBlockSelection(state, 'A', templateIndex), 'removed');
+    assert.deepEqual(state.selectedBlocks, []);
+    assert.deepEqual(state.sectionAssignment, {});
+    assert.equal(state.activeBlock, '');
+
+    assert.equal(toggleBlockSelection(state, 'B', templateIndex), 'selected');
+    assert.deepEqual(state.selectedBlocks, ['B']);
+    assert.deepEqual(state.sectionAssignment, { '§4': ['B'] });
+    assert.equal(state.activeBlock, 'B');
+  });
+
+  it('keeps explicit section moves as add-only even for already selected blocks', () => {
+    const { addBlockToSelection } = globalThis.AiDocsAssemble;
+    const templateIndex = {
+      A: { section: '§3.1', category: 'scenario' },
+    };
+    const state = {
+      selectedBlocks: ['A'],
+      sectionAssignment: { '§3': ['A'] },
+      activeBlock: 'A',
+    };
+
+    addBlockToSelection(state, 'A', templateIndex, '§5');
+
+    assert.deepEqual(state.selectedBlocks, ['A']);
+    assert.deepEqual(state.sectionAssignment, { '§5': ['A'] });
+    assert.equal(state.activeBlock, 'A');
+  });
+
   it('builds canonical assemble payload with selected full block bodies only', () => {
     const { buildPayload } = globalThis.AiDocsAssemble;
     const state = {

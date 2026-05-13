@@ -110,6 +110,51 @@
     return result;
   }
 
+  function addBlockToSelection(state, id, templateIndex, section) {
+    if (!state || !id) return 'noop';
+    state.selectedBlocks = Array.isArray(state.selectedBlocks) ? state.selectedBlocks : [];
+    state.sectionAssignment = state.sectionAssignment && typeof state.sectionAssignment === 'object'
+      ? state.sectionAssignment
+      : {};
+    if (!state.selectedBlocks.includes(id)) state.selectedBlocks.push(id);
+    const targetSection = section || normalizeSection(templateIndex && templateIndex[id] && templateIndex[id].section);
+    state.sectionAssignment = assignBlocksToSections(state.selectedBlocks, templateIndex, state.sectionAssignment);
+    if (targetSection) {
+      Object.keys(state.sectionAssignment).forEach(key => {
+        state.sectionAssignment[key] = state.sectionAssignment[key].filter(value => value !== id);
+        if (state.sectionAssignment[key].length === 0) delete state.sectionAssignment[key];
+      });
+      state.sectionAssignment[targetSection] = state.sectionAssignment[targetSection] || [];
+      if (!state.sectionAssignment[targetSection].includes(id)) state.sectionAssignment[targetSection].push(id);
+    }
+    state.activeBlock = id;
+    return 'selected';
+  }
+
+  function removeBlockFromSelection(state, id) {
+    if (!state || !id) return 'noop';
+    state.selectedBlocks = Array.isArray(state.selectedBlocks)
+      ? state.selectedBlocks.filter(value => value !== id)
+      : [];
+    state.sectionAssignment = state.sectionAssignment && typeof state.sectionAssignment === 'object'
+      ? state.sectionAssignment
+      : {};
+    Object.keys(state.sectionAssignment).forEach(section => {
+      state.sectionAssignment[section] = state.sectionAssignment[section].filter(value => value !== id);
+      if (state.sectionAssignment[section].length === 0) delete state.sectionAssignment[section];
+    });
+    if (state.activeBlock === id) state.activeBlock = '';
+    return 'removed';
+  }
+
+  function toggleBlockSelection(state, id, templateIndex) {
+    if (!state || !id) return 'noop';
+    const selectedBlocks = Array.isArray(state.selectedBlocks) ? state.selectedBlocks : [];
+    return selectedBlocks.includes(id)
+      ? removeBlockFromSelection(state, id)
+      : addBlockToSelection(state, id, templateIndex);
+  }
+
   function buildPayload(state, fullTemplates) {
     const blockContext = {};
     (state.selectedBlocks || []).forEach(id => {
@@ -483,19 +528,7 @@
     }
 
     function addBlock(id, section) {
-      if (!id) return;
-      if (!state.selectedBlocks.includes(id)) state.selectedBlocks.push(id);
-      const targetSection = section || normalizeSection(templatesIndex[id]?.section);
-      state.sectionAssignment = assignBlocksToSections(state.selectedBlocks, templatesIndex, state.sectionAssignment);
-      if (targetSection) {
-        Object.keys(state.sectionAssignment).forEach(key => {
-          state.sectionAssignment[key] = state.sectionAssignment[key].filter(value => value !== id);
-          if (state.sectionAssignment[key].length === 0) delete state.sectionAssignment[key];
-        });
-        state.sectionAssignment[targetSection] = state.sectionAssignment[targetSection] || [];
-        state.sectionAssignment[targetSection].push(id);
-      }
-      state.activeBlock = id;
+      if (addBlockToSelection(state, id, templatesIndex, section) === 'noop') return;
       highlightedBlock = id;
       saveState();
       renderStepThree();
@@ -508,15 +541,25 @@
     }
 
     function removeBlock(id) {
-      state.selectedBlocks = state.selectedBlocks.filter(value => value !== id);
-      Object.keys(state.sectionAssignment).forEach(section => {
-        state.sectionAssignment[section] = state.sectionAssignment[section].filter(value => value !== id);
-        if (state.sectionAssignment[section].length === 0) delete state.sectionAssignment[section];
-      });
-      if (state.activeBlock === id) state.activeBlock = '';
+      removeBlockFromSelection(state, id);
       if (highlightedBlock === id) highlightedBlock = '';
       saveState();
       renderStepThree();
+    }
+
+    function toggleBlock(id) {
+      const action = toggleBlockSelection(state, id, templatesIndex);
+      if (action === 'noop') return;
+      highlightedBlock = action === 'selected' ? id : '';
+      if (highlightTimer) clearTimeout(highlightTimer);
+      saveState();
+      renderStepThree();
+      if (action !== 'selected') return;
+      highlightTimer = setTimeout(() => {
+        if (highlightedBlock !== id) return;
+        highlightedBlock = '';
+        renderStepThree();
+      }, 1600);
     }
 
     function toggleFavorite(id) {
@@ -553,13 +596,13 @@
           row.addEventListener('dragstart', event => event.dataTransfer.setData('text/plain', id));
           row.addEventListener('click', event => {
             if (event.target.closest('button')) return;
-            addBlock(id);
+            toggleBlock(id);
           });
           const title = document.createElement('button');
           title.type = 'button';
           title.className = 'assemble-block-title';
           title.textContent = blockTitle(id, templatesIndex);
-          title.addEventListener('click', () => addBlock(id));
+          title.addEventListener('click', () => toggleBlock(id));
           const meta = document.createElement('div');
           meta.className = 'assemble-block-meta';
           meta.append(badge(categoryLabel(item.category || 'block')), badge(normalizeSection(item.section) || '미배치'));
@@ -569,7 +612,7 @@
           const actions = document.createElement('div');
           actions.className = 'assemble-inline-actions';
           actions.append(
-            button(state.selectedBlocks.includes(id) ? '선택됨' : '담기', '', () => addBlock(id)),
+            button(state.selectedBlocks.includes(id) ? '해제' : '담기', '', () => toggleBlock(id)),
             button(favorites.includes(id) ? '즐겨찾기 해제' : '즐겨찾기', '', () => toggleFavorite(id)),
           );
           row.append(title, meta, preview, actions);
@@ -842,6 +885,9 @@
     defaultState,
     normalizeSection,
     assignBlocksToSections,
+    addBlockToSelection,
+    removeBlockFromSelection,
+    toggleBlockSelection,
     buildPayload,
     collectSlotsFromFields,
     restoreState,
