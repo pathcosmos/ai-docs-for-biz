@@ -3557,12 +3557,17 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - `node --test tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs` — PASS, 9 tests / 0 fail
   - `.venv/bin/mkdocs build --strict` — PASS
   - CDP browser flow (`http://127.0.0.1:8000/assemble/?v=step3verify...`) — Step 3 진입 후 첫 블록 클릭, `catalogOverflow=visible`, `catalogMaxHeight=none`, `.assemble-active-map` 존재, active row/cart/section/pill 각 1 개 확인. 스크린샷: `/private/tmp/assemble-step3-map.png`.
+- **배포 결과**:
+  - `git push origin main` — GitHub `pathcosmos/ai-docs-for-biz` 와 Yona `IoT/ai-docs-for-biz` main 동기화 완료.
+  - `wrangler pages deploy site --project-name=ai-docs-for-biz --branch=main` — Pages direct deploy 완료.
+  - 공개 `https://ai-docs-for-biz.pages.dev/assemble/` — HTTP 200 확인.
+  - 공개 CSS/JS asset marker 확인 — `.assemble-catalog { overflow: visible }`, `.assemble-active-map`, `.assemble-section-slot[data-active="true"]`, `highlightedBlock`, `title click → addBlock(id)` 반영.
 - **산출물**: `docs/javascripts/assemble-ui.js`, `docs/stylesheets/assemble.css`, `tests/assemble-markup.test.mjs`, `작업로그.md`
 - **배운 점·재사용 포인트**:
   - 긴 catalog + 오른쪽 배치 UI 는 nested scroll 보다 page scroll 이 안정적이다. nested scroll 은 좁은 panel 안에서만 탐색하게 만들어 선택과 배치의 공간 관계를 끊는다.
   - 클릭 결과가 다른 영역에 반영되는 UI 는 source·target·intermediate summary 를 동시에 강조해야 사용자가 "어디로 갔는지" 를 즉시 이해한다.
 - **다음 단계**:
-  - Pages 재배포 후 공개 `/assemble/` Step 3 에서 같은 흐름을 재확인한다.
+  - 공개 URL 기준 수동 브라우저 확인에서 추가 spacing/카피 이슈가 발견되면 별도 UI polish 단위로 처리한다.
 
 ---
 
