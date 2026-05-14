@@ -2256,3 +2256,39 @@ a.scn-link:focus-visible {
 }
 
 /* =========================== Phase E16 Stage 3 끝 ============================== */
+
+/* =============================================================================
+   Domain knowledge guide hero — wide, plain-language overview
+   ============================================================================= */
+
+.md-typeset figure:has(img[src$="domain-knowledge.svg"]) {
+  width: min(100%, 940px);
+  margin: 1.1rem auto 1.6rem;
+  text-align: center;
+}
+
+.md-typeset figure img[src$="domain-knowledge.svg"],
+.md-typeset img[src$="domain-knowledge.svg"] {
+  width: 100% !important;
+  max-width: 900px !important;
+  max-height: none !important;
+  height: auto !important;
+  display: block;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 40em) {
+  .md-typeset figure:has(img[src$="domain-knowledge.svg"]) {
+    width: min(calc(100vw - 2rem), 340px);
+    max-width: min(calc(100vw - 2rem), 340px);
+    margin-left: 0;
+    margin-right: auto;
+    transform: none;
+  }
+
+  .md-typeset figure img[src$="domain-knowledge.svg"],
+  .md-typeset img[src$="domain-knowledge.svg"] {
+    width: min(calc(100vw - 2rem), 340px) !important;
+    max-width: min(calc(100vw - 2rem), 340px) !important;
+  }
+}

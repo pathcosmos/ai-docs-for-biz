@@ -38,6 +38,11 @@ GROUP_CAPTIONS = {
     "meta": "메타 자산 인포그래픽",
 }
 
+# 페이지별 캡션 override. 전역 guide 문구가 너무 기술적으로 보이는 경우만 좁게 적용한다.
+PAGE_CAPTIONS = {
+    "guide/domain-knowledge.md": "현장 지식을 질문·답·검증 기준으로 정리하는 흐름",
+}
+
 
 def derive_group(src_path: str) -> str | None:
     parts = src_path.split("/")
@@ -105,7 +110,7 @@ def inject_hero(markdown: str, page, config) -> str:
         return markdown  # 이미 figure 있음
 
     rel_path = relative_svg_path(src_path)
-    caption = GROUP_CAPTIONS.get(group, "인포그래픽 — 클릭하여 확대·다운로드")
+    caption = PAGE_CAPTIONS.get(src_path, GROUP_CAPTIONS.get(group, "인포그래픽 — 클릭하여 확대·다운로드"))
     page_title_match = re.search(r"^#\s+(.+?)\s*$", markdown, re.MULTILINE)
     page_title = page_title_match.group(1).strip() if page_title_match else "인포그래픽"
 

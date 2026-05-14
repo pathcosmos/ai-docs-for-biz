@@ -138,7 +138,7 @@
 | `사업계획서_패키지3_특수강관_파일럿.md` | Phase E5 통합 파일럿 (특수강관 9 개월 RAG 중심) — 5 번째 도메인 + 9M 양식 직접 검증 + 5.2-a+c+f 결합 | 신설 (엔트리 #29) | 476 |
 | `시나리오_상세_특수강관.md` | STL-07 (공정설계 LLM) + STL-11 (UT 자동판정) 2 시나리오 상세. 시나리오 상세 자산 군 5 번째. 5.2-a+f (이름·모양 결합) 시연. | 신설 (엔트리 #30 / G15, 갭 23) | 160 |
 | `가이드_RAG_인프라_운영.md` | RAG 5 계층 (수집·임베딩·검색·생성·감사) + 4 분기 의사결정 + 10 자산 결합. 운영 가이드 군 7 번째. | 신설 (엔트리 #30 / G16, 갭 24) | 221 |
-| `가이드_도메인_지식추출.md` | 베테랑 인터뷰 5 단계 + 100 문항 5 군 + 골드셋 4 카테고리. 운영 가이드 군 8 번째. RAG 운영 가이드와 호혜적 쌍. | 신설 (엔트리 #30 / G17, 갭 25) | 221 |
+| `가이드_도메인_지식추출.md` | 베테랑 인터뷰 5 단계 + 100 문항 5 군 + 골드셋 4 카테고리. 운영 가이드 군 8 번째. 엔트리 #90 에서 상단 쉬운 설명 1 문장을 추가해 기술 메타보다 사용자 이해를 먼저 배치. | 신설 (엔트리 #30 / G17, 갭 25) + 상단 설명 보강 (엔트리 #90) | 223 |
 | `양식검증_DX촉진_R&D.md` | 전사적 DX 촉진 R&D 양식 (붙임2 v2.8 67p) 사전 검증 — §·표·필수 항목 100% 추출 + 9 시나리오 매핑 + 34 자산 cross-reference + 단계별 강제 분리 + 신규 갭 11 (#6~16) + Cycle 2 4 턴 청사진. **양식 검증 군 1 번째 신설**. | 신설 (엔트리 #31 / Phase E6 Cycle 1) | 282 |
 | `사업계획서_패키지1_대기업철강_파일럿.md` | Phase E6 Cycle 2 통합 파일럿 (대기업 철강 다년 R&D 33개월 단계+연차) — 6 번째 도메인 + 67p 양식 직접 검증 + 9 시나리오 + 5.2 카드 5 종 + 모듈 4 + 신규 갭 11 본문 시연. **통합 파일럿 군 6 번째 신설**. | 신설 (엔트리 #32 / Phase E6 Cycle 2) | 773 |
 | `가이드_컨설팅_위탁_운영.md` | 다년 R&D 1단계 컨설팅 위탁 표준 (강도 3 단계·5 단계 실행 절차·동국산업 EY한영 89.8백만 사례). 운영 가이드 군 9 번째. 갭 #6 해소. | 신설 (엔트리 #33 / G18) | 181 |
@@ -165,12 +165,15 @@
 | `사업계획서_가상_10종/` | 10 도메인 × 규모별 가상 사업계획서 fixture 디렉터리. LAYER A 변형 발굴·lint 입력·인계용 견본. | 신설 (엔트리 #78) | 10 파일 |
 | `hooks/build_scenario_index.py` | MkDocs pre-build hook — `시나리오_카탈로그.md` 40 정식 카드 + `사전_슬롯과_도메인_10종.md` §3 후보 25 행을 같은 8 필드 scenario index 로 정규화. 65 미만이면 빌드 실패. | 신설 (엔트리 #80) | 149 |
 | `hooks/build_scenario_map.py` | MkDocs pre-build hook — `scenario_index.json` + `templates_index.json` 으로 SCN별 추천 블록 맵 생성. 도메인·트랙·category·tag·section relevance score + core guide fallback. | 신설 (엔트리 #80) | 207 |
+| `hooks/inject_hero_svg.py` | MkDocs page hook — slug 대응 SVG 를 H1 직후 삽입. 엔트리 #90 에서 `guide/domain-knowledge.md` 전용 쉬운 caption override 를 추가해 전역 guide 캡션의 전문 용어 노출을 줄임. | 신설 (엔트리 #34) + page caption override (엔트리 #90) | 131 |
 | `docs/agent.md` | Phase E19 Agent 전용 UI 페이지 — 5 단계 Stepper 입력 (회사·사업·데이터/모델·설정·제출) + SSE 진행 패널 + 최종 Markdown 출력 영역. 기존 `/generate` 보존, 신규 `/agent` 진입점. 엔트리 #73 에서 작성 엔진 선택, 엔트리 #75 에서 compact index 경로 속성, 엔트리 #76 에서 최종 본문과 검토 리포트 textarea 분리, 엔트리 #79 에서 10 도메인 dropdown + audit matrix 영역 추가. | 신설 (엔트리 #72) + Gemini writer UI (엔트리 #73) + compact context 경로 (엔트리 #75) + audit UI (엔트리 #76) + 10 도메인/audit matrix (엔트리 #79) | 156 |
 | `docs/assemble.md` | `/assemble/` 4 단계 조립형 작성기 페이지 — 도메인·시나리오·블록/§ 배치·회사/사업 입력 후 Worker `/api/assemble` 로 9 섹션 본문 생성. 엔트리 #86 에서 MkDocs raw HTML island 를 깨던 `markdown="1"` 제거, 엔트리 #87 에서 stepper 구조와 SVG 크기 안전장치 보강. | 신설 (엔트리 #82·#83) + raw HTML 렌더 보정 (엔트리 #86) + layout hardening (엔트리 #87) | 132 |
 | `docs/javascripts/agent-ui.js` | `/agent` 브라우저 런타임 — 단계 이동·Tier 1 검증·localStorage 임시 저장·POST SSE 스트림 파싱·section preview·copy/download 처리. 엔트리 #73 에서 `section_fallback` 이벤트 표시, 엔트리 #75 에서 `templates_index.json` 9 개 guide preview 선별 로딩, 엔트리 #76 에서 `audit_md` 별도 표시·복사·다운로드 추가, 엔트리 #79 에서 `complete.audit` 6 축 matrix 렌더링과 localStorage 복원을 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + compact context payload (엔트리 #75) + audit UI (엔트리 #76) + structured audit matrix (엔트리 #79) | 404 |
 | `docs/javascripts/assemble-ui.js` | `/assemble` 브라우저 런타임 — `document$.subscribe`, localStorage/favorites, scenario index·map·template index 로딩, Step 1~4 렌더, drag/drop·tap section 배치, 선택 body 만 `block_context` 로 전송. Pure helper 는 `globalThis.AiDocsAssemble` 로 Node test 노출. 엔트리 #86 에서 필수 DOM guard, 엔트리 #87 에서 내부 ID 표시 제거와 placeholder default slot 수집, 엔트리 #88 에서 Step 3 블록 클릭 시 선택·섹션 매핑 강조, 엔트리 #89 에서 catalog 선택/해제 토글을 추가. | 신설 (엔트리 #82·#83) + DOM guard (엔트리 #86) + display/default 보정 (엔트리 #87) + Step 3 UX 보정 (엔트리 #88·#89) | 909 |
 | `docs/stylesheets/agent.css` | Agent UI 전용 responsive stylesheet — Stepper·폼 그리드·진행 로그·출력 패널·모바일 1 열 전환. 엔트리 #73 에서 fallback warning 상태, 엔트리 #76 에서 검토 리포트 textarea 높이, 엔트리 #79 에서 6 축 audit matrix table 스타일 추가. | 신설 (엔트리 #72) + fallback 표시 (엔트리 #73) + audit UI (엔트리 #76) + audit matrix (엔트리 #79) | 236 |
 | `docs/stylesheets/assemble.css` | `/assemble` responsive stylesheet — 4 단계 stepper, domain cards, scenario list, catalog/cart/§ slots, advanced quantitative fields, output/audit 패널. 엔트리 #86 에서 shell/overflow, 엔트리 #87 에서 centered tabs, MkDocs SVG image override, stepper raw element styling, 엔트리 #88 에서 블록 catalog 페이지 스크롤과 active mapping highlight 를 보강. | 신설 (엔트리 #82·#83) + layout 보정 (엔트리 #86·#87) + Step 3 UX 보정 (엔트리 #88) | 678 |
+| `docs/stylesheets/extra.css` | 전역 MkDocs 스타일 — Pretendard, nav, content, SVG/lightbox, generate page, 기타 legacy UI. 엔트리 #90 에서 `domain-knowledge.svg` 전용 desktop 900px / mobile 340px sizing override 추가. | 신설 (엔트리 #13) + 다중 시각 보정 + domain hero sizing (엔트리 #90) | 2,294 |
+| `docs/assets/svg/guide/domain-knowledge.svg` | 도메인 지식추출 guide hero SVG — 엔트리 #90 에서 600×800 세로형 전문용어 차트에서 960×540 넓은 “현장 지식 모으기” 4 단계 흐름도로 전면 교체. | 신설 (엔트리 #34) + 쉬운 흐름도 재구성 (엔트리 #90) | 117 |
 | `docs/data/templates_index.json` | `templates.json` 에서 `body` 를 제외한 compact index — 348 블록, 141,866 bytes. LLM/Agent 매핑에 전체 본문 1.46 MB 를 전송하지 않기 위한 인덱스. | 자동 생성 (엔트리 #72 / `hooks/build_templates_data.py`) | 142 KB |
 | `docs/data/scenario_index.json` | 65 시나리오 compact card index — 정식 40 + 후보 25, 8 필드 카드 shape. `/assemble` Step 2 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_index.py`) | 67 KB |
 | `docs/data/scenario_block_map.json` | 65 SCN → 추천 block list map — 각 SCN 14 후보, section/category/score 포함. `/assemble` Step 3 추천 입력. | 자동 생성 (엔트리 #80 / `hooks/build_scenario_map.py`) | 188 KB |
@@ -194,6 +197,7 @@
 | `tests/llm-client.test.mjs` | 브라우저 LLM client Node test suite — endpoint 저장·POST payload·오류 처리 검증. | 신설 (엔트리 #61) | 82 |
 | `tests/assemble-ui.test.mjs` | `/assemble` pure helper Node test suite — section normalization, block assignment, canonical payload, localStorage restore, placeholder default slot, 내부 ID display cleanup, catalog block 선택/해제 토글과 explicit section move add-only 동작 검증. | 신설 (엔트리 #82) + display/default 회귀 (엔트리 #87) + toggle 회귀 (엔트리 #89) | 189 |
 | `tests/assemble-markup.test.mjs` | `/assemble` Markdown/CSS source 회귀 테스트 — raw HTML app island 가 `markdown="1"` 로 재파싱되는 문제, stepper 구조, app viewport sizing, SVG 크기 override, tab center alignment, Step 3 catalog 내부 스크롤 재발·선택 mapping 강조·toggle hook 누락 방지. | 신설 (엔트리 #86) + layout 회귀 (엔트리 #87) + Step 3 UX 회귀 (엔트리 #88·#89) | 44 |
+| `tests/domain-knowledge-hero.test.mjs` | 도메인 지식추출 hero 회귀 테스트 — SVG wide viewBox, 쉬운 핵심 문구, 금지 전문용어 제거, page-specific CSS/caption/intro 보강 검증. | 신설 (엔트리 #90) | 35 |
 | `worker/.dev.vars` | 로컬 개발용 gitignored secret 파일. 사용자가 제공한 Gemini API key 를 저장하되 값은 로그·문서에 기록하지 않음. | 신설 (엔트리 #61, git 추적 제외) | 5 |
 | `작업로그.md` | 본 문서 (§4 본문 → `방법론_총론.md` 분리 후 인덱스만 유지) | 진행 중 | — |
 | (참고 PDF 6종) | 외부 사례 자료 | 변경 없음 | — |
@@ -3601,6 +3605,34 @@ F. 선택적 심화         (F1 E 피드백 기반 1.1.1.1 세분화)
   - 선택 UI 에서는 action label 을 상태와 맞춰 `담기`/`해제` 로 바꿔야 사용자가 토글 가능성을 인지한다.
 - **다음 단계**:
   - 공개 URL 기준 수동 브라우저 확인에서 추가 Step 3 interaction 이슈가 발견되면 별도 회귀 테스트로 고정한다.
+
+#### 엔트리 #90 — 도메인 지식추출 상단 인포그래픽 재구성: 넓은 흐름도 + 쉬운 문장 (2026-05-14)
+
+- **맥락**: 사용자가 도메인 지식추출 페이지 상단 이미지가 우측으로 치우쳐 보이고, 이미지 안 문구가 어렵다고 지적했다. 기존 `domain-knowledge.svg` 는 600×800 세로형 차트라 전역 SVG 제한에서 작게 보였고, `암묵지·형식지·골드셋·RAG·sLM·cross-reference` 같은 내부 용어가 첫 화면 인지 비용을 키웠다.
+- **사용자 요청 (원문 요지)**: *"도메인 페이지 상단 도메인 우측 이미지, 너무 우측으로 치우쳐져 있다 ... 적당한 영역 차지하게 해서 쉽게 인지하게 할 수 있을까? 안에 말들도 너무 어렵거든 이미지"*
+- **AI 수행**:
+  1. TDD 로 `tests/domain-knowledge-hero.test.mjs` 를 먼저 추가했다. 기존 SVG 는 세로 viewBox 이고 쉬운 핵심 문구·전용 sizing·쉬운 intro 가 없어 RED 를 확인했다.
+  2. `docs/assets/svg/guide/domain-knowledge.svg` 를 960×540 넓은 흐름도로 전면 교체했다. 내부 문구는 `현장 지식 모으기`, `묻기`, `정리`, `문답 만들기`, `확인`, `남는 결과` 중심으로 단순화했다.
+  3. `docs/stylesheets/extra.css` 에 해당 SVG 전용 sizing 을 파일 끝에 추가했다. Desktop 은 본문 폭을 의미 있게 차지하도록 `max-width: 900px`, mobile 은 headless/실기기 좁은 폭에서 오른쪽 카드가 잘리지 않도록 `max-width: 340px` 와 left align 을 적용했다.
+  4. `hooks/inject_hero_svg.py` 에 `guide/domain-knowledge.md` 전용 caption override 를 추가했다. 전역 guide caption 의 "8 장 + 4 분기 + 강도 3 단계" 같은 내부 방법론 문구를 이 페이지에서는 숨긴다.
+  5. 원본 `가이드_도메인_지식추출.md` 에 쉬운 설명 1 문장을 H1 바로 아래에 추가하고 `python3 build_src.py` 로 `docs/guide/domain-knowledge.md` 를 동기화했다.
+- **판단 근거**:
+  - 이 페이지의 첫 화면 목적은 방법론 세부 항목 설명이 아니라 "현장 말이 AI 참고자료가 되는 흐름"을 즉시 이해시키는 것이다. 따라서 세로 막대/표보다 4 단계 좌→우 흐름도가 더 적합하다.
+  - 전역 SVG 제한을 바꾸면 다른 세로형 guide asset 이 다시 커질 수 있으므로 `domain-knowledge.svg` 에만 좁게 override 했다.
+  - 모바일에서 중앙 정렬은 headless 500px viewport/390px screenshot 조합에서 오른쪽이 잘리는 문제가 있어, 모바일에 한해 340px left align 으로 전체 흐름을 보존했다.
+- **검증 결과**:
+  - RED: `node --test tests/domain-knowledge-hero.test.mjs` — 기존 세로 viewBox, 전문용어, CSS/caption/intro 누락으로 실패 확인.
+  - GREEN: `node --test tests/domain-knowledge-hero.test.mjs` — PASS, 2 tests / 0 fail.
+  - `node --test tests/llm-client.test.mjs tests/assemble-ui.test.mjs tests/assemble-markup.test.mjs tests/domain-knowledge-hero.test.mjs` — PASS, 18 tests / 0 fail.
+  - `.venv/bin/mkdocs build --strict` — PASS.
+  - 로컬 desktop screenshot: `/private/tmp/domain-knowledge-hero-fresh.png` — 상단 이미지가 본문 중앙의 넓은 영역을 차지하고 쉬운 흐름도로 표시됨.
+  - 로컬 mobile screenshot: `/private/tmp/domain-knowledge-mobile5.png` — 4 단계 카드가 오른쪽 잘림 없이 한 화면에 표시됨.
+- **산출물**: `docs/assets/svg/guide/domain-knowledge.svg`, `docs/stylesheets/extra.css`, `hooks/inject_hero_svg.py`, `가이드_도메인_지식추출.md`, `docs/guide/domain-knowledge.md`, `tests/domain-knowledge-hero.test.mjs`, `작업로그.md`
+- **배운 점·재사용 포인트**:
+  - SVG hero 는 자산군 전역 규칙보다 page-specific 목적이 우선인 경우가 있다. 특히 600×800 세로형 자산과 16:9 흐름도형 자산은 같은 `img[src*="/svg/"]` 정책으로 묶으면 화면 밀도가 어긋난다.
+  - 첫 화면 인포그래픽은 내부 운영 용어를 압축해 보여주는 곳이 아니라, 사용자가 본문을 읽을 이유를 3~5 개 쉬운 명사/동사로 먼저 잡아 주는 곳이다.
+- **다음 단계**:
+  - 공개 Pages 배포 후 `https://ai-docs-for-biz.pages.dev/guide/domain-knowledge/` 에서 SVG asset/caption/CSS marker 를 확인한다.
 
 ---
 
